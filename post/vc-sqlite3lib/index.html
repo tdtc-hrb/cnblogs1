@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="生成SQLite静态库"/>
+<meta name="twitter:description" content="debug版和release版"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="生成SQLite静态库 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="debug版和release版" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-06-18T12:08:08&#43;08:00" />
+
+    
+    
+
+    <title>生成SQLite静态库 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="debug版和release版" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.89.2" />
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "生成SQLite静态库",
+    "name": "生成SQLite静态库",
+    "wordCount":  108 ,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/",
+    "datePublished": "2020-06-18T12:08Z",
+    "dateModified": "2020-06-18T12:08Z",
+    
+    
+    "description": "debug版和release版",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">生成SQLite静态库</h1>
+        <small>debug版和release版</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2020-06-18T12:08:08&#43;08:00">
+            Jun 18, 2020
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <blockquote>
+<p>使用VS2017
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608121928.png" alt="VS2017 Install"></p>
+</blockquote>
+<h1 id="debug版">Debug版</h1>
+<h2 id="新建dll工程">新建DLL工程</h2>
+<p>project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608122532.png" alt="VS2017 prj1"></p>
+<h3 id="添加sqlite源文件">添加SQLite源文件</h3>
+<p>下载<a href="https://sqlite.org/2021/sqlite-amalgamation-3350400.zip">sqlite-amalgamation-3350400.zip</a>，
+把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608123556.png" alt="VS2017 prj2"></p>
+<h2 id="编译工程">编译工程</h2>
+<h3 id="预编译头文件">预编译头文件</h3>
+<blockquote>
+<p>不使用预编译头文件。</p>
+</blockquote>
+<p>Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608125254.png" alt="VS2017 prj4"></p>
+<blockquote>
+<p>如果不更改会出现如下错误：</p>
+</blockquote>
+<pre tabindex="0"><code>sqlite3.c : fatal error C1853: 'Debug\sqlite3.pch' precompiled header file is from a previous version of the compiler,
+or the precompiled header is C++ and you are using it from C (or vice versa)
+</code></pre><h3 id="生成文件类型">生成文件类型</h3>
+<p>Project ==&gt; Properties ==&gt; General
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608125922.png" alt="VS2017 prj5"></p>
+<p>编译即可。
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608130149.png" alt="VS2017 prj6"></p>
+<h1 id="release版">Release版</h1>
+<p>從<a href="https://sqlite.org/download.html">Precompiled Binaries for Windows</a>下载<a href="https://sqlite.org/2021/sqlite-dll-win64-x64-3350400.zip">sqlite-dll-*.zip</a></p>
+<h2 id="output-lib">output *.lib</h2>
+<p>Start menu -&gt; All Programs -&gt; Visual Studio 2017 -&gt; Visual Studio Tools -&gt; Developer Command Prompt for VS 2017
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608124137.png" alt="Command Prompt">
+Enter the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lib /def:sqlite3.def /out:sqlite3.lib
+</code></pre></div><h1 id="ref">Ref</h1>
+<ul>
+<li><a href="https://raginginverno.wordpress.com/2013/01/23/welcome/">Creating a Windows .lib file for SQLite for use with Visual Studio</a></li>
+</ul>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e7%94%9f%e6%88%90SQLite%e9%9d%99%e6%80%81%e5%ba%93&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-sqlite3lib%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-sqlite3lib%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-sqlite3lib%2f&amp;description=%e7%94%9f%e6%88%90SQLite%e9%9d%99%e6%80%81%e5%ba%93"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-sqlite3lib%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/sqlite.net.core/">
+          <section class="post">
+              <h2>SQLite在.net core的demo</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/trace-zipkin-config/">
+          <section class="post">
+              <h2>Distributed traceability with Spring Cloud: Sleuth and Zipkin</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+

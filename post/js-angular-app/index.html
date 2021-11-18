@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Angular 的HttpClient应用"/>
+<meta name="twitter:description" content="HttpClientModule, Observable"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="Angular 的HttpClient应用 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/js-angular-app/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="HttpClientModule, Observable" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2021-11-14T06:58:08&#43;08:00" />
+
+    
+    
+
+    <title>Angular 的HttpClient应用 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="HttpClientModule, Observable" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.89.2" />
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/js-angular-app/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "Angular 的HttpClient应用",
+    "name": "Angular 的HttpClient应用",
+    "wordCount":  485 ,
+    "timeRequired": "PT3M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/js-angular-app/",
+    "datePublished": "2021-11-14T06:58Z",
+    "dateModified": "2021-11-14T06:58Z",
+    
+    
+    "description": "HttpClientModule, Observable",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/js-angular-app/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Angular 的HttpClient应用</h1>
+        <small>HttpClientModule, Observable</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2021-11-14T06:58:08&#43;08:00">
+            Nov 14, 2021
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <h1 id="prepare">Prepare</h1>
+<p>install Angular CLI:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">g</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">angular</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span>
+</code></pre></div><p>create project:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npx @angular/cli new userDetails-client --style<span style="color:#f92672">=</span>css --routing<span style="color:#f92672">=</span>false --skip-tests
+</code></pre></div><h1 id="angular-struct">Angular struct</h1>
+<h2 id="angular-module">Angular module</h2>
+<blockquote>
+<p>app/app.module.ts</p>
+</blockquote>
+<p>Add system modules and user components</p>
+<ul>
+<li>system module
+example for: httpclient module</li>
+</ul>
+<p>import pack:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">HttpClientModule</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;@angular/common/http&#34;</span>;
+</code></pre></div><p>declare Decorator:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// import HttpClientModule after BrowserModule.
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">HttpClientModule</span>,
+</code></pre></div><ul>
+<li>user component
+See the next section(&ldquo;Angular Component - add component&rdquo;) for examples of user components.</li>
+</ul>
+<h2 id="angular-component">Angular Component</h2>
+<blockquote>
+<p>app/component.ts</p>
+</blockquote>
+<p>The root component.</p>
+<p>When we need some services that need to be started at the beginning, we need to write code here.</p>
+<h2 id="angular-html">Angular Html</h2>
+<blockquote>
+<p>app/app.component.html</p>
+</blockquote>
+<p>View section.</p>
+<p>To call root components and plug-and-play components, you need to write code here.</p>
+<h1 id="angular-service">Angular Service</h1>
+<p><img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/UserDetailsClient-static.png" alt="angular chrome">
+<a href="http://localhost:4260/">run port</a></p>
+<p>Generate service and model:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ng generate service user/user
+ng generate class user/user --type<span style="color:#f92672">=</span>model
+</code></pre></div><p>Every service must use Dependency Injection.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">Injectable</span>(<span style="color:#a6e22e">providedIn</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;root&#39;</span>)
+</code></pre></div><h2 id="creating-observableshttpsangularioguideobservablescreating-observables"><a href="https://angular.io/guide/observables#creating-observables">Creating observables</a></h2>
+<p>Use the Observable constructor to create an observable stream of any type. 
+The constructor takes as its argument the subscriber function to run when the observable’s subscribe() method executes.</p>
+<ul>
+<li>Get</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">getUsers</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">Observable</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">UserModel</span>[]<span style="color:#f92672">&gt;</span>
+</code></pre></div><ul>
+<li>Post
+About the post method: The return value must be &ldquo;Observable<any>&rdquo;!</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">postUser</span>(<span style="color:#a6e22e">userModel</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">UserModel</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Observable</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">any</span><span style="color:#f92672">&gt;</span> {<span style="color:#75715e">// your code here}
+</span></code></pre></div><h2 id="call-them">call them</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">userservice</span>.<span style="color:#a6e22e">getUsers</span>().<span style="color:#a6e22e">subscribe</span>(
+      <span style="color:#a6e22e">data</span> =&gt; {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>;
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+    });
+</code></pre></div><h1 id="angular-component-1">Angular Component</h1>
+<ul>
+<li>generate</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ng generate component sign-up
+</code></pre></div><ul>
+<li>call</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">app</span><span style="color:#f92672">-</span><span style="color:#a6e22e">sign</span><span style="color:#f92672">-</span><span style="color:#a6e22e">up</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/app-sign-up&gt;</span>
+</code></pre></div><h2 id="add-component">add component</h2>
+<blockquote>
+<p>app/app.module.ts</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">NgModule</span>({
+  <span style="color:#a6e22e">declarations</span><span style="color:#f92672">:</span> [
+    <span style="color:#a6e22e">AppComponent</span>,
+    <span style="color:#a6e22e">SignUpComponent</span>
+  ],
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">imports</span><span style="color:#f92672">:</span> [
+    <span style="color:#a6e22e">BrowserModule</span>,
+    <span style="color:#a6e22e">ReactiveFormsModule</span>
+  ],
+</code></pre></div><h1 id="appendix">Appendix</h1>
+<h2 id="project-code">Project code</h2>
+<blockquote>
+<p>The token is not used in the demo.</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/tdtc-hrb/userDetails-client">userDetails-client</a></li>
+</ul>
+<h2 id="reactive-forms">Reactive Forms</h2>
+<p>Use FormBuilder, FormGroup to implement applications.</p>
+<p>see<sup>3</sup>, It should be noted that the verification part in html(sign-up.component.html) needs to refer to <sup>4</sup>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">signUpForm</span>.<span style="color:#a6e22e">controls</span>[<span style="color:#e6db74">&#39;xxx&#39;</span>].<span style="color:#a6e22e">yyy</span>
+</code></pre></div><h2 id="authorization">Authorization</h2>
+<p>在<a href="https://github.com/tdtc-hrb/UserDetails-jwt-client">实际应用</a>中：使用用户名和密码登录，获得Token值。 <br>
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/UserDetailsJwtClient.png" alt="chrome shot"></p>
+<p>最后，在http头添加token值, See<a href="https://angular.io/guide/http#adding-and-updating-headers">《Adding and updating headers》</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">HttpHeaders</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/common/http&#39;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">httpOptions</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">HttpHeaders</span>({
+    <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span>  <span style="color:#e6db74">&#39;application/json&#39;</span>,
+    <span style="color:#a6e22e">Authorization</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;my-auth-token&#39;</span>
+  })
+};
+</code></pre></div><p>Angular applies interceptors in the order that you provide them. <br>
+For example, consider a situation in which you want to handle the authentication <br>
+of your HTTP requests and log them before sending them to a server. <br>
+To accomplish this task, you could provide an AuthInterceptor service and then a LoggingInterceptor service. <br>
+Outgoing requests would flow from the AuthInterceptor to the LoggingInterceptor. <br>
+Responses from these requests would flow in the other direction, from LoggingInterceptor back to AuthInterceptor. <br>
+The following is a visual representation of the process:</p>
+<p><img src="https://angular.io/generated/images/guide/http/interceptor-order.svg" alt="angular auth"></p>
+<h1 id="ref">Ref</h1>
+<ul>
+<li><a href="https://angular.io/guide/http">Communicating with backend services using HTTP</a></li>
+<li><a href="https://angular.io/guide/observables">Using observables to pass values</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/angular-reactive-forms-introduction/"><sup>3</sup>How To Use Reactive Forms in Angular</a></li>
+<li><a href="https://edupala.com/angular-reactive-form-validation/"><sup>4</sup>How to implement angular reactive forms validation in Angular 12 .?</a></li>
+<li><a href="https://stackoverflow.com/questions/51990188/the-semantics-of-injectableprovidedin-root">The semantics of @Injectable(providedIn: &lsquo;root&rsquo;)?</a></li>
+</ul>
+<pre tabindex="0"><code>When you write @Injectable(providedIn: 'root') this means that the service in singletion 
+for whole application and you can inject in anywhere in the application.
+</code></pre><pre tabindex="0"><code>When you want to make service singleton only for an exact module, you need to assign 
+your module as the parameter to the providedIn - @Injectable(providedIn: MyModule)
+</code></pre><pre tabindex="0"><code>The only other action required in order to use the @Injectable decorated service is 
+to import it and constructor inject it and that's it. 
+No need to import it in the AppModule.
+</code></pre>
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Angular%20%e7%9a%84HttpClient%e5%ba%94%e7%94%a8&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fjs-angular-app%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fjs-angular-app%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fjs-angular-app%2f&amp;description=Angular%20%e7%9a%84HttpClient%e5%ba%94%e7%94%a8"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fjs-angular-app%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/js-print-tree/">
+          <section class="post">
+              <h2> 使用ts/js打印tree</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/asp.net6-restful/">
+          <section class="post">
+              <h2>ASP.net Core 的RESTful应用</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+

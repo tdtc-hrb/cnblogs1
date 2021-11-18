@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Install and Configure RabbitMQ"/>
+<meta name="twitter:description" content="Message Queue2篇：Kafka、RabbitMQ"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="Install and Configure RabbitMQ &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="Message Queue2篇：Kafka、RabbitMQ" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-05-16T14:08:08&#43;08:00" />
+
+    
+    
+
+    <title>Install and Configure RabbitMQ &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="Message Queue2篇：Kafka、RabbitMQ" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.89.2" />
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "Install and Configure RabbitMQ",
+    "name": "Install and Configure RabbitMQ",
+    "wordCount":  379 ,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/",
+    "datePublished": "2020-05-16T14:08Z",
+    "dateModified": "2020-05-16T14:08Z",
+    
+    
+    "description": "Message Queue2篇：Kafka、RabbitMQ",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Install and Configure RabbitMQ</h1>
+        <small>Message Queue2篇：Kafka、RabbitMQ</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2020-05-16T14:08:08&#43;08:00">
+            May 16, 2020
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <blockquote>
+<p>Ubuntu</p>
+</blockquote>
+<h1 id="installation">Installation</h1>
+<p>需要设置固定IP</p>
+<h2 id="1-key">1. key</h2>
+<blockquote>
+<p>using 1) or 2).</p>
+</blockquote>
+<h3 id="1-offline-way">1) Offline way</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add -
+</code></pre></div><h3 id="2-online-way">2) Online way</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-key adv --keyserver <span style="color:#e6db74">&#34;hkps.pool.sks-keyservers.net&#34;</span> --recv-keys <span style="color:#e6db74">&#34;0x6B73A36E6026DFCA&#34;</span>
+</code></pre></div><h2 id="2-install-erlang">2. install Erlang</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+sudo dpkg -i erlang-solutions_1.0_all.deb
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update
+sudo apt-get install erlang-nox
+</code></pre></div><h2 id="3-install-rabbitmq-server">3. install RabbitMQ Server</h2>
+<h3 id="1-set-source">1) set source</h3>
+<blockquote>
+<p>如果不设定此步，则系统默认使用Ubuntu更新服务器上的RabbitMQ(v3.5.7)</p>
+</blockquote>
+<p>Ubuntu 16.04:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;deb https://dl.bintray.com/rabbitmq/debian xenial main&#34;</span> | sudo tee /etc/apt/sources.list.d/bintray.rabbitmq.list
+</code></pre></div><p>Ubuntu 18.04:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;deb https://dl.bintray.com/rabbitmq/debian bionic main&#34;</span> | sudo tee /etc/apt/sources.list.d/bintray.rabbitmq.list
+</code></pre></div><h3 id="2-install">2) install</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update
+sudo apt-get install rabbitmq-server
+</code></pre></div><h1 id="manage">Manage</h1>
+<h2 id="1-rabbitmq-service">1. RabbitMQ service</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl enable rabbitmq-server
+sudo systemctl start rabbitmq-server
+sudo systemctl stop rabbitmq-server
+</code></pre></div><h2 id="2-create-user---admin">2. create user - admin</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo rabbitmqctl add_user admin admin
+sudo rabbitmqctl set_user_tags admin administrator
+sudo rabbitmqctl set_permissions -p / admin <span style="color:#e6db74">&#34;.*&#34;</span> <span style="color:#e6db74">&#34;.*&#34;</span> <span style="color:#e6db74">&#34;.*&#34;</span>
+</code></pre></div><h2 id="3-enable-rabbitmq-management">3. Enable RabbitMQ Management</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo rabbitmq-plugins enable rabbitmq_management
+</code></pre></div><p>info:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">xiaobin112@ubuntu:~$ sudo rabbitmq-plugins enable rabbitmq_management
+The following plugins have been configured:
+  rabbitmq_management
+  rabbitmq_management_agent
+  rabbitmq_web_dispatch
+Applying plugin configuration to rabbit@ubuntu...
+The following plugins have been enabled:
+  rabbitmq_management
+  rabbitmq_management_agent
+  rabbitmq_web_dispatch
+
+started <span style="color:#ae81ff">3</span> plugins.
+</code></pre></div><p><img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200106025932697.png" alt="rabbitMQ info"></p>
+<h1 id="ubuntu-2004">Ubuntu 20.04</h1>
+<p>focal_rq.sh:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span>
+sudo apt-get install curl gnupg debian-keyring debian-archive-keyring apt-transport-https -y
+
+<span style="color:#75715e">## Team RabbitMQ&#39;s main signing key</span>
+sudo apt-key adv --keyserver <span style="color:#e6db74">&#34;hkps://keys.openpgp.org&#34;</span> --recv-keys <span style="color:#e6db74">&#34;0x0A9AF2115F4687BD29803A206B73A36E6026DFCA&#34;</span>
+<span style="color:#75715e">## Launchpad PPA that provides modern Erlang releases</span>
+sudo apt-key adv --keyserver <span style="color:#e6db74">&#34;keyserver.ubuntu.com&#34;</span> --recv-keys <span style="color:#e6db74">&#34;F77F1EDA57EBB1CC&#34;</span>
+<span style="color:#75715e">## PackageCloud RabbitMQ repository</span>
+curl -1sLf <span style="color:#e6db74">&#39;https://packagecloud.io/rabbitmq/rabbitmq-server/gpgkey&#39;</span> | sudo apt-key add -
+
+<span style="color:#75715e">## Add apt repositories maintained by Team RabbitMQ</span>
+sudo tee /etc/apt/sources.list.d/rabbitmq.list <span style="color:#e6db74">&lt;&lt;EOF
+</span><span style="color:#e6db74">## Provides modern Erlang/OTP releases
+</span><span style="color:#e6db74">##
+</span><span style="color:#e6db74">## &#34;focal&#34; as distribution name should work for any reasonably recent Ubuntu or Debian release.
+</span><span style="color:#e6db74">## See the release to distribution mapping table in RabbitMQ doc guides to learn more.
+</span><span style="color:#e6db74">deb http://ppa.launchpad.net/rabbitmq/rabbitmq-erlang/ubuntu focal main
+</span><span style="color:#e6db74">deb-src http://ppa.launchpad.net/rabbitmq/rabbitmq-erlang/ubuntu focal main
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">## Provides RabbitMQ
+</span><span style="color:#e6db74">##
+</span><span style="color:#e6db74">## &#34;focal&#34; as distribution name should work for any reasonably recent Ubuntu or Debian release.
+</span><span style="color:#e6db74">## See the release to distribution mapping table in RabbitMQ doc guides to learn more.
+</span><span style="color:#e6db74">deb https://packagecloud.io/rabbitmq/rabbitmq-server/ubuntu/ focal main
+</span><span style="color:#e6db74">deb-src https://packagecloud.io/rabbitmq/rabbitmq-server/ubuntu/ focal main
+</span><span style="color:#e6db74">EOF</span>
+
+<span style="color:#75715e">## Update package indices</span>
+sudo apt-get update -y
+
+<span style="color:#75715e">## Install Erlang packages</span>
+sudo apt-get install -y erlang-base <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                        erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                        erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                        erlang-runtime-tools erlang-snmp erlang-ssl <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                        erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
+
+<span style="color:#75715e">## Install rabbitmq-server and its dependencies</span>
+sudo apt-get install rabbitmq-server -y --fix-missing
+</code></pre></div><h1 id="reference">Reference</h1>
+<ul>
+<li><a href="http://www.rabbitmq.com/install-debian.html">install-debian</a></li>
+<li><a href="https://tecadmin.net/install-rabbitmq-server-on-ubuntu/">How to Install RabbitMQ Server on Ubuntu 18.04 &amp; 16.04 LTS</a></li>
+</ul>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Install%20and%20Configure%20RabbitMQ&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fmq-rabbitmq-config%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fmq-rabbitmq-config%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fmq-rabbitmq-config%2f&amp;description=Install%20and%20Configure%20RabbitMQ"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fmq-rabbitmq-config%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/mq-kafka-config/">
+          <section class="post">
+              <h2>Install and Configure Apache Kafka</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/cas-client-config/">
+          <section class="post">
+              <h2>cas client设置</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+
