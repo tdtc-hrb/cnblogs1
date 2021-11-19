@@ -57,7 +57,7 @@
         <link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.89.2" />
+    <meta name="generator" content="Hugo 0.89.4" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -160,6 +160,33 @@
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-calday/"> 使用Ts/Js计算天数</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>在JS练习题中，有这么一道：
+请计算某天是这一年的第几天。
+首先，我们要看此年是否闰年
+var IsLeapYear = function (year) { var flag = false; if ( ((year % 4 == 0) &amp;&amp; (year % 100 != 0)) || (year % 400 == 0) ) flag = true; return flag; }; 其次，累加每月天数。
+for (var i = 0; i &lt; month - 1; i++) { iDay += months[i]; }  其中months为数组
+ var months = new Array(31, day2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); day2如果是闰年赋值29，否则28。 <a class="read-more" href="/cnblogs/post/js-calday/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-10-01T02:16:39&#43;08:00">
+            1 Oct 2021
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -310,36 +337,6 @@ $ docker --version Docker compose 1. down sudo curl -L &#34;https://github. <a c
         
         <time class="post-date" datetime="2020-10-13T08:08:08&#43;08:00">
             13 Oct 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/sqlite.net.core/">SQLite在.net core的demo</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>IDE: VS2019 语言: C#
-简介： 本示例使用SQLite的密码、外键功能。
-一、工程设置 1. NuGet  Project -&gt; Manage NuGet packages  完整的窗体： 2. 控件 拖拽4个TextBox、4个Button、1个DataGridView
-二、功能实现 使用Synchronous API来实现连接、factoryCar表的查询、插入等操作。
-0. Entity class  注意：主键和外键
- 建立两个实体类：FactoryCar和MarqueCar
-1. 连接 asyncConn = new SQLite.SQLiteAsyncConnection(options); 其中，options是SQLiteConnectionString实例化的字符串。
-var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, preKeyAction: db =&gt; db.Execute(&#34;PRAGMA cipher_default_use_hmac = OFF;&#34;), postKeyAction: db =&gt; db.Execute(&#34;PRAGMA kdf_iter = 128000;&#34;)); 2. 查询 异步查询 var factoryCars = asyncConn.Table&lt;FactoryCar&gt;().Where(fc =&gt; fc.Name.Contains(edtStmt.Text)); 转换为List类型。
-var result = await factoryCars. <a class="read-more" href="/cnblogs/post/sqlite.net.core/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-10-12T00:08:08&#43;08:00">
-            12 Oct 2020
         </time>
     </footer>
 </article>

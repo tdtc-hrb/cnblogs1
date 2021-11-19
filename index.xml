@@ -6,7 +6,23 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 Nov 2021 02:18:39 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Nov 2021 19:18:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQLite在.net core的demo</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/sqlite.net.core/</link>
+      <pubDate>Fri, 19 Nov 2021 19:18:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/sqlite.net.core/</guid>
+      <description>IDE: VS2022 语言: C#
+简介： 本示例使用SQLite的密码、外键功能。
+一、工程设置 1. NuGet  Tools -&amp;gt; NuGet Package Manager -&amp;gt; Package Manager Console  Install-Package sqlite-net-pcl -Version 1.8.116 Install-Package sqlite-net-sqlcipher -Version 1.8.116 完整的窗体： 2. 控件 拖拽4个TextBox、4个Button、1个DataGridView
+二、功能实现 使用Synchronous API来实现连接、factoryCar表的查询、插入等操作。
+0. Entity class  注意：主键和外键
+ 建立两个实体类：FactoryCar和MarqueCar
+1. 连接 asyncConn = new SQLite.SQLiteAsyncConnection(options); 其中，options是SQLiteConnectionString实例化的字符串。
+var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, preKeyAction: db =&amp;gt; db.Execute(&amp;#34;PRAGMA cipher_default_use_hmac = OFF;&amp;#34;), postKeyAction: db =&amp;gt; db.Execute(&amp;#34;PRAGMA kdf_iter = 128000;&amp;#34;)); 2.</description>
+    </item>
+    
     <item>
       <title>千位分隔符</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-thousand-separator/</link>
@@ -210,23 +226,6 @@ while (serial.waitForReadyRead(500)) responseData += serial.read(1024); Referenc
       <description>Note:
  # - requires given linux commands to be executed with root privileges either directly as a root user or by use of sudo command $ - requires given linux commands to be executed as a regular non-privileged user   Docker CE 1. install $sudo apt install docker.io 2. enable $ sudo systemctl start docker $ sudo systemctl enable docker test:
 $ docker --version Docker compose 1. down sudo curl -L &amp;#34;https://github.</description>
-    </item>
-    
-    <item>
-      <title>SQLite在.net core的demo</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/sqlite.net.core/</link>
-      <pubDate>Mon, 12 Oct 2020 00:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/sqlite.net.core/</guid>
-      <description>IDE: VS2019 语言: C#
-简介： 本示例使用SQLite的密码、外键功能。
-一、工程设置 1. NuGet  Project -&amp;gt; Manage NuGet packages  完整的窗体： 2. 控件 拖拽4个TextBox、4个Button、1个DataGridView
-二、功能实现 使用Synchronous API来实现连接、factoryCar表的查询、插入等操作。
-0. Entity class  注意：主键和外键
- 建立两个实体类：FactoryCar和MarqueCar
-1. 连接 asyncConn = new SQLite.SQLiteAsyncConnection(options); 其中，options是SQLiteConnectionString实例化的字符串。
-var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, preKeyAction: db =&amp;gt; db.Execute(&amp;#34;PRAGMA cipher_default_use_hmac = OFF;&amp;#34;), postKeyAction: db =&amp;gt; db.Execute(&amp;#34;PRAGMA kdf_iter = 128000;&amp;#34;)); 2. 查询 异步查询 var factoryCars = asyncConn.Table&amp;lt;FactoryCar&amp;gt;().Where(fc =&amp;gt; fc.Name.Contains(edtStmt.Text)); 转换为List类型。
-var result = await factoryCars.</description>
     </item>
     
     <item>
