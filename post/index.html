@@ -162,6 +162,37 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/qt-serialport/">使用qt5编写Serial Port</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>thread  线程相关
+ asynchronously connect方法已实现异步。
+synchronously qmutexlocker
+创建信号锁 QMutexLocker locker(&amp;m_mutex); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。
+signals: void error(const QString &amp;s); void timeout(const QString &amp;s); Worker method Init Port 设置私有成员变量
+ 部分代码
+ m_waitTimeout = waitTimeout; Receive data 打开串口
+if (!serial.open(QIODevice::ReadWrite)) { emit error(tr(&#34;Can&#39;t open %1, error code %2&#34;) .arg(m_portName).arg(serial.error())); serial.close(); return; } 接收数据
+while (serial.waitForReadyRead(500)) responseData += serial.read(1024); Dev Qt VS Tools setting Qt version Qt VS Tools -&gt; Qt Versions
+x86 setup: <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-20T03:58:08&#43;08:00">
+            20 Nov 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/sqlite.net.core/">SQLite在.net core的demo</a></h2>
     </header>
     <section class="post-excerpt">
@@ -390,32 +421,6 @@ Run build  Manually add .vscode    install c# for Visual Studio Code 双击Progr
 
         
         <time class="post-date" datetime="2021-10-02T14:26:39&#43;08:00">
-            2 Oct 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_department_github_man/">Github使用</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>PAT 从2021.8.13开始github不允许使用用户名和密码！ 只能使用用户名和Token进行提交。
-Create Personal Access Token on GitHub  From your GitHub account, go to Settings =&gt; Developer Settings =&gt; Personal Access Token =&gt; Generate New Token (Give your password) =&gt; Fillup the form =&gt; click Generate token =&gt; Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
- 根据需要勾选授权(scopes): Note: 你的token 标题 Select scopes: 勾选“public_repo”
-增加普通凭证  控制面板 -&gt; 用户帐户和家庭安全 -&gt; 凭据管理器
- 添加&quot;普通凭证&quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token <a class="read-more" href="/cnblogs/post/ops_department_github_man/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-10-02T08:08:08&#43;08:00">
             2 Oct 2021
         </time>
     </footer>

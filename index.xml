@@ -6,7 +6,25 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 19 Nov 2021 19:18:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Nov 2021 03:58:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用qt5编写Serial Port</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</link>
+      <pubDate>Sat, 20 Nov 2021 03:58:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</guid>
+      <description>thread  线程相关
+ asynchronously connect方法已实现异步。
+synchronously qmutexlocker
+创建信号锁 QMutexLocker locker(&amp;amp;m_mutex); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。
+signals: void error(const QString &amp;amp;s); void timeout(const QString &amp;amp;s); Worker method Init Port 设置私有成员变量
+ 部分代码
+ m_waitTimeout = waitTimeout; Receive data 打开串口
+if (!serial.open(QIODevice::ReadWrite)) { emit error(tr(&amp;#34;Can&amp;#39;t open %1, error code %2&amp;#34;) .arg(m_portName).arg(serial.error())); serial.close(); return; } 接收数据
+while (serial.waitForReadyRead(500)) responseData += serial.read(1024); Dev Qt VS Tools setting Qt version Qt VS Tools -&amp;gt; Qt Versions
+x86 setup:</description>
+    </item>
+    
     <item>
       <title>SQLite在.net core的demo</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/sqlite.net.core/</link>
@@ -198,23 +216,6 @@ Pre IDE  Arduino CC(.zip文件) Atmel Studio 7  编码 我们使用使用AS7是�
       <description>SPI 通过ASF示例(iar)改写为Keil(mdk v5.18a)
 Init 在初始化过程中需要mck(Master Clock Sources)。
 uint32_t sysclk_get_peripheral_hz() { /* CONFIG_SYSCLK_PRES is the register value for setting the expected */ /* prescaler, not an immediate value. */ return sysclk_get_main_hz() / ((CONFIG_SYSCLK_PRES == SYSCLK_PRES_3) ? 3 : (1 &amp;lt;&amp;lt; (CONFIG_SYSCLK_PRES &amp;gt;&amp;gt; PMC_MCKR_PRES_Pos))); } pio  Pull-up Enable PIO Disable  spi master init  Enable peripheral clock Set spi master mode Disable Mode Fault Detection Disable loopback mode Set Peripheral Chip Select (PCS) value Set fixed peripheral select Disable Peripheral Select Decode Set delay between chip selects  spi master setup device  spi calc baudrate div Configure timing for SPI transfer Set number of bits per transfer Set Serial Clock Baud Rate divider value (SCBR) Configure CS behavior for SPI transfer (\ref spi_cs_behavior_t) Set clock default state Set Data Capture Phase  spi calc baudrate div short spi_calc_baudrate_div(const uint32_t baudrate, uint32_t mck) { int baud_div = div_ceil(mck, baudrate); /* The value of baud_div is from 1 to 255 in the SCBR field.</description>
-    </item>
-    
-    <item>
-      <title>使用qt5编写Serial Port</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</link>
-      <pubDate>Thu, 22 Oct 2020 00:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</guid>
-      <description>thread  线程相关
- asynchronously connect方法已实现异步。
-synchronously qmutexlocker
-创建信号锁 QMutexLocker locker(&amp;amp;m_mutex); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。
-signals: void error(const QString &amp;amp;s); void timeout(const QString &amp;amp;s); Worker method Init Port 设置私有成员变量
- 部分代码
- m_waitTimeout = waitTimeout; Receive data 打开串口
-if (!serial.open(QIODevice::ReadWrite)) { emit error(tr(&amp;#34;Can&amp;#39;t open %1, error code %2&amp;#34;) .arg(m_portName).arg(serial.error())); serial.close(); return; } 接收数据
-while (serial.waitForReadyRead(500)) responseData += serial.read(1024); Reference  src 提取码: q6m2  </description>
     </item>
     
     <item>
