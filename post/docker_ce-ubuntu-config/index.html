@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="Docker and Docker compose" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2020-10-13T08:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2021-11-20T10:48:08&#43;08:00" />
 
     
     
@@ -99,8 +99,8 @@
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/",
-    "datePublished": "2020-10-13T08:08Z",
-    "dateModified": "2020-10-13T08:08Z",
+    "datePublished": "2021-11-20T10:48Z",
+    "dateModified": "2021-11-20T10:48Z",
     
     
     "description": "Docker and Docker compose",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2020-10-13T08:08:08&#43;08:00">
-            Oct 13, 2020
+          <time class="post-date" datetime="2021-11-20T10:48:08&#43;08:00">
+            Nov 20, 2021
           </time>
         
          
@@ -194,12 +194,12 @@ $ sudo systemctl enable docker
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker --version
 </code></pre></div><h1 id="docker-compose">Docker compose</h1>
 <h2 id="1-down">1. down</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo curl -L <span style="color:#e6db74">&#34;https://github.com/docker/compose/releases/download/1.27.4/docker-compose-</span><span style="color:#66d9ef">$(</span>uname -s<span style="color:#66d9ef">)</span><span style="color:#e6db74">-</span><span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> -o /usr/local/bin/docker-compose
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo curl -L <span style="color:#e6db74">&#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-</span><span style="color:#66d9ef">$(</span>uname -s<span style="color:#66d9ef">)</span><span style="color:#e6db74">-</span><span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> -o /usr/local/bin/docker-compose
 </code></pre></div><h2 id="2-exec">2. exec</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo chmod +x /usr/local/bin/docker-compose
 </code></pre></div><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tdtc@tdtc306:~$ docker-compose --version
-docker-compose version 1.27.4, build xxx
+docker-compose version 1.29.2, build xxx
 </code></pre></div><h1 id="other-command">other command</h1>
 <h2 id="1-清理image">1. 清理image</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker system prune -a
@@ -277,17 +277,10 @@ vi Gopkg.toml
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/e-enc28j60-driver/">
-          <section class="post">
-              <h2>enc28j60 driver - sam4s</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/vc-sqlite3lib/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/qt-serialport/">
           <section class="post">
-              <h2>生成SQLite静态库</h2>
+              <h2>使用qt5编写Serial Port</h2>
           </section>
       </a>
   
