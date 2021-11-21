@@ -6,22 +6,11 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 20 Nov 2021 10:48:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>docker(ce) on Ubuntu</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</link>
-      <pubDate>Sat, 20 Nov 2021 10:48:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</guid>
-      <description>Note:
- # - requires given linux commands to be executed with root privileges either directly as a root user or by use of sudo command $ - requires given linux commands to be executed as a regular non-privileged user   Docker CE 1. install $sudo apt install docker.io 2. enable $ sudo systemctl start docker $ sudo systemctl enable docker test:
-$ docker --version Docker compose 1. down sudo curl -L &amp;#34;https://github.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 22 Nov 2021 05:18:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用qt5编写Serial Port</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</link>
-      <pubDate>Sat, 20 Nov 2021 03:58:08 +0800</pubDate>
+      <pubDate>Mon, 22 Nov 2021 05:18:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</guid>
       <description>thread  线程相关
@@ -34,6 +23,17 @@ signals: void error(const QString &amp;amp;s); void timeout(const QString &amp;a
 if (!serial.open(QIODevice::ReadWrite)) { emit error(tr(&amp;#34;Can&amp;#39;t open %1, error code %2&amp;#34;) .arg(m_portName).arg(serial.error())); serial.close(); return; } 接收数据
 while (serial.waitForReadyRead(500)) responseData += serial.read(1024); Dev Qt VS Tools setting Qt version Qt VS Tools -&amp;gt; Qt Versions
 x86 setup:</description>
+    </item>
+    
+    <item>
+      <title>docker(ce) on Ubuntu</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</link>
+      <pubDate>Sat, 20 Nov 2021 10:48:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</guid>
+      <description>Note:
+ # - requires given linux commands to be executed with root privileges either directly as a root user or by use of sudo command $ - requires given linux commands to be executed as a regular non-privileged user   Docker CE 1. install $sudo apt install docker.io 2. enable $ sudo systemctl start docker $ sudo systemctl enable docker test:
+$ docker --version Docker compose 1. down sudo curl -L &amp;#34;https://github.</description>
     </item>
     
     <item>
