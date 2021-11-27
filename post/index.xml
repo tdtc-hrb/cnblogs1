@@ -6,11 +6,11 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Nov 2021 06:18:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Nov 2021 06:18:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用qt5编写Serial Port</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</link>
-      <pubDate>Wed, 24 Nov 2021 06:18:08 +0800</pubDate>
+      <pubDate>Sat, 27 Nov 2021 06:18:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</guid>
       <description>thread  线程相关
@@ -22,7 +22,7 @@ signals: void error(const QString &amp;amp;s); void timeout(const QString &amp;a
  m_waitTimeout = waitTimeout; Receive data 打开串口
 if (!serial.open(QIODevice::ReadWrite)) { emit error(tr(&amp;#34;Can&amp;#39;t open %1, error code %2&amp;#34;) .arg(m_portName).arg(serial.error())); serial.close(); return; } 接收数据
 while (serial.waitForReadyRead(500)) responseData += serial.read(1024); Dev Qt VS Tools setting Qt version Qt VS Tools -&amp;gt; Qt Versions
-x86 setup:</description>
+x64 setup:</description>
     </item>
     
     <item>

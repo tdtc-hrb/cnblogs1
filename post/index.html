@@ -175,7 +175,7 @@ signals: void error(const QString &amp;s); void timeout(const QString &amp;s); W
  m_waitTimeout = waitTimeout; Receive data 打开串口
 if (!serial.open(QIODevice::ReadWrite)) { emit error(tr(&#34;Can&#39;t open %1, error code %2&#34;) .arg(m_portName).arg(serial.error())); serial.close(); return; } 接收数据
 while (serial.waitForReadyRead(500)) responseData += serial.read(1024); Dev Qt VS Tools setting Qt version Qt VS Tools -&gt; Qt Versions
-x86 setup: <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
+x64 setup: <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -184,8 +184,8 @@ x86 setup: <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a><
         
 
         
-        <time class="post-date" datetime="2021-11-24T06:18:08&#43;08:00">
-            24 Nov 2021
+        <time class="post-date" datetime="2021-11-27T06:18:08&#43;08:00">
+            27 Nov 2021
         </time>
     </footer>
 </article>
