@@ -12,13 +12,13 @@
 
 
 
-<meta name="twitter:title" content="使用qt5编写Serial Port"/>
+<meta name="twitter:title" content="使用qt6编写Serial Port"/>
 <meta name="twitter:description" content="涉及信号-槽、多线程"/>
 <meta name="twitter:site" content="@"/>
 
 
 
-  	<meta property="og:title" content="使用qt5编写Serial Port &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:title" content="使用qt6编写Serial Port &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
   	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
   	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/" />
 
@@ -29,12 +29,12 @@
     
     <meta property="og:description" content="涉及信号-槽、多线程" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2021-11-27T06:18:08&#43;08:00" />
+    <meta property="article:published_time" content="2021-11-27T08:18:08&#43;08:00" />
 
     
     
 
-    <title>使用qt5编写Serial Port &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+    <title>使用qt6编写Serial Port &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
 
     
     <meta name="description" content="涉及信号-槽、多线程" />
@@ -90,17 +90,17 @@
             
         ]
     },
-    "headline": "使用qt5编写Serial Port",
-    "name": "使用qt5编写Serial Port",
-    "wordCount":  286 ,
+    "headline": "使用qt6编写Serial Port",
+    "name": "使用qt6编写Serial Port",
+    "wordCount":  283 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/",
-    "datePublished": "2021-11-27T06:18Z",
-    "dateModified": "2021-11-27T06:18Z",
+    "datePublished": "2021-11-27T08:18Z",
+    "dateModified": "2021-11-27T08:18Z",
     
     
     "description": "涉及信号-槽、多线程",
@@ -163,12 +163,12 @@
   <article class="post post">
 
     <header class="post-header">
-        <h1 class="post-title">使用qt5编写Serial Port</h1>
+        <h1 class="post-title">使用qt6编写Serial Port</h1>
         <small>涉及信号-槽、多线程</small>
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2021-11-27T06:18:08&#43;08:00">
+          <time class="post-date" datetime="2021-11-27T08:18:08&#43;08:00">
             Nov 27, 2021
           </time>
         
@@ -187,7 +187,7 @@
 <h2 id="synchronously">synchronously</h2>
 <p><a href="https://doc.qt.io/qt-6/qmutexlocker.html">qmutexlocker</a></p>
 <h3 id="创建信号锁">创建信号锁</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">QMutexLocker <span style="color:#a6e22e">locker</span>(<span style="color:#f92672">&amp;</span>m_mutex);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">m_mutex.lock();
 </code></pre></div><h2 id="信号">信号</h2>
 <p>为便于调用者获得线程的内部信息，我们需要提供信号。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">signals:
@@ -252,9 +252,9 @@ start -&gt; Visual Studio 2019 -&gt; Developer Command Prompt for VS 2019</p>
 <li>Step 3: <br>
 copy exe(release version) to target directory.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">copy C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\V</span>isual Studio 2019<span style="color:#ae81ff">\P</span>rojects<span style="color:#ae81ff">\s</span>erialCommQt<span style="color:#ae81ff">\R</span>elease<span style="color:#ae81ff">\s</span>erialCommQt.exe C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\s</span>erialCommQt<span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">copy C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\P</span>rojects<span style="color:#ae81ff">\s</span>erialCommQt<span style="color:#ae81ff">\R</span>elease<span style="color:#ae81ff">\s</span>erialCommQt.exe C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\s</span>erialCommQt<span style="color:#ae81ff">\
 </span></code></pre></div><p>exec windeployqt for QML:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">windeployqt --qmldir C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\s</span>erialCommQt_deploy C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\s</span>erialCommQt<span style="color:#ae81ff">\s</span>erialCommQt.exe
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">windeployqt --qmldir C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\P</span>rojects<span style="color:#ae81ff">\s</span>erialCommQt C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\s</span>erialCommQt<span style="color:#ae81ff">\s</span>erialCommQt.exe
 </code></pre></div><p>exec windeployqt for other:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">windeployqt.exe --dir C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\q</span>tsqlite3demo C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\Q</span>tSqlite3Demo.exe
 </code></pre></div><h2 id="support-introduction">Support introduction</h2>
@@ -311,7 +311,7 @@ For Windows, the name of the platform plugin is qwindows.dll.</p>
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e4%bd%bf%e7%94%a8qt5%e7%bc%96%e5%86%99Serial%20Port&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fqt-serialport%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e4%bd%bf%e7%94%a8qt6%e7%bc%96%e5%86%99Serial%20Port&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fqt-serialport%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -319,7 +319,7 @@ For Windows, the name of the platform plugin is qwindows.dll.</p>
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fqt-serialport%2f&amp;description=%e4%bd%bf%e7%94%a8qt5%e7%bc%96%e5%86%99Serial%20Port"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fqt-serialport%2f&amp;description=%e4%bd%bf%e7%94%a8qt6%e7%bc%96%e5%86%99Serial%20Port"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>

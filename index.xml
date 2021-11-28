@@ -6,17 +6,17 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 27 Nov 2021 06:18:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Nov 2021 08:18:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>使用qt5编写Serial Port</title>
+      <title>使用qt6编写Serial Port</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</link>
-      <pubDate>Sat, 27 Nov 2021 06:18:08 +0800</pubDate>
+      <pubDate>Sat, 27 Nov 2021 08:18:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</guid>
       <description>thread  线程相关
  asynchronously connect方法已实现异步。
 synchronously qmutexlocker
-创建信号锁 QMutexLocker locker(&amp;amp;m_mutex); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。
+创建信号锁 m_mutex.lock(); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。
 signals: void error(const QString &amp;amp;s); void timeout(const QString &amp;amp;s); Worker method Init Port 设置私有成员变量
  部分代码
  m_waitTimeout = waitTimeout; Receive data 打开串口
