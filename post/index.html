@@ -162,7 +162,7 @@
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/qt-serialport/">使用qt6编写Serial Port</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/qt-serialport/">使用qt5编写Serial Port</a></h2>
     </header>
     <section class="post-excerpt">
         
@@ -173,9 +173,8 @@ synchronously qmutexlocker
 signals: void error(const QString &amp;s); void timeout(const QString &amp;s); Worker method Init Port 设置私有成员变量
  部分代码
  m_waitTimeout = waitTimeout; Receive data 打开串口
-if (!serial.open(QIODevice::ReadWrite)) { emit error(tr(&#34;Can&#39;t open %1, error code %2&#34;) .arg(m_portName).arg(serial.error())); serial.close(); return; } 接收数据
-while (serial.waitForReadyRead(500)) responseData += serial.read(1024); Dev Qt VS Tools setting Qt version Qt VS Tools -&gt; Qt Versions
-x64 setup: <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
+if (!m_serialPort-&gt;open(QIODevice::ReadWrite)) { qDebug() &lt;&lt; tr(&#34;Can&#39;t open %1, error code %2&#34;) .arg(m_portName).arg(m_serialPort-&gt;error()); m_serialPort-&gt;close(); return false; } 接收数据
+while (m_serialPort-&gt;waitForReadyRead(500)) responseData += m_serialPort-&gt;read(1024); Dev Qt VS Tools setting Qt version Qt VS Tools -&gt; Qt Versions <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -184,8 +183,8 @@ x64 setup: <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a><
         
 
         
-        <time class="post-date" datetime="2021-11-27T08:18:08&#43;08:00">
-            27 Nov 2021
+        <time class="post-date" datetime="2021-11-28T08:18:08&#43;08:00">
+            28 Nov 2021
         </time>
     </footer>
 </article>
