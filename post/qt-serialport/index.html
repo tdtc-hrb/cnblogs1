@@ -92,8 +92,8 @@
     },
     "headline": "使用qt5编写Serial Port",
     "name": "使用qt5编写Serial Port",
-    "wordCount":  294 ,
-    "timeRequired": "PT2M",
+    "wordCount":  140 ,
+    "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
@@ -212,106 +212,34 @@
 </code></pre></div><p>接收数据</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">while</span> (m_serialPort<span style="color:#f92672">-&gt;</span>waitForReadyRead(<span style="color:#ae81ff">500</span>))
             responseData <span style="color:#f92672">+=</span> m_serialPort<span style="color:#f92672">-&gt;</span>read(<span style="color:#ae81ff">1024</span>);
-</code></pre></div><h1 id="dev">Dev</h1>
-<h2 id="qt-vs-tools-setting">Qt VS Tools setting</h2>
-<h3 id="qt-version">Qt version</h3>
-<p>Qt VS Tools -&gt; Qt Versions</p>
-<p>x86 setup:</p>
-<ul>
-<li>Host <br>
-Windows</li>
-<li>Path <br>
-C:\Qt\Qt5.12.11\5.12.11\msvc2017</li>
-</ul>
-<p>x64 setup:</p>
-<ul>
-<li>Host <br>
-Windows</li>
-<li>Path <br>
-C:\Qt\Qt5.12.11\5.12.11\msvc2017_64</li>
-</ul>
-<h3 id="qt-designer">Qt Designer</h3>
-<p>Qt VS Tools -&gt; Qt General</p>
-<ul>
-<li>Qt Designer <br>
-Run in detached window: True</li>
-</ul>
-<h2 id="qt-in-vc-project-property">Qt in VC project property</h2>
-<h3 id="qt-project-settings">Qt project settings</h3>
-<ul>
-<li>General <br>
-Qt installation: 5.12.11_msvc2017</li>
-</ul>
-<h3 id="include-directories">Include Directories</h3>
-<p>VC++ Directories -&gt; Include Directories
-add:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">C:<span style="color:#ae81ff">\Q</span>t<span style="color:#ae81ff">\Q</span>t5.12.11<span style="color:#ae81ff">\5</span>.12.11<span style="color:#ae81ff">\m</span>svc2017<span style="color:#ae81ff">\i</span>nclude
-C:<span style="color:#ae81ff">\Q</span>t<span style="color:#ae81ff">\Q</span>t5.12.11<span style="color:#ae81ff">\5</span>.12.11<span style="color:#ae81ff">\m</span>svc2017_64<span style="color:#ae81ff">\i</span>nclude
 </code></pre></div><h1 id="deploy-for-windows">Deploy for windows</h1>
+<p>copy exe to target directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">copy C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\P</span>rojects<span style="color:#ae81ff">\s</span>erialCommQt<span style="color:#ae81ff">\R</span>elease<span style="color:#ae81ff">\s</span>erialCommQt.exe C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\s</span>erialCommQt_qmake<span style="color:#ae81ff">\
+</span></code></pre></div><p>exec windeployqt:</p>
 <ul>
-<li>Step 1: <br>
-start -&gt; Visual Studio 2017 -&gt; Developer Command Prompt for VS 2017</li>
+<li>for QML</li>
 </ul>
-<p>enter windeployqt directory:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>cd C:<span style="color:#ae81ff">\Q</span>t<span style="color:#ae81ff">\Q</span>t5.12.11<span style="color:#ae81ff">\5</span>.12.11<span style="color:#ae81ff">\m</span>svc2017<span style="color:#ae81ff">\b</span>in
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">C:<span style="color:#ae81ff">\Q</span>t<span style="color:#ae81ff">\Q</span>t5.12.11<span style="color:#ae81ff">\5</span>.12.11<span style="color:#ae81ff">\m</span>svc2017<span style="color:#ae81ff">\b</span>in<span style="color:#ae81ff">\w</span>indeployqt --qmldir C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\S</span>erialCom<span style="color:#ae81ff">\S</span>erialCom<span style="color:#ae81ff">\Q</span>tRaspberry C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\S</span>erialCom_qml<span style="color:#ae81ff">\s</span>erialCom.exe
 </code></pre></div><ul>
-<li>Step 2: <br>
-copy exe(release version) to target directory.</li>
+<li>for Other</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">copy C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\P</span>rojects<span style="color:#ae81ff">\s</span>erialCommQt<span style="color:#ae81ff">\R</span>elease<span style="color:#ae81ff">\s</span>erialCommQt.exe C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\s</span>erialCommQt<span style="color:#ae81ff">\
-</span></code></pre></div><ul>
-<li>Step 3:</li>
-</ul>
-<blockquote>
-<p>exec windeployqt for QML:</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">windeployqt --qmldir C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\S</span>erialCom<span style="color:#ae81ff">\S</span>erialCom<span style="color:#ae81ff">\Q</span>tRaspberry C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\S</span>erialCom_qml<span style="color:#ae81ff">\s</span>erialCom.exe
-</code></pre></div><blockquote>
-<p>exec windeployqt for Other:</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">windeployqt --dir C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\P</span>rojects<span style="color:#ae81ff">\s</span>erialCommQt C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\s</span>erialCommQt<span style="color:#ae81ff">\s</span>erialCommQt.exe
-</code></pre></div><h2 id="support-introduction">Support introduction</h2>
-<p>The &ldquo;d&rdquo; at the end of the file name means the debug version.</p>
-<h2 id="vc-runtime">VC Runtime</h2>
-<ul>
-<li>The C++ run-time <br>
-msvcp140d.dll</li>
-<li>The C run-time <br>
-vcruntime140d.dll</li>
-<li>Universal CRT <br>
-ucrtbased.dll</li>
-</ul>
-<h2 id="qt-runtime">Qt Runtime</h2>
-<p>The following files are copied from &ldquo;C:\Qt\Qt5.12.11\5.12.11\msvc2017\bin&rdquo;.</p>
-<ul>
-<li>The QtCore runtime <br>
-Qt5Cored.dll</li>
-<li>The QtGui runtime <br>
-Qt5Guid.dll</li>
-<li>The QtWidgets runtime <br>
-Qt5Widgetsd.dll</li>
-</ul>
-<h2 id="qt-plugins">Qt Plugins</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">C:<span style="color:#ae81ff">\Q</span>t<span style="color:#ae81ff">\Q</span>t5.12.11<span style="color:#ae81ff">\5</span>.12.11<span style="color:#ae81ff">\m</span>svc2017<span style="color:#ae81ff">\b</span>in<span style="color:#ae81ff">\w</span>indeployqt --dir C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\P</span>rojects<span style="color:#ae81ff">\s</span>erialCommQt C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\s</span>erialCommQt_qmake<span style="color:#ae81ff">\s</span>erialCommQt.exe
+</code></pre></div><p><img src="https://raw.githubusercontent.com/tdtc-hrb/cnblogs/master/images/qt_deploy.png" alt="qt deploy files"></p>
+<h2 id="about-qt-plugins">About Qt Plugins</h2>
 <blockquote>
 <p>The following files are copied from &ldquo;C:\Qt\Qt5.12.11\5.12.11\msvc2017\plugins\platforms&rdquo;.</p>
+<blockquote>
+<p>The &ldquo;d&rdquo; at the end of the file name means the debug version.</p>
 </blockquote>
-<p>default directory:</p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./platforms/qwindowsd.dll
-</code></pre></div><p><img src="https://raw.githubusercontent.com/tdtc-hrb/cnblogs/master/images/qt_deploy.png" alt="qt deploy files"></p>
-<p>All Qt GUI applications require a plugin that implements the Qt Platform Abstraction (QPA) layer in Qt 5.  <br>
+</code></pre></div><p>All Qt GUI applications require a plugin that implements the Qt Platform Abstraction (QPA) layer in Qt 5.  <br>
 For Windows, the name of the platform plugin is qwindows.dll.</p>
 <h1 id="reference">Reference</h1>
 <ul>
 <li><a href="https://github.com/tdtc-hrb/serialCommQt">src</a></li>
-<li><a href="https://forums.raspberrypi.com/viewtopic.php?t=304199">Qt and Serial Communication Tutorial</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Qt_version_history">Qt version history</a></li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/qt/archive/qt/5.12/5.12.11/qt-opensource-windows-x86-5.12.11.exe">v5.12.11</a></li>
-<li><a href="https://download.qt.io/archive/vsaddin/2.7.2/">vs addin</a></li>
-<li><a href="https://www.bogotobogo.com/Qt/Qt5_Deploy_Windows_Plugins_Platforms_qwindows.php">Short Note : Deploying Qt5 on Windows</a></li>
 <li><a href="https://doc.qt.io/Qt-5/windows-deployment.html">Qt for Windows - Deployment</a></li>
 <li><a href="https://www.eltima.com/article/how-to-test-serial-port/">RS-232 Testing Guide</a></li>
-<li><a href="https://stackoverflow.com/questions/57298040/building-qt5-quick-project-without-qt-creator-via-cmake">Building Qt5 Quick project without Qt Creator via CMake</a></li>
 </ul>
 
     </section>

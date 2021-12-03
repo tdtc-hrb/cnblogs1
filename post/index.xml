@@ -21,7 +21,8 @@ signals: void error(const QString &amp;amp;s); void timeout(const QString &amp;a
  部分代码
  m_waitTimeout = waitTimeout; Receive data 打开串口
 if (!m_serialPort-&amp;gt;open(QIODevice::ReadWrite)) { qDebug() &amp;lt;&amp;lt; tr(&amp;#34;Can&amp;#39;t open %1, error code %2&amp;#34;) .arg(m_portName).arg(m_serialPort-&amp;gt;error()); m_serialPort-&amp;gt;close(); return false; } 接收数据
-while (m_serialPort-&amp;gt;waitForReadyRead(500)) responseData += m_serialPort-&amp;gt;read(1024); Dev Qt VS Tools setting Qt version Qt VS Tools -&amp;gt; Qt Versions</description>
+while (m_serialPort-&amp;gt;waitForReadyRead(500)) responseData += m_serialPort-&amp;gt;read(1024); Deploy for windows copy exe to target directory.
+copy C:\Users\tdtc\Documents\Projects\serialCommQt\Release\serialCommQt.exe C:\Users\tdtc\Documents\serialCommQt_qmake\ exec windeployqt:</description>
     </item>
     
     <item>
