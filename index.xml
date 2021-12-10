@@ -6,7 +6,21 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 28 Nov 2021 08:18:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Dec 2021 10:18:02 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3小时搞定ASP.NET Core 6.0</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</link>
+      <pubDate>Fri, 10 Dec 2021 10:18:02 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
+      <description>IDE: Visual Studio Code SDK: .Net 6.0 终端(Terminal) Windows 10 LTSC 2019(v1809+): PowerShell Core 数据库(Database)：MySQL / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside)  一、Create Project(VS Code)  Set workspace dir   File -&amp;gt; Add Folder to Workspace
+  Init project   Terminal -&amp;gt; New Terminal
+ dotnet new mvc -o veic_web --framework net6.0 设置缺省首页(Home Set Default) 由
+app.UseStaticFiles(); 变更为:
+app.UseDefaultFiles(); app.UseStaticFiles(); 新建wwwroot/index.html，See附录1.
+Run build  Manually add .</description>
+    </item>
+    
     <item>
       <title>使用qt5编写Serial Port</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</link>
@@ -106,20 +120,6 @@ dotnet new webapi -o MyWebApp --package Swashbuckle.AspNetCore:PackageVersion=6.
 CLI&amp;gt; dotnet add package Pomelo.EntityFrameworkCore.MySql Test Browser
 Models 建立Entity类：Supplier、Product、Category
 DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbContext(DbContextOptions&amp;lt;StorageBuyDbContext&amp;gt; options) : base(options){} public DbSet&amp;lt;Category&amp;gt; Categories { get; set; } public DbSet&amp;lt;Supplier&amp;gt; Suppliers { get; set; } public DbSet&amp;lt;Product&amp;gt; Products { get; set; } } add service add connectiong string &amp;#34;Data&amp;#34;: { &amp;#34;StorageBuy&amp;#34;: { &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.</description>
-    </item>
-    
-    <item>
-      <title>3小时搞定ASP.NET Core 6.0</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</link>
-      <pubDate>Wed, 10 Nov 2021 20:18:02 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
-      <description>IDE: Visual Studio Code SDK: .Net 6.0 终端(Terminal) Windows 10 LTSC 2019(v1809+): PowerShell Core 数据库(Database)：MySQL/SQL Server Express LocalDB  一、Create Project(VS Code)  Set workspace dir   File -&amp;gt; Add Folder to Workspace
-  Init project   Terminal -&amp;gt; New Terminal
- dotnet new mvc -o veic_web --framework net6.0 设置缺省首页(Home Set Default) 由
-app.UseStaticFiles(); 变更为:
-app.UseDefaultFiles(); app.UseStaticFiles(); 新建wwwroot/index.html，See附录1.
-Run build  Manually add .vscode    install c# for Visual Studio Code 双击Program.</description>
     </item>
     
     <item>

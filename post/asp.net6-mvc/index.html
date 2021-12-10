@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="MVC基础篇(MVC basics)" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2021-11-10T20:18:02&#43;08:00" />
+    <meta property="article:published_time" content="2021-12-10T10:18:02&#43;08:00" />
 
     
     
@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.89.4" />
+    <meta name="generator" content="Hugo 0.90.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/" />
 
@@ -92,15 +92,15 @@
     },
     "headline": "3小时搞定ASP.NET Core 6.0",
     "name": "3小时搞定ASP.NET Core 6.0",
-    "wordCount":  634 ,
-    "timeRequired": "PT3M",
+    "wordCount":  697 ,
+    "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/",
-    "datePublished": "2021-11-10T20:18Z",
-    "dateModified": "2021-11-10T20:18Z",
+    "datePublished": "2021-12-10T10:18Z",
+    "dateModified": "2021-12-10T10:18Z",
     
     
     "description": "MVC基础篇(MVC basics)",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2021-11-10T20:18:02&#43;08:00">
-            Nov 10, 2021
+          <time class="post-date" datetime="2021-12-10T10:18:02&#43;08:00">
+            Dec 10, 2021
           </time>
         
          
@@ -182,7 +182,7 @@
 <li>SDK: <a href="https://dotnet.microsoft.com/download/dotnet/6.0">.Net 6.0</a></li>
 <li>终端(Terminal) <br>
 Windows 10 LTSC 2019(<a href="https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md">v1809+</a>): <a href="https://github.com/PowerShell/PowerShell#get-powershell">PowerShell Core</a></li>
-<li>数据库(Database)：<a href="https://dev.mysql.com/downloads/mysql/">MySQL</a>/<a href="https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15">SQL Server Express LocalDB</a></li>
+<li>数据库(Database)：<a href="https://dev.mysql.com/downloads/mysql/">MySQL</a> / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside)</li>
 </ul>
 <h1 id="一create-projectvs-code">一、Create Project(VS Code)</h1>
 <ul>
@@ -237,10 +237,24 @@ use view-&gt;command palette-&gt;Omnisharp: select project to select the new pro
 </code></pre></div><p>Preview:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">CLI&gt; dotnet add package Microsoft.EntityFrameworkCore --prerelease
 </code></pre></div><h2 id="1-entity-class">1. entity class</h2>
-<h3 id="table">table</h3>
+<h3 id="localdb">LocalDB</h3>
+<p>About vs2013 installation files: <br>
+All feature packages are in &ldquo;packages&rdquo;;</p>
 <ul>
-<li>LocalDB</li>
+<li>sqllocaldb_amd64 <br>
+64-bit installation package of ms sql2012 localdb</li>
+<li>sqlncli_amd64 <br>
+64-bit installation package of Microsoft SQL Server 2012 Native Client</li>
 </ul>
+<p><a href="https://stackoverflow.com/questions/26007913/the-specified-localdb-instance-does-not-exist">see instances</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqllocaldb i
+</code></pre></div><h4 id="use-navicat">use navicat</h4>
+<p>down <a href="https://navicat.com/en/download/navicat-for-sqlserver">navicat for sqlserver</a>; later install Microsoft SQL Server 2012 Native Client(sqlncli.msi - amd64)
+Host:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">(</span>localdb<span style="color:#f92672">)</span><span style="color:#ae81ff">\v</span>11.0
+</code></pre></div><p>create db:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> carnumber;
+</code></pre></div><p>create table:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">USE [carnumber]
 <span style="color:#66d9ef">GO</span>
 
@@ -536,17 +550,10 @@ Pomelo:</li>
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/asp.net6-restful/">
-          <section class="post">
-              <h2>ASP.net Core 的RESTful应用</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/asp.net6-grpc/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/qt-serialport/">
           <section class="post">
-              <h2>ASP.net Core 的gRPC Service应用</h2>
+              <h2>使用qt5编写Serial Port</h2>
           </section>
       </a>
   
