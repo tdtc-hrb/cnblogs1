@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -162,6 +162,31 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-sqlite3lib/">生成SQLite静态库</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>使用vs2019(v16.11)
+ .\vs_Community.exe --layout D:\win10soft\vs2019 ` --add Microsoft.VisualStudio.Component.CoreEditor ` --add Microsoft.VisualStudio.Workload.CoreEditor ` --add Microsoft.VisualStudio.Component.Roslyn.Compiler ` --add Microsoft.Component.MSBuild ` --add Microsoft.VisualStudio.Component.TextTemplating ` --add Microsoft.VisualStudio.Component.VC.CoreIde ` --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 ` --add Microsoft.VisualStudio.Component.Windows10SDK.19041 ` --add Microsoft.VisualStudio.Component.VC.Redist.14.Latest ` --add Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core ` --add Microsoft.VisualStudio.Workload.NativeDesktop --lang en-US Debug版 新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了） 添加SQLite源文件 下载sqlite-amalgamation-3380100.zip， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。 编译工程 预编译头文件  不使用预编译头文件。
+ Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header  如果不更改会出现如下错误：
+ sqlite3.c : fatal error C1853: &#39;Debug\sqlite3. <a class="read-more" href="/cnblogs/post/vc-sqlite3lib/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-03-18T12:08:08&#43;08:00">
+            18 Mar 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/asp.net6-mvc/">3小时搞定ASP.NET Core 6.0</a></h2>
     </header>
     <section class="post-excerpt">
@@ -200,9 +225,8 @@ synchronously qmutexlocker
 signals: void error(const QString &amp;s); void timeout(const QString &amp;s); Worker method Init Port 设置私有成员变量
  部分代码
  m_waitTimeout = waitTimeout; Receive data 打开串口
-if (!m_serialPort-&gt;open(QIODevice::ReadWrite)) { qDebug() &lt;&lt; tr(&#34;Can&#39;t open %1, error code %2&#34;) .arg(m_portName).arg(m_serialPort-&gt;error()); m_serialPort-&gt;close(); return false; } 接收数据
-while (m_serialPort-&gt;waitForReadyRead(500)) responseData += m_serialPort-&gt;read(1024); Deploy for windows copy exe to target directory.
-copy C:\Users\tdtc\Documents\Projects\serialCommQt\Release\serialCommQt.exe C:\Users\tdtc\Documents\serialCommQt_qmake\ exec windeployqt: <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
+if (!m_serialPort-&gt;open(QIODevice::ReadWrite)) { 	qDebug() &lt;&lt; tr(&#34;Can&#39;t open %1, error code %2&#34;) 	.arg(m_portName).arg(m_serialPort-&gt;error()); 	m_serialPort-&gt;close(); 	return false; 	} 接收数据
+while (m_serialPort-&gt;waitForReadyRead(500))  responseData += m_serialPort-&gt;read(1024); Deploy for windows copy exe to target directory. <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -255,7 +279,7 @@ $ docker --version Docker compose 1. down sudo curl -L &#34;https://github. <a c
 0. Entity class  注意：主键和外键
  建立两个实体类：FactoryCar和MarqueCar
 1. 连接 asyncConn = new SQLite.SQLiteAsyncConnection(options); 其中，options是SQLiteConnectionString实例化的字符串。
-var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, preKeyAction: db =&gt; db.Execute(&#34;PRAGMA cipher_default_use_hmac = OFF;&#34;), postKeyAction: db =&gt; db.Execute(&#34;PRAGMA kdf_iter = 128000;&#34;)); 2. <a class="read-more" href="/cnblogs/post/sqlite.net.core/">&raquo;</a></p>
+var options = new SQLiteConnectionString(edtDB.Text, true,  key: edtPwd.Text,  preKeyAction: db =&gt; db.Execute(&#34;PRAGMA cipher_default_use_hmac = OFF;&#34;),  postKeyAction: db =&gt; db. <a class="read-more" href="/cnblogs/post/sqlite.net.core/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -277,8 +301,8 @@ var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, pre
     </header>
     <section class="post-excerpt">
         
-            <p>1. 字符串替换 /** * 字符串替换函数 - js * expStr: 查找的字符串 * string: 整个字符串 * repStr: 替换的字符串 */ function replacStr(expStr, string, repStr) { let result = &#34;&#34;; let regex; if (parseInt(expStr) &gt; 0) // 数字 	regex = new RegExp(expStr, &#34;g&#34;); else	// 非数字 	regex = new RegExp(&#34;\\&#34; + expStr, &#34;g&#34;); result = string.replace(regex, repStr); return result; } 2. 千分符 例如，货币7867321.55，怎样使用js来分割他呢？
-0. 分离小数和整数 let index = strCny.indexOf(&#34;.&#34;); if ( index ! <a class="read-more" href="/cnblogs/post/js-thousand-separator/">&raquo;</a></p>
+            <p>1. 字符串替换 /** * 字符串替换函数 - js * expStr: 查找的字符串 * string: 整个字符串 * repStr: 替换的字符串 */ function replacStr(expStr, string, repStr) { 	let result = &#34;&#34;; 	let regex; 	if (parseInt(expStr) &gt; 0) // 数字 	regex = new RegExp(expStr, &#34;g&#34;); 	else	// 非数字 	regex = new RegExp(&#34;\\&#34; + expStr, &#34;g&#34;); 	result = string.replace(regex, repStr); 	return result; } 2. 千分符 例如，货币7867321.55，怎样使用js来分割他呢？
+0. 分离小数和整数 let index = strCny. <a class="read-more" href="/cnblogs/post/js-thousand-separator/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -303,11 +327,11 @@ var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, pre
             <p>一棵&quot;树&quot;就是由空格、星号和回车组成的。 我们用a，代表空格。
  注意：空格在HTML编码为：“ ”。
  aaaa* aaa*** aa***** a******* ********* aaaa* aaaa* aaaa* aaaa* aaaa* 首先“树头”部分由3部分组成：空格部分、左树头、右树头。 空格就是递减的过程：
-for (let i = treeRadius; i &gt; k; i--) { document.write(&#34; &#34;); } 左树头，包括中线
-for (let i = 0; i &lt; k + 1; i++) { document.write(&#34;*&#34;); } 右树头，递增过程：
-for (let j = 0; j &lt; k; j++) { document.write(&#34;b&#34;); } 然后，“树干”部分由2部分组成：空格部分和中线部分
+for (let i = treeRadius; i &gt; k; i--) {  document.write(&#34; &#34;); } 左树头，包括中线
+for (let i = 0; i &lt; k + 1; i++) {  document.write(&#34;*&#34;); } 右树头，递增过程：
+for (let j = 0; j &lt; k; j++) {  document.write(&#34;b&#34;); } 然后，“树干”部分由2部分组成：空格部分和中线部分
 空格就是按照指定的半径数“占位”：
-for (let j = 0; j &lt; treeRadius; j++) { document. <a class="read-more" href="/cnblogs/post/js-print-tree/">&raquo;</a></p>
+for (let j = 0; j &lt; treeRadius; j++) {  document. <a class="read-more" href="/cnblogs/post/js-print-tree/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -359,11 +383,11 @@ import { HttpClientModule } from &#34;@angular/common/http&#34;; declare Decorat
         
             <p>使用Scaffolder模板创建api。
  PowerShell v5.1 IDE: Visual Studio Code/Visual Studio 2022 NuGet   ..\AppData\Roaming\NuGet\NuGet.Config
- &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;configuration&gt; &lt;packageSources&gt; &lt;add key=&#34;api.nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; /&gt; &lt;/packageSources&gt; &lt;/configuration&gt; Create Project vs code
+ &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;configuration&gt;  &lt;packageSources&gt;  &lt;add key=&#34;api.nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; /&gt;  &lt;/packageSources&gt; &lt;/configuration&gt; Create Project vs code
 dotnet new webapi -o MyWebApp --package Swashbuckle.AspNetCore:PackageVersion=6.2.3 add NuGet package dotnet add package Microsoft.EntityFrameworkCore dotnet add package MySql.EntityFrameworkCore dotnet add package Microsoft.EntityFrameworkCore.Tools Option NuGet package Pomelo:
 CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql Test Browser
 Models 建立Entity类：Supplier、Product、Category
-DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbContext(DbContextOptions&lt;StorageBuyDbContext&gt; options) : base(options){} public DbSet&lt;Category&gt; Categories { get; set; } public DbSet&lt;Supplier&gt; Suppliers { get; set; } public DbSet&lt;Product&gt; Products { get; set; } } add service add connectiong string &#34;Data&#34;: { &#34;StorageBuy&#34;: { &#34;ConnectionString&#34;: &#34;server=127. <a class="read-more" href="/cnblogs/post/asp.net6-restful/">&raquo;</a></p>
+DbContext public class StorageBuyDbContext : DbContext {  public StorageBuyDbContext(DbContextOptions&lt;StorageBuyDbContext&gt; options) : base(options){}   public DbSet&lt;Category&gt; Categories { get; set; }  public DbSet&lt;Supplier&gt; Suppliers { get; set; }  public DbSet&lt;Product&gt; Products { get; set; } } add service add connectiong string &#34;Data&#34;: {  &#34;StorageBuy&#34;: {  &#34;ConnectionString&#34;: &#34;server=127. <a class="read-more" href="/cnblogs/post/asp.net6-restful/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -387,7 +411,7 @@ DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbCont
         
             <p>Server 在Ubuntu V20.04; Client 在Windows CMD运行。
   PowerShell Core v7.2 IDE: VS2022 Community(v17.0)/VS Code(docker extension) VM: VBox(v6.1)  接口文件说明  Protos/greet.proto
- 定义service service Greeter { // Sends a greeting rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message  request  message HelloRequest { string name = 1; }  response  message HelloReply { string message = 1; } server Create VS2022 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file  View -&gt; Command Palette(Ctrl+Shift+P)   Enter: Docker fi choice1: Add Docker Files to Workspace&hellip; choice2: . <a class="read-more" href="/cnblogs/post/asp.net6-grpc/">&raquo;</a></p>
+ 定义service service Greeter {  // Sends a greeting  rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message  request  message HelloRequest {  string name = 1; }  response  message HelloReply {  string message = 1; } server Create VS2022 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file  View -&gt; Command Palette(Ctrl+Shift+P)   Enter: Docker fi choice1: Add Docker Files to Workspace&hellip; choice2: . <a class="read-more" href="/cnblogs/post/asp.net6-grpc/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -398,30 +422,6 @@ DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbCont
         
         <time class="post-date" datetime="2021-11-09T20:38:18&#43;08:00">
             9 Nov 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-webpack/">webpack的使用</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>安装webpack npm install -g webpack-dev-server npm install --save webpack-cli pack info  package.json
- { &#34;name&#34;: &#34;redux-book-started&#34;, &#34;version&#34;: &#34;1.0.0&#34;, &#34;description&#34;: &#34;Sample Redux Application&#34;, &#34;main&#34;: &#34;app.js&#34;, &#34;scripts&#34;: { &#34;start&#34;: &#34;webpack-dev-server --hot --progress --port 8181&#34; }, &#34;author&#34;: &#34;Boris Dinkevich &amp; Ilya Gelman&#34;, &#34;license&#34;: &#34;MIT&#34;, &#34;dependencies&#34;: { &#34;jquery&#34;: &#34;3.6.0&#34;, &#34;redux&#34;: &#34;4.1.2&#34; }, &#34;devDependencies&#34;: { &#34;webpack&#34;: &#34;5.64.1&#34;, &#34;webpack-cli&#34;: &#34;^4.9.1&#34;, &#34;webpack-dev-server&#34;: &#34;4.5.0&#34; } } config info  webpack.config.js
- module.exports = { mode: &#39;development&#39;, entry: &#39;. <a class="read-more" href="/cnblogs/post/js-webpack/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-08T15:26:39&#43;08:00">
-            8 Nov 2021
         </time>
     </footer>
 </article>

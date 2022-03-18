@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/" />
 
@@ -178,20 +178,20 @@
 
     <section class="post-content">
       <h1 id="install">install</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$sudo apt-get update
-$sudo apt-get install consul
-</code></pre></div><h1 id="run">run</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$consul agent -dev -bind 192.168.188.10
-</code></pre></div><p>http://localhost:8500/ui</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo apt-get update
+</span></span><span style="display:flex;"><span>$sudo apt-get install consul
+</span></span></code></pre></div><h1 id="run">run</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$consul agent -dev -bind 192.168.188.10
+</span></span></code></pre></div><p>http://localhost:8500/ui</p>
 <h1 id="update">update</h1>
 <h2 id="down">down</h2>
 <pre tabindex="0"><code>$wget https://releases.hashicorp.com/consul/1.10.3/consul_1.10.3_linux_amd64.zip
 </code></pre><h2 id="unzip">unzip</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$sudo unzip consul_1.10.3_linux_amd64.zip -d /usr/local/bin
-</code></pre></div><p>Verifying the Installation:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$consul -v
-Consul v1.10.3
-</code></pre></div><h1 id="ref">Ref</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo unzip consul_1.10.3_linux_amd64.zip -d /usr/local/bin
+</span></span></code></pre></div><p>Verifying the Installation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$consul -v
+</span></span><span style="display:flex;"><span>Consul v1.10.3
+</span></span></code></pre></div><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://learn.hashicorp.com/tutorials/consul/get-started-install?in=consul/getting-started">Install Consul</a></li>
 <li><a href="https://learn.hashicorp.com/tutorials/consul/get-started-agent?in=consul/getting-started">Run the Consul Agent</a></li>

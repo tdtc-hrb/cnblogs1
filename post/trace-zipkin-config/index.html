@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/" />
 
@@ -221,18 +221,18 @@ Subtracting the cs timestamp from this timestamp reveals the whole time needed b
 </li>
 </ul>
 <h2 id="1-pom">1. pom</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-starter-sleuth<span style="color:#f92672">&lt;/artifactId&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><h2 id="2-config">2. config</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-starter-sleuth<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><h2 id="2-config">2. config</h2>
 <h3 id="1-sampler">1) sampler</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">sleuth</span>:
-    <span style="color:#f92672">sampler</span>:
-      <span style="color:#f92672">probability</span>: <span style="color:#ae81ff">1.0</span>
-</code></pre></div><h1 id="ii-zipkin">II. zipkin</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">sleuth</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">sampler</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">probability</span>: <span style="color:#ae81ff">1.0</span>
+</span></span></code></pre></div><h1 id="ii-zipkin">II. zipkin</h1>
 <ul>
 <li>http
 <img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20181202025422633.png" alt="http way"></li>
@@ -241,30 +241,30 @@ Subtracting the cs timestamp from this timestamp reveals the whole time needed b
 </ul>
 <h2 id="0-zipkin-client">0. zipkin client</h2>
 <h3 id="1-pom-1">1) pom</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-starter-zipkin<span style="color:#f92672">&lt;/artifactId&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><h3 id="2-config-1">2) config</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-starter-zipkin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><h3 id="2-config-1">2) config</h3>
 <h4 id="base-url">base url</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">zipkin</span>:
-    <span style="color:#f92672">base-url</span>: <span style="color:#ae81ff">http://localhost:9411</span>
-</code></pre></div><h4 id="sender">sender</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">zipkin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">base-url</span>: <span style="color:#ae81ff">http://localhost:9411</span>
+</span></span></code></pre></div><h4 id="sender">sender</h4>
 <h5 id="rabbitmq">RabbitMQ</h5>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">zipkin</span>:
-    <span style="color:#f92672">sender</span>:
-      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">RABBIT</span>
-</code></pre></div><h5 id="kafka">Kafka</h5>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">zipkin</span>:
-    <span style="color:#f92672">sender</span>:
-      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">KAFKA</span>
-</code></pre></div><h5 id="web">Web</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">zipkin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">sender</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">RABBIT</span>
+</span></span></code></pre></div><h5 id="kafka">Kafka</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">zipkin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">sender</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">KAFKA</span>
+</span></span></code></pre></div><h5 id="web">Web</h5>
 <p>default</p>
 <h2 id="1-zipkin-server">1. zipkin server</h2>
 <p><a href="https://github.com/openzipkin/zipkin/issues/1962">upgrade to Spring Boot 2.0 NoClassDefFoundError UndertowEmbeddedServletContainerFactory</a></p>
@@ -279,53 +279,53 @@ Subtracting the cs timestamp from this timestamp reveals the whole time needed b
 <blockquote>
 <p>version: RabbitMQ3.8.2(erlang 22.2.1)</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar zipkin-server-2.12.9-exec.jar --RABBIT_URI<span style="color:#f92672">=</span>amqp://admin:admin@192.168.0.19:5672/sleuth --STORAGE_TYPE<span style="color:#f92672">=</span>elasticsearch --ES_HOSTS<span style="color:#f92672">=</span>192.168.0.116:9200 --ES_HTTP_LOGGING<span style="color:#f92672">=</span>BASIC
-</code></pre></div><h4 id="for-kafka">for kafka</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar zipkin-server-2.12.9-exec.jar --RABBIT_URI<span style="color:#f92672">=</span>amqp://admin:admin@192.168.0.19:5672/sleuth --STORAGE_TYPE<span style="color:#f92672">=</span>elasticsearch --ES_HOSTS<span style="color:#f92672">=</span>192.168.0.116:9200 --ES_HTTP_LOGGING<span style="color:#f92672">=</span>BASIC
+</span></span></code></pre></div><h4 id="for-kafka">for kafka</h4>
 <blockquote>
 <p>version: Kafka1.0.2(Scale 2.11)</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar zipkin-server-2.19.2-exec.jar --KAFKA_BOOTSTRAP_SERVERS<span style="color:#f92672">=</span>192.168.188.107:9092,192.168.188.108:9092,192.168.188.109:9092 --STORAGE_TYPE<span style="color:#f92672">=</span>elasticsearch --ES_HOSTS<span style="color:#f92672">=</span>http://localhost:9200 --ES_HTTP_LOGGING<span style="color:#f92672">=</span>BASIC
-</code></pre></div><h1 id="iii-mq">III. MQ</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar zipkin-server-2.19.2-exec.jar --KAFKA_BOOTSTRAP_SERVERS<span style="color:#f92672">=</span>192.168.188.107:9092,192.168.188.108:9092,192.168.188.109:9092 --STORAGE_TYPE<span style="color:#f92672">=</span>elasticsearch --ES_HOSTS<span style="color:#f92672">=</span>http://localhost:9200 --ES_HTTP_LOGGING<span style="color:#f92672">=</span>BASIC
+</span></span></code></pre></div><h1 id="iii-mq">III. MQ</h1>
 <h2 id="1-rabbitmq">1. RabbitMQ</h2>
 <h3 id="0-pom">0) pom</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-stream<span style="color:#f92672">&lt;/artifactId&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-<span style="color:#f92672">&lt;dependency&gt;</span>
-  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-stream-binder-rabbit<span style="color:#f92672">&lt;/artifactId&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><h3 id="1-config">1) config</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">rabbitmq</span>:
-    <span style="color:#f92672">addresses</span>: <span style="color:#ae81ff">127.0.0.1</span>
-    <span style="color:#f92672">port</span>: <span style="color:#ae81ff">5672</span>
-    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">admin</span>
-    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">admin</span>
-    <span style="color:#f92672">virtual-host</span>: <span style="color:#ae81ff">sleuth</span>
-</code></pre></div><h3 id="2-virtual-hosts">2) virtual hosts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-stream<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-stream-binder-rabbit<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><h3 id="1-config">1) config</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">rabbitmq</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">addresses</span>: <span style="color:#ae81ff">127.0.0.1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">port</span>: <span style="color:#ae81ff">5672</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">admin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">admin</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">virtual-host</span>: <span style="color:#ae81ff">sleuth</span>
+</span></span></code></pre></div><h3 id="2-virtual-hosts">2) virtual hosts</h3>
 <p>切换到Admin选项卡，点击右侧的virtual hosts
 <img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20190702001931753.png" alt="RabbitMQ info"></p>
 <h2 id="2-kafka">2. Kafka</h2>
 <h3 id="0-pom-1">0) pom</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-stream<span style="color:#f92672">&lt;/artifactId&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-<span style="color:#f92672">&lt;dependency&gt;</span>
-  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-stream-binder-kafka<span style="color:#f92672">&lt;/artifactId&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><h3 id="1-config-1">1) config</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">kafka</span>:
-    <span style="color:#f92672">bootstrap-servers</span>:
-      - <span style="color:#ae81ff">192.168.188.107</span>:<span style="color:#ae81ff">9092</span>
-      - <span style="color:#ae81ff">192.168.188.108</span>:<span style="color:#ae81ff">9092</span>
-      - <span style="color:#ae81ff">192.168.188.109</span>:<span style="color:#ae81ff">9092</span>
-</code></pre></div><h1 id="iv-effect-diagram">IV. Effect Diagram</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-stream<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.cloud<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-cloud-stream-binder-kafka<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><h3 id="1-config-1">1) config</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">kafka</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">bootstrap-servers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">192.168.188.107</span>:<span style="color:#ae81ff">9092</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">192.168.188.108</span>:<span style="color:#ae81ff">9092</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">192.168.188.109</span>:<span style="color:#ae81ff">9092</span>
+</span></span></code></pre></div><h1 id="iv-effect-diagram">IV. Effect Diagram</h1>
 <h2 id="0-gateway">0. gateway</h2>
 <p>http://localhost:8311/user/listPage
 <img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20181203030036197.png" alt="browser info1"></p>
@@ -399,9 +399,9 @@ Subtracting the cs timestamp from this timestamp reveals the whole time needed b
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/vc-sqlite3lib/">
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/e-enc28j60-driver/">
           <section class="post">
-              <h2>生成SQLite静态库</h2>
+              <h2>enc28j60 driver - sam4s</h2>
               
           </section>
       </a>

@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/cas-server-config/" />
 
@@ -188,78 +188,78 @@
 <p>使用gradle 的repo最高只支持gradle V4.3！</p>
 </blockquote>
 <h2 id="0-clone">0. clone</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/apereo/cas-gradle-overlay-template.git
-</code></pre></div><h2 id="1-set-gradle">1. set gradle</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/apereo/cas-gradle-overlay-template.git
+</span></span></code></pre></div><h2 id="1-set-gradle">1. set gradle</h2>
 <h3 id="1-extract">1) extract</h3>
 <p><a href="https://gradle.org/next-steps/?version=4.10.3&amp;format=bin">gradle-4.10.3-bin.zip</a></p>
 <h3 id="2-set-system-variable">2) set system variable</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">  $PATH<span style="color:#f92672">=</span>$PATH;%GRADLE_HOME%<span style="color:#ae81ff">\b</span>in
-</code></pre></div><h2 id="2-build-war">2. build war</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  $PATH<span style="color:#f92672">=</span>$PATH;%GRADLE_HOME%<span style="color:#ae81ff">\b</span>in
+</span></span></code></pre></div><h2 id="2-build-war">2. build war</h2>
 <blockquote>
 <p>File location: cas\build\libs\cas.war</p>
 </blockquote>
 <h3 id="1-config-file">1) config file</h3>
 <p>gradle.properties</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cas.version<span style="color:#f92672">=</span>5.3.2
-<span style="color:#f92672">=</span>&gt;
-cas.version<span style="color:#f92672">=</span>5.3.15.1
-
-gradle.version<span style="color:#f92672">=</span>4.8
-<span style="color:#f92672">=</span>&gt;
-gradle.version<span style="color:#f92672">=</span>4.10.3
-
-springboot.version<span style="color:#f92672">=</span>1.5.14.RELEASE
-<span style="color:#f92672">=</span>&gt;
-springboot.version<span style="color:#f92672">=</span>1.5.18.RELEASE
-</code></pre></div><h3 id="2-build">2) build</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd cas-gradle-overlay-template
-$gradle build
-</code></pre></div><h1 id="ii-run">II. Run</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cas.version<span style="color:#f92672">=</span>5.3.2
+</span></span><span style="display:flex;"><span><span style="color:#f92672">=</span>&gt;
+</span></span><span style="display:flex;"><span>cas.version<span style="color:#f92672">=</span>5.3.15.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gradle.version<span style="color:#f92672">=</span>4.8
+</span></span><span style="display:flex;"><span><span style="color:#f92672">=</span>&gt;
+</span></span><span style="display:flex;"><span>gradle.version<span style="color:#f92672">=</span>4.10.3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>springboot.version<span style="color:#f92672">=</span>1.5.14.RELEASE
+</span></span><span style="display:flex;"><span><span style="color:#f92672">=</span>&gt;
+</span></span><span style="display:flex;"><span>springboot.version<span style="color:#f92672">=</span>1.5.18.RELEASE
+</span></span></code></pre></div><h3 id="2-build">2) build</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd cas-gradle-overlay-template
+</span></span><span style="display:flex;"><span>$gradle build
+</span></span></code></pre></div><h1 id="ii-run">II. Run</h1>
 <h2 id="0-keycertificate">0. key/certificate</h2>
 <h3 id="1-genkey">1) genkey</h3>
 <blockquote>
 <p>info:
 -dname &ldquo;CN=localhost,OU=test.com,O=test,L=WH,ST=HB,C=CN&rdquo;</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize <span style="color:#ae81ff">2048</span> -keystore e:/etc/cas/thekeystore
-</code></pre></div><h3 id="2-export">2) export</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">keytool -export -alias thekeystore -file e:/etc/cas/cas5311.crt -keystore e:/etc/cas/thekeystore -storepass changeit
-</code></pre></div><h3 id="3-import">3) import</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">keytool -import -alias thekeystore -storepass changeit -file e:/etc/cas/cas5311.crt -keystore <span style="color:#e6db74">&#34;%JAVA_HOME%\jre\lib\security\cacerts&#34;</span>
-</code></pre></div><h2 id="1-set-tomcat">1. set tomcat</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize <span style="color:#ae81ff">2048</span> -keystore e:/etc/cas/thekeystore
+</span></span></code></pre></div><h3 id="2-export">2) export</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>keytool -export -alias thekeystore -file e:/etc/cas/cas5311.crt -keystore e:/etc/cas/thekeystore -storepass changeit
+</span></span></code></pre></div><h3 id="3-import">3) import</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>keytool -import -alias thekeystore -storepass changeit -file e:/etc/cas/cas5311.crt -keystore <span style="color:#e6db74">&#34;%JAVA_HOME%\jre\lib\security\cacerts&#34;</span>
+</span></span></code></pre></div><h2 id="1-set-tomcat">1. set tomcat</h2>
 <h3 id="1-thekeystore">1) thekeystore</h3>
 <p>copy thekeystore file to $TOMCAT_HOME/conf</p>
 <h3 id="2-add-https">2) add https</h3>
 <p>server.xml</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;Connector port<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8443&#34;</span> protocol<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;org.apache.coyote.http11.Http11NioProtocol&#34;</span>
-               maxThreads<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span> SSLEnabled<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;
-  &lt;SSLHostConfig&gt;
-    &lt;Certificate certificateKeystoreFile<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;conf/thekeystore&#34;</span>
-              keystorePass<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;changeit&#34;</span>
-              type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;RSA&#34;</span> /&gt;
-    &lt;/SSLHostConfig&gt;
-&lt;/Connector&gt;
-</code></pre></div><h2 id="2-lets-it">2. let&rsquo;s it</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&lt;Connector port<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8443&#34;</span> protocol<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;org.apache.coyote.http11.Http11NioProtocol&#34;</span>
+</span></span><span style="display:flex;"><span>               maxThreads<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span> SSLEnabled<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;SSLHostConfig&gt;
+</span></span><span style="display:flex;"><span>    &lt;Certificate certificateKeystoreFile<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;conf/thekeystore&#34;</span>
+</span></span><span style="display:flex;"><span>              keystorePass<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;changeit&#34;</span>
+</span></span><span style="display:flex;"><span>              type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;RSA&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;/SSLHostConfig&gt;
+</span></span><span style="display:flex;"><span>&lt;/Connector&gt;
+</span></span></code></pre></div><h2 id="2-lets-it">2. let&rsquo;s it</h2>
 <h3 id="1-tomcat-startup">1) tomcat startup</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">startup.bat
-</code></pre></div><h3 id="2-login">2) login</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>startup.bat
+</span></span></code></pre></div><h3 id="2-login">2) login</h3>
 <p>http://localhost:8080/cas <br>
 https://localhost:8443/cas</p>
 <p>Enter username and password</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">casuser/Mellon
-</code></pre></div><p>If you want to change the user/password, stop Tomcat and change it in Application.properties(webapps\cas\WEB-INF\classes).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">##</span>
-<span style="color:#75715e"># CAS Authentication Credentials</span>
-<span style="color:#75715e">#</span>
-cas.authn.accept.users<span style="color:#f92672">=</span>casuser::Mellon
-</code></pre></div><p><img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20181027044736986.png" alt="cas info"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>casuser/Mellon
+</span></span></code></pre></div><p>If you want to change the user/password, stop Tomcat and change it in Application.properties(webapps\cas\WEB-INF\classes).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">##</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CAS Authentication Credentials</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span>cas.authn.accept.users<span style="color:#f92672">=</span>casuser::Mellon
+</span></span></code></pre></div><p><img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20181027044736986.png" alt="cas info"></p>
 <hr>
 <h1 id="iii-database-authentication">III. Database Authentication</h1>
 <h2 id="0-config-files-folder">0. config files folder</h2>
 <p>copy cas-gradle-overlay-template/etc to The drive letter where Tomcat is located.</p>
 <p>For example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">e:<span style="color:#ae81ff">\
-</span></code></pre></div><p><img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20181113041752923.png" alt="win info1">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>e:<span style="color:#ae81ff">\
+</span></span></span></code></pre></div><p><img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20181113041752923.png" alt="win info1">
 <img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20181113041828650.png" alt="win info2"></p>
 <h2 id="1-service-register">1. service register</h2>
 <h3 id="0-on-services">0) ON Services</h3>
@@ -267,9 +267,9 @@ cas.authn.accept.users<span style="color:#f92672">=</span>casuser::Mellon
 <p>cas.properties</p>
 </blockquote>
 <p>Append the following Key-Value:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cas.serviceRegistry.initFromJson<span style="color:#f92672">=</span>true
-cas.serviceRegistry.json.location<span style="color:#f92672">=</span>classpath:/services
-</code></pre></div><h3 id="1-services-file">1) services file</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cas.serviceRegistry.initFromJson<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>cas.serviceRegistry.json.location<span style="color:#f92672">=</span>classpath:/services
+</span></span></code></pre></div><h3 id="1-services-file">1) services file</h3>
 <p>webapps\cas\WEB-INF\classes\services</p>
 <ul>
 <li>cas spring secured app <br>
@@ -280,115 +280,115 @@ loginInfo-10000004.json</li>
 <h2 id="2-jdbc-support">2. JDBC Support</h2>
 <h3 id="1-down-jar">1) down jar</h3>
 <p>MySQL Connector/J is 5.x;</p>
-<p>cas-server-support-jdbc for matching ' cas.server &lsquo;.</p>
+<p>cas-server-support-jdbc for matching &rsquo; cas.server &lsquo;.</p>
 <p>If the cas.authn.jdbc.query[0].passwordEncoder.type is not <strong>NONE</strong>, add the <strong>cas-server-support-jdbc-authentication</stong> package.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">https://mvnrepository.com/artifact/mysql/mysql-connector-java
-
-https://mvnrepository.com/artifact/org.apereo.cas/cas-server-support-jdbc
-
-https://mvnrepository.com/artifact/org.apereo.cas/cas-server-support-jdbc-authentication
-</code></pre></div><p>%%%Copy the above three files (.jar) to the lib(..\webapps\cas\WEB-INF\lib) folder.%%%</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>https://mvnrepository.com/artifact/mysql/mysql-connector-java
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>https://mvnrepository.com/artifact/org.apereo.cas/cas-server-support-jdbc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>https://mvnrepository.com/artifact/org.apereo.cas/cas-server-support-jdbc-authentication
+</span></span></code></pre></div><p>%%%Copy the above three files (.jar) to the lib(..\webapps\cas\WEB-INF\lib) folder.%%%</p>
 <h3 id="2-properties">2) properties</h3>
 <pre><code>application.properties(..\webapps\cas\WEB-INF\classes)
 </code></pre>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">##</span>
-<span style="color:#75715e"># CAS Authentication Credentials</span>
-<span style="color:#75715e">#</span>
-<span style="color:#75715e">#cas.authn.accept.users=casuser::Mellon</span>
-</code></pre></div><h4 id="mysql55-mysql57">mysql5.5-mysql5.7</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">##</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CAS Authentication Credentials</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#cas.authn.accept.users=casuser::Mellon</span>
+</span></span></code></pre></div><h4 id="mysql55-mysql57">mysql5.5-mysql5.7</h4>
 <blockquote>
 <p>cas.properties</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># server.port = 8443</span>
-cas.server.name: https://localhost:8443
-cas.server.prefix: https://localhost:8443/cas
-
-cas.adminPagesSecurity.ip<span style="color:#f92672">=</span>127<span style="color:#ae81ff">\.</span>0<span style="color:#ae81ff">\.</span>0<span style="color:#ae81ff">\.</span><span style="color:#ae81ff">1</span>
-
-logging.config: file:/etc/cas/config/log4j2.xml
-cas.serviceRegistry.initFromJson<span style="color:#f92672">=</span>true
-cas.serviceRegistry.json.location<span style="color:#f92672">=</span>classpath:/services
-
-<span style="color:#75715e"># SSL</span>
-<span style="color:#75715e"># server.ssl.enabled=false</span>
-
-cas.authn.accept.users<span style="color:#f92672">=</span>
-cas.authn.accept.name<span style="color:#f92672">=</span>
-<span style="color:#75715e">#CAS Database Authentication Property</span>
-<span style="color:#75715e">#cas.authn.jdbc.query[0].sql=SELECT * FROM users WHERE email = ?</span>
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.sql<span style="color:#f92672">=</span>SELECT * FROM app_user WHERE email <span style="color:#f92672">=</span> ?
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.url<span style="color:#f92672">=</span>jdbc:mysql://127.0.0.1:3306/test
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.dialect<span style="color:#f92672">=</span>org.hibernate.dialect.MySQLDialect
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.user<span style="color:#f92672">=</span>DBAdmin
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.password<span style="color:#f92672">=</span>xbfirst
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.ddlAuto<span style="color:#f92672">=</span>none
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.driverClass<span style="color:#f92672">=</span>com.mysql.jdbc.Driver
-<span style="color:#75715e">## mysql8+</span>
-<span style="color:#75715e">#cas.authn.jdbc.query[0].driverClass=com.mysql.cj.jdbc.Driver</span>
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.fieldPassword<span style="color:#f92672">=</span>password
-<span style="color:#75715e">#cas.authn.jdbc.query[0].passwordEncoder.type=NONE</span>
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.passwordEncoder.type<span style="color:#f92672">=</span>BCRYPT
-<span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.characterEncoding=</span>
-<span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.encodingAlgorithm=</span>
-<span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.secret=</span>
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.passwordEncoder.strength<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
-</code></pre></div><h4 id="mysql80">mysql8.0+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># server.port = 8443</span>
+</span></span><span style="display:flex;"><span>cas.server.name: https://localhost:8443
+</span></span><span style="display:flex;"><span>cas.server.prefix: https://localhost:8443/cas
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cas.adminPagesSecurity.ip<span style="color:#f92672">=</span>127<span style="color:#ae81ff">\.</span>0<span style="color:#ae81ff">\.</span>0<span style="color:#ae81ff">\.</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logging.config: file:/etc/cas/config/log4j2.xml
+</span></span><span style="display:flex;"><span>cas.serviceRegistry.initFromJson<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>cas.serviceRegistry.json.location<span style="color:#f92672">=</span>classpath:/services
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SSL</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># server.ssl.enabled=false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cas.authn.accept.users<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>cas.authn.accept.name<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#CAS Database Authentication Property</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#cas.authn.jdbc.query[0].sql=SELECT * FROM users WHERE email = ?</span>
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.sql<span style="color:#f92672">=</span>SELECT * FROM app_user WHERE email <span style="color:#f92672">=</span> ?
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.url<span style="color:#f92672">=</span>jdbc:mysql://127.0.0.1:3306/test
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.dialect<span style="color:#f92672">=</span>org.hibernate.dialect.MySQLDialect
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.user<span style="color:#f92672">=</span>DBAdmin
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.password<span style="color:#f92672">=</span>xbfirst
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.ddlAuto<span style="color:#f92672">=</span>none
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.driverClass<span style="color:#f92672">=</span>com.mysql.jdbc.Driver
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## mysql8+</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#cas.authn.jdbc.query[0].driverClass=com.mysql.cj.jdbc.Driver</span>
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.fieldPassword<span style="color:#f92672">=</span>password
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#cas.authn.jdbc.query[0].passwordEncoder.type=NONE</span>
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.passwordEncoder.type<span style="color:#f92672">=</span>BCRYPT
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.characterEncoding=</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.encodingAlgorithm=</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.secret=</span>
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.passwordEncoder.strength<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span></code></pre></div><h4 id="mysql80">mysql8.0+</h4>
 <blockquote>
 <p>cas.properties</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># server.port = 8443</span>
-cas.server.name: https://localhost:8443
-cas.server.prefix: https://localhost:8443/cas
-
-cas.adminPagesSecurity.ip<span style="color:#f92672">=</span>127<span style="color:#ae81ff">\.</span>0<span style="color:#ae81ff">\.</span>0<span style="color:#ae81ff">\.</span><span style="color:#ae81ff">1</span>
-
-logging.config: file:/etc/cas/config/log4j2.xml
-cas.serviceRegistry.initFromJson<span style="color:#f92672">=</span>true
-cas.serviceRegistry.json.location<span style="color:#f92672">=</span>classpath:/services
-
-<span style="color:#75715e"># SSL</span>
-<span style="color:#75715e"># server.ssl.enabled=false</span>
-
-cas.authn.accept.users<span style="color:#f92672">=</span>
-cas.authn.accept.name<span style="color:#f92672">=</span>
-<span style="color:#75715e">#CAS Database Authentication Property</span>
-<span style="color:#75715e">#cas.authn.jdbc.query[0].sql=SELECT * FROM users WHERE email = ?</span>
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.sql<span style="color:#f92672">=</span>SELECT * FROM app_user WHERE email <span style="color:#f92672">=</span> ?
-<span style="color:#75715e">#cas.authn.jdbc.query[0].url=jdbc:mysql://127.0.0.1:3306/test</span>
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.url<span style="color:#f92672">=</span>jdbc:mysql://127.0.0.1:3306/test?serverTimezone<span style="color:#f92672">=</span>UTC
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.dialect<span style="color:#f92672">=</span>org.hibernate.dialect.MySQLDialect
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.user<span style="color:#f92672">=</span>DBAdmin
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.password<span style="color:#f92672">=</span>xbfirst
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.ddlAuto<span style="color:#f92672">=</span>none
-<span style="color:#75715e">##cas.authn.jdbc.query[0].driverClass=com.mysql.jdbc.Driver</span>
-<span style="color:#75715e">## mysql8+</span>
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.driverClass<span style="color:#f92672">=</span>com.mysql.cj.jdbc.Driver
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.fieldPassword<span style="color:#f92672">=</span>password
-<span style="color:#75715e">#cas.authn.jdbc.query[0].passwordEncoder.type=NONE</span>
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.passwordEncoder.type<span style="color:#f92672">=</span>BCRYPT
-<span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.characterEncoding=</span>
-<span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.encodingAlgorithm=</span>
-<span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.secret=</span>
-cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.passwordEncoder.strength<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
-</code></pre></div><h3 id="3-table">3) table</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># server.port = 8443</span>
+</span></span><span style="display:flex;"><span>cas.server.name: https://localhost:8443
+</span></span><span style="display:flex;"><span>cas.server.prefix: https://localhost:8443/cas
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cas.adminPagesSecurity.ip<span style="color:#f92672">=</span>127<span style="color:#ae81ff">\.</span>0<span style="color:#ae81ff">\.</span>0<span style="color:#ae81ff">\.</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logging.config: file:/etc/cas/config/log4j2.xml
+</span></span><span style="display:flex;"><span>cas.serviceRegistry.initFromJson<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>cas.serviceRegistry.json.location<span style="color:#f92672">=</span>classpath:/services
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SSL</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># server.ssl.enabled=false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cas.authn.accept.users<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>cas.authn.accept.name<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#CAS Database Authentication Property</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#cas.authn.jdbc.query[0].sql=SELECT * FROM users WHERE email = ?</span>
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.sql<span style="color:#f92672">=</span>SELECT * FROM app_user WHERE email <span style="color:#f92672">=</span> ?
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#cas.authn.jdbc.query[0].url=jdbc:mysql://127.0.0.1:3306/test</span>
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.url<span style="color:#f92672">=</span>jdbc:mysql://127.0.0.1:3306/test?serverTimezone<span style="color:#f92672">=</span>UTC
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.dialect<span style="color:#f92672">=</span>org.hibernate.dialect.MySQLDialect
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.user<span style="color:#f92672">=</span>DBAdmin
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.password<span style="color:#f92672">=</span>xbfirst
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.ddlAuto<span style="color:#f92672">=</span>none
+</span></span><span style="display:flex;"><span><span style="color:#75715e">##cas.authn.jdbc.query[0].driverClass=com.mysql.jdbc.Driver</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## mysql8+</span>
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.driverClass<span style="color:#f92672">=</span>com.mysql.cj.jdbc.Driver
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.fieldPassword<span style="color:#f92672">=</span>password
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#cas.authn.jdbc.query[0].passwordEncoder.type=NONE</span>
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.passwordEncoder.type<span style="color:#f92672">=</span>BCRYPT
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.characterEncoding=</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.encodingAlgorithm=</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cas.authn.jdbc.query[0].passwordEncoder.secret=</span>
+</span></span><span style="display:flex;"><span>cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>.passwordEncoder.strength<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span></code></pre></div><h3 id="3-table">3) table</h3>
 <p>APP_USER</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> APP_USER (
-   id BIGINT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> AUTO_INCREMENT,
-   sso_id VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-   password VARCHAR(<span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-   first_name VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-   last_name  VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-   email VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-   <span style="color:#66d9ef">state</span> VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,  
-   <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (id),
-   <span style="color:#66d9ef">UNIQUE</span> (sso_id)
-);
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> APP_USER (
+</span></span><span style="display:flex;"><span>   id BIGINT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> AUTO_INCREMENT,
+</span></span><span style="display:flex;"><span>   sso_id VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>   password VARCHAR(<span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>   first_name VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>   last_name  VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>   email VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">state</span> VARCHAR(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,  
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (id),
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">UNIQUE</span> (sso_id)
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><blockquote>
 <p>insert data</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> APP_USER(sso_id, password, first_name, last_name, email, <span style="color:#66d9ef">state</span>)
-<span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;sam&#39;</span>,<span style="color:#e6db74">&#39;$2a$10$4eqIF5s/ewJwHK1p8lqlFOEm2QIA0S8g6./Lok.pQxqcxaBZYChRm&#39;</span>, <span style="color:#e6db74">&#39;Sam&#39;</span>,<span style="color:#e6db74">&#39;Smith&#39;</span>,<span style="color:#e6db74">&#39;samy@xyz.com&#39;</span>, <span style="color:#e6db74">&#39;Active&#39;</span>);
-</code></pre></div><h2 id="3-test">3. test</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> APP_USER(sso_id, password, first_name, last_name, email, <span style="color:#66d9ef">state</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;sam&#39;</span>,<span style="color:#e6db74">&#39;$2a$10$4eqIF5s/ewJwHK1p8lqlFOEm2QIA0S8g6./Lok.pQxqcxaBZYChRm&#39;</span>, <span style="color:#e6db74">&#39;Sam&#39;</span>,<span style="color:#e6db74">&#39;Smith&#39;</span>,<span style="color:#e6db74">&#39;samy@xyz.com&#39;</span>, <span style="color:#e6db74">&#39;Active&#39;</span>);
+</span></span></code></pre></div><h2 id="3-test">3. test</h2>
 <p><a href="https://xiaobin80.gitee.io/cnblogs/post/cas-client-config">cas client</a>
 <img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20181115204456890.png" alt="cas info3"></p>
 <h2 id="source">Source</h2>
@@ -396,34 +396,34 @@ cas.authn.jdbc.query<span style="color:#f92672">[</span>0<span style="color:#f92
 <ul>
 <li>casSecuredApp-19991.json</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;@class&#34;</span> : <span style="color:#e6db74">&#34;org.apereo.cas.services.RegexRegisteredService&#34;</span>,
-    <span style="color:#f92672">&#34;serviceId&#34;</span> : <span style="color:#e6db74">&#34;^http://localhost:9000/login/cas&#34;</span>,
-    <span style="color:#f92672">&#34;name&#34;</span> : <span style="color:#e6db74">&#34;CAS Spring Secured App&#34;</span>,
-    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;This is a Spring App that usses the CAS Server for it&#39;s authentication&#34;</span>,
-    <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#ae81ff">19991</span>,
-    <span style="color:#f92672">&#34;evaluationOrder&#34;</span> : <span style="color:#ae81ff">1</span>
-}
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;@class&#34;</span> : <span style="color:#e6db74">&#34;org.apereo.cas.services.RegexRegisteredService&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;serviceId&#34;</span> : <span style="color:#e6db74">&#34;^http://localhost:9000/login/cas&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;name&#34;</span> : <span style="color:#e6db74">&#34;CAS Spring Secured App&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;This is a Spring App that usses the CAS Server for it&#39;s authentication&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#ae81ff">19991</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;evaluationOrder&#34;</span> : <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
 <li>loginInfo-10000004.json</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;@class&#34;</span> : <span style="color:#e6db74">&#34;org.apereo.cas.services.RegexRegisteredService&#34;</span>,
-  <span style="color:#f92672">&#34;serviceId&#34;</span> : <span style="color:#e6db74">&#34;^http://localhost:9080/loginInfo/&#34;</span>,
-  <span style="color:#f92672">&#34;name&#34;</span> : <span style="color:#e6db74">&#34;Login Information&#34;</span>,
-  <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#ae81ff">10000004</span>,
-  <span style="color:#f92672">&#34;description&#34;</span> : <span style="color:#e6db74">&#34;Sample service for Cas client&#34;</span>,
-  <span style="color:#f92672">&#34;evaluationOrder&#34;</span> : <span style="color:#ae81ff">1</span>
-}
-</code></pre></div><h1 id="reference">Reference</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;@class&#34;</span> : <span style="color:#e6db74">&#34;org.apereo.cas.services.RegexRegisteredService&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;serviceId&#34;</span> : <span style="color:#e6db74">&#34;^http://localhost:9080/loginInfo/&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;name&#34;</span> : <span style="color:#e6db74">&#34;Login Information&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;id&#34;</span> : <span style="color:#ae81ff">10000004</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;description&#34;</span> : <span style="color:#e6db74">&#34;Sample service for Cas client&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;evaluationOrder&#34;</span> : <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="reference">Reference</h1>
 <h2 id="0-database-authenticationhttpsapereogithubiocas53xinstallationdatabase-authenticationhtml">0. <a href="https://apereo.github.io/cas/5.3.x/installation/Database-Authentication.html">Database Authentication</a></h2>
 <h3 id="1-configurehttpsapereogithubiocas53xinstallationconfiguration-propertieshtmldatabase-authentication">1) <a href="https://apereo.github.io/cas/5.3.x/installation/Configuration-Properties.html#database-authentication">configure</a></h3>
 <h3 id="2-password-encodehttpsapereogithubiocas53xinstallationconfiguration-properties-commonhtmlpassword-encoding">2) <a href="https://apereo.github.io/cas/5.3.x/installation/Configuration-Properties-Common.html#password-encoding">password-encode</a></h3>
 <h2 id="1-service-registryhttpsapereogithubiocas53xinstallationconfiguration-propertieshtmlservice-registry">1. <a href="https://apereo.github.io/cas/5.3.x/installation/Configuration-Properties.html#service-registry">Service Registry</a></h2>
 <h3 id="1-json-service-registryhttpsapereogithubiocas53xinstallationconfiguration-propertieshtmljson-service-registry">1) <a href="https://apereo.github.io/cas/5.3.x/installation/Configuration-Properties.html#json-service-registry">JSON Service Registry</a></h3>
 <h2 id="2-keytool---del">2. keytool - del</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">keytool -delete -alias thekeystore -keystore <span style="color:#e6db74">&#34;%JAVA_HOME%\jre\lib\security\cacerts&#34;</span> -storepass changeit
-</code></pre></div><h2 id="3-bcrypt-toolhttpsbcrypt-generatorcom">3. <a href="https://bcrypt-generator.com/">bcrypt tool</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>keytool -delete -alias thekeystore -keystore <span style="color:#e6db74">&#34;%JAVA_HOME%\jre\lib\security\cacerts&#34;</span> -storepass changeit
+</span></span></code></pre></div><h2 id="3-bcrypt-toolhttpsbcrypt-generatorcom">3. <a href="https://bcrypt-generator.com/">bcrypt tool</a></h2>
 
     </section>
 

@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/js-redux-root/" />
 
@@ -178,58 +178,58 @@
 
     <section class="post-content">
       <h1 id="1-split">1. split</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reducer</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">state</span>, <span style="color:#a6e22e">action</span>) =&gt; {
-    <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">type</span>) {
-        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;ADD_RECIPE&#39;</span><span style="color:#f92672">:</span>
-            <span style="color:#66d9ef">return</span> Object.<span style="color:#a6e22e">assign</span>(
-                {}, <span style="color:#a6e22e">state</span>, {
-                    <span style="color:#a6e22e">recipes</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">recipes</span>.<span style="color:#a6e22e">concat</span>({<span style="color:#a6e22e">name</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">name</span>})
-            });
-
-        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;ADD_INGREDIENT&#39;</span><span style="color:#f92672">:</span>
-            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myIngredients</span> <span style="color:#f92672">=</span> {
-                        <span style="color:#a6e22e">name</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">name</span>,
-                        <span style="color:#a6e22e">quantity</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">quantity</span>,
-                        <span style="color:#a6e22e">measure</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">measure</span>,
-                        <span style="color:#a6e22e">recipe</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">recipe</span>
-                        };
-            <span style="color:#66d9ef">return</span> Object.<span style="color:#a6e22e">assign</span>(
-                {}, <span style="color:#a6e22e">state</span>, {
-                    <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">ingredients</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">myIngredients</span>)
-            });
-
-    }
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state</span>;
-}
-</code></pre></div><h2 id="recipereducer">recipeReducer</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">recipeReducer</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">stat</span>, <span style="color:#a6e22e">action</span>) =&gt; {
-    <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">type</span>) {
-        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;ADD_RECIPE&#39;</span><span style="color:#f92672">:</span>
-            <span style="color:#66d9ef">return</span>
-Object.<span style="color:#a6e22e">assign</span>(
-                {}, <span style="color:#a6e22e">state</span>, {
-                    <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">ingredients</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">myIngredients</span>)
-            });
-} <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">recipes</span>; }
-</code></pre></div><h2 id="ingredientreducer">ingredientReducer</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ingredientReducer</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">state</span>, <span style="color:#a6e22e">action</span>) =&gt; {
-    <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">type</span>) {
-        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;ADD_INGREDIENT&#39;</span><span style="color:#f92672">:</span>
-            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myIngredients</span> <span style="color:#f92672">=</span> {
-                        <span style="color:#a6e22e">name</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">name</span>,
-                        <span style="color:#a6e22e">quantity</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">quantity</span>,
-                        <span style="color:#a6e22e">measure</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">measure</span>,
-                        <span style="color:#a6e22e">recipe</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">recipe</span>
-                        };
-            <span style="color:#66d9ef">return</span> Object.<span style="color:#a6e22e">assign</span>(
-                {}, <span style="color:#a6e22e">state</span>, {
-                    <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">ingredients</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">myIngredients</span>)
-            });
-
-    }
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state</span>;
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reducer</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">state</span>, <span style="color:#a6e22e">action</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">type</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;ADD_RECIPE&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> Object.<span style="color:#a6e22e">assign</span>(
+</span></span><span style="display:flex;"><span>                {}, <span style="color:#a6e22e">state</span>, {
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">recipes</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">recipes</span>.<span style="color:#a6e22e">concat</span>({<span style="color:#a6e22e">name</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">name</span>})
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;ADD_INGREDIENT&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myIngredients</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">name</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">name</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">quantity</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">quantity</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">measure</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">measure</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">recipe</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">recipe</span>
+</span></span><span style="display:flex;"><span>                        };
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> Object.<span style="color:#a6e22e">assign</span>(
+</span></span><span style="display:flex;"><span>                {}, <span style="color:#a6e22e">state</span>, {
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">ingredients</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">myIngredients</span>)
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="recipereducer">recipeReducer</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">recipeReducer</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">stat</span>, <span style="color:#a6e22e">action</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">type</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;ADD_RECIPE&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>Object.<span style="color:#a6e22e">assign</span>(
+</span></span><span style="display:flex;"><span>                {}, <span style="color:#a6e22e">state</span>, {
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">ingredients</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">myIngredients</span>)
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">recipes</span>; }
+</span></span></code></pre></div><h2 id="ingredientreducer">ingredientReducer</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ingredientReducer</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">state</span>, <span style="color:#a6e22e">action</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">type</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;ADD_INGREDIENT&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myIngredients</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">name</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">name</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">quantity</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">quantity</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">measure</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">measure</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">recipe</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">action</span>.<span style="color:#a6e22e">recipe</span>
+</span></span><span style="display:flex;"><span>                        };
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> Object.<span style="color:#a6e22e">assign</span>(
+</span></span><span style="display:flex;"><span>                {}, <span style="color:#a6e22e">state</span>, {
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">ingredients</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">ingredients</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">myIngredients</span>)
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
     </section>
 
 

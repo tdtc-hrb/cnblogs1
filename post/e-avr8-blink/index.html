@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/e-avr8-blink/" />
 
@@ -195,55 +195,55 @@
 <img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20210306045520.png" alt="设置Arduino sketch"></p>
 <h1 id="烧写">烧写</h1>
 <p>把代码copy回arduino ide</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">/*
-</span><span style="color:#75715e">  Blink
-</span><span style="color:#75715e">  Turns on an LED on for one second, then off for one second, repeatedly.
-</span><span style="color:#75715e">
-</span><span style="color:#75715e">  Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO
-</span><span style="color:#75715e">  it is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN takes care
-</span><span style="color:#75715e">  of use the correct LED pin whatever is the board used.
-</span><span style="color:#75715e">  If you want to know what pin the on-board LED is connected to on your Arduino model, check
-</span><span style="color:#75715e">  the Technical Specs of your board  at https://www.arduino.cc/en/Main/Products
-</span><span style="color:#75715e">
-</span><span style="color:#75715e">  This example code is in the public domain.
-</span><span style="color:#75715e">
-</span><span style="color:#75715e">  modified 8 May 2014
-</span><span style="color:#75715e">  by Scott Fitzgerald
-</span><span style="color:#75715e">
-</span><span style="color:#75715e">  modified 2 Sep 2016
-</span><span style="color:#75715e">  by Arturo Guadalupi
-</span><span style="color:#75715e">
-</span><span style="color:#75715e">  modified 6 Mar 2021
-</span><span style="color:#75715e">  by tdtc
-</span><span style="color:#75715e">*/</span>
-<span style="color:#66d9ef">int</span> led1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; <span style="color:#75715e">// pin2
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> led2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>; <span style="color:#75715e">// pin3
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> led3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>; <span style="color:#75715e">// pin4
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">// the setup function runs once when you press reset or power the board
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
-  <span style="color:#75715e">// initialize digital pin LED_BUILTIN as an output.
-</span><span style="color:#75715e"></span>  pinMode(led1, OUTPUT);
-  pinMode(led2, OUTPUT);
-  pinMode(led3, OUTPUT);
-}
-
-<span style="color:#75715e">// the loop function runs over and over again forever
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
-  digitalWrite(led1, HIGH);   <span style="color:#75715e">// turn the LED on (HIGH is the voltage level)
-</span><span style="color:#75715e"></span>  delay(<span style="color:#ae81ff">1000</span>);                       <span style="color:#75715e">// wait for a second
-</span><span style="color:#75715e"></span>  digitalWrite(led1, LOW);    <span style="color:#75715e">// turn the LED off by making the voltage LOW
-</span><span style="color:#75715e"></span>  delay(<span style="color:#ae81ff">1000</span>);                       <span style="color:#75715e">// wait for a second
-</span><span style="color:#75715e"></span>  digitalWrite(led2, HIGH);
-  delay(<span style="color:#ae81ff">1000</span>);
-  digitalWrite(led2, LOW);
-  delay(<span style="color:#ae81ff">1000</span>);
-  digitalWrite(led3, HIGH);
-  delay(<span style="color:#ae81ff">1000</span>);
-  digitalWrite(led3, LOW);
-  delay(<span style="color:#ae81ff">1000</span>);
-}
-</code></pre></div><p>step 1: 项目-&gt;验证/编译 <br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  Blink
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  Turns on an LED on for one second, then off for one second, repeatedly.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  it is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN takes care
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  of use the correct LED pin whatever is the board used.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  If you want to know what pin the on-board LED is connected to on your Arduino model, check
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  the Technical Specs of your board  at https://www.arduino.cc/en/Main/Products
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  This example code is in the public domain.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  modified 8 May 2014
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  by Scott Fitzgerald
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  modified 2 Sep 2016
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  by Arturo Guadalupi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  modified 6 Mar 2021
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  by tdtc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> led1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; <span style="color:#75715e">// pin2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> led2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>; <span style="color:#75715e">// pin3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> led3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>; <span style="color:#75715e">// pin4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// the setup function runs once when you press reset or power the board
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// initialize digital pin LED_BUILTIN as an output.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  pinMode(led1, OUTPUT);
+</span></span><span style="display:flex;"><span>  pinMode(led2, OUTPUT);
+</span></span><span style="display:flex;"><span>  pinMode(led3, OUTPUT);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// the loop function runs over and over again forever
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+</span></span><span style="display:flex;"><span>  digitalWrite(led1, HIGH);   <span style="color:#75715e">// turn the LED on (HIGH is the voltage level)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  delay(<span style="color:#ae81ff">1000</span>);                       <span style="color:#75715e">// wait for a second
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  digitalWrite(led1, LOW);    <span style="color:#75715e">// turn the LED off by making the voltage LOW
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  delay(<span style="color:#ae81ff">1000</span>);                       <span style="color:#75715e">// wait for a second
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  digitalWrite(led2, HIGH);
+</span></span><span style="display:flex;"><span>  delay(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  digitalWrite(led2, LOW);
+</span></span><span style="display:flex;"><span>  delay(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  digitalWrite(led3, HIGH);
+</span></span><span style="display:flex;"><span>  delay(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  digitalWrite(led3, LOW);
+</span></span><span style="display:flex;"><span>  delay(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>step 1: 项目-&gt;验证/编译 <br>
 step 2: 项目-&gt;上传 <br>
 在上传前,一定要查看&quot;工具&quot;中&quot;端口&quot;信息是否正确!</p>
 <h1 id="ref">Ref</h1>

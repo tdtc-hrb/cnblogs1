@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -166,7 +166,7 @@
     </header>
     <section class="post-excerpt">
         
-            <p>1. split const reducer = (state, action) =&gt; { switch (action.type) { case &#39;ADD_RECIPE&#39;: return Object.assign( {}, state, { recipes: state.recipes.concat({name : action.name}) }); case &#39;ADD_INGREDIENT&#39;: const myIngredients = { name : action.name, quantity: action.quantity, measure: action.measure, recipe: action.recipe }; return Object.assign( {}, state, { ingredients: state.ingredients.concat(myIngredients) }); } return state; } recipeReducer export const recipeReducer = (stat, action) =&gt; { switch (action.type) { case &#39;ADD_RECIPE&#39;: return Object.assign( {}, state, { ingredients: state. <a class="read-more" href="/cnblogs/post/js-redux-root/">&raquo;</a></p>
+            <p>1. split const reducer = (state, action) =&gt; {  switch (action.type) {  case &#39;ADD_RECIPE&#39;:  return Object.assign(  {}, state, {  recipes: state.recipes.concat({name : action.name})  });   case &#39;ADD_INGREDIENT&#39;:  const myIngredients = {  name : action.name,  quantity: action.quantity,  measure: action.measure,  recipe: action.recipe  };  return Object.assign(  {}, state, {  ingredients: state.ingredients.concat(myIngredients)  });   }  return state; } recipeReducer export const recipeReducer = (stat, action) =&gt; {  switch (action. <a class="read-more" href="/cnblogs/post/js-redux-root/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -188,7 +188,7 @@
     </header>
     <section class="post-excerpt">
         
-            <p>1. include createStore import { createStore } from &#39;redux&#39; 2. Establish reducer const reducerName = (state, action) =&gt; { state; } 3. invoke createStore() const store = createStore(reducerName);  <a class="read-more" href="/cnblogs/post/js-redux-mini/">&raquo;</a></p>
+            <p>1. include createStore import { createStore } from &#39;redux&#39; 2. Establish reducer const reducerName = (state, action) =&gt; {  state; } 3. invoke createStore() const store = createStore(reducerName);  <a class="read-more" href="/cnblogs/post/js-redux-mini/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -210,7 +210,7 @@
     </header>
     <section class="post-excerpt">
         
-            <p>Before rewriting function selectedReddit(state = &#39;user/8&#39;, action){ switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } After rewriting const selectedReddit = (state = &#39;user/8&#39;, action) =&gt; { switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } 参考 《Arrow functions》 <a class="read-more" href="/cnblogs/post/js-lambda/">&raquo;</a></p>
+            <p>Before rewriting function selectedReddit(state = &#39;user/8&#39;, action){  switch (action.type) {  case SELECT_REDDIT:  return action.reddit  default:  return state  } } After rewriting const selectedReddit = (state = &#39;user/8&#39;, action) =&gt; {  switch (action.type) {  case SELECT_REDDIT:  return action.reddit  default:  return state  } } 参考 《Arrow functions》 <a class="read-more" href="/cnblogs/post/js-lambda/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">

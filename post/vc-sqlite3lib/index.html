@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="debug版和release版" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2020-06-18T12:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-03-18T12:08:08&#43;08:00" />
 
     
     
@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/" />
 
@@ -92,15 +92,15 @@
     },
     "headline": "生成SQLite静态库",
     "name": "生成SQLite静态库",
-    "wordCount":  108 ,
+    "wordCount":  145 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/",
-    "datePublished": "2020-06-18T12:08Z",
-    "dateModified": "2020-06-18T12:08Z",
+    "datePublished": "2022-03-18T12:08Z",
+    "dateModified": "2022-03-18T12:08Z",
     
     
     "description": "debug版和release版",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2020-06-18T12:08:08&#43;08:00">
-            Jun 18, 2020
+          <time class="post-date" datetime="2022-03-18T12:08:08&#43;08:00">
+            Mar 18, 2022
           </time>
         
          
@@ -178,42 +178,53 @@
 
     <section class="post-content">
       <blockquote>
-<p>使用VS2017
-<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608121928.png" alt="VS2017 Install"></p>
+<p>使用vs2019(v16.11)</p>
 </blockquote>
-<h1 id="debug版">Debug版</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>.<span style="color:#ae81ff">\v</span>s_Community.exe --layout D:<span style="color:#ae81ff">\w</span>in10soft<span style="color:#ae81ff">\v</span>s2019 <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.CoreEditor <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Workload.CoreEditor <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.Roslyn.Compiler <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.Component.MSBuild <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.TextTemplating <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.VC.CoreIde <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.Windows10SDK.19041 <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.VC.Redist.14.Latest <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Workload.NativeDesktop --lang en-US
+</span></span></code></pre></div><h1 id="debug版">Debug版</h1>
 <h2 id="新建dll工程">新建DLL工程</h2>
 <p>project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）
-<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608122532.png" alt="VS2017 prj1"></p>
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608122532.png" alt="VS2019 prj1"></p>
 <h3 id="添加sqlite源文件">添加SQLite源文件</h3>
-<p>下载<a href="https://sqlite.org/2021/sqlite-amalgamation-3350400.zip">sqlite-amalgamation-3350400.zip</a>，
+<p>下载<a href="https://sqlite.org/2022/sqlite-amalgamation-3380100.zip">sqlite-amalgamation-3380100.zip</a>，
 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。
-<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608123556.png" alt="VS2017 prj2"></p>
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608123556.png" alt="VS2019 prj2"></p>
 <h2 id="编译工程">编译工程</h2>
 <h3 id="预编译头文件">预编译头文件</h3>
 <blockquote>
 <p>不使用预编译头文件。</p>
 </blockquote>
 <p>Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header
-<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608125254.png" alt="VS2017 prj4"></p>
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608125254.png" alt="VS2019 prj3"></p>
 <blockquote>
 <p>如果不更改会出现如下错误：</p>
 </blockquote>
-<pre tabindex="0"><code>sqlite3.c : fatal error C1853: 'Debug\sqlite3.pch' precompiled header file is from a previous version of the compiler,
+<pre tabindex="0"><code>sqlite3.c : fatal error C1853: &#39;Debug\sqlite3.pch&#39; precompiled header file is from a previous version of the compiler,
 or the precompiled header is C++ and you are using it from C (or vice versa)
 </code></pre><h3 id="生成文件类型">生成文件类型</h3>
 <p>Project ==&gt; Properties ==&gt; General
-<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608125922.png" alt="VS2017 prj5"></p>
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608125922.png" alt="VS2019 prj4"></p>
 <p>编译即可。
-<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608130149.png" alt="VS2017 prj6"></p>
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608130149.png" alt="VS2019 prj5"></p>
 <h1 id="release版">Release版</h1>
-<p>從<a href="https://sqlite.org/download.html">Precompiled Binaries for Windows</a>下载<a href="https://sqlite.org/2021/sqlite-dll-win64-x64-3350400.zip">sqlite-dll-*.zip</a></p>
+<p>從<a href="https://sqlite.org/download.html">Precompiled Binaries for Windows</a>下载<a href="https://sqlite.org/2022/sqlite-dll-win32-x86-3380100.zip">sqlite-dll-*.zip</a></p>
 <h2 id="output-lib">output *.lib</h2>
-<p>Start menu -&gt; All Programs -&gt; Visual Studio 2017 -&gt; Visual Studio Tools -&gt; Developer Command Prompt for VS 2017
+<p>Start menu -&gt; All Programs -&gt; Visual Studio 2019 -&gt; x86 Native Tools Command Prompt for VS 2019
 <img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200608124137.png" alt="Command Prompt">
 Enter the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lib /def:sqlite3.def /out:sqlite3.lib
-</code></pre></div><h1 id="ref">Ref</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lib /def:sqlite3.def /out:sqlite3.lib /machine:x86
+</span></span></code></pre></div><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://raginginverno.wordpress.com/2013/01/23/welcome/">Creating a Windows .lib file for SQLite for use with Visual Studio</a></li>
 </ul>
@@ -268,17 +279,10 @@ Enter the following command:</p>
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/e-enc28j60-driver/">
-          <section class="post">
-              <h2>enc28j60 driver - sam4s</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/trace-zipkin-config/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/asp.net6-mvc/">
           <section class="post">
-              <h2>Distributed traceability with Spring Cloud: Sleuth and Zipkin</h2>
+              <h2>3小时搞定ASP.NET Core 6.0</h2>
           </section>
       </a>
   

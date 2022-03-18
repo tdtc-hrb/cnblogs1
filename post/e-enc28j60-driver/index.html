@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/e-enc28j60-driver/" />
 
@@ -181,15 +181,15 @@
 <p>通过<a href="https://github.com/marekr/asf/tree/master/common/services/spi/master_example">ASF示例(iar)</a>改写为Keil(mdk v5.18a)</p>
 <h2 id="init">Init</h2>
 <p>在初始化过程中需要mck(Master Clock Sources)。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">sysclk_get_peripheral_hz</span>()
-{
-	<span style="color:#75715e">/* CONFIG_SYSCLK_PRES is the register value for setting the expected */</span>
-	<span style="color:#75715e">/* prescaler, not an immediate value. */</span>
-	<span style="color:#66d9ef">return</span> sysclk_get_main_hz() <span style="color:#f92672">/</span>
-		((CONFIG_SYSCLK_PRES <span style="color:#f92672">==</span> SYSCLK_PRES_3) <span style="color:#f92672">?</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">:</span>
-			(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> (CONFIG_SYSCLK_PRES <span style="color:#f92672">&gt;&gt;</span> PMC_MCKR_PRES_Pos)));
-}
-</code></pre></div><h3 id="pio">pio</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">uint32_t</span> <span style="color:#a6e22e">sysclk_get_peripheral_hz</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/* CONFIG_SYSCLK_PRES is the register value for setting the expected */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/* prescaler, not an immediate value. */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> sysclk_get_main_hz() <span style="color:#f92672">/</span>
+</span></span><span style="display:flex;"><span>		((CONFIG_SYSCLK_PRES <span style="color:#f92672">==</span> SYSCLK_PRES_3) <span style="color:#f92672">?</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>			(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> (CONFIG_SYSCLK_PRES <span style="color:#f92672">&gt;&gt;</span> PMC_MCKR_PRES_Pos)));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="pio">pio</h3>
 <ul>
 <li>Pull-up Enable</li>
 <li>PIO Disable</li>
@@ -216,40 +216,40 @@
 <li>Set Data Capture Phase</li>
 </ul>
 <h4 id="spi-calc-baudrate-div">spi calc baudrate div</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">short</span> <span style="color:#a6e22e">spi_calc_baudrate_div</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">uint32_t</span> baudrate, <span style="color:#66d9ef">uint32_t</span> mck)
-{
-    <span style="color:#66d9ef">int</span> baud_div <span style="color:#f92672">=</span> div_ceil(mck, baudrate);
-
-    <span style="color:#75715e">/* The value of baud_div is from 1 to 255 in the SCBR field. */</span>
-    <span style="color:#66d9ef">if</span> (baud_div <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> baud_div <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">255</span>) {
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-    }
-
-    <span style="color:#66d9ef">return</span> baud_div;
-}
-</code></pre></div><h5 id="div-ceil">div ceil</h5>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#define div_ceil(a, b)      (((a) + (b) - 1) / (b))
-</span></code></pre></div><h4 id="set-clock-default-state">Set clock default state</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">spi_set_clock_polarity</span>(<span style="color:#66d9ef">uint32_t</span> ul_polarity)
-{
-    <span style="color:#66d9ef">if</span> (ul_polarity) {
-        REG_SPI_CSR <span style="color:#f92672">|=</span> SPI_CSR_CPOL;
-    } <span style="color:#66d9ef">else</span> {
-        REG_SPI_CSR <span style="color:#f92672">&amp;=</span> (<span style="color:#f92672">~</span>SPI_CSR_CPOL);
-    }
-}
-</code></pre></div><h4 id="set-data-capture-phase">Set Data Capture Phase</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">spi_set_clock_phase</span>(<span style="color:#66d9ef">uint32_t</span> ul_phase)
-{
-    <span style="color:#66d9ef">if</span> (ul_phase) {
-        REG_SPI_CSR <span style="color:#f92672">|=</span> SPI_CSR_NCPHA;
-    } <span style="color:#66d9ef">else</span> {
-        REG_SPI_CSR <span style="color:#f92672">&amp;=</span> (<span style="color:#f92672">~</span>SPI_CSR_NCPHA);
-    }
-}
-</code></pre></div><h3 id="spi-enable">spi enable</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">REG_SPI_CR <span style="color:#f92672">=</span> SPI_CR_SPIEN;
-</code></pre></div><h2 id="rw">R/W</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">short</span> <span style="color:#a6e22e">spi_calc_baudrate_div</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">uint32_t</span> baudrate, <span style="color:#66d9ef">uint32_t</span> mck)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> baud_div <span style="color:#f92672">=</span> div_ceil(mck, baudrate);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* The value of baud_div is from 1 to 255 in the SCBR field. */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (baud_div <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> baud_div <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">255</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> baud_div;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="div-ceil">div ceil</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#define div_ceil(a, b)      (((a) + (b) - 1) / (b))
+</span></span></span></code></pre></div><h4 id="set-clock-default-state">Set clock default state</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">spi_set_clock_polarity</span>(<span style="color:#66d9ef">uint32_t</span> ul_polarity)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (ul_polarity) {
+</span></span><span style="display:flex;"><span>        REG_SPI_CSR <span style="color:#f92672">|=</span> SPI_CSR_CPOL;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        REG_SPI_CSR <span style="color:#f92672">&amp;=</span> (<span style="color:#f92672">~</span>SPI_CSR_CPOL);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="set-data-capture-phase">Set Data Capture Phase</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">spi_set_clock_phase</span>(<span style="color:#66d9ef">uint32_t</span> ul_phase)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (ul_phase) {
+</span></span><span style="display:flex;"><span>        REG_SPI_CSR <span style="color:#f92672">|=</span> SPI_CSR_NCPHA;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        REG_SPI_CSR <span style="color:#f92672">&amp;=</span> (<span style="color:#f92672">~</span>SPI_CSR_NCPHA);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="spi-enable">spi enable</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>REG_SPI_CR <span style="color:#f92672">=</span> SPI_CR_SPIEN;
+</span></span></code></pre></div><h2 id="rw">R/W</h2>
 <ul>
 <li>spi select device</li>
 <li>Write</li>
@@ -260,21 +260,21 @@
 <blockquote>
 <p>write</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">spi_put</span>(<span style="color:#66d9ef">uint16_t</span> data)
-{
-	<span style="color:#66d9ef">while</span>( <span style="color:#f92672">!</span>(REG_SPI_SR <span style="color:#f92672">&amp;</span> SPI_SR_TDRE) );
-	REG_SPI_TDR <span style="color:#f92672">=</span> SPI_TDR_TD(data);
-}
-</code></pre></div><h3 id="spi-get">spi get</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">spi_put</span>(<span style="color:#66d9ef">uint16_t</span> data)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span>( <span style="color:#f92672">!</span>(REG_SPI_SR <span style="color:#f92672">&amp;</span> SPI_SR_TDRE) );
+</span></span><span style="display:flex;"><span>	REG_SPI_TDR <span style="color:#f92672">=</span> SPI_TDR_TD(data);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="spi-get">spi get</h3>
 <blockquote>
 <p>read</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">uint16_t</span> <span style="color:#a6e22e">spi_get</span>(<span style="color:#66d9ef">void</span>)
-{
-	<span style="color:#66d9ef">while</span> ( <span style="color:#f92672">!</span>(REG_SPI_SR <span style="color:#f92672">&amp;</span> (SPI_SR_RDRF <span style="color:#f92672">|</span> SPI_SR_TXEMPTY) ) <span style="color:#f92672">==</span> (SPI_SR_RDRF <span style="color:#f92672">|</span> SPI_SR_TXEMPTY) );
-	<span style="color:#66d9ef">return</span> (REG_SPI_RDR <span style="color:#f92672">&amp;</span> SPI_RDR_RD_Msk);
-}
-</code></pre></div><h1 id="enc28j60">enc28j60</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">uint16_t</span> <span style="color:#a6e22e">spi_get</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span> ( <span style="color:#f92672">!</span>(REG_SPI_SR <span style="color:#f92672">&amp;</span> (SPI_SR_RDRF <span style="color:#f92672">|</span> SPI_SR_TXEMPTY) ) <span style="color:#f92672">==</span> (SPI_SR_RDRF <span style="color:#f92672">|</span> SPI_SR_TXEMPTY) );
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> (REG_SPI_RDR <span style="color:#f92672">&amp;</span> SPI_RDR_RD_Msk);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="enc28j60">enc28j60</h1>
 <h2 id="ethernet-init">ethernet Init</h2>
 <h2 id="ethernet-rw">ethernet R/W</h2>
 <ul>
@@ -347,9 +347,9 @@
       </a>
   
   
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/vc-sqlite3lib/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/trace-zipkin-config/">
           <section class="post">
-              <h2>生成SQLite静态库</h2>
+              <h2>Distributed traceability with Spring Cloud: Sleuth and Zipkin</h2>
           </section>
       </a>
   

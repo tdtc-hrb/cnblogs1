@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/" />
 
@@ -197,14 +197,14 @@ Windows 10 LTSC 2019(<a href="https://github.com/dotnet/core/blob/main/release-n
 <blockquote>
 <p>Terminal -&gt; New Terminal</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dotnet new mvc -o veic_web --framework net6.0
-</code></pre></div><h2 id="设置缺省首页home-set-default">设置缺省首页(Home Set Default)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet new mvc -o veic_web --framework net6.0
+</span></span></code></pre></div><h2 id="设置缺省首页home-set-default">设置缺省首页(Home Set Default)</h2>
 <p>由</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">app.UseStaticFiles();
-</code></pre></div><p>变更为:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">app.UseDefaultFiles();
-app.UseStaticFiles();
-</code></pre></div><p>新建wwwroot/index.html，See附录<sup>1</sup>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>app.UseStaticFiles();
+</span></span></code></pre></div><p>变更为:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>app.UseDefaultFiles();
+</span></span><span style="display:flex;"><span>app.UseStaticFiles();
+</span></span></code></pre></div><p>新建wwwroot/index.html，See附录<sup>1</sup>.</p>
 <h2 id="run">Run</h2>
 <h3 id="build">build</h3>
 <ol>
@@ -231,12 +231,12 @@ use view-&gt;command palette-&gt;Omnisharp: select project to select the new pro
 <img src="https://img-blog.csdnimg.cn/20201102052153747.png" alt="home page"></p>
 <h1 id="二db支持">二、DB支持</h1>
 <p>Enter the project folder (the directory where the &ldquo;.csproj&rdquo; file is located).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd veic_web
-</code></pre></div><p>Release:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">CLI&gt; dotnet add package Microsoft.EntityFrameworkCore
-</code></pre></div><p>Preview:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">CLI&gt; dotnet add package Microsoft.EntityFrameworkCore --prerelease
-</code></pre></div><h2 id="1-entity-class">1. entity class</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd veic_web
+</span></span></code></pre></div><p>Release:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore
+</span></span></code></pre></div><p>Preview:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore --prerelease
+</span></span></code></pre></div><h2 id="1-entity-class">1. entity class</h2>
 <h3 id="localdb">LocalDB</h3>
 <p>About vs2013 installation files: <br>
 All feature packages are in &ldquo;packages&rdquo;;</p>
@@ -247,119 +247,119 @@ All feature packages are in &ldquo;packages&rdquo;;</p>
 64-bit installation package of Microsoft SQL Server 2012 Native Client</li>
 </ul>
 <p><a href="https://stackoverflow.com/questions/26007913/the-specified-localdb-instance-does-not-exist">see instances</a>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sqllocaldb i
-</code></pre></div><h4 id="use-navicat">use navicat</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqllocaldb i
+</span></span></code></pre></div><h4 id="use-navicat">use navicat</h4>
 <p>down <a href="https://navicat.com/en/download/navicat-for-sqlserver">navicat for sqlserver</a>; later install Microsoft SQL Server 2012 Native Client(sqlncli.msi - amd64) <br>
 Host:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">(</span>localdb<span style="color:#f92672">)</span><span style="color:#ae81ff">\v</span>11.0
-</code></pre></div><p>create db:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> carnumber;
-</code></pre></div><p>create table:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">USE [carnumber]
-<span style="color:#66d9ef">GO</span>
-
-<span style="color:#75715e">/****** Object:  Table [dbo].[products]    Script Date: 2021/8/14 8:47:00 ******/</span>
-<span style="color:#66d9ef">SET</span> ANSI_NULLS <span style="color:#66d9ef">ON</span>
-<span style="color:#66d9ef">GO</span>
-
-<span style="color:#66d9ef">SET</span> QUOTED_IDENTIFIER <span style="color:#66d9ef">ON</span>
-<span style="color:#66d9ef">GO</span>
-
-<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> [dbo].[products](
-    [id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-    [param_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-    [statu_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-    [lang_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-    [img_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-    [name] [varchar](<span style="color:#ae81ff">80</span>) <span style="color:#66d9ef">NULL</span>,
-    [description] [text] <span style="color:#66d9ef">NULL</span>,
- <span style="color:#66d9ef">CONSTRAINT</span> [PK_products] <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> CLUSTERED
-(
-    [id] <span style="color:#66d9ef">ASC</span>
-)<span style="color:#66d9ef">WITH</span> (PAD_INDEX <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, STATISTICS_NORECOMPUTE <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, IGNORE_DUP_KEY <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, ALLOW_ROW_LOCKS <span style="color:#f92672">=</span> <span style="color:#66d9ef">ON</span>, ALLOW_PAGE_LOCKS <span style="color:#f92672">=</span> <span style="color:#66d9ef">ON</span>) <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">PRIMARY</span>]
-) <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">PRIMARY</span>]
-<span style="color:#66d9ef">GO</span>
-</code></pre></div><h3 id="productcs">Product.cs</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> System.ComponentModel.DataAnnotations;
-
-<span style="color:#66d9ef">namespace</span> veic_web.Models;
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span>
-{
-<span style="color:#a6e22e">    [Key]</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Param_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Statu_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Lang_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Img_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string?</span> Name { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string?</span> Description { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-}
-</code></pre></div><h2 id="2-db-context">2. DB Context</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>localdb<span style="color:#f92672">)</span><span style="color:#ae81ff">\v</span>11.0
+</span></span></code></pre></div><p>create db:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> carnumber;
+</span></span></code></pre></div><p>create table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>USE [carnumber]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/****** Object:  Table [dbo].[products]    Script Date: 2021/8/14 8:47:00 ******/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> ANSI_NULLS <span style="color:#66d9ef">ON</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> QUOTED_IDENTIFIER <span style="color:#66d9ef">ON</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> [dbo].[products](
+</span></span><span style="display:flex;"><span>    [id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [param_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [statu_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [lang_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [img_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [name] [varchar](<span style="color:#ae81ff">80</span>) <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [description] [text] <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">CONSTRAINT</span> [PK_products] <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> CLUSTERED
+</span></span><span style="display:flex;"><span>(
+</span></span><span style="display:flex;"><span>    [id] <span style="color:#66d9ef">ASC</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#66d9ef">WITH</span> (PAD_INDEX <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, STATISTICS_NORECOMPUTE <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, IGNORE_DUP_KEY <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, ALLOW_ROW_LOCKS <span style="color:#f92672">=</span> <span style="color:#66d9ef">ON</span>, ALLOW_PAGE_LOCKS <span style="color:#f92672">=</span> <span style="color:#66d9ef">ON</span>) <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">PRIMARY</span>]
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">PRIMARY</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span></code></pre></div><h3 id="productcs">Product.cs</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.ComponentModel.DataAnnotations;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> veic_web.Models;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [Key]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Param_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Statu_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Lang_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Img_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string?</span> Name { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string?</span> Description { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="2-db-context">2. DB Context</h2>
 <blockquote>
 <p>ApplicationDbContext.cs</p>
 </blockquote>
 <p>引用：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> Microsoft.EntityFrameworkCore;
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApplicationDbContext</span> : DbContext
-{
-    <span style="color:#66d9ef">public</span> ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options) : <span style="color:#66d9ef">base</span>(options)
-    {
-
-    }
-}
-</code></pre></div><p>Entity支持</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">    <span style="color:#66d9ef">public</span> DbSet&lt;Product&gt; Products { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; } = <span style="color:#66d9ef">default</span>!;
-</code></pre></div><h2 id="3-repository类">3. Repository类</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Microsoft.EntityFrameworkCore;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApplicationDbContext</span> : DbContext
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options) : <span style="color:#66d9ef">base</span>(options)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Entity支持</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> DbSet&lt;Product&gt; Products { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; } = <span style="color:#66d9ef">default</span>!;
+</span></span></code></pre></div><h2 id="3-repository类">3. Repository类</h2>
 <p>引用：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> System.Linq;
-</code></pre></div><p>接口：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> IProductRepository
-{
-    IQueryable&lt;Product&gt; Products { <span style="color:#66d9ef">get</span>; }
-}
-</code></pre></div><p>实现：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EFProductRepository</span> : IProductRepository
-{
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> ApplicationDbContext context;
-
-    <span style="color:#66d9ef">public</span> EFProductRepository(ApplicationDbContext ctx)
-    {
-        <span style="color:#66d9ef">this</span>.context = ctx;
-    }
-
-    <span style="color:#66d9ef">public</span> IQueryable&lt;Product&gt; Products =&gt; context.Products;
-}
-</code></pre></div><h2 id="4-db-connection-string">4. DB Connection String</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Linq;
+</span></span></code></pre></div><p>接口：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IProductRepository</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    IQueryable&lt;Product&gt; Products { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>实现：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EFProductRepository</span> : IProductRepository
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> ApplicationDbContext context;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> EFProductRepository(ApplicationDbContext ctx)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.context = ctx;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> IQueryable&lt;Product&gt; Products =&gt; context.Products;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="4-db-connection-string">4. DB Connection String</h2>
 <blockquote>
 <p>appsettings.json</p>
 </blockquote>
 <h3 id="mysql">MySQL</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">&#34;Data&#34;: {
-    &#34;VeicWeb&#34;: {
-        &#34;ConnectionString&#34;: &#34;server=127.0.0.1; user id=DBAdmin; password=xbfirst; database=carnumber; pooling=false; Convert Zero Datetime=True;&#34;
-    }
-}
-</code></pre></div><h3 id="localdbhttpsdocsmicrosoftcomen-ussqldatabase-engineconfigure-windowssql-server-express-localdbviewsql-server-ver15connect-to-the-automatic-instance"><a href="https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15#connect-to-the-automatic-instance">LocalDB</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    &#34;Data&#34;:{
-       &#34;mslocaldb&#34;: {
-          &#34;ConnectionString&#34;: &#34;Server=(LocalDB)\\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=C:\\Users\\tdtc\\carnumber.mdf&#34;
-        }
-    }
-</code></pre></div><h2 id="5-add-package">5. Add package</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>&#34;Data&#34;: {
+</span></span><span style="display:flex;"><span>    &#34;VeicWeb&#34;: {
+</span></span><span style="display:flex;"><span>        &#34;ConnectionString&#34;: &#34;server=127.0.0.1; user id=DBAdmin; password=xbfirst; database=carnumber; pooling=false; Convert Zero Datetime=True;&#34;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="localdbhttpsdocsmicrosoftcomen-ussqldatabase-engineconfigure-windowssql-server-express-localdbviewsql-server-ver15connect-to-the-automatic-instance"><a href="https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15#connect-to-the-automatic-instance">LocalDB</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>    &#34;Data&#34;:{
+</span></span><span style="display:flex;"><span>       &#34;mslocaldb&#34;: {
+</span></span><span style="display:flex;"><span>          &#34;ConnectionString&#34;: &#34;Server=(LocalDB)\\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=C:\\Users\\tdtc\\carnumber.mdf&#34;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="5-add-package">5. Add package</h2>
 <ul>
 <li>Pomelo</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql
+</span></span></code></pre></div><ul>
 <li>Oracle</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">CLI&gt; dotnet add package MySql.EntityFrameworkCore
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package MySql.EntityFrameworkCore
+</span></span></code></pre></div><ul>
 <li>MS Sql</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">CLI&gt; dotnet add package Microsoft.EntityFrameworkCore.SqlServer --prerelease
-</code></pre></div><h3 id="mysql-issues">MySQL issues</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore.SqlServer --prerelease
+</span></span></code></pre></div><h3 id="mysql-issues">MySQL issues</h3>
 <ul>
 <li>Oracle版 <br>
 支持.net 6(6.0.0+MySQL8.0.28)</li>
@@ -370,62 +370,62 @@ Host:</p>
 <li>MySQL <br>
 Pomelo:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#75715e">// Add services to the container.
-</span><span style="color:#75715e"></span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
-                        options.UseMySql(builder.Configuration[<span style="color:#e6db74">&#34;Data:VeicWeb:ConnectionString&#34;</span>],
-                            <span style="color:#66d9ef">new</span> MySqlServerVersion(<span style="color:#66d9ef">new</span> Version(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">36</span>)))
-                .EnableSensitiveDataLogging());
-</code></pre></div><p>Oracle:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
-    options.UseMySQL(builder.Configuration[<span style="color:#e6db74">&#34;Data:VeicWeb:ConnectionString&#34;</span>]));
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// Add services to the container.</span>
+</span></span><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+</span></span><span style="display:flex;"><span>                        options.UseMySql(builder.Configuration[<span style="color:#e6db74">&#34;Data:VeicWeb:ConnectionString&#34;</span>],
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">new</span> MySqlServerVersion(<span style="color:#66d9ef">new</span> Version(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">36</span>)))
+</span></span><span style="display:flex;"><span>                .EnableSensitiveDataLogging());
+</span></span></code></pre></div><p>Oracle:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+</span></span><span style="display:flex;"><span>    options.UseMySQL(builder.Configuration[<span style="color:#e6db74">&#34;Data:VeicWeb:ConnectionString&#34;</span>]));
+</span></span></code></pre></div><ul>
 <li>LocalDB</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#75715e">// Add services to the container.
-</span><span style="color:#75715e"></span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
-                        options.UseSqlServer(builder.Configuration[<span style="color:#e6db74">&#34;Data:mslocaldb:ConnectionString&#34;</span>])
-                .EnableSensitiveDataLogging());
-</code></pre></div><p>use瞬时模式, 添加Repository:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">builder.Services.AddTransient&lt;IProductRepository, EFProductRepository&gt;();
-</code></pre></div><h1 id="三view">三、View</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// Add services to the container.</span>
+</span></span><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+</span></span><span style="display:flex;"><span>                        options.UseSqlServer(builder.Configuration[<span style="color:#e6db74">&#34;Data:mslocaldb:ConnectionString&#34;</span>])
+</span></span><span style="display:flex;"><span>                .EnableSensitiveDataLogging());
+</span></span></code></pre></div><p>use瞬时模式, 添加Repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>builder.Services.AddTransient&lt;IProductRepository, EFProductRepository&gt;();
+</span></span></code></pre></div><h1 id="三view">三、View</h1>
 <p>Views/Home/Index.cshtml:
 由</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">p</span>&gt;Learn about &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://docs.microsoft.com/aspnet/core&#34;</span>&gt;building Web apps with ASP.NET Core&lt;/<span style="color:#f92672">a</span>&gt;.&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><p>替换为：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">p</span>&gt;Learn about &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/list&#34;</span>&gt;查看产品列表&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
-</code></pre></div><p>Views/Home/ProductList.cshtml:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">@model IEnumerable&lt;<span style="color:#f92672">Product</span>&gt;
-@foreach (var p in Model!)
-{
-    &lt;<span style="color:#f92672">div</span>&gt;
-        &lt;<span style="color:#f92672">h3</span>&gt;@p.Name&lt;/<span style="color:#f92672">h3</span>&gt;
-        @p.Description
-    &lt;/<span style="color:#f92672">div</span>&gt;
-}
-</code></pre></div><h1 id="四controller">四、Controller</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;Learn about &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://docs.microsoft.com/aspnet/core&#34;</span>&gt;building Web apps with ASP.NET Core&lt;/<span style="color:#f92672">a</span>&gt;.&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span></code></pre></div><p>替换为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;Learn about &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/home/list&#34;</span>&gt;查看产品列表&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span></code></pre></div><p>Views/Home/ProductList.cshtml:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>@model IEnumerable&lt;<span style="color:#f92672">Product</span>&gt;
+</span></span><span style="display:flex;"><span>@foreach (var p in Model!)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h3</span>&gt;@p.Name&lt;/<span style="color:#f92672">h3</span>&gt;
+</span></span><span style="display:flex;"><span>        @p.Description
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="四controller">四、Controller</h1>
 <blockquote>
 <p>HomeController.cs</p>
 </blockquote>
 <p>声明product repository：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> IProductRepository <span style="color:#ae81ff">_</span>repository;
-</code></pre></div><p>DI:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">    <span style="color:#66d9ef">public</span> HomeController(ILogger&lt;HomeController&gt; logger, IProductRepository repo)
-    {
-        <span style="color:#ae81ff">_l</span>ogger = logger;
-        <span style="color:#ae81ff">_</span>repository = repo;
-    }
-</code></pre></div><p>引用实例：添加新方法</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">    <span style="color:#66d9ef">public</span> IActionResult List(<span style="color:#66d9ef">int</span> countPage = <span style="color:#ae81ff">1</span>)
-    {
-        <span style="color:#66d9ef">var</span> repo = <span style="color:#ae81ff">_</span>repository.Products.Where(lang =&gt; lang.Lang_id.Equals(langId)).OrderBy(p =&gt; p.Id)
-            .Skip((countPage - <span style="color:#ae81ff">1</span>) * pageSize)
-            .Take(pageSize);
-        <span style="color:#66d9ef">return</span> View(<span style="color:#e6db74">&#34;ProductList&#34;</span>, repo);
-    }
-</code></pre></div><p>增加分页: 声明公共成员变量</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> pageSize = <span style="color:#ae81ff">3</span>;
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> langId = <span style="color:#ae81ff">4075</span>;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> IProductRepository <span style="color:#ae81ff">_</span>repository;
+</span></span></code></pre></div><p>DI:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> HomeController(ILogger&lt;HomeController&gt; logger, IProductRepository repo)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">_l</span>ogger = logger;
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">_</span>repository = repo;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>引用实例：添加新方法</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> IActionResult List(<span style="color:#66d9ef">int</span> countPage = <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> repo = <span style="color:#ae81ff">_</span>repository.Products.Where(lang =&gt; lang.Lang_id.Equals(langId)).OrderBy(p =&gt; p.Id)
+</span></span><span style="display:flex;"><span>            .Skip((countPage - <span style="color:#ae81ff">1</span>) * pageSize)
+</span></span><span style="display:flex;"><span>            .Take(pageSize);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> View(<span style="color:#e6db74">&#34;ProductList&#34;</span>, repo);
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>增加分页: 声明公共成员变量</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> pageSize = <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> langId = <span style="color:#ae81ff">4075</span>;
+</span></span></code></pre></div><ul>
 <li><a href="https://localhost:5001/home/list?countPage=2">运行效果</a>： <br>
 <img src="https://img-blog.csdnimg.cn/20210707161947768.png" alt="debug vs code"></li>
 </ul>
@@ -437,7 +437,7 @@ Pomelo:</li>
 <p>[index.html]</p>
 <pre tabindex="0"><code>&lt;html&gt;
     &lt;head&gt;
-        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+        &lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=utf-8&#34;&gt;
         &lt;title&gt;公司类网站ASP.NET 6.0&lt;/title&gt;
     &lt;/head&gt;
 &lt;body&gt;
@@ -446,11 +446,11 @@ Pomelo:</li>
     &lt;/div&gt;
 
     &lt;div&gt;
-        &lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot; onClick=&quot;callPage('home')&quot; &gt;中文&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-        &lt;a href=&quot;javascript:void(0)&quot; onClick=&quot;callPage('home/privacy')&quot; &gt;ENGLISH&lt;/a&gt;&lt;/p&gt;
+        &lt;p align=&#34;center&#34;&gt;&lt;a href=&#34;javascript:void(0)&#34; onClick=&#34;callPage(&#39;home&#39;)&#34; &gt;中文&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+        &lt;a href=&#34;javascript:void(0)&#34; onClick=&#34;callPage(&#39;home/privacy&#39;)&#34; &gt;ENGLISH&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;
 
-    &lt;script type=&quot;text/javascript&quot;&gt;
+    &lt;script type=&#34;text/javascript&#34;&gt;
         callPage = function(linkAddr) {;
             window.location.href=window.location + linkAddr;
             // window.open(window.location + linkAddr);
@@ -549,6 +549,13 @@ Pomelo:</li>
 
 
   <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/vc-sqlite3lib/">
+          <section class="post">
+              <h2>生成SQLite静态库</h2>
+              
+          </section>
+      </a>
   
   
       <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/qt-serialport/">

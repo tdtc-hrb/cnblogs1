@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/js-angular-app/" />
 
@@ -179,10 +179,10 @@
     <section class="post-content">
       <h1 id="prepare">Prepare</h1>
 <p>install Angular CLI:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">g</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">angular</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span>
-</code></pre></div><p>create project:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npx @angular/cli new userDetails-client --style<span style="color:#f92672">=</span>css --routing<span style="color:#f92672">=</span>false --skip-tests
-</code></pre></div><h1 id="angular-struct">Angular struct</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">g</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">angular</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span>
+</span></span></code></pre></div><p>create project:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx @angular/cli new userDetails-client --style<span style="color:#f92672">=</span>css --routing<span style="color:#f92672">=</span>false --skip-tests
+</span></span></code></pre></div><h1 id="angular-struct">Angular struct</h1>
 <h2 id="angular-module">Angular module</h2>
 <blockquote>
 <p>app/app.module.ts</p>
@@ -193,11 +193,11 @@
 example for: httpclient module</li>
 </ul>
 <p>import pack:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">HttpClientModule</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;@angular/common/http&#34;</span>;
-</code></pre></div><p>declare Decorator:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// import HttpClientModule after BrowserModule.
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">HttpClientModule</span>,
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">HttpClientModule</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;@angular/common/http&#34;</span>;
+</span></span></code></pre></div><p>declare Decorator:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// import HttpClientModule after BrowserModule.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">HttpClientModule</span>,
+</span></span></code></pre></div><ul>
 <li>user component
 See the next section(&ldquo;Angular Component - add component&rdquo;) for examples of user components.</li>
 </ul>
@@ -217,51 +217,51 @@ See the next section(&ldquo;Angular Component - add component&rdquo;) for exampl
 <p><img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/UserDetailsClient-static.png" alt="angular chrome">
 <a href="http://localhost:4260/">run port</a></p>
 <p>Generate service and model:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ng generate service user/user
-ng generate class user/user --type<span style="color:#f92672">=</span>model
-</code></pre></div><p>Every service must use Dependency Injection.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">Injectable</span>(<span style="color:#a6e22e">providedIn</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;root&#39;</span>)
-</code></pre></div><h2 id="creating-observableshttpsangularioguideobservablescreating-observables"><a href="https://angular.io/guide/observables#creating-observables">Creating observables</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ng generate service user/user
+</span></span><span style="display:flex;"><span>ng generate class user/user --type<span style="color:#f92672">=</span>model
+</span></span></code></pre></div><p>Every service must use Dependency Injection.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">Injectable</span>(<span style="color:#a6e22e">providedIn</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;root&#39;</span>)
+</span></span></code></pre></div><h2 id="creating-observableshttpsangularioguideobservablescreating-observables"><a href="https://angular.io/guide/observables#creating-observables">Creating observables</a></h2>
 <p>Use the Observable constructor to create an observable stream of any type. 
 The constructor takes as its argument the subscriber function to run when the observable’s subscribe() method executes.</p>
 <ul>
 <li>Get</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">getUsers</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">Observable</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">UserModel</span>[]<span style="color:#f92672">&gt;</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">getUsers</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">Observable</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">UserModel</span>[]<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><ul>
 <li>Post
 About the post method: The return value must be &ldquo;Observable<any>&rdquo;!</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">postUser</span>(<span style="color:#a6e22e">userModel</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">UserModel</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Observable</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">any</span><span style="color:#f92672">&gt;</span> {<span style="color:#75715e">// your code here}
-</span></code></pre></div><h2 id="call-them">call them</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">userservice</span>.<span style="color:#a6e22e">getUsers</span>().<span style="color:#a6e22e">subscribe</span>(
-      <span style="color:#a6e22e">data</span> =&gt; {
-        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>;
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
-    });
-</code></pre></div><h1 id="angular-component-1">Angular Component</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">postUser</span>(<span style="color:#a6e22e">userModel</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">UserModel</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Observable</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">any</span><span style="color:#f92672">&gt;</span> {<span style="color:#75715e">// your code here}
+</span></span></span></code></pre></div><h2 id="call-them">call them</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">userservice</span>.<span style="color:#a6e22e">getUsers</span>().<span style="color:#a6e22e">subscribe</span>(
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">data</span> =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span></code></pre></div><h1 id="angular-component-1">Angular Component</h1>
 <ul>
 <li>generate</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ng generate component sign-up
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ng generate component sign-up
+</span></span></code></pre></div><ul>
 <li>call</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">app</span><span style="color:#f92672">-</span><span style="color:#a6e22e">sign</span><span style="color:#f92672">-</span><span style="color:#a6e22e">up</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/app-sign-up&gt;</span>
-</code></pre></div><h2 id="add-component">add component</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">app</span><span style="color:#f92672">-</span><span style="color:#a6e22e">sign</span><span style="color:#f92672">-</span><span style="color:#a6e22e">up</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/app-sign-up&gt;</span>
+</span></span></code></pre></div><h2 id="add-component">add component</h2>
 <blockquote>
 <p>app/app.module.ts</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">NgModule</span>({
-  <span style="color:#a6e22e">declarations</span><span style="color:#f92672">:</span> [
-    <span style="color:#a6e22e">AppComponent</span>,
-    <span style="color:#a6e22e">SignUpComponent</span>
-  ],
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">imports</span><span style="color:#f92672">:</span> [
-    <span style="color:#a6e22e">BrowserModule</span>,
-    <span style="color:#a6e22e">ReactiveFormsModule</span>
-  ],
-</code></pre></div><h1 id="appendix">Appendix</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">NgModule</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">declarations</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">AppComponent</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">SignUpComponent</span>
+</span></span><span style="display:flex;"><span>  ],
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">imports</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">BrowserModule</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ReactiveFormsModule</span>
+</span></span><span style="display:flex;"><span>  ],
+</span></span></code></pre></div><h1 id="appendix">Appendix</h1>
 <h2 id="project-code">Project code</h2>
 <blockquote>
 <p>The token is not used in the demo.</p>
@@ -272,20 +272,20 @@ About the post method: The return value must be &ldquo;Observable<any>&rdquo;!</
 <h2 id="reactive-forms">Reactive Forms</h2>
 <p>Use FormBuilder, FormGroup to implement applications.</p>
 <p>see<sup>3</sup>, It should be noted that the verification part in html(sign-up.component.html) needs to refer to <sup>4</sup>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">signUpForm</span>.<span style="color:#a6e22e">controls</span>[<span style="color:#e6db74">&#39;xxx&#39;</span>].<span style="color:#a6e22e">yyy</span>
-</code></pre></div><h2 id="authorization">Authorization</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">signUpForm</span>.<span style="color:#a6e22e">controls</span>[<span style="color:#e6db74">&#39;xxx&#39;</span>].<span style="color:#a6e22e">yyy</span>
+</span></span></code></pre></div><h2 id="authorization">Authorization</h2>
 <p>在<a href="https://github.com/tdtc-hrb/UserDetails-jwt-client">实际应用</a>中：使用用户名和密码登录，获得Token值。 <br>
 <img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/UserDetailsJwtClient.png" alt="chrome shot"></p>
 <p>最后，在http头添加token值, See<a href="https://angular.io/guide/http#adding-and-updating-headers">《Adding and updating headers》</a>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">HttpHeaders</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/common/http&#39;</span>;
-
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">httpOptions</span> <span style="color:#f92672">=</span> {
-  <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">HttpHeaders</span>({
-    <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span>  <span style="color:#e6db74">&#39;application/json&#39;</span>,
-    <span style="color:#a6e22e">Authorization</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;my-auth-token&#39;</span>
-  })
-};
-</code></pre></div><p>Angular applies interceptors in the order that you provide them. <br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">HttpHeaders</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/common/http&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">httpOptions</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">HttpHeaders</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span>  <span style="color:#e6db74">&#39;application/json&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Authorization</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;my-auth-token&#39;</span>
+</span></span><span style="display:flex;"><span>  })
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Angular applies interceptors in the order that you provide them. <br>
 For example, consider a situation in which you want to handle the authentication <br>
 of your HTTP requests and log them before sending them to a server. <br>
 To accomplish this task, you could provide an AuthInterceptor service and then a LoggingInterceptor service. <br>
@@ -301,12 +301,12 @@ The following is a visual representation of the process:</p>
 <li><a href="https://edupala.com/angular-reactive-form-validation/"><sup>4</sup>How to implement angular reactive forms validation in Angular 12 .?</a></li>
 <li><a href="https://stackoverflow.com/questions/51990188/the-semantics-of-injectableprovidedin-root">The semantics of @Injectable(providedIn: &lsquo;root&rsquo;)?</a></li>
 </ul>
-<pre tabindex="0"><code>When you write @Injectable(providedIn: 'root') this means that the service in singletion 
+<pre tabindex="0"><code>When you write @Injectable(providedIn: &#39;root&#39;) this means that the service in singletion 
 for whole application and you can inject in anywhere in the application.
 </code></pre><pre tabindex="0"><code>When you want to make service singleton only for an exact module, you need to assign 
 your module as the parameter to the providedIn - @Injectable(providedIn: MyModule)
 </code></pre><pre tabindex="0"><code>The only other action required in order to use the @Injectable decorated service is 
-to import it and constructor inject it and that's it. 
+to import it and constructor inject it and that&#39;s it. 
 No need to import it in the AppModule.
 </code></pre>
     </section>

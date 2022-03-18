@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.92.0" />
+    <meta name="generator" content="Hugo 0.95.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -164,13 +164,36 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-webpack/">webpack的使用</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>安装webpack npm install -g webpack-dev-server npm install --save webpack-cli pack info  package.json
+ {  &#34;name&#34;: &#34;redux-book-started&#34;,  &#34;version&#34;: &#34;1.0.0&#34;,  &#34;description&#34;: &#34;Sample Redux Application&#34;,  &#34;main&#34;: &#34;app.js&#34;,  &#34;scripts&#34;: {  &#34;start&#34;: &#34;webpack-dev-server --hot --progress --port 8181&#34;  },  &#34;author&#34;: &#34;Boris Dinkevich &amp; Ilya Gelman&#34;,  &#34;license&#34;: &#34;MIT&#34;,  &#34;dependencies&#34;: {  &#34;jquery&#34;: &#34;3.6.0&#34;,  &#34;redux&#34;: &#34;4.1.2&#34;  },  &#34;devDependencies&#34;: {  &#34;webpack&#34;: &#34;5.64.1&#34;,  &#34;webpack-cli&#34;: &#34;^4. <a class="read-more" href="/cnblogs/post/js-webpack/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-08T15:26:39&#43;08:00">
+            8 Nov 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/js-json-table/">动态生成table</a></h2>
     </header>
     <section class="post-excerpt">
         
             <p>一、JSON数据源  JSON
-   JSON是一种取代XML的数据结构,和xml相比,它更小巧但描述能力却不差,由于它的小巧所以网络传输数据将减少更多流量从而加快速度,那么,JSON到底是什么?JSON就是一串字符串 只不过元素会使用特定的符号标注。{} 双括号表示对象[] 中括号表示数组&quot;&quot; 双引号内是属性或值: 冒号表示后者是前者的值(这个值可以是字符串、数字、也可以是另一个数组或对象)所以 {&quot;name&quot;: &quot;Michael&quot;} 可以理解为是一个包含name为Michael的对象而[{&quot;name&quot;: &quot;Michael&quot;},{&quot;name&quot;: &quot;Jerry&quot;}]就表示包含两个对象的数组当然了,你也可以使用{&quot;name&quot;:[&quot;Michael&quot;,&quot;Jerry&quot;]}来简化上面一部,这是一个拥有一个name数组的对象详细介绍请参见W3SCHOOL JSON规范
-1. students var students = [ {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1001&#34;, &#34;name&#34;: &#34;李X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1002&#34;, &#34;name&#34;: &#34;张X威&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1003&#34;, &#34;name&#34;: &#34;于X洋&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1004&#34;, &#34;name&#34;: &#34;张X扬&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1005&#34;, &#34;name&#34;: &#34;周X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1006&#34;, &#34;name&#34;: &#34;王X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1007&#34;, &#34;name&#34;: &#34;李X朋&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1008&#34;, &#34;name&#34;: &#34;邬X春&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 5&#34;, &#34;ID&#34;: &#34;1009&#34;, &#34;name&#34;: &#34;李X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 5&#34;, &#34;ID&#34;: &#34;1010&#34;, &#34;name&#34;: &#34;孙X丽&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]} ]; 二、函数设计  所谓的动态就是使用删表和写表的操作。 <a class="read-more" href="/cnblogs/post/js-json-table/">&raquo;</a></p>
+   JSON是一种取代XML的数据结构,和xml相比,它更小巧但描述能力却不差,由于它的小巧所以网络传输数据将减少更多流量从而加快速度,那么,JSON到底是什么?JSON就是一串字符串 只不过元素会使用特定的符号标注。{} 双括号表示对象[] 中括号表示数组&#34;&#34; 双引号内是属性或值: 冒号表示后者是前者的值(这个值可以是字符串、数字、也可以是另一个数组或对象)所以 {&#34;name&#34;: &#34;Michael&#34;} 可以理解为是一个包含name为Michael的对象而[{&#34;name&#34;: &#34;Michael&#34;},{&#34;name&#34;: &#34;Jerry&#34;}]就表示包含两个对象的数组当然了,你也可以使用{&#34;name&#34;:[&#34;Michael&#34;,&#34;Jerry&#34;]}来简化上面一部,这是一个拥有一个name数组的对象 详细介绍请参见W3SCHOOL JSON规范
+1. students var students = [  {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1001&#34;, &#34;name&#34;: &#34;李X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]},  {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1002&#34;, &#34;name&#34;: &#34;张X威&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]},  {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1003&#34;, &#34;name&#34;: &#34;于X洋&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]},  {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1004&#34;, &#34;name&#34;: &#34;张X扬&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]},  {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1005&#34;, &#34;name&#34;: &#34;周X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]},  {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1006&#34;, &#34;name&#34;: &#34;王X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]},  {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1007&#34;, &#34;name&#34;: &#34;李X朋&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]},  {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1008&#34;, &#34;name&#34;: &#34;邬X春&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]},  {&#34;cName&#34;: &#34;class 5&#34;, &#34;ID&#34;: &#34;1009&#34;, &#34;name&#34;: &#34;李X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]},  {&#34;cName&#34;: &#34;class 5&#34;, &#34;ID&#34;: &#34;1010&#34;, &#34;name&#34;: &#34;孙X丽&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]} ]; 二、函数设计  所谓的动态就是使用删表和写表的操作。 <a class="read-more" href="/cnblogs/post/js-json-table/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -221,8 +244,8 @@ Create Personal Access Token on GitHub  From your GitHub account, go to Settings
             <p>在JS练习题中，有这么一道：
 请计算某天是这一年的第几天。
 首先，我们要看此年是否闰年
-var IsLeapYear = function (year) { var flag = false; if ( ((year % 4 == 0) &amp;&amp; (year % 100 != 0)) || (year % 400 == 0) ) flag = true; return flag; }; 其次，累加每月天数。
-for (var i = 0; i &lt; month - 1; i++) { iDay += months[i]; }  其中months为数组
+var IsLeapYear = function (year) {  var flag = false;   if ( ((year % 4 == 0) &amp;&amp; (year % 100 != 0)) || (year % 400 == 0) )  flag = true;   return flag; }; 其次，累加每月天数。
+for (var i = 0; i &lt; month - 1; i++) {  iDay += months[i]; }  其中months为数组
  var months = new Array(31, day2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); day2如果是闰年赋值29，否则28。 <a class="read-more" href="/cnblogs/post/js-calday/">&raquo;</a></p>
         
     </section>
@@ -246,7 +269,7 @@ for (var i = 0; i &lt; month - 1; i++) { iDay += months[i]; }  其中months为�
     <section class="post-excerpt">
         
             <p>install $sudo apt-get update $sudo apt-get install consul run $consul agent -dev -bind 192.168.188.10 http://localhost:8500/ui
-update down $wget https://releases.hashicorp.com/consul/1.10.3/consul_1.10.3_linux_amd64.zipunzip $sudo unzip consul_1.10.3_linux_amd64.zip -d /usr/local/bin Verifying the Installation:
+update down $wget https://releases.hashicorp.com/consul/1.10.3/consul_1.10.3_linux_amd64.zip unzip $sudo unzip consul_1.10.3_linux_amd64.zip -d /usr/local/bin Verifying the Installation:
 $consul -v Consul v1.10.3 Ref  Install Consul Run the Consul Agent   <a class="read-more" href="/cnblogs/post/install-consul_ubuntu/">&raquo;</a></p>
         
     </section>
@@ -322,7 +345,7 @@ Pre IDE  Arduino CC(.zip文件) Atmel Studio 7  编码 我们使用使用AS7是�
         
             <p>SPI 通过ASF示例(iar)改写为Keil(mdk v5.18a)
 Init 在初始化过程中需要mck(Master Clock Sources)。
-uint32_t sysclk_get_peripheral_hz() { /* CONFIG_SYSCLK_PRES is the register value for setting the expected */ /* prescaler, not an immediate value. */ return sysclk_get_main_hz() / ((CONFIG_SYSCLK_PRES == SYSCLK_PRES_3) ? 3 : (1 &lt;&lt; (CONFIG_SYSCLK_PRES &gt;&gt; PMC_MCKR_PRES_Pos))); } pio  Pull-up Enable PIO Disable  spi master init  Enable peripheral clock Set spi master mode Disable Mode Fault Detection Disable loopback mode Set Peripheral Chip Select (PCS) value Set fixed peripheral select Disable Peripheral Select Decode Set delay between chip selects  spi master setup device  spi calc baudrate div Configure timing for SPI transfer Set number of bits per transfer Set Serial Clock Baud Rate divider value (SCBR) Configure CS behavior for SPI transfer (\ref spi_cs_behavior_t) Set clock default state Set Data Capture Phase  spi calc baudrate div short spi_calc_baudrate_div(const uint32_t baudrate, uint32_t mck) { int baud_div = div_ceil(mck, baudrate); /* The value of baud_div is from 1 to 255 in the SCBR field. <a class="read-more" href="/cnblogs/post/e-enc28j60-driver/">&raquo;</a></p>
+uint32_t sysclk_get_peripheral_hz() { 	/* CONFIG_SYSCLK_PRES is the register value for setting the expected */ 	/* prescaler, not an immediate value. */ 	return sysclk_get_main_hz() / 	((CONFIG_SYSCLK_PRES == SYSCLK_PRES_3) ? 3 : 	(1 &lt;&lt; (CONFIG_SYSCLK_PRES &gt;&gt; PMC_MCKR_PRES_Pos))); } pio  Pull-up Enable PIO Disable  spi master init  Enable peripheral clock Set spi master mode Disable Mode Fault Detection Disable loopback mode Set Peripheral Chip Select (PCS) value Set fixed peripheral select Disable Peripheral Select Decode Set delay between chip selects  spi master setup device  spi calc baudrate div Configure timing for SPI transfer Set number of bits per transfer Set Serial Clock Baud Rate divider value (SCBR) Configure CS behavior for SPI transfer (\ref spi_cs_behavior_t) Set clock default state Set Data Capture Phase  spi calc baudrate div short spi_calc_baudrate_div(const uint32_t baudrate, uint32_t mck) {  int baud_div = div_ceil(mck, baudrate);   /* The value of baud_div is from 1 to 255 in the SCBR field. <a class="read-more" href="/cnblogs/post/e-enc28j60-driver/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -333,30 +356,6 @@ uint32_t sysclk_get_peripheral_hz() { /* CONFIG_SYSCLK_PRES is the register valu
         
         <time class="post-date" datetime="2021-02-28T17:08:08&#43;08:00">
             28 Feb 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/vc-sqlite3lib/">生成SQLite静态库</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>使用VS2017  Debug版 新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了） 添加SQLite源文件 下载sqlite-amalgamation-3350400.zip， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。 编译工程 预编译头文件  不使用预编译头文件。
- Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header  如果不更改会出现如下错误：
- sqlite3.c : fatal error C1853: 'Debug\sqlite3.pch' precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa)生成文件类型 Project ==&gt; Properties ==&gt; General 编译即可。 Release版 從Precompiled Binaries for Windows下载sqlite-dll-*. <a class="read-more" href="/cnblogs/post/vc-sqlite3lib/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-06-18T12:08:08&#43;08:00">
-            18 Jun 2020
         </time>
     </footer>
 </article>
