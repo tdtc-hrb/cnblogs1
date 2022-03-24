@@ -164,6 +164,30 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-grpc/">ASP.net Core 的gRPC Service应用</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Server 在Ubuntu V20.04; Client 在Windows CMD运行。
+  PowerShell Core v7.2 IDE: VS2022 Community(v17.0)/VS Code(docker extension) VM: VBox(v6.1)  接口文件说明  Protos/greet.proto
+ 定义service service Greeter {  // Sends a greeting  rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message  request  message HelloRequest {  string name = 1; }  response  message HelloReply {  string message = 1; } server Create VS2022 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file  View -&gt; Command Palette(Ctrl+Shift+P)   Enter: Docker fi choice1: Add Docker Files to Workspace&hellip; choice2: . <a class="read-more" href="/cnblogs/post/asp.net6-grpc/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-09T20:38:18&#43;08:00">
+            9 Nov 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/js-webpack/">webpack的使用</a></h2>
     </header>
     <section class="post-excerpt">
@@ -378,31 +402,6 @@ uint32_t sysclk_get_peripheral_hz() { 	/* CONFIG_SYSCLK_PRES is the register val
 
         
         <time class="post-date" datetime="2020-05-16T22:08:08&#43;08:00">
-            16 May 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/es24-install/">Elasticsearch 2.4 安装</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Ubuntu 18.04.1
- Part I. Elasticsearch 1. install JDK 1) down jdk8 wget --no-check-certificate -c --header &#34;Cookie: oraclelicense=accept-securebackup-cookie&#34; -O jdk-8u301-linux-x64.tar.gz http://download.oracle.com/otn-pub/java/jdk/8u301-b09/d3c52aa6bfa54d3ca74e617f18309292/jdk-8u301-linux-x64.tar.gz unzip:
-$sudo mkdir /usr/java $sudo tar zxvf jdk-8u301-linux-x64.tar.gz -C /usr/java 2) setup  root
- $echo &#39;export JAVA_HOME=/usr/java/jdk1.8.0_301&#39; &gt;&gt; /etc/bash.bashrc $echo &#39;export CLASSPATH=$JAVA_HOME/lib/:.&#39; &gt;&gt; /etc/bash.bashrc $echo &#39;export PATH=$PATH:$JAVA_HOME/bin&#39; &gt;&gt; /etc/bash.bashrc $source /etc/bash.bashrc 3) test java -version echo $JAVA_HOME 2. Elasticsearch exec pack 1) down curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.6/elasticsearch-2.4.6.tar.gz unzip: <a class="read-more" href="/cnblogs/post/es24-install/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T20:08:08&#43;08:00">
             16 May 2020
         </time>
     </footer>

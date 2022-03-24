@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="使用strcat_s的注意事项"/>
+<meta name="twitter:description" content="长度参数和char *"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="使用strcat_s的注意事项 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="长度参数和char *" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2022-03-23T22:08:08&#43;08:00" />
+
+    
+    
+
+    <title>使用strcat_s的注意事项 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="长度参数和char *" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.95.0" />
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "使用strcat_s的注意事项",
+    "name": "使用strcat_s的注意事项",
+    "wordCount":  363 ,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/",
+    "datePublished": "2022-03-23T22:08Z",
+    "dateModified": "2022-03-23T22:08Z",
+    
+    
+    "description": "长度参数和char *",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">使用strcat_s的注意事项</h1>
+        <small>长度参数和char *</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2022-03-23T22:08:08&#43;08:00">
+            Mar 23, 2022
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <ul>
+<li>准备</li>
+<li>strcat_s使用</li>
+</ul>
+<h1 id="准备">准备</h1>
+<p>VS2019(v16.9+)使用LLVM（clang-cl） <br>
+<img src="https://img-blog.csdnimg.cn/d25886de87c44ca5aad831c68e570fb3.png" alt=""></p>
+<h2 id="char-point">char point</h2>
+<h3 id="char--const-and-const-char-httpsstackoverflowcoma33955736"><a href="https://stackoverflow.com/a/33955736">char * const and const char *?</a></h3>
+<ol>
+<li>Pointing to a constant value</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span> p; <span style="color:#75715e">// value cannot be changed
+</span></span></span></code></pre></div><ol start="2">
+<li>Constant pointer to a value</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">const</span> p; <span style="color:#75715e">// address cannot be changed
+</span></span></span></code></pre></div><ol start="3">
+<li>Constant pointer to a constant value</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">const</span> p; <span style="color:#75715e">// both cannot be changed.
+</span></span></span></code></pre></div><h3 id="-c11httpsstackoverflowcoma20944858"><a href="https://stackoverflow.com/a/20944858"> C++11</a></h3>
+<p>The C++11 Standard (ISO/IEC 14882:2011) says in § C.1.1:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abc&#34;</span>; <span style="color:#75715e">// valid in C, invalid in C++
+</span></span></span></code></pre></div><p>For the C++ it&rsquo;s OK as a pointer to a String Literal is harmful since any attempt to modify it leads to a crash. But why is it valid in C?</p>
+<p>The C++11 says also:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> p <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>)<span style="color:#e6db74">&#34;abc&#34;</span>; <span style="color:#75715e">// OK: cast added
+</span></span></span></code></pre></div><p>Which means that if a cast is added to the first statement it becomes valid.</p>
+<p>Why does the casting makes the second statement valid in C++ and how is it different from the first one? Isn&rsquo;t it still harmful? <br>
+If it&rsquo;s the case, why did the standard said that it&rsquo;s OK?</p>
+<h1 id="使用strcat_s">使用strcat_s</h1>
+<p>strcat_s函数声明:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>errno_t <span style="color:#a6e22e">strcat_s</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>strDestination,
+</span></span><span style="display:flex;"><span>    size_t numberOfElements,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>strSource 
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>我们要合并字符串的话，使用c语言编写的时候需要注意几点事项。</p>
+<p>出现歧义的大部分为第2个参数。</p>
+<h2 id="lbuffer-is-too-small--0">L&quot;Buffer is too small&quot; &amp;&amp; 0</h2>
+<p><img src="https://img-blog.csdnimg.cn/9031ac2096d14aabbc786ad7577b6e69.png" alt=""></p>
+<p>当此参数被赋值为下面几种情况下，会发生。</p>
+<p>（1）numberOfElements=sizeof(dst)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>strcat_s(ret, <span style="color:#66d9ef">sizeof</span>(ret), str1);
+</span></span></code></pre></div><p>（2）numberOfElements=strlen(src)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>strcat_s(ret, strlen(str1), str1);
+</span></span></code></pre></div><p>此错误提示我们目标（Buffer）过小。</p>
+<p>实际上第二个参数是合并字符串后的字符数量。</p>
+<p>即，源串大小 + 目标串大小 + 字符串结束符大小(&quot;\0&quot;)</p>
+<pre><code>第(1)个错误只计算了目标串的大小.
+
+第(2)个错误只计算了源串的大小.
+</code></pre>
+<h2 id="lstring-is-not-null-terminated--0">L&quot;String is not null terminated&quot; &amp;&amp; 0</h2>
+<pre><code>当我们没有初始化字符串的时候，就会出现。
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/7b57a74aecc849e28554a193268fcbfc.png" alt=""></p>
+<p>解决办法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>memset(ret, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#f92672">&amp;</span>ret));
+</span></span></code></pre></div><pre><code>此程序在VS19(v14.2)调试pass.
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// ConsoleApplication1.cpp : This file contains the &#39;main&#39; function. Program execution begins and ends there.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/// #include &#34;stdafx.h&#34; // 如果使用VS2008~VS2015创建的Console, 打开注释
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">/// #include &lt;tchar.h&gt; // _tmain &amp;&amp; _TCHAR // 如果使用VS2008~VS2013创建的Console, 打开注释
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt; // malloc()</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt; // strcat_s() &amp;&amp; strlen()</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/// int _tmain(int argc, _TCHAR* argv[]) // 如果使用VS2008~VS2013创建的Console, 打开注释
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> argv[])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> ret <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>)malloc(<span style="color:#ae81ff">128</span>);
+</span></span><span style="display:flex;"><span>	memset(ret, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">sizeof</span>(<span style="color:#f92672">&amp;</span>ret));
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">char</span> <span style="color:#66d9ef">const</span><span style="color:#f92672">*</span> str1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;This is a demonstration program, &#34;</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">char</span> <span style="color:#66d9ef">const</span><span style="color:#f92672">*</span> str2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;considerations for using strcat_s.&#34;</span>;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> len1 <span style="color:#f92672">=</span> strlen(str1) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	strcat_s(ret, len1, str1);
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//strcat_s(ret, sizeof(ret), str1);     // Debug Assertion Failed
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//strcat_s(ret, strlen(str1), str1);    // Program: ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>											<span style="color:#75715e">// File: .\corecrt_internal_string_templates.h
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>											<span style="color:#75715e">// Line: 50
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>											<span style="color:#75715e">// Expression: (L&#34;Buffer is too small&#34; &amp;&amp; 0)      
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> len2 <span style="color:#f92672">=</span> strlen(ret) <span style="color:#f92672">+</span> strlen(str2) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	strcat_s(ret, len2, str2);
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;%s&#34;</span>, ret);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>	free(ret);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="ref">Ref</h1>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s?view=msvc-140">strcat_s - MSDN</a></li>
+</ul>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e4%bd%bf%e7%94%a8strcat_s%e7%9a%84%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-strcat%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-strcat%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-strcat%2f&amp;description=%e4%bd%bf%e7%94%a8strcat_s%e7%9a%84%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-strcat%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/vc-sqlite3lib/">
+          <section class="post">
+              <h2>生成SQLite静态库</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+

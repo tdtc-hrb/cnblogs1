@@ -164,6 +164,31 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/es24-install/">Elasticsearch 2.4 安装</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Ubuntu 18.04.1
+ Part I. Elasticsearch 1. install JDK 1) down jdk8 wget --no-check-certificate -c --header &#34;Cookie: oraclelicense=accept-securebackup-cookie&#34; -O jdk-8u301-linux-x64.tar.gz http://download.oracle.com/otn-pub/java/jdk/8u301-b09/d3c52aa6bfa54d3ca74e617f18309292/jdk-8u301-linux-x64.tar.gz unzip:
+$sudo mkdir /usr/java $sudo tar zxvf jdk-8u301-linux-x64.tar.gz -C /usr/java 2) setup  root
+ $echo &#39;export JAVA_HOME=/usr/java/jdk1.8.0_301&#39; &gt;&gt; /etc/bash.bashrc $echo &#39;export CLASSPATH=$JAVA_HOME/lib/:.&#39; &gt;&gt; /etc/bash.bashrc $echo &#39;export PATH=$PATH:$JAVA_HOME/bin&#39; &gt;&gt; /etc/bash.bashrc $source /etc/bash.bashrc 3) test java -version echo $JAVA_HOME 2. Elasticsearch exec pack 1) down curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.6/elasticsearch-2.4.6.tar.gz unzip: <a class="read-more" href="/cnblogs/post/es24-install/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-05-16T20:08:08&#43;08:00">
+            16 May 2020
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/dev-service_registry-zk/">ZooKeeper Installation(Dev)</a></h2>
     </header>
     <section class="post-excerpt">
@@ -394,28 +419,6 @@ const initialState = {  &#34;recipes&#34;: [  {  &#34;name&#34;: &#34;Omelette&#
 
         
         <time class="post-date" datetime="2020-04-10T09:26:39&#43;08:00">
-            10 Apr 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-es6-spreed-operator/">ES6 展开运算符</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Multiple return values const configStore = () =&gt; {  const sagaMiddleware = createSagaMiddleware()  return {  ...createStore(rootReducer, applyMiddleware(sagaMiddleware)),  runSaga: sagaMiddleware.run,  } } Reference  Spread syntax   <a class="read-more" href="/cnblogs/post/js-es6-spreed-operator/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-04-10T08:26:39&#43;08:00">
             10 Apr 2020
         </time>
     </footer>
