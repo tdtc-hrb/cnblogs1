@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.95.0" />
+    <meta name="generator" content="Hugo 0.96.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -241,33 +241,6 @@ broker.id=3 2. Optional settings 1) Zookeeper default <a class="read-more" href=
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/mq-rabbitmq-config/">Install and Configure RabbitMQ</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Ubuntu
- Installation 需要设置固定IP
-1. key  using 1) or 2).
- 1) Offline way curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add - 2) Online way sudo apt-key adv --keyserver &#34;hkps.pool.sks-keyservers.net&#34; --recv-keys &#34;0x6B73A36E6026DFCA&#34; 2. install Erlang wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb sudo dpkg -i erlang-solutions_1.0_all.deb sudo apt-get update sudo apt-get install erlang-nox 3. install RabbitMQ Server 1) set source  如果不设定此步，则系统默认使用Ubuntu更新服务器上的RabbitMQ(v3.5.7)
- Ubuntu 16.04:
-echo &#34;deb https://dl.bintray.com/rabbitmq/debian xenial main&#34; | sudo tee /etc/apt/sources. <a class="read-more" href="/cnblogs/post/mq-rabbitmq-config/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T14:08:08&#43;08:00">
-            16 May 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/cas-client-config/">cas client设置</a></h2>
     </header>
     <section class="post-excerpt">
@@ -419,6 +392,28 @@ const initialState = {  &#34;recipes&#34;: [  {  &#34;name&#34;: &#34;Omelette&#
 
         
         <time class="post-date" datetime="2020-04-10T09:26:39&#43;08:00">
+            10 Apr 2020
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-es6-spreed-operator/">ES6 展开运算符</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Multiple return values const configStore = () =&gt; {  const sagaMiddleware = createSagaMiddleware()  return {  ...createStore(rootReducer, applyMiddleware(sagaMiddleware)),  runSaga: sagaMiddleware.run,  } } Reference  Spread syntax   <a class="read-more" href="/cnblogs/post/js-es6-spreed-operator/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-04-10T08:26:39&#43;08:00">
             10 Apr 2020
         </time>
     </footer>
