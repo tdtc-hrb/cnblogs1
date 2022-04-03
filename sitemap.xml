@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/</loc>
-    <lastmod>2022-03-24T03:18:08+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</loc>
+    <lastmod>2022-04-03T10:08:08-08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/</loc>
-    <lastmod>2022-03-24T03:18:08+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/</loc>
+    <lastmod>2022-04-03T10:08:08-08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/</loc>
+    <lastmod>2022-04-03T10:08:08-08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/</loc>
     <lastmod>2022-03-24T03:18:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</loc>

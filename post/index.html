@@ -162,6 +162,34 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/mq-rabbitmq-config/">Install and Configure RabbitMQ</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Ubuntu
+ Installation 需要设置固定IP
+1. key Direct Download curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add - 2. install Erlang wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb sudo dpkg -i erlang-solutions_2.0_all.deb sudo apt-get update sudo apt-get install erlang-nox 3. install RabbitMQ Server  Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal
+ Replace the &ldquo;bionic&rdquo; in the official website shell with the ubuntu codename.
+Note: When saving, the format is Unix(LF).
+focal_rq.sh:
+#!/bin/sh  sudo apt-get install curl gnupg apt-transport-https -y  ## Team RabbitMQ&#39;s main signing key curl -1sLf &#34;https://keys. <a class="read-more" href="/cnblogs/post/mq-rabbitmq-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-04-03T10:08:08-08:00">
+            3 Apr 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/vc-strcat/">使用strcat_s的注意事项</a></h2>
     </header>
     <section class="post-excerpt">
@@ -392,34 +420,6 @@ import { HttpClientModule } from &#34;@angular/common/http&#34;; declare Decorat
         
         <time class="post-date" datetime="2021-11-14T06:58:08&#43;08:00">
             14 Nov 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-restful/">ASP.net Core 的RESTful应用</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>使用Scaffolder模板创建api。
- PowerShell v5.1 IDE: Visual Studio Code/Visual Studio 2022 NuGet   ..\AppData\Roaming\NuGet\NuGet.Config
- &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;configuration&gt;  &lt;packageSources&gt;  &lt;add key=&#34;api.nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; /&gt;  &lt;/packageSources&gt; &lt;/configuration&gt; Create Project vs code
-dotnet new webapi -o MyWebApp --package Swashbuckle.AspNetCore:PackageVersion=6.2.3 add NuGet package dotnet add package Microsoft.EntityFrameworkCore dotnet add package MySql.EntityFrameworkCore dotnet add package Microsoft.EntityFrameworkCore.Tools Option NuGet package Pomelo:
-CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql Test Browser
-Models 建立Entity类：Supplier、Product、Category
-DbContext public class StorageBuyDbContext : DbContext {  public StorageBuyDbContext(DbContextOptions&lt;StorageBuyDbContext&gt; options) : base(options){}   public DbSet&lt;Category&gt; Categories { get; set; }  public DbSet&lt;Supplier&gt; Suppliers { get; set; }  public DbSet&lt;Product&gt; Products { get; set; } } add service add connectiong string &#34;Data&#34;: {  &#34;StorageBuy&#34;: {  &#34;ConnectionString&#34;: &#34;server=127. <a class="read-more" href="/cnblogs/post/asp.net6-restful/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-11T12:38:08&#43;08:00">
-            11 Nov 2021
         </time>
     </footer>
 </article>
