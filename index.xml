@@ -34,7 +34,7 @@ tar -xvf elasticsearch-2.</description>
     <item>
       <title>Install and Configure RabbitMQ</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</link>
-      <pubDate>Sun, 03 Apr 2022 10:08:08 -0800</pubDate>
+      <pubDate>Sun, 03 Apr 2022 10:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</guid>
       <description>Ubuntu
