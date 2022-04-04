@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="资源占用比较少的版本V2.4" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2020-05-16T20:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-04-04T10:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "Elasticsearch 2.4 安装",
     "name": "Elasticsearch 2.4 安装",
-    "wordCount":  158 ,
+    "wordCount":  151 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/es24-install/",
-    "datePublished": "2020-05-16T20:08Z",
-    "dateModified": "2020-05-16T20:08Z",
+    "datePublished": "2022-04-04T10:08Z",
+    "dateModified": "2022-04-04T10:08Z",
     
     
     "description": "资源占用比较少的版本V2.4",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2020-05-16T20:08:08&#43;08:00">
-            May 16, 2020
+          <time class="post-date" datetime="2022-04-04T10:08:08&#43;08:00">
+            Apr 4, 2022
           </time>
         
          
@@ -178,20 +178,20 @@
 
     <section class="post-content">
       <blockquote>
-<p>Ubuntu 18.04.1</p>
+<p>Ubuntu 20.04.1</p>
 </blockquote>
 <h1 id="part-i-elasticsearch">Part I. Elasticsearch</h1>
 <h2 id="1-install-jdk">1. install JDK</h2>
 <h3 id="1-down-jdk8">1) down jdk8</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget --no-check-certificate -c --header <span style="color:#e6db74">&#34;Cookie: oraclelicense=accept-securebackup-cookie&#34;</span> -O jdk-8u301-linux-x64.tar.gz http://download.oracle.com/otn-pub/java/jdk/8u301-b09/d3c52aa6bfa54d3ca74e617f18309292/jdk-8u301-linux-x64.tar.gz
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_hotspot_8u322b06.tar.gz
 </span></span></code></pre></div><p>unzip:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo mkdir /usr/java
-</span></span><span style="display:flex;"><span>$sudo tar zxvf jdk-8u301-linux-x64.tar.gz -C /usr/java
+</span></span><span style="display:flex;"><span>$sudo tar zxvf jdk-8u322-linux-x64.tar.gz -C /usr/java
 </span></span></code></pre></div><h3 id="2-setup">2) setup</h3>
 <blockquote>
 <p>root</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$echo <span style="color:#e6db74">&#39;export JAVA_HOME=/usr/java/jdk1.8.0_301&#39;</span> &gt;&gt; /etc/bash.bashrc
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$echo <span style="color:#e6db74">&#39;export JAVA_HOME=/usr/java/jdk1.8.0_322&#39;</span> &gt;&gt; /etc/bash.bashrc
 </span></span><span style="display:flex;"><span>$echo <span style="color:#e6db74">&#39;export CLASSPATH=$JAVA_HOME/lib/:.&#39;</span> &gt;&gt; /etc/bash.bashrc
 </span></span><span style="display:flex;"><span>$echo <span style="color:#e6db74">&#39;export PATH=$PATH:$JAVA_HOME/bin&#39;</span> &gt;&gt; /etc/bash.bashrc
 </span></span><span style="display:flex;"><span>$source /etc/bash.bashrc
@@ -291,17 +291,10 @@
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/trace-zipkin-config/">
-          <section class="post">
-              <h2>Distributed traceability with Spring Cloud: Sleuth and Zipkin</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/dev-service_registry-zk/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/mq-rabbitmq-config/">
           <section class="post">
-              <h2>ZooKeeper Installation(Dev)</h2>
+              <h2>Install and Configure RabbitMQ</h2>
           </section>
       </a>
   
