@@ -277,14 +277,14 @@ Subtracting the cs timestamp from this timestamp reveals the whole time needed b
 </blockquote>
 <h4 id="for-rabbit">for Rabbit</h4>
 <blockquote>
-<p>version: RabbitMQ3.8.2(erlang 22.2.1)</p>
+<p>version: RabbitMQ3.9.14(erlang 24.2.1)</p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar zipkin-server-2.12.9-exec.jar --RABBIT_URI<span style="color:#f92672">=</span>amqp://admin:admin@192.168.0.19:5672/sleuth --STORAGE_TYPE<span style="color:#f92672">=</span>elasticsearch --ES_HOSTS<span style="color:#f92672">=</span>192.168.0.116:9200 --ES_HTTP_LOGGING<span style="color:#f92672">=</span>BASIC
 </span></span></code></pre></div><h4 id="for-kafka">for kafka</h4>
 <blockquote>
 <p>version: Kafka1.0.2(Scale 2.11)</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar zipkin-server-2.19.2-exec.jar --KAFKA_BOOTSTRAP_SERVERS<span style="color:#f92672">=</span>192.168.188.107:9092,192.168.188.108:9092,192.168.188.109:9092 --STORAGE_TYPE<span style="color:#f92672">=</span>elasticsearch --ES_HOSTS<span style="color:#f92672">=</span>http://localhost:9200 --ES_HTTP_LOGGING<span style="color:#f92672">=</span>BASIC
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar zipkin-server-2.23.16-exec.jar --KAFKA_BOOTSTRAP_SERVERS<span style="color:#f92672">=</span>192.168.188.107:9092,192.168.188.108:9092,192.168.188.109:9092 --STORAGE_TYPE<span style="color:#f92672">=</span>elasticsearch --ES_HOSTS<span style="color:#f92672">=</span>http://localhost:9200 --ES_HTTP_LOGGING<span style="color:#f92672">=</span>BASIC
 </span></span></code></pre></div><h1 id="iii-mq">III. MQ</h1>
 <h2 id="1-rabbitmq">1. RabbitMQ</h2>
 <h3 id="0-pom">0) pom</h3>
@@ -407,9 +407,9 @@ Subtracting the cs timestamp from this timestamp reveals the whole time needed b
       </a>
   
   
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/es24-install/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/dev-service_registry-zk/">
           <section class="post">
-              <h2>Elasticsearch 2.4 安装</h2>
+              <h2>ZooKeeper Installation(Dev)</h2>
           </section>
       </a>
   

@@ -273,18 +273,6 @@ uint32_t sysclk_get_peripheral_hz() { 	/* CONFIG_SYSCLK_PRES is the register val
     </item>
     
     <item>
-      <title>Elasticsearch 2.4 安装</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/es24-install/</link>
-      <pubDate>Sat, 16 May 2020 20:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/es24-install/</guid>
-      <description>Ubuntu 18.04.1
- Part I. Elasticsearch 1. install JDK 1) down jdk8 wget --no-check-certificate -c --header &amp;#34;Cookie: oraclelicense=accept-securebackup-cookie&amp;#34; -O jdk-8u301-linux-x64.tar.gz http://download.oracle.com/otn-pub/java/jdk/8u301-b09/d3c52aa6bfa54d3ca74e617f18309292/jdk-8u301-linux-x64.tar.gz unzip:
-$sudo mkdir /usr/java $sudo tar zxvf jdk-8u301-linux-x64.tar.gz -C /usr/java 2) setup  root
- $echo &amp;#39;export JAVA_HOME=/usr/java/jdk1.8.0_301&amp;#39; &amp;gt;&amp;gt; /etc/bash.bashrc $echo &amp;#39;export CLASSPATH=$JAVA_HOME/lib/:.&amp;#39; &amp;gt;&amp;gt; /etc/bash.bashrc $echo &amp;#39;export PATH=$PATH:$JAVA_HOME/bin&amp;#39; &amp;gt;&amp;gt; /etc/bash.bashrc $source /etc/bash.bashrc 3) test java -version echo $JAVA_HOME 2. Elasticsearch exec pack 1) down curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.6/elasticsearch-2.4.6.tar.gz unzip:</description>
-    </item>
-    
-    <item>
       <title>ZooKeeper Installation(Dev)</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/dev-service_registry-zk/</link>
       <pubDate>Sat, 16 May 2020 18:08:08 +0800</pubDate>
