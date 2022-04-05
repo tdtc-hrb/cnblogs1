@@ -6,11 +6,11 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 04 Apr 2022 11:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Apr 2022 07:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Distributed traceability with Spring Cloud: Sleuth and Zipkin</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/</link>
-      <pubDate>Mon, 04 Apr 2022 11:08:08 +0800</pubDate>
+      <pubDate>Tue, 05 Apr 2022 07:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/</guid>
       <description>I. Sleuth 0. Concept   Trace A set of spans that form a call tree structure, forms the trace of the request.
