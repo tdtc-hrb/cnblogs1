@@ -162,12 +162,16 @@
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/trace-zipkin-config/">Distributed traceability with Spring Cloud: Sleuth and Zipkin</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/es5p-install/">Elasticsearch 5 plus(5, 6, 7) 安装</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>I. Sleuth 0. Concept   Trace A set of spans that form a call tree structure, forms the trace of the request.
-  Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests. <a class="read-more" href="/cnblogs/post/trace-zipkin-config/">&raquo;</a></p>
+            <p>Ubuntu 20.04.1
+ 参考&ldquo;Elasticsearch 2.4 安装&rdquo;
+ down 查看版本列表 手动输入版本号  curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.2-linux-x86_64.tar.gz config bootstrap bootstrap.system_call_filter: false 其中
+bootstrap.seccomp: false 在高版本已不可用。
+discovery single-node:
+discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-head.git install nodejs cd elasticsearch-headyarnyarn run start open http://localhost:9100/ <a class="read-more" href="/cnblogs/post/es5p-install/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -176,8 +180,37 @@
         
 
         
-        <time class="post-date" datetime="2022-04-05T07:08:08&#43;08:00">
-            5 Apr 2022
+        <time class="post-date" datetime="2022-04-09T10:08:08&#43;08:00">
+            9 Apr 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/mq-rabbitmq-config/">Install and Configure RabbitMQ</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Ubuntu
+ Current Version(RabbitMQ):
+RabbitMQ 3.9.14 Erlang 24.2.1 Installation 需要设置固定IP
+1. key Direct Download curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add - 2. install RabbitMQ Server  Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal
+ Replace the &ldquo;bionic&rdquo; in the official website shell with the ubuntu codename.
+Note: When saving, the format is Unix(LF).
+focal_rq.sh:
+#!/bin/sh  sudo apt-get install curl gnupg apt-transport-https -y  ## Team RabbitMQ&#39;s main signing key curl -1sLf &#34;https://keys. <a class="read-more" href="/cnblogs/post/mq-rabbitmq-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-04-06T10:08:08&#43;08:00">
+            6 Apr 2022
         </time>
     </footer>
 </article>
@@ -203,8 +236,8 @@ tar -xvf elasticsearch-2. <a class="read-more" href="/cnblogs/post/es24-install/
         
 
         
-        <time class="post-date" datetime="2022-04-04T10:08:08&#43;08:00">
-            4 Apr 2022
+        <time class="post-date" datetime="2022-04-05T10:08:08&#43;08:00">
+            5 Apr 2022
         </time>
     </footer>
 </article>
@@ -212,16 +245,12 @@ tar -xvf elasticsearch-2. <a class="read-more" href="/cnblogs/post/es24-install/
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/mq-rabbitmq-config/">Install and Configure RabbitMQ</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/trace-zipkin-config/">Distributed traceability with Spring Cloud: Sleuth and Zipkin</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>Ubuntu
- Current Version(RabbitMQ):
-RabbitMQ 3.9.14 Erlang 24.2.1 Installation 需要设置固定IP
-1. key Direct Download curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add - 2. install Erlang wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb sudo dpkg -i erlang-solutions_2.0_all.deb sudo apt-get update sudo apt-get install erlang-nox 3. install RabbitMQ Server  Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal
- Replace the &ldquo;bionic&rdquo; in the official website shell with the ubuntu codename.
-Note: When saving, the format is Unix(LF). <a class="read-more" href="/cnblogs/post/mq-rabbitmq-config/">&raquo;</a></p>
+            <p>I. Sleuth 0. Concept   Trace A set of spans that form a call tree structure, forms the trace of the request.
+  Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests. <a class="read-more" href="/cnblogs/post/trace-zipkin-config/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -230,8 +259,8 @@ Note: When saving, the format is Unix(LF). <a class="read-more" href="/cnblogs/p
         
 
         
-        <time class="post-date" datetime="2022-04-03T10:08:08&#43;08:00">
-            3 Apr 2022
+        <time class="post-date" datetime="2022-04-05T07:08:08&#43;08:00">
+            5 Apr 2022
         </time>
     </footer>
 </article>
@@ -389,29 +418,6 @@ var options = new SQLiteConnectionString(edtDB.Text, true,  key: edtPwd.Text,  p
         
         <time class="post-date" datetime="2021-11-19T19:18:08&#43;08:00">
             19 Nov 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-thousand-separator/">千位分隔符</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>1. 字符串替换 /** * 字符串替换函数 - js * expStr: 查找的字符串 * string: 整个字符串 * repStr: 替换的字符串 */ function replacStr(expStr, string, repStr) { 	let result = &#34;&#34;; 	let regex; 	if (parseInt(expStr) &gt; 0) // 数字 	regex = new RegExp(expStr, &#34;g&#34;); 	else	// 非数字 	regex = new RegExp(&#34;\\&#34; + expStr, &#34;g&#34;); 	result = string.replace(regex, repStr); 	return result; } 2. 千分符 例如，货币7867321.55，怎样使用js来分割他呢？
-0. 分离小数和整数 let index = strCny. <a class="read-more" href="/cnblogs/post/js-thousand-separator/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-18T02:18:39&#43;08:00">
-            18 Nov 2021
         </time>
     </footer>
 </article>

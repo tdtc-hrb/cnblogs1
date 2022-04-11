@@ -164,6 +164,29 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-thousand-separator/">千位分隔符</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>1. 字符串替换 /** * 字符串替换函数 - js * expStr: 查找的字符串 * string: 整个字符串 * repStr: 替换的字符串 */ function replacStr(expStr, string, repStr) { 	let result = &#34;&#34;; 	let regex; 	if (parseInt(expStr) &gt; 0) // 数字 	regex = new RegExp(expStr, &#34;g&#34;); 	else	// 非数字 	regex = new RegExp(&#34;\\&#34; + expStr, &#34;g&#34;); 	result = string.replace(regex, repStr); 	return result; } 2. 千分符 例如，货币7867321.55，怎样使用js来分割他呢？
+0. 分离小数和整数 let index = strCny. <a class="read-more" href="/cnblogs/post/js-thousand-separator/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-18T02:18:39&#43;08:00">
+            18 Nov 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/js-print-tree/"> 使用ts/js打印tree</a></h2>
     </header>
     <section class="post-excerpt">
@@ -390,31 +413,6 @@ $consul -v Consul v1.10.3 Ref  Install Consul Run the Consul Agent   <a class="r
         
         <time class="post-date" datetime="2021-09-26T23:08:08&#43;08:00">
             26 Sep 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/e-avr8-web-server/">web server</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>IDE Arduino V1.8.13 Library UIP Ethernet v2.x  接线    arduino uno Enc28j60     Pin 10 CS   Pin 11 SI   Pin 12 SO   Pin 13 SCK   Reset RST*   +3v3 Vcc   GND* GND    Enc28j60 INTN: 置空（不接）
-*Rst接线: 注意Nano V3 Ethernet Shield接7号线柱，如下图所示： Arduino Uno *GND接线: 5V旁边的GND.
-供电: 必须使用USB接口.(使用电源口无法工作)
-网络及PC驱动 使用平行线，接路由器Lan口。 本例驱动在Win7 x64通过。 <a class="read-more" href="/cnblogs/post/e-avr8-web-server/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-03-10T01:08:08&#43;08:00">
-            10 Mar 2021
         </time>
     </footer>
 </article>
