@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="Message Queue2篇：Kafka、RabbitMQ" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-04-06T10:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-04-08T10:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "Install and Configure RabbitMQ",
     "name": "Install and Configure RabbitMQ",
-    "wordCount":  374 ,
+    "wordCount":  357 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/",
-    "datePublished": "2022-04-06T10:08Z",
-    "dateModified": "2022-04-06T10:08Z",
+    "datePublished": "2022-04-08T10:08Z",
+    "dateModified": "2022-04-08T10:08Z",
     
     
     "description": "Message Queue2篇：Kafka、RabbitMQ",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-04-06T10:08:08&#43;08:00">
-            Apr 6, 2022
+          <time class="post-date" datetime="2022-04-08T10:08:08&#43;08:00">
+            Apr 8, 2022
           </time>
         
          
@@ -181,13 +181,9 @@
 <p>Ubuntu</p>
 </blockquote>
 <p>Current Version(RabbitMQ):</p>
-<pre tabindex="0"><code>RabbitMQ 3.9.14 Erlang 24.2.1
+<pre tabindex="0"><code>RabbitMQ 3.9.14 Erlang 24.3.3
 </code></pre><h1 id="installation">Installation</h1>
 <p>需要设置固定IP</p>
-<h2 id="1-keyhttpsrabbit-webrabbitmqcomsignatureshtmlimporting-apt">1. <a href="https://rabbit-web.rabbitmq.com/signatures.html#importing-apt">key</a></h2>
-<h3 id="direct-download">Direct Download</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc | sudo apt-key add -
-</span></span></code></pre></div><h2 id="2-install-rabbitmq-server">2. install RabbitMQ Server</h2>
 <blockquote>
 <p>Ubuntu 18.04 codename: bionic <br>
 Ubuntu 20.04 codename: focal</p>
@@ -228,7 +224,7 @@ Ubuntu 20.04 codename: focal</p>
 </span></span></code></pre></div><p>exec:</p>
 <pre tabindex="0"><code>chmod +x focal_rq.sh
 sudo bash ./focal_rq.sh
-</code></pre><h3 id="install">install</h3>
+</code></pre><h2 id="install">install</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">## Install Erlang packages</span>
 </span></span><span style="display:flex;"><span>sudo apt-get install -y erlang-base <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>                        erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets <span style="color:#ae81ff">\
@@ -266,7 +262,6 @@ sudo bash ./focal_rq.sh
 <img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200106025932697.png" alt="rabbitMQ info"></p>
 <h1 id="reference">Reference</h1>
 <ul>
-<li><a href="http://www.rabbitmq.com/install-debian.html">install-debian</a></li>
 <li><a href="https://tecadmin.net/install-rabbitmq-server-on-ubuntu/">How to Install RabbitMQ Server on Ubuntu 18.04 &amp; 16.04 LTS</a></li>
 </ul>
 
