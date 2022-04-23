@@ -6,7 +6,23 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 09 Apr 2022 10:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Apr 2022 10:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install and Configure RabbitMQ</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</link>
+      <pubDate>Fri, 15 Apr 2022 10:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</guid>
+      <description>Ubuntu
+ Current Version(RabbitMQ):
+RabbitMQ 3.9.14 Erlang 24.3.3 Installation 需要设置固定IP
+ Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal
+ Replace the &amp;ldquo;bionic&amp;rdquo; in the official website shell with the ubuntu codename.
+Note: When saving, the format is Unix(LF).
+focal_rq.sh:
+#!/bin/sh  sudo apt-get install curl gnupg apt-transport-https -y  ## Team RabbitMQ&amp;#39;s main signing key curl -1sLf &amp;#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&amp;#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &amp;gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &amp;#34;https://keyserver.</description>
+    </item>
+    
     <item>
       <title>Elasticsearch 5 plus(5, 6, 7) 安装</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/es5p-install/</link>
@@ -19,22 +35,6 @@
 bootstrap.seccomp: false 在高版本已不可用。
 discovery single-node:
 discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-head.git install nodejs cd elasticsearch-headyarnyarn run start open http://localhost:9100/</description>
-    </item>
-    
-    <item>
-      <title>Install and Configure RabbitMQ</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</link>
-      <pubDate>Fri, 08 Apr 2022 10:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</guid>
-      <description>Ubuntu
- Current Version(RabbitMQ):
-RabbitMQ 3.9.14 Erlang 24.3.3 Installation 需要设置固定IP
- Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal
- Replace the &amp;ldquo;bionic&amp;rdquo; in the official website shell with the ubuntu codename.
-Note: When saving, the format is Unix(LF).
-focal_rq.sh:
-#!/bin/sh  sudo apt-get install curl gnupg apt-transport-https -y  ## Team RabbitMQ&amp;#39;s main signing key curl -1sLf &amp;#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&amp;#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &amp;gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &amp;#34;https://keyserver.</description>
     </item>
     
     <item>
