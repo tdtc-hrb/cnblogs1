@@ -6,7 +6,34 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 15 Apr 2022 10:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Apr 2022 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github使用</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</link>
+      <pubDate>Fri, 22 Apr 2022 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</guid>
+      <description>PAT 从2021.8.13开始github不允许使用用户名和密码！ 只能使用用户名和Token进行提交。
+Create Personal Access Token on GitHub  From your GitHub account, go to Settings =&amp;gt; Developer Settings =&amp;gt; Personal Access Token =&amp;gt; Generate New Token (Give your password) =&amp;gt; Fillup the form =&amp;gt; click Generate token =&amp;gt; Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
+ 根据需要勾选授权(scopes): Note: 你的token 标题 Select scopes: 勾选“public_repo”
+增加普通凭证  控制面板 -&amp;gt; 用户帐户和家庭安全 -&amp;gt; 凭据管理器
+ 添加&amp;quot;普通凭证&amp;quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token</description>
+    </item>
+    
+    <item>
+      <title>3小时搞定ASP.NET Core 6.0</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</link>
+      <pubDate>Thu, 21 Apr 2022 11:18:02 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
+      <description>IDE: Visual Studio Code SDK: .Net 6.0 终端(Terminal) Windows 10 LTSC 2019(v1809+): PowerShell Core 数据库(Database)：MySQL / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside)  一、Create Project(VS Code)  Set workspace dir   File -&amp;gt; Add Folder to Workspace
+  Init project   Terminal -&amp;gt; New Terminal
+ dotnet new mvc -o veic_web --framework net6.0 设置缺省首页(Home Set Default) 由
+app.UseStaticFiles(); 变更为:
+app.UseDefaultFiles(); app.UseStaticFiles(); 新建wwwroot/index.html，See附录1.
+Run build  Manually add .</description>
+    </item>
+    
     <item>
       <title>Install and Configure RabbitMQ</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</link>
@@ -80,20 +107,6 @@ tar -xvf elasticsearch-2.</description>
  .\vs_Community.exe --layout D:\win10soft\vs2019 ` --add Microsoft.VisualStudio.Component.CoreEditor ` --add Microsoft.VisualStudio.Workload.CoreEditor ` --add Microsoft.VisualStudio.Component.Roslyn.Compiler ` --add Microsoft.Component.MSBuild ` --add Microsoft.VisualStudio.Component.TextTemplating ` --add Microsoft.VisualStudio.Component.VC.CoreIde ` --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 ` --add Microsoft.VisualStudio.Component.Windows10SDK.19041 ` --add Microsoft.VisualStudio.Component.VC.Redist.14.Latest ` --add Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core ` --add Microsoft.VisualStudio.Workload.NativeDesktop --lang en-US Debug版 新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了） 添加SQLite源文件 下载sqlite-amalgamation-3380100.zip， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。 编译工程 预编译头文件  不使用预编译头文件。
  Project ==&amp;gt; Properties ==&amp;gt; C/C++ ==&amp;gt; Precompiled Header  如果不更改会出现如下错误：
  sqlite3.c : fatal error C1853: &amp;#39;Debug\sqlite3.</description>
-    </item>
-    
-    <item>
-      <title>3小时搞定ASP.NET Core 6.0</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</link>
-      <pubDate>Fri, 21 Jan 2022 11:18:02 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
-      <description>IDE: Visual Studio Code SDK: .Net 6.0 终端(Terminal) Windows 10 LTSC 2019(v1809+): PowerShell Core 数据库(Database)：MySQL / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside)  一、Create Project(VS Code)  Set workspace dir   File -&amp;gt; Add Folder to Workspace
-  Init project   Terminal -&amp;gt; New Terminal
- dotnet new mvc -o veic_web --framework net6.0 设置缺省首页(Home Set Default) 由
-app.UseStaticFiles(); 变更为:
-app.UseDefaultFiles(); app.UseStaticFiles(); 新建wwwroot/index.html，See附录1.
-Run build  Manually add .</description>
     </item>
     
     <item>
@@ -226,19 +239,6 @@ DbContext public class StorageBuyDbContext : DbContext {  public StorageBuyDbCon
       <description>一、JSON数据源  JSON
    JSON是一种取代XML的数据结构,和xml相比,它更小巧但描述能力却不差,由于它的小巧所以网络传输数据将减少更多流量从而加快速度,那么,JSON到底是什么?JSON就是一串字符串 只不过元素会使用特定的符号标注。{} 双括号表示对象[] 中括号表示数组&amp;#34;&amp;#34; 双引号内是属性或值: 冒号表示后者是前者的值(这个值可以是字符串、数字、也可以是另一个数组或对象)所以 {&amp;#34;name&amp;#34;: &amp;#34;Michael&amp;#34;} 可以理解为是一个包含name为Michael的对象而[{&amp;#34;name&amp;#34;: &amp;#34;Michael&amp;#34;},{&amp;#34;name&amp;#34;: &amp;#34;Jerry&amp;#34;}]就表示包含两个对象的数组当然了,你也可以使用{&amp;#34;name&amp;#34;:[&amp;#34;Michael&amp;#34;,&amp;#34;Jerry&amp;#34;]}来简化上面一部,这是一个拥有一个name数组的对象 详细介绍请参见W3SCHOOL JSON规范
 1. students var students = [  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1001&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1002&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;张X威&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1003&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;于X洋&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1004&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;张X扬&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1005&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;周X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1006&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;王X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1007&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X朋&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1008&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;邬X春&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 5&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1009&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 5&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1010&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;孙X丽&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]} ]; 二、函数设计  所谓的动态就是使用删表和写表的操作。</description>
-    </item>
-    
-    <item>
-      <title>Github使用</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</link>
-      <pubDate>Sat, 02 Oct 2021 08:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</guid>
-      <description>PAT 从2021.8.13开始github不允许使用用户名和密码！ 只能使用用户名和Token进行提交。
-Create Personal Access Token on GitHub  From your GitHub account, go to Settings =&amp;gt; Developer Settings =&amp;gt; Personal Access Token =&amp;gt; Generate New Token (Give your password) =&amp;gt; Fillup the form =&amp;gt; click Generate token =&amp;gt; Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
- 根据需要勾选授权(scopes): Note: 你的token 标题 Select scopes: 勾选“public_repo”
-增加普通凭证  控制面板 -&amp;gt; 用户帐户和家庭安全 -&amp;gt; 凭据管理器
- 添加&amp;quot;普通凭证&amp;quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token</description>
     </item>
     
     <item>
