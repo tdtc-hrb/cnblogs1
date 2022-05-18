@@ -6,7 +6,21 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 22 Apr 2022 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 May 2022 21:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>生成SQLite静态库</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</link>
+      <pubDate>Wed, 18 May 2022 21:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</guid>
+      <description>SQLite3 X:
+3380500 X: 当前版本号
+Debug版 Source Code -&amp;gt; sqlite-amalgamation-X.zip
+新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了） 添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。 编译工程 预编译头文件  如果不更改会出现如下错误：
+ sqlite3.c : fatal error C1853: &amp;#39;Debug\sqlite3.pch&amp;#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) Project ==&amp;gt; Properties ==&amp;gt; C/C++ ==&amp;gt; Precompiled Header
+Not Using Precompiled Headers 生成文件类型 Project ==&amp;gt; Properties ==&amp;gt; General</description>
+    </item>
+    
     <item>
       <title>Github使用</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</link>
@@ -95,18 +109,6 @@ tar -xvf elasticsearch-2.</description>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/</guid>
       <description>准备 strcat_s使用  准备 使用LLVM（clang-cl） char point char * const and const char *?  Pointing to a constant value  const char * p; // value cannot be changed Constant pointer to a value  char * const p; // address cannot be changed Constant pointer to a constant value  const char * const p; // both cannot be changed. C++11 The C++11 Standard (ISO/IEC 14882:2011) says in § C.</description>
-    </item>
-    
-    <item>
-      <title>生成SQLite静态库</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</link>
-      <pubDate>Fri, 18 Mar 2022 22:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</guid>
-      <description>使用vs2019(v16.11)
- .\vs_Community.exe --layout D:\win10soft\vs2019 ` --add Microsoft.VisualStudio.Component.CoreEditor ` --add Microsoft.VisualStudio.Workload.CoreEditor ` --add Microsoft.VisualStudio.Component.Roslyn.Compiler ` --add Microsoft.Component.MSBuild ` --add Microsoft.VisualStudio.Component.TextTemplating ` --add Microsoft.VisualStudio.Component.VC.CoreIde ` --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 ` --add Microsoft.VisualStudio.Component.Windows10SDK.19041 ` --add Microsoft.VisualStudio.Component.VC.Redist.14.Latest ` --add Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core ` --add Microsoft.VisualStudio.Workload.NativeDesktop --lang en-US Debug版 新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了） 添加SQLite源文件 下载sqlite-amalgamation-3380100.zip， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。 编译工程 预编译头文件  不使用预编译头文件。
- Project ==&amp;gt; Properties ==&amp;gt; C/C++ ==&amp;gt; Precompiled Header  如果不更改会出现如下错误：
- sqlite3.c : fatal error C1853: &amp;#39;Debug\sqlite3.</description>
     </item>
     
     <item>
