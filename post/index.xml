@@ -22,6 +22,20 @@ Not Using Precompiled Headers 生成文件类型 Project ==&amp;gt; Properties =
     </item>
     
     <item>
+      <title>Install and Configure RabbitMQ</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</link>
+      <pubDate>Sun, 15 May 2022 18:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</guid>
+      <description>Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal  Current Version(RabbitMQ):
+RabbitMQ 3.10.2 Erlang 24.3.3 Installation 需要设置固定IP
+Replace the &amp;ldquo;bionic&amp;rdquo; in the official website shell with the ubuntu codename.
+Note: When saving, the format is Unix(LF).
+focal_rq.sh:
+#!/bin/sh  sudo apt-get install curl gnupg apt-transport-https -y  ## Team RabbitMQ&amp;#39;s main signing key curl -1sLf &amp;#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&amp;#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &amp;gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &amp;#34;https://keyserver.</description>
+    </item>
+    
+    <item>
       <title>Github使用</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</link>
       <pubDate>Fri, 22 Apr 2022 08:08:08 +0800</pubDate>
@@ -46,22 +60,6 @@ Create Personal Access Token on GitHub  From your GitHub account, go to Settings
 app.UseStaticFiles(); 变更为:
 app.UseDefaultFiles(); app.UseStaticFiles(); 新建wwwroot/index.html，See附录1.
 Run build  Manually add .</description>
-    </item>
-    
-    <item>
-      <title>Install and Configure RabbitMQ</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</link>
-      <pubDate>Fri, 15 Apr 2022 10:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</guid>
-      <description>Ubuntu
- Current Version(RabbitMQ):
-RabbitMQ 3.9.15 Erlang 24.3.3 Installation 需要设置固定IP
- Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal
- Replace the &amp;ldquo;bionic&amp;rdquo; in the official website shell with the ubuntu codename.
-Note: When saving, the format is Unix(LF).
-focal_rq.sh:
-#!/bin/sh  sudo apt-get install curl gnupg apt-transport-https -y  ## Team RabbitMQ&amp;#39;s main signing key curl -1sLf &amp;#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&amp;#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &amp;gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &amp;#34;https://keyserver.</description>
     </item>
     
     <item>
