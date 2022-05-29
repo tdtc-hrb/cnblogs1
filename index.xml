@@ -22,6 +22,20 @@ tar -xvf elasticsearch-2.</description>
     </item>
     
     <item>
+      <title>Elasticsearch 6 plus(6, 7) 安装</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/es6p-install/</link>
+      <pubDate>Thu, 19 May 2022 10:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/es6p-install/</guid>
+      <description>Ubuntu 20.04.1
+ 参考&amp;ldquo;Elasticsearch 2.4 安装&amp;rdquo;
+ down 查看版本列表 手动输入版本号  curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.4-linux-x86_64.tar.gz config bootstrap bootstrap.system_call_filter: false 其中
+bootstrap.seccomp: false 在高版本已不可用。
+discovery single-node:
+discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-head.git install nodejs cd elasticsearch-headyarnyarn run start open http://localhost:9100/</description>
+    </item>
+    
+    <item>
       <title>生成SQLite静态库</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</link>
       <pubDate>Wed, 18 May 2022 21:08:08 +0800</pubDate>
@@ -36,6 +50,19 @@ Not Using Precompiled Headers 生成文件类型 Project ==&amp;gt; Properties =
     </item>
     
     <item>
+      <title>Install and Configure Apache Kafka</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/mq-kafka-config/</link>
+      <pubDate>Mon, 16 May 2022 18:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/mq-kafka-config/</guid>
+      <description>I. Installation The installation environment must have JDK, verify that you enter:
+java -version 1. down Install server-side versions based on the jar downloaded by maven, such as my &amp;ldquo;C:\Users\tdtc.m2\repository\org\apache\kafka\kafka-clients\3.0.1&amp;rdquo;
+And choose Scala version based on pom, such as my &amp;ldquo;C:\Users\tdtc.m2\repository\org\springframework\cloud\spring-cloud-stream-binder-kafka\3.2.4\spring-cloud-stream-binder-kafka-3.2.4.pom&amp;rdquo;
+wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $tar zxvf kafka_2.13-3.0.1.tgz II. Configuration  server.properties
+ 1. Necessary settings 1) basic listener listeners=PLAINTEXT://your_IP:9092 logs $mkdir HOME/kafka_2.13-3.0.1/logs 2) cluster Sets the natural number of the broker ID to non-zero.</description>
+    </item>
+    
+    <item>
       <title>Install and Configure RabbitMQ</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</link>
       <pubDate>Sun, 15 May 2022 18:08:08 +0800</pubDate>
@@ -47,6 +74,16 @@ Replace the &amp;ldquo;bionic&amp;rdquo; in the official website shell with the 
 Note: When saving, the format is Unix(LF).
 focal_rq.sh:
 #!/bin/sh  sudo apt-get install curl gnupg apt-transport-https -y  ## Team RabbitMQ&amp;#39;s main signing key curl -1sLf &amp;#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&amp;#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &amp;gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &amp;#34;https://keyserver.</description>
+    </item>
+    
+    <item>
+      <title>Distributed traceability with Spring Cloud: Sleuth and Zipkin</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/</link>
+      <pubDate>Thu, 05 May 2022 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/</guid>
+      <description>I. Sleuth 0. Concept   Trace A set of spans that form a call tree structure, forms the trace of the request.
+  Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests.</description>
     </item>
     
     <item>
@@ -74,30 +111,6 @@ Create Personal Access Token on GitHub  From your GitHub account, go to Settings
 app.UseStaticFiles(); 变更为:
 app.UseDefaultFiles(); app.UseStaticFiles(); 新建wwwroot/index.html，See附录1.
 Run build  Manually add .</description>
-    </item>
-    
-    <item>
-      <title>Elasticsearch 5 plus(5, 6, 7) 安装</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/es5p-install/</link>
-      <pubDate>Sat, 09 Apr 2022 10:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/es5p-install/</guid>
-      <description>Ubuntu 20.04.1
- 参考&amp;ldquo;Elasticsearch 2.4 安装&amp;rdquo;
- down 查看版本列表 手动输入版本号  curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.2-linux-x86_64.tar.gz config bootstrap bootstrap.system_call_filter: false 其中
-bootstrap.seccomp: false 在高版本已不可用。
-discovery single-node:
-discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-head.git install nodejs cd elasticsearch-headyarnyarn run start open http://localhost:9100/</description>
-    </item>
-    
-    <item>
-      <title>Distributed traceability with Spring Cloud: Sleuth and Zipkin</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/</link>
-      <pubDate>Tue, 05 Apr 2022 07:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/</guid>
-      <description>I. Sleuth 0. Concept   Trace A set of spans that form a call tree structure, forms the trace of the request.
-  Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests.</description>
     </item>
     
     <item>
@@ -311,21 +324,6 @@ uint32_t sysclk_get_peripheral_hz() { 	/* CONFIG_SYSCLK_PRES is the register val
       <description>Install ZooKeeper packages
 # sudo apt-get install openjdk-8-jre-headless # sudo apt-get install zookeeper zookeeperd If you need a cluster, configure the Conf file, otherwise ignore it.
 Configure ZooKeeper  Common Configuration  Edit the /etc/zookeeper/conf/zoo.cfg file to contain the following:  server.1=nsdb1:2888:3888 server.2=nsdb2:2888:3888 server.3=nsdb3:2888:3888 autopurge.snapRetainCount=10 autopurge.purgeInterval =12 [Important] Important For production deployments it is recommended to configure the storage of snapshots in a different disk than the commit log, this is done by setting the parameters dataDir and dataLogDir in zoo.</description>
-    </item>
-    
-    <item>
-      <title>Install and Configure Apache Kafka</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/mq-kafka-config/</link>
-      <pubDate>Sat, 16 May 2020 16:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/mq-kafka-config/</guid>
-      <description>I. Installation The installation environment must have JDK, verify that you enter:
-java -version 1. down Install server-side versions based on the jar downloaded by maven, such as my &amp;ldquo;C:\Users\xiaobin.m2\repository\org\apache\kafka\kafka_2.11\1.0.2&amp;rdquo; kafka_2.11-1.0.2
-2. unzip $tar zxvf kafka_2.11-1.0.2.tgz II. Configuration  server.properties
- 1. Necessary settings 1) basic listener listeners=PLAINTEXT://your_IP:9092 logs $mkdir HOME/kafka_2.11-1.0.2/logs 2) cluster Sets the natural number of the broker ID to non-zero. Host1:
-broker.id=1 Host2:
-broker.id=2 Host3:
-broker.id=3 2. Optional settings 1) Zookeeper default</description>
     </item>
     
     <item>

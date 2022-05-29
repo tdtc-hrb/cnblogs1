@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="zipkin 2.12" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-04-05T07:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-05-05T08:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "Distributed traceability with Spring Cloud: Sleuth and Zipkin",
     "name": "Distributed traceability with Spring Cloud: Sleuth and Zipkin",
-    "wordCount":  483 ,
+    "wordCount":  503 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/",
-    "datePublished": "2022-04-05T07:08Z",
-    "dateModified": "2022-04-05T07:08Z",
+    "datePublished": "2022-05-05T08:08Z",
+    "dateModified": "2022-05-05T08:08Z",
     
     
     "description": "zipkin 2.12",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-04-05T07:08:08&#43;08:00">
-            Apr 5, 2022
+          <time class="post-date" datetime="2022-05-05T08:08:08&#43;08:00">
+            May 5, 2022
           </time>
         
          
@@ -282,6 +282,9 @@ Subtracting the cs timestamp from this timestamp reveals the whole time needed b
 <p><a href="https://github.com/openzipkin/zipkin/issues/1962">upgrade to Spring Boot 2.0 NoClassDefFoundError UndertowEmbeddedServletContainerFactory</a></p>
 <h3 id="1-down">1) down</h3>
 <p>Note: ES2.4.x最高只能匹配到<a href="https://repo1.maven.org/maven2/io/zipkin/java/zipkin-server/2.12.9/zipkin-server-2.12.9-exec.jar">v2.12.9</a></p>
+<p>About <a href="https://tdtc-hrb.github.io/cnblogs/post/ES6p-install/">v2.14+</a>:</p>
+<p><a href="https://repo1.maven.org/maven2/io/zipkin/zipkin-server/">The Elasticsearch component uses Elasticsearch 5+ features, but is tested against Elasticsearch 6-7.x</a></p>
+<p>Simply put, only supports <a href="https://github.com/openzipkin/zipkin#elasticsearch">v6-7.x</a>.</p>
 <h3 id="2-run">2) run</h3>
 <blockquote>
 <p>es2.4.x安装在WSL中。
@@ -289,14 +292,14 @@ Subtracting the cs timestamp from this timestamp reveals the whole time needed b
 </blockquote>
 <h4 id="for-rabbit">for Rabbit</h4>
 <blockquote>
-<p>version: RabbitMQ3.9.14(erlang 24.2.1)</p>
+<p>version: RabbitMQ3.10.x(erlang 24.x)</p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar zipkin-server-2.12.9-exec.jar --RABBIT_URI<span style="color:#f92672">=</span>amqp://admin:admin@192.168.0.19:5672/sleuth --STORAGE_TYPE<span style="color:#f92672">=</span>elasticsearch --ES_HOSTS<span style="color:#f92672">=</span>192.168.0.116:9200 --ES_HTTP_LOGGING<span style="color:#f92672">=</span>BASIC
 </span></span></code></pre></div><h4 id="for-kafka">for kafka</h4>
 <blockquote>
 <p>version: Kafka1.0.2(Scale 2.11)</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar zipkin-server-2.23.16-exec.jar --KAFKA_BOOTSTRAP_SERVERS<span style="color:#f92672">=</span>192.168.188.107:9092,192.168.188.108:9092,192.168.188.109:9092 --STORAGE_TYPE<span style="color:#f92672">=</span>elasticsearch --ES_HOSTS<span style="color:#f92672">=</span>http://localhost:9200 --ES_HTTP_LOGGING<span style="color:#f92672">=</span>BASIC
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>java -jar zipkin-server-2.12.9-exec.jar --KAFKA_BOOTSTRAP_SERVERS<span style="color:#f92672">=</span>192.168.188.107:9092,192.168.188.108:9092,192.168.188.109:9092 --STORAGE_TYPE<span style="color:#f92672">=</span>elasticsearch --ES_HOSTS<span style="color:#f92672">=</span>http://localhost:9200 --ES_HTTP_LOGGING<span style="color:#f92672">=</span>BASIC
 </span></span></code></pre></div><h1 id="iii-mq">III. MQ</h1>
 <h2 id="1-rabbitmq">1. RabbitMQ</h2>
 <h3 id="0-pom">0) pom</h3>
@@ -410,17 +413,17 @@ Subtracting the cs timestamp from this timestamp reveals the whole time needed b
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/es5p-install/">
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/mq-rabbitmq-config/">
           <section class="post">
-              <h2>Elasticsearch 5 plus(5, 6, 7) 安装</h2>
+              <h2>Install and Configure RabbitMQ</h2>
               
           </section>
       </a>
   
   
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/vc-strcat/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ops_department_github_man/">
           <section class="post">
-              <h2>使用strcat_s的注意事项</h2>
+              <h2>Github使用</h2>
           </section>
       </a>
   
