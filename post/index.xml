@@ -6,7 +6,18 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 May 2022 18:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 May 2022 23:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(dev mode) install CONSUL on ubuntu</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</link>
+      <pubDate>Thu, 26 May 2022 23:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</guid>
+      <description>install $sudo apt-get update $sudo apt-get install consul run $consul agent -dev -bind 192.168.3.128 http://localhost:8500/ui
+update down $wget https://releases.hashicorp.com/consul/1.12.1/consul_1.12.1_linux_amd64.zip unzip $sudo unzip consul_1.12.1_linux_amd64.zip -d /usr/local/bin Verifying the Installation:
+$consul -v Consul v1.12.1 Ref Install Consul Run the Consul Agent </description>
+    </item>
+    
     <item>
       <title>Elasticsearch 2.4 安装</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/es24-install/</link>
@@ -14,11 +25,12 @@
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/es24-install/</guid>
       <description>Ubuntu 20.04.1
- Part I. Elasticsearch 1. install JDK 1) down jdk8 wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz unzip:
-$sudo mkdir /usr/java $sudo tar zxvf OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz -C /usr/java 2) setup  root:
- $sudo -sH
-  $echo &amp;#39;export JAVA_HOME=/usr/java/jdk8u332-b09&amp;#39; &amp;gt;&amp;gt; /etc/bash.bashrc $echo &amp;#39;export CLASSPATH=$JAVA_HOME/lib/:.&amp;#39; &amp;gt;&amp;gt; /etc/bash.bashrc $echo &amp;#39;export PATH=$PATH:$JAVA_HOME/bin&amp;#39; &amp;gt;&amp;gt; /etc/bash.bashrc $source /etc/bash.bashrc 3) test java -version echo $JAVA_HOME 2. Elasticsearch exec pack 1) down curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.6/elasticsearch-2.4.6.tar.gz unzip:
-tar -xvf elasticsearch-2.</description>
+Part I. Elasticsearch 1. install JDK 1) down jdk8 wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz unzip:
+$sudo mkdir /usr/java $sudo tar zxvf OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz -C /usr/java 2) setup root:
+$sudo -sH
+$echo &amp;#39;export JAVA_HOME=/usr/java/jdk8u332-b09&amp;#39; &amp;gt;&amp;gt; /etc/bash.bashrc $echo &amp;#39;export CLASSPATH=$JAVA_HOME/lib/:.&amp;#39; &amp;gt;&amp;gt; /etc/bash.bashrc $echo &amp;#39;export PATH=$PATH:$JAVA_HOME/bin&amp;#39; &amp;gt;&amp;gt; /etc/bash.bashrc $source /etc/bash.bashrc 3) test java -version echo $JAVA_HOME 2. Elasticsearch exec pack 1) down curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.6/elasticsearch-2.4.6.tar.gz unzip:
+tar -xvf elasticsearch-2.4.6.tar.gz 2) config ../config/elasticsearch.yml
+network network.</description>
     </item>
     
     <item>
@@ -27,8 +39,9 @@ tar -xvf elasticsearch-2.</description>
       <pubDate>Wed, 25 May 2022 08:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/</guid>
-      <description>I. Sleuth 0. Concept   Trace A set of spans that form a call tree structure, forms the trace of the request.
-  Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests.</description>
+      <description>I. Sleuth 0. Concept Trace A set of spans that form a call tree structure, forms the trace of the request.
+Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests.
+Tag Key/value pair that identifies certain information in the span.</description>
     </item>
     
     <item>
@@ -38,8 +51,8 @@ tar -xvf elasticsearch-2.</description>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/es6p-install/</guid>
       <description>Ubuntu 20.04.1
- 参考&amp;ldquo;Elasticsearch 2.4 安装&amp;rdquo;
- down 查看版本列表 手动输入版本号  curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.4-linux-x86_64.tar.gz config bootstrap bootstrap.system_call_filter: false 其中
+参考&amp;ldquo;Elasticsearch 2.4 安装&amp;rdquo;
+down 查看版本列表 手动输入版本号 curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.4-linux-x86_64.tar.gz config bootstrap bootstrap.system_call_filter: false 其中
 bootstrap.seccomp: false 在高版本已不可用。
 discovery single-node:
 discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-head.git install nodejs cd elasticsearch-headyarnyarn run start open http://localhost:9100/</description>
@@ -54,8 +67,8 @@ discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-h
       <description>SQLite3 X:
 3380500 X: 当前版本号
 Debug版 Source Code -&amp;gt; sqlite-amalgamation-X.zip
-新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了） 添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。 编译工程 预编译头文件  如果不更改会出现如下错误：
- sqlite3.c : fatal error C1853: &amp;#39;Debug\sqlite3.pch&amp;#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) Project ==&amp;gt; Properties ==&amp;gt; C/C++ ==&amp;gt; Precompiled Header
+新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了） 添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。 编译工程 预编译头文件 如果不更改会出现如下错误：
+sqlite3.c : fatal error C1853: &amp;#39;Debug\sqlite3.pch&amp;#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) Project ==&amp;gt; Properties ==&amp;gt; C/C++ ==&amp;gt; Precompiled Header
 Not Using Precompiled Headers 生成文件类型 Project ==&amp;gt; Properties ==&amp;gt; General</description>
     </item>
     
@@ -68,8 +81,8 @@ Not Using Precompiled Headers 生成文件类型 Project ==&amp;gt; Properties =
       <description>I. Installation The installation environment must have JDK, verify that you enter:
 java -version 1. down Install server-side versions based on the jar downloaded by maven, such as my &amp;ldquo;C:\Users\tdtc.m2\repository\org\apache\kafka\kafka-clients\3.0.1&amp;rdquo;
 And choose Scala version based on pom, such as my &amp;ldquo;C:\Users\tdtc.m2\repository\org\springframework\cloud\spring-cloud-stream-binder-kafka\3.2.4\spring-cloud-stream-binder-kafka-3.2.4.pom&amp;rdquo;
-wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $tar zxvf kafka_2.13-3.0.1.tgz II. Configuration  server.properties
- 1. Necessary settings 1) basic listener listeners=PLAINTEXT://your_IP:9092 logs $mkdir HOME/kafka_2.13-3.0.1/logs 2) cluster Sets the natural number of the broker ID to non-zero.</description>
+wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $tar zxvf kafka_2.13-3.0.1.tgz II. Configuration server.properties
+1. Necessary settings 1) basic listener listeners=PLAINTEXT://your_IP:9092 logs $mkdir HOME/kafka_2.13-3.0.1/logs 2) cluster Sets the natural number of the broker ID to non-zero.</description>
     </item>
     
     <item>
@@ -78,12 +91,12 @@ wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $
       <pubDate>Sun, 15 May 2022 18:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</guid>
-      <description>Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal  Current Version(RabbitMQ):
+      <description>Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal Current Version(RabbitMQ):
 RabbitMQ 3.10.2 Erlang 24.3.3 Installation 需要设置固定IP
 Replace the &amp;ldquo;bionic&amp;rdquo; in the official website shell with the ubuntu codename.
 Note: When saving, the format is Unix(LF).
 focal_rq.sh:
-#!/bin/sh  sudo apt-get install curl gnupg apt-transport-https -y  ## Team RabbitMQ&amp;#39;s main signing key curl -1sLf &amp;#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&amp;#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &amp;gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &amp;#34;https://keyserver.</description>
+#!/bin/sh sudo apt-get install curl gnupg apt-transport-https -y ## Team RabbitMQ&amp;#39;s main signing key curl -1sLf &amp;#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&amp;#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &amp;gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &amp;#34;https://keyserver.</description>
     </item>
     
     <item>
@@ -93,10 +106,10 @@ focal_rq.sh:
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</guid>
       <description>PAT 从2021.8.13开始github不允许使用用户名和密码！ 只能使用用户名和Token进行提交。
-Create Personal Access Token on GitHub  From your GitHub account, go to Settings =&amp;gt; Developer Settings =&amp;gt; Personal Access Token =&amp;gt; Generate New Token (Give your password) =&amp;gt; Fillup the form =&amp;gt; click Generate token =&amp;gt; Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
- 根据需要勾选授权(scopes): Note: 你的token 标题 Select scopes: 勾选“public_repo”
-增加普通凭证  控制面板 -&amp;gt; 用户帐户和家庭安全 -&amp;gt; 凭据管理器
- 添加&amp;quot;普通凭证&amp;quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token</description>
+Create Personal Access Token on GitHub From your GitHub account, go to Settings =&amp;gt; Developer Settings =&amp;gt; Personal Access Token =&amp;gt; Generate New Token (Give your password) =&amp;gt; Fillup the form =&amp;gt; click Generate token =&amp;gt; Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
+根据需要勾选授权(scopes): Note: 你的token 标题 Select scopes: 勾选“public_repo”
+增加普通凭证 控制面板 -&amp;gt; 用户帐户和家庭安全 -&amp;gt; 凭据管理器
+添加&amp;quot;普通凭证&amp;quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token</description>
     </item>
     
     <item>
@@ -105,12 +118,12 @@ Create Personal Access Token on GitHub  From your GitHub account, go to Settings
       <pubDate>Thu, 21 Apr 2022 11:18:02 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
-      <description>IDE: Visual Studio Code SDK: .Net 6.0 终端(Terminal) Windows 10 LTSC 2019(v1809+): PowerShell Core 数据库(Database)：MySQL / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside)  一、Create Project(VS Code)  Set workspace dir   File -&amp;gt; Add Folder to Workspace
-  Init project   Terminal -&amp;gt; New Terminal
- dotnet new mvc -o veic_web --framework net6.0 设置缺省首页(Home Set Default) 由
+      <description>IDE: Visual Studio Code SDK: .Net 6.0 终端(Terminal) Windows 10 LTSC 2019(v1809+): PowerShell Core 数据库(Database)：MySQL / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside) 一、Create Project(VS Code) Set workspace dir File -&amp;gt; Add Folder to Workspace
+Init project Terminal -&amp;gt; New Terminal
+dotnet new mvc -o veic_web --framework net6.0 设置缺省首页(Home Set Default) 由
 app.UseStaticFiles(); 变更为:
 app.UseDefaultFiles(); app.UseStaticFiles(); 新建wwwroot/index.html，See附录1.
-Run build  Manually add .</description>
+Run build Manually add .vscode install c# for Visual Studio Code 双击Program.</description>
     </item>
     
     <item>
@@ -119,7 +132,8 @@ Run build  Manually add .</description>
       <pubDate>Thu, 24 Mar 2022 03:18:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/</guid>
-      <description>准备 strcat_s使用  准备 使用LLVM（clang-cl） char point char * const and const char *?  Pointing to a constant value  const char * p; // value cannot be changed Constant pointer to a value  char * const p; // address cannot be changed Constant pointer to a constant value  const char * const p; // both cannot be changed. C++11 The C++11 Standard (ISO/IEC 14882:2011) says in § C.</description>
+      <description>准备 strcat_s使用 准备 使用LLVM（clang-cl） char point char * const and const char *? Pointing to a constant value const char * p; // value cannot be changed Constant pointer to a value char * const p; // address cannot be changed Constant pointer to a constant value const char * const p; // both cannot be changed. C++11 The C++11 Standard (ISO/IEC 14882:2011) says in § C.1.1:
+char* p = &amp;#34;abc&amp;#34;; // valid in C, invalid in C++ For the C++ it&amp;rsquo;s OK as a pointer to a String Literal is harmful since any attempt to modify it leads to a crash.</description>
     </item>
     
     <item>
@@ -128,15 +142,17 @@ Run build  Manually add .</description>
       <pubDate>Sun, 28 Nov 2021 08:18:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</guid>
-      <description>thread  线程相关
- asynchronously connect方法已实现异步。
+      <description>thread 线程相关
+asynchronously connect方法已实现异步。
 synchronously qmutexlocker
 创建信号锁 m_mutex.lock(); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。
 signals: void error(const QString &amp;amp;s); void timeout(const QString &amp;amp;s); Worker method Init Port 设置私有成员变量
- 部分代码
- m_waitTimeout = waitTimeout; Receive data 打开串口
-if (!m_serialPort-&amp;gt;open(QIODevice::ReadWrite)) { 	qDebug() &amp;lt;&amp;lt; tr(&amp;#34;Can&amp;#39;t open %1, error code %2&amp;#34;) 	.arg(m_portName).arg(m_serialPort-&amp;gt;error()); 	m_serialPort-&amp;gt;close(); 	return false; 	} 接收数据
-while (m_serialPort-&amp;gt;waitForReadyRead(500))  responseData += m_serialPort-&amp;gt;read(1024); Deploy for windows copy exe to target directory.</description>
+部分代码
+m_waitTimeout = waitTimeout; Receive data 打开串口
+if (!m_serialPort-&amp;gt;open(QIODevice::ReadWrite)) { qDebug() &amp;lt;&amp;lt; tr(&amp;#34;Can&amp;#39;t open %1, error code %2&amp;#34;) .arg(m_portName).arg(m_serialPort-&amp;gt;error()); m_serialPort-&amp;gt;close(); return false; } 接收数据
+while (m_serialPort-&amp;gt;waitForReadyRead(500)) responseData += m_serialPort-&amp;gt;read(1024); Deploy for windows copy exe to target directory.
+copy C:\Users\tdtc\Documents\Projects\serialCommQt\Release\serialCommQt.exe C:\Users\tdtc\Documents\serialCommQt_qmake\ exec windeployqt:
+for QML C:\Qt\Qt5.12.11\5.12.11\msvc2017\bin\windeployqt --qmldir C:\Users\tdtc\Documents\SerialCom\SerialCom\QtRaspberry C:\Users\tdtc\Documents\SerialCom_qml\serialCom.</description>
     </item>
     
     <item>
@@ -146,7 +162,7 @@ while (m_serialPort-&amp;gt;waitForReadyRead(500))  responseData += m_serialPort
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</guid>
       <description>Note:
- # - requires given linux commands to be executed with root privileges either directly as a root user or by use of sudo command $ - requires given linux commands to be executed as a regular non-privileged user   Docker CE 1. install $sudo apt install docker.io 2. enable $ sudo systemctl start docker $ sudo systemctl enable docker test:
+# - requires given linux commands to be executed with root privileges either directly as a root user or by use of sudo command $ - requires given linux commands to be executed as a regular non-privileged user Docker CE 1. install $sudo apt install docker.io 2. enable $ sudo systemctl start docker $ sudo systemctl enable docker test:
 $ docker --version Docker compose 1. down sudo curl -L &amp;#34;https://github.</description>
     </item>
     
@@ -158,12 +174,12 @@ $ docker --version Docker compose 1. down sudo curl -L &amp;#34;https://github.<
       <guid>https://tdtc-hrb.github.io/cnblogs/post/sqlite.net.core/</guid>
       <description>IDE: VS2022 语言: C#
 简介： 本示例使用SQLite的密码、外键功能。
-一、工程设置 1. NuGet  Tools -&amp;gt; NuGet Package Manager -&amp;gt; Package Manager Console  Install-Package sqlite-net-pcl -Version 1.8.116 Install-Package sqlite-net-sqlcipher -Version 1.8.116 完整的窗体： 2. 控件 拖拽4个TextBox、4个Button、1个DataGridView
+一、工程设置 1. NuGet Tools -&amp;gt; NuGet Package Manager -&amp;gt; Package Manager Console Install-Package sqlite-net-pcl -Version 1.8.116 Install-Package sqlite-net-sqlcipher -Version 1.8.116 完整的窗体： 2. 控件 拖拽4个TextBox、4个Button、1个DataGridView
 二、功能实现 使用Synchronous API来实现连接、factoryCar表的查询、插入等操作。
-0. Entity class  注意：主键和外键
- 建立两个实体类：FactoryCar和MarqueCar
+0. Entity class 注意：主键和外键
+建立两个实体类：FactoryCar和MarqueCar
 1. 连接 asyncConn = new SQLite.SQLiteAsyncConnection(options); 其中，options是SQLiteConnectionString实例化的字符串。
-var options = new SQLiteConnectionString(edtDB.Text, true,  key: edtPwd.Text,  preKeyAction: db =&amp;gt; db.Execute(&amp;#34;PRAGMA cipher_default_use_hmac = OFF;&amp;#34;),  postKeyAction: db =&amp;gt; db.</description>
+var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, preKeyAction: db =&amp;gt; db.Execute(&amp;#34;PRAGMA cipher_default_use_hmac = OFF;&amp;#34;), postKeyAction: db =&amp;gt; db.Execute(&amp;#34;PRAGMA kdf_iter = 128000;&amp;#34;)); 2. 查询 异步查询 var factoryCars = asyncConn.</description>
     </item>
     
     <item>
@@ -172,8 +188,8 @@ var options = new SQLiteConnectionString(edtDB.Text, true,  key: edtPwd.Text,  p
       <pubDate>Thu, 18 Nov 2021 02:18:39 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-thousand-separator/</guid>
-      <description>1. 字符串替换 /** * 字符串替换函数 - js * expStr: 查找的字符串 * string: 整个字符串 * repStr: 替换的字符串 */ function replacStr(expStr, string, repStr) { 	let result = &amp;#34;&amp;#34;; 	let regex; 	if (parseInt(expStr) &amp;gt; 0) // 数字 	regex = new RegExp(expStr, &amp;#34;g&amp;#34;); 	else	// 非数字 	regex = new RegExp(&amp;#34;\\&amp;#34; + expStr, &amp;#34;g&amp;#34;); 	result = string.replace(regex, repStr); 	return result; } 2. 千分符 例如，货币7867321.55，怎样使用js来分割他呢？
-0. 分离小数和整数 let index = strCny.</description>
+      <description>1. 字符串替换 /** * 字符串替换函数 - js * expStr: 查找的字符串 * string: 整个字符串 * repStr: 替换的字符串 */ function replacStr(expStr, string, repStr) { let result = &amp;#34;&amp;#34;; let regex; if (parseInt(expStr) &amp;gt; 0) // 数字 regex = new RegExp(expStr, &amp;#34;g&amp;#34;); else	// 非数字 regex = new RegExp(&amp;#34;\\&amp;#34; + expStr, &amp;#34;g&amp;#34;); result = string.replace(regex, repStr); return result; } 2. 千分符 例如，货币7867321.55，怎样使用js来分割他呢？
+0. 分离小数和整数 let index = strCny.indexOf(&amp;#34;.&amp;#34;); if ( index != 0) { strNum = strCny.</description>
     </item>
     
     <item>
@@ -183,13 +199,13 @@ var options = new SQLiteConnectionString(edtDB.Text, true,  key: edtPwd.Text,  p
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-print-tree/</guid>
       <description>一棵&amp;quot;树&amp;quot;就是由空格、星号和回车组成的。 我们用a，代表空格。
- 注意：空格在HTML编码为：“ ”。
- aaaa* aaa*** aa***** a******* ********* aaaa* aaaa* aaaa* aaaa* aaaa* 首先“树头”部分由3部分组成：空格部分、左树头、右树头。 空格就是递减的过程：
-for (let i = treeRadius; i &amp;gt; k; i--) {  document.write(&amp;#34; &amp;#34;); } 左树头，包括中线
-for (let i = 0; i &amp;lt; k + 1; i++) {  document.write(&amp;#34;*&amp;#34;); } 右树头，递增过程：
-for (let j = 0; j &amp;lt; k; j++) {  document.write(&amp;#34;b&amp;#34;); } 然后，“树干”部分由2部分组成：空格部分和中线部分
+注意：空格在HTML编码为：“ ”。
+aaaa* aaa*** aa***** a******* ********* aaaa* aaaa* aaaa* aaaa* aaaa* 首先“树头”部分由3部分组成：空格部分、左树头、右树头。 空格就是递减的过程：
+for (let i = treeRadius; i &amp;gt; k; i--) { document.write(&amp;#34; &amp;#34;); } 左树头，包括中线
+for (let i = 0; i &amp;lt; k + 1; i++) { document.write(&amp;#34;*&amp;#34;); } 右树头，递增过程：
+for (let j = 0; j &amp;lt; k; j++) { document.write(&amp;#34;b&amp;#34;); } 然后，“树干”部分由2部分组成：空格部分和中线部分
 空格就是按照指定的半径数“占位”：
-for (let j = 0; j &amp;lt; treeRadius; j++) {  document.</description>
+for (let j = 0; j &amp;lt; treeRadius; j++) { document.write(&amp;#34; &amp;#34;); } 中线就是每次循环时打印一个*</description>
     </item>
     
     <item>
@@ -200,11 +216,12 @@ for (let j = 0; j &amp;lt; treeRadius; j++) {  document.</description>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-angular-app/</guid>
       <description>Prepare install Angular CLI:
 npm install -g @angular/cli create project:
-npx @angular/cli new userDetails-client --style=css --routing=false --skip-tests Angular struct Angular module  app/app.module.ts
- Add system modules and user components
- system module example for: httpclient module  import pack:
+npx @angular/cli new userDetails-client --style=css --routing=false --skip-tests Angular struct Angular module app/app.module.ts
+Add system modules and user components
+system module example for: httpclient module import pack:
 import { HttpClientModule } from &amp;#34;@angular/common/http&amp;#34;; declare Decorator:
-// import HttpClientModule after BrowserModule.  HttpClientModule,  user component See the next section(&amp;ldquo;Angular Component - add component&amp;rdquo;) for examples of user components.</description>
+// import HttpClientModule after BrowserModule. HttpClientModule, user component See the next section(&amp;ldquo;Angular Component - add component&amp;rdquo;) for examples of user components. Angular Component app/component.ts
+The root component.</description>
     </item>
     
     <item>
@@ -214,12 +231,12 @@ import { HttpClientModule } from &amp;#34;@angular/common/http&amp;#34;; declare
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-restful/</guid>
       <description>使用Scaffolder模板创建api。
- PowerShell v5.1 IDE: Visual Studio Code/Visual Studio 2022 NuGet   ..\AppData\Roaming\NuGet\NuGet.Config
- &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;configuration&amp;gt;  &amp;lt;packageSources&amp;gt;  &amp;lt;add key=&amp;#34;api.nuget.org&amp;#34; value=&amp;#34;https://api.nuget.org/v3/index.json&amp;#34; /&amp;gt;  &amp;lt;/packageSources&amp;gt; &amp;lt;/configuration&amp;gt; Create Project vs code
+PowerShell v5.1 IDE: Visual Studio Code/Visual Studio 2022 NuGet ..\AppData\Roaming\NuGet\NuGet.Config
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;packageSources&amp;gt; &amp;lt;add key=&amp;#34;api.nuget.org&amp;#34; value=&amp;#34;https://api.nuget.org/v3/index.json&amp;#34; /&amp;gt; &amp;lt;/packageSources&amp;gt; &amp;lt;/configuration&amp;gt; Create Project vs code
 dotnet new webapi -o MyWebApp --package Swashbuckle.AspNetCore:PackageVersion=6.2.3 add NuGet package dotnet add package Microsoft.EntityFrameworkCore dotnet add package MySql.EntityFrameworkCore dotnet add package Microsoft.EntityFrameworkCore.Tools Option NuGet package Pomelo:
 CLI&amp;gt; dotnet add package Pomelo.EntityFrameworkCore.MySql Test Browser
 Models 建立Entity类：Supplier、Product、Category
-DbContext public class StorageBuyDbContext : DbContext {  public StorageBuyDbContext(DbContextOptions&amp;lt;StorageBuyDbContext&amp;gt; options) : base(options){}   public DbSet&amp;lt;Category&amp;gt; Categories { get; set; }  public DbSet&amp;lt;Supplier&amp;gt; Suppliers { get; set; }  public DbSet&amp;lt;Product&amp;gt; Products { get; set; } } add service add connectiong string &amp;#34;Data&amp;#34;: {  &amp;#34;StorageBuy&amp;#34;: {  &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.</description>
+DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbContext(DbContextOptions&amp;lt;StorageBuyDbContext&amp;gt; options) : base(options){} public DbSet&amp;lt;Category&amp;gt; Categories { get; set; } public DbSet&amp;lt;Supplier&amp;gt; Suppliers { get; set; } public DbSet&amp;lt;Product&amp;gt; Products { get; set; } } add service add connectiong string &amp;#34;Data&amp;#34;: { &amp;#34;StorageBuy&amp;#34;: { &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.</description>
     </item>
     
     <item>
@@ -229,8 +246,8 @@ DbContext public class StorageBuyDbContext : DbContext {  public StorageBuyDbCon
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-grpc/</guid>
       <description>Server 在Ubuntu V20.04; Client 在Windows CMD运行。
-  PowerShell Core v7.2 IDE: VS2022 Community(v17.0)/VS Code(docker extension) VM: VBox(v6.1)  接口文件说明  Protos/greet.proto
- 定义service service Greeter {  // Sends a greeting  rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message  request  message HelloRequest {  string name = 1; }  response  message HelloReply {  string message = 1; } server Create VS2022 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file  View -&amp;gt; Command Palette(Ctrl+Shift+P)   Enter: Docker fi choice1: Add Docker Files to Workspace&amp;hellip; choice2: .</description>
+PowerShell Core v7.2 IDE: VS2022 Community(v17.0)/VS Code(docker extension) VM: VBox(v6.1) 接口文件说明 Protos/greet.proto
+定义service service Greeter { // Sends a greeting rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message request message HelloRequest { string name = 1; } response message HelloReply { string message = 1; } server Create VS2022 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file View -&amp;gt; Command Palette(Ctrl+Shift+P) Enter: Docker fi choice1: Add Docker Files to Workspace&amp;hellip; choice2: .</description>
     </item>
     
     <item>
@@ -239,8 +256,9 @@ DbContext public class StorageBuyDbContext : DbContext {  public StorageBuyDbCon
       <pubDate>Mon, 08 Nov 2021 15:26:39 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-webpack/</guid>
-      <description>安装webpack npm install -g webpack-dev-server npm install --save webpack-cli pack info  package.json
- {  &amp;#34;name&amp;#34;: &amp;#34;redux-book-started&amp;#34;,  &amp;#34;version&amp;#34;: &amp;#34;1.0.0&amp;#34;,  &amp;#34;description&amp;#34;: &amp;#34;Sample Redux Application&amp;#34;,  &amp;#34;main&amp;#34;: &amp;#34;app.js&amp;#34;,  &amp;#34;scripts&amp;#34;: {  &amp;#34;start&amp;#34;: &amp;#34;webpack-dev-server --hot --progress --port 8181&amp;#34;  },  &amp;#34;author&amp;#34;: &amp;#34;Boris Dinkevich &amp;amp; Ilya Gelman&amp;#34;,  &amp;#34;license&amp;#34;: &amp;#34;MIT&amp;#34;,  &amp;#34;dependencies&amp;#34;: {  &amp;#34;jquery&amp;#34;: &amp;#34;3.6.0&amp;#34;,  &amp;#34;redux&amp;#34;: &amp;#34;4.1.2&amp;#34;  },  &amp;#34;devDependencies&amp;#34;: {  &amp;#34;webpack&amp;#34;: &amp;#34;5.64.1&amp;#34;,  &amp;#34;webpack-cli&amp;#34;: &amp;#34;^4.</description>
+      <description>安装webpack npm install -g webpack-dev-server npm install --save webpack-cli pack info package.json
+{ &amp;#34;name&amp;#34;: &amp;#34;redux-book-started&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;1.0.0&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;Sample Redux Application&amp;#34;, &amp;#34;main&amp;#34;: &amp;#34;app.js&amp;#34;, &amp;#34;scripts&amp;#34;: { &amp;#34;start&amp;#34;: &amp;#34;webpack-dev-server --hot --progress --port 8181&amp;#34; }, &amp;#34;author&amp;#34;: &amp;#34;Boris Dinkevich &amp;amp; Ilya Gelman&amp;#34;, &amp;#34;license&amp;#34;: &amp;#34;MIT&amp;#34;, &amp;#34;dependencies&amp;#34;: { &amp;#34;jquery&amp;#34;: &amp;#34;3.6.0&amp;#34;, &amp;#34;redux&amp;#34;: &amp;#34;4.1.2&amp;#34; }, &amp;#34;devDependencies&amp;#34;: { &amp;#34;webpack&amp;#34;: &amp;#34;5.64.1&amp;#34;, &amp;#34;webpack-cli&amp;#34;: &amp;#34;^4.9.1&amp;#34;, &amp;#34;webpack-dev-server&amp;#34;: &amp;#34;4.5.0&amp;#34; } } config info webpack.config.js
+module.exports = { mode: &amp;#39;development&amp;#39;, entry: &amp;#39;./app.js&amp;#39;, output: { filename: &amp;#39;.</description>
     </item>
     
     <item>
@@ -249,9 +267,9 @@ DbContext public class StorageBuyDbContext : DbContext {  public StorageBuyDbCon
       <pubDate>Sat, 02 Oct 2021 14:26:39 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-json-table/</guid>
-      <description>一、JSON数据源  JSON
-   JSON是一种取代XML的数据结构,和xml相比,它更小巧但描述能力却不差,由于它的小巧所以网络传输数据将减少更多流量从而加快速度,那么,JSON到底是什么?JSON就是一串字符串 只不过元素会使用特定的符号标注。{} 双括号表示对象[] 中括号表示数组&amp;#34;&amp;#34; 双引号内是属性或值: 冒号表示后者是前者的值(这个值可以是字符串、数字、也可以是另一个数组或对象)所以 {&amp;#34;name&amp;#34;: &amp;#34;Michael&amp;#34;} 可以理解为是一个包含name为Michael的对象而[{&amp;#34;name&amp;#34;: &amp;#34;Michael&amp;#34;},{&amp;#34;name&amp;#34;: &amp;#34;Jerry&amp;#34;}]就表示包含两个对象的数组当然了,你也可以使用{&amp;#34;name&amp;#34;:[&amp;#34;Michael&amp;#34;,&amp;#34;Jerry&amp;#34;]}来简化上面一部,这是一个拥有一个name数组的对象 详细介绍请参见W3SCHOOL JSON规范
-1. students var students = [  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1001&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1002&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;张X威&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1003&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;于X洋&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1004&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;张X扬&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1005&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;周X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1006&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;王X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1007&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X朋&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1008&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;邬X春&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 5&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1009&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]},  {&amp;#34;cName&amp;#34;: &amp;#34;class 5&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1010&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;孙X丽&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]} ]; 二、函数设计  所谓的动态就是使用删表和写表的操作。</description>
+      <description>一、JSON数据源 JSON
+JSON是一种取代XML的数据结构,和xml相比,它更小巧但描述能力却不差,由于它的小巧所以网络传输数据将减少更多流量从而加快速度,那么,JSON到底是什么?JSON就是一串字符串 只不过元素会使用特定的符号标注。{} 双括号表示对象[] 中括号表示数组&amp;#34;&amp;#34; 双引号内是属性或值: 冒号表示后者是前者的值(这个值可以是字符串、数字、也可以是另一个数组或对象)所以 {&amp;#34;name&amp;#34;: &amp;#34;Michael&amp;#34;} 可以理解为是一个包含name为Michael的对象而[{&amp;#34;name&amp;#34;: &amp;#34;Michael&amp;#34;},{&amp;#34;name&amp;#34;: &amp;#34;Jerry&amp;#34;}]就表示包含两个对象的数组当然了,你也可以使用{&amp;#34;name&amp;#34;:[&amp;#34;Michael&amp;#34;,&amp;#34;Jerry&amp;#34;]}来简化上面一部,这是一个拥有一个name数组的对象 详细介绍请参见W3SCHOOL JSON规范
+1. students var students = [ {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1001&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1002&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;张X威&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1003&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;于X洋&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1004&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;张X扬&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1005&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;周X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1006&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;王X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1007&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X朋&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1008&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;邬X春&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 5&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1009&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 5&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1010&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;孙X丽&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]} ]; 二、函数设计 所谓的动态就是使用删表和写表的操作。</description>
     </item>
     
     <item>
@@ -263,20 +281,9 @@ DbContext public class StorageBuyDbContext : DbContext {  public StorageBuyDbCon
       <description>在JS练习题中，有这么一道：
 请计算某天是这一年的第几天。
 首先，我们要看此年是否闰年
-var IsLeapYear = function (year) {  var flag = false;   if ( ((year % 4 == 0) &amp;amp;&amp;amp; (year % 100 != 0)) || (year % 400 == 0) )  flag = true;   return flag; }; 其次，累加每月天数。
-for (var i = 0; i &amp;lt; month - 1; i++) {  iDay += months[i]; }  其中months为数组
- var months = new Array(31, day2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); day2如果是闰年赋值29，否则28。</description>
-    </item>
-    
-    <item>
-      <title>(dev mode) install CONSUL on ubuntu</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</link>
-      <pubDate>Sun, 26 Sep 2021 23:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</guid>
-      <description>install $sudo apt-get update $sudo apt-get install consul run $consul agent -dev -bind 192.168.188.10 http://localhost:8500/ui
-update down $wget https://releases.hashicorp.com/consul/1.10.3/consul_1.10.3_linux_amd64.zip unzip $sudo unzip consul_1.10.3_linux_amd64.zip -d /usr/local/bin Verifying the Installation:
-$consul -v Consul v1.10.3 Ref  Install Consul Run the Consul Agent  </description>
+var IsLeapYear = function (year) { var flag = false; if ( ((year % 4 == 0) &amp;amp;&amp;amp; (year % 100 != 0)) || (year % 400 == 0) ) flag = true; return flag; }; 其次，累加每月天数。
+for (var i = 0; i &amp;lt; month - 1; i++) { iDay += months[i]; } 其中months为数组
+var months = new Array(31, day2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); day2如果是闰年赋值29，否则28。</description>
     </item>
     
     <item>
@@ -285,10 +292,15 @@ $consul -v Consul v1.10.3 Ref  Install Consul Run the Consul Agent  </descriptio
       <pubDate>Wed, 10 Mar 2021 01:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-web-server/</guid>
-      <description>IDE Arduino V1.8.13 Library UIP Ethernet v2.x  接线    arduino uno Enc28j60     Pin 10 CS   Pin 11 SI   Pin 12 SO   Pin 13 SCK   Reset RST*   +3v3 Vcc   GND* GND    Enc28j60 INTN: 置空（不接）
+      <description>IDE Arduino V1.8.13 Library UIP Ethernet v2.x 接线 arduino uno Enc28j60 Pin 10 CS Pin 11 SI Pin 12 SO Pin 13 SCK Reset RST* +3v3 Vcc GND* GND Enc28j60 INTN: 置空（不接）
 *Rst接线: 注意Nano V3 Ethernet Shield接7号线柱，如下图所示： Arduino Uno *GND接线: 5V旁边的GND.
 供电: 必须使用USB接口.(使用电源口无法工作)
-网络及PC驱动 使用平行线，接路由器Lan口。 本例驱动在Win7 x64通过。</description>
+网络及PC驱动 使用平行线，接路由器Lan口。 本例驱动在Win7 x64通过。
+网线 PC-Router Enc28J60-Router
+Driver 首先，解压缩Arduino IDE下的drivers\Old_Arduino_Drivers.zip；
+然后，通过设备管理器-〉未知设备-〉“更新驱动程序软件”，即可安装完成。
+example Ethernet_Demo_2.ino
+/* Demo sketch for a simple web page * * Libs: UIPEthernet v2.0.9 * https://github.</description>
     </item>
     
     <item>
@@ -298,7 +310,7 @@ $consul -v Consul v1.10.3 Ref  Install Consul Run the Consul Agent  </descriptio
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-blink/</guid>
       <description>使用跑马灯来验证.
-Pre IDE  Arduino CC(.zip文件) Atmel Studio 7  编码 我们使用使用AS7是为了使用它的智能提示和方便查看函数原型.
+Pre IDE Arduino CC(.zip文件) Atmel Studio 7 编码 我们使用使用AS7是为了使用它的智能提示和方便查看函数原型.
 建立工程 - Arduino 文件-&amp;gt;示例-&amp;gt;01.Basics-&amp;gt;Blink
 建立工程 - AS7 New-&amp;gt;Project &amp;ldquo;Create Project from Arduino Sketch&amp;rdquo; 设置Arduino sketch属性: Sketch File、Arduino IDE、Board、Device 烧写 把代码copy回arduino ide
 /* Blink Turns on an LED on for one second, then off for one second, repeatedly. Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO it is attached to digital pin 13, on MKR1000 on pin 6.</description>
@@ -312,7 +324,7 @@ Pre IDE  Arduino CC(.zip文件) Atmel Studio 7  编码 我们使用使用AS7是�
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-enc28j60-driver/</guid>
       <description>SPI 通过ASF示例(iar)改写为Keil(mdk v5.18a)
 Init 在初始化过程中需要mck(Master Clock Sources)。
-uint32_t sysclk_get_peripheral_hz() { 	/* CONFIG_SYSCLK_PRES is the register value for setting the expected */ 	/* prescaler, not an immediate value. */ 	return sysclk_get_main_hz() / 	((CONFIG_SYSCLK_PRES == SYSCLK_PRES_3) ? 3 : 	(1 &amp;lt;&amp;lt; (CONFIG_SYSCLK_PRES &amp;gt;&amp;gt; PMC_MCKR_PRES_Pos))); } pio  Pull-up Enable PIO Disable  spi master init  Enable peripheral clock Set spi master mode Disable Mode Fault Detection Disable loopback mode Set Peripheral Chip Select (PCS) value Set fixed peripheral select Disable Peripheral Select Decode Set delay between chip selects  spi master setup device  spi calc baudrate div Configure timing for SPI transfer Set number of bits per transfer Set Serial Clock Baud Rate divider value (SCBR) Configure CS behavior for SPI transfer (\ref spi_cs_behavior_t) Set clock default state Set Data Capture Phase  spi calc baudrate div short spi_calc_baudrate_div(const uint32_t baudrate, uint32_t mck) {  int baud_div = div_ceil(mck, baudrate);   /* The value of baud_div is from 1 to 255 in the SCBR field.</description>
+uint32_t sysclk_get_peripheral_hz() { /* CONFIG_SYSCLK_PRES is the register value for setting the expected */ /* prescaler, not an immediate value. */ return sysclk_get_main_hz() / ((CONFIG_SYSCLK_PRES == SYSCLK_PRES_3) ? 3 : (1 &amp;lt;&amp;lt; (CONFIG_SYSCLK_PRES &amp;gt;&amp;gt; PMC_MCKR_PRES_Pos))); } pio Pull-up Enable PIO Disable spi master init Enable peripheral clock Set spi master mode Disable Mode Fault Detection Disable loopback mode Set Peripheral Chip Select (PCS) value Set fixed peripheral select Disable Peripheral Select Decode Set delay between chip selects spi master setup device spi calc baudrate div Configure timing for SPI transfer Set number of bits per transfer Set Serial Clock Baud Rate divider value (SCBR) Configure CS behavior for SPI transfer (\ref spi_cs_behavior_t) Set clock default state Set Data Capture Phase spi calc baudrate div short spi_calc_baudrate_div(const uint32_t baudrate, uint32_t mck) { int baud_div = div_ceil(mck, baudrate); /* The value of baud_div is from 1 to 255 in the SCBR field.</description>
     </item>
     
     <item>
@@ -323,7 +335,7 @@ uint32_t sysclk_get_peripheral_hz() { 	/* CONFIG_SYSCLK_PRES is the register val
       <guid>https://tdtc-hrb.github.io/cnblogs/post/dev-service_registry-zk/</guid>
       <description>Install ZooKeeper packages
 # sudo apt-get install openjdk-8-jre-headless # sudo apt-get install zookeeper zookeeperd If you need a cluster, configure the Conf file, otherwise ignore it.
-Configure ZooKeeper  Common Configuration  Edit the /etc/zookeeper/conf/zoo.cfg file to contain the following:  server.1=nsdb1:2888:3888 server.2=nsdb2:2888:3888 server.3=nsdb3:2888:3888 autopurge.snapRetainCount=10 autopurge.purgeInterval =12 [Important] Important For production deployments it is recommended to configure the storage of snapshots in a different disk than the commit log, this is done by setting the parameters dataDir and dataLogDir in zoo.</description>
+Configure ZooKeeper Common Configuration Edit the /etc/zookeeper/conf/zoo.cfg file to contain the following: server.1=nsdb1:2888:3888 server.2=nsdb2:2888:3888 server.3=nsdb3:2888:3888 autopurge.snapRetainCount=10 autopurge.purgeInterval =12 [Important] Important For production deployments it is recommended to configure the storage of snapshots in a different disk than the commit log, this is done by setting the parameters dataDir and dataLogDir in zoo.</description>
     </item>
     
     <item>
@@ -333,14 +345,14 @@ Configure ZooKeeper  Common Configuration  Edit the /etc/zookeeper/conf/zoo.cfg 
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/cas-client-config/</guid>
       <description>The client and server are the same thekeystore
- cas client version: 3.5.1(cas-client-core-3.5.1)
+cas client version: 3.5.1(cas-client-core-3.5.1)
 git clone https://gitee.com/xiaobin80/cas-sample-java-webapp 1. config web.xml(src\main\webapp\WEB-INF)
 1) CAS Single Sign Out Filter https://localhost:8443/cas 2) CAS Authentication Filter https://localhost:8443/cas/login 3) CAS Validation Filter https://localhost:8443/cas 4) server name localhost 2. keystore copy
 /etc/cas/jetty/thekeystore to
 The disk root directory of the application. For example: my application:
 D:\projects\cas-sample-java-webapp then thekeystore file:
 D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
-&amp;lt;webApp&amp;gt;  &amp;lt;contextPath&amp;gt;/loginInfo&amp;lt;/contextPath&amp;gt;  &amp;lt;overrideDescriptor&amp;gt;${basedir}/etc/jetty/web.</description>
+&amp;lt;webApp&amp;gt; &amp;lt;contextPath&amp;gt;/loginInfo&amp;lt;/contextPath&amp;gt; &amp;lt;overrideDescriptor&amp;gt;${basedir}/etc/jetty/web.xml&amp;lt;/overrideDescriptor&amp;gt; &amp;lt;/webApp&amp;gt; mvn clean package jetty:run-forked 1) Run directly mvn jetty:run-forked 4.</description>
     </item>
     
     <item>
@@ -349,11 +361,12 @@ D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
       <pubDate>Sat, 16 May 2020 10:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/cas-server-config/</guid>
-      <description>Tomcat: V8.5.x Java: 1.8 x64 MySQL: 5.5.x+ OS: Win10 x64  下载部署包  使用gradle 的repo最高只支持gradle V4.3！
- 0. clone git clone https://github.com/apereo/cas-gradle-overlay-template.git 1. set gradle 1) extract gradle-4.10.3-bin.zip
-2) set system variable  $PATH=$PATH;%GRADLE_HOME%\bin 2. build war  File location: cas\build\libs\cas.war
- 1) config file gradle.properties
-cas.version=5.3.2 =&amp;gt; cas.version=5.3.15.1  gradle.version=4.8 =&amp;gt; gradle.version=4.10.3  springboot.version=1.5.14.RELEASE =&amp;gt; springboot.version=1.5.18.RELEASE 2) build cd cas-gradle-overlay-template $gradle build II. Run 0. key/certificate 1) genkey  info: -dname &amp;ldquo;CN=localhost,OU=test.</description>
+      <description>Tomcat: V8.5.x Java: 1.8 x64 MySQL: 5.5.x+ OS: Win10 x64 下载部署包 使用gradle 的repo最高只支持gradle V4.3！
+0. clone git clone https://github.com/apereo/cas-gradle-overlay-template.git 1. set gradle 1) extract gradle-4.10.3-bin.zip
+2) set system variable $PATH=$PATH;%GRADLE_HOME%\bin 2. build war File location: cas\build\libs\cas.war
+1) config file gradle.properties
+cas.version=5.3.2 =&amp;gt; cas.version=5.3.15.1 gradle.version=4.8 =&amp;gt; gradle.version=4.10.3 springboot.version=1.5.14.RELEASE =&amp;gt; springboot.version=1.5.18.RELEASE 2) build cd cas-gradle-overlay-template $gradle build II. Run 0. key/certificate 1) genkey info: -dname &amp;ldquo;CN=localhost,OU=test.com,O=test,L=WH,ST=HB,C=CN&amp;rdquo;
+keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize 2048 -keystore e:/etc/cas/thekeystore 2) export keytool -export -alias thekeystore -file e:/etc/cas/cas5311.</description>
     </item>
     
     <item>
@@ -363,7 +376,7 @@ cas.version=5.3.2 =&amp;gt; cas.version=5.3.15.1  gradle.version=4.8 =&amp;gt; g
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</guid>
       <description>OS: CentOS 7 Minimal
- 0) open files Q: Increased maximum number of open files to 10032 (it was originally set to 1024). A:
+0) open files Q: Increased maximum number of open files to 10032 (it was originally set to 1024). A:
 $ulimit -a $vi /etc/systemd/system/redis.service In the &amp;ldquo;[Service]&amp;rdquo; unit, add the following:
 LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128. A:
 $vi /etc/sysctl.conf net.core.somaxconn=1024 2) overcommit_memory Q: WARNING overcommit_memory is set to 0!</description>
@@ -375,16 +388,16 @@ $vi /etc/sysctl.conf net.core.somaxconn=1024 2) overcommit_memory Q: WARNING ove
       <pubDate>Sat, 16 May 2020 05:58:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/java-connector-cluster_mysql/</guid>
-      <description>Elementary  在没有出来NDB之前，都是使用这个组件。
- C-JDBC
- c-jdbc文档 src-Sequoia 2.10.10
- NDB Cluster  关于：
- JPA、JDBC省略不表。   ClusterJ  ClusterJ requires Java 1.7 or 1.8.
- 首先使用SessionFactory建立一个会话实例， 然后用Session提供的方法操作数据。
+      <description>Elementary 在没有出来NDB之前，都是使用这个组件。
+C-JDBC
+c-jdbc文档 src-Sequoia 2.10.10
+NDB Cluster 关于：
+JPA、JDBC省略不表。 ClusterJ ClusterJ requires Java 1.7 or 1.8.
+首先使用SessionFactory建立一个会话实例， 然后用Session提供的方法操作数据。
 会话实例 读取配置文件，然后建立Session实例。
-File propsFile = new File(&amp;#34;clusterj.properties&amp;#34;); InputStream inStream = new FileInputStream(propsFile); Properties props = new Properties(); props.load(inStream); SessionFactory factory = ClusterJHelper.getSessionFactory(props);  Session session = factory.getSession(); 配置信息  clusterj.properties
- com.mysql.clusterj.connectstring=localhost:1186com.mysql.clusterj.database=mydb 操作数据 参考4.2.2.4 ClusterJ Basic Operations文档。
-Reference  4.2.2 Using ClusterJ  </description>
+File propsFile = new File(&amp;#34;clusterj.properties&amp;#34;); InputStream inStream = new FileInputStream(propsFile); Properties props = new Properties(); props.load(inStream); SessionFactory factory = ClusterJHelper.getSessionFactory(props); Session session = factory.getSession(); 配置信息 clusterj.properties
+com.mysql.clusterj.connectstring=localhost:1186com.mysql.clusterj.database=mydb 操作数据 参考4.2.2.4 ClusterJ Basic Operations文档。
+Reference 4.2.2 Using ClusterJ </description>
     </item>
     
     <item>
@@ -393,8 +406,8 @@ Reference  4.2.2 Using ClusterJ  </description>
       <pubDate>Sat, 16 May 2020 03:58:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/</guid>
-      <description>1. pom.xml &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt;  &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;  &amp;lt;groupId&amp;gt;jmxbook&amp;lt;/groupId&amp;gt;  &amp;lt;artifactId&amp;gt;jmxInAction&amp;lt;/artifactId&amp;gt;  &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt;  &amp;lt;build/&amp;gt;   &amp;lt;repositories&amp;gt;  &amp;lt;repository&amp;gt;  &amp;lt;id&amp;gt;datanucleus.org/downloads/maven2&amp;lt;/id&amp;gt;  &amp;lt;name&amp;gt;datanucleus.org Maven Repository&amp;lt;/name&amp;gt;  &amp;lt;url&amp;gt;http://www.datanucleus.org/downloads/maven2/&amp;lt;/url&amp;gt;  &amp;lt;/repository&amp;gt;  &amp;lt;/repositories&amp;gt;  &amp;lt;dependencies&amp;gt;  &amp;lt;!-- https://mvnrepository.com/artifact/com.sun.jdmk/jmxtools --&amp;gt;  &amp;lt;dependency&amp;gt;  &amp;lt;groupId&amp;gt;com.sun.jdmk&amp;lt;/groupId&amp;gt;  &amp;lt;artifactId&amp;gt;jmxtools&amp;lt;/artifactId&amp;gt;  &amp;lt;version&amp;gt;1.2.1&amp;lt;/version&amp;gt;  &amp;lt;/dependency&amp;gt;   &amp;lt;/dependencies&amp;gt; &amp;lt;/project&amp;gt; 2. The Agent level HelloAgent.java
-package jmxbook.ch2;  import javax.management.*; import com.sun.jdmk.comm.HtmlAdaptorServer;  /** * * @url http://localhost:9092 * @author Benjamin G.</description>
+      <description>1. pom.xml &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;jmxbook&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmxInAction&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;build/&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;datanucleus.org/downloads/maven2&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;datanucleus.org Maven Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://www.datanucleus.org/downloads/maven2/&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!-- https://mvnrepository.com/artifact/com.sun.jdmk/jmxtools --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.sun.jdmk&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmxtools&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.2.1&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;/project&amp;gt; 2. The Agent level HelloAgent.java
+package jmxbook.ch2; import javax.management.*; import com.sun.jdmk.comm.HtmlAdaptorServer; /** * * @url http://localhost:9092 * @author Benjamin G. Sullins &amp;amp;&amp;amp; Mark B. Whipple * */ public class HelloAgent implements NotificationListener { private MBeanServer mbs = null; public HelloAgent ( ) { mbs = MBeanServerFactory.</description>
     </item>
     
     <item>
@@ -404,7 +417,7 @@ package jmxbook.ch2;  import javax.management.*; import com.sun.jdmk.comm.HtmlAd
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-redux-update/</guid>
       <description>1. initial state db.json
-const initialState = {  &amp;#34;recipes&amp;#34;: [  {  &amp;#34;name&amp;#34;: &amp;#34;Omelette&amp;#34;  },  {  &amp;#34;name&amp;#34;: &amp;#34;Waffle&amp;#34;  }  ],  &amp;#34;ingredients&amp;#34;: [  {  &amp;#34;name&amp;#34;: &amp;#34;Eggs&amp;#34;,  &amp;#34;quantity&amp;#34;: 2,  &amp;#34;measure&amp;#34;: &amp;#34;large&amp;#34;,  &amp;#34;recipe&amp;#34;: &amp;#34;Omelette&amp;#34;  },  {  &amp;#34;name&amp;#34;: &amp;#34;Eggs&amp;#34;,  &amp;#34;quantity&amp;#34;: 1,  &amp;#34;measure&amp;#34;: &amp;#34;large&amp;#34;,  &amp;#34;recipe&amp;#34;: &amp;#34;Waffle&amp;#34;  },  {  &amp;#34;name&amp;#34;: &amp;#34;Milk&amp;#34;,  &amp;#34;quantity&amp;#34;: 1,  &amp;#34;measure&amp;#34;: &amp;#34;cups&amp;#34;,  &amp;#34;recipe&amp;#34;: &amp;#34;Waffle&amp;#34;  },  {  &amp;#34;name&amp;#34;: &amp;#34;Sugar&amp;#34;,  &amp;#34;quantity&amp;#34;: 2,  &amp;#34;measure&amp;#34;: &amp;#34;tbsp&amp;#34;,  &amp;#34;recipe&amp;#34;: &amp;#34;Waffle&amp;#34;  }  ] } 2.</description>
+const initialState = { &amp;#34;recipes&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;Omelette&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Waffle&amp;#34; } ], &amp;#34;ingredients&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;Eggs&amp;#34;, &amp;#34;quantity&amp;#34;: 2, &amp;#34;measure&amp;#34;: &amp;#34;large&amp;#34;, &amp;#34;recipe&amp;#34;: &amp;#34;Omelette&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Eggs&amp;#34;, &amp;#34;quantity&amp;#34;: 1, &amp;#34;measure&amp;#34;: &amp;#34;large&amp;#34;, &amp;#34;recipe&amp;#34;: &amp;#34;Waffle&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Milk&amp;#34;, &amp;#34;quantity&amp;#34;: 1, &amp;#34;measure&amp;#34;: &amp;#34;cups&amp;#34;, &amp;#34;recipe&amp;#34;: &amp;#34;Waffle&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Sugar&amp;#34;, &amp;#34;quantity&amp;#34;: 2, &amp;#34;measure&amp;#34;: &amp;#34;tbsp&amp;#34;, &amp;#34;recipe&amp;#34;: &amp;#34;Waffle&amp;#34; } ] } 2. reducer const reducer = (state, action) =&amp;gt; { switch (action.</description>
     </item>
     
     <item>
@@ -413,7 +426,7 @@ const initialState = {  &amp;#34;recipes&amp;#34;: [  {  &amp;#34;name&amp;#34;:
       <pubDate>Fri, 10 Apr 2020 08:26:39 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-es6-spreed-operator/</guid>
-      <description>Multiple return values const configStore = () =&amp;gt; {  const sagaMiddleware = createSagaMiddleware()  return {  ...createStore(rootReducer, applyMiddleware(sagaMiddleware)),  runSaga: sagaMiddleware.run,  } } Reference  Spread syntax  </description>
+      <description>Multiple return values const configStore = () =&amp;gt; { const sagaMiddleware = createSagaMiddleware() return { ...createStore(rootReducer, applyMiddleware(sagaMiddleware)), runSaga: sagaMiddleware.run, } } Reference Spread syntax </description>
     </item>
     
     <item>
@@ -422,7 +435,7 @@ const initialState = {  &amp;#34;recipes&amp;#34;: [  {  &amp;#34;name&amp;#34;:
       <pubDate>Fri, 10 Apr 2020 08:26:39 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-redux-root/</guid>
-      <description>1. split const reducer = (state, action) =&amp;gt; {  switch (action.type) {  case &amp;#39;ADD_RECIPE&amp;#39;:  return Object.assign(  {}, state, {  recipes: state.recipes.concat({name : action.name})  });   case &amp;#39;ADD_INGREDIENT&amp;#39;:  const myIngredients = {  name : action.name,  quantity: action.quantity,  measure: action.measure,  recipe: action.recipe  };  return Object.assign(  {}, state, {  ingredients: state.ingredients.concat(myIngredients)  });   }  return state; } recipeReducer export const recipeReducer = (stat, action) =&amp;gt; {  switch (action.</description>
+      <description>1. split const reducer = (state, action) =&amp;gt; { switch (action.type) { case &amp;#39;ADD_RECIPE&amp;#39;: return Object.assign( {}, state, { recipes: state.recipes.concat({name : action.name}) }); case &amp;#39;ADD_INGREDIENT&amp;#39;: const myIngredients = { name : action.name, quantity: action.quantity, measure: action.measure, recipe: action.recipe }; return Object.assign( {}, state, { ingredients: state.ingredients.concat(myIngredients) }); } return state; } recipeReducer export const recipeReducer = (stat, action) =&amp;gt; { switch (action.type) { case &amp;#39;ADD_RECIPE&amp;#39;: return Object.assign( {}, state, { ingredients: state.</description>
     </item>
     
     <item>
@@ -431,7 +444,7 @@ const initialState = {  &amp;#34;recipes&amp;#34;: [  {  &amp;#34;name&amp;#34;:
       <pubDate>Fri, 10 Apr 2020 08:26:39 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/</guid>
-      <description>1. include createStore import { createStore } from &amp;#39;redux&amp;#39; 2. Establish reducer const reducerName = (state, action) =&amp;gt; {  state; } 3. invoke createStore() const store = createStore(reducerName); </description>
+      <description>1. include createStore import { createStore } from &amp;#39;redux&amp;#39; 2. Establish reducer const reducerName = (state, action) =&amp;gt; { state; } 3. invoke createStore() const store = createStore(reducerName); </description>
     </item>
     
     <item>
@@ -440,7 +453,7 @@ const initialState = {  &amp;#34;recipes&amp;#34;: [  {  &amp;#34;name&amp;#34;:
       <pubDate>Fri, 10 Apr 2020 02:14:39 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-lambda/</guid>
-      <description>Before rewriting function selectedReddit(state = &amp;#39;user/8&amp;#39;, action){  switch (action.type) {  case SELECT_REDDIT:  return action.reddit  default:  return state  } } After rewriting const selectedReddit = (state = &amp;#39;user/8&amp;#39;, action) =&amp;gt; {  switch (action.type) {  case SELECT_REDDIT:  return action.reddit  default:  return state  } } 参考 《Arrow functions》</description>
+      <description>Before rewriting function selectedReddit(state = &amp;#39;user/8&amp;#39;, action){ switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } After rewriting const selectedReddit = (state = &amp;#39;user/8&amp;#39;, action) =&amp;gt; { switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } 参考 《Arrow functions》</description>
     </item>
     
   </channel>

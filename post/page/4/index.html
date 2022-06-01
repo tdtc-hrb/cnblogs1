@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.100.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -167,7 +167,7 @@
     <section class="post-excerpt">
         
             <p>1. initial state db.json
-const initialState = {  &#34;recipes&#34;: [  {  &#34;name&#34;: &#34;Omelette&#34;  },  {  &#34;name&#34;: &#34;Waffle&#34;  }  ],  &#34;ingredients&#34;: [  {  &#34;name&#34;: &#34;Eggs&#34;,  &#34;quantity&#34;: 2,  &#34;measure&#34;: &#34;large&#34;,  &#34;recipe&#34;: &#34;Omelette&#34;  },  {  &#34;name&#34;: &#34;Eggs&#34;,  &#34;quantity&#34;: 1,  &#34;measure&#34;: &#34;large&#34;,  &#34;recipe&#34;: &#34;Waffle&#34;  },  {  &#34;name&#34;: &#34;Milk&#34;,  &#34;quantity&#34;: 1,  &#34;measure&#34;: &#34;cups&#34;,  &#34;recipe&#34;: &#34;Waffle&#34;  },  {  &#34;name&#34;: &#34;Sugar&#34;,  &#34;quantity&#34;: 2,  &#34;measure&#34;: &#34;tbsp&#34;,  &#34;recipe&#34;: &#34;Waffle&#34;  }  ] } 2. <a class="read-more" href="/cnblogs/post/js-redux-update/">&raquo;</a></p>
+const initialState = { &#34;recipes&#34;: [ { &#34;name&#34;: &#34;Omelette&#34; }, { &#34;name&#34;: &#34;Waffle&#34; } ], &#34;ingredients&#34;: [ { &#34;name&#34;: &#34;Eggs&#34;, &#34;quantity&#34;: 2, &#34;measure&#34;: &#34;large&#34;, &#34;recipe&#34;: &#34;Omelette&#34; }, { &#34;name&#34;: &#34;Eggs&#34;, &#34;quantity&#34;: 1, &#34;measure&#34;: &#34;large&#34;, &#34;recipe&#34;: &#34;Waffle&#34; }, { &#34;name&#34;: &#34;Milk&#34;, &#34;quantity&#34;: 1, &#34;measure&#34;: &#34;cups&#34;, &#34;recipe&#34;: &#34;Waffle&#34; }, { &#34;name&#34;: &#34;Sugar&#34;, &#34;quantity&#34;: 2, &#34;measure&#34;: &#34;tbsp&#34;, &#34;recipe&#34;: &#34;Waffle&#34; } ] } 2. reducer const reducer = (state, action) =&gt; { switch (action. <a class="read-more" href="/cnblogs/post/js-redux-update/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -189,7 +189,7 @@ const initialState = {  &#34;recipes&#34;: [  {  &#34;name&#34;: &#34;Omelette&#
     </header>
     <section class="post-excerpt">
         
-            <p>Multiple return values const configStore = () =&gt; {  const sagaMiddleware = createSagaMiddleware()  return {  ...createStore(rootReducer, applyMiddleware(sagaMiddleware)),  runSaga: sagaMiddleware.run,  } } Reference  Spread syntax   <a class="read-more" href="/cnblogs/post/js-es6-spreed-operator/">&raquo;</a></p>
+            <p>Multiple return values const configStore = () =&gt; { const sagaMiddleware = createSagaMiddleware() return { ...createStore(rootReducer, applyMiddleware(sagaMiddleware)), runSaga: sagaMiddleware.run, } } Reference Spread syntax  <a class="read-more" href="/cnblogs/post/js-es6-spreed-operator/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -211,7 +211,7 @@ const initialState = {  &#34;recipes&#34;: [  {  &#34;name&#34;: &#34;Omelette&#
     </header>
     <section class="post-excerpt">
         
-            <p>1. split const reducer = (state, action) =&gt; {  switch (action.type) {  case &#39;ADD_RECIPE&#39;:  return Object.assign(  {}, state, {  recipes: state.recipes.concat({name : action.name})  });   case &#39;ADD_INGREDIENT&#39;:  const myIngredients = {  name : action.name,  quantity: action.quantity,  measure: action.measure,  recipe: action.recipe  };  return Object.assign(  {}, state, {  ingredients: state.ingredients.concat(myIngredients)  });   }  return state; } recipeReducer export const recipeReducer = (stat, action) =&gt; {  switch (action. <a class="read-more" href="/cnblogs/post/js-redux-root/">&raquo;</a></p>
+            <p>1. split const reducer = (state, action) =&gt; { switch (action.type) { case &#39;ADD_RECIPE&#39;: return Object.assign( {}, state, { recipes: state.recipes.concat({name : action.name}) }); case &#39;ADD_INGREDIENT&#39;: const myIngredients = { name : action.name, quantity: action.quantity, measure: action.measure, recipe: action.recipe }; return Object.assign( {}, state, { ingredients: state.ingredients.concat(myIngredients) }); } return state; } recipeReducer export const recipeReducer = (stat, action) =&gt; { switch (action.type) { case &#39;ADD_RECIPE&#39;: return Object.assign( {}, state, { ingredients: state. <a class="read-more" href="/cnblogs/post/js-redux-root/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -233,7 +233,7 @@ const initialState = {  &#34;recipes&#34;: [  {  &#34;name&#34;: &#34;Omelette&#
     </header>
     <section class="post-excerpt">
         
-            <p>1. include createStore import { createStore } from &#39;redux&#39; 2. Establish reducer const reducerName = (state, action) =&gt; {  state; } 3. invoke createStore() const store = createStore(reducerName);  <a class="read-more" href="/cnblogs/post/js-redux-mini/">&raquo;</a></p>
+            <p>1. include createStore import { createStore } from &#39;redux&#39; 2. Establish reducer const reducerName = (state, action) =&gt; { state; } 3. invoke createStore() const store = createStore(reducerName);  <a class="read-more" href="/cnblogs/post/js-redux-mini/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -255,7 +255,7 @@ const initialState = {  &#34;recipes&#34;: [  {  &#34;name&#34;: &#34;Omelette&#
     </header>
     <section class="post-excerpt">
         
-            <p>Before rewriting function selectedReddit(state = &#39;user/8&#39;, action){  switch (action.type) {  case SELECT_REDDIT:  return action.reddit  default:  return state  } } After rewriting const selectedReddit = (state = &#39;user/8&#39;, action) =&gt; {  switch (action.type) {  case SELECT_REDDIT:  return action.reddit  default:  return state  } } 参考 《Arrow functions》 <a class="read-more" href="/cnblogs/post/js-lambda/">&raquo;</a></p>
+            <p>Before rewriting function selectedReddit(state = &#39;user/8&#39;, action){ switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } After rewriting const selectedReddit = (state = &#39;user/8&#39;, action) =&gt; { switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } 参考 《Arrow functions》 <a class="read-more" href="/cnblogs/post/js-lambda/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">

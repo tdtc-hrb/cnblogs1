@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="开发用" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2021-09-26T23:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-05-26T23:08:08&#43;08:00" />
 
     
     
@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.100.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/" />
 
@@ -99,8 +99,8 @@
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/",
-    "datePublished": "2021-09-26T23:08Z",
-    "dateModified": "2021-09-26T23:08Z",
+    "datePublished": "2022-05-26T23:08Z",
+    "dateModified": "2022-05-26T23:08Z",
     
     
     "description": "开发用",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2021-09-26T23:08:08&#43;08:00">
-            Sep 26, 2021
+          <time class="post-date" datetime="2022-05-26T23:08:08&#43;08:00">
+            May 26, 2022
           </time>
         
          
@@ -181,16 +181,16 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo apt-get update
 </span></span><span style="display:flex;"><span>$sudo apt-get install consul
 </span></span></code></pre></div><h1 id="run">run</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$consul agent -dev -bind 192.168.188.10
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$consul agent -dev -bind 192.168.3.128
 </span></span></code></pre></div><p>http://localhost:8500/ui</p>
 <h1 id="update">update</h1>
 <h2 id="down">down</h2>
-<pre tabindex="0"><code>$wget https://releases.hashicorp.com/consul/1.10.3/consul_1.10.3_linux_amd64.zip
+<pre tabindex="0"><code>$wget https://releases.hashicorp.com/consul/1.12.1/consul_1.12.1_linux_amd64.zip
 </code></pre><h2 id="unzip">unzip</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo unzip consul_1.10.3_linux_amd64.zip -d /usr/local/bin
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo unzip consul_1.12.1_linux_amd64.zip -d /usr/local/bin
 </span></span></code></pre></div><p>Verifying the Installation:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$consul -v
-</span></span><span style="display:flex;"><span>Consul v1.10.3
+</span></span><span style="display:flex;"><span>Consul v1.12.1
 </span></span></code></pre></div><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://learn.hashicorp.com/tutorials/consul/get-started-install?in=consul/getting-started">Install Consul</a></li>
@@ -247,17 +247,10 @@
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/js-calday/">
-          <section class="post">
-              <h2> 使用Ts/Js计算天数</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/e-avr8-web-server/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/es24-install/">
           <section class="post">
-              <h2>web server</h2>
+              <h2>Elasticsearch 2.4 安装</h2>
           </section>
       </a>
   
