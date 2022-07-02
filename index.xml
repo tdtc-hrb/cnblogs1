@@ -6,7 +6,35 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 May 2022 23:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Jun 2022 14:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用jekyll编写Blog</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</link>
+      <pubDate>Fri, 17 Jun 2022 14:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</guid>
+      <description>install jekyll ruby windows rubyinstaller-devkit-3.1.2-1-x64.exe check in:
+ridk install choose(3):
+MSYS2 and MINGW development tool chain gem setup set proxy and gem install:
+set http_proxy=http://127.0.0.1:8580gem install jekyll bundler test:
+jekyll -v usage Rename the repo containing the theme to &amp;ldquo;cnblogs_a&amp;rdquo;
+theme clone:
+git clone https://github.com/the-mvm/the-mvm.github.io.git cd cnblogs_abundle install rb 3.x bundle add webrick launch bundle exec jekyll serve Ref Jekyll serve fails on Ruby 3.0 </description>
+    </item>
+    
+    <item>
+      <title>Redis Server installation FAQs</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</link>
+      <pubDate>Thu, 16 Jun 2022 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</guid>
+      <description>OS: RHEL/CentOS 7 Minimal
+0) open files Q: Increased maximum number of open files to 10032 (it was originally set to 1024). A:
+$ulimit -a $vi /etc/systemd/system/redis.service In the &amp;ldquo;[Service]&amp;rdquo; unit, add the following:
+LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128. A:
+$vi /etc/sysctl.conf net.core.somaxconn=1024 2) overcommit_memory Q: WARNING overcommit_memory is set to 0!</description>
+    </item>
+    
     <item>
       <title>(dev mode) install CONSUL on ubuntu</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</link>
@@ -367,19 +395,6 @@ D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
 1) config file gradle.properties
 cas.version=5.3.2 =&amp;gt; cas.version=5.3.15.1 gradle.version=4.8 =&amp;gt; gradle.version=4.10.3 springboot.version=1.5.14.RELEASE =&amp;gt; springboot.version=1.5.18.RELEASE 2) build cd cas-gradle-overlay-template $gradle build II. Run 0. key/certificate 1) genkey info: -dname &amp;ldquo;CN=localhost,OU=test.com,O=test,L=WH,ST=HB,C=CN&amp;rdquo;
 keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize 2048 -keystore e:/etc/cas/thekeystore 2) export keytool -export -alias thekeystore -file e:/etc/cas/cas5311.</description>
-    </item>
-    
-    <item>
-      <title>Redis Server installation FAQs</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</link>
-      <pubDate>Sat, 16 May 2020 08:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</guid>
-      <description>OS: CentOS 7 Minimal
-0) open files Q: Increased maximum number of open files to 10032 (it was originally set to 1024). A:
-$ulimit -a $vi /etc/systemd/system/redis.service In the &amp;ldquo;[Service]&amp;rdquo; unit, add the following:
-LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128. A:
-$vi /etc/sysctl.conf net.core.somaxconn=1024 2) overcommit_memory Q: WARNING overcommit_memory is set to 0!</description>
     </item>
     
     <item>

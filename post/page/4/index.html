@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.100.0" />
+    <meta name="generator" content="Hugo 0.101.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -158,6 +158,29 @@
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/java-jmx-jdk7/">jmx - first demo</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>1. pom.xml &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;jmxbook&lt;/groupId&gt; &lt;artifactId&gt;jmxInAction&lt;/artifactId&gt; &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt; &lt;build/&gt; &lt;repositories&gt; &lt;repository&gt; &lt;id&gt;datanucleus.org/downloads/maven2&lt;/id&gt; &lt;name&gt;datanucleus.org Maven Repository&lt;/name&gt; &lt;url&gt;http://www.datanucleus.org/downloads/maven2/&lt;/url&gt; &lt;/repository&gt; &lt;/repositories&gt; &lt;dependencies&gt; &lt;!-- https://mvnrepository.com/artifact/com.sun.jdmk/jmxtools --&gt; &lt;dependency&gt; &lt;groupId&gt;com.sun.jdmk&lt;/groupId&gt; &lt;artifactId&gt;jmxtools&lt;/artifactId&gt; &lt;version&gt;1.2.1&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 2. The Agent level HelloAgent.java
+package jmxbook.ch2; import javax.management.*; import com.sun.jdmk.comm.HtmlAdaptorServer; /** * * @url http://localhost:9092 * @author Benjamin G. Sullins &amp;&amp; Mark B. Whipple * */ public class HelloAgent implements NotificationListener { private MBeanServer mbs = null; public HelloAgent ( ) { mbs = MBeanServerFactory. <a class="read-more" href="/cnblogs/post/java-jmx-jdk7/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-05-16T03:58:08&#43;08:00">
+            16 May 2020
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">

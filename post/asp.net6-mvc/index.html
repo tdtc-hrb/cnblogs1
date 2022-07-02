@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.100.0" />
+    <meta name="generator" content="Hugo 0.101.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/" />
 
@@ -407,17 +407,17 @@ Pomelo:</li>
 <p>HomeController.cs</p>
 </blockquote>
 <p>声明product repository：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> IProductRepository <span style="color:#ae81ff">_</span>repository;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> IProductRepository _repository;
 </span></span></code></pre></div><p>DI:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> HomeController(ILogger&lt;HomeController&gt; logger, IProductRepository repo)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">_l</span>ogger = logger;
-</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">_</span>repository = repo;
+</span></span><span style="display:flex;"><span>        _logger = logger;
+</span></span><span style="display:flex;"><span>        _repository = repo;
 </span></span><span style="display:flex;"><span>    }
 </span></span></code></pre></div><p>引用实例：添加新方法</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> IActionResult List(<span style="color:#66d9ef">int</span> countPage = <span style="color:#ae81ff">1</span>)
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> repo = <span style="color:#ae81ff">_</span>repository.Products.Where(lang =&gt; lang.Lang_id.Equals(langId)).OrderBy(p =&gt; p.Id)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> repo = _repository.Products.Where(lang =&gt; lang.Lang_id.Equals(langId)).OrderBy(p =&gt; p.Id)
 </span></span><span style="display:flex;"><span>            .Skip((countPage - <span style="color:#ae81ff">1</span>) * pageSize)
 </span></span><span style="display:flex;"><span>            .Take(pageSize);
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> View(<span style="color:#e6db74">&#34;ProductList&#34;</span>, repo);

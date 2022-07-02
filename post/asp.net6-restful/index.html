@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.100.0" />
+    <meta name="generator" content="Hugo 0.101.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/asp.net6-restful/" />
 
@@ -410,13 +410,13 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#a6e22e">        [HttpPatch(&#34;{id}&#34;)]</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">async</span> Task&lt;IActionResult&gt; ModifyProduct(<span style="color:#66d9ef">long</span> id, [FromBody] JsonPatchDocument&lt;Product&gt; patchDoc)
 </span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> product = <span style="color:#66d9ef">await</span> <span style="color:#ae81ff">_</span>context.Products.FindAsync(id);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> product = <span style="color:#66d9ef">await</span> _context.Products.FindAsync(id);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (product != <span style="color:#66d9ef">null</span>)
 </span></span><span style="display:flex;"><span>            {
 </span></span><span style="display:flex;"><span>                patchDoc.ApplyTo(product);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">await</span> <span style="color:#ae81ff">_</span>context.SaveChangesAsync();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">await</span> _context.SaveChangesAsync();
 </span></span><span style="display:flex;"><span>            }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> Ok();

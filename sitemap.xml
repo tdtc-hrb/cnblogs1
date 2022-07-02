@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</loc>
-    <lastmod>2022-05-26T23:08:08+08:00</lastmod>
-  </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/</loc>
-    <lastmod>2022-05-26T23:08:08+08:00</lastmod>
+    <lastmod>2022-06-17T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</loc>
+    <lastmod>2022-06-17T14:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/</loc>
+    <lastmod>2022-06-17T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</loc>
+    <lastmod>2022-06-16T08:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</loc>
     <lastmod>2022-05-26T23:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/es24-install/</loc>
@@ -88,9 +94,6 @@
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/cas-server-config/</loc>
     <lastmod>2020-05-16T10:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</loc>
-    <lastmod>2020-05-16T08:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/java-connector-cluster_mysql/</loc>
     <lastmod>2020-05-16T05:58:08+08:00</lastmod>
