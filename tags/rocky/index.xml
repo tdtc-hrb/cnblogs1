@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rocky on 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+    <link>https://tdtc-hrb.github.io/cnblogs/tags/rocky/</link>
+    <description>Recent content in Rocky on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 18 Jun 2022 14:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/tags/rocky/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装Ruby On Rails 在RHEL8</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
+      <pubDate>Sat, 18 Jun 2022 14:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
+      <description>OS Alma / Rocky 8 miminal Ruby Installation of v3.1 is not currently supported, in RHEL. The default version is v2.5.5
+version ruby-versions
+Rails 7 requires Ruby 2.7.0 or newer.Rails 6 requires Ruby 2.5.0 or newer. Ruby &amp;amp; Rails Compatibility Table |Rails Version|Required Ruby Version|Recommended Ruby Version|Required Rubygems Version|Status| |7.0.x|&amp;gt;= 3.1.0|3.1.x|&amp;gt;= 1.8.11|Maintained| |7.0.0|&amp;gt;= 2.7.0|3.1.x|&amp;gt;= 1.8.11|Maintained| |6.1.x|&amp;gt;= 2.5.0|3.0.x|&amp;gt;= 1.8.11|Maintained| |6.0.x|&amp;gt;= 2.5.0&amp;lt; 3.0.0|2.6.x|&amp;gt;= 1.8.11|Maintained for Security Issues|
+Installation supported The repo supports the installed version.</description>
+    </item>
+    
+  </channel>
+</rss>

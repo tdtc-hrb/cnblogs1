@@ -6,7 +6,19 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 17 Jun 2022 14:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jun 2022 14:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装Ruby On Rails 在RHEL8</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
+      <pubDate>Sat, 18 Jun 2022 14:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
+      <description>OS Alma / Rocky 8 miminal Ruby Installation of v3.1 is not currently supported, in RHEL. The default version is v2.5.5
+version ruby-versions
+Rails 7 requires Ruby 2.7.0 or newer.Rails 6 requires Ruby 2.5.0 or newer. Ruby &amp;amp; Rails Compatibility Table |Rails Version|Required Ruby Version|Recommended Ruby Version|Required Rubygems Version|Status| |7.0.x|&amp;gt;= 3.1.0|3.1.x|&amp;gt;= 1.8.11|Maintained| |7.0.0|&amp;gt;= 2.7.0|3.1.x|&amp;gt;= 1.8.11|Maintained| |6.1.x|&amp;gt;= 2.5.0|3.0.x|&amp;gt;= 1.8.11|Maintained| |6.0.x|&amp;gt;= 2.5.0&amp;lt; 3.0.0|2.6.x|&amp;gt;= 1.8.11|Maintained for Security Issues|
+Installation supported The repo supports the installed version.</description>
+    </item>
+    
     <item>
       <title>使用jekyll编写Blog</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</link>
@@ -19,7 +31,8 @@ MSYS2 and MINGW development tool chain gem setup set proxy and gem install:
 set http_proxy=http://127.0.0.1:8580gem install jekyll bundler test:
 jekyll -v usage Rename the repo containing the theme to &amp;ldquo;cnblogs_a&amp;rdquo;
 theme clone:
-git clone https://github.com/the-mvm/the-mvm.github.io.git cd cnblogs_abundle install rb 3.x bundle add webrick launch bundle exec jekyll serve Ref Jekyll serve fails on Ruby 3.0 </description>
+git clone https://github.com/the-mvm/the-mvm.github.io.git cd cnblogs_abundle install rb 3.x bundle add webrick launch bundle exec jekyll buildbundle exec jekyll serve publish Submit the &amp;ldquo;_site&amp;rdquo; folder.
+Ref Jekyll serve fails on Ruby 3.</description>
     </item>
     
     <item>

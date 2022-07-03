@@ -2,13 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/</loc>
-    <lastmod>2022-06-17T14:08:08+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/tags/alma/</loc>
+    <lastmod>2022-06-18T14:08:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</loc>
-    <lastmod>2022-06-17T14:08:08+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/tags/centos/</loc>
+    <lastmod>2022-06-18T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/</loc>
+    <lastmod>2022-06-18T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/tags/rhel/</loc>
+    <lastmod>2022-06-18T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/tags/rocky/</loc>
+    <lastmod>2022-06-18T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/tags/</loc>
+    <lastmod>2022-06-18T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</loc>
+    <lastmod>2022-06-18T14:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/</loc>
+    <lastmod>2022-06-18T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</loc>
     <lastmod>2022-06-17T14:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</loc>
@@ -117,7 +135,5 @@
     <lastmod>2020-04-10T02:14:39+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/categories/</loc>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/tags/</loc>
   </url>
 </urlset>

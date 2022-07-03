@@ -92,7 +92,7 @@
     },
     "headline": "使用jekyll编写Blog",
     "name": "使用jekyll编写Blog",
-    "wordCount":  67 ,
+    "wordCount":  76 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
@@ -200,8 +200,11 @@ bundle install
 </code></pre><h2 id="rb-3x">rb 3.x</h2>
 <pre tabindex="0"><code>bundle add webrick
 </code></pre><h2 id="launch">launch</h2>
-<pre tabindex="0"><code>bundle exec jekyll serve
-</code></pre><h1 id="ref">Ref</h1>
+<pre tabindex="0"><code>bundle exec jekyll build
+bundle exec jekyll serve
+</code></pre><h2 id="publish">publish</h2>
+<p>Submit the &ldquo;_site&rdquo; folder.</p>
+<h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://github.com/jekyll/jekyll/issues/8523">Jekyll serve fails on Ruby 3.0</a></li>
 </ul>
@@ -255,6 +258,13 @@ bundle install
 
 
   <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/ror_installation/">
+          <section class="post">
+              <h2>安装Ruby On Rails 在RHEL8</h2>
+              
+          </section>
+      </a>
   
   
       <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/redis-centos7-setup/">
