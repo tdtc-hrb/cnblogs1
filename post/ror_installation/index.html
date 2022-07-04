@@ -12,13 +12,13 @@
 
 
 
-<meta name="twitter:title" content="安装Ruby On Rails 在RHEL8"/>
+<meta name="twitter:title" content="安装Ruby On Rails"/>
 <meta name="twitter:description" content=""/>
 <meta name="twitter:site" content="@"/>
 
 
 
-  	<meta property="og:title" content="安装Ruby On Rails 在RHEL8 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:title" content="安装Ruby On Rails &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
   	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
   	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/ror_installation/" />
 
@@ -29,25 +29,17 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-06-18T14:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-06-19T14:08:08&#43;08:00" />
 
-    
-    <meta property="article:tag" content="RHEL" />
-    
-    <meta property="article:tag" content="CentOS" />
-    
-    <meta property="article:tag" content="Alma" />
-    
-    <meta property="article:tag" content="Rocky" />
     
     
 
-    <title>安装Ruby On Rails 在RHEL8 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+    <title>安装Ruby On Rails &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
 
     
-    <meta name="description" content="OS Alma / Rocky 8 miminal Ruby Installation of v3.1 is not currently supported, in RHEL. The default version is v2.5.5
+    <meta name="description" content="RHEL OS Alma / Rocky 8 miminal Ruby Installation of v3.1 is not currently supported, in RHEL. The default version is v2.5.5
 version ruby-versions
-Rails 7 requires Ru" />
+Rails 7 requir" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -100,19 +92,19 @@ Rails 7 requires Ru" />
             
         ]
     },
-    "headline": "安装Ruby On Rails 在RHEL8",
-    "name": "安装Ruby On Rails 在RHEL8",
-    "wordCount":  616 ,
+    "headline": "安装Ruby On Rails",
+    "name": "安装Ruby On Rails",
+    "wordCount":  617 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_installation/",
-    "datePublished": "2022-06-18T14:08Z",
-    "dateModified": "2022-06-18T14:08Z",
+    "datePublished": "2022-06-19T14:08Z",
+    "dateModified": "2022-06-19T14:08Z",
     
-    "keywords": "RHEL, CentOS, Alma, Rocky",
+    
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -173,54 +165,47 @@ Rails 7 requires Ru" />
   <article class="post post">
 
     <header class="post-header">
-        <h1 class="post-title">安装Ruby On Rails 在RHEL8</h1>
+        <h1 class="post-title">安装Ruby On Rails</h1>
         <small></small>
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-06-18T14:08:08&#43;08:00">
-            Jun 18, 2022
+          <time class="post-date" datetime="2022-06-19T14:08:08&#43;08:00">
+            Jun 19, 2022
           </time>
         
-         
-          <span class="post-tag small"><a href="https://tdtc-hrb.github.io/cnblogs//tags/rhel/">#RHEL</a></span>
-         
-          <span class="post-tag small"><a href="https://tdtc-hrb.github.io/cnblogs//tags/centos/">#CentOS</a></span>
-         
-          <span class="post-tag small"><a href="https://tdtc-hrb.github.io/cnblogs//tags/alma/">#Alma</a></span>
-         
-          <span class="post-tag small"><a href="https://tdtc-hrb.github.io/cnblogs//tags/rocky/">#Rocky</a></span>
          
         </section>
     </header>
 
     <section class="post-content">
-      <ul>
+      <h1 id="rhel">RHEL</h1>
+<ul>
 <li>OS <br>
 Alma / Rocky 8 miminal</li>
 </ul>
-<h1 id="ruby">Ruby</h1>
+<h2 id="ruby">Ruby</h2>
 <p>Installation of v3.1 is not currently supported, in RHEL. <br>
 The default version is v2.5.5</p>
-<h2 id="version">version</h2>
+<h3 id="version">version</h3>
 <p><a href="https://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ruby-versions">ruby-versions</a></p>
 <pre tabindex="0"><code>Rails 7 requires Ruby 2.7.0 or newer.
 Rails 6 requires Ruby 2.5.0 or newer.
-</code></pre><h3 id="ruby--rails-compatibility-tablehttpswwwfastrubyioblogrubyrailsversionscompatibility-tablehtml"><a href="https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html">Ruby &amp; Rails Compatibility Table</a></h3>
+</code></pre><h4 id="ruby--rails-compatibility-tablehttpswwwfastrubyioblogrubyrailsversionscompatibility-tablehtml"><a href="https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html">Ruby &amp; Rails Compatibility Table</a></h4>
 <p>|Rails Version|Required Ruby Version|Recommended Ruby Version|Required Rubygems Version|Status|
 |7.0.x|&gt;= 3.1.0|3.1.x|&gt;= 1.8.11|Maintained|
 |7.0.0|&gt;= 2.7.0|3.1.x|&gt;= 1.8.11|Maintained|
 |6.1.x|&gt;= 2.5.0|3.0.x|&gt;= 1.8.11|Maintained|
 |6.0.x|&gt;= 2.5.0&lt; 3.0.0|2.6.x|&gt;= 1.8.11|Maintained for Security Issues|</p>
-<h2 id="installation">Installation</h2>
-<h3 id="supported">supported</h3>
+<h3 id="installation">Installation</h3>
+<h4 id="supported">supported</h4>
 <blockquote>
 <p>The repo supports the installed version.</p>
 </blockquote>
 <pre tabindex="0"><code>yum module install ruby:2.7
 </code></pre><p>or</p>
 <pre tabindex="0"><code>yum module install ruby:3.0
-</code></pre><h3 id="rbenv">RbEnv</h3>
+</code></pre><h4 id="rbenv">RbEnv</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dnf -y install git make gcc curl openssl-devel zlib-devel libffi-devel readline-devel sqlite-devel
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 </span></span></code></pre></div><p>set path:</p>
@@ -240,12 +225,12 @@ Rails 6 requires Ruby 2.5.0 or newer.
 </span></span></code></pre></div><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ruby --version
 </span></span><span style="display:flex;"><span>ruby 3.1.2p20 <span style="color:#f92672">(</span>2022-04-12 revision 4491bb740a<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>x86_64-linux<span style="color:#f92672">]</span>
-</span></span></code></pre></div><h1 id="rails">Rails</h1>
+</span></span></code></pre></div><h2 id="rails">Rails</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install rails
 </span></span></code></pre></div><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rails -v
 </span></span><span style="display:flex;"><span>Rails 7.0.3
-</span></span></code></pre></div><h1 id="ref">Ref</h1>
+</span></span></code></pre></div><h2 id="ref">Ref</h2>
 <ul>
 <li><a href="https://computingforgeeks.com/install-ruby-on-rhel-centos-rocky-linux/">Install Ruby 3 on RHEL 8|CentOS 8|Rocky Linux 8</a></li>
 </ul>
@@ -380,7 +365,7 @@ Rails 6 requires Ruby 2.5.0 or newer.
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e5%ae%89%e8%a3%85Ruby%20On%20Rails%20%e5%9c%a8RHEL8&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fror_installation%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e5%ae%89%e8%a3%85Ruby%20On%20Rails&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fror_installation%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -388,7 +373,7 @@ Rails 6 requires Ruby 2.5.0 or newer.
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fror_installation%2f&amp;description=%e5%ae%89%e8%a3%85Ruby%20On%20Rails%20%e5%9c%a8RHEL8"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fror_installation%2f&amp;description=%e5%ae%89%e8%a3%85Ruby%20On%20Rails"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>

@@ -5,43 +5,6 @@
     <link>https://tdtc-hrb.github.io/cnblogs/tags/</link>
     <description>Recent content in Tags on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sat, 18 Jun 2022 14:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Alma</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/tags/alma/</link>
-      <pubDate>Sat, 18 Jun 2022 14:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/tags/alma/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CentOS</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/tags/centos/</link>
-      <pubDate>Sat, 18 Jun 2022 14:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/tags/centos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RHEL</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/tags/rhel/</link>
-      <pubDate>Sat, 18 Jun 2022 14:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/tags/rhel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rocky</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/tags/rocky/</link>
-      <pubDate>Sat, 18 Jun 2022 14:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/tags/rocky/</guid>
-      <description></description>
-    </item>
-    
+    <language>zh-cn</language><atom:link href="https://tdtc-hrb.github.io/cnblogs/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
