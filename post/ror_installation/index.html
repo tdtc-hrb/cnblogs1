@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-06-19T15:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-06T15:08:08&#43;08:00" />
 
     
     
@@ -37,9 +37,7 @@
     <title>安装Ruby On Rails &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
 
     
-    <meta name="description" content="Ubuntu RHEL OS Alma / Rocky 8 miminal Ruby Installation of v3.1 is not currently supported, in RHEL. The default version is v2.5.5
-version ruby-versions
-Rails 7" />
+    <meta name="description" content="ruby-versions Rails 7 requires Ruby 2.7.0 or newer. Ruby &amp;amp; Rails Compatibility Table |Rails Version|Required Ruby Version|Recommended Ruby Version|Required " />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -94,15 +92,15 @@ Rails 7" />
     },
     "headline": "安装Ruby On Rails",
     "name": "安装Ruby On Rails",
-    "wordCount":  618 ,
-    "timeRequired": "PT3M",
+    "wordCount":  645 ,
+    "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_installation/",
-    "datePublished": "2022-06-19T15:08Z",
-    "dateModified": "2022-06-19T15:08Z",
+    "datePublished": "2022-07-06T15:08Z",
+    "dateModified": "2022-07-06T15:08Z",
     
     
     "description": "",
@@ -170,8 +168,8 @@ Rails 7" />
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-06-19T15:08:08&#43;08:00">
-            Jun 19, 2022
+          <time class="post-date" datetime="2022-07-06T15:08:08&#43;08:00">
+            Jul 6, 2022
           </time>
         
          
@@ -179,36 +177,30 @@ Rails 7" />
     </header>
 
     <section class="post-content">
-      <h1 id="ubuntu">Ubuntu</h1>
-<h1 id="rhel">RHEL</h1>
-<ul>
-<li>OS <br>
-Alma / Rocky 8 miminal</li>
+      <ul>
+<li><a href="https://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ruby-versions">ruby-versions</a></li>
 </ul>
-<h2 id="ruby">Ruby</h2>
-<p>Installation of v3.1 is not currently supported, in RHEL. <br>
-The default version is v2.5.5</p>
-<h3 id="version">version</h3>
-<p><a href="https://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ruby-versions">ruby-versions</a></p>
 <pre tabindex="0"><code>Rails 7 requires Ruby 2.7.0 or newer.
-Rails 6 requires Ruby 2.5.0 or newer.
-</code></pre><h4 id="ruby--rails-compatibility-tablehttpswwwfastrubyioblogrubyrailsversionscompatibility-tablehtml"><a href="https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html">Ruby &amp; Rails Compatibility Table</a></h4>
+</code></pre><ul>
+<li><a href="https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html">Ruby &amp; Rails Compatibility Table</a></li>
+</ul>
 <p>|Rails Version|Required Ruby Version|Recommended Ruby Version|Required Rubygems Version|Status|
 |7.0.x|&gt;= 3.1.0|3.1.x|&gt;= 1.8.11|Maintained|
-|7.0.0|&gt;= 2.7.0|3.1.x|&gt;= 1.8.11|Maintained|
-|6.1.x|&gt;= 2.5.0|3.0.x|&gt;= 1.8.11|Maintained|
-|6.0.x|&gt;= 2.5.0&lt; 3.0.0|2.6.x|&gt;= 1.8.11|Maintained for Security Issues|</p>
-<h3 id="installation">Installation</h3>
-<h4 id="supported">supported</h4>
-<blockquote>
-<p>The repo supports the installed version.</p>
-</blockquote>
-<pre tabindex="0"><code>yum module install ruby:2.7
-</code></pre><p>or</p>
-<pre tabindex="0"><code>yum module install ruby:3.0
-</code></pre><h4 id="rbenv">RbEnv</h4>
+|7.0.0|&gt;= 2.7.0|3.1.x|&gt;= 1.8.11|Maintained|</p>
+<h1 id="ruby">Ruby</h1>
+<h2 id="rbenv-dependencies">RbEnv Dependencies</h2>
+<h3 id="ubuntu">Ubuntu</h3>
+<p>Ubuntu 20.04 default Ruby version is v2.7</p>
+<pre tabindex="0"><code>sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
+</code></pre><h3 id="rhel">RHEL</h3>
+<p>RHEL8(Alma / Rocky) default Ruby version is v2.5.5</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dnf -y install git make gcc curl openssl-devel zlib-devel libffi-devel readline-devel sqlite-devel
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+</span></span></code></pre></div><p>install tar:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo yum install tar
+</span></span></code></pre></div><h2 id="rbenv">rbenv</h2>
+<p>first install RbEnv Dependencies; <br>
+Later, upload rbenv-installer shell script.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>D:<span style="color:#ae81ff">\p</span>rograms<span style="color:#ae81ff">\p</span>utty077&gt;PSCP.EXE d:<span style="color:#ae81ff">\r</span>benv-installer tdtc@192.168.0.141:/home/tdtc/
 </span></span></code></pre></div><p>set path:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export PATH=&#34;$HOME/.rbenv/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.bashrc
 </span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; ~/.bashrc
@@ -219,24 +211,28 @@ Rails 6 requires Ruby 2.5.0 or newer.
 </span></span></code></pre></div><p>show list:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rbenv install -l
 </span></span></code></pre></div><p>install:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo yum install tar
-</span></span><span style="display:flex;"><span>rbenv install 3.1.2
-</span></span></code></pre></div><p>set global:</p>
+<pre tabindex="0"><code>rbenv install 3.1.2
+</code></pre><p>set global:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rbenv global 3.1.2
 </span></span></code></pre></div><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ruby --version
 </span></span><span style="display:flex;"><span>ruby 3.1.2p20 <span style="color:#f92672">(</span>2022-04-12 revision 4491bb740a<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>x86_64-linux<span style="color:#f92672">]</span>
-</span></span></code></pre></div><h2 id="rails">Rails</h2>
+</span></span></code></pre></div><h1 id="rails">Rails</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install rails
+</span></span></code></pre></div><h2 id="usage-proxy">usage proxy</h2>
+<p>If the gem cannot be installed, proxy mode is used.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install --http-proxy http://tdtc:qaz1xsw2@192.168.0.102:8580/ rails
 </span></span></code></pre></div><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rails -v
 </span></span><span style="display:flex;"><span>Rails 7.0.3
-</span></span></code></pre></div><h2 id="ref">Ref</h2>
+</span></span></code></pre></div><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://computingforgeeks.com/install-ruby-on-rhel-centos-rocky-linux/">Install Ruby 3 on RHEL 8|CentOS 8|Rocky Linux 8</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04">How To Install Ruby on Rails with rbenv on Ubuntu 20.04</a></li>
+<li><a href="https://askubuntu.com/questions/203632/could-not-find-a-valid-gem-rails-0-in-any-repository">Could not find a valid gem &lsquo;rails&rsquo; (&gt;= 0) in any repository</a></li>
 </ul>
 <h1 id="append">Append</h1>
-<h2 id="rbenv-installer">rbenv-installer</h2>
+<h2 id="rbenv-installerhttpsgithubcomrbenvrbenv-installerrawheadbinrbenv-installer"><a href="https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer">rbenv-installer</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>set -e
 </span></span><span style="display:flex;"><span>
@@ -402,17 +398,10 @@ Rails 6 requires Ruby 2.5.0 or newer.
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/ror_getstarted/">
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ror_getstarted/">
           <section class="post">
               <h2>开始Ruby On Rails</h2>
-              
-          </section>
-      </a>
-  
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/jekyll_usage/">
-          <section class="post">
-              <h2>使用jekyll编写Blog</h2>
           </section>
       </a>
   
