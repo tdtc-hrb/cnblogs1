@@ -93,7 +93,7 @@ set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform" />
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  514 ,
+    "wordCount":  518 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
@@ -295,6 +295,7 @@ product_index GET    /product(.:format)             product#index
       params.require(:product).permit(:Param_id, :Statu_id, :Lang_id, :Img_id, :Name, :Description)
     end
 </code></pre><h3 id="using-a-form-builder">Using a Form Builder</h3>
+<p>注意： 需要增加url</p>
 <p>create new.html.erb:</p>
 <pre tabindex="0"><code>&lt;h1&gt;New Product&lt;/h1&gt;
 
@@ -342,6 +343,7 @@ product_index GET    /product(.:format)             product#index
       render :edit, status: :unprocessable_entity
     end
 </code></pre><h3 id="using-partials-to-share-view-code">Using Partials to Share View Code</h3>
+<p>注意： 需要使用path增加url</p>
 <p>create _form.html.rb:</p>
 <pre tabindex="0"><code>&lt;%= form_with url:product_path, model: product do |form| %&gt;
   &lt;div&gt;
