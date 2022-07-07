@@ -6,15 +6,16 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 07 Jul 2022 12:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jul 2022 14:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开始Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
-      <pubDate>Thu, 07 Jul 2022 12:08:08 +0800</pubDate>
+      <pubDate>Thu, 07 Jul 2022 14:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</guid>
       <description>Creating a New Rails Project MySQL2 Download the MYSQL C-Connector Library: MySQL Connector/C
-set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform=ruby -- --with-mysql-dir=D:/programs/mysql-connector-c-6.1.11-winx64 sqlite3-ruby gem install sqlite3 RHEL dependencies sudo yum install sqlite-devel Ubuntu dependencies sudo apt install libsqlite3-dev Creating the Application rails new projName MVC and You controller cd veic_webrails generate controller Product index --skip-routes launch:
+set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform=ruby -- --with-mysql-dir=D:/programs/mysql-connector-c-6.1.11-winx64 sqlite3-ruby gem install sqlite3 RHEL dependencies sudo yum install sqlite-devel Ubuntu dependencies sudo apt install libsqlite3-dev Creating the Application rails new projName MVC and You controller cd veic_webrails generate controller Product index --skip-routes Multiple launches:
+rails server -b 0.0.0.0 single launche:
 rails server home
 model rails generate model Product Param_id:integer Statu_id:integer Lang_id:integer Img_id:integer Name:string Description:string routes Modify config/routes.</description>
     </item>

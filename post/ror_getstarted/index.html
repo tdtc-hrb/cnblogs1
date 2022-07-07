@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-07T12:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-07T14:08:08&#43;08:00" />
 
     
     
@@ -93,15 +93,15 @@ set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform" />
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  530 ,
+    "wordCount":  589 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-07T12:08Z",
-    "dateModified": "2022-07-07T12:08Z",
+    "datePublished": "2022-07-07T14:08Z",
+    "dateModified": "2022-07-07T14:08Z",
     
     
     "description": "",
@@ -169,7 +169,7 @@ set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform" />
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-07T12:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-07T14:08:08&#43;08:00">
             Jul 7, 2022
           </time>
         
@@ -198,7 +198,9 @@ set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform" />
 </ul>
 <pre tabindex="0"><code>cd veic_web
 rails generate controller Product index --skip-routes
-</code></pre><p>launch:</p>
+</code></pre><p>Multiple launches:</p>
+<pre tabindex="0"><code>rails server -b 0.0.0.0
+</code></pre><p>single launche:</p>
 <pre tabindex="0"><code>rails server
 </code></pre><p><a href="http://localhost:3000/">home</a></p>
 <ul>
@@ -221,16 +223,29 @@ product_index GET    /product(.:format)             product#index
               PUT    /product/:id(.:format)         product#update
               DELETE /product/:id(.:format)         product#destroy
 </code></pre><h2 id="data-manage">data manage</h2>
-<p>migrate:</p>
+<p>gen table:</p>
 <pre tabindex="0"><code>rails db:migrate
+</code></pre><h3 id="manager">manager</h3>
+<pre tabindex="0"><code>rails console
+</code></pre><h4 id="add">add</h4>
+<pre tabindex="0"><code>product = Product.new(Param_id:6001, Statu_id:5001, Lang_id:4136, Img_id:1, Name:&#34;AEI&#34;, Description:&#34;aei description&#34;)
+</code></pre><p>save:</p>
+<pre tabindex="0"><code>product.save
+</code></pre><p>current:</p>
+<pre tabindex="0"><code>product
+</code></pre><h4 id="find">find</h4>
+<pre tabindex="0"><code>Product.find(1)
+</code></pre><p>find all:</p>
+<pre tabindex="0"><code>Product.all
 </code></pre><h2 id="showing-a-list-of-products">Showing a List of Products</h2>
 <h3 id="controller">Controller</h3>
-<p>index method:</p>
+<p>In the &ldquo;index&rdquo; method of the &ldquo;./app/controllers/product_controller.rb&rdquo; controller:</p>
 <pre tabindex="0"><code>  def index
     @products = Product.all
   end
 </code></pre><h3 id="view">View</h3>
-<p>for use in <a href="https://api.rubyonrails.org/v7.0.3/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to">link_to()</a></p>
+<p>Use <a href="https://api.rubyonrails.org/v7.0.3/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to">link_to()</a> 
+in &ldquo;./app/views/product/index.html.erb&rdquo; view:</p>
 <pre tabindex="0"><code>&lt;h1&gt;Products&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -241,36 +256,15 @@ product_index GET    /product(.:format)             product#index
   &lt;% end %&gt;
 &lt;/ul&gt;
 </code></pre><h1 id="crudit-where-crudit-is-due">CRUDit Where CRUDit Is Due</h1>
-<h2 id="db-manager">db manager</h2>
-<pre tabindex="0"><code>rails console
-</code></pre><ul>
-<li>add</li>
-</ul>
-<pre tabindex="0"><code>product = Product.new(Param_id:6001, Statu_id:5001, Lang_id:4136, Img_id:1, Name:&#34;AEI&#34;, Description:&#34;aei description&#34;)
-</code></pre><ul>
-<li>save</li>
-</ul>
-<pre tabindex="0"><code>product.save
-</code></pre><ul>
-<li>current</li>
-</ul>
-<pre tabindex="0"><code>product
-</code></pre><ul>
-<li>find</li>
-</ul>
-<pre tabindex="0"><code>Product.find(1)
-</code></pre><ul>
-<li>find all</li>
-</ul>
-<pre tabindex="0"><code>Product.all
-</code></pre><h2 id="showing-a-single-article">Showing a Single Article</h2>
+<h2 id="showing-a-single-article">Showing a Single Article</h2>
+<p>use</p>
 <h3 id="controller-1">controller</h3>
-<p>product_controller.rb:</p>
+<p>&ldquo;./app/controllers/product_controller.rb&rdquo;:</p>
 <pre tabindex="0"><code>  def show
     @product = Product.find(params[:id])
   end
 </code></pre><h3 id="view-1">view</h3>
-<p>show.html.erb:</p>
+<p>create &ldquo;./app/views/product/show.html.erb&rdquo;:</p>
 <pre tabindex="0"><code>&lt;h1&gt;&lt;%= @product.Name %&gt;&lt;/h1&gt;
 
 &lt;p&gt;
@@ -278,8 +272,10 @@ product_index GET    /product(.:format)             product#index
 &lt;/p&gt;
 </code></pre><p><a href="http://localhost:3000/product/1">product id1</a></p>
 <h2 id="creating-a-new-product">Creating a New Product</h2>
-<h3 id="controller-2">Controller</h3>
-<p>add product_controller.rb:</p>
+<p>add &ldquo;./app/views/product/index.html.erb&rdquo;:</p>
+<pre tabindex="0"><code>&lt;%= link_to &#34;New Product&#34;, new_product_path %&gt;
+</code></pre><h3 id="controller-2">Controller</h3>
+<p>add &ldquo;./app/controllers/product_controller.rb&rdquo;:</p>
 <pre tabindex="0"><code>  def new
     @product = Product.new
   end
@@ -300,7 +296,7 @@ product_index GET    /product(.:format)             product#index
     end
 </code></pre><h3 id="using-a-form-builder">Using a Form Builder</h3>
 <p>注意： 需要增加url</p>
-<p>create new.html.erb:</p>
+<p>create &ldquo;./app/views/product/new.html.erb&rdquo;:</p>
 <pre tabindex="0"><code>&lt;h1&gt;New Product&lt;/h1&gt;
 
 &lt;%= form_with url:&#34;/product&#34;, model: @product do |form| %&gt;
@@ -319,21 +315,26 @@ product_index GET    /product(.:format)             product#index
   &lt;/div&gt;
 &lt;% end %&gt;
 </code></pre><h3 id="validations-and-displaying-error-messages">Validations and Displaying Error Messages</h3>
-<p>add model/product.rb:</p>
+<p>add &ldquo;./app/models/product.rb&rdquo;:</p>
 <pre tabindex="0"><code>  validates :Name, presence: true
   validates :Description, presence: true, length: { minimum: 10 }
 </code></pre><h4 id="view-2">view</h4>
-<p>field Name:</p>
+<p>add &ldquo;./app/views/product/new.html.erb&rdquo;:</p>
+<ul>
+<li>field Name</li>
+</ul>
 <pre tabindex="0"><code>    &lt;% @product.errors.full_messages_for(:Name).each do |message| %&gt;
       &lt;div&gt;&lt;%= message %&gt;&lt;/div&gt;
     &lt;% end %&gt;
-</code></pre><p>field Description:</p>
+</code></pre><ul>
+<li>field Description</li>
+</ul>
 <pre tabindex="0"><code>    &lt;% @product.errors.full_messages_for(:Description).each do |message| %&gt;
       &lt;div&gt;&lt;%= message %&gt;&lt;/div&gt;
     &lt;% end %&gt;
 </code></pre><h2 id="updating-an-product">Updating an Product</h2>
 <h3 id="controller-3">Controller</h3>
-<p>add product_controller.rb</p>
+<p>add &ldquo;./app/controllers/product_controller.rb&rdquo;:</p>
 <pre tabindex="0"><code>  def edit
     @product = Product.find(params[:id])
   end
@@ -346,9 +347,22 @@ product_index GET    /product(.:format)             product#index
     else
       render :edit, status: :unprocessable_entity
     end
-</code></pre><h3 id="using-partials-to-share-view-code">Using Partials to Share View Code</h3>
+  end
+</code></pre><h3 id="view-3">view</h3>
+<ul>
+<li>base view <br>
+create &ldquo;./app/views/product/edit.html.erb&rdquo;:</li>
+</ul>
+<pre tabindex="0"><code>&lt;h1&gt;Edit Product&lt;/h1&gt;
+
+&lt;%= render &#34;form&#34;, product: @product %&gt;
+</code></pre><ul>
+<li>Using Partials to Share View Code</li>
+</ul>
+<blockquote>
 <p>注意： 需要使用path增加url</p>
-<p>create _form.html.rb:</p>
+</blockquote>
+<p>create &ldquo;./app/views/product/_form.html.erb&rdquo;:</p>
 <pre tabindex="0"><code>&lt;%= form_with url:product_path, model: product do |form| %&gt;
   &lt;div&gt;
     &lt;%= form.label :Param_id %&gt;&lt;br&gt;
@@ -392,26 +406,31 @@ product_index GET    /product(.:format)             product#index
 &lt;% end %&gt;
 </code></pre><h2 id="deleting-an-product">Deleting an Product</h2>
 <h3 id="controller-4">Controller</h3>
-<p>add product_controller.rb</p>
+<p>add &ldquo;./app/controllers/product_controller.rb&rdquo;:</p>
 <pre tabindex="0"><code>  def destroy
     @product = Product.find(params[:id])
     @product.destroy
 
     redirect_to root_path, status: :see_other
   end
-</code></pre><h3 id="view-3">view</h3>
-<p>add views/show.html.erb:</p>
+</code></pre><h3 id="view-4">view</h3>
+<p>add &ldquo;./app/views/show.html.erb&rdquo;:</p>
 <pre tabindex="0"><code>&lt;ul&gt;
   &lt;li&gt;&lt;%= link_to &#34;Edit&#34;, edit_product_path(@product) %&gt;&lt;/li&gt;
   &lt;li&gt;&lt;%= link_to &#34;Destroy&#34;, product_path(@product), data: {
                     turbo_method: :delete,
                     turbo_confirm: &#34;Are you sure?&#34;
-                  } %&gt;&lt;/li&gt;
+                  } %&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;%= link_to &#34;Back Home&#34;, product_index_path %&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://github.com/brianmario/mysql2/issues/1210#issuecomment-965862944">Cannot install mysql2 gem on Windows 10</a></li>
 <li><a href="https://guides.rubyonrails.org/v7.0/getting_started.html">Getting Started with Rails</a></li>
+<li><a href="https://www.rubyguides.com/2019/06/rails-params/">What Are Rails Parameters &amp; How to Use Them Correctly</a></li>
 </ul>
 
     </section>
