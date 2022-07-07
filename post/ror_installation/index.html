@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-06T15:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-06T16:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "安装Ruby On Rails",
     "name": "安装Ruby On Rails",
-    "wordCount":  657 ,
+    "wordCount":  667 ,
     "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_installation/",
-    "datePublished": "2022-07-06T15:08Z",
-    "dateModified": "2022-07-06T15:08Z",
+    "datePublished": "2022-07-06T16:08Z",
+    "dateModified": "2022-07-06T16:08Z",
     
     
     "description": "",
@@ -168,7 +168,7 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-06T15:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-06T16:08:08&#43;08:00">
             Jul 6, 2022
           </time>
         
@@ -224,8 +224,12 @@
 </span></span></code></pre></div><h2 id="rbenv">rbenv</h2>
 <p>first install RbEnv Dependencies; <br>
 Later, upload rbenv-installer shell script.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>D:<span style="color:#ae81ff">\p</span>rograms<span style="color:#ae81ff">\p</span>utty077&gt;PSCP.EXE d:<span style="color:#ae81ff">\r</span>benv-installer tdtc@192.168.0.141:/home/tdtc/
-</span></span></code></pre></div><p>set path:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>D:\programs\putty077<span style="color:#75715e">&gt;PSCP.EXE d:\rbenv-installer tdtc@192.168.0.142:/home/tdtc/</span>
+</span></span></code></pre></div><p>or</p>
+<pre tabindex="0"><code>export http_proxy=http://USERNAME:PASSWORD@192.168.1.108:8580/
+export https_proxy=http://USERNAME:PASSWORD@192.168.1.108:8580/
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+</code></pre><p>set path:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export PATH=&#34;$HOME/.rbenv/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.bashrc
 </span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; ~/.bashrc
 </span></span><span style="display:flex;"><span>source ~/.bashrc
@@ -422,10 +426,17 @@ Later, upload rbenv-installer shell script.</p>
 
   <aside class="read-next">
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ror_getstarted/">
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/ror_getstarted/">
           <section class="post">
               <h2>开始Ruby On Rails</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/jekyll_usage/">
+          <section class="post">
+              <h2>使用jekyll编写Blog</h2>
           </section>
       </a>
   

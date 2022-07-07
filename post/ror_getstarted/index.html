@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-05T10:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-07T12:08:08&#43;08:00" />
 
     
     
@@ -93,15 +93,15 @@ set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform" />
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  518 ,
+    "wordCount":  530 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-05T10:08Z",
-    "dateModified": "2022-07-05T10:08Z",
+    "datePublished": "2022-07-07T12:08Z",
+    "dateModified": "2022-07-07T12:08Z",
     
     
     "description": "",
@@ -169,8 +169,8 @@ set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform" />
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-05T10:08:08&#43;08:00">
-            Jul 5, 2022
+          <time class="post-date" datetime="2022-07-07T12:08:08&#43;08:00">
+            Jul 7, 2022
           </time>
         
          
@@ -186,7 +186,11 @@ set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform" />
 </span></span><span style="display:flex;"><span>gem install mysql2 --platform<span style="color:#f92672">=</span>ruby -- --with-mysql-dir<span style="color:#f92672">=</span>D:/programs/mysql-connector-c-6.1.11-winx64
 </span></span></code></pre></div><h2 id="sqlite3-rubyhttpsgithubcomsparklemotionsqlite3-ruby"><a href="https://github.com/sparklemotion/sqlite3-ruby">sqlite3-ruby</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install sqlite3
-</span></span></code></pre></div><h2 id="creating-the-application">Creating the Application</h2>
+</span></span></code></pre></div><h3 id="rhel-dependencies">RHEL dependencies</h3>
+<pre tabindex="0"><code>sudo yum install sqlite-devel
+</code></pre><h3 id="ubuntu-dependencies">Ubuntu dependencies</h3>
+<pre tabindex="0"><code>sudo apt install libsqlite3-dev
+</code></pre><h2 id="creating-the-application">Creating the Application</h2>
 <pre tabindex="0"><code>rails new projName
 </code></pre><h1 id="mvc-and-you">MVC and You</h1>
 <ul>
@@ -460,17 +464,10 @@ product_index GET    /product(.:format)             product#index
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/ror_installation/">
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ror_installation/">
           <section class="post">
               <h2>安装Ruby On Rails</h2>
-              
-          </section>
-      </a>
-  
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/jekyll_usage/">
-          <section class="post">
-              <h2>使用jekyll编写Blog</h2>
           </section>
       </a>
   

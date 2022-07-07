@@ -6,29 +6,27 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 06 Jul 2022 15:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jul 2022 12:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开始Ruby On Rails</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
+      <pubDate>Thu, 07 Jul 2022 12:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</guid>
+      <description>Creating a New Rails Project MySQL2 Download the MYSQL C-Connector Library: MySQL Connector/C
+set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform=ruby -- --with-mysql-dir=D:/programs/mysql-connector-c-6.1.11-winx64 sqlite3-ruby gem install sqlite3 RHEL dependencies sudo yum install sqlite-devel Ubuntu dependencies sudo apt install libsqlite3-dev Creating the Application rails new projName MVC and You controller cd veic_webrails generate controller Product index --skip-routes launch:
+rails server home
+model rails generate model Product Param_id:integer Statu_id:integer Lang_id:integer Img_id:integer Name:string Description:string routes Modify config/routes.</description>
+    </item>
+    
     <item>
       <title>安装Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
-      <pubDate>Wed, 06 Jul 2022 15:08:08 +0800</pubDate>
+      <pubDate>Wed, 06 Jul 2022 16:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
       <description>ruby-versions Rails 7 requires Ruby 2.7.0 or newer. Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;= 1.8.11 Maintained 7.0.0 &amp;gt;= 2.7.0 3.1.x &amp;gt;= 1.8.11 Maintained Ruby RbEnv Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7
 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.</description>
-    </item>
-    
-    <item>
-      <title>开始Ruby On Rails</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
-      <pubDate>Tue, 05 Jul 2022 10:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</guid>
-      <description>Creating a New Rails Project MySQL2 Download the MYSQL C-Connector Library: MySQL Connector/C
-set http_proxy=http://127.0.0.1:8580 gem install mysql2 --platform=ruby -- --with-mysql-dir=D:/programs/mysql-connector-c-6.1.11-winx64 sqlite3-ruby gem install sqlite3 Creating the Application rails new projName MVC and You controller cd veic_webrails generate controller Product index --skip-routes launch:
-rails server home
-model rails generate model Product Param_id:integer Statu_id:integer Lang_id:integer Img_id:integer Name:string Description:string routes Modify config/routes.rb:
-resources :product see routes:
-rails routes Prefix Verb URI Pattern Controller#Actionroot GET / product#indexproduct_index GET /product(.</description>
     </item>
     
     <item>
