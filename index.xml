@@ -13,8 +13,8 @@
       <pubDate>Thu, 07 Jul 2022 22:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</guid>
-      <description>prepare mysql2 lib mysql-client-dev:
-sudo apt install mysql-client libmysqlclient-dev gem install mysql2 Creating a New Rails Project Creating the Application rails new projName -d mysql config db vi ./config/database.yml username: DBAdminpassword: xb80first remove migrate data mysql
+      <description>Creating a New Rails Project mysql2 lib mysql-client-dev:
+sudo apt install mysql-client libmysqlclient-dev gem install mysql2 Creating the Application rails new projName -d mysql config db vi ./config/database.yml username: DBAdminpassword: xb80first remove migrate data mysql
 rm -rf ./app/db/migrate/* MVC and You controller cd projNamerails generate controller Product index --skip-routes model rails generate model Product routes see routes:
 rails routes default method name:
 Prefix Verb URI Pattern Controller#Actionroot GET / product#indexproduct_index GET /product(.</description>
