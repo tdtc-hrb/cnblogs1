@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-07T16:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-07T18:08:08&#43;08:00" />
 
     
     
@@ -93,15 +93,15 @@ sudo apt install mysql-client libmysqlclient-dev gem install mysql2 sqlite3-ruby
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  594 ,
+    "wordCount":  591 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-07T16:08Z",
-    "dateModified": "2022-07-07T16:08Z",
+    "datePublished": "2022-07-07T18:08Z",
+    "dateModified": "2022-07-07T18:08Z",
     
     
     "description": "",
@@ -169,7 +169,7 @@ sudo apt install mysql-client libmysqlclient-dev gem install mysql2 sqlite3-ruby
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-07T16:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-07T18:08:08&#43;08:00">
             Jul 7, 2022
           </time>
         
@@ -209,17 +209,14 @@ password: xb80first
 <ul>
 <li>controller</li>
 </ul>
-<pre tabindex="0"><code>cd veic_web
+<pre tabindex="0"><code>cd projName
 rails generate controller Product index --skip-routes
-</code></pre><p>Multiple launches:</p>
-<pre tabindex="0"><code>rails server -b 0.0.0.0
-</code></pre><p>single launche:</p>
-<pre tabindex="0"><code>rails server
-</code></pre><p><a href="http://localhost:3000/">home</a></p>
-<ul>
+</code></pre><ul>
 <li>model</li>
 </ul>
 <pre tabindex="0"><code>rails generate model Product
+</code></pre><p>Multiple launches:</p>
+<pre tabindex="0"><code>rails server -b 0.0.0.0
 </code></pre><h2 id="routes">routes</h2>
 <p>Modify config/routes.rb:</p>
 <pre tabindex="0"><code>resources :product
@@ -245,6 +242,7 @@ product_index GET    /product(.:format)             product#index
 <pre tabindex="0"><code>product
 </code></pre><h3 id="find">find</h3>
 <pre tabindex="0"><code>Product.find(1)
+</code></pre><pre tabindex="0"><code>Product.find_by(name: &#34;aei&#34;)
 </code></pre><p>find all:</p>
 <pre tabindex="0"><code>Product.all
 </code></pre><h2 id="showing-a-list-of-products">Showing a List of Products</h2>
