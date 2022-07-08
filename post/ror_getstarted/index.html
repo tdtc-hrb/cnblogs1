@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-07T14:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-07T16:08:08&#43;08:00" />
 
     
     
@@ -37,7 +37,8 @@
     <title>开始Ruby On Rails &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
 
     
-    <meta name="description" content="Creating a New Rails Project sqlite3-ruby gem install sqlite3 RHEL dependencies sudo yum install sqlite-devel Ubuntu dependencies sudo apt install libsqlite3-de" />
+    <meta name="description" content="prepare mysql2 lib mysql-client-dev:
+sudo apt install mysql-client libmysqlclient-dev gem install mysql2 sqlite3-ruby gem install sqlite3 RHEL dependencies sudo" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -92,15 +93,15 @@
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  566 ,
+    "wordCount":  594 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-07T14:08Z",
-    "dateModified": "2022-07-07T14:08Z",
+    "datePublished": "2022-07-07T16:08Z",
+    "dateModified": "2022-07-07T16:08Z",
     
     
     "description": "",
@@ -168,7 +169,7 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-07T14:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-07T16:08:08&#43;08:00">
             Jul 7, 2022
           </time>
         
@@ -177,15 +178,33 @@
     </header>
 
     <section class="post-content">
-      <h1 id="creating-a-new-rails-project">Creating a New Rails Project</h1>
-<h2 id="sqlite3-rubyhttpsgithubcomsparklemotionsqlite3-ruby"><a href="https://github.com/sparklemotion/sqlite3-ruby">sqlite3-ruby</a></h2>
+      <h1 id="prepare">prepare</h1>
+<h2 id="mysql2">mysql2</h2>
+<p>lib mysql-client-dev:</p>
+<pre tabindex="0"><code>sudo apt install mysql-client libmysqlclient-dev
+</code></pre><pre tabindex="0"><code>gem install mysql2
+</code></pre><h2 id="sqlite3-rubyhttpsgithubcomsparklemotionsqlite3-ruby"><a href="https://github.com/sparklemotion/sqlite3-ruby">sqlite3-ruby</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install sqlite3
-</span></span></code></pre></div><h3 id="rhel-dependencies">RHEL dependencies</h3>
+</span></span></code></pre></div><ul>
+<li>RHEL dependencies</li>
+</ul>
 <pre tabindex="0"><code>sudo yum install sqlite-devel
-</code></pre><h3 id="ubuntu-dependencies">Ubuntu dependencies</h3>
+</code></pre><ul>
+<li>Ubuntu dependencies</li>
+</ul>
 <pre tabindex="0"><code>sudo apt install libsqlite3-dev
-</code></pre><h2 id="creating-the-application">Creating the Application</h2>
-<pre tabindex="0"><code>rails new projName
+</code></pre><h1 id="creating-a-new-rails-project">Creating a New Rails Project</h1>
+<h2 id="creating-the-application">Creating the Application</h2>
+<pre tabindex="0"><code>rails new projName -d mysql
+</code></pre><h2 id="config-db">config db</h2>
+<pre tabindex="0"><code>vi ./config/database.yml
+</code></pre><pre tabindex="0"><code>username: DBAdmin
+password: xb80first
+</code></pre><h3 id="remove-migrate-data">remove migrate data</h3>
+<blockquote>
+<p>mysql</p>
+</blockquote>
+<pre tabindex="0"><code>rm -rf ./app/db/migrate/*
 </code></pre><h1 id="mvc-and-you">MVC and You</h1>
 <ul>
 <li>controller</li>
@@ -200,7 +219,7 @@ rails generate controller Product index --skip-routes
 <ul>
 <li>model</li>
 </ul>
-<pre tabindex="0"><code>rails generate model Product Param_id:integer Statu_id:integer Lang_id:integer Img_id:integer Name:string Description:string
+<pre tabindex="0"><code>rails generate model Product
 </code></pre><h2 id="routes">routes</h2>
 <p>Modify config/routes.rb:</p>
 <pre tabindex="0"><code>resources :product
@@ -217,17 +236,14 @@ product_index GET    /product(.:format)             product#index
               PUT    /product/:id(.:format)         product#update
               DELETE /product/:id(.:format)         product#destroy
 </code></pre><h2 id="data-manage">data manage</h2>
-<p>gen table:</p>
-<pre tabindex="0"><code>rails db:migrate
-</code></pre><h3 id="manager">manager</h3>
 <pre tabindex="0"><code>rails console
-</code></pre><h4 id="add">add</h4>
-<pre tabindex="0"><code>product = Product.new(Param_id:6001, Statu_id:5001, Lang_id:4136, Img_id:1, Name:&#34;AEI&#34;, Description:&#34;aei description&#34;)
+</code></pre><h3 id="add">add</h3>
+<pre tabindex="0"><code>product = Product.new(param_id:6001, statu_id:5001, lang_id:4136, img_id:1, name:&#34;AEI&#34;, Description:&#34;aei description&#34;)
 </code></pre><p>save:</p>
 <pre tabindex="0"><code>product.save
 </code></pre><p>current:</p>
 <pre tabindex="0"><code>product
-</code></pre><h4 id="find">find</h4>
+</code></pre><h3 id="find">find</h3>
 <pre tabindex="0"><code>Product.find(1)
 </code></pre><p>find all:</p>
 <pre tabindex="0"><code>Product.all
@@ -424,6 +440,7 @@ create &ldquo;./app/views/product/edit.html.erb&rdquo;:</li>
 <ul>
 <li><a href="https://guides.rubyonrails.org/v7.0/getting_started.html">Getting Started with Rails</a></li>
 <li><a href="https://www.rubyguides.com/2019/06/rails-params/">What Are Rails Parameters &amp; How to Use Them Correctly</a></li>
+<li><a href="https://www.ionos.com/digitalguide/server/know-how/use-mysql-with-ruby-on-rails/">How to use MySQL with your Ruby on Rails application</a></li>
 </ul>
 
     </section>
