@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-07T22:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-08T00:08:08&#43;08:00" />
 
     
     
@@ -37,8 +37,8 @@
     <title>开始Ruby On Rails &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
 
     
-    <meta name="description" content="Creating a New Rails Project mysql2 lib mysql-client-dev:
-sudo apt install mysql-client libmysqlclient-dev gem install mysql2 Creating the Application rails new" />
+    <meta name="description" content="Creating a New Rails Project Note: After each new model, you need to remove &amp;ldquo;yyyymmddhhmmss_create_modelNames&amp;rdquo;.
+rm -rf ./app/db/migrate/* mysql2 lib" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -93,15 +93,15 @@ sudo apt install mysql-client libmysqlclient-dev gem install mysql2 Creating the
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  598 ,
+    "wordCount":  599 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-07T22:08Z",
-    "dateModified": "2022-07-07T22:08Z",
+    "datePublished": "2022-07-08T00:08Z",
+    "dateModified": "2022-07-08T00:08Z",
     
     
     "description": "",
@@ -169,8 +169,8 @@ sudo apt install mysql-client libmysqlclient-dev gem install mysql2 Creating the
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-07T22:08:08&#43;08:00">
-            Jul 7, 2022
+          <time class="post-date" datetime="2022-07-08T00:08:08&#43;08:00">
+            Jul 8, 2022
           </time>
         
          
@@ -179,7 +179,9 @@ sudo apt install mysql-client libmysqlclient-dev gem install mysql2 Creating the
 
     <section class="post-content">
       <h1 id="creating-a-new-rails-project">Creating a New Rails Project</h1>
-<h2 id="mysql2">mysql2</h2>
+<p>Note: After each new model, you need to remove &ldquo;yyyymmddhhmmss_create_modelNames&rdquo;.</p>
+<pre tabindex="0"><code>rm -rf ./app/db/migrate/*
+</code></pre><h2 id="mysql2">mysql2</h2>
 <p>lib mysql-client-dev:</p>
 <pre tabindex="0"><code>sudo apt install mysql-client libmysqlclient-dev
 </code></pre><pre tabindex="0"><code>gem install mysql2
@@ -189,11 +191,6 @@ sudo apt install mysql-client libmysqlclient-dev gem install mysql2 Creating the
 <pre tabindex="0"><code>vi ./config/database.yml
 </code></pre><pre tabindex="0"><code>username: DBAdmin
 password: xb80first
-</code></pre><h3 id="remove-migrate-data">remove migrate data</h3>
-<blockquote>
-<p>mysql</p>
-</blockquote>
-<pre tabindex="0"><code>rm -rf ./app/db/migrate/*
 </code></pre><h1 id="mvc-and-you">MVC and You</h1>
 <ul>
 <li>controller</li>
@@ -207,7 +204,7 @@ rails generate controller Product index --skip-routes
 </code></pre><h2 id="routes">routes</h2>
 <p>see routes:</p>
 <pre tabindex="0"><code>rails routes
-</code></pre><p>default method name:</p>
+</code></pre><p>default Action name:</p>
 <pre tabindex="0"><code>       Prefix Verb   URI Pattern                    Controller#Action
          root GET    /                              product#index
 product_index GET    /product(.:format)             product#index
@@ -240,8 +237,7 @@ in &ldquo;./app/views/product/index.html.erb&rdquo; view:</p>
     &lt;/li&gt;
   &lt;% end %&gt;
 &lt;/ul&gt;
-</code></pre><h1 id="crudit-where-crudit-is-due">CRUDit Where CRUDit Is Due</h1>
-<h2 id="showing-a-single-article">Showing a Single Article</h2>
+</code></pre><h2 id="showing-a-single-product">Showing a Single Product</h2>
 <p>Modify config/routes.rb:</p>
 <pre tabindex="0"><code>resources :product do
   collection do

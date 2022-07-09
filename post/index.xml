@@ -6,18 +6,17 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 07 Jul 2022 22:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jul 2022 00:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开始Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
-      <pubDate>Thu, 07 Jul 2022 22:08:08 +0800</pubDate>
+      <pubDate>Fri, 08 Jul 2022 00:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</guid>
-      <description>Creating a New Rails Project mysql2 lib mysql-client-dev:
-sudo apt install mysql-client libmysqlclient-dev gem install mysql2 Creating the Application rails new projName -d mysql config db vi ./config/database.yml username: DBAdminpassword: xb80first remove migrate data mysql
-rm -rf ./app/db/migrate/* MVC and You controller cd projNamerails generate controller Product index --skip-routes model rails generate model Product routes see routes:
-rails routes default method name:
-Prefix Verb URI Pattern Controller#Actionroot GET / product#indexproduct_index GET /product(.</description>
+      <description>Creating a New Rails Project Note: After each new model, you need to remove &amp;ldquo;yyyymmddhhmmss_create_modelNames&amp;rdquo;.
+rm -rf ./app/db/migrate/* mysql2 lib mysql-client-dev:
+sudo apt install mysql-client libmysqlclient-dev gem install mysql2 Creating the Application rails new projName -d mysql config db vi ./config/database.yml username: DBAdminpassword: xb80first MVC and You controller cd projNamerails generate controller Product index --skip-routes model rails generate model Product routes see routes:
+rails routes default Action name:</description>
     </item>
     
     <item>
