@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-08T06:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-08T08:08:08&#43;08:00" />
 
     
     
@@ -93,15 +93,15 @@ rm -rf ./app/db/migrate/* mysql2 lib" />
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  802 ,
+    "wordCount":  812 ,
     "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-08T06:08Z",
-    "dateModified": "2022-07-08T06:08Z",
+    "datePublished": "2022-07-08T08:08Z",
+    "dateModified": "2022-07-08T08:08Z",
     
     
     "description": "",
@@ -169,7 +169,7 @@ rm -rf ./app/db/migrate/* mysql2 lib" />
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-08T06:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-08T08:08:08&#43;08:00">
             Jul 8, 2022
           </time>
         
@@ -287,6 +287,17 @@ in &ldquo;./app/views/product/index.html.erb&rdquo; view:</p>
   end
 </code></pre><h3 id="view-1">view</h3>
 <p>create &ldquo;./app/views/product/show.html.erb&rdquo; and &ldquo;./app/views/product/catalog.html.erb&rdquo;:</p>
+<ul>
+<li>show</li>
+</ul>
+<pre tabindex="0"><code>&lt;h1&gt;&lt;%= @product.name %&gt;&lt;/h1&gt;
+
+&lt;p&gt;
+&lt;%= @product.description %&gt;
+&lt;/p&gt;
+</code></pre><ul>
+<li>catalog</li>
+</ul>
 <pre tabindex="0"><code>&lt;h1&gt;&lt;%= @product.name %&gt;&lt;/h1&gt;
 
 &lt;script&gt;
@@ -300,7 +311,6 @@ triggerTabList.forEach(function (triggerEl) {
   })
 })
 &lt;/script&gt;
-
 
 &lt;ul class=&#34;nav nav-tabs&#34; id=&#34;myTab&#34; role=&#34;tablist&#34;&gt;
   &lt;li class=&#34;nav-item&#34; role=&#34;presentation&#34;&gt;
