@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-08T04:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-08T06:08:08&#43;08:00" />
 
     
     
@@ -93,15 +93,15 @@ rm -rf ./app/db/migrate/* mysql2 lib" />
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  699 ,
+    "wordCount":  802 ,
     "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-08T04:08Z",
-    "dateModified": "2022-07-08T04:08Z",
+    "datePublished": "2022-07-08T06:08Z",
+    "dateModified": "2022-07-08T06:08Z",
     
     
     "description": "",
@@ -169,7 +169,7 @@ rm -rf ./app/db/migrate/* mysql2 lib" />
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-08T04:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-08T06:08:08&#43;08:00">
             Jul 8, 2022
           </time>
         
@@ -213,6 +213,12 @@ bundle install
 <pre tabindex="0"><code>gem &#34;turbo-rails&#34;, &#39;~&gt; 1.0.0&#39;
 </code></pre><p>exec:</p>
 <pre tabindex="0"><code>bundle update
+</code></pre><h3 id="bootstrap-bundle">bootstrap bundle</h3>
+<p>In &ldquo;.app/javascript/application.html.erb&rdquo; add:</p>
+<pre tabindex="0"><code>&lt;body&gt;
+    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js&#34;&gt;&lt;/script&gt;
+    &lt;%= yield %&gt;
+&lt;/body&gt;
 </code></pre><h2 id="config-db">config db</h2>
 <pre tabindex="0"><code>vi ./config/database.yml
 </code></pre><pre tabindex="0"><code>username: DBAdmin
@@ -283,9 +289,35 @@ in &ldquo;./app/views/product/index.html.erb&rdquo; view:</p>
 <p>create &ldquo;./app/views/product/show.html.erb&rdquo; and &ldquo;./app/views/product/catalog.html.erb&rdquo;:</p>
 <pre tabindex="0"><code>&lt;h1&gt;&lt;%= @product.name %&gt;&lt;/h1&gt;
 
-&lt;p&gt;
-&lt;%= @product.description %&gt;
-&lt;/p&gt;
+&lt;script&gt;
+var triggerTabList = [].slice.call(document.querySelectorAll(&#39;#myTab a&#39;))
+triggerTabList.forEach(function (triggerEl) {
+  var tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener(&#39;click&#39;, function (event) {
+    event.preventDefault()
+    tabTrigger.show()
+  })
+})
+&lt;/script&gt;
+
+
+&lt;ul class=&#34;nav nav-tabs&#34; id=&#34;myTab&#34; role=&#34;tablist&#34;&gt;
+  &lt;li class=&#34;nav-item&#34; role=&#34;presentation&#34;&gt;
+    &lt;button class=&#34;nav-link active&#34; id=&#34;home-tab&#34; data-bs-toggle=&#34;tab&#34; data-bs-target=&#34;#home&#34; type=&#34;button&#34; role=&#34;tab&#34; aria-controls=&#34;home&#34; aria-selected=&#34;true&#34;&gt;Home&lt;/button&gt;
+  &lt;/li&gt;
+  &lt;li class=&#34;nav-item&#34; role=&#34;presentation&#34;&gt;
+    &lt;button class=&#34;nav-link&#34; id=&#34;profile-tab&#34; data-bs-toggle=&#34;tab&#34; data-bs-target=&#34;#profile&#34; type=&#34;button&#34; role=&#34;tab&#34; aria-controls=&#34;profile&#34; aria-selected=&#34;false&#34;&gt;Profile&lt;/button&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;tab-content&#34; id=&#34;myTabContent&#34;&gt;
+  &lt;div class=&#34;tab-pane fade show active&#34; id=&#34;home&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;home-tab&#34;&gt;
+    &lt;%= @product.description %&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;tab-pane fade&#34; id=&#34;profile&#34; role=&#34;tabpanel&#34; aria-labelledby=&#34;profile-tab&#34;&gt;
+    &lt;%= @product.img_id %&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre><ul>
 <li><a href="http://192.168.0.143:3000/product/">product list</a></li>
 <li><a href="http://192.168.0.143:3000/product/1">product id1</a></li>
@@ -455,6 +487,8 @@ create &ldquo;./app/views/product/edit.html.erb&rdquo;:</li>
 <li><a href="https://stackoverflow.com/a/11178349">Ruby on rails route to a custom method in the controller from the view</a></li>
 <li><a href="http://guides.rubyonrails.org/routing.html#adding-more-restful-actions">Same as above</a></li>
 <li><a href="https://www.bootrails.com/blog/rails-7-bootstrap-5-tutorial/">Rails 7, Bootstrap 5 tutorial : fear and relief</a></li>
+<li><a href="https://stackoverflow.com/a/70910423">Bootstrap 5 Javascript Functions not Working in Rails 7 app</a></li>
+<li><a href="https://getbootstrap.com/docs/5.0/components/navs-tabs/#javascript-behavior">Use the tab JavaScript</a></li>
 </ul>
 
     </section>
