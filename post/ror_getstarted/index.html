@@ -93,7 +93,7 @@ rm -rf ./app/db/migrate/* mysql2 lib" />
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  838 ,
+    "wordCount":  848 ,
     "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
@@ -190,7 +190,7 @@ rm -rf ./app/db/migrate/* mysql2 lib" />
 sudo apt install nodejs
 </code></pre><h3 id="yarn">Yarn</h3>
 <p>upload to ubuntu:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.143:/home/tdtc/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.144:/home/tdtc/
 </span></span></code></pre></div><p>install:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chmod +x yarn_1.22.19_all.deb
 </span></span><span style="display:flex;"><span>sudo dpkg -i yarn_1.22.19_all.deb
@@ -200,7 +200,9 @@ sudo apt install nodejs
 <pre tabindex="0"><code>echo &#34;source &#39;https://rubygems.org&#39;&#34; &gt; Gemfile
 echo &#34;gem &#39;rails&#39;, &#39;7.0.3&#39;&#34; &gt;&gt; Gemfile
 echo &#34;gem &#39;jsbundling-rails&#39;&#34; &gt;&gt; Gemfile
-bundle install
+echo &#34;gem &#39;sprockets-rails&#39;&#34; &gt;&gt; Gemfile
+</code></pre><p>fetch and Gen lock file:</p>
+<pre tabindex="0"><code>bundle install
 </code></pre><p>new:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rails new . --force --css<span style="color:#f92672">=</span>bootstrap -d<span style="color:#f92672">=</span>mysql -T
 </span></span></code></pre></div><h3 id="update-turbo-rails">update turbo-rails</h3>
