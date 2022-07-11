@@ -6,19 +6,19 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 08 Jul 2022 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jul 2022 10:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开始Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
-      <pubDate>Fri, 08 Jul 2022 08:08:08 +0800</pubDate>
+      <pubDate>Fri, 08 Jul 2022 10:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</guid>
       <description>Creating a New Rails Project Note: After each new model, you need to remove &amp;ldquo;yyyymmddhhmmss_create_modelNames&amp;rdquo;.
 rm -rf ./app/db/migrate/* mysql2 lib mysql-client-dev:
 sudo apt install mysql-client libmysqlclient-dev gem install mysql2 nodejs curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -sudo apt install nodejs Yarn upload to ubuntu:
 scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.143:/home/tdtc/ install:
-sudo dpkg -i yarn_1.22.19_all.deb JQuery add in Gemfile:
-echo &amp;#34;gem &amp;#39;jquery-rails&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfile export http_proxy=http://USERNAME:PASSWORD@192.168.0.103:8580/ bundle install Creating the Application mkdir myapp &amp;amp;&amp;amp; cd myappecho &amp;#34;source &amp;#39;https://rubygems.</description>
+sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb Creating the Application mkdir myapp &amp;amp;&amp;amp; cd myapp Gemfile:
+echo &amp;#34;source &amp;#39;https://rubygems.org&amp;#39;&amp;#34; &amp;gt; Gemfileecho &amp;#34;gem &amp;#39;rails&amp;#39;, &amp;#39;7.</description>
     </item>
     
     <item>
