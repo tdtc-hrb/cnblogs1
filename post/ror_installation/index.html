@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-06T16:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-06T18:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "安装Ruby On Rails",
     "name": "安装Ruby On Rails",
-    "wordCount":  667 ,
+    "wordCount":  675 ,
     "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_installation/",
-    "datePublished": "2022-07-06T16:08Z",
-    "dateModified": "2022-07-06T16:08Z",
+    "datePublished": "2022-07-06T18:08Z",
+    "dateModified": "2022-07-06T18:08Z",
     
     
     "description": "",
@@ -168,7 +168,7 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-06T16:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-06T18:08:08&#43;08:00">
             Jul 6, 2022
           </time>
         
@@ -212,6 +212,7 @@
 </tbody>
 </table>
 <h1 id="ruby">Ruby</h1>
+<p>Install ruby using rbenv.</p>
 <h2 id="rbenv-dependencies">RbEnv Dependencies</h2>
 <h3 id="ubuntu">Ubuntu</h3>
 <p>Ubuntu 20.04 default Ruby version is v2.7</p>
@@ -247,17 +248,28 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 </span></span><span style="display:flex;"><span>ruby 3.1.2p20 <span style="color:#f92672">(</span>2022-04-12 revision 4491bb740a<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>x86_64-linux<span style="color:#f92672">]</span>
 </span></span></code></pre></div><h1 id="rails">Rails</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install rails
-</span></span></code></pre></div><h2 id="usage-proxy">usage proxy</h2>
-<p>If the gem cannot be installed, proxy mode is used.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install --http-proxy http://tdtc:qaz1xsw2@192.168.0.102:8580/ rails
 </span></span></code></pre></div><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rails -v
 </span></span><span style="display:flex;"><span>Rails 7.0.3
+</span></span></code></pre></div><h2 id="sqlite3">SQLite3</h2>
+<p>default db.</p>
+<h3 id="dependencies">dependencies</h3>
+<ul>
+<li>RHEL</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo yum install sqlite-devel
+</span></span></code></pre></div><ul>
+<li>Ubuntu</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install libsqlite3-dev
+</span></span></code></pre></div><h3 id="install">install</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install sqlite3
 </span></span></code></pre></div><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://computingforgeeks.com/install-ruby-on-rhel-centos-rocky-linux/">Install Ruby 3 on RHEL 8|CentOS 8|Rocky Linux 8</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04">How To Install Ruby on Rails with rbenv on Ubuntu 20.04</a></li>
 <li><a href="https://askubuntu.com/questions/203632/could-not-find-a-valid-gem-rails-0-in-any-repository">Could not find a valid gem &lsquo;rails&rsquo; (&gt;= 0) in any repository</a></li>
+<li><a href="https://github.com/sparklemotion/sqlite3-ruby">sqlite3 on ruby</a></li>
 </ul>
 <h1 id="append">Append</h1>
 <h2 id="rbenv-installerhttpsgithubcomrbenvrbenv-installerrawheadbinrbenv-installer"><a href="https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer">rbenv-installer</a></h2>

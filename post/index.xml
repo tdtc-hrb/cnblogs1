@@ -23,10 +23,11 @@ echo &amp;#34;source &amp;#39;https://rubygems.org&amp;#39;&amp;#34; &amp;gt; Ge
     <item>
       <title>安装Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
-      <pubDate>Wed, 06 Jul 2022 16:08:08 +0800</pubDate>
+      <pubDate>Wed, 06 Jul 2022 18:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
-      <description>ruby-versions Rails 7 requires Ruby 2.7.0 or newer. Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;= 1.8.11 Maintained 7.0.0 &amp;gt;= 2.7.0 3.1.x &amp;gt;= 1.8.11 Maintained Ruby RbEnv Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7
+      <description>ruby-versions Rails 7 requires Ruby 2.7.0 or newer. Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;= 1.8.11 Maintained 7.0.0 &amp;gt;= 2.7.0 3.1.x &amp;gt;= 1.8.11 Maintained Ruby Install ruby using rbenv.
+RbEnv Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7
 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.</description>
     </item>
     
