@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-08T18:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-08T20:08:08&#43;08:00" />
 
     
     
@@ -93,15 +93,15 @@ sudo apt insta" />
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  891 ,
+    "wordCount":  926 ,
     "timeRequired": "PT5M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-08T18:08Z",
-    "dateModified": "2022-07-08T18:08Z",
+    "datePublished": "2022-07-08T20:08Z",
+    "dateModified": "2022-07-08T20:08Z",
     
     
     "description": "",
@@ -169,7 +169,7 @@ sudo apt insta" />
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-08T18:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-08T20:08:08&#43;08:00">
             Jul 8, 2022
           </time>
         
@@ -194,7 +194,7 @@ sudo apt install nodejs
 </code></pre><pre tabindex="0"><code>gem install mysql2
 </code></pre><h3 id="yarn">Yarn</h3>
 <p>upload to ubuntu:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.144:/home/tdtc/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.145:/home/tdtc/
 </span></span></code></pre></div><p>install:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chmod +x yarn_1.22.19_all.deb
 </span></span><span style="display:flex;"><span>sudo dpkg -i yarn_1.22.19_all.deb
@@ -202,9 +202,16 @@ sudo apt install nodejs
 <pre tabindex="0"><code>mkdir myapp &amp;&amp; cd myapp
 </code></pre><p>Gemfile:</p>
 <pre tabindex="0"><code>echo &#34;source &#39;https://rubygems.org&#39;&#34; &gt; Gemfile
-echo &#34;gem &#39;rails&#39;, &#39;7.0.3&#39;&#34; &gt;&gt; Gemfile
+echo &#34;gem &#39;rails&#39;, &#39;7.0.3.1&#39;&#34; &gt;&gt; Gemfile
 echo &#34;gem &#39;jsbundling-rails&#39;&#34; &gt;&gt; Gemfile
 echo &#34;gem &#39;sprockets-rails&#39;&#34; &gt;&gt; Gemfile
+echo &#34;gem &#39;puma&#39;&#34; &gt;&gt; Gemfile
+echo &#34;gem &#39;turbo-rails&#39;&#34; &gt;&gt; Gemfile
+echo &#34;gem &#39;stimulus-rails&#39;&#34; &gt;&gt; Gemfile
+echo &#34;gem &#39;cssbundling-rails&#39;&#34; &gt;&gt; Gemfile
+echo &#34;gem &#39;jbuilder&#39;&#34; &gt;&gt; Gemfile
+echo &#34;gem &#39;bootsnap&#39;&#34; &gt;&gt; Gemfile
+echo &#34;gem &#39;web-console&#39;&#34; &gt;&gt; Gemfile
 </code></pre><p>fetch and Generate lock file:</p>
 <pre tabindex="0"><code>bundle install
 </code></pre><p>new:</p>
@@ -219,7 +226,7 @@ echo &#34;gem &#39;sprockets-rails&#39;&#34; &gt;&gt; Gemfile
 </code></pre><h3 id="jquery">JQuery</h3>
 <p>add in Gemfile:</p>
 <pre tabindex="0"><code>echo &#34;gem &#39;jquery-rails&#39;&#34; &gt;&gt; Gemfile
-</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export https_proxy<span style="color:#f92672">=</span>http://USERNAME:PASSWORD@192.168.0.103:8580/
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export https_proxy<span style="color:#f92672">=</span>http://USERNAME:PASSWORD@192.168.0.104:8580/
 </span></span><span style="display:flex;"><span>bundle install --jobs <span style="color:#ae81ff">1</span>
 </span></span></code></pre></div><h3 id="bootstrap">Bootstrap</h3>
 <pre tabindex="0"><code>echo &#34;gem &#39;bootstrap&#39;&#34; &gt;&gt; Gemfile
@@ -233,7 +240,7 @@ bundle install
 </code></pre><h2 id="upload-images">upload images</h2>
 <p>windows 10:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>tar zcvf img.tar.gz ./img/ --transform s/img/images/
-</span></span><span style="display:flex;"><span>scp d:\projects\img.tar.gz tdtc@192.168.0.144:/home/tdtc/myapp/app/assets/
+</span></span><span style="display:flex;"><span>scp d:\projects\img.tar.gz tdtc@192.168.0.145:/home/tdtc/myapp/app/assets/
 </span></span></code></pre></div><p>ubuntu:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/myapp/app/assets/
 </span></span><span style="display:flex;"><span>tar zxvf img.tar.gz
@@ -377,9 +384,9 @@ triggerTabList.forEach(function (triggerEl) {
 <p>Multiple:</p>
 <pre tabindex="0"><code>rails server -b 0.0.0.0
 </code></pre><ul>
-<li><a href="http://192.168.0.144:3000/product/">product list</a></li>
-<li><a href="http://192.168.0.144:3000/product/1">product id1</a></li>
-<li><a href="http://192.168.0.144:3000/product/catalog?name=aei&amp;lang=4136">product catalog</a></li>
+<li><a href="http://192.168.0.145:3000/product/">product list</a></li>
+<li><a href="http://192.168.0.145:3000/product/1">product id1</a></li>
+<li><a href="http://192.168.0.145:3000/product/catalog?name=aei&amp;lang=4136">product catalog</a></li>
 </ul>
 <h1 id="product-manage">Product manage</h1>
 <p>Validations and Displaying Error Messages <br>
