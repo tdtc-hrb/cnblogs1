@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-08T20:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-08T22:08:08&#43;08:00" />
 
     
     
@@ -93,15 +93,15 @@ sudo apt insta" />
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  926 ,
+    "wordCount":  928 ,
     "timeRequired": "PT5M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-08T20:08Z",
-    "dateModified": "2022-07-08T20:08Z",
+    "datePublished": "2022-07-08T22:08Z",
+    "dateModified": "2022-07-08T22:08Z",
     
     
     "description": "",
@@ -169,7 +169,7 @@ sudo apt insta" />
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-08T20:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-08T22:08:08&#43;08:00">
             Jul 8, 2022
           </time>
         
@@ -257,20 +257,18 @@ rails generate controller Product index --skip-routes -T
 </code></pre><h2 id="data-manage">data manage</h2>
 <pre tabindex="0"><code>rails console
 </code></pre><h3 id="model">model</h3>
-<p>Note: After each new model, you need to remove &ldquo;yyyymmddhhmmss_create_modelNames&rdquo;.</p>
-<pre tabindex="0"><code>rm -rf ./db/migrate/*
-</code></pre><ul>
+<ul>
 <li>Parameter</li>
 </ul>
-<pre tabindex="0"><code>rails generate model Parameter -T
+<pre tabindex="0"><code>rails generate model Parameter --skip-migration -T
 </code></pre><ul>
 <li>Image</li>
 </ul>
-<pre tabindex="0"><code>rails generate model Image -T
+<pre tabindex="0"><code>rails generate model Image --skip-migration -T
 </code></pre><ul>
 <li>Product</li>
 </ul>
-<pre tabindex="0"><code>rails generate model Product parameter:references image:references -T
+<pre tabindex="0"><code>rails generate model Product parameter:references image:references --skip-migration -T
 </code></pre><h3 id="3nf">3NF</h3>
 <ul>
 <li>Parameter <br>
@@ -553,6 +551,7 @@ create &ldquo;./app/views/product/edit.html.erb&rdquo;:</li>
 <li><a href="https://www.bootrails.com/blog/rails-7-bootstrap-5-tutorial/">Rails 7, Bootstrap 5 tutorial : fear and relief</a></li>
 <li><a href="https://stackoverflow.com/a/70910423">Bootstrap 5 Javascript Functions not Working in Rails 7 app</a></li>
 <li><a href="https://getbootstrap.com/docs/5.0/components/navs-tabs/#javascript-behavior">Use the tab JavaScript</a></li>
+<li><a href="https://www.sitepoint.com/community/t/how-to-generate-a-model-without-creating-a-migration-file-for-it/200679">How to generate a model without creating a migration file for it</a></li>
 </ul>
 
     </section>
