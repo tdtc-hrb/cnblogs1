@@ -164,6 +164,32 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/mq-kafka-config/">Install and Configure Apache Kafka</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>I. Installation The installation environment must have JDK, verify that you enter:
+java -version 1. down Install server-side versions based on the jar downloaded by maven, such as my &ldquo;C:\Users\tdtc.m2\repository\org\apache\kafka\kafka-clients\3.0.1&rdquo;
+And choose Scala version based on pom, such as my &ldquo;C:\Users\tdtc.m2\repository\org\springframework\cloud\spring-cloud-stream-binder-kafka\3.2.4\spring-cloud-stream-binder-kafka-3.2.4.pom&rdquo;
+wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $tar zxvf kafka_2.13-3.0.1.tgz II. Configuration server.properties
+1. Necessary settings 1) basic listener listeners=PLAINTEXT://your_IP:9092 logs $mkdir HOME/kafka_2.13-3.0.1/logs 2) cluster Sets the natural number of the broker ID to non-zero. <a class="read-more" href="/cnblogs/post/mq-kafka-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-05-16T18:08:08&#43;08:00">
+            16 May 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/mq-rabbitmq-config/">Install and Configure RabbitMQ</a></h2>
     </header>
     <section class="post-excerpt">
@@ -397,35 +423,6 @@ for (let j = 0; j &lt; treeRadius; j++) { document.write(&#34; &#34;); } 中线
         
         <time class="post-date" datetime="2021-11-15T14:15:39&#43;08:00">
             15 Nov 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-angular-app/">Angular 的HttpClient应用</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Prepare install Angular CLI:
-npm install -g @angular/cli create project:
-npx @angular/cli new userDetails-client --style=css --routing=false --skip-tests Angular struct Angular module app/app.module.ts
-Add system modules and user components
-system module example for: httpclient module import pack:
-import { HttpClientModule } from &#34;@angular/common/http&#34;; declare Decorator:
-// import HttpClientModule after BrowserModule. HttpClientModule, user component See the next section(&ldquo;Angular Component - add component&rdquo;) for examples of user components. Angular Component app/component.ts
-The root component. <a class="read-more" href="/cnblogs/post/js-angular-app/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-14T06:58:08&#43;08:00">
-            14 Nov 2021
         </time>
     </footer>
 </article>

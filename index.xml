@@ -6,24 +6,32 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 09 Jul 2022 02:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jul 2022 00:26:39 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tabs 实现</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/css-tailwind-tabs/</link>
+      <pubDate>Wed, 20 Jul 2022 00:26:39 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/css-tailwind-tabs/</guid>
+      <description>html Note: The header and body are wrapped with div!
+Header &amp;lt;ul id=&amp;#34;tabs&amp;#34; class=&amp;#34;flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400&amp;#34;&amp;gt; &amp;lt;li class=&amp;#34;mr-2&amp;#34;&amp;gt; &amp;lt;a href=&amp;#34;#home&amp;#34; aria-current=&amp;#34;page&amp;#34; class=&amp;#34;inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500&amp;#34;&amp;gt;Home&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;#34;mr-2&amp;#34;&amp;gt; &amp;lt;a href=&amp;#34;#profile&amp;#34; class=&amp;#34;inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300&amp;#34;&amp;gt;Profile&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; Body &amp;lt;!-- Tab Contents --&amp;gt; &amp;lt;div id=&amp;#34;tab-contents&amp;#34;&amp;gt; &amp;lt;div id=&amp;#34;home&amp;#34; class=&amp;#34;p-4&amp;#34;&amp;gt; First tab &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;#34;profile&amp;#34; class=&amp;#34;hidden p-4&amp;#34;&amp;gt; Second tab &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; javascript let tabsContainer = document.</description>
+    </item>
+    
     <item>
       <title>开始Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
-      <pubDate>Sat, 09 Jul 2022 02:08:08 +0800</pubDate>
+      <pubDate>Sat, 09 Jul 2022 06:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</guid>
-      <description>Prepare mysql2 nodejs curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -sudo apt install nodejs yarn mysql2 lib mysql-client-dev:
-sudo apt install mysql-client libmysqlclient-dev gem install mysql2 Yarn upload to ubuntu:
-scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.145:/home/tdtc/ install:
-sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb Creating a New Rails Project mkdir myapp &amp;amp;&amp;amp; cd myapp Gemfile:
-echo &amp;#34;source &amp;#39;https://rubygems.org&amp;#39;&amp;#34; &amp;gt; Gemfileecho &amp;#34;gem &amp;#39;rails&amp;#39;, &amp;#39;7.0.3.1&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfileecho &amp;#34;gem &amp;#39;jsbundling-rails&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfileecho &amp;#34;gem &amp;#39;sprockets-rails&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfileecho &amp;#34;gem &amp;#39;puma&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfileecho &amp;#34;gem &amp;#39;turbo-rails&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfileecho &amp;#34;gem &amp;#39;stimulus-rails&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfileecho &amp;#34;gem &amp;#39;cssbundling-rails&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfileecho &amp;#34;gem &amp;#39;jbuilder&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfileecho &amp;#34;gem &amp;#39;bootsnap&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfileecho &amp;#34;gem &amp;#39;web-console&amp;#39;&amp;#34; &amp;gt;&amp;gt; Gemfile fetch and Generate lock file:</description>
+      <description>Prepare mysql-dev sudo apt install mysql-client libmysqlclient-dev nodejs curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -sudo apt install nodejs Yarn upload to ubuntu:
+scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.148:/home/tdtc/ install:
+sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb gems gem install mysql2gem install sprockets-rails -v &amp;#39;~&amp;gt; 3.4.2&amp;#39;gem install pumagem install importmap-railsgem install turbo-rails -v &amp;#39;~&amp;gt; 1.1.1&amp;#39;gem install stimulus-railsgem install tailwindcss-railsgem install jbuildergem install bootsnapgem install web-console Creating a New Rails Project new:</description>
     </item>
     
     <item>
       <title>安装Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
-      <pubDate>Wed, 06 Jul 2022 20:08:08 +0800</pubDate>
+      <pubDate>Wed, 06 Jul 2022 21:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
       <description>ruby-versions Rails 7 requires Ruby 2.7.0 or newer. Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;= 1.8.11 Maintained 7.0.0 &amp;gt;= 2.7.0 3.1.x &amp;gt;= 1.8.11 Maintained Ruby Install ruby using rbenv.
