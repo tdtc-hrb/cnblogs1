@@ -92,7 +92,7 @@
     },
     "headline": "安装Ruby On Rails",
     "name": "安装Ruby On Rails",
-    "wordCount":  231 ,
+    "wordCount":  279 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
@@ -251,9 +251,11 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 </span></span></code></pre></div><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rails -v
 </span></span><span style="display:flex;"><span>Rails 7.0.3.1
-</span></span></code></pre></div><h2 id="sqlite3">SQLite3</h2>
+</span></span></code></pre></div><h2 id="demo">demo</h2>
+<p>Article : <a href="https://dev.to/nemuba/blog-demo-using-rails-7-hotwire-rails-tailwindcss-stimulus-railsrequestjs-2c7a">https://dev.to/nemuba/blog-demo-using-rails-7-hotwire-rails-tailwindcss-stimulus-railsrequestjs-2c7a</a></p>
+<h3 id="sqlite3">SQLite3</h3>
 <p>default db.</p>
-<h3 id="dependencies">dependencies</h3>
+<h4 id="dependencies">dependencies</h4>
 <ul>
 <li>RHEL</li>
 </ul>
@@ -262,9 +264,36 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 <li>Ubuntu</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install libsqlite3-dev
-</span></span></code></pre></div><h3 id="install">install</h3>
+</span></span></code></pre></div><h4 id="install">install</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install sqlite3
-</span></span></code></pre></div><h1 id="ref">Ref</h1>
+</span></span></code></pre></div><h3 id="create-new-demo">create new demo</h3>
+<pre tabindex="0"><code>rails new blog --css tailwind
+cd blog
+rails g scaffold post title
+rails action_text:install
+</code></pre><h3 id="overwrite">Overwrite</h3>
+<ul>
+<li>.ruby-version</li>
+<li>Gemfile</li>
+<li>Gemfile.lock</li>
+<li>Procfile.dev</li>
+</ul>
+<h4 id="directory">Directory</h4>
+<ul>
+<li>bin</li>
+<li>config <br>
+Except for &ldquo;routes.rb&rdquo;;</li>
+<li>app/assets/config <br>
+Overwrite only &ldquo;app/assets/config/manifest.js&rdquo;</li>
+<li>app/assets/stylesheets <br>
+add application.tailwind.css</li>
+</ul>
+<h2 id="exec">exec</h2>
+<pre tabindex="0"><code>rails db:create db:migrate
+rake tmp:clear
+rake assets:precompile
+./bin/dev
+</code></pre><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://computingforgeeks.com/install-ruby-on-rhel-centos-rocky-linux/">Install Ruby 3 on RHEL 8|CentOS 8|Rocky Linux 8</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04">How To Install Ruby on Rails with rbenv on Ubuntu 20.04</a></li>
