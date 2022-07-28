@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-06T21:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-07T02:08:08&#43;08:00" />
 
     
     
@@ -37,7 +37,7 @@
     <title>安装Ruby On Rails &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
 
     
-    <meta name="description" content="ruby-versions Rails 7 requires Ruby 2.7.0 or newer. Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required R" />
+    <meta name="description" content="Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;=" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -92,15 +92,15 @@
     },
     "headline": "安装Ruby On Rails",
     "name": "安装Ruby On Rails",
-    "wordCount":  279 ,
+    "wordCount":  270 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_installation/",
-    "datePublished": "2022-07-06T21:08Z",
-    "dateModified": "2022-07-06T21:08Z",
+    "datePublished": "2022-07-07T02:08Z",
+    "dateModified": "2022-07-07T02:08Z",
     
     
     "description": "",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-06T21:08:08&#43;08:00">
-            Jul 6, 2022
+          <time class="post-date" datetime="2022-07-07T02:08:08&#43;08:00">
+            Jul 7, 2022
           </time>
         
          
@@ -178,10 +178,6 @@
 
     <section class="post-content">
       <ul>
-<li><a href="https://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ruby-versions">ruby-versions</a></li>
-</ul>
-<pre tabindex="0"><code>Rails 7 requires Ruby 2.7.0 or newer.
-</code></pre><ul>
 <li><a href="https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html">Ruby &amp; Rails Compatibility Table</a></li>
 </ul>
 <table>
@@ -202,33 +198,30 @@
 <td>&gt;= 1.8.11</td>
 <td>Maintained</td>
 </tr>
-<tr>
-<td>7.0.0</td>
-<td>&gt;= 2.7.0</td>
-<td>3.1.x</td>
-<td>&gt;= 1.8.11</td>
-<td>Maintained</td>
-</tr>
 </tbody>
 </table>
-<h1 id="ruby">Ruby</h1>
+<h1 id="rbenv">RbEnv</h1>
 <p>Install ruby using rbenv.</p>
-<h2 id="rbenv-dependencies">RbEnv Dependencies</h2>
-<h3 id="ubuntu">Ubuntu</h3>
-<p>Ubuntu 20.04 default Ruby version is v2.7</p>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li>Ubuntu <br>
+Ubuntu 20.04 default Ruby version is v2.7</li>
+</ul>
 <pre tabindex="0"><code>sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
-</code></pre><h3 id="rhel">RHEL</h3>
-<p>RHEL8(Alma / Rocky) default Ruby version is v2.5.5</p>
+</code></pre><ul>
+<li>RHEL <br>
+RHEL8(Alma / Rocky) default Ruby version is v2.5.5</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dnf -y install git make gcc curl openssl-devel zlib-devel libffi-devel readline-devel sqlite-devel
 </span></span></code></pre></div><p>install tar:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo yum install tar
-</span></span></code></pre></div><h2 id="rbenv">rbenv</h2>
+</span></span></code></pre></div><h2 id="install">install</h2>
 <p>first install RbEnv Dependencies; <br>
 Later, upload rbenv-installer shell script.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>D:\programs\putty077<span style="color:#75715e">&gt;PSCP.EXE d:\rbenv-installer tdtc@192.168.0.146:/home/tdtc/</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>D:\programs\putty077<span style="color:#75715e">&gt;PSCP.EXE d:\rbenv-installer tdtc@192.168.0.152:/home/tdtc/</span>
 </span></span></code></pre></div><p>or</p>
-<pre tabindex="0"><code>export http_proxy=http://USERNAME:PASSWORD@192.168.0.104:8580/
-export https_proxy=http://USERNAME:PASSWORD@192.168.0.104:8580/
+<pre tabindex="0"><code>export http_proxy=http://http://tdtc:qaz1xsw2@192.168.0.104:8580/
+export https_proxy=http://http://tdtc:qaz1xsw2@192.168.0.104:8580/
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 </code></pre><p>set path:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export PATH=&#34;$HOME/.rbenv/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.bashrc
@@ -248,48 +241,50 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 </span></span><span style="display:flex;"><span>ruby 3.1.2p20 <span style="color:#f92672">(</span>2022-04-12 revision 4491bb740a<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>x86_64-linux<span style="color:#f92672">]</span>
 </span></span></code></pre></div><h1 id="rails">Rails</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install rails
-</span></span></code></pre></div><p>test:</p>
+</span></span></code></pre></div><p>info(35 gems installed):</p>
+<pre tabindex="0"><code>Fetching zeitwerk-2.6.0.gem
+Fetching method_source-1.0.0.gem
+Fetching crass-1.0.6.gem
+Fetching loofah-2.18.0.gem
+Fetching i18n-1.12.0.gem
+Fetching activesupport-7.0.3.1.gem
+Fetching nokogiri-1.13.8-x86_64-linux.gem
+Fetching thor-1.2.1.gem
+Fetching tzinfo-2.0.5.gem
+Fetching rack-test-2.0.2.gem
+Fetching builder-3.2.4.gem
+Fetching rails-html-sanitizer-1.4.3.gem
+Fetching rails-dom-testing-2.0.3.gem
+Fetching rack-2.2.4.gem
+Fetching concurrent-ruby-1.1.10.gem
+Fetching actionview-7.0.3.1.gem
+Fetching erubi-1.10.0.gem
+Fetching actionpack-7.0.3.1.gem
+Fetching railties-7.0.3.1.gem
+Fetching mini_mime-1.1.2.gem
+Fetching marcel-1.0.2.gem
+Fetching activemodel-7.0.3.1.gem
+Fetching activerecord-7.0.3.1.gem
+Fetching actiontext-7.0.3.1.gem
+Fetching globalid-1.0.0.gem
+Fetching actionmailbox-7.0.3.1.gem
+Fetching activestorage-7.0.3.1.gem
+Fetching websocket-extensions-0.1.5.gem
+Fetching websocket-driver-0.7.5.gem
+Fetching nio4r-2.5.8.gem
+Fetching activejob-7.0.3.1.gem
+Fetching actioncable-7.0.3.1.gem
+Fetching rails-7.0.3.1.gem
+Fetching mail-2.7.1.gem
+Fetching actionmailer-7.0.3.1.gem
+</code></pre><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rails -v
 </span></span><span style="display:flex;"><span>Rails 7.0.3.1
-</span></span></code></pre></div><h2 id="demo">demo</h2>
-<p>Article : <a href="https://dev.to/nemuba/blog-demo-using-rails-7-hotwire-rails-tailwindcss-stimulus-railsrequestjs-2c7a">https://dev.to/nemuba/blog-demo-using-rails-7-hotwire-rails-tailwindcss-stimulus-railsrequestjs-2c7a</a></p>
-<h3 id="sqlite3">SQLite3</h3>
-<p>default db.</p>
-<h4 id="dependencies">dependencies</h4>
-<ul>
-<li>RHEL</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo yum install sqlite-devel
-</span></span></code></pre></div><ul>
-<li>Ubuntu</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install libsqlite3-dev
-</span></span></code></pre></div><h4 id="install">install</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install sqlite3
-</span></span></code></pre></div><h3 id="create-new-demo">create new demo</h3>
-<pre tabindex="0"><code>rails new blog --css tailwind
-cd blog
-rails g scaffold post title
-rails action_text:install
-</code></pre><h3 id="overwrite">Overwrite</h3>
-<ul>
-<li>.ruby-version</li>
-<li>Gemfile</li>
-<li>Gemfile.lock</li>
-<li>Procfile.dev</li>
-</ul>
-<h4 id="directory">Directory</h4>
-<ul>
-<li>bin</li>
-<li>config <br>
-Except for &ldquo;routes.rb&rdquo;;</li>
-<li>app/assets/config <br>
-Overwrite only &ldquo;app/assets/config/manifest.js&rdquo;</li>
-<li>app/assets/stylesheets <br>
-add application.tailwind.css</li>
-</ul>
-<h2 id="exec">exec</h2>
-<pre tabindex="0"><code>rails db:create db:migrate
+</span></span></code></pre></div><h2 id="exec-list">exec list</h2>
+<pre tabindex="0"><code>rails db:create
+rails db:migrate
+rake assets:clean
+rake assets:clobber
 rake tmp:clear
 rake assets:precompile
 ./bin/dev
@@ -297,8 +292,6 @@ rake assets:precompile
 <ul>
 <li><a href="https://computingforgeeks.com/install-ruby-on-rhel-centos-rocky-linux/">Install Ruby 3 on RHEL 8|CentOS 8|Rocky Linux 8</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04">How To Install Ruby on Rails with rbenv on Ubuntu 20.04</a></li>
-<li><a href="https://askubuntu.com/questions/203632/could-not-find-a-valid-gem-rails-0-in-any-repository">Could not find a valid gem &lsquo;rails&rsquo; (&gt;= 0) in any repository</a></li>
-<li><a href="https://github.com/sparklemotion/sqlite3-ruby">sqlite3 on ruby</a></li>
 </ul>
 
     </section>

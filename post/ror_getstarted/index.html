@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-09T06:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-09T14:08:08&#43;08:00" />
 
     
     
@@ -37,7 +37,7 @@
     <title>开始Ruby On Rails &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
 
     
-    <meta name="description" content="Prepare mysql-dev sudo apt install mysql-client libmysqlclient-dev nodejs curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -sudo apt install nod" />
+    <meta name="description" content="Prepare mysql-dev sudo apt install mysql-client libmysqlclient-devgem install mysql2 nodejs curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -s" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -92,15 +92,15 @@
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  890 ,
-    "timeRequired": "PT5M",
+    "wordCount":  363 ,
+    "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-09T06:08Z",
-    "dateModified": "2022-07-09T06:08Z",
+    "datePublished": "2022-07-09T14:08Z",
+    "dateModified": "2022-07-09T14:08Z",
     
     
     "description": "",
@@ -168,7 +168,7 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-09T06:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-09T14:08:08&#43;08:00">
             Jul 9, 2022
           </time>
         
@@ -182,6 +182,7 @@
 <li>mysql-dev</li>
 </ul>
 <pre tabindex="0"><code>sudo apt install mysql-client libmysqlclient-dev
+gem install mysql2
 </code></pre><ul>
 <li>nodejs</li>
 </ul>
@@ -189,28 +190,17 @@
 sudo apt install nodejs
 </code></pre><h2 id="yarn">Yarn</h2>
 <p>upload to ubuntu:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.148:/home/tdtc/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.152:/home/tdtc/
 </span></span></code></pre></div><p>install:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chmod +x yarn_1.22.19_all.deb
 </span></span><span style="display:flex;"><span>sudo dpkg -i yarn_1.22.19_all.deb
-</span></span></code></pre></div><h2 id="gems">gems</h2>
-<pre tabindex="0"><code>gem install mysql2
-gem install sprockets-rails -v &#39;~&gt; 3.4.2&#39;
-gem install puma
-gem install importmap-rails
-gem install turbo-rails -v &#39;~&gt; 1.1.1&#39;
-gem install stimulus-rails
-gem install tailwindcss-rails
-gem install jbuilder
-gem install bootsnap
-gem install web-console
-</code></pre><h1 id="creating-a-new-rails-project">Creating a New Rails Project</h1>
+</span></span></code></pre></div><h1 id="creating-a-new-rails-project">Creating a New Rails Project</h1>
 <p>new:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rails new myapp --css tailwind -d<span style="color:#f92672">=</span>mysql -T
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rails new myapp -j esbuild --css bulma -d mysql
 </span></span></code></pre></div><h2 id="upload-images">upload images</h2>
 <p>windows 10:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>tar zcvf img.tar.gz ./img/ --transform s/img/images/
-</span></span><span style="display:flex;"><span>scp d:\projects\img.tar.gz tdtc@192.168.0.148:/home/tdtc/myapp/app/assets/
+</span></span><span style="display:flex;"><span>scp d:\projects\img.tar.gz tdtc@192.168.0.152:/home/tdtc/myapp/app/assets/
 </span></span></code></pre></div><p>ubuntu:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/myapp/app/assets/
 </span></span><span style="display:flex;"><span>tar zxvf img.tar.gz
@@ -315,23 +305,20 @@ in &ldquo;./app/views/product/show.html.erb&rdquo;:</li>
 &lt;/p&gt;
 </code></pre><ul>
 <li>catalog <br>
-In &ldquo;./app/views/product/catalog.html.erb&rdquo;:</li>
+In &ldquo;./app/views/product/catalog.html.erb&rdquo; with bulma:</li>
 </ul>
 <pre tabindex="0"><code>&lt;h1&gt;&lt;%= @product.name %&gt;&lt;/h1&gt;
 
-&lt;div&gt;
-  &lt;ul id=&#34;tabs&#34; class=&#34;flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400&#34;&gt;
-    &lt;li class=&#34;mr-2&#34;&gt;
-        &lt;a href=&#34;#home&#34; aria-current=&#34;page&#34; class=&#34;inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500&#34;&gt;Home&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li class=&#34;mr-2&#34;&gt;
-        &lt;a href=&#34;#profile&#34; class=&#34;inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300&#34;&gt;Tech Parameters&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;!-- Tab Contents --&gt;
-  &lt;div id=&#34;tab-contents&#34;&gt;
-    &lt;div id=&#34;home&#34; class=&#34;p-4&#34;&gt;
-      &lt;table class=&#34;table-fixed&#34; border=&#34;0&#34;&gt;
+&lt;div id=&#34;tabs-with-content&#34;&gt;
+  &lt;div class=&#34;tabs is-centered&#34;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;section class=&#34;tab-content&#34;&gt;
+      &lt;table class=&#34;table&#34;&gt;
         &lt;tbody&gt;
           &lt;td&gt;
             &lt;%= image_tag &#34;#{@image.name}&#34; %&gt;
@@ -341,216 +328,28 @@ In &ldquo;./app/views/product/catalog.html.erb&rdquo;:</li>
           &lt;/td&gt;
         &lt;/tbody&gt;
       &lt;/table&gt;
-    &lt;/div&gt;
-    &lt;div id=&#34;profile&#34; class=&#34;hidden p-4&#34;&gt;
+    &lt;/section&gt;
+    &lt;section class=&#34;tab-content&#34;&gt;
       &lt;%= @parameter.ipxx %&gt;
-    &lt;/div&gt;
+    &lt;/section&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;script&gt;
-let tabsContainer = document.querySelector(&#34;#tabs&#34;);
-
-let tabTogglers = tabsContainer.querySelectorAll(&#34;#tabs a&#34;);
-
-console.log(tabTogglers);
-
-tabTogglers.forEach(function(toggler) {
-  toggler.addEventListener(&#34;click&#34;, function(e) {
-    e.preventDefault();
-
-    let tabName = this.getAttribute(&#34;href&#34;);
-
-    let tabContents = document.querySelector(&#34;#tab-contents&#34;);
-
-    for (let i = 0; i &lt; tabContents.children.length; i++) {
-      tabContents.children[i].classList.remove(&#34;hidden&#34;);
-      if (&#34;#&#34; + tabContents.children[i].id === tabName) {
-        continue;
-      }
-      tabContents.children[i].classList.add(&#34;hidden&#34;);
-    }
-  });
-});
-&lt;/script&gt;
 </code></pre><h2 id="launch">launch</h2>
-<ul>
-<li><a href="http://192.168.0.148:3000/product/">product list</a></li>
-<li><a href="http://192.168.0.148:3000/product/1">product id1</a></li>
-<li><a href="http://192.168.0.148:3000/product/catalog?name=aei&amp;lang=4136">product catalog</a></li>
-</ul>
-<p>run:</p>
-<pre tabindex="0"><code>./bin/dev
-</code></pre><h3 id="edit-procfiledev">edit Procfile.dev</h3>
-<p>Multiple:</p>
+<p>edit Procfile.dev:</p>
 <pre tabindex="0"><code>web: bin/rails server -p 3000 -b 0.0.0.0
-css: bin/rails tailwindcss:watch
-</code></pre><h1 id="product-manage">Product manage</h1>
-<p>Validations and Displaying Error Messages <br>
-add &ldquo;./app/models/product.rb&rdquo;:</p>
-<pre tabindex="0"><code>  validates :name, presence: true
-  validates :description, presence: true, length: { minimum: 10 }
-</code></pre><p>add &ldquo;./app/views/product/new.html.erb&rdquo; and &ldquo;./app/views/product/_form.html.erb&rdquo;:</p>
-<ul>
-<li>field name</li>
-</ul>
-<pre tabindex="0"><code>    &lt;% @product.errors.full_messages_for(:name).each do |message| %&gt;
-      &lt;div&gt;&lt;%= message %&gt;&lt;/div&gt;
-    &lt;% end %&gt;
+</code></pre><p>run:</p>
+<pre tabindex="0"><code>./bin/dev
 </code></pre><ul>
-<li>field description</li>
+<li><a href="http://192.168.0.152:3000/product/">product list</a></li>
+<li><a href="http://192.168.0.152:3000/product/1">product id1</a></li>
+<li><a href="http://192.168.0.152:3000/product/catalog?name=aei&amp;lang=4136">product catalog</a></li>
 </ul>
-<pre tabindex="0"><code>    &lt;% @product.errors.full_messages_for(:description).each do |message| %&gt;
-      &lt;div&gt;&lt;%= message %&gt;&lt;/div&gt;
-    &lt;% end %&gt;
-</code></pre><h2 id="creating-a-new-product">Creating a New Product</h2>
-<p>add &ldquo;./app/views/product/index.html.erb&rdquo;:</p>
-<pre tabindex="0"><code>&lt;%= link_to &#34;New Product&#34;, new_product_path %&gt;
-</code></pre><h3 id="controller">Controller</h3>
-<p>add &ldquo;./app/controllers/product_controller.rb&rdquo;:</p>
-<pre tabindex="0"><code>  def new
-    @product = Product.new
-  end
-
-  def create
-    @product = Product.new(product_params)
-
-    if @product.save
-      redirect_to @product
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
-  
-  private
-    def product_params
-      params.require(:product).permit(:param_id, :statu_id, :lang_id, :img_id, :name, :description)
-    end
-</code></pre><h3 id="using-a-form-builder">Using a Form Builder</h3>
-<p>注意： 需要增加url</p>
-<p>create &ldquo;./app/views/product/new.html.erb&rdquo;:</p>
-<pre tabindex="0"><code>&lt;h1&gt;New Product&lt;/h1&gt;
-
-&lt;%= form_with url:&#34;/product&#34;, model: @product do |form| %&gt;
-  &lt;div&gt;
-    &lt;%= form.label :name %&gt;&lt;br&gt;
-    &lt;%= form.text_field :name %&gt;
-  &lt;/div&gt;
-
-  &lt;div&gt;
-    &lt;%= form.label :description %&gt;&lt;br&gt;
-    &lt;%= form.text_area :description %&gt;
-  &lt;/div&gt;
-
-  &lt;div&gt;
-    &lt;%= form.submit %&gt;
-  &lt;/div&gt;
-&lt;% end %&gt;
-</code></pre><h2 id="updating-an-product">Updating an Product</h2>
-<p>add &ldquo;./app/controllers/product_controller.rb&rdquo;:</p>
-<pre tabindex="0"><code>  def edit
-    @product = Product.find(params[:id])
-  end
-
-  def update
-    @product = Product.find(params[:id])
-
-    if @product.update(product_params)
-      redirect_to @product
-    else
-      render :edit, status: :unprocessable_entity
-    end
-  end
-</code></pre><h3 id="view">view</h3>
+<h1 id="ref">Ref</h1>
 <ul>
-<li>base view <br>
-create &ldquo;./app/views/product/edit.html.erb&rdquo;:</li>
-</ul>
-<pre tabindex="0"><code>&lt;h1&gt;Edit Product&lt;/h1&gt;
-
-&lt;%= render &#34;form&#34;, product: @product %&gt;
-</code></pre><ul>
-<li>Using Partials to Share View Code</li>
-</ul>
-<blockquote>
-<p>注意： 需要使用path增加url</p>
-</blockquote>
-<p>create &ldquo;./app/views/product/_form.html.erb&rdquo;:</p>
-<pre tabindex="0"><code>&lt;%= form_with url:product_path, model: product do |form| %&gt;
-  &lt;div&gt;
-    &lt;%= form.label :param_id %&gt;&lt;br&gt;
-    &lt;%= form.text_field :param_id %&gt;
-  &lt;/div&gt;
-
-  &lt;div&gt;
-    &lt;%= form.label :statu_id %&gt;&lt;br&gt;
-    &lt;%= form.text_field :statu_id %&gt;
-  &lt;/div&gt;
-
-  &lt;div&gt;
-    &lt;%= form.label :lang_id %&gt;&lt;br&gt;
-    &lt;%= form.text_field :lang_id %&gt;
-  &lt;/div&gt;
-
-  &lt;div&gt;
-    &lt;%= form.label :img_id %&gt;&lt;br&gt;
-    &lt;%= form.text_field :img_id %&gt;
-  &lt;/div&gt;
-
-  &lt;div&gt;
-    &lt;%= form.label :name %&gt;&lt;br&gt;
-    &lt;%= form.text_field :name %&gt;
-    &lt;% product.errors.full_messages_for(:name).each do |message| %&gt;
-      &lt;div&gt;&lt;%= message %&gt;&lt;/div&gt;
-    &lt;% end %&gt;
-  &lt;/div&gt;
-
-  &lt;div&gt;
-    &lt;%= form.label :description %&gt;&lt;br&gt;
-    &lt;%= form.text_area :description %&gt;&lt;br&gt;
-    &lt;% product.errors.full_messages_for(:description).each do |message| %&gt;
-      &lt;div&gt;&lt;%= message %&gt;&lt;/div&gt;
-    &lt;% end %&gt;
-  &lt;/div&gt;
-
-  &lt;div&gt;
-    &lt;%= form.submit %&gt;
-  &lt;/div&gt;
-&lt;% end %&gt;
-</code></pre><h2 id="deleting-an-product">Deleting an Product</h2>
-<p>add &ldquo;./app/controllers/product_controller.rb&rdquo;:</p>
-<pre tabindex="0"><code>  def destroy
-    @product = Product.find(params[:id])
-    @product.destroy
-
-    redirect_to root_path, status: :see_other
-  end
-</code></pre><h3 id="view-1">view</h3>
-<p>add &ldquo;./app/views/show.html.erb&rdquo;:</p>
-<pre tabindex="0"><code>&lt;ul&gt;
-  &lt;li&gt;&lt;%= link_to &#34;Edit&#34;, edit_product_path(@product) %&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;%= link_to &#34;Destroy&#34;, product_path(@product), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: &#34;Are you sure?&#34;
-                  } %&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;%= link_to &#34;Back Home&#34;, product_index_path %&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</code></pre><h1 id="ref">Ref</h1>
-<ul>
-<li><a href="https://guides.rubyonrails.org/v7.0/getting_started.html">Getting Started with Rails</a></li>
-<li><a href="https://www.rubyguides.com/2019/06/rails-params/">What Are Rails Parameters &amp; How to Use Them Correctly</a></li>
-<li><a href="https://www.ionos.com/digitalguide/server/know-how/use-mysql-with-ruby-on-rails/">How to use MySQL with your Ruby on Rails application</a></li>
-<li><a href="https://orbit.love/blog/setting-up-rails-6-and-postgresql-on-windows-using-wsl-and-ubuntu">Mysql2::Error::ConnectionError: Can&rsquo;t connect to local MySQL server</a></li>
 <li><a href="https://stackoverflow.com/a/9333316">runtimes.rb:58:in `autodetect&rsquo;: Could not find a JavaScript runtime.</a></li>
 <li><a href="https://stackoverflow.com/a/11178349">Ruby on rails route to a custom method in the controller from the view</a></li>
-<li><a href="http://guides.rubyonrails.org/routing.html#adding-more-restful-actions">Same as above</a></li>
-<li><a href="https://www.bootrails.com/blog/rails-7-bootstrap-5-tutorial/">Rails 7, Bootstrap 5 tutorial : fear and relief</a></li>
-<li><a href="https://stackoverflow.com/a/70910423">Bootstrap 5 Javascript Functions not Working in Rails 7 app</a></li>
-<li><a href="https://getbootstrap.com/docs/5.0/components/navs-tabs/#javascript-behavior">Use the tab JavaScript</a></li>
-<li><a href="https://www.sitepoint.com/community/t/how-to-generate-a-model-without-creating-a-migration-file-for-it/200679">How to generate a model without creating a migration file for it</a></li>
+<li><a href="https://eiji.dev/bulma-tabs-with-content.html">Bulma: Tabs with Content</a></li>
+<li><a href="https://bulma.io/documentation/columns/options/#multiline">bulma css grid</a></li>
 </ul>
 
     </section>
@@ -603,7 +402,7 @@ create &ldquo;./app/views/product/edit.html.erb&rdquo;:</li>
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/css-tailwind-tabs/">
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/css-bulma-tabs/">
           <section class="post">
               <h2>tabs 实现</h2>
               

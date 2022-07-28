@@ -162,12 +162,12 @@
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/css-tailwind-tabs/">tabs 实现</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/css-bulma-tabs/">tabs 实现</a></h2>
     </header>
     <section class="post-excerpt">
         
             <p>html Note: The header and body are wrapped with div!
-Header &lt;ul id=&#34;tabs&#34; class=&#34;flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400&#34;&gt; &lt;li class=&#34;mr-2&#34;&gt; &lt;a href=&#34;#home&#34; aria-current=&#34;page&#34; class=&#34;inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500&#34;&gt;Home&lt;/a&gt; &lt;/li&gt; &lt;li class=&#34;mr-2&#34;&gt; &lt;a href=&#34;#profile&#34; class=&#34;inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300&#34;&gt;Profile&lt;/a&gt; &lt;/li&gt; &lt;/ul&gt; Body &lt;!-- Tab Contents --&gt; &lt;div id=&#34;tab-contents&#34;&gt; &lt;div id=&#34;home&#34; class=&#34;p-4&#34;&gt; First tab &lt;/div&gt; &lt;div id=&#34;profile&#34; class=&#34;hidden p-4&#34;&gt; Second tab &lt;/div&gt; &lt;/div&gt; javascript let tabsContainer = document. <a class="read-more" href="/cnblogs/post/css-tailwind-tabs/">&raquo;</a></p>
+&lt;div id=&#34;tabs-with-content&#34;&gt;&lt;/div&gt; Header &lt;div class=&#34;tabs is-centered&#34;&gt; &lt;ul&gt; &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; Body &lt;div class=&#34;tabs is-centered&#34;&gt; &lt;ul&gt; &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div&gt; &lt;section class=&#34;tab-content&#34;&gt; &lt;table class=&#34;table&#34;&gt; &lt;tbody&gt; &lt;td&gt; &lt;%= image_tag &#34;#{@image.name}&#34; %&gt; &lt;/td&gt; &lt;td&gt; &lt;%= @product.description %&gt; &lt;/td&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;/section&gt; &lt;section class=&#34;tab-content&#34;&gt; &lt;%= @parameter.ipxx %&gt; &lt;/section&gt; &lt;/div&gt; javascript let tabsWithContent = (function () { let tabs = document. <a class="read-more" href="/cnblogs/post/css-bulma-tabs/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -176,8 +176,8 @@ Header &lt;ul id=&#34;tabs&#34; class=&#34;flex flex-wrap text-sm font-medium te
         
 
         
-        <time class="post-date" datetime="2022-07-20T00:26:39&#43;08:00">
-            20 Jul 2022
+        <time class="post-date" datetime="2022-07-27T00:26:39&#43;08:00">
+            27 Jul 2022
         </time>
     </footer>
 </article>
@@ -189,9 +189,12 @@ Header &lt;ul id=&#34;tabs&#34; class=&#34;flex flex-wrap text-sm font-medium te
     </header>
     <section class="post-excerpt">
         
-            <p>Prepare mysql-dev sudo apt install mysql-client libmysqlclient-dev nodejs curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -sudo apt install nodejs Yarn upload to ubuntu:
-scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.148:/home/tdtc/ install:
-sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb gems gem install mysql2gem install sprockets-rails -v &#39;~&gt; 3.4.2&#39;gem install pumagem install importmap-railsgem install turbo-rails -v &#39;~&gt; 1.1.1&#39;gem install stimulus-railsgem install tailwindcss-railsgem install jbuildergem install bootsnapgem install web-console Creating a New Rails Project new: <a class="read-more" href="/cnblogs/post/ror_getstarted/">&raquo;</a></p>
+            <p>Prepare mysql-dev sudo apt install mysql-client libmysqlclient-devgem install mysql2 nodejs curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -sudo apt install nodejs Yarn upload to ubuntu:
+scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.152:/home/tdtc/ install:
+sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb Creating a New Rails Project new:
+rails new myapp -j esbuild --css bulma -d mysql upload images windows 10:
+tar zcvf img.tar.gz ./img/ --transform s/img/images/ scp d:\projects\img.tar.gz tdtc@192.168.0.152:/home/tdtc/myapp/app/assets/ ubuntu:
+cd ~/myapp/app/assets/ tar zxvf img. <a class="read-more" href="/cnblogs/post/ror_getstarted/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -200,7 +203,7 @@ sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb gems gem in
         
 
         
-        <time class="post-date" datetime="2022-07-09T06:08:08&#43;08:00">
+        <time class="post-date" datetime="2022-07-09T14:08:08&#43;08:00">
             9 Jul 2022
         </time>
     </footer>
@@ -213,9 +216,8 @@ sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb gems gem in
     </header>
     <section class="post-excerpt">
         
-            <p>ruby-versions Rails 7 requires Ruby 2.7.0 or newer. Ruby &amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &gt;= 3.1.0 3.1.x &gt;= 1.8.11 Maintained 7.0.0 &gt;= 2.7.0 3.1.x &gt;= 1.8.11 Maintained Ruby Install ruby using rbenv.
-RbEnv Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7
-sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2. <a class="read-more" href="/cnblogs/post/ror_installation/">&raquo;</a></p>
+            <p>Ruby &amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &gt;= 3.1.0 3.1.x &gt;= 1.8.11 Maintained RbEnv Install ruby using rbenv.
+Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.5.5 sudo dnf -y install git make gcc curl openssl-devel zlib-devel libffi-devel readline-devel sqlite-devel install tar: <a class="read-more" href="/cnblogs/post/ror_installation/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -224,8 +226,8 @@ sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison b
         
 
         
-        <time class="post-date" datetime="2022-07-06T21:08:08&#43;08:00">
-            6 Jul 2022
+        <time class="post-date" datetime="2022-07-07T02:08:08&#43;08:00">
+            7 Jul 2022
         </time>
     </footer>
 </article>
