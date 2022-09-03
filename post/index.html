@@ -151,7 +151,7 @@
 	<div class="extra-pagination inner">
     <nav class="pagination" role="navigation">
 	
-	<span class="page-number">Page 1 of 4</span>
+	<span class="page-number">Page 1 of 5</span>
 	
 	    <a class="older-posts" href="/cnblogs/post/page/2/">Older Posts &rarr;</a>
 	
@@ -182,6 +182,36 @@ bcdedit /copy {current} /d &#34;Sandboxie Usage&#34; serial port bcdedit /debug 
         
         <time class="post-date" datetime="2022-09-02T23:08:08&#43;08:00">
             2 Sep 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-masm/">Setting Up Visual Studio 14/14.x for MASM32 Programming</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>down v11r
+set masm Project -&gt; Build Customizations
+checked:
+masm(.targets, .props) set entry point Linker -&gt; Advanced
+Entry Point: main set path Linker General -&gt; Additional Library Directories C:\masm32\lib; Microsoft Macro Assembler General -&gt; Include Paths
+C:\masm32\include; new file &ldquo;test1.asm&rdquo; right click &ldquo;properties&rdquo; choice &ldquo;Microsoft Macro Assembler&rdquo;
+Project -&gt; Add New Item Add New Item
+program test1.asm:
+.686.MODEL flat, cincludelib ucrt.libincludelib legacy_stdio_definitions.lib;Function prototypes printf proto arg1:ptr byte, printlist:vararg. <a class="read-more" href="/cnblogs/post/vc-masm/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-09-01T23:08:08&#43;08:00">
+            1 Sep 2022
         </time>
     </footer>
 </article>
@@ -391,37 +421,10 @@ Tag Key/value pair that identifies certain information in the span. <a class="re
 </article>
 
 	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/es6p-install/">Elasticsearch 6 plus(6, 7) 安装</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Ubuntu 20.04.1
-参考&ldquo;Elasticsearch 2.4 安装&rdquo;
-down 查看版本列表 手动输入版本号 curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.4-linux-x86_64.tar.gz config bootstrap bootstrap.system_call_filter: false 其中
-bootstrap.seccomp: false 在高版本已不可用。
-discovery single-node:
-discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-head.git install nodejs cd elasticsearch-headyarnyarn run start open http://localhost:9100/ <a class="read-more" href="/cnblogs/post/es6p-install/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-05-19T10:08:08&#43;08:00">
-            19 May 2022
-        </time>
-    </footer>
-</article>
-
-	
 
 	<nav class="pagination" role="navigation">
 	
-	<span class="page-number">Page 1 of 4</span>
+	<span class="page-number">Page 1 of 5</span>
 	
 	    <a class="older-posts" href="/cnblogs/post/page/2/">Older Posts &rarr;</a>
 	

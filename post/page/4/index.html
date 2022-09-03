@@ -153,11 +153,37 @@
 	
 	    <a class="newer-posts" href="/cnblogs/post/page/3/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 4 of 4</span>
+	<span class="page-number">Page 4 of 5</span>
+	
+	    <a class="older-posts" href="/cnblogs/post/page/5/">Older Posts &rarr;</a>
 	
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-enc28j60-driver/">enc28j60 driver - sam4s</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>SPI 通过ASF示例(iar)改写为Keil(mdk v5.18a)
+Init 在初始化过程中需要mck(Master Clock Sources)。
+uint32_t sysclk_get_peripheral_hz() { /* CONFIG_SYSCLK_PRES is the register value for setting the expected */ /* prescaler, not an immediate value. */ return sysclk_get_main_hz() / ((CONFIG_SYSCLK_PRES == SYSCLK_PRES_3) ? 3 : (1 &lt;&lt; (CONFIG_SYSCLK_PRES &gt;&gt; PMC_MCKR_PRES_Pos))); } pio Pull-up Enable PIO Disable spi master init Enable peripheral clock Set spi master mode Disable Mode Fault Detection Disable loopback mode Set Peripheral Chip Select (PCS) value Set fixed peripheral select Disable Peripheral Select Decode Set delay between chip selects spi master setup device spi calc baudrate div Configure timing for SPI transfer Set number of bits per transfer Set Serial Clock Baud Rate divider value (SCBR) Configure CS behavior for SPI transfer (\ref spi_cs_behavior_t) Set clock default state Set Data Capture Phase spi calc baudrate div short spi_calc_baudrate_div(const uint32_t baudrate, uint32_t mck) { int baud_div = div_ceil(mck, baudrate); /* The value of baud_div is from 1 to 255 in the SCBR field. <a class="read-more" href="/cnblogs/post/e-enc28j60-driver/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-02-28T17:08:08&#43;08:00">
+            28 Feb 2021
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -384,34 +410,14 @@ const initialState = { &#34;recipes&#34;: [ { &#34;name&#34;: &#34;Omelette&#34;
 </article>
 
 	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-lambda/">JS的lambda表达式</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Before rewriting function selectedReddit(state = &#39;user/8&#39;, action){ switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } After rewriting const selectedReddit = (state = &#39;user/8&#39;, action) =&gt; { switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } 参考 《Arrow functions》 <a class="read-more" href="/cnblogs/post/js-lambda/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-04-10T02:14:39&#43;08:00">
-            10 Apr 2020
-        </time>
-    </footer>
-</article>
-
-	
 
 	<nav class="pagination" role="navigation">
 	
 	    <a class="newer-posts" href="/cnblogs/post/page/3/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 4 of 4</span>
+	<span class="page-number">Page 4 of 5</span>
+	
+	    <a class="older-posts" href="/cnblogs/post/page/5/">Older Posts &rarr;</a>
 	
 </nav>
 

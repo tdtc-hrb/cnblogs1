@@ -22,6 +22,23 @@ bcdedit /copy {current} /d &amp;#34;Sandboxie Usage&amp;#34; serial port bcdedit
     </item>
     
     <item>
+      <title>Setting Up Visual Studio 14/14.x for MASM32 Programming</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</link>
+      <pubDate>Thu, 01 Sep 2022 23:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</guid>
+      <description>down v11r
+set masm Project -&amp;gt; Build Customizations
+checked:
+masm(.targets, .props) set entry point Linker -&amp;gt; Advanced
+Entry Point: main set path Linker General -&amp;gt; Additional Library Directories C:\masm32\lib; Microsoft Macro Assembler General -&amp;gt; Include Paths
+C:\masm32\include; new file &amp;ldquo;test1.asm&amp;rdquo; right click &amp;ldquo;properties&amp;rdquo; choice &amp;ldquo;Microsoft Macro Assembler&amp;rdquo;
+Project -&amp;gt; Add New Item Add New Item
+program test1.asm:
+.686.MODEL flat, cincludelib ucrt.libincludelib legacy_stdio_definitions.lib;Function prototypes printf proto arg1:ptr byte, printlist:vararg.</description>
+    </item>
+    
+    <item>
       <title>tabs 实现</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/css-bulma-tabs/</link>
       <pubDate>Wed, 27 Jul 2022 00:26:39 +0800</pubDate>
