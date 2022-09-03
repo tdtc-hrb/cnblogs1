@@ -164,6 +164,30 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/trace-zipkin-config/">Distributed traceability with Spring Cloud: Sleuth and Zipkin</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>I. Sleuth 0. Concept Trace A set of spans that form a call tree structure, forms the trace of the request.
+Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests.
+Tag Key/value pair that identifies certain information in the span. <a class="read-more" href="/cnblogs/post/trace-zipkin-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-05-25T08:08:08&#43;08:00">
+            25 May 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/es6p-install/">Elasticsearch 6 plus(6, 7) 安装</a></h2>
     </header>
     <section class="post-excerpt">
@@ -396,35 +420,6 @@ $ docker --version Docker compose 1. down sudo curl -L &#34;https://github. <a c
         
         <time class="post-date" datetime="2021-11-20T10:48:08&#43;08:00">
             20 Nov 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/sqlite.net.core/">SQLite在.net core的demo</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>IDE: VS2022 语言: C#
-简介： 本示例使用SQLite的密码、外键功能。
-一、工程设置 1. NuGet Tools -&gt; NuGet Package Manager -&gt; Package Manager Console Install-Package sqlite-net-pcl -Version 1.8.116 Install-Package sqlite-net-sqlcipher -Version 1.8.116 完整的窗体： 2. 控件 拖拽4个TextBox、4个Button、1个DataGridView
-二、功能实现 使用Synchronous API来实现连接、factoryCar表的查询、插入等操作。
-0. Entity class 注意：主键和外键
-建立两个实体类：FactoryCar和MarqueCar
-1. 连接 asyncConn = new SQLite.SQLiteAsyncConnection(options); 其中，options是SQLiteConnectionString实例化的字符串。
-var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, preKeyAction: db =&gt; db.Execute(&#34;PRAGMA cipher_default_use_hmac = OFF;&#34;), postKeyAction: db =&gt; db.Execute(&#34;PRAGMA kdf_iter = 128000;&#34;)); 2. 查询 异步查询 var factoryCars = asyncConn. <a class="read-more" href="/cnblogs/post/sqlite.net.core/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-19T19:18:08&#43;08:00">
-            19 Nov 2021
         </time>
     </footer>
 </article>

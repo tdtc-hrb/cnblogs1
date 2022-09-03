@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="使用 NSIS (Nullsoft Scriptable Install System)"/>
+<meta name="twitter:description" content="生成sandboxie的安装分发"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="使用 NSIS (Nullsoft Scriptable Install System) &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/ops_install-distribution_nsis/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="生成sandboxie的安装分发" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2022-09-03T00:08:08&#43;08:00" />
+
+    
+    
+
+    <title>使用 NSIS (Nullsoft Scriptable Install System) &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="生成sandboxie的安装分发" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.102.3" />
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/ops_install-distribution_nsis/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "使用 NSIS (Nullsoft Scriptable Install System)",
+    "name": "使用 NSIS (Nullsoft Scriptable Install System)",
+    "wordCount":  143 ,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/ops_install-distribution_nsis/",
+    "datePublished": "2022-09-03T00:08Z",
+    "dateModified": "2022-09-03T00:08Z",
+    
+    
+    "description": "生成sandboxie的安装分发",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/ops_install-distribution_nsis/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">使用 NSIS (Nullsoft Scriptable Install System)</h1>
+        <small>生成sandboxie的安装分发</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2022-09-03T00:08:08&#43;08:00">
+            Sep 3, 2022
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>编译xp目标，<a href="https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2017/install/workload-component-id-vs-build-tools?view=vs-2017">vs2015 for xp</a> 
+需要如下组件:</p>
+<pre tabindex="0"><code>Microsoft.VisualStudio.Component.VC.140
+Microsoft.VisualStudio.Component.WinXP
+</code></pre><p>在目标机xp 安装<a href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=53587">Microsoft Visual C++ 2015 Redistributable Update 3</a></p>
+<ul>
+<li>OS <br>
+Win1809(x64)</li>
+<li>VS2017(v15.9)</li>
+</ul>
+<h1 id="installation">Installation</h1>
+<p>down <a href="https://sourceforge.net/projects/nsis/files/NSIS%202/2.51/">v2.51</a></p>
+<h2 id="inetchttpsnsissourceforgeioinetc_plug-in"><a href="https://nsis.sourceforge.io/Inetc_plug-in">InetC</a></h2>
+<p>From Inetc.zip, copy \Plugins\x86-ansi\InetC.dll to your NSIS plugins folder (e.g. C:\Program Files (x86)\NSIS\Plugins)</p>
+<h2 id="ui">UI</h2>
+<ul>
+<li>System.nsh <br>
+Overwrite C:\Program Files (x86)\NSIS\Contrib\Modern UI\System.nsh with install\nsis_updates.zip\nsis\Contrib\Modern UI\System.nsh</li>
+<li>Languages <br>
+Copy language files from install\nsis_updates.zip\nsis\Contrib\Modern UI\Language files to</li>
+</ul>
+<pre tabindex="0"><code>C:\Program Files (x86)\NSIS\Contrib\Modern UI\Language files
+</code></pre><h2 id="iconv">Iconv</h2>
+<p>down <a href="https://sourceforge.net/projects/gnuwin32/files/libiconv/1.9.2-1/libiconv-1.9.2-1-bin.zip/download">libiconv-1.9.2-1-bin.zip</a> 
+and <a href="https://sourceforge.net/projects/gnuwin32/files/libiconv/1.9.2-1/libiconv-1.9.2-1-dep.zip/download">libiconv-1.9.2-1-dep.zip</a></p>
+<p>location:</p>
+<pre tabindex="0"><code>C:\Users\tdtc\Documents\sandboxie\tools\iconv
+</code></pre><p>These contain the 3 binaries that are required:</p>
+<ul>
+<li>Iconv.exe</li>
+<li>Libiconv2.dll</li>
+<li>Libintl3.dll</li>
+</ul>
+<h1 id="usage">usage</h1>
+<ul>
+<li>configure NSIS Project</li>
+<li>build Visual Studio Solution</li>
+<li>Generate installer file</li>
+</ul>
+<h2 id="project-file">project file</h2>
+<p>更改install\SandboxieVS.nsi.</p>
+<h3 id="arch">arch</h3>
+<pre tabindex="0"><code>!define _BUILDARCH		Win32
+;!define _BUILDARCH		x64
+</code></pre><p>默认为32位</p>
+<h3 id="compatible-with-xp">Compatible with XP</h3>
+<p>移除&quot;SystemCheck_Done_XP_2003&quot;前面的&quot;;&quot;.</p>
+<p>Ln559&amp;Ln560:</p>
+<pre tabindex="0"><code>StrCmp $0 &#34;5.1&#34; SystemCheck_Done_XP_2003
+StrCmp $0 &#34;5.2&#34; SystemCheck_Done_XP_2003
+</code></pre><p>Ln577:</p>
+<pre tabindex="0"><code>SystemCheck_Done_XP_2003:
+</code></pre><h2 id="compile-sln">compile sln</h2>
+<p>编译vs项目文件，以生成application(exe, dll and sys file).</p>
+<p>location:</p>
+<ul>
+<li>x86</li>
+</ul>
+<pre tabindex="0"><code>Bin\Win32
+</code></pre><ul>
+<li>x64</li>
+</ul>
+<pre tabindex="0"><code>Bin\x64
+</code></pre><h2 id="exec-nsis">exec NSIS</h2>
+<p>In Explorer, Right-click \install\SandboxieVS.nsi and select &ldquo;Compile NSIS Script&rdquo;; <br>
+Generate SandboxieInstall32.exe or SandboxieInstall64.exe.</p>
+<h1 id="ref">Ref</h1>
+<ul>
+<li><a href="https://gitee.com/xiaobin80/sandboxie/blob/master/install/ReadMe.txt">sandboxie install</a></li>
+</ul>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e4%bd%bf%e7%94%a8%20NSIS%20%28Nullsoft%20Scriptable%20Install%20System%29&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_install-distribution_nsis%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_install-distribution_nsis%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_install-distribution_nsis%2f&amp;description=%e4%bd%bf%e7%94%a8%20NSIS%20%28Nullsoft%20Scriptable%20Install%20System%29"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_install-distribution_nsis%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/vc-windbg_driver/">
+          <section class="post">
+              <h2>使用windbg调试driver</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+
