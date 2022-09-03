@@ -33,9 +33,8 @@ checked:
 masm(.targets, .props) set entry point Linker -&amp;gt; Advanced
 Entry Point: main set path Linker General -&amp;gt; Additional Library Directories C:\masm32\lib; Microsoft Macro Assembler General -&amp;gt; Include Paths
 C:\masm32\include; new file &amp;ldquo;test1.asm&amp;rdquo; right click &amp;ldquo;properties&amp;rdquo; choice &amp;ldquo;Microsoft Macro Assembler&amp;rdquo;
-Project -&amp;gt; Add New Item Add New Item
-program test1.asm:
-.686.MODEL flat, cincludelib ucrt.libincludelib legacy_stdio_definitions.lib;Function prototypes printf proto arg1:ptr byte, printlist:vararg.</description>
+Project -&amp;gt; Add New Item program test1.asm:
+.686.MODEL flat, cincludelib ucrt.libincludelib legacy_stdio_definitions.lib;Function prototypes printf proto arg1:ptr byte, printlist:vararg.datamsg1fmt byte &amp;#34;%s%d&amp;#34;,0Ah,0msg1 byte &amp;#34;y: &amp;#34;,0x sdword ?</description>
     </item>
     
     <item>

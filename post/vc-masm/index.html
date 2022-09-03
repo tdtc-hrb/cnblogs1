@@ -92,7 +92,7 @@
     },
     "headline": "Setting Up Visual Studio 14/14.x for MASM32 Programming",
     "name": "Setting Up Visual Studio 14/14.x for MASM32 Programming",
-    "wordCount":  130 ,
+    "wordCount":  135 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
@@ -198,7 +198,7 @@ General -&gt; Additional Library Directories</li>
 <pre tabindex="0"><code>C:\masm32\include;
 </code></pre><p>new file &ldquo;test1.asm&rdquo; right click &ldquo;properties&rdquo; choice &ldquo;Microsoft Macro Assembler&rdquo;</p>
 <pre tabindex="0"><code>Project -&gt; Add New Item
-</code></pre><p><a href="https://github.com/tdtc-hrb/cnblogs/raw/master/images/Add-New-Item_vc141.png">Add New Item</a></p>
+</code></pre><p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/Add-New-Item_vc141.png" alt="Add New Item"></p>
 <h2 id="program">program</h2>
 <p>test1.asm:</p>
 <pre tabindex="0"><code>.686
@@ -218,11 +218,14 @@ y       sdword ?
 
 .code
         align 4
-        ;y = 2 + 3
+        
 main    PROC
         mov eax, 3h
         mov x, eax
-        add eax, 2h
+        ;;y = 2 + 3
+        ;add eax, 2h
+        ;;y = 3 - 2
+        sub eax, 2h
         mov y, eax
 
         invoke printf, ADDR msg1fmt, ADDR msg1, y

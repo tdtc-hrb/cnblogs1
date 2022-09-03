@@ -199,9 +199,8 @@ checked:
 masm(.targets, .props) set entry point Linker -&gt; Advanced
 Entry Point: main set path Linker General -&gt; Additional Library Directories C:\masm32\lib; Microsoft Macro Assembler General -&gt; Include Paths
 C:\masm32\include; new file &ldquo;test1.asm&rdquo; right click &ldquo;properties&rdquo; choice &ldquo;Microsoft Macro Assembler&rdquo;
-Project -&gt; Add New Item Add New Item
-program test1.asm:
-.686.MODEL flat, cincludelib ucrt.libincludelib legacy_stdio_definitions.lib;Function prototypes printf proto arg1:ptr byte, printlist:vararg. <a class="read-more" href="/cnblogs/post/vc-masm/">&raquo;</a></p>
+Project -&gt; Add New Item program test1.asm:
+.686.MODEL flat, cincludelib ucrt.libincludelib legacy_stdio_definitions.lib;Function prototypes printf proto arg1:ptr byte, printlist:vararg.datamsg1fmt byte &#34;%s%d&#34;,0Ah,0msg1 byte &#34;y: &#34;,0x sdword ? <a class="read-more" href="/cnblogs/post/vc-masm/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
