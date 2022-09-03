@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-07-09T14:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-07-09T16:08:08&#43;08:00" />
 
     
     
@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.102.3" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/" />
 
@@ -92,15 +92,15 @@
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  363 ,
+    "wordCount":  359 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/",
-    "datePublished": "2022-07-09T14:08Z",
-    "dateModified": "2022-07-09T14:08Z",
+    "datePublished": "2022-07-09T16:08Z",
+    "dateModified": "2022-07-09T16:08Z",
     
     
     "description": "",
@@ -168,7 +168,7 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-07-09T14:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-07-09T16:08:08&#43;08:00">
             Jul 9, 2022
           </time>
         
@@ -213,22 +213,22 @@ password: qaz1xsw2
 <pre tabindex="0"><code>host: 192.168.0.104
 </code></pre><h1 id="retrieval">Retrieval</h1>
 <pre tabindex="0"><code>cd myapp
-rails generate controller Product index --skip-routes -T
+rails generate controller Product index --skip-routes
 </code></pre><h2 id="data-manage">data manage</h2>
 <pre tabindex="0"><code>rails console
 </code></pre><h3 id="model">model</h3>
 <ul>
 <li>Parameter</li>
 </ul>
-<pre tabindex="0"><code>rails generate model Parameter --skip-migration -T
+<pre tabindex="0"><code>rails generate model Parameter --skip-migration
 </code></pre><ul>
 <li>Image</li>
 </ul>
-<pre tabindex="0"><code>rails generate model Image --skip-migration -T
+<pre tabindex="0"><code>rails generate model Image --skip-migration
 </code></pre><ul>
 <li>Product</li>
 </ul>
-<pre tabindex="0"><code>rails generate model Product parameter:references image:references --skip-migration -T
+<pre tabindex="0"><code>rails generate model Product parameter:references image:references --skip-migration
 </code></pre><h3 id="3nf">3NF</h3>
 <ul>
 <li>Parameter <br>

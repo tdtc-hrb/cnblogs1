@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.102.3" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -160,6 +160,35 @@
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-print-tree/"> 使用ts/js打印tree</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>一棵&quot;树&quot;就是由空格、星号和回车组成的。 我们用a，代表空格。
+注意：空格在HTML编码为：“ ”。
+aaaa* aaa*** aa***** a******* ********* aaaa* aaaa* aaaa* aaaa* aaaa* 首先“树头”部分由3部分组成：空格部分、左树头、右树头。 空格就是递减的过程：
+for (let i = treeRadius; i &gt; k; i--) { document.write(&#34; &#34;); } 左树头，包括中线
+for (let i = 0; i &lt; k + 1; i++) { document.write(&#34;*&#34;); } 右树头，递增过程：
+for (let j = 0; j &lt; k; j++) { document.write(&#34;b&#34;); } 然后，“树干”部分由2部分组成：空格部分和中线部分
+空格就是按照指定的半径数“占位”：
+for (let j = 0; j &lt; treeRadius; j++) { document.write(&#34; &#34;); } 中线就是每次循环时打印一个* <a class="read-more" href="/cnblogs/post/js-print-tree/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-15T14:15:39&#43;08:00">
+            15 Nov 2021
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -393,30 +422,6 @@ uint32_t sysclk_get_peripheral_hz() { /* CONFIG_SYSCLK_PRES is the register valu
         
         <time class="post-date" datetime="2021-02-28T17:08:08&#43;08:00">
             28 Feb 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/dev-service_registry-zk/">ZooKeeper Installation(Dev)</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Install ZooKeeper packages
-# sudo apt-get install openjdk-8-jre-headless # sudo apt-get install zookeeper zookeeperd If you need a cluster, configure the Conf file, otherwise ignore it.
-Configure ZooKeeper Common Configuration Edit the /etc/zookeeper/conf/zoo.cfg file to contain the following: server.1=nsdb1:2888:3888 server.2=nsdb2:2888:3888 server.3=nsdb3:2888:3888 autopurge.snapRetainCount=10 autopurge.purgeInterval =12 [Important] Important For production deployments it is recommended to configure the storage of snapshots in a different disk than the commit log, this is done by setting the parameters dataDir and dataLogDir in zoo. <a class="read-more" href="/cnblogs/post/dev-service_registry-zk/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T18:08:08&#43;08:00">
-            16 May 2020
         </time>
     </footer>
 </article>

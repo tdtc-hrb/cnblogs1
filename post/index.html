@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.102.3" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -162,6 +162,33 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-windbg_driver/">使用windbg调试driver</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp; windows sdk8.1.
+Prepare Host Env:
+OS Win1809(x64) VM v10.0.7 Guest Env:
+Win7 SP1(x86) latest update Sandboxie v5.40(x86) guest os After each startup, press F8 (laptop Fn+F8):
+Disable Driver Signature Enforcement display os list Add an OS to display the OS list:
+bcdedit /copy {current} /d &#34;Sandboxie Usage&#34; serial port bcdedit /debug on bcdedit /dbgsettings serial debugport:2 baudrate:115200 install application setup &ldquo;SandboxieInstall32.exe&rdquo; <a class="read-more" href="/cnblogs/post/vc-windbg_driver/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-09-02T23:08:08&#43;08:00">
+            2 Sep 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/css-bulma-tabs/">tabs 实现</a></h2>
     </header>
     <section class="post-excerpt">
@@ -203,7 +230,7 @@ cd ~/myapp/app/assets/ tar zxvf img. <a class="read-more" href="/cnblogs/post/ro
         
 
         
-        <time class="post-date" datetime="2022-07-09T14:08:08&#43;08:00">
+        <time class="post-date" datetime="2022-07-09T16:08:08&#43;08:00">
             9 Jul 2022
         </time>
     </footer>
@@ -386,33 +413,6 @@ discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-h
         
         <time class="post-date" datetime="2022-05-19T10:08:08&#43;08:00">
             19 May 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/vc-sqlite3lib/">生成SQLite静态库</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>SQLite3 X:
-3380500 X: 当前版本号
-Debug版 Source Code -&gt; sqlite-amalgamation-X.zip
-新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了） 添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。 编译工程 预编译头文件 如果不更改会出现如下错误：
-sqlite3.c : fatal error C1853: &#39;Debug\sqlite3.pch&#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header
-Not Using Precompiled Headers 生成文件类型 Project ==&gt; Properties ==&gt; General <a class="read-more" href="/cnblogs/post/vc-sqlite3lib/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-05-18T21:08:08&#43;08:00">
-            18 May 2022
         </time>
     </footer>
 </article>

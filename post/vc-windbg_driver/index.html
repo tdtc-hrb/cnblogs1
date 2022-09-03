@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="使用windbg调试driver"/>
+<meta name="twitter:description" content="串口方式调试sandboxie"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="使用windbg调试driver &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="串口方式调试sandboxie" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2022-09-02T23:08:08&#43;08:00" />
+
+    
+    
+
+    <title>使用windbg调试driver &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="串口方式调试sandboxie" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.102.3" />
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "使用windbg调试driver",
+    "name": "使用windbg调试driver",
+    "wordCount":  169 ,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/",
+    "datePublished": "2022-09-02T23:08Z",
+    "dateModified": "2022-09-02T23:08Z",
+    
+    
+    "description": "串口方式调试sandboxie",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">使用windbg调试driver</h1>
+        <small>串口方式调试sandboxie</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2022-09-02T23:08:08&#43;08:00">
+            Sep 2, 2022
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>Sandboxie builds under <a href="https://gitee.com/xiaobin80/sandboxie/blob/master/ReadMe.md">MS Visual Studio 2015</a>. <br>
+可以升级到vs2017 &amp; windows sdk8.1.</p>
+<h1 id="prepare">Prepare</h1>
+<p>Host Env:</p>
+<ul>
+<li>OS <br>
+Win1809(x64)</li>
+<li>VM <br>
+v10.0.7</li>
+</ul>
+<p>Guest Env:</p>
+<ul>
+<li>Win7 SP1(x86) <a href="https://blog.simplix.info/update7/">latest update</a></li>
+<li>Sandboxie v5.40(x86)</li>
+</ul>
+<h2 id="guest-os">guest os</h2>
+<p>After each startup, press F8 (laptop Fn+F8):</p>
+<pre tabindex="0"><code>Disable Driver Signature Enforcement
+</code></pre><h3 id="display-os-list">display os list</h3>
+<p>Add an OS to display the OS list:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>bcdedit /copy {current} /d <span style="color:#e6db74">&#34;Sandboxie Usage&#34;</span>
+</span></span></code></pre></div><h3 id="serial-port">serial port</h3>
+<pre tabindex="0"><code>bcdedit /debug on
+</code></pre><pre tabindex="0"><code>bcdedit /dbgsettings serial debugport:2 baudrate:115200
+</code></pre><h3 id="install-application">install application</h3>
+<p>setup &ldquo;SandboxieInstall32.exe&rdquo;</p>
+<h2 id="host-os">host os</h2>
+<p>Compile the source code with vs2017 in order to generate pdb.</p>
+<h3 id="serial-port-1">serial port</h3>
+<blockquote>
+<p>vmware or vbox</p>
+</blockquote>
+<pre tabindex="0"><code>\\.\pipe\com_1
+</code></pre><p>i/o mode:</p>
+<pre tabindex="0"><code>yield CPU on poll
+</code></pre><h1 id="start-working">start working</h1>
+<ul>
+<li>Visual Studio 2017</li>
+<li>WDK <br>
+v7.1</li>
+</ul>
+<h2 id="kernel-debug">kernel debug</h2>
+<p>com:</p>
+<ul>
+<li>port</li>
+</ul>
+<pre tabindex="0"><code>\\.\pipe\com_1
+</code></pre><ul>
+<li>
+<p>pipe
+checked</p>
+</li>
+<li>
+<p>reconnect
+checked</p>
+</li>
+</ul>
+<h3 id="path">path</h3>
+<p>config:</p>
+<pre tabindex="0"><code>.sympath SRV*c:\symbols*http://msdl.microsoft.com/download/symbols
+</code></pre><p>details:</p>
+<pre tabindex="0"><code>!sym noisy
+</code></pre><p>把需要调试的pdb放入指定的文件夹。 
+注意每次调试新os的时候，文件夹位置会不同!!! <br>
+For example, the first time:</p>
+<pre tabindex="0"><code>C:\symbols\SbieDrv.pdb\BF241AE76B2D4145B6A1B57B13335E8C1
+</code></pre><p>the second time:</p>
+<pre tabindex="0"><code>C:\symbols\SbieDrv.pdb\0E2CD29D03C843D0BC754B60E370E4402
+</code></pre><h3 id="command">command</h3>
+<p>如果显示未连接，或显示&quot;debugee running&quot;:</p>
+<pre tabindex="0"><code>Debug -&gt; Break
+</code></pre><p>all modules:</p>
+<pre tabindex="0"><code>.reload /f
+</code></pre><p>Specified module:</p>
+<pre tabindex="0"><code>.reload /f /i SbieDrv.sys
+</code></pre><p>list modules:</p>
+<pre tabindex="0"><code>lm
+</code></pre><p>quit:</p>
+<pre tabindex="0"><code>q
+</code></pre><h1 id="ref">Ref</h1>
+<ul>
+<li><a href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/debugger/">Windows 调试工具（WinDbg、KD、CDB、NTSD）</a></li>
+<li><a href="http://windbg.info/doc/1-common-cmds.html">command</a></li>
+<li><a href="https://www.technlg.net/windows/symbol-server-path-windbg-debugging/">Debugging using Windbg : Symbols loading</a></li>
+<li><a href="https://www.triplefault.io/2017/07/setting-up-kernel-debugging-using.html">Setting up kernel debugging using WinDbg and VMware</a></li>
+</ul>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e4%bd%bf%e7%94%a8windbg%e8%b0%83%e8%af%95driver&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-windbg_driver%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-windbg_driver%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-windbg_driver%2f&amp;description=%e4%bd%bf%e7%94%a8windbg%e8%b0%83%e8%af%95driver"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-windbg_driver%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/css-bulma-tabs/">
+          <section class="post">
+              <h2>tabs 实现</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+

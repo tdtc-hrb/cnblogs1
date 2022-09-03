@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.102.3" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -160,6 +160,33 @@
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-sqlite3lib/">生成SQLite静态库</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>SQLite3 X:
+3380500 X: 当前版本号
+Debug版 Source Code -&gt; sqlite-amalgamation-X.zip
+新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了） 添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。 编译工程 预编译头文件 如果不更改会出现如下错误：
+sqlite3.c : fatal error C1853: &#39;Debug\sqlite3.pch&#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header
+Not Using Precompiled Headers 生成文件类型 Project ==&gt; Properties ==&gt; General <a class="read-more" href="/cnblogs/post/vc-sqlite3lib/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-05-18T21:08:08&#43;08:00">
+            18 May 2022
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -394,35 +421,6 @@ var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, pre
         
         <time class="post-date" datetime="2021-11-18T02:18:39&#43;08:00">
             18 Nov 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-print-tree/"> 使用ts/js打印tree</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>一棵&quot;树&quot;就是由空格、星号和回车组成的。 我们用a，代表空格。
-注意：空格在HTML编码为：“ ”。
-aaaa* aaa*** aa***** a******* ********* aaaa* aaaa* aaaa* aaaa* aaaa* 首先“树头”部分由3部分组成：空格部分、左树头、右树头。 空格就是递减的过程：
-for (let i = treeRadius; i &gt; k; i--) { document.write(&#34; &#34;); } 左树头，包括中线
-for (let i = 0; i &lt; k + 1; i++) { document.write(&#34;*&#34;); } 右树头，递增过程：
-for (let j = 0; j &lt; k; j++) { document.write(&#34;b&#34;); } 然后，“树干”部分由2部分组成：空格部分和中线部分
-空格就是按照指定的半径数“占位”：
-for (let j = 0; j &lt; treeRadius; j++) { document.write(&#34; &#34;); } 中线就是每次循环时打印一个* <a class="read-more" href="/cnblogs/post/js-print-tree/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-15T14:15:39&#43;08:00">
-            15 Nov 2021
         </time>
     </footer>
 </article>
