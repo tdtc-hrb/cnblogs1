@@ -162,6 +162,33 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-windbg_driver/">使用windbg调试driver</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp; windows sdk8.1.
+Prepare Host Env:
+OS Win1809(x64) VM v10.0.7 Guest Env:
+Win7 SP1(x86) latest update Sandboxie v5.40(x86) guest os After each startup, press F8 (laptop Fn+F8):
+Disable Driver Signature Enforcement display os list Add an OS to display the OS list:
+bcdedit /copy {current} /d &#34;Sandboxie Usage&#34; serial port bcdedit /debug on bcdedit /dbgsettings serial debugport:2 baudrate:115200 install application setup &ldquo;SandboxieInstall32.exe&rdquo; <a class="read-more" href="/cnblogs/post/vc-windbg_driver/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-09-04T23:08:08&#43;08:00">
+            4 Sep 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/ops_install-distribution_nsis/">使用 NSIS (Nullsoft Scriptable Install System)</a></h2>
     </header>
     <section class="post-excerpt">
@@ -183,33 +210,6 @@ C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that 
         
         <time class="post-date" datetime="2022-09-03T00:08:08&#43;08:00">
             3 Sep 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/vc-windbg_driver/">使用windbg调试driver</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp; windows sdk8.1.
-Prepare Host Env:
-OS Win1809(x64) VM v10.0.7 Guest Env:
-Win7 SP1(x86) latest update Sandboxie v5.40(x86) guest os After each startup, press F8 (laptop Fn+F8):
-Disable Driver Signature Enforcement display os list Add an OS to display the OS list:
-bcdedit /copy {current} /d &#34;Sandboxie Usage&#34; serial port bcdedit /debug on bcdedit /dbgsettings serial debugport:2 baudrate:115200 install application setup &ldquo;SandboxieInstall32.exe&rdquo; <a class="read-more" href="/cnblogs/post/vc-windbg_driver/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-09-02T23:08:08&#43;08:00">
-            2 Sep 2022
         </time>
     </footer>
 </article>

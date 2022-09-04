@@ -6,7 +6,21 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 03 Sep 2022 00:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Sep 2022 23:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用windbg调试driver</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</link>
+      <pubDate>Sun, 04 Sep 2022 23:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</guid>
+      <description>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp;amp; windows sdk8.1.
+Prepare Host Env:
+OS Win1809(x64) VM v10.0.7 Guest Env:
+Win7 SP1(x86) latest update Sandboxie v5.40(x86) guest os After each startup, press F8 (laptop Fn+F8):
+Disable Driver Signature Enforcement display os list Add an OS to display the OS list:
+bcdedit /copy {current} /d &amp;#34;Sandboxie Usage&amp;#34; serial port bcdedit /debug on bcdedit /dbgsettings serial debugport:2 baudrate:115200 install application setup &amp;ldquo;SandboxieInstall32.exe&amp;rdquo;</description>
+    </item>
+    
     <item>
       <title>使用 NSIS (Nullsoft Scriptable Install System)</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_install-distribution_nsis/</link>
@@ -20,20 +34,6 @@ InetC From Inetc.zip, copy \Plugins\x86-ansi\InetC.dll to your NSIS plugins fold
 UI System.nsh Overwrite C:\Program Files (x86)\NSIS\Contrib\Modern UI\System.nsh with install\nsis_updates.zip\nsis\Contrib\Modern UI\System.nsh Languages Copy language files from install\nsis_updates.zip\nsis\Contrib\Modern UI\Language files to C:\Program Files (x86)\NSIS\Contrib\Modern UI\Language files Iconv down libiconv-1.9.2-1-bin.zip and libiconv-1.9.2-1-dep.zip
 location:
 C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that are required:</description>
-    </item>
-    
-    <item>
-      <title>使用windbg调试driver</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</link>
-      <pubDate>Fri, 02 Sep 2022 23:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</guid>
-      <description>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp;amp; windows sdk8.1.
-Prepare Host Env:
-OS Win1809(x64) VM v10.0.7 Guest Env:
-Win7 SP1(x86) latest update Sandboxie v5.40(x86) guest os After each startup, press F8 (laptop Fn+F8):
-Disable Driver Signature Enforcement display os list Add an OS to display the OS list:
-bcdedit /copy {current} /d &amp;#34;Sandboxie Usage&amp;#34; serial port bcdedit /debug on bcdedit /dbgsettings serial debugport:2 baudrate:115200 install application setup &amp;ldquo;SandboxieInstall32.exe&amp;rdquo;</description>
     </item>
     
     <item>

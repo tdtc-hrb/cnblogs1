@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="串口方式调试sandboxie" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-09-02T23:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-09-04T23:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "使用windbg调试driver",
     "name": "使用windbg调试driver",
-    "wordCount":  169 ,
-    "timeRequired": "PT1M",
+    "wordCount":  239 ,
+    "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/",
-    "datePublished": "2022-09-02T23:08Z",
-    "dateModified": "2022-09-02T23:08Z",
+    "datePublished": "2022-09-04T23:08Z",
+    "dateModified": "2022-09-04T23:08Z",
     
     
     "description": "串口方式调试sandboxie",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-09-02T23:08:08&#43;08:00">
-            Sep 2, 2022
+          <time class="post-date" datetime="2022-09-04T23:08:08&#43;08:00">
+            Sep 4, 2022
           </time>
         
          
@@ -205,13 +205,23 @@ v10.0.7</li>
 <p>setup &ldquo;SandboxieInstall32.exe&rdquo;</p>
 <h2 id="host-os">host os</h2>
 <p>Compile the source code with vs2017 in order to generate pdb.</p>
-<h3 id="serial-port-1">serial port</h3>
+<ul>
+<li>ShortCute <br>
+If you use a shortcut, you don&rsquo;t need to set the download path in the command.</li>
+</ul>
+<pre tabindex="0"><code>C:\WinDDK\7600.16385.1\Debuggers\windbg.exe -y &#34;srv*c:\symbols*https://msdl.microsoft.com/download/symbols&#34;
+</code></pre><h3 id="serial-port-1">serial port</h3>
 <blockquote>
 <p>vmware or vbox</p>
 </blockquote>
 <pre tabindex="0"><code>\\.\pipe\com_1
-</code></pre><p>i/o mode:</p>
+</code></pre><h4 id="vmware">vmware</h4>
+<p>i/o mode:</p>
 <pre tabindex="0"><code>yield CPU on poll
+</code></pre><h4 id="vbox">vbox</h4>
+<p>Port 2: <br>
+uncheck:</p>
+<pre tabindex="0"><code>Connect to existing pipe/socket
 </code></pre><h1 id="start-working">start working</h1>
 <ul>
 <li>Visual Studio 2017</li>
@@ -244,24 +254,37 @@ checked</p>
 For example, the first time:</p>
 <pre tabindex="0"><code>C:\symbols\SbieDrv.pdb\BF241AE76B2D4145B6A1B57B13335E8C1
 </code></pre><p>the second time:</p>
-<pre tabindex="0"><code>C:\symbols\SbieDrv.pdb\0E2CD29D03C843D0BC754B60E370E4402
-</code></pre><h3 id="command">command</h3>
-<p>如果显示未连接，或显示&quot;debugee running&quot;:</p>
+<pre tabindex="0"><code>C:\symbols\SbieDrv.pdb\33C23FFE03A8402BA6E16961BA2880CE1
+</code></pre><h1 id="command">command</h1>
+<h2 id="begin">begin</h2>
 <pre tabindex="0"><code>Debug -&gt; Break
-</code></pre><p>all modules:</p>
+</code></pre><h3 id="dml">dml</h3>
+<p>Enable Debugger Markup Language (DML) with .prefer_dml</p>
+<pre tabindex="0"><code>.prefer_dml 1
+</code></pre><h3 id="list-loaded-modules">List Loaded Modules</h3>
+<p>all modules:</p>
 <pre tabindex="0"><code>.reload /f
 </code></pre><p>Specified module:</p>
 <pre tabindex="0"><code>.reload /f /i SbieDrv.sys
-</code></pre><p>list modules:</p>
-<pre tabindex="0"><code>lm
-</code></pre><p>quit:</p>
-<pre tabindex="0"><code>q
+</code></pre><p>show specified module:</p>
+<pre tabindex="0"><code>lm m SbieDrv v
+</code></pre><h2 id="break-point">Break point</h2>
+<p>set function:</p>
+<pre tabindex="0"><code>bu SbieDrv!Api_DelWork
+</code></pre><p>show:</p>
+<pre tabindex="0"><code>bl
+</code></pre><h2 id="run-and-quit">run and quit</h2>
+<p>run:</p>
+<pre tabindex="0"><code>g
+</code></pre><p>quit debug:</p>
+<pre tabindex="0"><code>qd
 </code></pre><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/debugger/">Windows 调试工具（WinDbg、KD、CDB、NTSD）</a></li>
 <li><a href="http://windbg.info/doc/1-common-cmds.html">command</a></li>
 <li><a href="https://www.technlg.net/windows/symbol-server-path-windbg-debugging/">Debugging using Windbg : Symbols loading</a></li>
 <li><a href="https://www.triplefault.io/2017/07/setting-up-kernel-debugging-using.html">Setting up kernel debugging using WinDbg and VMware</a></li>
+<li><a href="https://medium.com/@eaugusto/setting-up-a-windows-7-virtualbox-vm-for-kernel-mode-debugging-367911889316">Setting Up a Windows 7+ Virtualbox VM for Kernel Mode Debugging</a></li>
 </ul>
 
     </section>
@@ -314,17 +337,10 @@ For example, the first time:</p>
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/ops_install-distribution_nsis/">
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ops_install-distribution_nsis/">
           <section class="post">
               <h2>使用 NSIS (Nullsoft Scriptable Install System)</h2>
-              
-          </section>
-      </a>
-  
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/vc-masm/">
-          <section class="post">
-              <h2>Setting Up Visual Studio 14/14.x for MASM32 Programming</h2>
           </section>
       </a>
   
