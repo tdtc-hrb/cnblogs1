@@ -169,9 +169,9 @@
             <p>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp; windows sdk8.1.
 Prepare Host Env:
 OS Win1809(x64) VM v10.0.7 Guest Env:
-Win7 SP1(x86) latest update Sandboxie v5.40(x86) guest os After each startup, press F8 (laptop Fn+F8):
-Disable Driver Signature Enforcement display os list Add an OS to display the OS list:
-bcdedit /copy {current} /d &#34;Sandboxie Usage&#34; serial port bcdedit /debug on bcdedit /dbgsettings serial debugport:2 baudrate:115200 install application setup &ldquo;SandboxieInstall32.exe&rdquo; <a class="read-more" href="/cnblogs/post/vc-windbg_driver/">&raquo;</a></p>
+Win7 SP1(x86) latest update Sandboxie v5.40(x86) guest os about windbg version: The operating system needs to match the same or higher version of windbg. Otherwise the OS version will not be recognized!!
+For example, debugging win8.1(x86) uses windbg from win10 1809 sdk.
+Disable Driver Signature Enforcement Win7 uses the old boot options. <a class="read-more" href="/cnblogs/post/vc-windbg_driver/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -180,7 +180,7 @@ bcdedit /copy {current} /d &#34;Sandboxie Usage&#34; serial port bcdedit /debug 
         
 
         
-        <time class="post-date" datetime="2022-09-05T00:08:08&#43;08:00">
+        <time class="post-date" datetime="2022-09-05T02:08:08&#43;08:00">
             5 Sep 2022
         </time>
     </footer>

@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="串口方式" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-09-05T00:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-09-05T02:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "windbg调试sandboxie driver",
     "name": "windbg调试sandboxie driver",
-    "wordCount":  289 ,
+    "wordCount":  386 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/",
-    "datePublished": "2022-09-05T00:08Z",
-    "dateModified": "2022-09-05T00:08Z",
+    "datePublished": "2022-09-05T02:08Z",
+    "dateModified": "2022-09-05T02:08Z",
     
     
     "description": "串口方式",
@@ -168,7 +168,7 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-09-05T00:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-09-05T02:08:08&#43;08:00">
             Sep 5, 2022
           </time>
         
@@ -193,9 +193,32 @@ v10.0.7</li>
 <li>Sandboxie v5.40(x86)</li>
 </ul>
 <h2 id="guest-os">guest os</h2>
-<p>After each startup, press F8 (laptop Fn+F8):</p>
-<pre tabindex="0"><code>Disable Driver Signature Enforcement
-</code></pre><h3 id="display-os-list">display os list</h3>
+<p>about windbg version: <br>
+The operating system needs to match the same or higher version of windbg. <br>
+Otherwise the OS version will not be recognized!!</p>
+<p>For example, debugging win8.1(x86) uses windbg from <a href="https://software-static.download.prss.microsoft.com/sg/download/17763.132.181022-1834.rs5_release_svc_prod1_WindowsSDK.iso">win10 1809 sdk</a>.</p>
+<h3 id="disable-driver-signature-enforcement">Disable Driver Signature Enforcement</h3>
+<p>Win7 uses the old boot options.  <br>
+After each startup, press F8 (laptop Fn+F8).</p>
+<p>If you do not use the old boot options, you need to set：</p>
+<ul>
+<li>Win8+</li>
+</ul>
+<ol>
+<li>
+<p>Settings -&gt; Update and recovery → Recovery</p>
+</li>
+<li>
+<p>Troubleshoot and then Advanced options.</p>
+</li>
+<li>
+<p>Go to &ldquo;Advanced options&rdquo; and click Start-up Settings.</p>
+</li>
+<li>
+<p>Under &ldquo;Start-up Settings&rdquo; click Restart.</p>
+</li>
+</ol>
+<h3 id="display-os-list">display os list</h3>
 <p>Add an OS to display the OS list:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>bcdedit /copy {current} /d <span style="color:#e6db74">&#34;Sandboxie Usage&#34;</span>
 </span></span></code></pre></div><h3 id="serial-port">serial port</h3>
@@ -274,7 +297,11 @@ For example, the first time:</p>
 <p>Sets a breakpoint that is unresolved when the module is unloaded and re-enables when the module reloads.</p>
 <pre tabindex="0"><code>bu SbieDrv!Api_Init
 bu SbieDrv!Api_DelWork
-</code></pre><h2 id="breakepoint-listhttpsdocsmicrosoftcomen-uswindows-hardwaredriversdebuggerbl--breakpoint-list-"><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/bl--breakpoint-list-">Breakepoint List</a></h2>
+</code></pre><p>Activate the above debugging: <br>
+&ldquo;Create a new sandbox&rdquo;, <br>
+&ldquo;Run web Browser&rdquo;; <br>
+right click web link, &ldquo;Save target as&rdquo;.</p>
+<h2 id="breakepoint-listhttpsdocsmicrosoftcomen-uswindows-hardwaredriversdebuggerbl--breakpoint-list-"><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/bl--breakpoint-list-">Breakepoint List</a></h2>
 <p>List the current breakpoints to confirm that the breakpoint was set by typing the bl command.</p>
 <pre tabindex="0"><code>bl
 </code></pre><h2 id="run-and-quit">run and quit</h2>
