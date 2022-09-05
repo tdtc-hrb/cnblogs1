@@ -6,11 +6,11 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 Sep 2022 23:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Sep 2022 00:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>使用windbg调试driver</title>
+      <title>windbg调试sandboxie driver</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</link>
-      <pubDate>Sun, 04 Sep 2022 23:08:08 +0800</pubDate>
+      <pubDate>Mon, 05 Sep 2022 00:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</guid>
       <description>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp;amp; windows sdk8.1.
