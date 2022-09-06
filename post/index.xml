@@ -6,19 +6,19 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 05 Sep 2022 02:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Sep 2022 00:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>windbg调试sandboxie driver</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</link>
-      <pubDate>Mon, 05 Sep 2022 02:08:08 +0800</pubDate>
+      <pubDate>Tue, 06 Sep 2022 00:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</guid>
       <description>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp;amp; windows sdk8.1.
 Prepare Host Env:
-OS Win1809(x64) VM v10.0.7 Guest Env:
-Win7 SP1(x86) latest update Sandboxie v5.40(x86) guest os about windbg version: The operating system needs to match the same or higher version of windbg. Otherwise the OS version will not be recognized!!
-For example, debugging win8.1(x86) uses windbg from win10 1809 sdk.
-Disable Driver Signature Enforcement Win7 uses the old boot options.</description>
+OS Win1809(x64) VM VMware(v10.0.7) / Vbox(v6.1.38) windbg Windows Driver Kit Version 7.1.0 - win7 / win10 1809 sdk - win1809- VM setting - serial port vmware or vbox
+\\.\pipe\com_1 vmware i/o mode:
+yield CPU on poll vbox Port 2: uncheck:
+Connect to existing pipe/socket windbg about version: The operating system needs to match the same or higher version of windbg.</description>
     </item>
     
     <item>

@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="串口方式" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-09-05T02:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-09-06T00:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "windbg调试sandboxie driver",
     "name": "windbg调试sandboxie driver",
-    "wordCount":  386 ,
+    "wordCount":  388 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/",
-    "datePublished": "2022-09-05T02:08Z",
-    "dateModified": "2022-09-05T02:08Z",
+    "datePublished": "2022-09-06T00:08Z",
+    "dateModified": "2022-09-06T00:08Z",
     
     
     "description": "串口方式",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-09-05T02:08:08&#43;08:00">
-            Sep 5, 2022
+          <time class="post-date" datetime="2022-09-06T00:08:08&#43;08:00">
+            Sep 6, 2022
           </time>
         
          
@@ -185,24 +185,63 @@
 <li>OS <br>
 Win1809(x64)</li>
 <li>VM <br>
-v10.0.7</li>
+VMware(v10.0.7) / Vbox(v6.1.38)</li>
+<li>windbg <br>
+<a href="https://www.microsoft.com/en-us/download/details.aspx?id=11800">Windows Driver Kit Version 7.1.0 - win7</a> /
+<a href="https://software-static.download.prss.microsoft.com/sg/download/17763.132.181022-1834.rs5_release_svc_prod1_WindowsSDK.iso">win10 1809 sdk - win1809-</a></li>
 </ul>
-<p>Guest Env:</p>
-<ul>
-<li>Win7 SP1(x86) <a href="https://blog.simplix.info/update7/">latest update</a></li>
-<li>Sandboxie v5.40(x86)</li>
-</ul>
-<h2 id="guest-os">guest os</h2>
-<p>about windbg version: <br>
+<h2 id="vm-setting---serial-port">VM setting - serial port</h2>
+<blockquote>
+<p>vmware or vbox</p>
+</blockquote>
+<pre tabindex="0"><code>\\.\pipe\com_1
+</code></pre><h3 id="vmware">vmware</h3>
+<p>i/o mode:</p>
+<pre tabindex="0"><code>yield CPU on poll
+</code></pre><h3 id="vbox">vbox</h3>
+<p>Port 2: <br>
+uncheck:</p>
+<pre tabindex="0"><code>Connect to existing pipe/socket
+</code></pre><h2 id="windbg">windbg</h2>
+<p>about version: <br>
 The operating system needs to match the same or higher version of windbg. <br>
 Otherwise the OS version will not be recognized!!</p>
-<p>For example, debugging win8.1(x86) uses windbg from <a href="https://software-static.download.prss.microsoft.com/sg/download/17763.132.181022-1834.rs5_release_svc_prod1_WindowsSDK.iso">win10 1809 sdk</a>.</p>
-<h3 id="disable-driver-signature-enforcement">Disable Driver Signature Enforcement</h3>
-<p>Win7 uses the old boot options.  <br>
-After each startup, press F8 (laptop Fn+F8).</p>
-<p>If you do not use the old boot options, you need to set：</p>
+<h3 id="home-path">home path</h3>
 <ul>
-<li>Win8+</li>
+<li>v7.1</li>
+</ul>
+<pre tabindex="0"><code>C:\WinDDK\7600.16385.1\Debuggers\
+</code></pre><ul>
+<li>x86</li>
+</ul>
+<pre tabindex="0"><code>C:\Program Files (x86)\Windows Kits\10\Debuggers\x86
+</code></pre><ul>
+<li>x64</li>
+</ul>
+<pre tabindex="0"><code>C:\Program Files (x86)\Windows Kits\10\Debuggers\x64
+</code></pre><h3 id="shortcute">ShortCute</h3>
+<p>If you use a shortcut, you don&rsquo;t need to set the download path in the command.</p>
+<pre tabindex="0"><code>&lt;home path&gt; -y &#34;srv*c:\symbols*https://msdl.microsoft.com/download/symbols&#34;
+</code></pre><h2 id="guest-os">guest os</h2>
+<ul>
+<li>Win7 SP1(x86) <a href="https://blog.simplix.info/update7/">latest update</a></li>
+<li>Win8.1(x86) <a href="https://winfuture.de/downloadvorschalt,3087.html">latest update</a></li>
+</ul>
+<h3 id="display-os-list">display os list</h3>
+<p>Add an OS to display the OS list:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>bcdedit /copy {current} /d <span style="color:#e6db74">&#34;Sandboxie Usage&#34;</span>
+</span></span></code></pre></div><h3 id="debug-settings">debug settings</h3>
+<pre tabindex="0"><code>bcdedit /debug on
+</code></pre><pre tabindex="0"><code>bcdedit /dbgsettings serial debugport:2 baudrate:115200
+</code></pre><h3 id="disable-driver-signature-enforcement">Disable Driver Signature Enforcement</h3>
+<ul>
+<li>
+<p>Win7 <br>
+After each startup, press F8 (laptop Fn+F8).</p>
+</li>
+<li>
+<p>Win8+</p>
+</li>
 </ul>
 <ol>
 <li>
@@ -218,36 +257,12 @@ After each startup, press F8 (laptop Fn+F8).</p>
 <p>Under &ldquo;Start-up Settings&rdquo; click Restart.</p>
 </li>
 </ol>
-<h3 id="display-os-list">display os list</h3>
-<p>Add an OS to display the OS list:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>bcdedit /copy {current} /d <span style="color:#e6db74">&#34;Sandboxie Usage&#34;</span>
-</span></span></code></pre></div><h3 id="serial-port">serial port</h3>
-<pre tabindex="0"><code>bcdedit /debug on
-</code></pre><pre tabindex="0"><code>bcdedit /dbgsettings serial debugport:2 baudrate:115200
-</code></pre><h3 id="install-application">install application</h3>
+<h3 id="install-application">install application</h3>
 <p>setup &ldquo;SandboxieInstall32.exe&rdquo;</p>
-<h2 id="host-os">host os</h2>
-<p>Compile the source code with vs2017 in order to generate pdb.</p>
+<h1 id="start-working">start working</h1>
 <ul>
-<li>ShortCute <br>
-If you use a shortcut, you don&rsquo;t need to set the download path in the command.</li>
-</ul>
-<pre tabindex="0"><code>C:\WinDDK\7600.16385.1\Debuggers\windbg.exe -y &#34;srv*c:\symbols*https://msdl.microsoft.com/download/symbols&#34;
-</code></pre><h3 id="serial-port-1">serial port</h3>
-<blockquote>
-<p>vmware or vbox</p>
-</blockquote>
-<pre tabindex="0"><code>\\.\pipe\com_1
-</code></pre><h4 id="vmware">vmware</h4>
-<p>i/o mode:</p>
-<pre tabindex="0"><code>yield CPU on poll
-</code></pre><h4 id="vbox">vbox</h4>
-<p>Port 2: <br>
-uncheck:</p>
-<pre tabindex="0"><code>Connect to existing pipe/socket
-</code></pre><h1 id="start-working">start working</h1>
-<ul>
-<li>Visual Studio 2017</li>
+<li>Visual Studio 2017 <br>
+Compile the source code with vs2017 in order to generate pdb.</li>
 <li>WDK <br>
 v7.1</li>
 </ul>
@@ -272,16 +287,13 @@ checked</p>
 <pre tabindex="0"><code>.sympath SRV*c:\symbols*http://msdl.microsoft.com/download/symbols
 </code></pre><p>details:</p>
 <pre tabindex="0"><code>!sym noisy
-</code></pre><p>把需要调试的pdb放入指定的文件夹。 
+</code></pre><p>把需要调试的pdb放入指定的文件夹。 <br>
 注意每次调试新os的时候，文件夹位置会不同!!! <br>
 For example, the first time:</p>
 <pre tabindex="0"><code>C:\symbols\SbieDrv.pdb\BF241AE76B2D4145B6A1B57B13335E8C1
 </code></pre><p>the second time:</p>
 <pre tabindex="0"><code>C:\symbols\SbieDrv.pdb\33C23FFE03A8402BA6E16961BA2880CE1
 </code></pre><h1 id="command">command</h1>
-<h2 id="begin">begin</h2>
-<pre tabindex="0"><code>Debug -&gt; Break
-</code></pre><h3 id="dml">dml</h3>
 <p>Enable Debugger Markup Language (DML) with .prefer_dml</p>
 <pre tabindex="0"><code>.prefer_dml 1
 </code></pre><h2 id="reload-modulehttpsdocsmicrosoftcomen-uswindows-hardwaredriversdebugger-reload--reload-module-"><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/-reload--reload-module-">Reload Module</a></h2>
@@ -301,12 +313,14 @@ bu SbieDrv!Api_DelWork
 &ldquo;Create a new sandbox&rdquo;, <br>
 &ldquo;Run web Browser&rdquo;; <br>
 right click web link, &ldquo;Save target as&rdquo;.</p>
-<h2 id="breakepoint-listhttpsdocsmicrosoftcomen-uswindows-hardwaredriversdebuggerbl--breakpoint-list-"><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/bl--breakpoint-list-">Breakepoint List</a></h2>
+<h3 id="breakepoint-listhttpsdocsmicrosoftcomen-uswindows-hardwaredriversdebuggerbl--breakpoint-list-"><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/bl--breakpoint-list-">Breakepoint List</a></h3>
 <p>List the current breakpoints to confirm that the breakpoint was set by typing the bl command.</p>
 <pre tabindex="0"><code>bl
 </code></pre><h2 id="run-and-quit">run and quit</h2>
 <p>go:</p>
 <pre tabindex="0"><code>g
+</code></pre><p>break:</p>
+<pre tabindex="0"><code>Debug -&gt; Break
 </code></pre><p>quit debug:</p>
 <pre tabindex="0"><code>qd
 </code></pre><h1 id="ref">Ref</h1>
