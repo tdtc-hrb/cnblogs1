@@ -12,13 +12,13 @@
 
 
 
-<meta name="twitter:title" content="最小实现redux"/>
-<meta name="twitter:description" content="分解redux，以理解他"/>
+<meta name="twitter:title" content="最小实现redux - 分解redux"/>
+<meta name="twitter:description" content="starter project"/>
 <meta name="twitter:site" content="@"/>
 
 
 
-  	<meta property="og:title" content="最小实现redux &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:title" content="最小实现redux - 分解redux &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
   	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
   	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/" />
 
@@ -27,17 +27,17 @@
     
 
     
-    <meta property="og:description" content="分解redux，以理解他" />
+    <meta property="og:description" content="starter project" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2020-04-10T08:26:39&#43;08:00" />
+    <meta property="article:published_time" content="2022-04-10T08:26:39&#43;08:00" />
 
     
     
 
-    <title>最小实现redux &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+    <title>最小实现redux - 分解redux &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
 
     
-    <meta name="description" content="分解redux，以理解他" />
+    <meta name="description" content="starter project" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -90,20 +90,20 @@
             
         ]
     },
-    "headline": "最小实现redux",
-    "name": "最小实现redux",
-    "wordCount":  28 ,
+    "headline": "最小实现redux - 分解redux",
+    "name": "最小实现redux - 分解redux",
+    "wordCount":  57 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/",
-    "datePublished": "2020-04-10T08:26Z",
-    "dateModified": "2020-04-10T08:26Z",
+    "datePublished": "2022-04-10T08:26Z",
+    "dateModified": "2022-04-10T08:26Z",
     
     
-    "description": "分解redux，以理解他",
+    "description": "starter project",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/"
@@ -163,13 +163,13 @@
   <article class="post post">
 
     <header class="post-header">
-        <h1 class="post-title">最小实现redux</h1>
-        <small>分解redux，以理解他</small>
+        <h1 class="post-title">最小实现redux - 分解redux</h1>
+        <small>starter project</small>
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2020-04-10T08:26:39&#43;08:00">
-            Apr 10, 2020
+          <time class="post-date" datetime="2022-04-10T08:26:39&#43;08:00">
+            Apr 10, 2022
           </time>
         
          
@@ -177,14 +177,37 @@
     </header>
 
     <section class="post-content">
-      <h1 id="1-include-createstore">1. include createStore</h1>
+      <p>project: <a href="https://gitee.com/xiaobin80/starter">https://gitee.com/xiaobin80/starter</a></p>
+<h1 id="application">application</h1>
+<blockquote>
+<p>app.js</p>
+</blockquote>
+<h2 id="include-createstore">include createStore</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">createStore</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;redux&#39;</span>
-</span></span></code></pre></div><h1 id="2-establish-reducer">2. Establish reducer</h1>
+</span></span></code></pre></div><h2 id="establish-reducer">Establish reducer</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reducerName</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">state</span>, <span style="color:#a6e22e">action</span>) =&gt; {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">state</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h1 id="3-invoke-createstore">3. invoke createStore()</h1>
+</span></span></code></pre></div><h2 id="invoke-createstore">invoke createStore()</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">store</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createStore</span>(<span style="color:#a6e22e">reducerName</span>);
+</span></span></code></pre></div><h1 id="html">html</h1>
+<blockquote>
+<p>public/index.html</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;html&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;head&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;title&gt;</span>The Complete Redux Book - Example Application<span style="color:#f92672">&lt;/title&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/head&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;body&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;div</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;app&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>      Redux is running: <span style="color:#f92672">&lt;span</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;counter&#34;</span><span style="color:#f92672">&gt;&lt;/span&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/div&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;script</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src=</span><span style="color:#e6db74">&#34;../app.js&#34;</span><span style="color:#f92672">&gt;&lt;/script&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/body&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/html&gt;</span>
 </span></span></code></pre></div>
     </section>
 
@@ -200,7 +223,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e6%9c%80%e5%b0%8f%e5%ae%9e%e7%8e%b0redux&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fjs-redux-mini%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e6%9c%80%e5%b0%8f%e5%ae%9e%e7%8e%b0redux%20-%20%e5%88%86%e8%a7%a3redux&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fjs-redux-mini%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -208,7 +231,7 @@
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fjs-redux-mini%2f&amp;description=%e6%9c%80%e5%b0%8f%e5%ae%9e%e7%8e%b0redux"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fjs-redux-mini%2f&amp;description=%e6%9c%80%e5%b0%8f%e5%ae%9e%e7%8e%b0redux%20-%20%e5%88%86%e8%a7%a3redux"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
@@ -236,17 +259,17 @@
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/js-redux-root/">
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/asp.net6-mvc/">
           <section class="post">
-              <h2>rootredux</h2>
+              <h2>3小时搞定ASP.NET Core 6.0</h2>
               
           </section>
       </a>
   
   
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/js-lambda/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/vc-strcat/">
           <section class="post">
-              <h2>JS的lambda表达式</h2>
+              <h2>使用strcat_s的注意事项</h2>
           </section>
       </a>
   

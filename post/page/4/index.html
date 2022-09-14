@@ -164,6 +164,36 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-avr8-web-server/">web server</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>IDE Arduino V1.8.13 Library UIP Ethernet v2.x 接线 arduino uno Enc28j60 Pin 10 CS Pin 11 SI Pin 12 SO Pin 13 SCK Reset RST* +3v3 Vcc GND* GND Enc28j60 INTN: 置空（不接）
+*Rst接线: 注意Nano V3 Ethernet Shield接7号线柱，如下图所示： Arduino Uno *GND接线: 5V旁边的GND.
+供电: 必须使用USB接口.(使用电源口无法工作)
+网络及PC驱动 使用平行线，接路由器Lan口。 本例驱动在Win7 x64通过。
+网线 PC-Router Enc28J60-Router
+Driver 首先，解压缩Arduino IDE下的drivers\Old_Arduino_Drivers.zip；
+然后，通过设备管理器-〉未知设备-〉“更新驱动程序软件”，即可安装完成。
+example Ethernet_Demo_2.ino
+/* Demo sketch for a simple web page * * Libs: UIPEthernet v2.0.9 * https://github. <a class="read-more" href="/cnblogs/post/e-avr8-web-server/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-03-10T01:08:08&#43;08:00">
+            10 Mar 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/e-avr8-blink/">arduino 开发环境</a></h2>
     </header>
     <section class="post-excerpt">
@@ -377,28 +407,6 @@ const initialState = { &#34;recipes&#34;: [ { &#34;name&#34;: &#34;Omelette&#34;
     <section class="post-excerpt">
         
             <p>Multiple return values const configStore = () =&gt; { const sagaMiddleware = createSagaMiddleware() return { ...createStore(rootReducer, applyMiddleware(sagaMiddleware)), runSaga: sagaMiddleware.run, } } Reference Spread syntax  <a class="read-more" href="/cnblogs/post/js-es6-spreed-operator/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-04-10T08:26:39&#43;08:00">
-            10 Apr 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-redux-root/">rootredux</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>1. split const reducer = (state, action) =&gt; { switch (action.type) { case &#39;ADD_RECIPE&#39;: return Object.assign( {}, state, { recipes: state.recipes.concat({name : action.name}) }); case &#39;ADD_INGREDIENT&#39;: const myIngredients = { name : action.name, quantity: action.quantity, measure: action.measure, recipe: action.recipe }; return Object.assign( {}, state, { ingredients: state.ingredients.concat(myIngredients) }); } return state; } recipeReducer export const recipeReducer = (stat, action) =&gt; { switch (action.type) { case &#39;ADD_RECIPE&#39;: return Object.assign( {}, state, { ingredients: state. <a class="read-more" href="/cnblogs/post/js-redux-root/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">

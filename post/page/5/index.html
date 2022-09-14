@@ -162,11 +162,11 @@
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-redux-mini/">最小实现redux</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/js-redux-root/">rootredux</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>1. include createStore import { createStore } from &#39;redux&#39; 2. Establish reducer const reducerName = (state, action) =&gt; { state; } 3. invoke createStore() const store = createStore(reducerName);  <a class="read-more" href="/cnblogs/post/js-redux-mini/">&raquo;</a></p>
+            <p>1. split const reducer = (state, action) =&gt; { switch (action.type) { case &#39;ADD_RECIPE&#39;: return Object.assign( {}, state, { recipes: state.recipes.concat({name : action.name}) }); case &#39;ADD_INGREDIENT&#39;: const myIngredients = { name : action.name, quantity: action.quantity, measure: action.measure, recipe: action.recipe }; return Object.assign( {}, state, { ingredients: state.ingredients.concat(myIngredients) }); } return state; } recipeReducer export const recipeReducer = (stat, action) =&gt; { switch (action.type) { case &#39;ADD_RECIPE&#39;: return Object.assign( {}, state, { ingredients: state. <a class="read-more" href="/cnblogs/post/js-redux-root/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">

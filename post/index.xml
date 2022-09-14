@@ -235,6 +235,18 @@ Run build Manually add .vscode install c# for Visual Studio Code 双击Program.<
     </item>
     
     <item>
+      <title>最小实现redux - 分解redux</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/</link>
+      <pubDate>Sun, 10 Apr 2022 08:26:39 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/</guid>
+      <description>project: https://gitee.com/xiaobin80/starter
+application app.js
+include createStore import { createStore } from &amp;#39;redux&amp;#39; Establish reducer const reducerName = (state, action) =&amp;gt; { state; } invoke createStore() const store = createStore(reducerName); html public/index.html
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;The Complete Redux Book - Example Application&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; Redux is running: &amp;lt;span id=&amp;#34;counter&amp;#34;&amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;../app.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
+    </item>
+    
+    <item>
       <title>使用strcat_s的注意事项</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/</link>
       <pubDate>Thu, 24 Mar 2022 03:18:08 +0800</pubDate>
@@ -531,15 +543,6 @@ const initialState = { &amp;#34;recipes&amp;#34;: [ { &amp;#34;name&amp;#34;: &a
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-redux-root/</guid>
       <description>1. split const reducer = (state, action) =&amp;gt; { switch (action.type) { case &amp;#39;ADD_RECIPE&amp;#39;: return Object.assign( {}, state, { recipes: state.recipes.concat({name : action.name}) }); case &amp;#39;ADD_INGREDIENT&amp;#39;: const myIngredients = { name : action.name, quantity: action.quantity, measure: action.measure, recipe: action.recipe }; return Object.assign( {}, state, { ingredients: state.ingredients.concat(myIngredients) }); } return state; } recipeReducer export const recipeReducer = (stat, action) =&amp;gt; { switch (action.type) { case &amp;#39;ADD_RECIPE&amp;#39;: return Object.assign( {}, state, { ingredients: state.</description>
-    </item>
-    
-    <item>
-      <title>最小实现redux</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/</link>
-      <pubDate>Fri, 10 Apr 2020 08:26:39 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/</guid>
-      <description>1. include createStore import { createStore } from &amp;#39;redux&amp;#39; 2. Establish reducer const reducerName = (state, action) =&amp;gt; { state; } 3. invoke createStore() const store = createStore(reducerName); </description>
     </item>
     
     <item>
