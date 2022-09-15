@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="串口方式" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-09-06T02:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2022-09-06T04:08:08&#43;08:00" />
 
     
     
@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.102.3" />
+    <meta name="generator" content="Hugo 0.103.0" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/" />
 
@@ -92,15 +92,15 @@
     },
     "headline": "windbg调试sandboxie driver",
     "name": "windbg调试sandboxie driver",
-    "wordCount":  390 ,
+    "wordCount":  424 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/",
-    "datePublished": "2022-09-06T02:08Z",
-    "dateModified": "2022-09-06T02:08Z",
+    "datePublished": "2022-09-06T04:08Z",
+    "dateModified": "2022-09-06T04:08Z",
     
     
     "description": "串口方式",
@@ -168,7 +168,7 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-09-06T02:08:08&#43;08:00">
+          <time class="post-date" datetime="2022-09-06T04:08:08&#43;08:00">
             Sep 6, 2022
           </time>
         
@@ -307,8 +307,25 @@ For example, the first time:</p>
 </code></pre><h2 id="break-pointhttpsdocsmicrosoftcomen-uswindows-hardwaredriversdebuggerbp--bu--bm--set-breakpoint"><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/bp--bu--bm--set-breakpoint">Break point</a></h2>
 <h3 id="unresolved-breakpoint">Unresolved Breakpoint</h3>
 <p>Sets a breakpoint that is unresolved when the module is unloaded and re-enables when the module reloads.</p>
-<pre tabindex="0"><code>bu SbieDrv!Api_Init
+<pre tabindex="0"><code>bu SbieDrv!Api_CopySidStringFromUser
+bu SbieDrv!Api_Init
+bu SbieDrv!Api_CopyBoxNameFromUser
+bu SbieDrv!Api_CopyStringToUser
+bu SbieDrv!Api_GetHomePath
+bu SbieDrv!Api_GetVersion
+bu SbieDrv!Api_Irp_CLEANUP
+bu SbieDrv!Api_LogMessage
+bu SbieDrv!Api_SetFunction
+bu SbieDrv!Api_SendServiceMessage
+bu SbieDrv!Api_GetWork
+bu SbieDrv!Api_FastIo_DEVICE_CONTROL
+bu SbieDrv!Api_SetServicePort
+bu SbieDrv!Api_AddWork
 bu SbieDrv!Api_DelWork
+bu SbieDrv!Api_Irp_CREATE
+bu SbieDrv!Api_Disable
+bu SbieDrv!Api_ResetServiceProcess
+bu SbieDrv!Api_Unload
 </code></pre><p>Activate the above debugging: <br>
 &ldquo;Create a new sandbox&rdquo;, <br>
 &ldquo;Run web Browser&rdquo;; <br>
