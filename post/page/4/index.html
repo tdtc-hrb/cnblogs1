@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.103.0" />
+    <meta name="generator" content="Hugo 0.104.3" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -160,6 +160,33 @@
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-calday/"> 使用Ts/Js计算天数</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>在JS练习题中，有这么一道：
+请计算某天是这一年的第几天。
+首先，我们要看此年是否闰年
+var IsLeapYear = function (year) { var flag = false; if ( ((year % 4 == 0) &amp;&amp; (year % 100 != 0)) || (year % 400 == 0) ) flag = true; return flag; }; 其次，累加每月天数。
+for (var i = 0; i &lt; month - 1; i++) { iDay += months[i]; } 其中months为数组
+var months = new Array(31, day2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); day2如果是闰年赋值29，否则28。 <a class="read-more" href="/cnblogs/post/js-calday/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-10-01T02:16:39&#43;08:00">
+            1 Oct 2021
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -337,7 +364,7 @@ JPA、JDBC省略不表。 ClusterJ ClusterJ requires Java 1.7 or 1.8.
 首先使用SessionFactory建立一个会话实例， 然后用Session提供的方法操作数据。
 会话实例 读取配置文件，然后建立Session实例。
 File propsFile = new File(&#34;clusterj.properties&#34;); InputStream inStream = new FileInputStream(propsFile); Properties props = new Properties(); props.load(inStream); SessionFactory factory = ClusterJHelper.getSessionFactory(props); Session session = factory.getSession(); 配置信息 clusterj.properties
-com.mysql.clusterj.connectstring=localhost:1186com.mysql.clusterj.database=mydb 操作数据 参考4.2.2.4 ClusterJ Basic Operations文档。
+com.mysql.clusterj.connectstring=localhost:1186 com.mysql.clusterj.database=mydb 操作数据 参考4.2.2.4 ClusterJ Basic Operations文档。
 Reference 4.2.2 Using ClusterJ  <a class="read-more" href="/cnblogs/post/java-connector-cluster_mysql/">&raquo;</a></p>
         
     </section>
@@ -394,28 +421,6 @@ const initialState = { &#34;recipes&#34;: [ { &#34;name&#34;: &#34;Omelette&#34;
 
         
         <time class="post-date" datetime="2020-04-10T09:26:39&#43;08:00">
-            10 Apr 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-es6-spreed-operator/">ES6 展开运算符</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Multiple return values const configStore = () =&gt; { const sagaMiddleware = createSagaMiddleware() return { ...createStore(rootReducer, applyMiddleware(sagaMiddleware)), runSaga: sagaMiddleware.run, } } Reference Spread syntax  <a class="read-more" href="/cnblogs/post/js-es6-spreed-operator/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-04-10T08:26:39&#43;08:00">
             10 Apr 2020
         </time>
     </footer>

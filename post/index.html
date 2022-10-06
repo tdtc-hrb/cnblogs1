@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.103.0" />
+    <meta name="generator" content="Hugo 0.104.3" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -162,6 +162,34 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_keepalived-v2/">安装配置Keepalived</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>OS: CentOS7 minimal(VBox)
+Virtual Box Network configure:
+Attached to Bridged Adapter Advanced promiscuous mode: Allow All 一、安装 prepare tool:
+#yum install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel \ glib2-devel pcre2-revel libnftnl-devel libmnl-devel systemd-devel kmod-devel LVS manager:
+yum install ipvsadm installation MASTER Node 1 BACKUP Node 2 down and unzip $git clone https://github.com/acassen/keepalived.git for me:
+$git clone https://gitee.com/xiaobin80/keepalived installation $cd keepalived $./autogen.sh configure:
+$./configure --prefix=/usr make: <a class="read-more" href="/cnblogs/post/ops_keepalived-v2/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-09-30T09:38:08&#43;08:00">
+            30 Sep 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/vc-windbg_driver/">windbg调试sandboxie driver</a></h2>
     </header>
     <section class="post-excerpt">
@@ -180,7 +208,7 @@ Connect to existing pipe/socket windbg about version: The operating system needs
         
 
         
-        <time class="post-date" datetime="2022-09-06T04:08:08&#43;08:00">
+        <time class="post-date" datetime="2022-09-06T06:08:08&#43;08:00">
             6 Sep 2022
         </time>
     </footer>
@@ -391,34 +419,6 @@ $consul -v Consul v1.12.1 Ref Install Consul Run the Consul Agent  <a class="rea
         
         <time class="post-date" datetime="2022-05-26T23:08:08&#43;08:00">
             26 May 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/es24-install/">Elasticsearch 2.4 安装</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Ubuntu 20.04.1
-Part I. Elasticsearch 1. install JDK 1) down jdk8 wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz unzip:
-$sudo mkdir /usr/java $sudo tar zxvf OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz -C /usr/java 2) setup root:
-$sudo -sH
-$echo &#39;export JAVA_HOME=/usr/java/jdk8u332-b09&#39; &gt;&gt; /etc/bash.bashrc $echo &#39;export CLASSPATH=$JAVA_HOME/lib/:.&#39; &gt;&gt; /etc/bash.bashrc $echo &#39;export PATH=$PATH:$JAVA_HOME/bin&#39; &gt;&gt; /etc/bash.bashrc $source /etc/bash.bashrc 3) test java -version echo $JAVA_HOME 2. Elasticsearch exec pack 1) down curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.6/elasticsearch-2.4.6.tar.gz unzip:
-tar -xvf elasticsearch-2.4.6.tar.gz 2) config ../config/elasticsearch.yml
-network network. <a class="read-more" href="/cnblogs/post/es24-install/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-05-25T18:08:08&#43;08:00">
-            25 May 2022
         </time>
     </footer>
 </article>

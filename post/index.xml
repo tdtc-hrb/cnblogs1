@@ -6,11 +6,26 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 06 Sep 2022 04:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Sep 2022 09:38:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装配置Keepalived</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_keepalived-v2/</link>
+      <pubDate>Fri, 30 Sep 2022 09:38:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_keepalived-v2/</guid>
+      <description>OS: CentOS7 minimal(VBox)
+Virtual Box Network configure:
+Attached to Bridged Adapter Advanced promiscuous mode: Allow All 一、安装 prepare tool:
+#yum install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel \ glib2-devel pcre2-revel libnftnl-devel libmnl-devel systemd-devel kmod-devel LVS manager:
+yum install ipvsadm installation MASTER Node 1 BACKUP Node 2 down and unzip $git clone https://github.com/acassen/keepalived.git for me:
+$git clone https://gitee.com/xiaobin80/keepalived installation $cd keepalived $./autogen.sh configure:
+$./configure --prefix=/usr make:</description>
+    </item>
+    
     <item>
       <title>windbg调试sandboxie driver</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</link>
-      <pubDate>Tue, 06 Sep 2022 04:08:08 +0800</pubDate>
+      <pubDate>Tue, 06 Sep 2022 06:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</guid>
       <description>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp;amp; windows sdk8.1.
@@ -503,7 +518,7 @@ JPA、JDBC省略不表。 ClusterJ ClusterJ requires Java 1.7 or 1.8.
 首先使用SessionFactory建立一个会话实例， 然后用Session提供的方法操作数据。
 会话实例 读取配置文件，然后建立Session实例。
 File propsFile = new File(&amp;#34;clusterj.properties&amp;#34;); InputStream inStream = new FileInputStream(propsFile); Properties props = new Properties(); props.load(inStream); SessionFactory factory = ClusterJHelper.getSessionFactory(props); Session session = factory.getSession(); 配置信息 clusterj.properties
-com.mysql.clusterj.connectstring=localhost:1186com.mysql.clusterj.database=mydb 操作数据 参考4.2.2.4 ClusterJ Basic Operations文档。
+com.mysql.clusterj.connectstring=localhost:1186 com.mysql.clusterj.database=mydb 操作数据 参考4.2.2.4 ClusterJ Basic Operations文档。
 Reference 4.2.2 Using ClusterJ </description>
     </item>
     
