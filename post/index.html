@@ -162,17 +162,93 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_nginx-v2/">前端（Web）负载均衡</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Nginx&rsquo;s load balancing
+一、安装 OS: RHEL Community Version(Rocky8/Alma8) minimal（安装时的选项）
+0. prepare #dnf -y install gcc gcc-c++ automake make pcre pcre-devel zlib zlib-devel openssl openssl-devel see update openssl
+Library devel $sudo dnf install gd-devel libxml2-devel libxslt-devel GeoIP Download latest atomic-release Install atomic-release rpm:
+$sudo rpm -Uvh http://www6.atomicorp.com/channels/atomic/centos/8/x86_64/RPMS/atomic-release-1.0-23.el8.art.noarch.rpm Install GeoIP-devel rpm package:
+$sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=public --add-port=80/tcp $sudo firewall-cmd --reload installation First, install Nginx of centos repo; Then, replace the nginx program file. <a class="read-more" href="/cnblogs/post/ops_nginx-v2/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-06T08:38:08&#43;08:00">
+            6 Oct 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_openssl/">How To Install OpenSSL in RHEL</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>RHEL Community Version Alma Linux / Rocky Linux Prepare Install development tool:
+# dnf group install &#39;Development Tools&#39; Install dependencies:
+# dnf install perl-core zlib-devel -y down latest OpenSSL $mkdir openssl-1.1.1 $curl --progress https://www.openssl.org/source/openssl-1.1.1q.tar.gz | tar xz -C ./openssl-1.1.1 --strip-components 1 setup $cd openssl-1.1.1 RHEL8 ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl shared zlib RHEL7 ./config --prefix=/usr --shared make &amp;&amp; install $make Root permission Required:
+$sudo make install RHEL8 # mv /bin/openssl /bin/openssl.backup# cp /usr/local/ssl/bin/openssl /bin/openssl test: <a class="read-more" href="/cnblogs/post/ops_openssl/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-05T08:38:08&#43;08:00">
+            5 Oct 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_openjdk_rhel/">设置OpenJDK</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p> RHEL Community Version Alma Linux / Rocky Linux 1. install jre:
+$sudo dnf install java -y jdk $sudo dnf install java-1.8.0-openjdk-devel 2. set path $sudo vi /etc/profile export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el8_6.x86_64 export CLASSPATH=.:$JAVA_HOME/jre/lib/:. export PATH=$PATH:$JAVA_HOME/bin $su - root #source /etc/profile About path 3.3. INSTALL OPENJDK ON RED HAT ENTERPRISE LINUX - 2.Optional: Set the JAVA_HOME environment variable
+Reference How to install Java on CentOS 7 OpenJDK Version Info - Releases  <a class="read-more" href="/cnblogs/post/ops_openjdk_rhel/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-04T08:08:08-08:00">
+            4 Oct 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/ops_keepalived-v2/">安装配置Keepalived</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>OS: CentOS7 minimal(VBox)
+            <p>OS: AlmaLinux minimal(VBox v6.1.38)
 Virtual Box Network configure:
 Attached to Bridged Adapter Advanced promiscuous mode: Allow All 一、安装 prepare tool:
-#yum install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel \ glib2-devel pcre2-revel libnftnl-devel libmnl-devel systemd-devel kmod-devel LVS manager:
-yum install ipvsadm installation MASTER Node 1 BACKUP Node 2 down and unzip $git clone https://github.com/acassen/keepalived.git for me:
-$git clone https://gitee.com/xiaobin80/keepalived installation $cd keepalived $./autogen.sh configure:
-$./configure --prefix=/usr make: <a class="read-more" href="/cnblogs/post/ops_keepalived-v2/">&raquo;</a></p>
+#dnf install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel \ glib2-devel pcre2-revel libnftnl-devel libmnl-devel systemd-devel kmod-devel LVS manager:
+dnf install ipvsadm installation MASTER Node 1 BACKUP Node 2 down and unzip Released Version: 2.2.7
+$git clone https://github.com/acassen/keepalived.git for me:
+$git clone https://gitee.com/xiaobin80/keepalived installation $cd keepalived $. <a class="read-more" href="/cnblogs/post/ops_keepalived-v2/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -340,85 +416,6 @@ Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install g
         
         <time class="post-date" datetime="2022-07-07T02:08:08&#43;08:00">
             7 Jul 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/jekyll_usage/">使用jekyll编写Blog</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>install jekyll ruby windows rubyinstaller-devkit-3.1.2-1-x64.exe check in:
-ridk install choose(3):
-MSYS2 and MINGW development tool chain gem setup set proxy and gem install:
-set http_proxy=http://127.0.0.1:8580gem install jekyll bundler test:
-jekyll -v usage Rename the repo containing the theme to &ldquo;cnblogs_a&rdquo;
-theme clone:
-git clone https://github.com/the-mvm/the-mvm.github.io.git cd cnblogs_abundle install rb 3.x bundle add webrick launch bundle exec jekyll buildbundle exec jekyll serve publish Submit the &ldquo;_site&rdquo; folder.
-Ref Jekyll serve fails on Ruby 3. <a class="read-more" href="/cnblogs/post/jekyll_usage/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-06-17T14:08:08&#43;08:00">
-            17 Jun 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/redis-centos7-setup/">Redis Server installation FAQs</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>OS: RHEL/CentOS 7 Minimal
-0) open files Q: Increased maximum number of open files to 10032 (it was originally set to 1024). A:
-$ulimit -a $vi /etc/systemd/system/redis.service In the &ldquo;[Service]&rdquo; unit, add the following:
-LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128. A:
-$vi /etc/sysctl.conf net.core.somaxconn=1024 2) overcommit_memory Q: WARNING overcommit_memory is set to 0! <a class="read-more" href="/cnblogs/post/redis-centos7-setup/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-06-16T08:08:08&#43;08:00">
-            16 Jun 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/install-consul_ubuntu/">(dev mode) install CONSUL on ubuntu</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>install $sudo apt-get update $sudo apt-get install consul run $consul agent -dev -bind 192.168.3.128 http://localhost:8500/ui
-update down $wget https://releases.hashicorp.com/consul/1.12.1/consul_1.12.1_linux_amd64.zip unzip $sudo unzip consul_1.12.1_linux_amd64.zip -d /usr/local/bin Verifying the Installation:
-$consul -v Consul v1.12.1 Ref Install Consul Run the Consul Agent  <a class="read-more" href="/cnblogs/post/install-consul_ubuntu/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-05-26T23:08:08&#43;08:00">
-            26 May 2022
         </time>
     </footer>
 </article>

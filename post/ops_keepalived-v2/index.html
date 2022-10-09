@@ -92,7 +92,7 @@
     },
     "headline": "安装配置Keepalived",
     "name": "安装配置Keepalived",
-    "wordCount":  255 ,
+    "wordCount":  259 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
@@ -178,7 +178,7 @@
 
     <section class="post-content">
       <blockquote>
-<p>OS: CentOS7 minimal(VBox)</p>
+<p>OS: AlmaLinux minimal(VBox v6.1.38)</p>
 </blockquote>
 <p>Virtual Box Network configure:</p>
 <ul>
@@ -192,11 +192,11 @@ promiscuous mode:</li>
 <pre tabindex="0"><code>Allow All
 </code></pre><h1 id="一安装">一、安装</h1>
 <p>prepare tool:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#yum install gcc make autoconf automake openssl-devel libnl3-devel \</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#dnf install gcc make autoconf automake openssl-devel libnl3-devel \</span>
 </span></span><span style="display:flex;"><span>    iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    glib2-devel pcre2-revel libnftnl-devel libmnl-devel systemd-devel kmod-devel
 </span></span></code></pre></div><p>LVS manager:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yum install ipvsadm
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dnf install ipvsadm
 </span></span></code></pre></div><h2 id="installation">installation</h2>
 <ul>
 <li>MASTER <br>
@@ -205,6 +205,9 @@ Node 1</li>
 Node 2</li>
 </ul>
 <h3 id="down-and-unzip">down and unzip</h3>
+<blockquote>
+<p>Released Version: 2.2.7</p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$git clone https://github.com/acassen/keepalived.git
 </span></span></code></pre></div><p>for me:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$git clone https://gitee.com/xiaobin80/keepalived
@@ -407,6 +410,13 @@ Node 2</li>
 
 
   <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/ops_openjdk_rhel/">
+          <section class="post">
+              <h2>设置OpenJDK</h2>
+              
+          </section>
+      </a>
   
   
       <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/vc-windbg_driver/">

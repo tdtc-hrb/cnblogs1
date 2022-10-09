@@ -6,20 +6,57 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Sep 2022 09:38:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Oct 2022 08:38:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>前端（Web）负载均衡</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_nginx-v2/</link>
+      <pubDate>Thu, 06 Oct 2022 08:38:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_nginx-v2/</guid>
+      <description>Nginx&amp;rsquo;s load balancing
+一、安装 OS: RHEL Community Version(Rocky8/Alma8) minimal（安装时的选项）
+0. prepare #dnf -y install gcc gcc-c++ automake make pcre pcre-devel zlib zlib-devel openssl openssl-devel see update openssl
+Library devel $sudo dnf install gd-devel libxml2-devel libxslt-devel GeoIP Download latest atomic-release Install atomic-release rpm:
+$sudo rpm -Uvh http://www6.atomicorp.com/channels/atomic/centos/8/x86_64/RPMS/atomic-release-1.0-23.el8.art.noarch.rpm Install GeoIP-devel rpm package:
+$sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=public --add-port=80/tcp $sudo firewall-cmd --reload installation First, install Nginx of centos repo; Then, replace the nginx program file.</description>
+    </item>
+    
+    <item>
+      <title>How To Install OpenSSL in RHEL</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_openssl/</link>
+      <pubDate>Wed, 05 Oct 2022 08:38:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_openssl/</guid>
+      <description>RHEL Community Version Alma Linux / Rocky Linux Prepare Install development tool:
+# dnf group install &amp;#39;Development Tools&amp;#39; Install dependencies:
+# dnf install perl-core zlib-devel -y down latest OpenSSL $mkdir openssl-1.1.1 $curl --progress https://www.openssl.org/source/openssl-1.1.1q.tar.gz | tar xz -C ./openssl-1.1.1 --strip-components 1 setup $cd openssl-1.1.1 RHEL8 ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl shared zlib RHEL7 ./config --prefix=/usr --shared make &amp;amp;&amp;amp; install $make Root permission Required:
+$sudo make install RHEL8 # mv /bin/openssl /bin/openssl.backup# cp /usr/local/ssl/bin/openssl /bin/openssl test:</description>
+    </item>
+    
+    <item>
+      <title>设置OpenJDK</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_openjdk_rhel/</link>
+      <pubDate>Tue, 04 Oct 2022 08:08:08 -0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_openjdk_rhel/</guid>
+      <description> RHEL Community Version Alma Linux / Rocky Linux 1. install jre:
+$sudo dnf install java -y jdk $sudo dnf install java-1.8.0-openjdk-devel 2. set path $sudo vi /etc/profile export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el8_6.x86_64 export CLASSPATH=.:$JAVA_HOME/jre/lib/:. export PATH=$PATH:$JAVA_HOME/bin $su - root #source /etc/profile About path 3.3. INSTALL OPENJDK ON RED HAT ENTERPRISE LINUX - 2.Optional: Set the JAVA_HOME environment variable
+Reference How to install Java on CentOS 7 OpenJDK Version Info - Releases </description>
+    </item>
+    
     <item>
       <title>安装配置Keepalived</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_keepalived-v2/</link>
       <pubDate>Fri, 30 Sep 2022 09:38:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_keepalived-v2/</guid>
-      <description>OS: CentOS7 minimal(VBox)
+      <description>OS: AlmaLinux minimal(VBox v6.1.38)
 Virtual Box Network configure:
 Attached to Bridged Adapter Advanced promiscuous mode: Allow All 一、安装 prepare tool:
-#yum install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel \ glib2-devel pcre2-revel libnftnl-devel libmnl-devel systemd-devel kmod-devel LVS manager:
-yum install ipvsadm installation MASTER Node 1 BACKUP Node 2 down and unzip $git clone https://github.com/acassen/keepalived.git for me:
-$git clone https://gitee.com/xiaobin80/keepalived installation $cd keepalived $./autogen.sh configure:
-$./configure --prefix=/usr make:</description>
+#dnf install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel \ glib2-devel pcre2-revel libnftnl-devel libmnl-devel systemd-devel kmod-devel LVS manager:
+dnf install ipvsadm installation MASTER Node 1 BACKUP Node 2 down and unzip Released Version: 2.2.7
+$git clone https://github.com/acassen/keepalived.git for me:
+$git clone https://gitee.com/xiaobin80/keepalived installation $cd keepalived $.</description>
     </item>
     
     <item>

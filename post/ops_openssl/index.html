@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="How To Install OpenSSL in RHEL"/>
+<meta name="twitter:description" content="update openssl"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="How To Install OpenSSL in RHEL &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/ops_openssl/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="update openssl" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2022-10-05T08:38:08&#43;08:00" />
+
+    
+    
+
+    <title>How To Install OpenSSL in RHEL &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="update openssl" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.104.3" />
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/ops_openssl/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "How To Install OpenSSL in RHEL",
+    "name": "How To Install OpenSSL in RHEL",
+    "wordCount":  90 ,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/ops_openssl/",
+    "datePublished": "2022-10-05T08:38Z",
+    "dateModified": "2022-10-05T08:38Z",
+    
+    
+    "description": "update openssl",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/ops_openssl/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">How To Install OpenSSL in RHEL</h1>
+        <small>update openssl</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2022-10-05T08:38:08&#43;08:00">
+            Oct 5, 2022
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <ul>
+<li>RHEL Community Version <br>
+Alma Linux / Rocky Linux</li>
+</ul>
+<h1 id="prepare">Prepare</h1>
+<p>Install development tool:</p>
+<pre tabindex="0"><code># dnf group install &#39;Development Tools&#39;
+</code></pre><p>Install dependencies:</p>
+<pre tabindex="0"><code># dnf install perl-core zlib-devel -y
+</code></pre><h2 id="down-latest-openssl">down latest OpenSSL</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$mkdir openssl-1.1.1
+</span></span><span style="display:flex;"><span>$curl --progress https://www.openssl.org/source/openssl-1.1.1q.tar.gz | tar xz -C ./openssl-1.1.1 --strip-components <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h1 id="setup">setup</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$cd openssl-1.1.1
+</span></span></code></pre></div><ul>
+<li>RHEL8</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./config --prefix<span style="color:#f92672">=</span>/usr/local/ssl --openssldir<span style="color:#f92672">=</span>/usr/local/ssl shared zlib
+</span></span></code></pre></div><ul>
+<li>RHEL7</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./config --prefix<span style="color:#f92672">=</span>/usr --shared
+</span></span></code></pre></div><h2 id="make--install">make &amp;&amp; install</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$make
+</span></span></code></pre></div><p>Root permission Required:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$sudo make install
+</span></span></code></pre></div><h2 id="rhel8">RHEL8</h2>
+<pre tabindex="0"><code># mv /bin/openssl /bin/openssl.backup
+# cp /usr/local/ssl/bin/openssl /bin/openssl
+</code></pre><p>test:</p>
+<pre tabindex="0"><code># which openssl
+# openssl version -a
+</code></pre><h1 id="ref">Ref</h1>
+<ul>
+<li><a href="https://www.hostnextra.com/kb/how-to-install-openssl-1-1-1i-in-centos-8/">How To Install OpenSSL 1.1.1i in CentOS 8</a></li>
+</ul>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=How%20To%20Install%20OpenSSL%20in%20RHEL&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_openssl%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_openssl%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_openssl%2f&amp;description=How%20To%20Install%20OpenSSL%20in%20RHEL"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_openssl%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/ops_nginx-v2/">
+          <section class="post">
+              <h2>前端（Web）负载均衡</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ops_openjdk_rhel/">
+          <section class="post">
+              <h2>设置OpenJDK</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+
