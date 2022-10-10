@@ -6,7 +6,32 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 06 Oct 2022 08:38:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Oct 2022 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis Server installation FAQs</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/redis-rhel-setup/</link>
+      <pubDate>Sat, 08 Oct 2022 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/redis-rhel-setup/</guid>
+      <description>OS: RHEL Community Minimal
+AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 Root Permission:
+$su - root 0) open files Q: Increased maximum number of open files to 10032 (it was originally set to 1024). A:
+#ulimit -a #vi /etc/systemd/system/redis.service In the &amp;ldquo;[Service]&amp;rdquo; unit, add the following:
+LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128. A:</description>
+    </item>
+    
+    <item>
+      <title>Install Redis from Source</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/redis-rhel/</link>
+      <pubDate>Fri, 07 Oct 2022 04:58:39 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/redis-rhel/</guid>
+      <description>OS: RHEL Community Minimal
+AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 prepare User set Firewall dependencies:
+$sudo dnf group install &amp;#39;Development Tools&amp;#39; $sudo dnf install tcl wget v6+ Just to clarify: there is no way this issue will be fixed, Redis &amp;gt;= 6 will require a C11 compiler.
+RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enable devtoolset-8 bash verification $gcc -v $make -v $echo &amp;#39;puts [info patchlevel];exit 0&amp;#39; | tclsh installation $wget https://download.</description>
+    </item>
+    
     <item>
       <title>前端（Web）负载均衡</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_nginx-v2/</link>
@@ -150,19 +175,6 @@ jekyll -v usage Rename the repo containing the theme to &amp;ldquo;cnblogs_a&amp
 theme clone:
 git clone https://github.com/the-mvm/the-mvm.github.io.git cd cnblogs_abundle install rb 3.x bundle add webrick launch bundle exec jekyll buildbundle exec jekyll serve publish Submit the &amp;ldquo;_site&amp;rdquo; folder.
 Ref Jekyll serve fails on Ruby 3.</description>
-    </item>
-    
-    <item>
-      <title>Redis Server installation FAQs</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</link>
-      <pubDate>Thu, 16 Jun 2022 08:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</guid>
-      <description>OS: RHEL/CentOS 7 Minimal
-0) open files Q: Increased maximum number of open files to 10032 (it was originally set to 1024). A:
-$ulimit -a $vi /etc/systemd/system/redis.service In the &amp;ldquo;[Service]&amp;rdquo; unit, add the following:
-LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128. A:
-$vi /etc/sysctl.conf net.core.somaxconn=1024 2) overcommit_memory Q: WARNING overcommit_memory is set to 0!</description>
     </item>
     
     <item>

@@ -57,7 +57,7 @@
         <link href='/cnblogs/tags/rhel/index.xml' rel="alternate" type="application/rss+xml" title="RHEL &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="generator" content="Hugo 0.104.3" />
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/tags/rhel/" />
 
@@ -160,14 +160,14 @@
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ror_installation/">安装Ruby On Rails 在RHEL8</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/redis-rhel/">Install Redis from Source</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>OS Alma / Rocky 8 miminal Ruby Installation of v3.1 is not currently supported, in RHEL. The default version is v2.5.5
-version ruby-versions
-Rails 7 requires Ruby 2.7.0 or newer.Rails 6 requires Ruby 2.5.0 or newer. Ruby &amp; Rails Compatibility Table |Rails Version|Required Ruby Version|Recommended Ruby Version|Required Rubygems Version|Status| |7.0.x|&gt;= 3.1.0|3.1.x|&gt;= 1.8.11|Maintained| |7.0.0|&gt;= 2.7.0|3.1.x|&gt;= 1.8.11|Maintained| |6.1.x|&gt;= 2.5.0|3.0.x|&gt;= 1.8.11|Maintained| |6.0.x|&gt;= 2.5.0&lt; 3.0.0|2.6.x|&gt;= 1.8.11|Maintained for Security Issues|
-Installation supported The repo supports the installed version. <a class="read-more" href="/cnblogs/post/ror_installation/">&raquo;</a></p>
+            <p>OS: RHEL Community Minimal
+AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 prepare User set Firewall dependencies:
+$sudo dnf group install &#39;Development Tools&#39; $sudo dnf install tcl wget v6+ Just to clarify: there is no way this issue will be fixed, Redis &gt;= 6 will require a C11 compiler.
+RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enable devtoolset-8 bash verification $gcc -v $make -v $echo &#39;puts [info patchlevel];exit 0&#39; | tclsh installation $wget https://download. <a class="read-more" href="/cnblogs/post/redis-rhel/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -177,17 +177,17 @@ Installation supported The repo supports the installed version. <a class="read-m
 
         on
             
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/redis/">#Redis</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/development-tools/">#Development Tools</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/wget/">#wget</a>,
+            
                 <a href="https://tdtc-hrb.github.io/cnblogs//tags/rhel/">#RHEL</a>,
             
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/centos/">#CentOS</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/alma/">#Alma</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/rocky/">#Rocky</a>,
-            
         
-        <time class="post-date" datetime="2022-06-18T14:08:08&#43;08:00">
-            18 Jun 2022
+        <time class="post-date" datetime="2022-10-07T04:58:39&#43;08:00">
+            7 Oct 2022
         </time>
     </footer>
 </article>

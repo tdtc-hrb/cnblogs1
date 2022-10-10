@@ -164,6 +164,34 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-restful/">ASP.net Core 的RESTful应用</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>使用Scaffolder模板创建api。
+PowerShell v5.1 IDE: Visual Studio Code/Visual Studio 2022 NuGet ..\AppData\Roaming\NuGet\NuGet.Config
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;configuration&gt; &lt;packageSources&gt; &lt;add key=&#34;api.nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; /&gt; &lt;/packageSources&gt; &lt;/configuration&gt; Create Project vs code
+dotnet new webapi -o MyWebApp --package Swashbuckle.AspNetCore:PackageVersion=6.2.3 add NuGet package dotnet add package Microsoft.EntityFrameworkCore dotnet add package MySql.EntityFrameworkCore dotnet add package Microsoft.EntityFrameworkCore.Tools Option NuGet package Pomelo:
+CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql Test Browser
+Models 建立Entity类：Supplier、Product、Category
+DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbContext(DbContextOptions&lt;StorageBuyDbContext&gt; options) : base(options){} public DbSet&lt;Category&gt; Categories { get; set; } public DbSet&lt;Supplier&gt; Suppliers { get; set; } public DbSet&lt;Product&gt; Products { get; set; } } add service add connectiong string &#34;Data&#34;: { &#34;StorageBuy&#34;: { &#34;ConnectionString&#34;: &#34;server=127. <a class="read-more" href="/cnblogs/post/asp.net6-restful/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-11T12:38:08&#43;08:00">
+            11 Nov 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/asp.net6-grpc/">ASP.net Core 的gRPC Service应用</a></h2>
     </header>
     <section class="post-excerpt">
@@ -389,33 +417,6 @@ D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
 
         
         <time class="post-date" datetime="2020-05-16T12:08:08&#43;08:00">
-            16 May 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/cas-server-config/">cas server设置</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Tomcat: V8.5.x Java: 1.8 x64 MySQL: 5.5.x+ OS: Win10 x64 下载部署包 使用gradle 的repo最高只支持gradle V4.3！
-0. clone git clone https://github.com/apereo/cas-gradle-overlay-template.git 1. set gradle 1) extract gradle-4.10.3-bin.zip
-2) set system variable $PATH=$PATH;%GRADLE_HOME%\bin 2. build war File location: cas\build\libs\cas.war
-1) config file gradle.properties
-cas.version=5.3.2 =&gt; cas.version=5.3.15.1 gradle.version=4.8 =&gt; gradle.version=4.10.3 springboot.version=1.5.14.RELEASE =&gt; springboot.version=1.5.18.RELEASE 2) build cd cas-gradle-overlay-template $gradle build II. Run 0. key/certificate 1) genkey info: -dname &ldquo;CN=localhost,OU=test.com,O=test,L=WH,ST=HB,C=CN&rdquo;
-keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize 2048 -keystore e:/etc/cas/thekeystore 2) export keytool -export -alias thekeystore -file e:/etc/cas/cas5311. <a class="read-more" href="/cnblogs/post/cas-server-config/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T10:08:08&#43;08:00">
             16 May 2020
         </time>
     </footer>

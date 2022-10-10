@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RHEL on 迁移自(cnblogs.com/xiaobin-hlj80)</title>
-    <link>https://tdtc-hrb.github.io/cnblogs/tags/rhel/</link>
-    <description>Recent content in RHEL on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
+    <title>Redis on 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+    <link>https://tdtc-hrb.github.io/cnblogs/tags/redis/</link>
+    <description>Recent content in Redis on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 07 Oct 2022 04:58:39 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/tags/rhel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Oct 2022 04:58:39 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Redis from Source</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/redis-rhel/</link>

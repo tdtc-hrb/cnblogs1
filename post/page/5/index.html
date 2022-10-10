@@ -162,6 +162,33 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/cas-server-config/">cas server设置</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Tomcat: V8.5.x Java: 1.8 x64 MySQL: 5.5.x+ OS: Win10 x64 下载部署包 使用gradle 的repo最高只支持gradle V4.3！
+0. clone git clone https://github.com/apereo/cas-gradle-overlay-template.git 1. set gradle 1) extract gradle-4.10.3-bin.zip
+2) set system variable $PATH=$PATH;%GRADLE_HOME%\bin 2. build war File location: cas\build\libs\cas.war
+1) config file gradle.properties
+cas.version=5.3.2 =&gt; cas.version=5.3.15.1 gradle.version=4.8 =&gt; gradle.version=4.10.3 springboot.version=1.5.14.RELEASE =&gt; springboot.version=1.5.18.RELEASE 2) build cd cas-gradle-overlay-template $gradle build II. Run 0. key/certificate 1) genkey info: -dname &ldquo;CN=localhost,OU=test.com,O=test,L=WH,ST=HB,C=CN&rdquo;
+keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize 2048 -keystore e:/etc/cas/thekeystore 2) export keytool -export -alias thekeystore -file e:/etc/cas/cas5311. <a class="read-more" href="/cnblogs/post/cas-server-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-05-16T10:08:08&#43;08:00">
+            16 May 2020
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/java-connector-cluster_mysql/">cluster connector</a></h2>
     </header>
     <section class="post-excerpt">

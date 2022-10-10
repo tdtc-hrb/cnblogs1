@@ -162,6 +162,67 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/redis-rhel-setup/">Redis Server installation FAQs</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>OS: RHEL Community Minimal
+AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 Root Permission:
+$su - root 0) open files Q: Increased maximum number of open files to 10032 (it was originally set to 1024). A:
+#ulimit -a #vi /etc/systemd/system/redis.service In the &ldquo;[Service]&rdquo; unit, add the following:
+LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128. A: <a class="read-more" href="/cnblogs/post/redis-rhel-setup/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-08T08:08:08&#43;08:00">
+            8 Oct 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/redis-rhel/">Install Redis from Source</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>OS: RHEL Community Minimal
+AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 prepare User set Firewall dependencies:
+$sudo dnf group install &#39;Development Tools&#39; $sudo dnf install tcl wget v6+ Just to clarify: there is no way this issue will be fixed, Redis &gt;= 6 will require a C11 compiler.
+RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enable devtoolset-8 bash verification $gcc -v $make -v $echo &#39;puts [info patchlevel];exit 0&#39; | tclsh installation $wget https://download. <a class="read-more" href="/cnblogs/post/redis-rhel/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        on
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/redis/">#Redis</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/development-tools/">#Development Tools</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/wget/">#wget</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/rhel/">#RHEL</a>,
+            
+        
+        <time class="post-date" datetime="2022-10-07T04:58:39&#43;08:00">
+            7 Oct 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/ops_nginx-v2/">前端（Web）负载均衡</a></h2>
     </header>
     <section class="post-excerpt">
@@ -364,56 +425,6 @@ Project -&gt; Add New Item program test1.asm:
         
         <time class="post-date" datetime="2022-07-27T00:26:39&#43;08:00">
             27 Jul 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ror_getstarted/">开始Ruby On Rails</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Prepare mysql-dev sudo apt install mysql-client libmysqlclient-devgem install mysql2 nodejs curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -sudo apt install nodejs Yarn upload to ubuntu:
-scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.152:/home/tdtc/ install:
-sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb Creating a New Rails Project new:
-rails new myapp -j esbuild --css bulma -d mysql upload images windows 10:
-tar zcvf img.tar.gz ./img/ --transform s/img/images/ scp d:\projects\img.tar.gz tdtc@192.168.0.152:/home/tdtc/myapp/app/assets/ ubuntu:
-cd ~/myapp/app/assets/ tar zxvf img. <a class="read-more" href="/cnblogs/post/ror_getstarted/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-07-09T16:08:08&#43;08:00">
-            9 Jul 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ror_installation/">安装Ruby On Rails</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Ruby &amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &gt;= 3.1.0 3.1.x &gt;= 1.8.11 Maintained RbEnv Install ruby using rbenv.
-Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.5.5 sudo dnf -y install git make gcc curl openssl-devel zlib-devel libffi-devel readline-devel sqlite-devel install tar: <a class="read-more" href="/cnblogs/post/ror_installation/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-07-07T02:08:08&#43;08:00">
-            7 Jul 2022
         </time>
     </footer>
 </article>
