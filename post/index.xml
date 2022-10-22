@@ -6,7 +6,31 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 10 Oct 2022 00:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Oct 2022 16:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开始Ruby On Rails</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
+      <pubDate>Wed, 19 Oct 2022 16:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</guid>
+      <description>Prepare mysql-dev sudo apt install mysql-client libmysqlclient-devgem install mysql2 nodejs curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -sudo apt install nodejs Yarn upload to ubuntu:
+scp d:\yarn_1.22.19_all.deb tdtc@192.168.3.99:/home/tdtc/ install:
+sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb Creating a New Rails Project new:
+rails new myapp -j esbuild --css bulma -d mysql upload images windows 10:
+tar zcvf img.tar.gz ./img/ --transform s/img/images/ scp d:\projects\img.tar.gz tdtc@192.168.3.99:/home/tdtc/myapp/app/assets/ ubuntu:
+cd ~/myapp/app/assets/ tar zxvf img.</description>
+    </item>
+    
+    <item>
+      <title>安装Ruby On Rails</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
+      <pubDate>Mon, 17 Oct 2022 02:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
+      <description>Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;= 1.8.11 Maintained RbEnv Install ruby using rbenv.
+Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.5.5 sudo dnf -y install git make gcc curl openssl-devel zlib-devel libffi-devel readline-devel sqlite-devel install tar:</description>
+    </item>
+    
     <item>
       <title>spark安装</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_spark_rhel/</link>
@@ -146,30 +170,6 @@ Project -&amp;gt; Add New Item program test1.asm:
       <guid>https://tdtc-hrb.github.io/cnblogs/post/css-bulma-tabs/</guid>
       <description>html Note: The header and body are wrapped with div!
 &amp;lt;div id=&amp;#34;tabs-with-content&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; Header &amp;lt;div class=&amp;#34;tabs is-centered&amp;#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Tech Parameters&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; Body &amp;lt;div class=&amp;#34;tabs is-centered&amp;#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Tech Parameters&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;section class=&amp;#34;tab-content&amp;#34;&amp;gt; &amp;lt;table class=&amp;#34;table&amp;#34;&amp;gt; &amp;lt;tbody&amp;gt; &amp;lt;td&amp;gt; &amp;lt;%= image_tag &amp;#34;#{@image.name}&amp;#34; %&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;%= @product.description %&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;/tbody&amp;gt; &amp;lt;/table&amp;gt; &amp;lt;/section&amp;gt; &amp;lt;section class=&amp;#34;tab-content&amp;#34;&amp;gt; &amp;lt;%= @parameter.ipxx %&amp;gt; &amp;lt;/section&amp;gt; &amp;lt;/div&amp;gt; javascript let tabsWithContent = (function () { let tabs = document.</description>
-    </item>
-    
-    <item>
-      <title>开始Ruby On Rails</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
-      <pubDate>Sat, 09 Jul 2022 16:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</guid>
-      <description>Prepare mysql-dev sudo apt install mysql-client libmysqlclient-devgem install mysql2 nodejs curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -sudo apt install nodejs Yarn upload to ubuntu:
-scp d:\projects\yarn_1.22.19_all.deb tdtc@192.168.0.152:/home/tdtc/ install:
-sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb Creating a New Rails Project new:
-rails new myapp -j esbuild --css bulma -d mysql upload images windows 10:
-tar zcvf img.tar.gz ./img/ --transform s/img/images/ scp d:\projects\img.tar.gz tdtc@192.168.0.152:/home/tdtc/myapp/app/assets/ ubuntu:
-cd ~/myapp/app/assets/ tar zxvf img.</description>
-    </item>
-    
-    <item>
-      <title>安装Ruby On Rails</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
-      <pubDate>Thu, 07 Jul 2022 02:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
-      <description>Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;= 1.8.11 Maintained RbEnv Install ruby using rbenv.
-Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.5.5 sudo dnf -y install git make gcc curl openssl-devel zlib-devel libffi-devel readline-devel sqlite-devel install tar:</description>
     </item>
     
     <item>
