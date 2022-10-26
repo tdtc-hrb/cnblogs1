@@ -6,7 +6,19 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 19 Oct 2022 18:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Oct 2022 00:18:02 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3小时搞定ASP.NET Core 6.0</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</link>
+      <pubDate>Fri, 21 Oct 2022 00:18:02 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
+      <description>OS: Windows 10 LTSC 2019 IDE: Visual Studio Code SDK: .Net 6.0 终端(Terminal) PowerShell Core 数据库(Database)：MySQL / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside) 一、Create Project(VS Code) Init project Terminal -&amp;gt; New Terminal
+dotnet new mvc -o veic_web --framework net6.0 Set workspace dir File -&amp;gt; Add Folder to Workspace
+设置缺省首页(Home Set Default) Program.cs app.UseStaticFiles(); 变更为:
+app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See附录1. Run Run -&amp;gt; Start Debugging build Terminal -&amp;gt; Run Build Task Manually add .</description>
+    </item>
+    
     <item>
       <title>开始Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
@@ -291,20 +303,6 @@ Create Personal Access Token on GitHub From your GitHub account, go to Settings 
 根据需要勾选授权(scopes): Note: 你的token 标题 Select scopes: 勾选“public_repo”
 增加普通凭证 控制面板 -&amp;gt; 用户帐户和家庭安全 -&amp;gt; 凭据管理器
 添加&amp;quot;普通凭证&amp;quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token</description>
-    </item>
-    
-    <item>
-      <title>3小时搞定ASP.NET Core 6.0</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</link>
-      <pubDate>Thu, 21 Apr 2022 11:18:02 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
-      <description>IDE: Visual Studio Code SDK: .Net 6.0 终端(Terminal) Windows 10 LTSC 2019(v1809+): PowerShell Core 数据库(Database)：MySQL / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside) 一、Create Project(VS Code) Set workspace dir File -&amp;gt; Add Folder to Workspace
-Init project Terminal -&amp;gt; New Terminal
-dotnet new mvc -o veic_web --framework net6.0 设置缺省首页(Home Set Default) 由
-app.UseStaticFiles(); 变更为:
-app.UseDefaultFiles(); app.UseStaticFiles(); 新建wwwroot/index.html，See附录1.
-Run build Manually add .vscode install c# for Visual Studio Code 双击Program.</description>
     </item>
     
     <item>

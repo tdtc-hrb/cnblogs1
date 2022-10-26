@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="MVC基础篇(MVC basics)" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-04-21T11:18:02&#43;08:00" />
+    <meta property="article:published_time" content="2022-10-21T00:18:02&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "3小时搞定ASP.NET Core 6.0",
     "name": "3小时搞定ASP.NET Core 6.0",
-    "wordCount":  675 ,
+    "wordCount":  686 ,
     "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/",
-    "datePublished": "2022-04-21T11:18Z",
-    "dateModified": "2022-04-21T11:18Z",
+    "datePublished": "2022-10-21T00:18Z",
+    "dateModified": "2022-10-21T00:18Z",
     
     
     "description": "MVC基础篇(MVC basics)",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-04-21T11:18:02&#43;08:00">
-            Apr 21, 2022
+          <time class="post-date" datetime="2022-10-21T00:18:02&#43;08:00">
+            Oct 21, 2022
           </time>
         
          
@@ -178,19 +178,14 @@
 
     <section class="post-content">
       <ul>
+<li>OS:  <a href="https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md">Windows 10 LTSC 2019</a></li>
 <li>IDE: <a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
 <li>SDK: <a href="https://dotnet.microsoft.com/download/dotnet/6.0">.Net 6.0</a></li>
 <li>终端(Terminal) <br>
-Windows 10 LTSC 2019(<a href="https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md">v1809+</a>): <a href="https://github.com/PowerShell/PowerShell#get-powershell">PowerShell Core</a></li>
+<a href="https://github.com/PowerShell/PowerShell#get-powershell">PowerShell Core</a></li>
 <li>数据库(Database)：<a href="https://dev.mysql.com/downloads/mysql/">MySQL</a> / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside)</li>
 </ul>
 <h1 id="一create-projectvs-code">一、Create Project(VS Code)</h1>
-<ul>
-<li>Set workspace dir</li>
-</ul>
-<blockquote>
-<p>File -&gt; Add Folder to Workspace</p>
-</blockquote>
 <ul>
 <li>Init project</li>
 </ul>
@@ -198,18 +193,29 @@ Windows 10 LTSC 2019(<a href="https://github.com/dotnet/core/blob/main/release-n
 <p>Terminal -&gt; New Terminal</p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet new mvc -o veic_web --framework net6.0
-</span></span></code></pre></div><h2 id="设置缺省首页home-set-default">设置缺省首页(Home Set Default)</h2>
-<p>由</p>
+</span></span></code></pre></div><ul>
+<li>Set workspace dir</li>
+</ul>
+<blockquote>
+<p>File -&gt; Add Folder to Workspace</p>
+</blockquote>
+<h2 id="设置缺省首页home-set-default">设置缺省首页(Home Set Default)</h2>
+<ul>
+<li>Program.cs</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>app.UseStaticFiles();
 </span></span></code></pre></div><p>变更为:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>app.UseDefaultFiles();
 </span></span><span style="display:flex;"><span>app.UseStaticFiles();
-</span></span></code></pre></div><p>新建wwwroot/index.html，See附录<sup>1</sup>.</p>
+</span></span></code></pre></div><ul>
+<li>Html <br>
+新建wwwroot/index.html，See附录<sup>1</sup>.</li>
+</ul>
 <h2 id="run">Run</h2>
-<h3 id="build">build</h3>
-<ol>
-<li><a href="https://github.com/OmniSharp/omnisharp-vscode/issues/3702">Manually add .vscode</a></li>
-</ol>
+<pre tabindex="0"><code>Run -&gt; Start Debugging
+</code></pre><h3 id="build">build</h3>
+<pre tabindex="0"><code>Terminal -&gt; Run Build Task
+</code></pre><h4 id="manually-add-vscodehttpsgithubcomomnisharpomnisharp-vscodeissues3702"><a href="https://github.com/OmniSharp/omnisharp-vscode/issues/3702">Manually add .vscode</a></h4>
 <ul>
 <li>
 <p>install c# for Visual Studio Code <br>
@@ -220,23 +226,13 @@ Windows 10 LTSC 2019(<a href="https://github.com/dotnet/core/blob/main/release-n
 use view-&gt;command palette-&gt;Omnisharp: select project to select the new project</p>
 </li>
 </ul>
-<ol start="2">
-<li>Terminal -&gt; Run Build Task</li>
-</ol>
-<h3 id="exec">exec</h3>
-<blockquote>
-<p>Run -&gt; Start Debugging</p>
-</blockquote>
 <p>运行效果:
 <img src="https://img-blog.csdnimg.cn/20201102052153747.png" alt="home page"></p>
-<h1 id="二db支持">二、DB支持</h1>
-<p>Enter the project folder (the directory where the &ldquo;.csproj&rdquo; file is located).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd veic_web
-</span></span></code></pre></div><p>Release:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore
-</span></span></code></pre></div><p>Preview:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore --prerelease
-</span></span></code></pre></div><h2 id="1-entity-class">1. entity class</h2>
+<h1 id="二data">二、Data</h1>
+<p>namespace:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> veic_web.Models;
+</span></span></code></pre></div><h2 id="table">Table</h2>
+<p>You can choose between MySQL or MSSQL.</p>
 <h3 id="localdb">LocalDB</h3>
 <p>About vs2013 installation files: <br>
 All feature packages are in &ldquo;packages&rdquo;;</p>
@@ -279,7 +275,27 @@ Host:</p>
 </span></span><span style="display:flex;"><span>)<span style="color:#66d9ef">WITH</span> (PAD_INDEX <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, STATISTICS_NORECOMPUTE <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, IGNORE_DUP_KEY <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, ALLOW_ROW_LOCKS <span style="color:#f92672">=</span> <span style="color:#66d9ef">ON</span>, ALLOW_PAGE_LOCKS <span style="color:#f92672">=</span> <span style="color:#66d9ef">ON</span>) <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">PRIMARY</span>]
 </span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">PRIMARY</span>]
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
-</span></span></code></pre></div><h3 id="productcs">Product.cs</h3>
+</span></span></code></pre></div><h2 id="1-add-package">1. Add package</h2>
+<p>Enter the project folder (the directory where the &ldquo;.csproj&rdquo; file is located).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd veic_web
+</span></span></code></pre></div><p>Release:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore
+</span></span></code></pre></div><p>Preview:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore --prerelease
+</span></span></code></pre></div><h3 id="mysql">MySQL</h3>
+<ul>
+<li>Pomelo</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql
+</span></span></code></pre></div><ul>
+<li>Oracle</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package MySql.EntityFrameworkCore
+</span></span></code></pre></div><h3 id="ms-sql">MS Sql</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore.SqlServer --prerelease
+</span></span></code></pre></div><h2 id="2-entity-framework">2. Entity Framework</h2>
+<h3 id="entity-class">entity class</h3>
+<p>Product.cs:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.ComponentModel.DataAnnotations;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> veic_web.Models;
@@ -295,13 +311,14 @@ Host:</p>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string?</span> Name { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string?</span> Description { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="2-db-context">2. DB Context</h2>
+</span></span></code></pre></div><p>###. DB Context</p>
 <blockquote>
 <p>ApplicationDbContext.cs</p>
 </blockquote>
 <p>引用：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Microsoft.EntityFrameworkCore;
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApplicationDbContext</span> : DbContext
+</span></span></code></pre></div><p>实现：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApplicationDbContext</span> : DbContext
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options) : <span style="color:#66d9ef">base</span>(options)
 </span></span><span style="display:flex;"><span>    {
@@ -310,7 +327,52 @@ Host:</p>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Entity支持</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> DbSet&lt;Product&gt; Products { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; } = <span style="color:#66d9ef">default</span>!;
-</span></span></code></pre></div><h2 id="3-repository类">3. Repository类</h2>
+</span></span></code></pre></div><h2 id="3-usage-ef">3. Usage EF</h2>
+<p>首先添加数据库context，然后添加Repository。</p>
+<h3 id="adddbcontext">addDbContext</h3>
+<ul>
+<li>MySQL <br>
+Pomelo:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// Add services to the container.</span>
+</span></span><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+</span></span><span style="display:flex;"><span>                        options.UseMySql(builder.Configuration[<span style="color:#e6db74">&#34;Data:VeicWeb:ConnectionString&#34;</span>],
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">new</span> MySqlServerVersion(<span style="color:#66d9ef">new</span> Version(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">38</span>)))
+</span></span><span style="display:flex;"><span>                .EnableSensitiveDataLogging());
+</span></span></code></pre></div><p>Oracle:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+</span></span><span style="display:flex;"><span>    options.UseMySQL(builder.Configuration[<span style="color:#e6db74">&#34;Data:VeicWeb:ConnectionString&#34;</span>]));
+</span></span></code></pre></div><ul>
+<li>LocalDB</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// Add services to the container.</span>
+</span></span><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+</span></span><span style="display:flex;"><span>                        options.UseSqlServer(builder.Configuration[<span style="color:#e6db74">&#34;Data:mslocaldb:ConnectionString&#34;</span>])
+</span></span><span style="display:flex;"><span>                .EnableSensitiveDataLogging());
+</span></span></code></pre></div><h4 id="db-connection-string">DB Connection String</h4>
+<blockquote>
+<p>appsettings.json</p>
+</blockquote>
+<ul>
+<li>MySQL</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>&#34;Data&#34;: {
+</span></span><span style="display:flex;"><span>    &#34;VeicWeb&#34;: {
+</span></span><span style="display:flex;"><span>        &#34;ConnectionString&#34;: &#34;server=127.0.0.1; user id=DBAdmin; password=xbfirst; database=carnumber; pooling=false; Convert Zero Datetime=True;&#34;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><a href="https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15#connect-to-the-automatic-instance">LocalDB</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>    &#34;Data&#34;:{
+</span></span><span style="display:flex;"><span>       &#34;mslocaldb&#34;: {
+</span></span><span style="display:flex;"><span>          &#34;ConnectionString&#34;: &#34;Server=(LocalDB)\\MSSQLLocalDB;Database=carnumber;MultipleActiveResultSets=true&#34;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="addtransient">addTransient</h3>
+<p>use瞬时模式, 添加Repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>builder.Services.AddTransient&lt;IProductRepository, EFProductRepository&gt;();
+</span></span></code></pre></div><h4 id="repository类">Repository类</h4>
 <p>引用：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Linq;
 </span></span></code></pre></div><p>接口：</p>
@@ -330,64 +392,7 @@ Host:</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> IQueryable&lt;Product&gt; Products =&gt; context.Products;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="4-db-connection-string">4. DB Connection String</h2>
-<blockquote>
-<p>appsettings.json</p>
-</blockquote>
-<h3 id="mysql">MySQL</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>&#34;Data&#34;: {
-</span></span><span style="display:flex;"><span>    &#34;VeicWeb&#34;: {
-</span></span><span style="display:flex;"><span>        &#34;ConnectionString&#34;: &#34;server=127.0.0.1; user id=DBAdmin; password=xbfirst; database=carnumber; pooling=false; Convert Zero Datetime=True;&#34;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="localdbhttpsdocsmicrosoftcomen-ussqldatabase-engineconfigure-windowssql-server-express-localdbviewsql-server-ver15connect-to-the-automatic-instance"><a href="https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15#connect-to-the-automatic-instance">LocalDB</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>    &#34;Data&#34;:{
-</span></span><span style="display:flex;"><span>       &#34;mslocaldb&#34;: {
-</span></span><span style="display:flex;"><span>          &#34;ConnectionString&#34;: &#34;Server=(LocalDB)\\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=C:\\Users\\tdtc\\carnumber.mdf&#34;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span></code></pre></div><h2 id="5-add-package">5. Add package</h2>
-<ul>
-<li>Pomelo</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql
-</span></span></code></pre></div><ul>
-<li>Oracle</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package MySql.EntityFrameworkCore
-</span></span></code></pre></div><ul>
-<li>MS Sql</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore.SqlServer --prerelease
-</span></span></code></pre></div><h3 id="mysql-issues">MySQL issues</h3>
-<ul>
-<li>Oracle版 <br>
-支持.net 6(6.0.0+MySQL8.0.28)</li>
-</ul>
-<h2 id="6-配置services">6. 配置Services</h2>
-<p>首先添加数据库context，然后添加Repository。</p>
-<ul>
-<li>MySQL <br>
-Pomelo:</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// Add services to the container.</span>
-</span></span><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
-</span></span><span style="display:flex;"><span>                        options.UseMySql(builder.Configuration[<span style="color:#e6db74">&#34;Data:VeicWeb:ConnectionString&#34;</span>],
-</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">new</span> MySqlServerVersion(<span style="color:#66d9ef">new</span> Version(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">36</span>)))
-</span></span><span style="display:flex;"><span>                .EnableSensitiveDataLogging());
-</span></span></code></pre></div><p>Oracle:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
-</span></span><span style="display:flex;"><span>    options.UseMySQL(builder.Configuration[<span style="color:#e6db74">&#34;Data:VeicWeb:ConnectionString&#34;</span>]));
-</span></span></code></pre></div><ul>
-<li>LocalDB</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// Add services to the container.</span>
-</span></span><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
-</span></span><span style="display:flex;"><span>                        options.UseSqlServer(builder.Configuration[<span style="color:#e6db74">&#34;Data:mslocaldb:ConnectionString&#34;</span>])
-</span></span><span style="display:flex;"><span>                .EnableSensitiveDataLogging());
-</span></span></code></pre></div><p>use瞬时模式, 添加Repository:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>builder.Services.AddTransient&lt;IProductRepository, EFProductRepository&gt;();
-</span></span></code></pre></div><h1 id="三view">三、View</h1>
+</span></span></code></pre></div><h1 id="三view-controller">三、View-Controller</h1>
 <p>Views/Home/Index.cshtml:
 由</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;Learn about &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://docs.microsoft.com/aspnet/core&#34;</span>&gt;building Web apps with ASP.NET Core&lt;/<span style="color:#f92672">a</span>&gt;.&lt;/<span style="color:#f92672">p</span>&gt;
@@ -402,7 +407,7 @@ Pomelo:</li>
 </span></span><span style="display:flex;"><span>        @p.Description
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h1 id="四controller">四、Controller</h1>
+</span></span></code></pre></div><h2 id="controller">Controller</h2>
 <blockquote>
 <p>HomeController.cs</p>
 </blockquote>
@@ -431,10 +436,10 @@ Pomelo:</li>
 </ul>
 <p>project code:</p>
 <ul>
-<li>asp.net 6.0 m1: <a href="https://pan.baidu.com/s/12yvHS1eO0tvq8kx4Wt8nRw?pwd=t5yk">提取码: t5yk</a></li>
+<li>asp.net 6.0 m2: <a href="https://pan.baidu.com/s/1FoTur3ML7eEv9DvYkjcwmA?pwd=j8ex">提取码: j8ex</a></li>
 </ul>
 <h1 id="附录">附录</h1>
-<p>[index.html]</p>
+<h2 id="indexhtml">index.html</h2>
 <pre tabindex="0"><code>&lt;html&gt;
     &lt;head&gt;
         &lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=utf-8&#34;&gt;
@@ -527,17 +532,10 @@ Pomelo:</li>
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/ops_department_github_man/">
-          <section class="post">
-              <h2>Github使用</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/js-redux-mini/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ror_getstarted/">
           <section class="post">
-              <h2>最小实现redux - 分解redux</h2>
+              <h2>开始Ruby On Rails</h2>
           </section>
       </a>
   
