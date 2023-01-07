@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.104.3" />
+    <meta name="generator" content="Hugo 0.109.0">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/e-avr8-blink/" />
 
@@ -223,25 +223,25 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// the setup function runs once when you press reset or power the board
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">// initialize digital pin LED_BUILTIN as an output.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  pinMode(led1, OUTPUT);
-</span></span><span style="display:flex;"><span>  pinMode(led2, OUTPUT);
-</span></span><span style="display:flex;"><span>  pinMode(led3, OUTPUT);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">pinMode</span>(led1, OUTPUT);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">pinMode</span>(led2, OUTPUT);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">pinMode</span>(led3, OUTPUT);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// the loop function runs over and over again forever
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
-</span></span><span style="display:flex;"><span>  digitalWrite(led1, HIGH);   <span style="color:#75715e">// turn the LED on (HIGH is the voltage level)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  delay(<span style="color:#ae81ff">1000</span>);                       <span style="color:#75715e">// wait for a second
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  digitalWrite(led1, LOW);    <span style="color:#75715e">// turn the LED off by making the voltage LOW
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  delay(<span style="color:#ae81ff">1000</span>);                       <span style="color:#75715e">// wait for a second
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  digitalWrite(led2, HIGH);
-</span></span><span style="display:flex;"><span>  delay(<span style="color:#ae81ff">1000</span>);
-</span></span><span style="display:flex;"><span>  digitalWrite(led2, LOW);
-</span></span><span style="display:flex;"><span>  delay(<span style="color:#ae81ff">1000</span>);
-</span></span><span style="display:flex;"><span>  digitalWrite(led3, HIGH);
-</span></span><span style="display:flex;"><span>  delay(<span style="color:#ae81ff">1000</span>);
-</span></span><span style="display:flex;"><span>  digitalWrite(led3, LOW);
-</span></span><span style="display:flex;"><span>  delay(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">digitalWrite</span>(led1, HIGH);   <span style="color:#75715e">// turn the LED on (HIGH is the voltage level)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">1000</span>);                       <span style="color:#75715e">// wait for a second
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">digitalWrite</span>(led1, LOW);    <span style="color:#75715e">// turn the LED off by making the voltage LOW
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">1000</span>);                       <span style="color:#75715e">// wait for a second
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">digitalWrite</span>(led2, HIGH);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">digitalWrite</span>(led2, LOW);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">digitalWrite</span>(led3, HIGH);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">digitalWrite</span>(led3, LOW);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">1000</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>step 1: 项目-&gt;验证/编译 <br>
 step 2: 项目-&gt;上传 <br>

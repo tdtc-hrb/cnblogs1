@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</loc>
-    <lastmod>2022-10-21T01:18:02+08:00</lastmod>
-  </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/</loc>
-    <lastmod>2022-10-21T01:18:02+08:00</lastmod>
+    <lastmod>2023-01-06T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</loc>
+    <lastmod>2023-01-06T14:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/</loc>
+    <lastmod>2023-01-06T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</loc>
     <lastmod>2022-10-21T01:18:02+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</loc>
@@ -64,9 +67,6 @@
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/css-bulma-tabs/</loc>
     <lastmod>2022-07-27T00:26:39+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</loc>
-    <lastmod>2022-06-17T14:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</loc>
     <lastmod>2022-05-26T23:08:08+08:00</lastmod>
