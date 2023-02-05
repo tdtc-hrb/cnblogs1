@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="debug版和release版" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-05-18T21:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2023-01-18T21:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "生成SQLite静态库",
     "name": "生成SQLite静态库",
-    "wordCount":  170 ,
+    "wordCount":  187 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/",
-    "datePublished": "2022-05-18T21:08Z",
-    "dateModified": "2022-05-18T21:08Z",
+    "datePublished": "2023-01-18T21:08Z",
+    "dateModified": "2023-01-18T21:08Z",
     
     
     "description": "debug版和release版",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-05-18T21:08:08&#43;08:00">
-            May 18, 2022
+          <time class="post-date" datetime="2023-01-18T21:08:08&#43;08:00">
+            Jan 18, 2023
           </time>
         
          
@@ -177,36 +177,44 @@
     </header>
 
     <section class="post-content">
-      <p>SQLite3 X:</p>
-<pre tabindex="0"><code>3380500
+      <p><a href="https://sqlite.org/download.html">SQLite3</a> X:</p>
+<pre tabindex="0"><code>3400100
 </code></pre><p>X: 当前版本号</p>
 <h1 id="debug版">Debug版</h1>
 <p>Source Code -&gt; sqlite-amalgamation-X.zip</p>
 <h2 id="新建dll工程">新建DLL工程</h2>
-<p>project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）
-<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-1prj.png" alt="VS2019 prj1"></p>
+<p>project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）</p>
+<!-- vs2013: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-1-0prj(vs2013).png -->
+<!-- vs2013: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-1-1prj(vs2013).png -->
+<p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-1prj.png" alt="VS2019 prj1"></p>
 <h3 id="添加sqlite源文件">添加SQLite源文件</h3>
 <p>，
-把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。
-<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-2prj.png" alt="VS2019 prj2"></p>
+把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。</p>
+<!-- vs2013: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-2prj(vs2013).png -->
+<p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-2prj.png" alt="VS2019 prj2"></p>
+<!-- vs2013: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-3prj(vs2013).png -->
 <p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-3prj.png" alt="VS2019 prj21"></p>
 <h2 id="编译工程">编译工程</h2>
-<h3 id="预编译头文件">预编译头文件</h3>
+<p>Project ==&gt; Properties ==&gt; General</p>
+<pre tabindex="0"><code>Configureation Type : Static library(.lib)
+</code></pre><p>编译即可</p>
+<pre tabindex="0"><code>Build -&gt; Rebuild sqlite3
+</code></pre><h3 id="预编译头文件">预编译头文件</h3>
 <blockquote>
-<p>如果不更改会出现如下错误：</p>
+<p>vs2019
+如果不更改会出现如下错误：</p>
 </blockquote>
 <pre tabindex="0"><code>sqlite3.c : fatal error C1853: &#39;Debug\sqlite3.pch&#39; precompiled header file is from a previous version of the compiler,
 or the precompiled header is C++ and you are using it from C (or vice versa)
 </code></pre><p>Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header</p>
 <pre tabindex="0"><code>Not Using Precompiled Headers
-</code></pre><h3 id="生成文件类型">生成文件类型</h3>
-<p>Project ==&gt; Properties ==&gt; General</p>
+</code></pre><h3 id="xp-support">XP support</h3>
 <blockquote>
-<p>Configureation Type : Static library(.lib)</p>
+<p>vs2013
+Project ==&gt; Properties ==&gt; General</p>
 </blockquote>
-<p>编译即可。 <br>
-Build ==&gt; Rebuild sqlite3</p>
-<h1 id="release版">Release版</h1>
+<pre tabindex="0"><code>Platform Toolset -&gt; Visual Studio 2013 - Windows XP(v120_xp)
+</code></pre><h1 id="release版">Release版</h1>
 <p>從<a href="https://sqlite.org/download.html">Precompiled Binaries for Windows</a>, 下载</p>
 <pre tabindex="0"><code>sqlite-dll-win32-x86-X.zip
 </code></pre><h2 id="output-lib-file">output lib file</h2>
@@ -281,17 +289,10 @@ Enter the following command:</p>
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/es6p-install/">
-          <section class="post">
-              <h2>Elasticsearch 6 plus(6, 7) 安装</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/mq-kafka-config/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/jekyll_usage/">
           <section class="post">
-              <h2>Install and Configure Apache Kafka</h2>
+              <h2>使用jekyll编写Blog</h2>
           </section>
       </a>
   
