@@ -6,7 +6,19 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Jan 2023 21:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Feb 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jmx - first demo</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/</link>
+      <pubDate>Wed, 08 Feb 2023 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/</guid>
+      <description>Starting with the J2SE platform 5.0, JMX technology is included in the Java SE platform.
+jmxtools Download the jar and pom files, Then copy it to the M2 directory. M2: C:\Users\tdtc\.m2\repository\com\sun\jdmk\jmxtools\1.2.1 Source project . |____src | |____main | | |____java | | | |____jmxbook.ch2 | | | |____pom.xml
+Gen jar:
+mvn package pom.xml &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;jmxbook&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmxInAction&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;build/&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;datanucleus.org/downloads/maven2&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;datanucleus.org Maven Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://www.datanucleus.org/downloads/maven2/&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!</description>
+    </item>
+    
     <item>
       <title>生成SQLite静态库</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</link>
@@ -579,16 +591,6 @@ JPA、JDBC省略不表。 ClusterJ ClusterJ requires Java 1.7 or 1.8.
 File propsFile = new File(&amp;#34;clusterj.properties&amp;#34;); InputStream inStream = new FileInputStream(propsFile); Properties props = new Properties(); props.load(inStream); SessionFactory factory = ClusterJHelper.getSessionFactory(props); Session session = factory.getSession(); 配置信息 clusterj.properties
 com.mysql.clusterj.connectstring=localhost:1186 com.mysql.clusterj.database=mydb 操作数据 参考4.2.2.4 ClusterJ Basic Operations文档。
 Reference 4.2.2 Using ClusterJ </description>
-    </item>
-    
-    <item>
-      <title>jmx - first demo</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/</link>
-      <pubDate>Sat, 16 May 2020 03:58:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/</guid>
-      <description>1. pom.xml &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;jmxbook&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmxInAction&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;build/&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;datanucleus.org/downloads/maven2&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;datanucleus.org Maven Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://www.datanucleus.org/downloads/maven2/&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!-- https://mvnrepository.com/artifact/com.sun.jdmk/jmxtools --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.sun.jdmk&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmxtools&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.2.1&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;/project&amp;gt; 2. The Agent level HelloAgent.java
-package jmxbook.ch2; import javax.management.*; import com.sun.jdmk.comm.HtmlAdaptorServer; /** * * @url http://localhost:9092 * @author Benjamin G. Sullins &amp;amp;&amp;amp; Mark B. Whipple * */ public class HelloAgent implements NotificationListener { private MBeanServer mbs = null; public HelloAgent ( ) { mbs = MBeanServerFactory.</description>
     </item>
     
     <item>
