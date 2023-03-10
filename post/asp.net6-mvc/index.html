@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="MVC基础篇(MVC basics)" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-10-21T01:18:02&#43;08:00" />
+    <meta property="article:published_time" content="2023-03-10T04:18:02&#43;08:00" />
 
     
     
@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.110.0">
+    <meta name="generator" content="Hugo 0.111.2">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/" />
 
@@ -92,15 +92,15 @@
     },
     "headline": "3小时搞定ASP.NET Core 6.0",
     "name": "3小时搞定ASP.NET Core 6.0",
-    "wordCount":  695 ,
+    "wordCount":  709 ,
     "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/",
-    "datePublished": "2022-10-21T01:18Z",
-    "dateModified": "2022-10-21T01:18Z",
+    "datePublished": "2023-03-10T04:18Z",
+    "dateModified": "2023-03-10T04:18Z",
     
     
     "description": "MVC基础篇(MVC basics)",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-10-21T01:18:02&#43;08:00">
-            Oct 21, 2022
+          <time class="post-date" datetime="2023-03-10T04:18:02&#43;08:00">
+            Mar 10, 2023
           </time>
         
          
@@ -178,12 +178,16 @@
 
     <section class="post-content">
       <ul>
-<li>OS:  <a href="https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md">Windows 10 LTSC 2019</a></li>
-<li>IDE: <a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
-<li>SDK: <a href="https://dotnet.microsoft.com/download/dotnet/6.0">.Net 6.0</a></li>
+<li>OS <br>
+<a href="https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md">Windows 10 LTSB 2016+</a></li>
+<li>IDE <br>
+<a href="https://code.visualstudio.com/download">Visual Studio Code</a> - v1.76.1</li>
+<li>SDK <br>
+<a href="https://dotnet.microsoft.com/download/dotnet/6.0">.Net 6.0</a></li>
 <li>终端(Terminal) <br>
 <a href="https://github.com/PowerShell/PowerShell#get-powershell">PowerShell Core</a></li>
-<li>数据库(Database)：<a href="https://dev.mysql.com/downloads/mysql/">MySQL</a> / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside)</li>
+<li>数据库(Database) <br>
+<a href="https://dev.mysql.com/downloads/mysql/">MySQL</a> / Microsoft SQL Server 2012 Express LocalDB (vs2013 inside)</li>
 </ul>
 <h1 id="一create-projectvs-code">一、Create Project(VS Code)</h1>
 <ul>
@@ -192,7 +196,8 @@
 <blockquote>
 <p>Terminal -&gt; New Terminal</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet new mvc -o veic_web --framework net6.0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd .<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>dotnet new mvc -o veic_web --framework net6.0
 </span></span></code></pre></div><ul>
 <li>Set workspace dir</li>
 </ul>
@@ -213,85 +218,46 @@
 </ul>
 <h2 id="run">Run</h2>
 <pre tabindex="0"><code>Run -&gt; Start Debugging
-</code></pre><h3 id="build">build</h3>
-<pre tabindex="0"><code>Terminal -&gt; Run Build Task
-</code></pre><h4 id="manually-add-vscodehttpsgithubcomomnisharpomnisharp-vscodeissues3702"><a href="https://github.com/OmniSharp/omnisharp-vscode/issues/3702">Manually add .vscode</a></h4>
-<ul>
-<li>
-<p>install c# for Visual Studio Code <br>
-双击Program.cs会自动安装。</p>
-</li>
-<li>
-<p>select project <br>
-use view-&gt;command palette-&gt;Omnisharp: select project to select the new project</p>
-</li>
-</ul>
-<p>运行效果:
+</code></pre><p>运行效果:
 <img src="https://img-blog.csdnimg.cn/20201102052153747.png" alt="home page"></p>
 <h1 id="二data">二、Data</h1>
 <p>namespace:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> veic_web.Models;
 </span></span></code></pre></div><h2 id="table">Table</h2>
 <p>You can choose between MySQL or MSSQL.</p>
-<h3 id="localdb">LocalDB</h3>
-<p>About vs2013 installation files: <br>
-All feature packages are in &ldquo;packages&rdquo;;</p>
-<ul>
-<li>sqllocaldb_amd64 <br>
-64-bit installation package of ms sql2012 localdb</li>
-<li>sqlncli_amd64 <br>
-64-bit installation package of Microsoft SQL Server 2012 Native Client</li>
-</ul>
-<p><a href="https://stackoverflow.com/questions/26007913/the-specified-localdb-instance-does-not-exist">see instances</a>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqllocaldb i
-</span></span></code></pre></div><h4 id="use-navicat">use navicat</h4>
-<p>down <a href="https://navicat.com/en/download/navicat-for-sqlserver">navicat for sqlserver</a>; later install Microsoft SQL Server 2012 Native Client(sqlncli.msi - amd64) <br>
-Host:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>localdb<span style="color:#f92672">)</span><span style="color:#ae81ff">\v</span>11.0
-</span></span></code></pre></div><p>create db:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> carnumber;
-</span></span></code></pre></div><p>create table:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>USE [carnumber]
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/****** Object:  Table [dbo].[products]    Script Date: 2021/8/14 8:47:00 ******/</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> ANSI_NULLS <span style="color:#66d9ef">ON</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> QUOTED_IDENTIFIER <span style="color:#66d9ef">ON</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> [dbo].[products](
-</span></span><span style="display:flex;"><span>    [id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    [param_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    [statu_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    [lang_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    [img_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    [name] [varchar](<span style="color:#ae81ff">80</span>) <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span>    [description] [text] <span style="color:#66d9ef">NULL</span>,
-</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">CONSTRAINT</span> [PK_products] <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> CLUSTERED
-</span></span><span style="display:flex;"><span>(
-</span></span><span style="display:flex;"><span>    [id] <span style="color:#66d9ef">ASC</span>
-</span></span><span style="display:flex;"><span>)<span style="color:#66d9ef">WITH</span> (PAD_INDEX <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, STATISTICS_NORECOMPUTE <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, IGNORE_DUP_KEY <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, ALLOW_ROW_LOCKS <span style="color:#f92672">=</span> <span style="color:#66d9ef">ON</span>, ALLOW_PAGE_LOCKS <span style="color:#f92672">=</span> <span style="color:#66d9ef">ON</span>) <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">PRIMARY</span>]
-</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">PRIMARY</span>]
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
-</span></span></code></pre></div><h2 id="1-add-package">1. Add package</h2>
+<p>Ms SQL Server See附录<sup>2</sup></p>
+<h2 id="1-add-package">1. Add package</h2>
 <p>Enter the project folder (the directory where the &ldquo;.csproj&rdquo; file is located).</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd veic_web
-</span></span></code></pre></div><p>Release:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore
-</span></span></code></pre></div><p>Preview:</p>
+</span></span></code></pre></div><p>update NuGet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet nuget add source --name nuget.org https://api.nuget.org/v3/index.json
+</span></span></code></pre></div><h3 id="ef-core">EF Core</h3>
+<ul>
+<li>Release</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore --version 6.0.14
+</span></span></code></pre></div><ul>
+<li>Preview</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore --prerelease
 </span></span></code></pre></div><h3 id="mysql">MySQL</h3>
 <ul>
 <li>Pomelo</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.2
 </span></span></code></pre></div><ul>
 <li>Oracle</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package MySql.EntityFrameworkCore
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package MySql.EntityFrameworkCore --version 6.0.7
 </span></span></code></pre></div><h3 id="ms-sql">MS Sql</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore.Relational --version 6.0.14
+</span></span></code></pre></div><ul>
+<li>Release</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.14
+</span></span></code></pre></div><ul>
+<li>Preview</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>CLI&gt; dotnet add package Microsoft.EntityFrameworkCore.SqlServer --prerelease
 </span></span></code></pre></div><h2 id="2-entity-framework">2. Entity Framework</h2>
 <h3 id="entity-class">entity class</h3>
@@ -334,18 +300,19 @@ Host:</p>
 <li>MySQL <br>
 Pomelo:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// Add services to the container.</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//// MySql - Pomelo</span>
 </span></span><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
 </span></span><span style="display:flex;"><span>                        options.UseMySql(builder.Configuration[<span style="color:#e6db74">&#34;Data:VeicWeb:ConnectionString&#34;</span>],
 </span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">new</span> MySqlServerVersion(<span style="color:#66d9ef">new</span> Version(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">38</span>)))
 </span></span><span style="display:flex;"><span>                .EnableSensitiveDataLogging());
 </span></span></code></pre></div><p>Oracle:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//// MySql - Oracle</span>
+</span></span><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
 </span></span><span style="display:flex;"><span>    options.UseMySQL(builder.Configuration[<span style="color:#e6db74">&#34;Data:VeicWeb:ConnectionString&#34;</span>]));
 </span></span></code></pre></div><ul>
 <li>LocalDB</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// Add services to the container.</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">//// MS Sql</span>
 </span></span><span style="display:flex;"><span>builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
 </span></span><span style="display:flex;"><span>                        options.UseSqlServer(builder.Configuration[<span style="color:#e6db74">&#34;Data:mslocaldb:ConnectionString&#34;</span>])
 </span></span><span style="display:flex;"><span>                .EnableSensitiveDataLogging());
@@ -436,10 +403,10 @@ Pomelo:</li>
 </ul>
 <p>project code:</p>
 <ul>
-<li>asp.net 6.0 m2: <a href="https://pan.baidu.com/s/1FoTur3ML7eEv9DvYkjcwmA?pwd=j8ex">提取码: j8ex</a></li>
+<li>asp.net 6.0 m3: <a href="https://pan.baidu.com/s/1pRbJhKfU--HLW9TEk71x1A?pwd=38qh">提取码: 38qh</a></li>
 </ul>
 <h1 id="附录">附录</h1>
-<h2 id="indexhtml">index.html</h2>
+<h2 id="1">1</h2>
 <pre tabindex="0"><code>&lt;html&gt;
     &lt;head&gt;
         &lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=utf-8&#34;&gt;
@@ -465,7 +432,49 @@ Pomelo:</li>
 &lt;/body&gt;
 
 &lt;/html&gt;
-</code></pre><h2 id="nullable">Nullable</h2>
+</code></pre><h2 id="2">2</h2>
+<p>down <a href="https://navicat.com/en/download/navicat-for-sqlserver">navicat for sqlserver</a>; later install Microsoft SQL Server 2012 Native Client(sqlncli.msi - amd64) <br>
+Host:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>localdb<span style="color:#f92672">)</span><span style="color:#ae81ff">\v</span>11.0
+</span></span></code></pre></div><p>create db:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> carnumber;
+</span></span></code></pre></div><p>create table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>USE [carnumber]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/****** Object:  Table [dbo].[products]    Script Date: 2021/8/14 8:47:00 ******/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> ANSI_NULLS <span style="color:#66d9ef">ON</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> QUOTED_IDENTIFIER <span style="color:#66d9ef">ON</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> [dbo].[products](
+</span></span><span style="display:flex;"><span>    [id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [param_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [statu_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [lang_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [img_id] [int] <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [name] [varchar](<span style="color:#ae81ff">80</span>) <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>    [description] [text] <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">CONSTRAINT</span> [PK_products] <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> CLUSTERED
+</span></span><span style="display:flex;"><span>(
+</span></span><span style="display:flex;"><span>    [id] <span style="color:#66d9ef">ASC</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#66d9ef">WITH</span> (PAD_INDEX <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, STATISTICS_NORECOMPUTE <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, IGNORE_DUP_KEY <span style="color:#f92672">=</span> <span style="color:#66d9ef">OFF</span>, ALLOW_ROW_LOCKS <span style="color:#f92672">=</span> <span style="color:#66d9ef">ON</span>, ALLOW_PAGE_LOCKS <span style="color:#f92672">=</span> <span style="color:#66d9ef">ON</span>) <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">PRIMARY</span>]
+</span></span><span style="display:flex;"><span>) <span style="color:#66d9ef">ON</span> [<span style="color:#66d9ef">PRIMARY</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span></code></pre></div><h3 id="localdb">LocalDB</h3>
+<p>About vs2013 installation files: <br>
+All feature packages are in &ldquo;packages&rdquo;;</p>
+<ul>
+<li>sqllocaldb_amd64 <br>
+64-bit installation package of ms sql2012 localdb</li>
+<li>sqlncli_amd64 <br>
+64-bit installation package of Microsoft SQL Server 2012 Native Client</li>
+</ul>
+<p><a href="https://stackoverflow.com/questions/26007913/the-specified-localdb-instance-does-not-exist">see instances</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqllocaldb i
+</span></span></code></pre></div><h2 id="nullable">Nullable</h2>
 <h3 id="variable">Variable</h3>
 <p>声明中增加：</p>
 <pre tabindex="0"><code>?
@@ -477,10 +486,11 @@ Pomelo:</li>
 </code></pre><h1 id="reference">Reference</h1>
 <ul>
 <li><a href="https://www.apress.com/gp/book/9781484254394">Pro ASP.NET Core 3, 8th. Edition</a></li>
-<li><a href="http://projanco.com/Library/Pro%20Entity%20Framework%20Core%202%20for%20ASP.NET%20Core%20MVC.pdf">Pro Entity Framework Core 2 for ASP.NET Core MVC</a></li>
+<li><a href="https://stackoverflow.com/a/67937895">error: there are no version available for package</a></li>
 <li><a href="https://stackoverflow.com/questions/48225989/the-entity-type-requires-a-primary-key-to-be-defined">The entity type requires a primary key to be defined</a></li>
 <li><a href="https://gist.github.com/davidfowl/0e0372c3c1d895c3ce195ba983b1e03d">Migration to ASP.NET Core in .NET 6</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/344575879">C# 中的 null 包容运算符 “!” —— 概念、由来、用法和注意事项</a></li>
+<li><a href="https://github.com/OmniSharp/omnisharp-vscode/issues/3702">Manually add .vscode</a></li>
 </ul>
 
     </section>
@@ -533,17 +543,10 @@ Pomelo:</li>
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/jekyll_usage/">
-          <section class="post">
-              <h2>使用jekyll编写Blog</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ror_getstarted/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/java-jmx-jdk7/">
           <section class="post">
-              <h2>开始Ruby On Rails</h2>
+              <h2>jmx - first demo</h2>
           </section>
       </a>
   

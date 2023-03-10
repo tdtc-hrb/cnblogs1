@@ -6,7 +6,19 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 08 Feb 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2023 04:18:02 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3小时搞定ASP.NET Core 6.0</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</link>
+      <pubDate>Fri, 10 Mar 2023 04:18:02 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
+      <description>OS Windows 10 LTSB 2016+ IDE Visual Studio Code - v1.76.1 SDK .Net 6.0 终端(Terminal) PowerShell Core 数据库(Database) MySQL / Microsoft SQL Server 2012 Express LocalDB (vs2013 inside) 一、Create Project(VS Code) Init project Terminal -&amp;gt; New Terminal
+cd .\Documents\ dotnet new mvc -o veic_web --framework net6.0 Set workspace dir File -&amp;gt; Add Folder to Workspace
+设置缺省首页(Home Set Default) Program.cs app.UseStaticFiles(); 变更为:
+app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See附录1. Run Run -&amp;gt; Start Debugging 运行效果: 二、Data namespace:</description>
+    </item>
+    
     <item>
       <title>jmx - first demo</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/</link>
@@ -50,18 +62,6 @@ jekyll -v usage Rename the repo containing the theme to &amp;ldquo;cnblogs_a&amp
 theme clone:
 git clone https://github.com/the-mvm/the-mvm.github.io.git cd cnblogs_abundle install rb 3.x bundle add webrick launch bundle exec jekyll buildbundle exec jekyll serve publish Submit the &amp;ldquo;_site&amp;rdquo; folder.
 Ref Jekyll serve fails on Ruby 3.</description>
-    </item>
-    
-    <item>
-      <title>3小时搞定ASP.NET Core 6.0</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</link>
-      <pubDate>Fri, 21 Oct 2022 01:18:02 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
-      <description>OS: Windows 10 LTSC 2019 IDE: Visual Studio Code SDK: .Net 6.0 终端(Terminal) PowerShell Core 数据库(Database)：MySQL / Microsoft SQL Server 2013 Express LocalDB (vs2013 inside) 一、Create Project(VS Code) Init project Terminal -&amp;gt; New Terminal
-dotnet new mvc -o veic_web --framework net6.0 Set workspace dir File -&amp;gt; Add Folder to Workspace
-设置缺省首页(Home Set Default) Program.cs app.UseStaticFiles(); 变更为:
-app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See附录1. Run Run -&amp;gt; Start Debugging build Terminal -&amp;gt; Run Build Task Manually add .</description>
     </item>
     
     <item>
