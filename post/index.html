@@ -162,31 +162,6 @@
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-mvc/">3小时搞定ASP.NET Core 6.0</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>OS Windows 10 LTSB 2016+ IDE Visual Studio Code - v1.76.1 SDK .Net 6.0 终端(Terminal) PowerShell Core 数据库(Database) MySQL / Microsoft SQL Server 2012 Express LocalDB (vs2013 inside) 一、Create Project(VS Code) Init project Terminal -&gt; New Terminal
-cd .\Documents\ dotnet new mvc -o veic_web --framework net6.0 Set workspace dir File -&gt; Add Folder to Workspace
-设置缺省首页(Home Set Default) Program.cs app.UseStaticFiles(); 变更为:
-app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See附录1. Run Run -&gt; Start Debugging 运行效果: 二、Data namespace: <a class="read-more" href="/cnblogs/post/asp.net6-mvc/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-03-10T04:18:02&#43;08:00">
-            10 Mar 2023
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/es6p-install/">Elasticsearch 6 plus(6, 7) 安装</a></h2>
     </header>
     <section class="post-excerpt">
@@ -426,6 +401,33 @@ RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enab
         
         <time class="post-date" datetime="2022-10-07T04:58:39&#43;08:00">
             7 Oct 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_nginx-v2/">前端（Web）负载均衡</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Nginx&rsquo;s load balancing
+一、安装 OS: RHEL Community Version(Rocky8/Alma8) minimal（安装时的选项）
+0. prepare #dnf -y install gcc gcc-c++ automake make pcre pcre-devel zlib zlib-devel openssl openssl-devel see update openssl
+Library devel $sudo dnf install gd-devel libxml2-devel libxslt-devel GeoIP Download latest atomic-release Install atomic-release rpm:
+$sudo rpm -Uvh http://www6.atomicorp.com/channels/atomic/centos/8/x86_64/RPMS/atomic-release-1.0-23.el8.art.noarch.rpm Install GeoIP-devel rpm package:
+$sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=public --add-port=80/tcp $sudo firewall-cmd --reload installation First, install Nginx of centos repo; Then, replace the nginx program file. <a class="read-more" href="/cnblogs/post/ops_nginx-v2/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-06T08:38:08&#43;08:00">
+            6 Oct 2022
         </time>
     </footer>
 </article>
