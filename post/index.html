@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.111.2">
+    <meta name="generator" content="Hugo 0.111.3">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -180,6 +180,33 @@ app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See
         
         <time class="post-date" datetime="2023-03-10T04:18:02&#43;08:00">
             10 Mar 2023
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/es6p-install/">Elasticsearch 6 plus(6, 7) 安装</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Ubuntu 20.04.1
+参考&ldquo;Elasticsearch 2.4 安装&rdquo;
+down 查看版本列表 手动输入版本号 curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.9-linux-x86_64.tar.gz config bootstrap bootstrap.system_call_filter: false 其中
+bootstrap.seccomp: false 在高版本已不可用。
+discovery single-node:
+discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-head.git install nodejs cd elasticsearch-headyarnyarn run start open http://localhost:9100/ <a class="read-more" href="/cnblogs/post/es6p-install/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-02-19T10:08:08&#43;08:00">
+            19 Feb 2023
         </time>
     </footer>
 </article>
@@ -399,33 +426,6 @@ RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enab
         
         <time class="post-date" datetime="2022-10-07T04:58:39&#43;08:00">
             7 Oct 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_nginx-v2/">前端（Web）负载均衡</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Nginx&rsquo;s load balancing
-一、安装 OS: RHEL Community Version(Rocky8/Alma8) minimal（安装时的选项）
-0. prepare #dnf -y install gcc gcc-c++ automake make pcre pcre-devel zlib zlib-devel openssl openssl-devel see update openssl
-Library devel $sudo dnf install gd-devel libxml2-devel libxslt-devel GeoIP Download latest atomic-release Install atomic-release rpm:
-$sudo rpm -Uvh http://www6.atomicorp.com/channels/atomic/centos/8/x86_64/RPMS/atomic-release-1.0-23.el8.art.noarch.rpm Install GeoIP-devel rpm package:
-$sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=public --add-port=80/tcp $sudo firewall-cmd --reload installation First, install Nginx of centos repo; Then, replace the nginx program file. <a class="read-more" href="/cnblogs/post/ops_nginx-v2/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-10-06T08:38:08&#43;08:00">
-            6 Oct 2022
         </time>
     </footer>
 </article>
