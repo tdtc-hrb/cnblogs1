@@ -6,7 +6,19 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 19 Feb 2023 10:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Mar 2023 08:18:02 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3小时搞定ASP.NET Core 6.0</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</link>
+      <pubDate>Tue, 14 Mar 2023 08:18:02 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
+      <description>OS Windows 10 LTSB 2016+ IDE Visual Studio Code - v1.76.1 SDK .Net 6.0 终端(Terminal) PowerShell Core 数据库(Database) MySQL / Microsoft SQL Server 2012 Express LocalDB (vs2013 inside) 一、Create Project(VS Code) Init project Terminal -&amp;gt; New Terminal
+cd .\Documents\ dotnet new mvc -o veic_web --framework net6.0 Set workspace dir File -&amp;gt; Add Folder to Workspace
+设置缺省首页(Home Set Default) Program.cs app.UseStaticFiles(); 变更为:
+app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See附录1. Run Run -&amp;gt; Start Debugging 运行效果: 二、Data namespace:</description>
+    </item>
+    
     <item>
       <title>Elasticsearch 6 plus(6, 7) 安装</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/es6p-install/</link>
