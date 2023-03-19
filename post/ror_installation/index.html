@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-10-17T08:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2023-03-18T08:08:08&#43;08:00" />
 
     
     
@@ -99,8 +99,8 @@
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_installation/",
-    "datePublished": "2022-10-17T08:08Z",
-    "dateModified": "2022-10-17T08:08Z",
+    "datePublished": "2023-03-18T08:08Z",
+    "dateModified": "2023-03-18T08:08Z",
     
     
     "description": "",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-10-17T08:08:08&#43;08:00">
-            Oct 17, 2022
+          <time class="post-date" datetime="2023-03-18T08:08:08&#43;08:00">
+            Mar 18, 2023
           </time>
         
          
@@ -230,57 +230,57 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 </span></span><span style="display:flex;"><span>source ~/.bashrc
 </span></span></code></pre></div><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rbenv -v
-</span></span><span style="display:flex;"><span>rbenv 1.2.0-46-g52acbdf
+</span></span><span style="display:flex;"><span>rbenv 1.2.0-59-g0704e65
 </span></span></code></pre></div><p>show list:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rbenv install -l
 </span></span></code></pre></div><p>install:</p>
-<pre tabindex="0"><code>rbenv install 3.1.2
+<pre tabindex="0"><code>rbenv install 3.2.1
 </code></pre><p>set global:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rbenv global 3.1.2
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rbenv global 3.2.1
 </span></span></code></pre></div><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ruby --version
-</span></span><span style="display:flex;"><span>ruby 3.1.2p20 <span style="color:#f92672">(</span>2022-04-12 revision 4491bb740a<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>x86_64-linux<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>ruby 3.2.1 <span style="color:#f92672">(</span>2023-02-08 revision 31819e82c8<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>x86_64-linux<span style="color:#f92672">]</span>
 </span></span></code></pre></div><h1 id="rails">Rails</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install rails
 </span></span></code></pre></div><p>info(35 gems installed):</p>
-<pre tabindex="0"><code>Fetching zeitwerk-2.6.1.gem
-Fetching method_source-1.0.0.gem
-Fetching tzinfo-2.0.5.gem
-Fetching nokogiri-1.13.9-x86_64-linux.gem
+<pre tabindex="0"><code>Fetching thor-1.2.1.gem
+Fetching zeitwerk-2.6.7.gem
+Fetching concurrent-ruby-1.2.2.gem
+Fetching tzinfo-2.0.6.gem
 Fetching i18n-1.12.0.gem
-Fetching activesupport-7.0.4.gem
-Fetching thor-1.2.1.gem
+Fetching activesupport-7.0.4.3.gem
+Fetching nokogiri-1.14.2-x86_64-linux.gem
+Fetching loofah-2.19.1.gem
 Fetching crass-1.0.6.gem
-Fetching loofah-2.19.0.gem
-Fetching concurrent-ruby-1.1.10.gem
+Fetching method_source-1.0.0.gem
 Fetching builder-3.2.4.gem
-Fetching rails-html-sanitizer-1.4.3.gem
-Fetching rack-2.2.4.gem
-Fetching rack-test-2.0.2.gem
+Fetching rails-html-sanitizer-1.5.0.gem
 Fetching rails-dom-testing-2.0.3.gem
-Fetching erubi-1.11.0.gem
-Fetching actionview-7.0.4.gem
-Fetching actionpack-7.0.4.gem
-Fetching railties-7.0.4.gem
-Fetching activejob-7.0.4.gem
-Fetching marcel-1.0.2.gem
-Fetching activemodel-7.0.4.gem
-Fetching activerecord-7.0.4.gem
-Fetching globalid-1.0.0.gem
+Fetching rack-2.2.6.4.gem
+Fetching rack-test-2.1.0.gem
+Fetching erubi-1.12.0.gem
+Fetching actionview-7.0.4.3.gem
+Fetching activemodel-7.0.4.3.gem
+Fetching actionpack-7.0.4.3.gem
+Fetching railties-7.0.4.3.gem
 Fetching mini_mime-1.1.2.gem
-Fetching actionmailbox-7.0.4.gem
-Fetching activestorage-7.0.4.gem
-Fetching actiontext-7.0.4.gem
-Fetching nio4r-2.5.8.gem
-Fetching actionmailer-7.0.4.gem
+Fetching marcel-1.0.2.gem
+Fetching activerecord-7.0.4.3.gem
+Fetching globalid-1.1.0.gem
+Fetching activejob-7.0.4.3.gem
+Fetching activestorage-7.0.4.3.gem
 Fetching websocket-driver-0.7.5.gem
-Fetching rails-7.0.4.gem
-Fetching mail-2.7.1.gem
+Fetching actionmailer-7.0.4.3.gem
+Fetching actionmailbox-7.0.4.3.gem
 Fetching websocket-extensions-0.1.5.gem
-Fetching actioncable-7.0.4.gem
+Fetching actiontext-7.0.4.3.gem
+Fetching rails-7.0.4.3.gem
+Fetching mail-2.8.1.gem
+Fetching nio4r-2.5.8.gem
+Fetching actioncable-7.0.4.3.gem
 </code></pre><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rails -v
-</span></span><span style="display:flex;"><span>Rails 7.0.4
+</span></span><span style="display:flex;"><span>Rails 7.0.4.3
 </span></span></code></pre></div><h2 id="exec-list">exec list</h2>
 <pre tabindex="0"><code>rails db:create
 rails db:migrate
@@ -353,9 +353,9 @@ rake assets:precompile
       </a>
   
   
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ops_spark_rhel/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/asp.net6-mvc/">
           <section class="post">
-              <h2>spark安装</h2>
+              <h2>3小时搞定ASP.NET Core 6.0</h2>
           </section>
       </a>
   
