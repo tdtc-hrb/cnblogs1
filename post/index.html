@@ -162,18 +162,14 @@
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/vc-masm/">Setting Up Visual Studio 14/14.x for MASM32 Programming</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/vc-masm/">Setting Up Visual Studio 12&#43; for MASM32 Programming</a></h2>
     </header>
     <section class="post-excerpt">
         
             <p>After downloading v11r, install it using administrator.
-Create a new console application (VC++) and set it up.
-set masm Project -&gt; Build Customizations checked:
-masm(.targets, .props) set entry point Linker -&gt; Advanced
-Entry Point: main set path Linker General -&gt; Additional Library Directories C:\masm32\lib; Microsoft Macro Assembler General -&gt; Include Paths
-C:\masm32\include; new file &ldquo;test1.asm&rdquo; right click &ldquo;properties&rdquo; choice &ldquo;Microsoft Macro Assembler&rdquo;
-Project -&gt; Add New Item program test1.asm:
-.686. <a class="read-more" href="/cnblogs/post/vc-masm/">&raquo;</a></p>
+Create an empty console application (VC++) and set it up.
+project Set set masm Project -&gt; Build Customizations checked: masm(.targets, .props) set entry point Linker -&gt; Advanced Entry Point: main set path Linker -&gt; General -&gt; Additional Library Directories C:\masm32\lib; program new file &ldquo;test1.asm&rdquo; right click &ldquo;properties&rdquo; choice &ldquo;Microsoft Macro Assembler&rdquo;
+Project -&gt; Add New Item Microsoft Macro Assembler -&gt; General -&gt; Include Paths <a class="read-more" href="/cnblogs/post/vc-masm/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">

@@ -8,19 +8,15 @@
     <language>zh-cn</language>
     <lastBuildDate>Wed, 22 Mar 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Setting Up Visual Studio 14/14.x for MASM32 Programming</title>
+      <title>Setting Up Visual Studio 12&#43; for MASM32 Programming</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</link>
       <pubDate>Wed, 22 Mar 2023 08:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</guid>
       <description>After downloading v11r, install it using administrator.
-Create a new console application (VC++) and set it up.
-set masm Project -&amp;gt; Build Customizations checked:
-masm(.targets, .props) set entry point Linker -&amp;gt; Advanced
-Entry Point: main set path Linker General -&amp;gt; Additional Library Directories C:\masm32\lib; Microsoft Macro Assembler General -&amp;gt; Include Paths
-C:\masm32\include; new file &amp;ldquo;test1.asm&amp;rdquo; right click &amp;ldquo;properties&amp;rdquo; choice &amp;ldquo;Microsoft Macro Assembler&amp;rdquo;
-Project -&amp;gt; Add New Item program test1.asm:
-.686.</description>
+Create an empty console application (VC++) and set it up.
+project Set set masm Project -&amp;gt; Build Customizations checked: masm(.targets, .props) set entry point Linker -&amp;gt; Advanced Entry Point: main set path Linker -&amp;gt; General -&amp;gt; Additional Library Directories C:\masm32\lib; program new file &amp;ldquo;test1.asm&amp;rdquo; right click &amp;ldquo;properties&amp;rdquo; choice &amp;ldquo;Microsoft Macro Assembler&amp;rdquo;
+Project -&amp;gt; Add New Item Microsoft Macro Assembler -&amp;gt; General -&amp;gt; Include Paths</description>
     </item>
     
     <item>

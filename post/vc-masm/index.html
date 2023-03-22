@@ -12,13 +12,13 @@
 
 
 
-<meta name="twitter:title" content="Setting Up Visual Studio 14/14.x for MASM32 Programming"/>
-<meta name="twitter:description" content="Visual Studio 2015, Visual Studio 2017, Visual Studio 2019, Visual Studio 2022"/>
+<meta name="twitter:title" content="Setting Up Visual Studio 12&#43; for MASM32 Programming"/>
+<meta name="twitter:description" content="Visual Studio 2013, Visual Studio 2015, Visual Studio 2017, Visual Studio 2019, Visual Studio 2022"/>
 <meta name="twitter:site" content="@"/>
 
 
 
-  	<meta property="og:title" content="Setting Up Visual Studio 14/14.x for MASM32 Programming &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:title" content="Setting Up Visual Studio 12&#43; for MASM32 Programming &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
   	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
   	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/vc-masm/" />
 
@@ -27,17 +27,17 @@
     
 
     
-    <meta property="og:description" content="Visual Studio 2015, Visual Studio 2017, Visual Studio 2019, Visual Studio 2022" />
+    <meta property="og:description" content="Visual Studio 2013, Visual Studio 2015, Visual Studio 2017, Visual Studio 2019, Visual Studio 2022" />
   	<meta property="og:type" content="article" />
     <meta property="article:published_time" content="2023-03-22T08:08:08&#43;08:00" />
 
     
     
 
-    <title>Setting Up Visual Studio 14/14.x for MASM32 Programming &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+    <title>Setting Up Visual Studio 12&#43; for MASM32 Programming &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
 
     
-    <meta name="description" content="Visual Studio 2015, Visual Studio 2017, Visual Studio 2019, Visual Studio 2022" />
+    <meta name="description" content="Visual Studio 2013, Visual Studio 2015, Visual Studio 2017, Visual Studio 2019, Visual Studio 2022" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -90,10 +90,10 @@
             
         ]
     },
-    "headline": "Setting Up Visual Studio 14/14.x for MASM32 Programming",
-    "name": "Setting Up Visual Studio 14/14.x for MASM32 Programming",
-    "wordCount":  150 ,
-    "timeRequired": "PT1M",
+    "headline": "Setting Up Visual Studio 12+ for MASM32 Programming",
+    "name": "Setting Up Visual Studio 12+ for MASM32 Programming",
+    "wordCount":  259 ,
+    "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
@@ -103,7 +103,7 @@
     "dateModified": "2023-03-22T08:08Z",
     
     
-    "description": "Visual Studio 2015, Visual Studio 2017, Visual Studio 2019, Visual Studio 2022",
+    "description": "Visual Studio 2013, Visual Studio 2015, Visual Studio 2017, Visual Studio 2019, Visual Studio 2022",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://tdtc-hrb.github.io/cnblogs/post/vc-masm/"
@@ -163,8 +163,8 @@
   <article class="post post">
 
     <header class="post-header">
-        <h1 class="post-title">Setting Up Visual Studio 14/14.x for MASM32 Programming</h1>
-        <small>Visual Studio 2015, Visual Studio 2017, Visual Studio 2019, Visual Studio 2022</small>
+        <h1 class="post-title">Setting Up Visual Studio 12&#43; for MASM32 Programming</h1>
+        <small>Visual Studio 2013, Visual Studio 2015, Visual Studio 2017, Visual Studio 2019, Visual Studio 2022</small>
 
         <section class="post-meta">
         
@@ -178,35 +178,79 @@
 
     <section class="post-content">
       <p>After downloading <a href="http://www.masm32.com/download/masm32v11r.zip">v11r</a>, install it using administrator.</p>
-<p>Create a new console application (VC++) and set it up.</p>
-<h2 id="set-masm">set masm</h2>
-<p>Project -&gt; Build Customizations <br>
-checked:</p>
-<pre tabindex="0"><code>masm(.targets, .props)
-</code></pre><h2 id="set-entry-point">set entry point</h2>
-<p>Linker -&gt; Advanced</p>
-<pre tabindex="0"><code>Entry Point: main
-</code></pre><h2 id="set-path">set path</h2>
+<p>Create an empty console application (VC++) and set it up.</p>
+<h2 id="project-set">project Set</h2>
 <ul>
-<li>Linker <br>
-General -&gt; Additional Library Directories</li>
+<li>set masm <br>
+Project -&gt; Build Customizations <br>
+checked:</li>
+</ul>
+<pre tabindex="0"><code>masm(.targets, .props)
+</code></pre><ul>
+<li>set entry point <br>
+Linker -&gt; Advanced</li>
+</ul>
+<pre tabindex="0"><code>Entry Point: main
+</code></pre><ul>
+<li>set path <br>
+Linker -&gt; General -&gt; Additional Library Directories</li>
 </ul>
 <pre tabindex="0"><code>C:\masm32\lib;
-</code></pre><h3 id="microsoft-macro-assembler">Microsoft Macro Assembler</h3>
-<blockquote>
-<p>General -&gt; Include Paths</p>
-</blockquote>
-<pre tabindex="0"><code>C:\masm32\include;
-</code></pre><p>new file &ldquo;test1.asm&rdquo; right click &ldquo;properties&rdquo; choice &ldquo;Microsoft Macro Assembler&rdquo;</p>
+</code></pre><h2 id="program">program</h2>
+<p>new file &ldquo;test1.asm&rdquo; right click &ldquo;properties&rdquo; choice &ldquo;Microsoft Macro Assembler&rdquo;</p>
 <pre tabindex="0"><code>Project -&gt; Add New Item
 </code></pre><p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/Add-New-Item_vc141.png" alt="Add New Item"></p>
-<h2 id="program">program</h2>
-<p>test1.asm:</p>
+<p>Microsoft Macro Assembler -&gt; General -&gt; Include Paths</p>
+<pre tabindex="0"><code>C:\masm32\include;
+</code></pre><h3 id="code">code</h3>
+<blockquote>
+<p>test1.asm</p>
+</blockquote>
+<ul>
+<li>v14.x</li>
+</ul>
 <pre tabindex="0"><code>.686
 .MODEL  flat, c
 
-includelib ucrt.lib
-includelib legacy_stdio_definitions.lib
+includelib ucrt.lib                            ; VS2015+ Usage
+includelib legacy_stdio_definitions.lib        ; VS2015+ Usage
+;includelib  \masm32\lib\msvcrt.lib            ; VS2013- Usage
+
+;Function prototypes 
+printf  proto arg1:ptr byte, printlist:vararg
+
+.data
+msg1fmt byte &#34;%s%d&#34;,0Ah,0
+msg1    byte &#34;y: &#34;,0
+x       sdword ?
+y       sdword ?
+
+.code
+        align 4
+        
+main    PROC
+        mov eax, 3h
+        mov x, eax
+        ;;y = 2 + 3
+        ;add eax, 2h
+        ;;y = 3 - 2
+        sub eax, 2h
+        mov y, eax
+
+        invoke printf, ADDR msg1fmt, ADDR msg1, y
+        ret
+main    ENDP
+
+end ;program end
+</code></pre><ul>
+<li>v12</li>
+</ul>
+<pre tabindex="0"><code>.686
+.MODEL  flat, c
+
+;includelib ucrt.lib                           ; VS2015+ Usage
+;includelib legacy_stdio_definitions.lib       ; VS2015+ Usage
+includelib  \masm32\lib\msvcrt.lib             ; VS2013- Usage
 
 ;Function prototypes 
 printf  proto arg1:ptr byte, printlist:vararg
@@ -237,6 +281,7 @@ end ;program end
 </code></pre><h2 id="ref">Ref</h2>
 <ul>
 <li><a href="https://scriptbucket.wordpress.com/2011/10/19/setting-up-visual-studio-10-for-masm32-programming/">Setting Up Visual Studio 10 for MASM32 Programming</a></li>
+<li><a href="http://masm32.com/board/index.php?topic=6347.0">printf working not correct in masm - Vortex</a></li>
 </ul>
 
     </section>
@@ -253,7 +298,7 @@ end ;program end
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Setting%20Up%20Visual%20Studio%2014%2f14.x%20for%20MASM32%20Programming&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-masm%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Setting%20Up%20Visual%20Studio%2012%2b%20for%20MASM32%20Programming&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-masm%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -261,7 +306,7 @@ end ;program end
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-masm%2f&amp;description=Setting%20Up%20Visual%20Studio%2014%2f14.x%20for%20MASM32%20Programming"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-masm%2f&amp;description=Setting%20Up%20Visual%20Studio%2012%2b%20for%20MASM32%20Programming"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
