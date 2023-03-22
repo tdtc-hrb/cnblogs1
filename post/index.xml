@@ -6,7 +6,23 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 18 Mar 2023 18:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up Visual Studio 14/14.x for MASM32 Programming</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</link>
+      <pubDate>Wed, 22 Mar 2023 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</guid>
+      <description>After downloading v11r, install it using administrator.
+Create a new console application (VC++) and set it up.
+set masm Project -&amp;gt; Build Customizations checked:
+masm(.targets, .props) set entry point Linker -&amp;gt; Advanced
+Entry Point: main set path Linker General -&amp;gt; Additional Library Directories C:\masm32\lib; Microsoft Macro Assembler General -&amp;gt; Include Paths
+C:\masm32\include; new file &amp;ldquo;test1.asm&amp;rdquo; right click &amp;ldquo;properties&amp;rdquo; choice &amp;ldquo;Microsoft Macro Assembler&amp;rdquo;
+Project -&amp;gt; Add New Item program test1.asm:
+.686.</description>
+    </item>
+    
     <item>
       <title>开始Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
@@ -215,22 +231,6 @@ InetC From Inetc.zip, copy \Plugins\x86-ansi\InetC.dll to your NSIS plugins fold
 UI System.nsh Overwrite C:\Program Files (x86)\NSIS\Contrib\Modern UI\System.nsh with install\nsis_updates.zip\nsis\Contrib\Modern UI\System.nsh Languages Copy language files from install\nsis_updates.zip\nsis\Contrib\Modern UI\Language files to C:\Program Files (x86)\NSIS\Contrib\Modern UI\Language files Iconv down libiconv-1.9.2-1-bin.zip and libiconv-1.9.2-1-dep.zip
 location:
 C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that are required:</description>
-    </item>
-    
-    <item>
-      <title>Setting Up Visual Studio 14/14.x for MASM32 Programming</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</link>
-      <pubDate>Thu, 01 Sep 2022 23:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</guid>
-      <description>down v11r
-set masm Project -&amp;gt; Build Customizations
-checked:
-masm(.targets, .props) set entry point Linker -&amp;gt; Advanced
-Entry Point: main set path Linker General -&amp;gt; Additional Library Directories C:\masm32\lib; Microsoft Macro Assembler General -&amp;gt; Include Paths
-C:\masm32\include; new file &amp;ldquo;test1.asm&amp;rdquo; right click &amp;ldquo;properties&amp;rdquo; choice &amp;ldquo;Microsoft Macro Assembler&amp;rdquo;
-Project -&amp;gt; Add New Item program test1.asm:
-.686.MODEL flat, cincludelib ucrt.libincludelib legacy_stdio_definitions.lib;Function prototypes printf proto arg1:ptr byte, printlist:vararg.datamsg1fmt byte &amp;#34;%s%d&amp;#34;,0Ah,0msg1 byte &amp;#34;y: &amp;#34;,0x sdword ?</description>
     </item>
     
     <item>
