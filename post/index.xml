@@ -502,8 +502,7 @@ var months = new Array(31, day2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); day2�
 网线 PC-Router Enc28J60-Router
 Driver 首先，解压缩Arduino IDE下的drivers\Old_Arduino_Drivers.zip；
 然后，通过设备管理器-〉未知设备-〉“更新驱动程序软件”，即可安装完成。
-example Ethernet_Demo_2.ino
-/* Demo sketch for a simple web page * * Libs: UIPEthernet v2.</description>
+example If there is a new board manager please upgrade it.</description>
     </item>
     
     <item>
