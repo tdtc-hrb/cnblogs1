@@ -13,7 +13,7 @@
       <pubDate>Sat, 25 Mar 2023 01:08:08 +0800</pubDate>
       
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-web-server/</guid>
-      <description>original date： 2021-03-10 modified date：
+      <description>created date： 2021-03-10 modified date：
 2023-03-25 IDE Arduino V1.8.19 Library UIP Ethernet v2.x 接线 arduino uno Enc28j60 Pin 10 CS Pin 11 SI Pin 12 SO Pin 13 SCK Reset RST* +3v3 Vcc GND* GND Enc28j60 INTN: 置空（不接）
 *Rst接线: 注意Nano V3 Ethernet Shield接7号线柱，如下图所示： Arduino Uno *GND接线: 5V旁边的GND.
 供电: 必须使用USB接口.(使用电源口无法工作)
