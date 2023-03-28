@@ -6,7 +6,25 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 22 Mar 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Mar 2023 01:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>web server</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-web-server/</link>
+      <pubDate>Sat, 25 Mar 2023 01:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-web-server/</guid>
+      <description>original date： 2021-03-10 modified date：
+2023-03-25 IDE Arduino V1.8.19 Library UIP Ethernet v2.x 接线 arduino uno Enc28j60 Pin 10 CS Pin 11 SI Pin 12 SO Pin 13 SCK Reset RST* +3v3 Vcc GND* GND Enc28j60 INTN: 置空（不接）
+*Rst接线: 注意Nano V3 Ethernet Shield接7号线柱，如下图所示： Arduino Uno *GND接线: 5V旁边的GND.
+供电: 必须使用USB接口.(使用电源口无法工作)
+网络及PC驱动 使用平行线，接路由器Lan口。 本例驱动在Win7 x64通过。
+网线 PC-Router Enc28J60-Router
+Driver Windows 10 不需要手动驱动。
+Windows 7 首先，解压缩Arduino IDE下的drivers\Old_Arduino_Drivers.zip；
+然后，通过设备管理器-〉未知设备-〉“更新驱动程序软件”，即可安装完成。
+example If there is a new board manager please upgrade it.</description>
+    </item>
+    
     <item>
       <title>Setting Up Visual Studio 12&#43; for MASM32 Programming</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</link>
@@ -486,23 +504,6 @@ JSON是一种取代XML的数据结构,和xml相比,它更小巧但描述能力�
 var IsLeapYear = function (year) { var flag = false; if ( ((year % 4 == 0) &amp;amp;&amp;amp; (year % 100 != 0)) || (year % 400 == 0) ) flag = true; return flag; }; 其次，累加每月天数。
 for (var i = 0; i &amp;lt; month - 1; i++) { iDay += months[i]; } 其中months为数组
 var months = new Array(31, day2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); day2如果是闰年赋值29，否则28。</description>
-    </item>
-    
-    <item>
-      <title>web server</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-web-server/</link>
-      <pubDate>Thu, 25 Mar 2021 01:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-web-server/</guid>
-      <description>original date： 2021-03-10 modified date：
-2023-03-25 IDE Arduino V1.8.19 Library UIP Ethernet v2.x 接线 arduino uno Enc28j60 Pin 10 CS Pin 11 SI Pin 12 SO Pin 13 SCK Reset RST* +3v3 Vcc GND* GND Enc28j60 INTN: 置空（不接）
-*Rst接线: 注意Nano V3 Ethernet Shield接7号线柱，如下图所示： Arduino Uno *GND接线: 5V旁边的GND.
-供电: 必须使用USB接口.(使用电源口无法工作)
-网络及PC驱动 使用平行线，接路由器Lan口。 本例驱动在Win7 x64通过。
-网线 PC-Router Enc28J60-Router
-Driver Windows 10 不需要手动驱动。
-Windows 7 首先，解压缩Arduino IDE下的drivers\Old_Arduino_Drivers.zip； 然后，通过设备管理器-〉未知设备-〉“更新驱动程序软件”，即可安装完成。
-example If there is a new board manager please upgrade it.</description>
     </item>
     
     <item>

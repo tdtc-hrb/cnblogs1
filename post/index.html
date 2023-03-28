@@ -162,6 +162,37 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-avr8-web-server/">web server</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>original date： 2021-03-10 modified date：
+2023-03-25 IDE Arduino V1.8.19 Library UIP Ethernet v2.x 接线 arduino uno Enc28j60 Pin 10 CS Pin 11 SI Pin 12 SO Pin 13 SCK Reset RST* +3v3 Vcc GND* GND Enc28j60 INTN: 置空（不接）
+*Rst接线: 注意Nano V3 Ethernet Shield接7号线柱，如下图所示： Arduino Uno *GND接线: 5V旁边的GND.
+供电: 必须使用USB接口.(使用电源口无法工作)
+网络及PC驱动 使用平行线，接路由器Lan口。 本例驱动在Win7 x64通过。
+网线 PC-Router Enc28J60-Router
+Driver Windows 10 不需要手动驱动。
+Windows 7 首先，解压缩Arduino IDE下的drivers\Old_Arduino_Drivers.zip；
+然后，通过设备管理器-〉未知设备-〉“更新驱动程序软件”，即可安装完成。
+example If there is a new board manager please upgrade it. <a class="read-more" href="/cnblogs/post/e-avr8-web-server/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-03-25T01:08:08&#43;08:00">
+            25 Mar 2023
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/vc-masm/">Setting Up Visual Studio 12&#43; for MASM32 Programming</a></h2>
     </header>
     <section class="post-excerpt">
@@ -390,32 +421,6 @@ $ mkdir -p ~/app/spark $ tar zxvf spark-3.1.3-bin-hadoop2.7.tgz -C ~/app/spark $
         
         <time class="post-date" datetime="2022-10-10T00:08:08&#43;08:00">
             10 Oct 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/redis-rhel-setup/">Redis Server installation FAQs</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>OS: RHEL Community Minimal
-AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 Root Permission:
-$su - root 0) open files Q: Increased maximum number of open files to 10032 (it was originally set to 1024). A:
-#ulimit -a #vi /etc/systemd/system/redis.service In the &ldquo;[Service]&rdquo; unit, add the following:
-LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128. A: <a class="read-more" href="/cnblogs/post/redis-rhel-setup/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-10-08T08:08:08&#43;08:00">
-            8 Oct 2022
         </time>
     </footer>
 </article>
