@@ -92,7 +92,7 @@
     },
     "headline": "web server",
     "name": "web server",
-    "wordCount":  640 ,
+    "wordCount":  666 ,
     "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
@@ -240,7 +240,11 @@ Arduino <a href="https://www.arduino.cc/en/software">V1.8.19</a></li>
 <p>PC-Router <br>
 Enc28J60-Router</p>
 <h2 id="driver">Driver</h2>
-<p>首先，解压缩Arduino IDE下的drivers\Old_Arduino_Drivers.zip；</p>
+<p>Windows 10 不需要手动驱动。</p>
+<ul>
+<li>Windows 7
+首先，解压缩Arduino IDE下的drivers\Old_Arduino_Drivers.zip；</li>
+</ul>
 <p>然后，通过设备管理器-〉未知设备-〉“更新驱动程序软件”，即可安装完成。</p>
 <h1 id="example">example</h1>
 <p>If there is a new board manager please upgrade it.</p>
@@ -259,7 +263,7 @@ Tools -&gt; Arduino Uno</li>
 <blockquote>
 <p>项目-〉加载库-〉添加.zip库</p>
 </blockquote>
-<p>本例使用<a href="https://github.com/UIPEthernet/UIPEthernet/archive/refs/tags/v2.0.9.zip">v2.0.9</a></p>
+<p><a href="https://github.com/UIPEthernet/UIPEthernet/archive/refs/tags/v2.0.9.zip">v2.0.9</a></p>
 <h3 id="arduin-ide-v1819">Arduin IDE v1.8.19</h3>
 <p><a href="https://github.com/UIPEthernet/UIPEthernet/archive/refs/tags/v2.0.12.zip">v2.0.12</a></p>
 <pre tabindex="0"><code>Sketch -&gt; Include Library
@@ -270,8 +274,10 @@ Add .ZIP Library
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Libs: UIPEthernet v2.0.9
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *       https://github.com/UIPEthernet/UIPEthernet/releases
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *       UIPEthernet v2.0.12
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * IDE: Arduino v1.8.13
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *      Arduino v1.8.19
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Ethernet: Enc28J60
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *
@@ -306,23 +312,23 @@ Add .ZIP Library
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// From a Windows command prompt, try and &#34;ping&#34; it to see whether you can
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// see it on the network.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">/*
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Microsoft Windows [版本 6.1.7601]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">版权所有 (c) 2009 Microsoft Corporation。保留所有权利。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Microsoft Windows [Version 10.0.17763.4131]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">(c) 2018 Microsoft Corporation. All rights reserved.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">C:\Users\tdtc&gt;ping 192.168.1.86
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">C:\Users\tdtc&gt;ping 192.168.2.86
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">正在 Ping 192.168.1.86 具有 32 字节的数据:
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">来自 192.168.1.86 的回复: 字节=32 时间=1ms TTL=128
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">来自 192.168.1.86 的回复: 字节=32 时间=1ms TTL=128
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">来自 192.168.1.86 的回复: 字节=32 时间=1ms TTL=128
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">来自 192.168.1.86 的回复: 字节=32 时间=1ms TTL=128
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Pinging 192.168.2.86 with 32 bytes of data:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Reply from 192.168.2.86: bytes=32 time=479ms TTL=128
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Reply from 192.168.2.86: bytes=32 time=2ms TTL=128
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Reply from 192.168.2.86: bytes=32 time=2ms TTL=128
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Reply from 192.168.2.86: bytes=32 time=2ms TTL=128
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">192.168.1.86 的 Ping 统计信息:
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">往返行程的估计时间(以毫秒为单位):
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    最短 = 1ms，最长 = 1ms，平均 = 1ms
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Ping statistics for 192.168.2.86:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Approximate round trip times in milli-seconds:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    Minimum = 2ms, Maximum = 479ms, Average = 121ms
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">	 */</span>
-</span></span><span style="display:flex;"><span>	IPAddress <span style="color:#a6e22e">myIP</span>(<span style="color:#ae81ff">192</span>, <span style="color:#ae81ff">168</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">86</span>);
+</span></span><span style="display:flex;"><span>	IPAddress <span style="color:#a6e22e">myIP</span>(<span style="color:#ae81ff">192</span>, <span style="color:#ae81ff">168</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">86</span>);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	<span style="color:#75715e">// All information set up, we can begin
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	Ethernet.<span style="color:#a6e22e">begin</span>(mac, myIP);
@@ -398,7 +404,10 @@ Add .ZIP Library
 </span></span><span style="display:flex;"><span>    Serial.<span style="color:#a6e22e">println</span>(<span style="color:#a6e22e">F</span>(<span style="color:#e6db74">&#34;Client disconnected&#34;</span>));
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h1 id="ref">Ref</h1>
+</span></span></code></pre></div><h2 id="ie">IE</h2>
+<p>使用<a href="http://192.168.2.86">IE</a>验证， 其他浏览器不支持。
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/NanoEthENC28J60-ie.png" alt="reset connect"></p>
+<h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://github.com/RalphBacon/Arduino_Ethernet_ENC28J60_W5100">setup part</a></li>
 <li><a href="https://github.com/khoih-prog/EthernetWebServer/tree/master/examples/WebServer">loop part</a></li>
