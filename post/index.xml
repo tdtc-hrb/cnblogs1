@@ -6,7 +6,27 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Mar 2023 01:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 May 2023 10:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>8位单片机PIC汇编语言</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/e-pic16f_instruction-set/</link>
+      <pubDate>Wed, 17 May 2023 10:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/e-pic16f_instruction-set/</guid>
+      <description>TABLE 1-1: OPCODE FIELD DESCRIPTIONS
+Field Description f Register file address (0x00 to 0x7F) W Working register (accumulator) d Destination select; b Bit address within an 8-bit file register k Literal field, constant data or label d value where the results are placed d = 0 W(orking) register d = 1 file register; Default is d = 1. TABLE 1-2: ABBREVIATION DESCRIPTIONS
+|Field| Description| | PC | Program Counter| | TO | Time-Out bit| | C | Carry bit| | DC | Digit Carry bit| | Z | Zero bit| | PD | Power-Down bit|</description>
+    </item>
+    
+    <item>
+      <title>Component Designing in Proteus ISIS</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/e-proteus_component-designing/</link>
+      <pubDate>Tue, 16 May 2023 10:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/e-proteus_component-designing/</guid>
+      <description>Create First of all select the 2D Graphics Box Mode as shown in the below figure. Now click on the workspace and drag the cursor to create a box, as shown in the below figure. We have created the body of our component, now there&amp;rsquo;s a need to add pins in it. For this, click on the Device Pins Mode as shown in the below figure and click on the workspace.</description>
+    </item>
+    
     <item>
       <title>web server</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-web-server/</link>

@@ -197,6 +197,59 @@
     
         <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/jekyll_usage/">使用jekyll编写Blog</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>install jekyll ruby windows rubyinstaller-devkit-3.1.3-1-x64.exe check in:
+ridk install choose(3):
+MSYS2 and MINGW development tool chain gem setup set proxy and gem install:
+set http_proxy=http://127.0.0.1:8580gem install jekyll bundler test:
+jekyll -v usage Rename the repo containing the theme to &ldquo;cnblogs_a&rdquo;
+theme clone:
+git clone https://github.com/the-mvm/the-mvm.github.io.git cd cnblogs_abundle install rb 3.x bundle add webrick launch bundle exec jekyll buildbundle exec jekyll serve publish Submit the &ldquo;_site&rdquo; folder.
+Ref Jekyll serve fails on Ruby 3. <a class="read-more" href="/cnblogs/post/jekyll_usage/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-01-06T14:08:08&#43;08:00">
+            6 Jan 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_spark_rhel/">spark安装</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Spark v3.1 OS RHEL8(Alma / Rocky Linux) 一、基础软件 1. R-lang $ sudo dnf -y install epel-release $ sudo dnf --enablerepo=powertools install R 注意：如果Java没有安装，会附带着安装OpenJDK。
+2. Scala $ wget https://downloads.lightbend.com/scala/2.12.17/scala-2.12.17.tgz $ tar xvf scala-2.12.17.tgz $ sudo mv scala-2.12.17 /usr/lib $ sudo ln -s /usr/lib/scala-2.12.17 /usr/lib/scala 1) add path $vi ~/.bashrc PATH=$PATH:/usr/lib/scala/bin 二、Spark 1. down &amp; unzip v3.1.3
+$ mkdir -p ~/app/spark $ tar zxvf spark-3.1.3-bin-hadoop2.7.tgz -C ~/app/spark $ mv ~/app/spark/spark-3.1.3-bin-hadoop2.7 ~/app/spark/3.1.3 2. <a class="read-more" href="/cnblogs/post/ops_spark_rhel/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-10T00:08:08&#43;08:00">
+            10 Oct 2022
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/redis-rhel-setup/">Redis Server installation FAQs</a></h2>
     </header>
     <section class="post-excerpt">
@@ -408,53 +461,6 @@ C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that 
         
         <time class="post-date" datetime="2022-09-03T00:08:08&#43;08:00">
             3 Sep 2022
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/css-bulma-tabs/">tabs 实现</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>html Note: The header and body are wrapped with div!
-&lt;div id=&#34;tabs-with-content&#34;&gt;&lt;/div&gt; Header &lt;div class=&#34;tabs is-centered&#34;&gt; &lt;ul&gt; &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; Body &lt;div class=&#34;tabs is-centered&#34;&gt; &lt;ul&gt; &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div&gt; &lt;section class=&#34;tab-content&#34;&gt; &lt;table class=&#34;table&#34;&gt; &lt;tbody&gt; &lt;td&gt; &lt;%= image_tag &#34;#{@image.name}&#34; %&gt; &lt;/td&gt; &lt;td&gt; &lt;%= @product.description %&gt; &lt;/td&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;/section&gt; &lt;section class=&#34;tab-content&#34;&gt; &lt;%= @parameter.ipxx %&gt; &lt;/section&gt; &lt;/div&gt; javascript let tabsWithContent = (function () { let tabs = document. <a class="read-more" href="/cnblogs/post/css-bulma-tabs/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-07-27T00:26:39&#43;08:00">
-            27 Jul 2022
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/install-consul_ubuntu/">(dev mode) install CONSUL on ubuntu</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>install $sudo apt-get update $sudo apt-get install consul run $consul agent -dev -bind 192.168.3.128 http://localhost:8500/ui
-update down $wget https://releases.hashicorp.com/consul/1.12.1/consul_1.12.1_linux_amd64.zip unzip $sudo unzip consul_1.12.1_linux_amd64.zip -d /usr/local/bin Verifying the Installation:
-$consul -v Consul v1.12.1 Ref Install Consul Run the Consul Agent  <a class="read-more" href="/cnblogs/post/install-consul_ubuntu/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-05-26T23:08:08&#43;08:00">
-            26 May 2022
         </time>
     </footer>
 </article>
