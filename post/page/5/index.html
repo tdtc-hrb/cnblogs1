@@ -153,11 +153,40 @@
 	
 	    <a class="newer-posts" href="/cnblogs/post/page/4/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 5 of 5</span>
+	<span class="page-number">Page 5 of 6</span>
+	
+	    <a class="older-posts" href="/cnblogs/post/page/6/">Older Posts &rarr;</a>
 	
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-calday/"> 使用Ts/Js计算天数</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>在JS练习题中，有这么一道：
+请计算某天是这一年的第几天。
+首先，我们要看此年是否闰年
+var IsLeapYear = function (year) { var flag = false; if ( ((year % 4 == 0) &amp;&amp; (year % 100 != 0)) || (year % 400 == 0) ) flag = true; return flag; }; 其次，累加每月天数。
+for (var i = 0; i &lt; month - 1; i++) { iDay += months[i]; } 其中months为数组
+var months = new Array(31, day2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); day2如果是闰年赋值29，否则28。 <a class="read-more" href="/cnblogs/post/js-calday/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-10-01T02:16:39&#43;08:00">
+            1 Oct 2021
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -389,34 +418,14 @@ const initialState = { &#34;recipes&#34;: [ { &#34;name&#34;: &#34;Omelette&#34;
 </article>
 
 	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-lambda/">JS的lambda表达式</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Before rewriting function selectedReddit(state = &#39;user/8&#39;, action){ switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } After rewriting const selectedReddit = (state = &#39;user/8&#39;, action) =&gt; { switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } 参考 《Arrow functions》 <a class="read-more" href="/cnblogs/post/js-lambda/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-04-10T02:14:39&#43;08:00">
-            10 Apr 2020
-        </time>
-    </footer>
-</article>
-
-	
 
 	<nav class="pagination" role="navigation">
 	
 	    <a class="newer-posts" href="/cnblogs/post/page/4/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 5 of 5</span>
+	<span class="page-number">Page 5 of 6</span>
+	
+	    <a class="older-posts" href="/cnblogs/post/page/6/">Older Posts &rarr;</a>
 	
 </nav>
 

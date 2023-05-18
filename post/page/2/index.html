@@ -153,13 +153,43 @@
 	
 	    <a class="newer-posts" href="/cnblogs/post/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 2 of 5</span>
+	<span class="page-number">Page 2 of 6</span>
 	
 	    <a class="older-posts" href="/cnblogs/post/page/3/">Older Posts &rarr;</a>
 	
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-sqlite3lib/">生成SQLite静态库</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>SQLite3 X:
+3400100 X: 当前版本号
+Debug版 Source Code -&gt; sqlite-amalgamation-X.zip
+新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）
+添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。
+编译工程 Project ==&gt; Properties ==&gt; General
+Configureation Type : Static library(.lib) 编译即可
+Build -&gt; Rebuild sqlite3 预编译头文件 vs2019 如果不更改会出现如下错误：
+sqlite3.c : fatal error C1853: &#39;Debug\sqlite3.pch&#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header <a class="read-more" href="/cnblogs/post/vc-sqlite3lib/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-01-18T21:08:08&#43;08:00">
+            18 Jan 2023
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -405,40 +435,12 @@ Connect to existing pipe/socket windbg about version: The operating system needs
 </article>
 
 	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_install-distribution_nsis/">使用 NSIS (Nullsoft Scriptable Install System)</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>编译xp目标，vs2015 for xp 需要如下组件:
-Microsoft.VisualStudio.Component.VC.140Microsoft.VisualStudio.Component.WinXP 在目标机xp 安装Microsoft Visual C++ 2015 Redistributable Update 3
-OS Win1809(x64) VS2017(v15.9) Installation down v2.51
-InetC From Inetc.zip, copy \Plugins\x86-ansi\InetC.dll to your NSIS plugins folder (e.g. C:\Program Files (x86)\NSIS\Plugins)
-UI System.nsh Overwrite C:\Program Files (x86)\NSIS\Contrib\Modern UI\System.nsh with install\nsis_updates.zip\nsis\Contrib\Modern UI\System.nsh Languages Copy language files from install\nsis_updates.zip\nsis\Contrib\Modern UI\Language files to C:\Program Files (x86)\NSIS\Contrib\Modern UI\Language files Iconv down libiconv-1.9.2-1-bin.zip and libiconv-1.9.2-1-dep.zip
-location:
-C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that are required: <a class="read-more" href="/cnblogs/post/ops_install-distribution_nsis/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-09-03T00:08:08&#43;08:00">
-            3 Sep 2022
-        </time>
-    </footer>
-</article>
-
-	
 
 	<nav class="pagination" role="navigation">
 	
 	    <a class="newer-posts" href="/cnblogs/post/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 2 of 5</span>
+	<span class="page-number">Page 2 of 6</span>
 	
 	    <a class="older-posts" href="/cnblogs/post/page/3/">Older Posts &rarr;</a>
 	
