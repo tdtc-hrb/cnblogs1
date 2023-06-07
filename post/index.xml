@@ -6,7 +6,17 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 May 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jun 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装Ruby On Rails</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
+      <pubDate>Wed, 07 Jun 2023 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
+      <description>Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;= 1.8.11 Maintained RbEnv Install ruby using rbenv.
+Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential \libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.5.5 sudo dnf -y install git make gcc curl openssl-devel zlib-devel libffi-devel readline-devel sqlite-devel install tar:</description>
+    </item>
+    
     <item>
       <title>PIC blinked</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/e-pic16f_blink7/</link>
@@ -79,16 +89,6 @@ sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb Creating a 
 rails new veic_web-r2 -j esbuild --css bulma -d mysql upload images windows 10:
 tar zcvf img.tar.gz ./img/ --transform s/img/images/ scp d:\projects\img.tar.gz tdtc@192.168.3.99:/home/tdtc/veic_web-r2/app/assets/ ubuntu:
 cd ~/veic_web-r2/app/assets/ tar zxvf img.</description>
-    </item>
-    
-    <item>
-      <title>安装Ruby On Rails</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
-      <pubDate>Sat, 18 Mar 2023 08:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
-      <description>Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;= 1.8.11 Maintained RbEnv Install ruby using rbenv.
-Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential \libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.5.5 sudo dnf -y install git make gcc curl openssl-devel zlib-devel libffi-devel readline-devel sqlite-devel install tar:</description>
     </item>
     
     <item>
