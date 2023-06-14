@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="debug版和release版" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2023-01-18T21:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2023-06-13T21:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "生成SQLite静态库",
     "name": "生成SQLite静态库",
-    "wordCount":  187 ,
-    "timeRequired": "PT1M",
+    "wordCount":  218 ,
+    "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/",
-    "datePublished": "2023-01-18T21:08Z",
-    "dateModified": "2023-01-18T21:08Z",
+    "datePublished": "2023-06-13T21:08Z",
+    "dateModified": "2023-06-13T21:08Z",
     
     
     "description": "debug版和release版",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2023-01-18T21:08:08&#43;08:00">
-            Jan 18, 2023
+          <time class="post-date" datetime="2023-06-13T21:08:08&#43;08:00">
+            Jun 13, 2023
           </time>
         
          
@@ -178,7 +178,7 @@
 
     <section class="post-content">
       <p><a href="https://sqlite.org/download.html">SQLite3</a> X:</p>
-<pre tabindex="0"><code>3400100
+<pre tabindex="0"><code>3400200
 </code></pre><p>X: 当前版本号</p>
 <h1 id="debug版">Debug版</h1>
 <p>Source Code -&gt; sqlite-amalgamation-X.zip</p>
@@ -186,28 +186,34 @@
 <p>project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）</p>
 <!-- vs2013: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-1-0prj(vs2013).png -->
 <!-- vs2013: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-1-1prj(vs2013).png -->
-<p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-1prj.png" alt="VS2019 prj1"></p>
+<!-- vs2019: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-1prj.png -->
+<p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-1prj(vs2022).png" alt="VS2022 prj1"></p>
 <h3 id="添加sqlite源文件">添加SQLite源文件</h3>
 <p>，
 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。</p>
 <!-- vs2013: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-2prj(vs2013).png -->
-<p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-2prj.png" alt="VS2019 prj2"></p>
+<!-- vs2019: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-2prj.png -->
+<p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-2prj(vs2022).png" alt="VS2022 prj2"></p>
 <!-- vs2013: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-3prj(vs2013).png -->
-<p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-3prj.png" alt="VS2019 prj21"></p>
+<!-- vs2019: https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-3prj.png -->
+<p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/sqlite3-3prj(vs2022).png" alt="VS2022 prj21"></p>
 <h2 id="编译工程">编译工程</h2>
 <p>Project ==&gt; Properties ==&gt; General</p>
 <pre tabindex="0"><code>Configureation Type : Static library(.lib)
 </code></pre><p>编译即可</p>
 <pre tabindex="0"><code>Build -&gt; Rebuild sqlite3
 </code></pre><h3 id="预编译头文件">预编译头文件</h3>
-<blockquote>
-<p>vs2019
-如果不更改会出现如下错误：</p>
-</blockquote>
+<p>Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header</p>
+<pre tabindex="0"><code>Not Using Precompiled Headers
+</code></pre><ul>
+<li>vs2019</li>
+</ul>
 <pre tabindex="0"><code>sqlite3.c : fatal error C1853: &#39;Debug\sqlite3.pch&#39; precompiled header file is from a previous version of the compiler,
 or the precompiled header is C++ and you are using it from C (or vice versa)
-</code></pre><p>Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header</p>
-<pre tabindex="0"><code>Not Using Precompiled Headers
+</code></pre><ul>
+<li>vs2022</li>
+</ul>
+<pre tabindex="0"><code>sqlite3.c : error C1010: unexpected end of file while looking for precompiled header. Did you forget to add &#39;#include &#34;pch.h&#34;&#39; to your source?
 </code></pre><h3 id="xp-support">XP support</h3>
 <blockquote>
 <p>vs2013
@@ -218,11 +224,12 @@ Project ==&gt; Properties ==&gt; General</p>
 <p>從<a href="https://sqlite.org/download.html">Precompiled Binaries for Windows</a>, 下载</p>
 <pre tabindex="0"><code>sqlite-dll-win32-x86-X.zip
 </code></pre><h2 id="output-lib-file">output lib file</h2>
-<p>Start menu -&gt; All Programs -&gt; Visual Studio 2019 -&gt; x86 Native Tools Command Prompt for VS 2019 <br>
+<p>Start menu -&gt; Visual Studio 2022 -&gt; x86 Native Tools Command Prompt for VS 2022 <br>
 Enter the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lib /def:sqlite3.def /out:sqlite3.lib /machine:x86
-</span></span></code></pre></div><h1 id="vs2019-下载选项">vs2019 下载选项</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>.<span style="color:#ae81ff">\v</span>s_Community.exe --layout D:<span style="color:#ae81ff">\w</span>in10soft<span style="color:#ae81ff">\v</span>s2019 <span style="color:#e6db74">`</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\t</span>dtc<span style="color:#ae81ff">\D</span>ocuments<span style="color:#ae81ff">\s</span>qlite-dll-win32-x86-X
+</span></span><span style="display:flex;"><span>lib /def:sqlite3.def /out:sqlite3.lib /machine:x86
+</span></span></code></pre></div><h1 id="vs2022-下载选项">vs2022 下载选项</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>.<span style="color:#ae81ff">\v</span>s_Community.exe --layout D:<span style="color:#ae81ff">\w</span>in10soft<span style="color:#ae81ff">\v</span>s2022 <span style="color:#e6db74">`</span>
 </span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.CoreEditor <span style="color:#e6db74">`</span>
 </span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Workload.CoreEditor <span style="color:#e6db74">`</span>
 </span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.Roslyn.Compiler <span style="color:#e6db74">`</span>
@@ -233,7 +240,10 @@ Enter the following command:</p>
 </span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.Windows10SDK.19041 <span style="color:#e6db74">`</span>
 </span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.VC.Redist.14.Latest <span style="color:#e6db74">`</span>
 </span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core <span style="color:#e6db74">`</span>
-</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Workload.NativeDesktop --lang en-US
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Workload.NativeDesktop <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.ComponentGroup.WebToolsExtensions.CMake <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.VC.CMake.Project <span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>--add Microsoft.VisualStudio.Component.Vcpkg --lang en-US
 </span></span></code></pre></div><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://raginginverno.wordpress.com/2013/01/23/welcome/">Creating a Windows .lib file for SQLite for use with Visual Studio</a></li>
@@ -289,17 +299,10 @@ Enter the following command:</p>
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/java-jmx-jdk7/">
-          <section class="post">
-              <h2>jmx - first demo</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/jekyll_usage/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ror_installation/">
           <section class="post">
-              <h2>使用jekyll编写Blog</h2>
+              <h2>安装Ruby On Rails</h2>
           </section>
       </a>
   

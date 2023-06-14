@@ -6,7 +6,24 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 07 Jun 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Jun 2023 21:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>生成SQLite静态库</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</link>
+      <pubDate>Tue, 13 Jun 2023 21:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</guid>
+      <description>SQLite3 X:
+3400200 X: 当前版本号
+Debug版 Source Code -&amp;gt; sqlite-amalgamation-X.zip
+新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）
+添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。
+编译工程 Project ==&amp;gt; Properties ==&amp;gt; General
+Configureation Type : Static library(.lib) 编译即可
+Build -&amp;gt; Rebuild sqlite3 预编译头文件 Project ==&amp;gt; Properties ==&amp;gt; C/C++ ==&amp;gt; Precompiled Header
+Not Using Precompiled Headers vs2019 sqlite3.c : fatal error C1853: &amp;#39;Debug\sqlite3.pch&amp;#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) vs2022 sqlite3.</description>
+    </item>
+    
     <item>
       <title>安装Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
@@ -127,23 +144,6 @@ discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-h
 jmxtools Download the jar and pom files, Then copy it to the M2 directory. M2: C:\Users\tdtc\.m2\repository\com\sun\jdmk\jmxtools\1.2.1 Source project . |____src | |____main | | |____java | | | |____jmxbook.ch2 |____pom.xml
 Gen jar:
 mvn package pom.xml &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;jmxbook&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmxInAction&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;build/&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;datanucleus.org/downloads/maven2&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;datanucleus.org Maven Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://www.datanucleus.org/downloads/maven2/&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!</description>
-    </item>
-    
-    <item>
-      <title>生成SQLite静态库</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</link>
-      <pubDate>Wed, 18 Jan 2023 21:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</guid>
-      <description>SQLite3 X:
-3400100 X: 当前版本号
-Debug版 Source Code -&amp;gt; sqlite-amalgamation-X.zip
-新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）
-添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。
-编译工程 Project ==&amp;gt; Properties ==&amp;gt; General
-Configureation Type : Static library(.lib) 编译即可
-Build -&amp;gt; Rebuild sqlite3 预编译头文件 vs2019 如果不更改会出现如下错误：
-sqlite3.c : fatal error C1853: &amp;#39;Debug\sqlite3.pch&amp;#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) Project ==&amp;gt; Properties ==&amp;gt; C/C++ ==&amp;gt; Precompiled Header</description>
     </item>
     
     <item>

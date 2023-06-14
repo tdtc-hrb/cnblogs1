@@ -162,6 +162,36 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-sqlite3lib/">生成SQLite静态库</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>SQLite3 X:
+3400200 X: 当前版本号
+Debug版 Source Code -&gt; sqlite-amalgamation-X.zip
+新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）
+添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。
+编译工程 Project ==&gt; Properties ==&gt; General
+Configureation Type : Static library(.lib) 编译即可
+Build -&gt; Rebuild sqlite3 预编译头文件 Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header
+Not Using Precompiled Headers vs2019 sqlite3.c : fatal error C1853: &#39;Debug\sqlite3.pch&#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) vs2022 sqlite3. <a class="read-more" href="/cnblogs/post/vc-sqlite3lib/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-06-13T21:08:08&#43;08:00">
+            13 Jun 2023
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/ror_installation/">安装Ruby On Rails</a></h2>
     </header>
     <section class="post-excerpt">
@@ -382,31 +412,6 @@ discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-h
         
         <time class="post-date" datetime="2023-02-19T10:08:08&#43;08:00">
             19 Feb 2023
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/java-jmx-jdk7/">jmx - first demo</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Starting with the J2SE platform 5.0, JMX technology is included in the Java SE platform.
-jmxtools Download the jar and pom files, Then copy it to the M2 directory. M2: C:\Users\tdtc\.m2\repository\com\sun\jdmk\jmxtools\1.2.1 Source project . |____src | |____main | | |____java | | | |____jmxbook.ch2 |____pom.xml
-Gen jar:
-mvn package pom.xml &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;jmxbook&lt;/groupId&gt; &lt;artifactId&gt;jmxInAction&lt;/artifactId&gt; &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt; &lt;build/&gt; &lt;repositories&gt; &lt;repository&gt; &lt;id&gt;datanucleus.org/downloads/maven2&lt;/id&gt; &lt;name&gt;datanucleus.org Maven Repository&lt;/name&gt; &lt;url&gt;http://www.datanucleus.org/downloads/maven2/&lt;/url&gt; &lt;/repository&gt; &lt;/repositories&gt; &lt;dependencies&gt; &lt;! <a class="read-more" href="/cnblogs/post/java-jmx-jdk7/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-02-08T08:08:08&#43;08:00">
-            8 Feb 2023
         </time>
     </footer>
 </article>
