@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/" />
 
@@ -255,7 +255,7 @@ M2:</li>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>      adapterName <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectName<span style="color:#f92672">(</span> <span style="color:#e6db74">&#34;HelloAgent:name=htmladapter,port=9092&#34;</span> <span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>      mbs<span style="color:#f92672">.</span><span style="color:#a6e22e">registerMBean</span><span style="color:#f92672">(</span> adapter<span style="color:#f92672">,</span> adapterName <span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>      adapter<span style="color:#f92672">.</span><span style="color:#a6e22e">setPort</span><span style="color:#f92672">(</span> <span style="color:#ae81ff">9092</span> <span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>      adapter<span style="color:#f92672">.</span><span style="color:#a6e22e">setPort</span><span style="color:#f92672">(</span> 9092 <span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>      adapter<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
 </span></span><span style="display:flex;"><span>      helloWorldName <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ObjectName<span style="color:#f92672">(</span> <span style="color:#e6db74">&#34;HelloAgent:name=helloWorld1&#34;</span> <span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>      mbs<span style="color:#f92672">.</span><span style="color:#a6e22e">registerMBean</span><span style="color:#f92672">(</span> hw<span style="color:#f92672">,</span> helloWorldName <span style="color:#f92672">);</span>
@@ -330,7 +330,7 @@ M2:</li>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setGreeting</span><span style="color:#f92672">(</span> String greeting <span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> greeting<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    Notification notification <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Notification<span style="color:#f92672">(</span> <span style="color:#e6db74">&#34;jmxbook.ch2.helloWorld.test&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">currentTimeMillis</span><span style="color:#f92672">(),</span> greeting <span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    Notification notification <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Notification<span style="color:#f92672">(</span> <span style="color:#e6db74">&#34;jmxbook.ch2.helloWorld.test&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">,</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">currentTimeMillis</span><span style="color:#f92672">(),</span> greeting <span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>    sendNotification<span style="color:#f92672">(</span> notification <span style="color:#f92672">);</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>

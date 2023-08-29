@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="PAT (Personal Access Token), Collaborator" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2022-04-22T08:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2023-08-22T08:08:08&#43;08:00" />
 
     
     
@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/" />
 
@@ -92,15 +92,15 @@
     },
     "headline": "Github使用",
     "name": "Github使用",
-    "wordCount":  106 ,
+    "wordCount":  151 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/",
-    "datePublished": "2022-04-22T08:08Z",
-    "dateModified": "2022-04-22T08:08Z",
+    "datePublished": "2023-08-22T08:08Z",
+    "dateModified": "2023-08-22T08:08Z",
     
     
     "description": "PAT (Personal Access Token), Collaborator",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2022-04-22T08:08:08&#43;08:00">
-            Apr 22, 2022
+          <time class="post-date" datetime="2023-08-22T08:08:08&#43;08:00">
+            Aug 22, 2023
           </time>
         
          
@@ -197,7 +197,25 @@ Select scopes: 勾选“public_repo”</p>
 Internet地址或网络地址: git:https://github.com <br>
 用户名: 你的github 用户名 <br>
 密码: 你的Token</p>
-<h1 id="collaborators">Collaborators</h1>
+<h1 id="2fa">2FA</h1>
+<p>在 2023.10.12 日之前启用双重身份验证，否则将被限制执行帐户操作。</p>
+<p>&ldquo;Settings&rdquo; -&gt; &ldquo;Password and authentication&rdquo; -&gt; &ldquo;Enable two-factor authentication&rdquo;</p>
+<p>enter <a href="https://github.com/settings/two_factor_authentication/setup/intro">Setup authenticator app</a>, click &ldquo;setup key&rdquo;.</p>
+<h2 id="mobile-app">Mobile app</h2>
+<p><a href="https://apkpure.com/apk-downloader">apk downloader</a></p>
+<ul>
+<li>microsoft authenticator</li>
+</ul>
+<pre tabindex="0"><code>https://play.google.com/store/apps/details?id=com.azure.authenticator
+</code></pre><ul>
+<li>Twilio Authy Authenticator
+<a href="https://apk-dl.com/">apk downloader</a></li>
+</ul>
+<pre tabindex="0"><code>https://play.google.com/store/apps/details?id=com.authy.authy
+</code></pre><h3 id="github">github</h3>
+<p>或者使用 offical app:</p>
+<pre tabindex="0"><code>https://play.google.com/store/apps/details?id=com.github.android
+</code></pre><h1 id="collaborators">Collaborators</h1>
 <h2 id="initiator">Initiator</h2>
 <p>add people： <br>
 Manage access -&gt; add people</p>
@@ -209,6 +227,7 @@ Manage access -&gt; add people</p>
 <h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to">Support for password authentication was removed. Please use a personal access token instead(STA answered)</a></li>
+<li><a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-security-key">Configuring two-factor authentication using a security key</a></li>
 </ul>
 
     </section>
@@ -261,17 +280,10 @@ Manage access -&gt; add people</p>
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/mq-rabbitmq-config/">
-          <section class="post">
-              <h2>Install and Configure RabbitMQ</h2>
-              
-          </section>
-      </a>
   
-  
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/js-redux-mini/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/vc-sqlite3lib/">
           <section class="post">
-              <h2>最小实现redux - 分解redux</h2>
+              <h2>生成SQLite静态库</h2>
           </section>
       </a>
   

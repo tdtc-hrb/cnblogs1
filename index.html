@@ -57,7 +57,7 @@
         <link href='/cnblogs/index.xml' rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80) &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/" />
 
@@ -195,6 +195,32 @@
 </nav>
 
     </div>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_department_github_man/">Github使用</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>PAT 从2021.8.13开始github不允许使用用户名和密码！ 只能使用用户名和Token进行提交。
+Create Personal Access Token on GitHub From your GitHub account, go to Settings =&gt; Developer Settings =&gt; Personal Access Token =&gt; Generate New Token (Give your password) =&gt; Fillup the form =&gt; click Generate token =&gt; Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
+根据需要勾选授权(scopes): Note: 你的token 标题 Select scopes: 勾选“public_repo”
+增加普通凭证 控制面板 -&gt; 用户帐户和家庭安全 -&gt; 凭据管理器
+添加&quot;普通凭证&quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token <a class="read-more" href="/cnblogs/post/ops_department_github_man/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-08-22T08:08:08&#43;08:00">
+            22 Aug 2023
+        </time>
+    </footer>
+</article>
 
     
         <article class="post post">
@@ -422,33 +448,6 @@ app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See
         
         <time class="post-date" datetime="2023-03-14T08:18:02&#43;08:00">
             14 Mar 2023
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/es6p-install/">Elasticsearch 6 plus(6, 7) 安装</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Ubuntu 20.04.1
-参考&ldquo;Elasticsearch 2.4 安装&rdquo;
-down 查看版本列表 手动输入版本号 curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.9-linux-x86_64.tar.gz config bootstrap bootstrap.system_call_filter: false 其中
-bootstrap.seccomp: false 在高版本已不可用。
-discovery single-node:
-discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-head.git install nodejs cd elasticsearch-headyarnyarn run start open http://localhost:9100/ <a class="read-more" href="/cnblogs/post/es6p-install/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-02-19T10:08:08&#43;08:00">
-            19 Feb 2023
         </time>
     </footer>
 </article>

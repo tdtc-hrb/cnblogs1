@@ -6,7 +6,20 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 13 Jun 2023 21:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Aug 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github使用</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</link>
+      <pubDate>Tue, 22 Aug 2023 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</guid>
+      <description>PAT 从2021.8.13开始github不允许使用用户名和密码！ 只能使用用户名和Token进行提交。
+Create Personal Access Token on GitHub From your GitHub account, go to Settings =&amp;gt; Developer Settings =&amp;gt; Personal Access Token =&amp;gt; Generate New Token (Give your password) =&amp;gt; Fillup the form =&amp;gt; click Generate token =&amp;gt; Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
+根据需要勾选授权(scopes): Note: 你的token 标题 Select scopes: 勾选“public_repo”
+增加普通凭证 控制面板 -&amp;gt; 用户帐户和家庭安全 -&amp;gt; 凭据管理器
+添加&amp;quot;普通凭证&amp;quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token</description>
+    </item>
+    
     <item>
       <title>生成SQLite静态库</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</link>
@@ -349,19 +362,6 @@ Replace the &amp;ldquo;bionic&amp;rdquo; in the official website shell with the 
 Note: When saving, the format is Unix(LF).
 focal_rq.sh:
 #!/bin/sh sudo apt-get install curl gnupg apt-transport-https -y ## Team RabbitMQ&amp;#39;s main signing key curl -1sLf &amp;#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&amp;#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &amp;gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &amp;#34;https://keyserver.</description>
-    </item>
-    
-    <item>
-      <title>Github使用</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</link>
-      <pubDate>Fri, 22 Apr 2022 08:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</guid>
-      <description>PAT 从2021.8.13开始github不允许使用用户名和密码！ 只能使用用户名和Token进行提交。
-Create Personal Access Token on GitHub From your GitHub account, go to Settings =&amp;gt; Developer Settings =&amp;gt; Personal Access Token =&amp;gt; Generate New Token (Give your password) =&amp;gt; Fillup the form =&amp;gt; click Generate token =&amp;gt; Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
-根据需要勾选授权(scopes): Note: 你的token 标题 Select scopes: 勾选“public_repo”
-增加普通凭证 控制面板 -&amp;gt; 用户帐户和家庭安全 -&amp;gt; 凭据管理器
-添加&amp;quot;普通凭证&amp;quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token</description>
     </item>
     
     <item>

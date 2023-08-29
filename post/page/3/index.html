@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -160,6 +160,33 @@
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-windbg_driver/">windbg调试sandboxie driver</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp; windows sdk8.1.
+Prepare Host Env:
+OS Win1809(x64) VM VMware(v10.0.7) / Vbox(v6.1.38) WDK(include windbg) Windows Driver Kit Version 7.1.0 - win7 / Windows 10, version 2004 - win8.1 VM setting - serial port vmware or vbox
+\\.\pipe\com_1 vmware i/o mode:
+yield CPU on poll vbox Port 2: uncheck:
+Connect to existing pipe/socket windbg about version: The operating system needs to match the same or higher version of windbg. <a class="read-more" href="/cnblogs/post/vc-windbg_driver/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-09-06T06:08:08&#43;08:00">
+            6 Sep 2022
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -337,32 +364,6 @@ focal_rq.sh:
         
         <time class="post-date" datetime="2022-05-15T18:08:08&#43;08:00">
             15 May 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_department_github_man/">Github使用</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>PAT 从2021.8.13开始github不允许使用用户名和密码！ 只能使用用户名和Token进行提交。
-Create Personal Access Token on GitHub From your GitHub account, go to Settings =&gt; Developer Settings =&gt; Personal Access Token =&gt; Generate New Token (Give your password) =&gt; Fillup the form =&gt; click Generate token =&gt; Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
-根据需要勾选授权(scopes): Note: 你的token 标题 Select scopes: 勾选“public_repo”
-增加普通凭证 控制面板 -&gt; 用户帐户和家庭安全 -&gt; 凭据管理器
-添加&quot;普通凭证&quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token <a class="read-more" href="/cnblogs/post/ops_department_github_man/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-04-22T08:08:08&#43;08:00">
-            22 Apr 2022
         </time>
     </footer>
 </article>
