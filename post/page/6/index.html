@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.117.0">
+    <meta name="generator" content="Hugo 0.118.2">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -158,6 +158,28 @@
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-redux-root/">rootredux</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>1. split const reducer = (state, action) =&gt; { switch (action.type) { case &#39;ADD_RECIPE&#39;: return Object.assign( {}, state, { recipes: state.recipes.concat({name : action.name}) }); case &#39;ADD_INGREDIENT&#39;: const myIngredients = { name : action.name, quantity: action.quantity, measure: action.measure, recipe: action.recipe }; return Object.assign( {}, state, { ingredients: state.ingredients.concat(myIngredients) }); } return state; } recipeReducer export const recipeReducer = (stat, action) =&gt; { switch (action.type) { case &#39;ADD_RECIPE&#39;: return Object.assign( {}, state, { ingredients: state. <a class="read-more" href="/cnblogs/post/js-redux-root/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-04-10T08:26:39&#43;08:00">
+            10 Apr 2020
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">

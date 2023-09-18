@@ -57,7 +57,7 @@
         <link href='/cnblogs/index.xml' rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80) &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.117.0">
+    <meta name="generator" content="Hugo 0.118.2">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/" />
 
@@ -193,6 +193,30 @@
 </nav>
 
     </div>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_openjdk_rhel/">设置OpenJDK</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p> RHEL Community Version Alma Linux / Rocky Linux 1. install jre:
+$sudo dnf install java -y jdk $sudo dnf install java-1.8.0-openjdk-devel 2. set path $sudo vi /etc/profile export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el8_6.x86_64 export CLASSPATH=.:$JAVA_HOME/jre/lib/:. export PATH=$PATH:$JAVA_HOME/bin $su - root #source /etc/profile About path 3.3. INSTALL OPENJDK ON RED HAT ENTERPRISE LINUX - 2.Optional: Set the JAVA_HOME environment variable
+Reference How to install Java on CentOS 7 OpenJDK Version Info - Releases  <a class="read-more" href="/cnblogs/post/ops_openjdk_rhel/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-04T08:08:08-08:00">
+            4 Oct 2022
+        </time>
+    </footer>
+</article>
 
     
         <article class="post post">
@@ -422,29 +446,6 @@ include createStore import { createStore } from &#39;redux&#39; Establish reduce
         
         <time class="post-date" datetime="2022-04-10T08:26:39&#43;08:00">
             10 Apr 2022
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/vc-strcat/">使用strcat_s的注意事项</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>准备 strcat_s使用 准备 使用LLVM（clang-cl） char point char * const and const char *? Pointing to a constant value const char * p; // value cannot be changed Constant pointer to a value char * const p; // address cannot be changed Constant pointer to a constant value const char * const p; // both cannot be changed. C++11 The C++11 Standard (ISO/IEC 14882:2011) says in § C.1.1:
-char* p = &#34;abc&#34;; // valid in C, invalid in C++ For the C++ it&rsquo;s OK as a pointer to a String Literal is harmful since any attempt to modify it leads to a crash. <a class="read-more" href="/cnblogs/post/vc-strcat/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-03-24T03:18:08&#43;08:00">
-            24 Mar 2022
         </time>
     </footer>
 </article>

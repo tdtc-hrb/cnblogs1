@@ -6,7 +6,16 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 22 Aug 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Sep 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>servlet version choose</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/java-servlet_versions/</link>
+      <pubDate>Mon, 18 Sep 2023 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/java-servlet_versions/</guid>
+      <description>Servlet API history Servlet API version Released Specification Platform Important Changes Jakarta Servlet 6.0 May 31, 2022 6.0 Jakarta EE 10 remove deprecated features and implement requested enhancements Jakarta Servlet 5.0 Oct 9, 2020 5.0 Jakarta EE 9 API moved from package javax.servlet to jakarta.servlet Jakarta Servlet 4.0.3 Sep 10, 2019 4.0 Jakarta EE 8 Renamed from &amp;ldquo;Java&amp;rdquo; trademark Java Servlet 4.0 Sep 2017 JSR 369 Java EE 8 HTTP/2 Java Servlet 3.</description>
+    </item>
+    
     <item>
       <title>Github使用</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</link>
