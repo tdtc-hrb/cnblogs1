@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="referrer" content="no-referrer"/>
+    
+
+
+
+<meta name="twitter:title" content="QQ mini browser"/>
+<meta name="twitter:description" content="qt quick"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="QQ mini browser &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/qt-webview/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="qt quick" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2023-10-18T22:08:08&#43;08:00" />
+
+    
+    
+
+    <title>QQ mini browser &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="qt quick" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.119.0">
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/qt-webview/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "QQ mini browser",
+    "name": "QQ mini browser",
+    "wordCount":  603 ,
+    "timeRequired": "PT3M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/qt-webview/",
+    "datePublished": "2023-10-18T22:08Z",
+    "dateModified": "2023-10-18T22:08Z",
+    
+    
+    "description": "qt quick",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/qt-webview/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">QQ mini browser</h1>
+        <small>qt quick</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2023-10-18T22:08:08&#43;08:00">
+            Oct 18, 2023
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <ul>
+<li>Qt Design Studio: v4.3.1</li>
+<li>Qt Creator: v11.0.3</li>
+<li>QT: <a href="https://mirrors.tuna.tsinghua.edu.cn/qt/archive/online_installers/">V6.2</a></li>
+</ul>
+<h2 id="qt-qucik">Qt Qucik</h2>
+<p><a href="https://en.wikipedia.org/wiki/Qt_Quick">version</a>:</p>
+<table>
+<thead>
+<tr>
+<th>Qt Version</th>
+<th>QtQml</th>
+<th>QtQml.Models</th>
+<th>QtQuick</th>
+<th>QtQuick.Particles</th>
+<th>QtQuick.Controls</th>
+<th>QtQuick.Layouts</th>
+<th>QtQuick.Dialogs</th>
+<th>QtQuick.WebEngine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qt 5.7</td>
+<td>2.0</td>
+<td>2.2</td>
+<td>2.7</td>
+<td>2.0</td>
+<td>2.0</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>Qt 5.8</td>
+<td>2.0</td>
+<td>2.2</td>
+<td>2.8</td>
+<td>2.0</td>
+<td>2.1</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>Qt 5.9</td>
+<td>2.0</td>
+<td>2.2</td>
+<td>2.9</td>
+<td>2.0</td>
+<td>2.2</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>Qt 5.10</td>
+<td>2.0</td>
+<td>2.2</td>
+<td>2.10</td>
+<td>2.0</td>
+<td>2.3</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>Qt 5.11</td>
+<td>2.11</td>
+<td>2.11</td>
+<td>2.11</td>
+<td>2.11</td>
+<td>2.4</td>
+<td>1.11</td>
+<td>1.11</td>
+<td>1.7</td>
+</tr>
+<tr>
+<td>Qt 5.12</td>
+<td>-</td>
+<td>-</td>
+<td>2.12</td>
+<td>-</td>
+<td>2.12</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Qt 5.13</td>
+<td>2.13</td>
+<td>2.13</td>
+<td>-</td>
+<td>2.13</td>
+<td>-</td>
+<td>1.11</td>
+<td>1.11</td>
+<td>1.9</td>
+</tr>
+<tr>
+<td>Qt 5.14</td>
+<td>2.14</td>
+<td>2.14</td>
+<td>2.14</td>
+<td>2.14</td>
+<td>2.14</td>
+<td>1.14</td>
+<td>1.3</td>
+<td></td>
+</tr>
+<tr>
+<td>Qt 5.15</td>
+<td>2.15</td>
+<td>2.15</td>
+<td>2.15</td>
+<td>2.15</td>
+<td>2.15</td>
+<td>1.15</td>
+<td>1.3</td>
+<td></td>
+</tr>
+<tr>
+<td>Qt 6.0</td>
+<td>-</td>
+<td>-</td>
+<td>6.0</td>
+<td>-</td>
+<td>6.0</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>QtQuick starts with  qt 4.7.1.</p>
+<p>QtQuick.Controls(v1.0) from qt 5.1;
+The frequently used v2.0 comes from qt 5.7.</p>
+<pre tabindex="0"><code>Qt Quick Controls provides a set of controls that can be used to build complete interfaces in Qt Quick. The module was introduced in Qt 5.7.
+</code></pre><p>Excluding WebEngine, v5.1(qt) is beginning to take shape.
+WebEngine 来自于 v5.4(qt)</p>
+<h3 id="qtquickcontrolsstyles">QtQuick.Controls.Styles</h3>
+<p>Q: <a href="https://stackoverflow.com/questions/49263604/qml-cannot-assign-to-non-existent-property-style">Cannot assign to non-existent property &ldquo;style&rdquo;</a></p>
+<p>A: 2.0已经不支持 QtQuick.Controls.Styles</p>
+<h3 id="webengineview--webviewhttpsdecovardevblog20180714html-from-qml-over-webchannel-websockets"><a href="https://decovar.dev/blog/2018/07/14/html-from-qml-over-webchannel-websockets/">WebEngineView ≠ WebView</a></h3>
+<pre tabindex="0"><code>WebEngineView is a web-view provided by Qt’s own web-browser engine which is based on Chromium (Qt WebEngine).    
+It is a full-featured web-browser that is bundled and integrated with Qt, which is good, 
+but at the same time it means that you need to drag it around together with your application, 
+and this thing is quite a big one (what did you expect, it’s almost a full-blown web-browser after all).
+
+WebView is a, well, web-view, but the difference is that it uses a native web-browser of the platform (if available), 
+thus it does not require including a full web-browser stack as a part of the application (which is the case with WebEngineView), 
+so your application is more light-weight. Another point is that some platforms simply do not allow any non-system web-browsers, 
+so WebView is the only option available there.
+</code></pre><p><a href="https://stackoverflow.com/a/32377004">My Decision: WebEngineView in non Android and iOS applications.</a></p>
+<h4 id="webview">webview</h4>
+<p>This is useful on mobile platforms such as Android and iOS;
+On iOS the policy dictates that all web content is displayed using the operating system&rsquo;s web view.</p>
+<p>On Windows and Linux, Qt WebView depends on the Qt WebEngine module to render content.</p>
+<p>On macOS, the system web view is used in the same manner as iOS.</p>
+<h1 id="project">Project</h1>
+<p>使用Qt Creator创建, 以下简称creator。</p>
+<h2 id="create-qt-project">Create Qt Project</h2>
+<p>File -&gt; New Project <br>
+Qt Quick Application</p>
+<p>project name:</p>
+<pre tabindex="0"><code>my_browser
+</code></pre><h2 id="using-qt-webview">Using Qt WebView</h2>
+<ul>
+<li>QML API</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-qml" data-lang="qml"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">QtWebView</span>
+</span></span></code></pre></div><ul>
+<li>C++ API</li>
+</ul>
+<pre tabindex="0"><code>#include &lt;QtWebView/QtWebView&gt;
+</code></pre><h3 id="building-with-cmake">Building with CMake</h3>
+<ul>
+<li>package</li>
+</ul>
+<pre tabindex="0"><code>find_package(Qt6 6.2 REQUIRED COMPONENTS Quick WebView)
+</code></pre><ul>
+<li>target</li>
+</ul>
+<pre tabindex="0"><code>target_link_libraries(appmy_browser
+    PRIVATE Qt6::Quick Qt6::WebView
+)
+</code></pre><h3 id="initial">initial</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">// first line
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>QtWebView<span style="color:#f92672">::</span>initialize();
+</span></span></code></pre></div><h2 id="layout">Layout</h2>
+<ul>
+<li>ApplicationWindow</li>
+<li>WebView</li>
+<li>ToolBar</li>
+</ul>
+<h3 id="qt-webviewhttpsdocqtioqt-62qtwebview-indexhtml"><a href="https://doc.qt.io/qt-6.2/qtwebview-index.html">Qt WebView</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-qml" data-lang="qml"><span style="display:flex;"><span>    <span style="color:#a6e22e">WebView</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">id: webView</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">anchors.fill:</span> <span style="color:#a6e22e">parent</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">url:</span> <span style="color:#e6db74">&#34;https://www.qt.io&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">onLoadingChanged:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">loadRequest</span>.<span style="color:#a6e22e">errorString</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">loadRequest</span>.<span style="color:#a6e22e">errorString</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="toob-barhttpsdocqtioqt-6qml-qtquick-controls2-toolbarhtml"><a href="https://doc.qt.io/qt-6/qml-qtquick-controls2-toolbar.html">toob bar</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-qml" data-lang="qml"><span style="display:flex;"><span><span style="color:#66d9ef">footer:</span> <span style="color:#a6e22e">ToolBar</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">id: navigationBar</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">height:</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">RowLayout</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">anchors.fill:</span> <span style="color:#a6e22e">parent</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">spacing:</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Button</span> {
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">contentItem:</span> <span style="color:#a6e22e">Row</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">IconImage</span> {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">source:</span> <span style="color:#e6db74">&#34;images/left32.png&#34;</span>
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">Text</span> {
+</span></span><span style="display:flex;"><span>                         <span style="color:#66d9ef">text:</span> <span style="color:#a6e22e">qsTr</span>(<span style="color:#e6db74">&#34;&lt;&#34;</span>)
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">enabled:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">canGoBack</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">onClicked:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">goBack</span>()
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Item</span> { <span style="color:#66d9ef">Layout.preferredWidth:</span> <span style="color:#ae81ff">5</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Button</span> {
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">contentItem:</span> <span style="color:#a6e22e">Row</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">IconImage</span> {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">source:</span> <span style="color:#e6db74">&#34;images/right32.png&#34;</span>
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">Text</span> {
+</span></span><span style="display:flex;"><span>                         <span style="color:#66d9ef">text:</span> <span style="color:#a6e22e">qsTr</span>(<span style="color:#e6db74">&#34;&gt;&#34;</span>)
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">enabled:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">canGoForward</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">onClicked:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">goForward</span>()
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Item</span> { <span style="color:#66d9ef">Layout.preferredWidth:</span> <span style="color:#ae81ff">5</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Button</span> {
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">contentItem:</span> <span style="color:#a6e22e">Row</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">IconImage</span> {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">source:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">loading</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;images/stop32.png&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;images/refresh32.png&#34;</span>
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">Text</span> {
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">text:</span> <span style="color:#a6e22e">qsTr</span>(<span style="color:#e6db74">&#34;Ref/Stop&#34;</span>)
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">background:</span> <span style="color:#a6e22e">Rectangle</span> {
+</span></span><span style="display:flex;"><span>                   <span style="color:#66d9ef">color:</span> <span style="color:#e6db74">&#34;steelblue&#34;</span>
+</span></span><span style="display:flex;"><span>               }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">onClicked:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">loading</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">stop</span>() <span style="color:#f92672">:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">reload</span>()
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Item</span> { <span style="color:#66d9ef">Layout.preferredWidth:</span> <span style="color:#ae81ff">10</span> }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>Note: <br>
+要使用footer属性时，必须使用</p>
+<pre tabindex="0"><code>ApplicationWindow { //... }
+</code></pre><h2 id="issues">Issues</h2>
+<p>Qt5 与 Qt6 的不同</p>
+<h3 id="icon">Icon</h3>
+<p>usage <a href="https://forum.qt.io/topic/134678/toolbutton-icon-source/10">Button</a> 替换 toolbutton</p>
+<ul>
+<li><a href="https://forum.qt.io/topic/144345/qml-image-cannot-open-cmake-qrc/10">CMake - Qt6</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>qt_add_qml_module(<span style="color:#e6db74">appmy_browser</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">URI</span> <span style="color:#e6db74">my_browser</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">VERSION</span> <span style="color:#e6db74">1.0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">QML_FILES</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">Main.qml</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">RESOURCES</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">images/left32.png</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">images/refresh32.png</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">images/right32.png</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">images/stop32.png</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h1 id="reference">Reference</h1>
+<ul>
+<li><a href="https://doc.qt.io/qt-6/qtwebview-minibrowser-example.html">Minibrowser</a></li>
+</ul>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=QQ%20mini%20browser&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fqt-webview%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fqt-webview%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fqt-webview%2f&amp;description=QQ%20mini%20browser"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fqt-webview%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/java-servlet_versions/">
+          <section class="post">
+              <h2>servlet version choose</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+

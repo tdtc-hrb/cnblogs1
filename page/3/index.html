@@ -57,7 +57,7 @@
         <link href='/cnblogs/index.xml' rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80) &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="generator" content="Hugo 0.119.0">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/" />
 
@@ -193,6 +193,31 @@
 </nav>
 
     </div>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_openssl/">How To Install OpenSSL in RHEL</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>RHEL Community Version Alma Linux / Rocky Linux Prepare Install development tool:
+# dnf group install &#39;Development Tools&#39; Install dependencies:
+# dnf install perl-core zlib-devel -y down latest OpenSSL $mkdir openssl-1.1.1 $curl --progress https://www.openssl.org/source/openssl-1.1.1q.tar.gz | tar xz -C ./openssl-1.1.1 --strip-components 1 setup $cd openssl-1.1.1 RHEL8 ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl shared zlib RHEL7 ./config --prefix=/usr --shared make &amp;&amp; install $make Root permission Required:
+$sudo make install RHEL8 # mv /bin/openssl /bin/openssl.backup# cp /usr/local/ssl/bin/openssl /bin/openssl test: <a class="read-more" href="/cnblogs/post/ops_openssl/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-05T08:38:08&#43;08:00">
+            5 Oct 2022
+        </time>
+    </footer>
+</article>
 
     
         <article class="post post">
@@ -421,31 +446,6 @@ focal_rq.sh:
         
         <time class="post-date" datetime="2022-05-15T18:08:08&#43;08:00">
             15 May 2022
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-redux-mini/">最小实现redux - 分解redux</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>project: https://gitee.com/xiaobin80/starter
-application app.js
-include createStore import { createStore } from &#39;redux&#39; Establish reducer const reducerName = (state, action) =&gt; { state; } invoke createStore() const store = createStore(reducerName); html public/index.html
-&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;The Complete Redux Book - Example Application&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;app&#34;&gt; Redux is running: &lt;span id=&#34;counter&#34;&gt;&lt;/span&gt; &lt;/div&gt; &lt;script type=&#34;text/javascript&#34; src=&#34;../app.js&#34;&gt;&lt;/script&gt; &lt;/body&gt; &lt;/html&gt;  <a class="read-more" href="/cnblogs/post/js-redux-mini/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-04-10T08:26:39&#43;08:00">
-            10 Apr 2022
         </time>
     </footer>
 </article>
