@@ -92,7 +92,7 @@
     },
     "headline": "QQ mini browser",
     "name": "QQ mini browser",
-    "wordCount":  556 ,
+    "wordCount":  601 ,
     "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
@@ -365,68 +365,83 @@ Qt Quick Application</p>
 </span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">loadRequest</span>.<span style="color:#a6e22e">errorString</span>);
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
-</span></span></code></pre></div><h3 id="toob-barhttpsdocqtioqt-6qml-qtquick-controls2-toolbarhtml"><a href="https://doc.qt.io/qt-6/qml-qtquick-controls2-toolbar.html">toob bar</a></h3>
+</span></span></code></pre></div><h3 id="tool-barhttpsdocqtioqt-6qml-qtquick-controls2-toolbarhtml"><a href="https://doc.qt.io/qt-6/qml-qtquick-controls2-toolbar.html">tool bar</a></h3>
+<p>ToolBar is a container of application-wide and context sensitive actions and controls,
+such as navigation buttons and search fields.
+ToolBar is commonly used as a header or a footer of an ApplicationWindow.</p>
+<ul>
+<li>footer <br>
+要使用footer属性时，必须使用</li>
+</ul>
+<pre tabindex="0"><code>import QtQuick.Controls
+ApplicationWindow { //... }
+</code></pre><ul>
+<li>Layout</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-qml" data-lang="qml"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">QtQuick</span>.<span style="color:#a6e22e">Layouts</span>
+</span></span></code></pre></div><ul>
+<li>images folder
+copy &ldquo;Examples\Qt-6.2.4\webview\minibrowser\images&rdquo; to project folder</li>
+</ul>
+<h4 id="mainqmlpart">Main.qml(part)</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-qml" data-lang="qml"><span style="display:flex;"><span><span style="color:#66d9ef">footer:</span> <span style="color:#a6e22e">ToolBar</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">id: navigationBar</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">height:</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">id: navigationBar</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">height:</span> <span style="color:#ae81ff">64</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">RowLayout</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">anchors.fill:</span> <span style="color:#a6e22e">parent</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">spacing:</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">RowLayout</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">anchors.fill:</span> <span style="color:#a6e22e">parent</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">spacing:</span> <span style="color:#ae81ff">0</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Button</span> {
-</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">contentItem:</span> <span style="color:#a6e22e">Row</span> {
-</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">IconImage</span> {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">source:</span> <span style="color:#e6db74">&#34;images/left32.png&#34;</span>
-</span></span><span style="display:flex;"><span>                    }
-</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">Text</span> {
-</span></span><span style="display:flex;"><span>                         <span style="color:#66d9ef">text:</span> <span style="color:#a6e22e">qsTr</span>(<span style="color:#e6db74">&#34;&lt;&#34;</span>)
-</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Button</span> {
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">contentItem:</span> <span style="color:#a6e22e">Row</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">IconImage</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">source:</span> <span style="color:#e6db74">&#34;images/left32.png&#34;</span>
 </span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">enabled:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">canGoBack</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">onClicked:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">goBack</span>()
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Item</span> { <span style="color:#66d9ef">Layout.preferredWidth:</span> <span style="color:#ae81ff">5</span> }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Button</span> {
-</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">contentItem:</span> <span style="color:#a6e22e">Row</span> {
-</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">IconImage</span> {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">source:</span> <span style="color:#e6db74">&#34;images/right32.png&#34;</span>
-</span></span><span style="display:flex;"><span>                    }
-</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">Text</span> {
-</span></span><span style="display:flex;"><span>                         <span style="color:#66d9ef">text:</span> <span style="color:#a6e22e">qsTr</span>(<span style="color:#e6db74">&#34;&gt;&#34;</span>)
-</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">Text</span> {
+</span></span><span style="display:flex;"><span>                     <span style="color:#66d9ef">text:</span> <span style="color:#a6e22e">qsTr</span>(<span style="color:#e6db74">&#34;&lt;&#34;</span>)
 </span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">enabled:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">canGoForward</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">onClicked:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">goForward</span>()
 </span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Item</span> { <span style="color:#66d9ef">Layout.preferredWidth:</span> <span style="color:#ae81ff">5</span> }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Button</span> {
-</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">contentItem:</span> <span style="color:#a6e22e">Row</span> {
-</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">IconImage</span> {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">source:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">loading</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;images/stop32.png&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;images/refresh32.png&#34;</span>
-</span></span><span style="display:flex;"><span>                    }
-</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">Text</span> {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">text:</span> <span style="color:#a6e22e">qsTr</span>(<span style="color:#e6db74">&#34;Ref/Stop&#34;</span>)
-</span></span><span style="display:flex;"><span>                    }
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">background:</span> <span style="color:#a6e22e">Rectangle</span> {
-</span></span><span style="display:flex;"><span>                   <span style="color:#66d9ef">color:</span> <span style="color:#e6db74">&#34;steelblue&#34;</span>
-</span></span><span style="display:flex;"><span>               }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">onClicked:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">loading</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">stop</span>() <span style="color:#f92672">:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">reload</span>()
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Item</span> { <span style="color:#66d9ef">Layout.preferredWidth:</span> <span style="color:#ae81ff">10</span> }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">enabled:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">canGoBack</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">onClicked:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">goBack</span>()
 </span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Item</span> { <span style="color:#66d9ef">Layout.preferredWidth:</span> <span style="color:#ae81ff">5</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Button</span> {
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">contentItem:</span> <span style="color:#a6e22e">Row</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">IconImage</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">source:</span> <span style="color:#e6db74">&#34;images/right32.png&#34;</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">Text</span> {
+</span></span><span style="display:flex;"><span>                     <span style="color:#66d9ef">text:</span> <span style="color:#a6e22e">qsTr</span>(<span style="color:#e6db74">&#34;&gt;&#34;</span>)
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">enabled:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">canGoForward</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">onClicked:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">goForward</span>()
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Item</span> { <span style="color:#66d9ef">Layout.preferredWidth:</span> <span style="color:#ae81ff">5</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Button</span> {
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">contentItem:</span> <span style="color:#a6e22e">Row</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">IconImage</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">source:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">loading</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;images/stop32.png&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;images/refresh32.png&#34;</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">Text</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">text:</span> <span style="color:#a6e22e">qsTr</span>(<span style="color:#e6db74">&#34;Ref/Stop&#34;</span>)
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">background:</span> <span style="color:#a6e22e">Rectangle</span> {
+</span></span><span style="display:flex;"><span>               <span style="color:#66d9ef">color:</span> <span style="color:#e6db74">&#34;steelblue&#34;</span>
+</span></span><span style="display:flex;"><span>           }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">onClicked:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">loading</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">stop</span>() <span style="color:#f92672">:</span> <span style="color:#a6e22e">webView</span>.<span style="color:#a6e22e">reload</span>()
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Item</span> { <span style="color:#66d9ef">Layout.preferredWidth:</span> <span style="color:#ae81ff">10</span> }
 </span></span><span style="display:flex;"><span>    }
-</span></span></code></pre></div><p>Note: <br>
-要使用footer属性时，必须使用</p>
-<pre tabindex="0"><code>ApplicationWindow { //... }
-</code></pre><h2 id="issues">Issues</h2>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="issues">Issues</h2>
 <p>Qt5 与 Qt6 的不同</p>
 <h3 id="icon">Icon</h3>
 <p>usage <a href="https://forum.qt.io/topic/134678/toolbutton-icon-source/10">Button</a> 替换 toolbutton</p>
