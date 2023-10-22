@@ -197,6 +197,30 @@
     
         <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-grpc/">ASP.net Core 的gRPC Service应用</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Server 在Ubuntu V20.04; Client 在Windows CMD运行。
+PowerShell Core v7.2 IDE: VS2022 Community(v17.0)/VS Code(docker extension) VM: VBox(v6.1) 接口文件说明 Protos/greet.proto
+定义service service Greeter { // Sends a greeting rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message request message HelloRequest { string name = 1; } response message HelloReply { string message = 1; } server Create VS2022 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file View -&gt; Command Palette(Ctrl+Shift+P) Enter: Docker fi choice1: Add Docker Files to Workspace&hellip; choice2: . <a class="read-more" href="/cnblogs/post/asp.net6-grpc/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-09T20:38:18&#43;08:00">
+            9 Nov 2021
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/js-webpack/">webpack的使用</a></h2>
     </header>
     <section class="post-excerpt">
@@ -427,29 +451,6 @@ Reference 4.2.2 Using ClusterJ  <a class="read-more" href="/cnblogs/post/java-co
         
         <time class="post-date" datetime="2020-05-16T05:58:08&#43;08:00">
             16 May 2020
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-redux-update/">update redux</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>1. initial state db.json
-const initialState = { &#34;recipes&#34;: [ { &#34;name&#34;: &#34;Omelette&#34; }, { &#34;name&#34;: &#34;Waffle&#34; } ], &#34;ingredients&#34;: [ { &#34;name&#34;: &#34;Eggs&#34;, &#34;quantity&#34;: 2, &#34;measure&#34;: &#34;large&#34;, &#34;recipe&#34;: &#34;Omelette&#34; }, { &#34;name&#34;: &#34;Eggs&#34;, &#34;quantity&#34;: 1, &#34;measure&#34;: &#34;large&#34;, &#34;recipe&#34;: &#34;Waffle&#34; }, { &#34;name&#34;: &#34;Milk&#34;, &#34;quantity&#34;: 1, &#34;measure&#34;: &#34;cups&#34;, &#34;recipe&#34;: &#34;Waffle&#34; }, { &#34;name&#34;: &#34;Sugar&#34;, &#34;quantity&#34;: 2, &#34;measure&#34;: &#34;tbsp&#34;, &#34;recipe&#34;: &#34;Waffle&#34; } ] } 2. reducer const reducer = (state, action) =&gt; { switch (action. <a class="read-more" href="/cnblogs/post/js-redux-update/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-04-10T09:26:39&#43;08:00">
-            10 Apr 2020
         </time>
     </footer>
 </article>

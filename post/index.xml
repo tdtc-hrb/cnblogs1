@@ -6,7 +6,20 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Oct 2023 23:38:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Oct 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows的一些安装</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq2/</link>
+      <pubDate>Sat, 21 Oct 2023 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq2/</guid>
+      <description>Dotnet Framework Offline install How to Install Microsoft .NET Framework 3.5 Offline in Windows 8 and Later without Internet Connection?
+first, mount windows installation DVD(ISO)
+DVD D: Then, execute
+PowerShell as Administrator
+dism /online /enable-feature /featurename:NetFx3 /All /Source:D:\sources\sxs /LimitAccess Nodejs 2/4. On Windows, running Node.js in Windows terminal emulators like mintty requires the usage of winpty for the tty channels to work (e.g. winpty node.exe script.js). In &amp;ldquo;Git bash&amp;rdquo; if you call the node shell alias (node without the .</description>
+    </item>
+    
     <item>
       <title>QQ mini browser</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/qt-webview/</link>
@@ -16,6 +29,16 @@
       <description>Qt Design Studio: v4.3.1 Qt Creator: v11.0.3 QT: V6.2.4 online installer version Creator and Design Studio 始终更新 Commercial LTS phase 新 Normal 发布后, lts 转为 commercial LTS 镜像 list Note: 下载那个镜像点的&amp;quot;qt-unified-windows-x64-online.exe&amp;quot;, 就使用it&amp;rsquo;s Network.
 tuna ustc sjtu nanyang Qt Qucik version:
 Qt Version QtQml QtQml.Models QtQuick QtQuick.Particles QtQuick.Controls QtQuick.Layouts QtQuick.Dialogs QtQuick.WebEngine Qt 5.11 2.11 2.11 2.11 2.11 2.4 1.11 1.11 1.7 Qt 5.12 - - 2.12 - 2.12 - - Qt 5.</description>
+    </item>
+    
+    <item>
+      <title>安装Ruby On Rails</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
+      <pubDate>Tue, 17 Oct 2023 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
+      <description>Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.1.Z &amp;gt;= 2.7.0 3.2.Z &amp;gt;= 1.8.11 Maintained 7.0.Z &amp;gt;= 2.7.0 3.1.Z &amp;gt;= 1.8.11 Maintained RbEnv Install ruby using rbenv.
+Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential \libyaml-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.</description>
     </item>
     
     <item>
@@ -55,16 +78,6 @@ Debug版 Source Code -&amp;gt; sqlite-amalgamation-X.zip
 Configureation Type : Static library(.lib) 编译即可
 Build -&amp;gt; Rebuild sqlite3 预编译头文件 Project ==&amp;gt; Properties ==&amp;gt; C/C++ ==&amp;gt; Precompiled Header
 Not Using Precompiled Headers vs2019 sqlite3.c : fatal error C1853: &amp;#39;Debug\sqlite3.pch&amp;#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) vs2022 sqlite3.</description>
-    </item>
-    
-    <item>
-      <title>安装Ruby On Rails</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
-      <pubDate>Wed, 07 Jun 2023 08:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
-      <description>Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;= 1.8.11 Maintained RbEnv Install ruby using rbenv.
-Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential \libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.5.5 sudo dnf -y install git make gcc curl openssl-devel zlib-devel libffi-devel readline-devel sqlite-devel install tar:</description>
     </item>
     
     <item>

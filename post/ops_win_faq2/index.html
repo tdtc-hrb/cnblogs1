@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="referrer" content="no-referrer"/>
+    
+
+
+
+<meta name="twitter:title" content="Windows的一些安装"/>
+<meta name="twitter:description" content="dotnet, nodejs"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="Windows的一些安装 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq2/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="dotnet, nodejs" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2023-10-21T08:08:08&#43;08:00" />
+
+    
+    
+
+    <title>Windows的一些安装 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="dotnet, nodejs" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.119.0">
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq2/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "Windows的一些安装",
+    "name": "Windows的一些安装",
+    "wordCount":  327 ,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq2/",
+    "datePublished": "2023-10-21T08:08Z",
+    "dateModified": "2023-10-21T08:08Z",
+    
+    
+    "description": "dotnet, nodejs",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq2/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Windows的一些安装</h1>
+        <small>dotnet, nodejs</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2023-10-21T08:08:08&#43;08:00">
+            Oct 21, 2023
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <h1 id="dotnet-framework">Dotnet Framework</h1>
+<h2 id="offline-install">Offline install</h2>
+<p><a href="https://www.askvg.com/how-to-install-microsoft-net-framework-3-5-offline-in-windows-8-without-internet-connection/">How to Install Microsoft .NET Framework 3.5 Offline in Windows 8 and Later without Internet Connection?</a></p>
+<p>first, mount windows installation DVD(ISO)</p>
+<ul>
+<li>DVD</li>
+</ul>
+<pre tabindex="0"><code>D:
+</code></pre><p>Then, execute</p>
+<blockquote>
+<p>PowerShell as Administrator</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ps" data-lang="ps"><span style="display:flex;"><span><span style="color:#a6e22e">dism</span> /online /enable-feature /featurename:NetFx3 /All /Source:D:\sources\sxs /LimitAccess
+</span></span></code></pre></div><h1 id="nodejs">Nodejs</h1>
+<p>2/4. On Windows, running Node.js in Windows terminal emulators like mintty requires
+the usage of winpty for the tty channels to work (e.g. winpty node.exe script.js). <br>
+In &ldquo;Git bash&rdquo; if you call the node shell alias (node without the .exe extension), winpty is used automatically.</p>
+<p>3/5. The Windows Subsystem for Linux (WSL) is not supported, but the GNU/Linux build process and binaries should work. <br>
+The community will only address issues that reproduce on native GNU/Linux systems. <br>
+Issues that only reproduce on WSL should be reported in the WSL issue tracker. <br>
+Running the Windows binary (node.exe) in WSL will not work without workarounds such as stdio redirection.</p>
+<h2 id="v20httpsgithubcomnodejsnodeblobv20xbuildingmd"><a href="https://github.com/nodejs/node/blob/v20.x/BUILDING.md">v20</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operating System</th>
+<th>Architectures</th>
+<th>Versions</th>
+<th>Support Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>x64, x86 (WoW64)</td>
+<td>&gt;= Windows 10/Server 2016</td>
+<td>Tier 1</td>
+<td>2,3</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>x86 (native)</td>
+<td>&gt;= Windows 10/Server 2016</td>
+<td>Tier 1 (running) / Experimental (compiling)4</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>x64, x86</td>
+<td>Windows 8.1/Server 2012</td>
+<td>Experimental</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>arm64</td>
+<td>&gt;= Windows 10</td>
+<td>Tier 2</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="v18httpsgithubcomnodejsnodeblobv18xbuildingmd"><a href="https://github.com/nodejs/node/blob/v18.x/BUILDING.md">v18</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operating System</th>
+<th>Architectures</th>
+<th>Versions</th>
+<th>Support Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>x64, x86 (WoW64)</td>
+<td>&gt;= Windows 10/Server 2016</td>
+<td>Tier 1</td>
+<td>2,3</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>x86 (native)</td>
+<td>&gt;= Windows 10/Server 2016</td>
+<td>Tier 1 (running) / Experimental (compiling)4</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>x64, x86</td>
+<td>Windows 8.1/Server 2012</td>
+<td>Experimental</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>arm64</td>
+<td>&gt;= Windows 10</td>
+<td>Tier 2 (compiling) / Experimental (running)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="v16httpsgithubcomnodejsnodeblobv16xbuildingmd"><a href="https://github.com/nodejs/node/blob/v16.x/BUILDING.md">v16</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operating System</th>
+<th>Architectures</th>
+<th>Versions</th>
+<th>Support Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>x64, x86 (WoW64)</td>
+<td>&gt;= Windows 8.1/2012 R2</td>
+<td>Tier 1</td>
+<td>4,5</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>x86 (native)</td>
+<td>&gt;= Windows 8.1/2012 R2</td>
+<td>Tier 1 (running) / Experimental (compiling)6</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>x64, x86</td>
+<td>Windows Server 2012 (not R2)</td>
+<td>Experimental</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>arm64</td>
+<td>&gt;= Windows 10</td>
+<td>Tier 2 (compiling) / Experimental (running)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="v14httpsgithubcomnodejsbuildissues2168"><a href="https://github.com/nodejs/build/issues/2168">v14</a></h2>
+<table>
+<thead>
+<tr>
+<th>os-arch</th>
+<th>release machine</th>
+<th>tested on</th>
+<th>supported on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>win-x64 and win-x86</td>
+<td>Windows 2012 R2 (x64) with Visual Studio 2017</td>
+<td>-</td>
+<td>&gt;= Windows 8/2012 R2?</td>
+</tr>
+</tbody>
+</table>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Windows%e7%9a%84%e4%b8%80%e4%ba%9b%e5%ae%89%e8%a3%85&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_win_faq2%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_win_faq2%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_win_faq2%2f&amp;description=Windows%e7%9a%84%e4%b8%80%e4%ba%9b%e5%ae%89%e8%a3%85"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fops_win_faq2%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/qt-webview/">
+          <section class="post">
+              <h2>QQ mini browser</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+

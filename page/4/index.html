@@ -197,6 +197,33 @@
     
         <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/mq-rabbitmq-config/">Install and Configure RabbitMQ</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal Current Version(RabbitMQ):
+RabbitMQ 3.10.2 Erlang 24.3.3 Installation 需要设置固定IP
+Replace the &ldquo;bionic&rdquo; in the official website shell with the ubuntu codename.
+Note: When saving, the format is Unix(LF).
+focal_rq.sh:
+#!/bin/sh sudo apt-get install curl gnupg apt-transport-https -y ## Team RabbitMQ&#39;s main signing key curl -1sLf &#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &#34;https://keyserver. <a class="read-more" href="/cnblogs/post/mq-rabbitmq-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-05-15T18:08:08&#43;08:00">
+            15 May 2022
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/js-redux-mini/">最小实现redux - 分解redux</a></h2>
     </header>
     <section class="post-excerpt">
@@ -432,30 +459,6 @@ DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbCont
         
         <time class="post-date" datetime="2021-11-11T12:38:08&#43;08:00">
             11 Nov 2021
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-grpc/">ASP.net Core 的gRPC Service应用</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Server 在Ubuntu V20.04; Client 在Windows CMD运行。
-PowerShell Core v7.2 IDE: VS2022 Community(v17.0)/VS Code(docker extension) VM: VBox(v6.1) 接口文件说明 Protos/greet.proto
-定义service service Greeter { // Sends a greeting rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message request message HelloRequest { string name = 1; } response message HelloReply { string message = 1; } server Create VS2022 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file View -&gt; Command Palette(Ctrl+Shift+P) Enter: Docker fi choice1: Add Docker Files to Workspace&hellip; choice2: . <a class="read-more" href="/cnblogs/post/asp.net6-grpc/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-09T20:38:18&#43;08:00">
-            9 Nov 2021
         </time>
     </footer>
 </article>

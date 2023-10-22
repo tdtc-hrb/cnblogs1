@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2023-06-07T08:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2023-10-17T08:08:08&#43;08:00" />
 
     
     
@@ -37,7 +37,7 @@
     <title>安装Ruby On Rails &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
 
     
-    <meta name="description" content="Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.0.x &amp;gt;= 3.1.0 3.1.x &amp;gt;=" />
+    <meta name="description" content="Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.1.Z &amp;gt;= 2.7.0 3.2.Z &amp;gt;=" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -92,15 +92,15 @@
     },
     "headline": "安装Ruby On Rails",
     "name": "安装Ruby On Rails",
-    "wordCount":  271 ,
+    "wordCount":  316 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/ror_installation/",
-    "datePublished": "2023-06-07T08:08Z",
-    "dateModified": "2023-06-07T08:08Z",
+    "datePublished": "2023-10-17T08:08Z",
+    "dateModified": "2023-10-17T08:08Z",
     
     
     "description": "",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2023-06-07T08:08:08&#43;08:00">
-            Jun 7, 2023
+          <time class="post-date" datetime="2023-10-17T08:08:08&#43;08:00">
+            Oct 17, 2023
           </time>
         
          
@@ -192,9 +192,16 @@
 </thead>
 <tbody>
 <tr>
-<td>7.0.x</td>
-<td>&gt;= 3.1.0</td>
-<td>3.1.x</td>
+<td>7.1.Z</td>
+<td>&gt;= 2.7.0</td>
+<td>3.2.Z</td>
+<td>&gt;= 1.8.11</td>
+<td>Maintained</td>
+</tr>
+<tr>
+<td>7.0.Z</td>
+<td>&gt;= 2.7.0</td>
+<td>3.1.Z</td>
 <td>&gt;= 1.8.11</td>
 <td>Maintained</td>
 </tr>
@@ -208,7 +215,7 @@
 Ubuntu 20.04 default Ruby version is v2.7</li>
 </ul>
 <pre tabindex="0"><code>sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential \
- libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
+ libyaml-dev libncurses5-dev libffi-dev libgdbm-dev
 </code></pre><ul>
 <li>RHEL <br>
 RHEL8(Alma / Rocky) default Ruby version is v2.5.5</li>
@@ -219,7 +226,7 @@ RHEL8(Alma / Rocky) default Ruby version is v2.5.5</li>
 </span></span></code></pre></div><h2 id="install">install</h2>
 <p>first install RbEnv Dependencies; <br>
 Later, upload rbenv-installer shell script.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>D:\programs\putty078<span style="color:#75715e">&gt;PSCP.EXE d:\rbenv-installer tdtc@192.168.3.99:/home/tdtc/</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>D:\programs\putty079<span style="color:#75715e">&gt;PSCP.EXE d:\rbenv-installer tdtc@192.168.3.99:/home/tdtc/</span>
 </span></span></code></pre></div><p>or</p>
 <pre tabindex="0"><code>export http_proxy=http://tdtc:qaz1xsw2@192.168.3.128:8580/
 export https_proxy=http://tdtc:qaz1xsw2@192.168.3.128:8580/
@@ -230,57 +237,76 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer
 </span></span><span style="display:flex;"><span>source ~/.bashrc
 </span></span></code></pre></div><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rbenv -v
-</span></span><span style="display:flex;"><span>rbenv 1.2.0-64-gaf9201e
+</span></span><span style="display:flex;"><span>rbenv 1.2.0-80-gd6bb1c6
 </span></span></code></pre></div><p>show list:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rbenv install -l
-</span></span></code></pre></div><p>install:</p>
+</span></span></code></pre></div><h3 id="installation">installation</h3>
+<ul>
+<li>online</li>
+</ul>
 <pre tabindex="0"><code>rbenv install 3.2.2
-</code></pre><p>set global:</p>
+</code></pre><ul>
+<li>offline <br>
+down <a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.2.tar.gz">ruby</a></li>
+</ul>
+<pre tabindex="0"><code>1. Move the downloaded file to `~/.rbenv/cache/`
+2. Run `rbenv install x.y.z` (ex. rbenv install 3.2.2`)
+</code></pre><h3 id="set-and-test">set and test</h3>
+<ul>
+<li>set global</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rbenv global 3.2.2
-</span></span></code></pre></div><p>test:</p>
+</span></span></code></pre></div><ul>
+<li>test</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ruby --version
 </span></span><span style="display:flex;"><span>ruby 3.2.2 <span style="color:#f92672">(</span>2023-03-30 revision e51014f9c0<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>x86_64-linux<span style="color:#f92672">]</span>
 </span></span></code></pre></div><h1 id="rails">Rails</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gem install rails
-</span></span></code></pre></div><p>info(35 gems installed):</p>
-<pre tabindex="0"><code>Fetching zeitwerk-2.6.8.gem
-Fetching method_source-1.0.0.gem
-Fetching tzinfo-2.0.6.gem
-Fetching activesupport-7.0.5.gem
-Fetching thor-1.2.2.gem
+</span></span></code></pre></div><p>info(40 gems installed)</p>
+<pre tabindex="0"><code>Fetching zeitwerk-2.6.12.gem
+Fetching webrick-1.8.1.gem
+Fetching rack-3.0.8.gem
+Fetching rackup-2.1.0.gem
+Fetching thor-1.3.0.gem
 Fetching concurrent-ruby-1.2.2.gem
-Fetching i18n-1.14.1.gem
-Fetching nokogiri-1.15.2-x86_64-linux.gem
-Fetching rack-2.2.7.gem
-Fetching rack-test-2.1.0.gem
-Fetching crass-1.0.6.gem
-Fetching loofah-2.21.3.gem
+Fetching tzinfo-2.0.6.gem
+Fetching minitest-5.20.0.gem
 Fetching rails-html-sanitizer-1.6.0.gem
-Fetching erubi-1.12.0.gem
-Fetching rails-dom-testing-2.0.3.gem
+Fetching i18n-1.14.1.gem
+Fetching connection_pool-2.4.1.gem
+Fetching activesupport-7.1.1.gem
+Fetching nokogiri-1.15.4-x86_64-linux.gem
+Fetching crass-1.0.6.gem
+Fetching rack-session-2.0.0.gem
 Fetching builder-3.2.4.gem
-Fetching mini_mime-1.1.2.gem
+Fetching loofah-2.21.4.gem
+Fetching actionpack-7.1.1.gem
+Fetching rails-dom-testing-2.2.0.gem
+Fetching rack-test-2.1.0.gem
+Fetching railties-7.1.1.gem
+Fetching erubi-1.12.0.gem
 Fetching marcel-1.0.2.gem
-Fetching activerecord-7.0.5.gem
-Fetching railties-7.0.5.gem
-Fetching actionview-7.0.5.gem
-Fetching globalid-1.1.0.gem
-Fetching mail-2.8.1.gem
-Fetching actionpack-7.0.5.gem
-Fetching activejob-7.0.5.gem
-Fetching activemodel-7.0.5.gem
-Fetching activestorage-7.0.5.gem
-Fetching actiontext-7.0.5.gem
-Fetching actionmailer-7.0.5.gem
-Fetching rails-7.0.5.gem
-Fetching websocket-driver-0.7.5.gem
-Fetching nio4r-2.5.9.gem
-Fetching actioncable-7.0.5.gem
-Fetching actionmailbox-7.0.5.gem
+Fetching timeout-0.4.0.gem
+Fetching activemodel-7.1.1.gem
+Fetching activerecord-7.1.1.gem
+Fetching globalid-1.2.1.gem
+Fetching actionview-7.1.1.gem
+Fetching activejob-7.1.1.gem
+Fetching actiontext-7.1.1.gem
+Fetching activestorage-7.1.1.gem
 Fetching websocket-extensions-0.1.5.gem
+Fetching mail-2.8.1.gem
+Fetching actionmailer-7.1.1.gem
+Fetching actionmailbox-7.1.1.gem
+Fetching rails-7.1.1.gem
+Fetching mini_mime-1.1.5.gem
+Fetching nio4r-2.5.9.gem
+Fetching actioncable-7.1.1.gem
+Fetching websocket-driver-0.7.6.gem
 </code></pre><p>test:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rails -v
-</span></span><span style="display:flex;"><span>Rails 7.0.5
+</span></span><span style="display:flex;"><span>Rails 7.1.1
 </span></span></code></pre></div><h2 id="exec-list">exec list</h2>
 <pre tabindex="0"><code>rails db:create
 rails db:migrate
@@ -293,6 +319,7 @@ rake assets:precompile
 <ul>
 <li><a href="https://computingforgeeks.com/install-ruby-on-rhel-centos-rocky-linux/">Install Ruby 3 on RHEL 8|CentOS 8|Rocky Linux 8</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04">How To Install Ruby on Rails with rbenv on Ubuntu 20.04</a></li>
+<li><a href="https://stackoverflow.com/a/62421065">Install ruby using rbenv&rsquo;s downloaded file</a></li>
 </ul>
 
     </section>
@@ -345,17 +372,17 @@ rake assets:precompile
 
   <aside class="read-next">
   
-      <a class="read-next-story" style="no-cover" href="/cnblogs/post/vc-sqlite3lib/">
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/qt-webview/">
           <section class="post">
-              <h2>生成SQLite静态库</h2>
+              <h2>QQ mini browser</h2>
               
           </section>
       </a>
   
   
-      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/e-pic16f_blink7/">
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/java-servlet_versions/">
           <section class="post">
-              <h2>PIC blinked</h2>
+              <h2>servlet version choose</h2>
           </section>
       </a>
   
