@@ -92,8 +92,8 @@
     },
     "headline": "QQ mini browser",
     "name": "QQ mini browser",
-    "wordCount":  601 ,
-    "timeRequired": "PT3M",
+    "wordCount":  642 ,
+    "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
@@ -322,10 +322,27 @@ so WebView is the only option available there.
 </code></pre><h1 id="project">Project</h1>
 <p>使用Qt Creator创建, 以下简称creator。</p>
 <h2 id="create-qt-project">Create Qt Project</h2>
-<p>File -&gt; New Project <br>
-Qt Quick Application</p>
-<p>project name:</p>
+<p>File -&gt; New Project</p>
+<ul>
+<li>v6.x <br>
+Qt Quick Application</li>
+<li>v5.15 <br>
+Qt Quick Application(compat)</li>
+</ul>
+<h3 id="project-setting">project setting</h3>
+<ul>
+<li>project name</li>
+</ul>
 <pre tabindex="0"><code>my_browser
+</code></pre><ul>
+<li>Define Build System</li>
+</ul>
+<pre tabindex="0"><code>CMake
+</code></pre><ul>
+<li>Define Project Details <br>
+Mini Qt version:</li>
+</ul>
+<pre tabindex="0"><code>Qt 5.15/6.2
 </code></pre><h2 id="using-qt-webview">Using Qt WebView</h2>
 <ul>
 <li>QML API</li>
@@ -446,8 +463,12 @@ copy &ldquo;Examples\Qt-6.2.4\webview\minibrowser\images&rdquo; to project folde
 <h3 id="icon">Icon</h3>
 <p>usage <a href="https://forum.qt.io/topic/134678/toolbutton-icon-source/10">Button</a> 替换 toolbutton</p>
 <ul>
-<li><a href="https://forum.qt.io/topic/144345/qml-image-cannot-open-cmake-qrc/10">CMake - Qt6</a></li>
+<li>Qt 6.x <br>
+设置图标文件在 CMake 工程文件(CMakeLists.txt)</li>
+<li>Qt 5.15 <br>
+设置图标文件在 qml.qrc</li>
 </ul>
+<h4 id="cmake---qt6httpsforumqtiotopic144345qml-image-cannot-open-cmake-qrc10"><a href="https://forum.qt.io/topic/144345/qml-image-cannot-open-cmake-qrc/10">CMake - Qt6</a></h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>qt_add_qml_module(<span style="color:#e6db74">appmy_browser</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">URI</span> <span style="color:#e6db74">my_browser</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">VERSION</span> <span style="color:#e6db74">1.0</span>
@@ -459,7 +480,20 @@ copy &ldquo;Examples\Qt-6.2.4\webview\minibrowser\images&rdquo; to project folde
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">images/right32.png</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#e6db74">images/stop32.png</span>
 </span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
-</span></span></span></code></pre></div><h1 id="reference">Reference</h1>
+</span></span></span></code></pre></div><h4 id="qt-515">Qt 5.15</h4>
+<blockquote>
+<p>qml.qrc</p>
+</blockquote>
+<pre tabindex="0"><code>&lt;RCC&gt;
+    &lt;qresource prefix=&#34;/&#34;&gt;
+        &lt;file&gt;main.qml&lt;/file&gt;
+        &lt;file&gt;images/left32.png&lt;/file&gt;
+        &lt;file&gt;images/stop32.png&lt;/file&gt;
+        &lt;file&gt;images/refresh32.png&lt;/file&gt;
+        &lt;file&gt;images/right32.png&lt;/file&gt;
+    &lt;/qresource&gt;
+&lt;/RCC&gt;
+</code></pre><h1 id="reference">Reference</h1>
 <ul>
 <li><a href="https://doc.qt.io/qt-6/qtwebview-minibrowser-example.html">Minibrowser</a></li>
 </ul>
