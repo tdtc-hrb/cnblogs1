@@ -92,7 +92,7 @@
     },
     "headline": "开始Ruby On Rails",
     "name": "开始Ruby On Rails",
-    "wordCount":  394 ,
+    "wordCount":  403 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
@@ -188,6 +188,10 @@ gem install mysql2
 </ul>
 <pre tabindex="0"><code>curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install nodejs
+</code></pre><ul>
+<li>foreman</li>
+</ul>
+<pre tabindex="0"><code>gem install foreman
 </code></pre><h2 id="yarn">Yarn</h2>
 <p>upload <a href="https://github.com/yarnpkg/yarn/releases/download/v1.22.19/yarn_1.22.19_all.deb">yarn_1.22.19_all.deb</a> to ubuntu:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>scp d:\yarn_1.22.19_all.deb tdtc@192.168.3.99:/home/tdtc/
@@ -335,15 +339,21 @@ In &ldquo;./app/views/product/catalog.html.erb&rdquo; with bulma:</li>
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre><h2 id="launch">launch</h2>
-<p>edit Procfile.dev:</p>
+<p>startup server:</p>
+<pre tabindex="0"><code>$ ./bin/dev
+</code></pre><h3 id="config-env">config env</h3>
+<ul>
+<li>edit Procfile.dev</li>
+</ul>
 <pre tabindex="0"><code>web: bin/rails server -p 3000 -b 0.0.0.0
-</code></pre><p>allow port:</p>
+</code></pre><ul>
+<li>allow port</li>
+</ul>
 <pre tabindex="0"><code>$ sudo ufw allow 3000
 </code></pre><p>If it is a clone project, you need to execute:</p>
 <pre tabindex="0"><code>$ bundle exec rake app:update:bin
-</code></pre><p>startup server:</p>
-<pre tabindex="0"><code>$ ./bin/dev
-</code></pre><ul>
+</code></pre><h3 id="web-access-addr">web access addr</h3>
+<ul>
 <li><a href="http://192.168.3.99:3000/product/">product list</a></li>
 <li><a href="http://192.168.3.99:3000/product/1">product id1</a></li>
 <li><a href="http://192.168.3.99:3000/product/catalog?name=aei&amp;lang=4136">product catalog</a></li>
