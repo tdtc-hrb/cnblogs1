@@ -6,7 +6,19 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 Oct 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Oct 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up Visual Studio 14&#43; for xASM Programming</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-asm/</link>
+      <pubDate>Sun, 22 Oct 2023 08:08:08 +0800</pubDate>
+      
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-asm/</guid>
+      <description>MASM32 NASM64 MASM32 After downloading v11r, install it using administrator.
+Create an empty console application (VC++) and set it up.
+project Set set masm Project -&amp;gt; Build Customizations checked: masm(.targets, .props) set entry point Linker -&amp;gt; Advanced Entry Point: main set path Linker -&amp;gt; General -&amp;gt; Additional Library Directories C:\masm32\lib; program new file &amp;ldquo;test1.asm&amp;rdquo; right click &amp;ldquo;properties&amp;rdquo; choice &amp;ldquo;Microsoft Macro Assembler&amp;rdquo;
+Project -&amp;gt; Add New Item Microsoft Macro Assembler -&amp;gt; General -&amp;gt; Include Paths</description>
+    </item>
+    
     <item>
       <title>Windows的一些安装</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq2/</link>
@@ -126,18 +138,6 @@ Field Description f Register file address (0x00 to 0x7F) W Working register (acc
 交叉线 接PC的Lan口。
 Network 设置同一网段的IP地址。
 PC Control Panel -&amp;gt; Network and Internet -&amp;gt; Network Connections Ethernet -&amp;gt; Properties: Internet Protocol Version 4(TCP/IPv4) Enc28J60 IP and MAC 在源代码中更改.</description>
-    </item>
-    
-    <item>
-      <title>Setting Up Visual Studio 12&#43; for MASM32 Programming</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</link>
-      <pubDate>Wed, 22 Mar 2023 08:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-masm/</guid>
-      <description>After downloading v11r, install it using administrator.
-Create an empty console application (VC++) and set it up.
-project Set set masm Project -&amp;gt; Build Customizations checked: masm(.targets, .props) set entry point Linker -&amp;gt; Advanced Entry Point: main set path Linker -&amp;gt; General -&amp;gt; Additional Library Directories C:\masm32\lib; program new file &amp;ldquo;test1.asm&amp;rdquo; right click &amp;ldquo;properties&amp;rdquo; choice &amp;ldquo;Microsoft Macro Assembler&amp;rdquo;
-Project -&amp;gt; Add New Item Microsoft Macro Assembler -&amp;gt; General -&amp;gt; Include Paths</description>
     </item>
     
     <item>

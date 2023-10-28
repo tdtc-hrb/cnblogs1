@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="referrer" content="no-referrer"/>
+    
+
+
+
+<meta name="twitter:title" content="Setting Up Visual Studio 14&#43; for xASM Programming"/>
+<meta name="twitter:description" content="Visual Studio 2017, Visual Studio 2019, Visual Studio 2022"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="Setting Up Visual Studio 14&#43; for xASM Programming &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/vc-asm/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="Visual Studio 2017, Visual Studio 2019, Visual Studio 2022" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2023-10-22T08:08:08&#43;08:00" />
+
+    
+    
+
+    <title>Setting Up Visual Studio 14&#43; for xASM Programming &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="Visual Studio 2017, Visual Studio 2019, Visual Studio 2022" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.119.0">
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/vc-asm/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "Setting Up Visual Studio 14+ for xASM Programming",
+    "name": "Setting Up Visual Studio 14+ for xASM Programming",
+    "wordCount":  369 ,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/vc-asm/",
+    "datePublished": "2023-10-22T08:08Z",
+    "dateModified": "2023-10-22T08:08Z",
+    
+    
+    "description": "Visual Studio 2017, Visual Studio 2019, Visual Studio 2022",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/vc-asm/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Setting Up Visual Studio 14&#43; for xASM Programming</h1>
+        <small>Visual Studio 2017, Visual Studio 2019, Visual Studio 2022</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2023-10-22T08:08:08&#43;08:00">
+            Oct 22, 2023
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <ul>
+<li>MASM32</li>
+<li>NASM64</li>
+</ul>
+<h1 id="masm32">MASM32</h1>
+<p>After downloading <a href="http://www.masm32.com/download/masm32v11r.zip">v11r</a>, install it using administrator.</p>
+<p>Create an empty console application (VC++) and set it up.</p>
+<h2 id="project-set">project Set</h2>
+<ul>
+<li>set masm <br>
+Project -&gt; Build Customizations <br>
+checked:</li>
+</ul>
+<pre tabindex="0"><code>masm(.targets, .props)
+</code></pre><ul>
+<li>set entry point <br>
+Linker -&gt; Advanced</li>
+</ul>
+<pre tabindex="0"><code>Entry Point: main
+</code></pre><ul>
+<li>set path <br>
+Linker -&gt; General -&gt; Additional Library Directories</li>
+</ul>
+<pre tabindex="0"><code>C:\masm32\lib;
+</code></pre><h2 id="program">program</h2>
+<p>new file &ldquo;test1.asm&rdquo; right click &ldquo;properties&rdquo; choice &ldquo;Microsoft Macro Assembler&rdquo;</p>
+<pre tabindex="0"><code>Project -&gt; Add New Item
+</code></pre><p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/Add-New-Item_vc141.png" alt="Add New Item"></p>
+<p>Microsoft Macro Assembler -&gt; General -&gt; Include Paths</p>
+<pre tabindex="0"><code>C:\masm32\include;
+</code></pre><h3 id="code">code</h3>
+<blockquote>
+<p>test1.asm</p>
+</blockquote>
+<ul>
+<li>v14.x</li>
+</ul>
+<pre tabindex="0"><code>.686
+.MODEL  flat, c
+
+includelib ucrt.lib                            ; VS2015+ Usage
+includelib legacy_stdio_definitions.lib        ; VS2015+ Usage
+;includelib  \masm32\lib\msvcrt.lib            ; VS2013- Usage
+
+;Function prototypes 
+printf  proto arg1:ptr byte, printlist:vararg
+
+.data
+msg1fmt byte &#34;%s%d&#34;,0Ah,0
+msg1    byte &#34;y: &#34;,0
+x       sdword ?
+y       sdword ?
+
+.code
+        align 4
+        
+main    PROC
+        mov eax, 3h
+        mov x, eax
+        ;;y = 2 + 3
+        ;add eax, 2h
+        ;;y = 3 - 2
+        sub eax, 2h
+        mov y, eax
+
+        invoke printf, ADDR msg1fmt, ADDR msg1, y
+        ret
+main    ENDP
+
+end ;program end
+</code></pre><h1 id="nasm64">Nasm64</h1>
+<ul>
+<li>License <br>
+As of version 2.07, NASM is now under the Simplified (2-clause) BSD license.</li>
+<li><a href="https://www.nasm.us/">down</a> <br>
+<a href="https://www.nasm.us/pub/nasm/releasebuilds/?C=M;O=D">Latest version - x64</a></li>
+</ul>
+<h2 id="src">src</h2>
+<ul>
+<li>compile</li>
+</ul>
+<pre tabindex="0"><code>nasm -f win64 hello_floats.asm
+</code></pre><ul>
+<li>Linker <br>
+run &ldquo;x64 Native Tools Command Prompt for xxx&rdquo;</li>
+</ul>
+<pre tabindex="0"><code>link hello_floats.obj /subsystem:console /out:hello6.exe kernel32.lib msvcrt.lib ucrt.lib legacy_stdio_definitions.lib
+</code></pre><h3 id="code-1">code</h3>
+<pre tabindex="0"><code>; Copyright 2019 Siew Yi Liang.
+; 
+default rel
+bits 64
+
+segment .data
+    a dd 3.25
+    b dd 10.53
+
+    fmt db &#39;result is: %f&#39;, 0xa, 0
+
+segment .text
+global main
+extern _CRT_INIT
+extern ExitProcess
+extern printf
+
+main:
+    call _CRT_INIT                 ; Needed since our entry point is not _DllMainCRTStartup. See https://msdn.microsoft.com/en-us/library/708by912.aspx
+
+    push    rbp
+    mov    rbp, rsp
+    sub    rsp, 32
+
+    movss    xmm0, [a]             ; Load a
+    movss    xmm1, [b]             ; Load b
+    vaddss    xmm2, xmm0, xmm1      ; xmm2 = xmm1 + xmm2
+    lea    rcx, [fmt]
+    movss    xmm1, xmm2
+
+    ; Remember, %f actually expects a double, so we need to convert the float to double
+    cvtss2sd    xmm1, xmm1
+
+    ; Also remember: floats are passed in xmm registers, but printf wants a
+    ; double! This is an aggregate so it&#39;s passed in RDX instead.
+    movq    rdx, xmm1
+    call    printf
+
+    xor eax, eax                ; return 0
+    call ExitProcess
+</code></pre><h2 id="ref">Ref</h2>
+<ul>
+<li><a href="https://scriptbucket.wordpress.com/2011/10/19/setting-up-visual-studio-10-for-masm32-programming/">Setting Up Visual Studio 10 for MASM32 Programming</a></li>
+<li><a href="http://masm32.com/board/index.php?topic=6347.0">printf working not correct in masm - Vortex</a></li>
+<li><a href="https://sonictk.github.io/asm_tutorial/">Understanding Windows x64 Assembly</a></li>
+</ul>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Setting%20Up%20Visual%20Studio%2014%2b%20for%20xASM%20Programming&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-asm%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-asm%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-asm%2f&amp;description=Setting%20Up%20Visual%20Studio%2014%2b%20for%20xASM%20Programming"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fvc-asm%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ops_win_faq2/">
+          <section class="post">
+              <h2>Windows的一些安装</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+
