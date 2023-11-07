@@ -6,24 +6,12 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Oct 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Setting Up Visual Studio 14&#43; for xASM Programming</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-asm/</link>
-      <pubDate>Sun, 22 Oct 2023 08:08:08 +0800</pubDate>
-      
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-asm/</guid>
-      <description>MASM32 NASM64 MASM32 After downloading v11r, install it using administrator.
-Create an empty console application (VC++) and set it up.
-project Set set masm Project -&amp;gt; Build Customizations checked: masm(.targets, .props) set entry point Linker -&amp;gt; Advanced Entry Point: main set path Linker -&amp;gt; General -&amp;gt; Additional Library Directories C:\masm32\lib; program new file &amp;ldquo;test1.asm&amp;rdquo; right click &amp;ldquo;properties&amp;rdquo; choice &amp;ldquo;Microsoft Macro Assembler&amp;rdquo;
-Project -&amp;gt; Add New Item Microsoft Macro Assembler -&amp;gt; General -&amp;gt; Include Paths</description>
-    </item>
-    
+    <lastBuildDate>Tue, 07 Nov 2023 08:08:08 +0800</lastBuildDate>
+    <atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows的一些安装</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq2/</link>
-      <pubDate>Sat, 21 Oct 2023 08:08:08 +0800</pubDate>
-      
+      <pubDate>Tue, 07 Nov 2023 08:08:08 +0800</pubDate>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq2/</guid>
       <description>Dotnet Framework Offline install How to Install Microsoft .NET Framework 3.5 Offline in Windows 8 and Later without Internet Connection?
 first, mount windows installation DVD(ISO)
@@ -31,42 +19,44 @@ DVD D: Then, execute
 PowerShell as Administrator
 dism /online /enable-feature /featurename:NetFx3 /All /Source:D:\sources\sxs /LimitAccess Nodejs 2/4. On Windows, running Node.js in Windows terminal emulators like mintty requires the usage of winpty for the tty channels to work (e.g. winpty node.exe script.js). In &amp;ldquo;Git bash&amp;rdquo; if you call the node shell alias (node without the .</description>
     </item>
-    
+    <item>
+      <title>Setting Up Visual Studio 14&#43; for xASM Programming</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/vc-asm/</link>
+      <pubDate>Sun, 22 Oct 2023 08:08:08 +0800</pubDate>
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-asm/</guid>
+      <description>MASM32 NASM64 MASM32 After downloading v11r, install it using administrator.
+Create an empty console application (VC++) and set it up.
+project Set set masm Project -&amp;gt; Build Customizations checked: masm(.targets, .props) set entry point Linker -&amp;gt; Advanced Entry Point: main set path Linker -&amp;gt; General -&amp;gt; Additional Library Directories C:\masm32\lib; program new file &amp;ldquo;test1.asm&amp;rdquo; right click &amp;ldquo;properties&amp;rdquo; choice &amp;ldquo;Microsoft Macro Assembler&amp;rdquo;
+Project -&amp;gt; Add New Item Microsoft Macro Assembler -&amp;gt; General -&amp;gt; Include Paths</description>
+    </item>
     <item>
       <title>QQ mini browser</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/qt-webview/</link>
       <pubDate>Wed, 18 Oct 2023 23:38:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/qt-webview/</guid>
       <description>Qt Design Studio: v4.3.1 Qt Creator: v11.0.3 QT: V6.2.4 online installer version Creator and Design Studio 始终更新 Commercial LTS phase 新 Normal 发布后, lts 转为 commercial LTS 镜像 list Note: 下载那个镜像点的&amp;quot;qt-unified-windows-x64-online.exe&amp;quot;, 就使用it&amp;rsquo;s Network.
 tuna ustc sjtu nanyang Qt Qucik version:
 Qt Version QtQml QtQml.Models QtQuick QtQuick.Particles QtQuick.Controls QtQuick.Layouts QtQuick.Dialogs QtQuick.WebEngine Qt 5.11 2.11 2.11 2.11 2.11 2.4 1.11 1.11 1.7 Qt 5.12 - - 2.12 - 2.12 - - Qt 5.</description>
     </item>
-    
     <item>
       <title>安装Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</link>
       <pubDate>Tue, 17 Oct 2023 08:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_installation/</guid>
       <description>Ruby &amp;amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.1.Z &amp;gt;= 2.7.0 3.2.Z &amp;gt;= 1.8.11 Maintained 7.0.Z &amp;gt;= 2.7.0 3.1.Z &amp;gt;= 1.8.11 Maintained RbEnv Install ruby using rbenv.
 Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential \libyaml-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2.</description>
     </item>
-    
     <item>
       <title>servlet version choose</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/java-servlet_versions/</link>
       <pubDate>Mon, 18 Sep 2023 08:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/java-servlet_versions/</guid>
       <description>Servlet API history Servlet API version Released Specification Platform Important Changes Jakarta Servlet 6.0 May 31, 2022 6.0 Jakarta EE 10 remove deprecated features and implement requested enhancements Jakarta Servlet 5.0 Oct 9, 2020 5.0 Jakarta EE 9 API moved from package javax.servlet to jakarta.servlet Jakarta Servlet 4.0.3 Sep 10, 2019 4.0 Jakarta EE 8 Renamed from &amp;ldquo;Java&amp;rdquo; trademark Java Servlet 4.0 Sep 2017 JSR 369 Java EE 8 HTTP/2 Java Servlet 3.</description>
     </item>
-    
     <item>
       <title>Github使用</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</link>
       <pubDate>Tue, 22 Aug 2023 08:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</guid>
       <description>PAT 从2021.8.13开始github不允许使用用户名和密码！ 只能使用用户名和Token进行提交。
 Create Personal Access Token on GitHub From your GitHub account, go to Settings =&amp;gt; Developer Settings =&amp;gt; Personal Access Token =&amp;gt; Generate New Token (Give your password) =&amp;gt; Fillup the form =&amp;gt; click Generate token =&amp;gt; Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
@@ -74,12 +64,10 @@ Create Personal Access Token on GitHub From your GitHub account, go to Settings 
 增加普通凭证 控制面板 -&amp;gt; 用户帐户和家庭安全 -&amp;gt; 凭据管理器
 添加&amp;quot;普通凭证&amp;quot;: Internet地址或网络地址: git:https://github.com 用户名: 你的github 用户名 密码: 你的Token</description>
     </item>
-    
     <item>
       <title>生成SQLite静态库</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</link>
       <pubDate>Tue, 13 Jun 2023 21:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</guid>
       <description>SQLite3 X:
 3400200 X: 当前版本号
@@ -91,43 +79,35 @@ Configureation Type : Static library(.lib) 编译即可
 Build -&amp;gt; Rebuild sqlite3 预编译头文件 Project ==&amp;gt; Properties ==&amp;gt; C/C++ ==&amp;gt; Precompiled Header
 Not Using Precompiled Headers vs2019 sqlite3.c : fatal error C1853: &amp;#39;Debug\sqlite3.pch&amp;#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) vs2022 sqlite3.</description>
     </item>
-    
     <item>
       <title>PIC blinked</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/e-pic16f_blink7/</link>
       <pubDate>Thu, 18 May 2023 08:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-pic16f_blink7/</guid>
       <description>With a few changes, code for 877A can be easily transferred to 887 (as for any PIC, datasheet reading is necessary). 887 has internal oscillator, it is cheaper than 877A, &amp;hellip;
 MPASM MPLAB X v5.30(x86) - 2019.10.29 Proteus v8.15 Blinking LED First, use the compiler to generate hex; Then, use protelus to draw &amp;ldquo;Schematic Capture&amp;rdquo;; Finally, import the hex file into the MCU component.
 16F887 We are using Proteus simulator for simulating our code but if you are testing the code in real world test bench all you need is,</description>
     </item>
-    
     <item>
       <title>8位单片机PIC汇编语言</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/e-pic16f_instruction-set/</link>
       <pubDate>Wed, 17 May 2023 10:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-pic16f_instruction-set/</guid>
       <description>TABLE 1-1: OPCODE FIELD DESCRIPTIONS
 Field Description f Register file address (0x00 to 0x7F) W Working register (accumulator) d Destination select; b Bit address within an 8-bit file register k Literal field, constant data or label d value where the results are placed d = 0 W(orking) register d = 1 file register; Default is d = 1. TABLE 1-2: ABBREVIATION DESCRIPTIONS
 |Field| Description| | PC | Program Counter| | TO | Time-Out bit| | C | Carry bit| | DC | Digit Carry bit| | Z | Zero bit| | PD | Power-Down bit|</description>
     </item>
-    
     <item>
       <title>Component Designing in Proteus ISIS</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/e-proteus_component-designing/</link>
       <pubDate>Tue, 16 May 2023 10:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-proteus_component-designing/</guid>
       <description>Create First of all select the 2D Graphics Box Mode as shown in the below figure. Now click on the workspace and drag the cursor to create a box, as shown in the below figure. We have created the body of our component, now there&amp;rsquo;s a need to add pins in it. For this, click on the Device Pins Mode as shown in the below figure and click on the workspace.</description>
     </item>
-    
     <item>
       <title>web server</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-web-server/</link>
       <pubDate>Tue, 28 Mar 2023 01:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-web-server/</guid>
       <description>created date： 2021-03-10 modified date：
 2023-03-25 IDE Arduino V1.8.19 Library UIP Ethernet v2.x 接线 Arduino Uno Enc28j60 Pin 10 CS Pin 11 SI Pin 12 SO Pin 13 SCK Reset RST* +3v3 Vcc GND* GND Enc28j60 INTN: 置空（不接）
@@ -139,12 +119,10 @@ Field Description f Register file address (0x00 to 0x7F) W Working register (acc
 Network 设置同一网段的IP地址。
 PC Control Panel -&amp;gt; Network and Internet -&amp;gt; Network Connections Ethernet -&amp;gt; Properties: Internet Protocol Version 4(TCP/IPv4) Enc28J60 IP and MAC 在源代码中更改.</description>
     </item>
-    
     <item>
       <title>开始Ruby On Rails</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</link>
       <pubDate>Sat, 18 Mar 2023 18:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ror_getstarted/</guid>
       <description>Prepare mysql-dev sudo apt install mysql-client libmysqlclient-devgem install mysql2 nodejs curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -sudo apt install nodejs foreman gem install foreman Yarn upload yarn_1.22.19_all.deb to ubuntu:
 scp d:\yarn_1.22.19_all.deb tdtc@192.168.3.99:/home/tdtc/ install:
@@ -152,24 +130,20 @@ sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb Creating a 
 rails new veic_web-r2 -j esbuild --css bulma -d mysql upload images windows 10:
 tar zcvf img.tar.gz ./img/ --transform s/img/images/ scp d:\projects\img.</description>
     </item>
-    
     <item>
       <title>3小时搞定ASP.NET Core 6.0</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</link>
       <pubDate>Tue, 14 Mar 2023 08:18:02 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</guid>
       <description>OS Windows 10 LTSB 2016+ IDE Visual Studio Code - v1.76.1 SDK .Net 6.0 终端(Terminal) PowerShell Core 数据库(Database) MySQL / Microsoft SQL Server 2012 Express LocalDB (vs2013 inside) 一、Create Project(VS Code) Init project Terminal -&amp;gt; New Terminal
 cd .\Documents\ dotnet new mvc -o veic_web --framework net6.0 Set workspace dir File -&amp;gt; Add Folder to Workspace
 设置缺省首页(Home Set Default) Program.cs app.UseStaticFiles(); 变更为:
 app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See附录1. Run Run -&amp;gt; Start Debugging 运行效果: 二、Data namespace:</description>
     </item>
-    
     <item>
       <title>Elasticsearch 6 plus(6, 7) 安装</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/es6p-install/</link>
       <pubDate>Sun, 19 Feb 2023 10:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/es6p-install/</guid>
       <description>Ubuntu 20.04.1
 参考&amp;ldquo;Elasticsearch 2.4 安装&amp;rdquo;
@@ -178,24 +152,20 @@ bootstrap.seccomp: false 在高版本已不可用。
 discovery single-node:
 discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-head.git install nodejs cd elasticsearch-headyarnyarn run start open http://localhost:9100/</description>
     </item>
-    
     <item>
       <title>jmx - first demo</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/</link>
       <pubDate>Wed, 08 Feb 2023 08:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/</guid>
       <description>Starting with the J2SE platform 5.0, JMX technology is included in the Java SE platform.
 jmxtools Download the jar and pom files, Then copy it to the M2 directory. M2: C:\Users\tdtc\.m2\repository\com\sun\jdmk\jmxtools\1.2.1 Source project . |____src | |____main | | |____java | | | |____jmxbook.ch2 |____pom.xml
 Gen jar:
 mvn package pom.xml &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;jmxbook&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmxInAction&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;build/&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;datanucleus.org/downloads/maven2&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;datanucleus.org Maven Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://www.datanucleus.org/downloads/maven2/&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!</description>
     </item>
-    
     <item>
       <title>使用jekyll编写Blog</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</link>
       <pubDate>Fri, 06 Jan 2023 14:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</guid>
       <description>install jekyll ruby windows rubyinstaller-devkit-3.1.3-1-x64.exe check in:
 ridk install choose(3):
@@ -206,23 +176,19 @@ theme clone:
 git clone https://github.com/the-mvm/the-mvm.github.io.git cd cnblogs_abundle install rb 3.x bundle add webrick launch bundle exec jekyll buildbundle exec jekyll serve publish Submit the &amp;ldquo;_site&amp;rdquo; folder.
 Ref Jekyll serve fails on Ruby 3.</description>
     </item>
-    
     <item>
       <title>spark安装</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_spark_rhel/</link>
       <pubDate>Mon, 10 Oct 2022 00:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_spark_rhel/</guid>
       <description>Spark v3.1 OS RHEL8(Alma / Rocky Linux) 一、基础软件 1. R-lang $ sudo dnf -y install epel-release $ sudo dnf --enablerepo=powertools install R 注意：如果Java没有安装，会附带着安装OpenJDK。
 2. Scala $ wget https://downloads.lightbend.com/scala/2.12.17/scala-2.12.17.tgz $ tar xvf scala-2.12.17.tgz $ sudo mv scala-2.12.17 /usr/lib $ sudo ln -s /usr/lib/scala-2.12.17 /usr/lib/scala 1) add path $vi ~/.bashrc PATH=$PATH:/usr/lib/scala/bin 二、Spark 1. down &amp;amp; unzip v3.1.3
 $ mkdir -p ~/app/spark $ tar zxvf spark-3.1.3-bin-hadoop2.7.tgz -C ~/app/spark $ mv ~/app/spark/spark-3.1.3-bin-hadoop2.7 ~/app/spark/3.1.3 2.</description>
     </item>
-    
     <item>
       <title>Redis Server installation FAQs</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/redis-rhel-setup/</link>
       <pubDate>Sat, 08 Oct 2022 08:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/redis-rhel-setup/</guid>
       <description>OS: RHEL Community Minimal
 AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 Root Permission:
@@ -230,24 +196,20 @@ $su - root 0) open files Q: Increased maximum number of open files to 10032 (it 
 #ulimit -a #vi /etc/systemd/system/redis.service In the &amp;ldquo;[Service]&amp;rdquo; unit, add the following:
 LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128. A:</description>
     </item>
-    
     <item>
       <title>Install Redis from Source</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/redis-rhel/</link>
       <pubDate>Fri, 07 Oct 2022 04:58:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/redis-rhel/</guid>
       <description>OS: RHEL Community Minimal
 AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 prepare User set Firewall dependencies:
 $sudo dnf group install &amp;#39;Development Tools&amp;#39; $sudo dnf install tcl wget v6+ Just to clarify: there is no way this issue will be fixed, Redis &amp;gt;= 6 will require a C11 compiler.
 RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enable devtoolset-8 bash verification $gcc -v $make -v $echo &amp;#39;puts [info patchlevel];exit 0&amp;#39; | tclsh installation $wget https://download.</description>
     </item>
-    
     <item>
       <title>前端（Web）负载均衡</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_nginx-v2/</link>
       <pubDate>Thu, 06 Oct 2022 08:38:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_nginx-v2/</guid>
       <description>Nginx&amp;rsquo;s load balancing
 一、安装 OS: RHEL Community Version(Rocky8/Alma8) minimal（安装时的选项）
@@ -256,12 +218,10 @@ Library devel $sudo dnf install gd-devel libxml2-devel libxslt-devel GeoIP Downl
 $sudo rpm -Uvh http://www6.atomicorp.com/channels/atomic/centos/8/x86_64/RPMS/atomic-release-1.0-23.el8.art.noarch.rpm Install GeoIP-devel rpm package:
 $sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=public --add-port=80/tcp $sudo firewall-cmd --reload installation First, install Nginx of centos repo; Then, replace the nginx program file.</description>
     </item>
-    
     <item>
       <title>安装配置Keepalived - v2</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_keepalived-v2/</link>
       <pubDate>Thu, 06 Oct 2022 08:38:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_keepalived-v2/</guid>
       <description>OS: AlmaLinux/RockyLinux minimal(VBox v6.1.38)
 Virtual Box Network configure:
@@ -269,35 +229,29 @@ Attached to Bridged Adapter Advanced promiscuous mode: Allow All 一、安装 pr
 RHEL7 #yum install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel \ glib2-devel pcre2-devel libnftnl-devel libmnl-devel systemd-devel kmod-devel RHEL8 powertools: #dnf --enablerepo=powertools install ipset-devel libnfnetlink-devel file-devel libnftnl-devel kmod-devel pcre2-devel none:
 #dnf install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel net-snmp-devel \ glib2-devel libmnl-devel systemd-devel git LVS manager:</description>
     </item>
-    
     <item>
       <title>How To Install OpenSSL in RHEL</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_openssl/</link>
       <pubDate>Wed, 05 Oct 2022 08:38:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_openssl/</guid>
       <description>RHEL Community Version Alma Linux / Rocky Linux Prepare Install development tool:
 # dnf group install &amp;#39;Development Tools&amp;#39; Install dependencies:
 # dnf install perl-core zlib-devel -y down latest OpenSSL $mkdir openssl-1.1.1 $curl --progress https://www.openssl.org/source/openssl-1.1.1q.tar.gz | tar xz -C ./openssl-1.1.1 --strip-components 1 setup $cd openssl-1.1.1 RHEL8 ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl shared zlib RHEL7 ./config --prefix=/usr --shared make &amp;amp;&amp;amp; install $make Root permission Required:
 $sudo make install RHEL8 # mv /bin/openssl /bin/openssl.backup# cp /usr/local/ssl/bin/openssl /bin/openssl test:</description>
     </item>
-    
     <item>
       <title>设置OpenJDK</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_openjdk_rhel/</link>
       <pubDate>Tue, 04 Oct 2022 08:08:08 -0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_openjdk_rhel/</guid>
       <description> RHEL Community Version Alma Linux / Rocky Linux 1. install jre:
 $sudo dnf install java -y jdk $sudo dnf install java-1.8.0-openjdk-devel 2. set path $sudo vi /etc/profile export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el8_6.x86_64 export CLASSPATH=.:$JAVA_HOME/jre/lib/:. export PATH=$PATH:$JAVA_HOME/bin $su - root #source /etc/profile About path 3.3. INSTALL OPENJDK ON RED HAT ENTERPRISE LINUX - 2.Optional: Set the JAVA_HOME environment variable
 Reference How to install Java on CentOS 7 OpenJDK Version Info - Releases </description>
     </item>
-    
     <item>
       <title>windbg调试sandboxie driver</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</link>
       <pubDate>Tue, 06 Sep 2022 06:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</guid>
       <description>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp;amp; windows sdk8.1.
 Prepare Host Env:
@@ -306,12 +260,10 @@ OS Win1809(x64) VM VMware(v10.0.7) / Vbox(v6.1.38) WDK(include windbg) Windows D
 yield CPU on poll vbox Port 2: uncheck:
 Connect to existing pipe/socket windbg about version: The operating system needs to match the same or higher version of windbg.</description>
     </item>
-    
     <item>
       <title>使用 NSIS (Nullsoft Scriptable Install System)</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_install-distribution_nsis/</link>
       <pubDate>Sat, 03 Sep 2022 00:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_install-distribution_nsis/</guid>
       <description>编译xp目标，vs2015 for xp 需要如下组件:
 Microsoft.VisualStudio.Component.VC.140Microsoft.VisualStudio.Component.WinXP 在目标机xp 安装Microsoft Visual C++ 2015 Redistributable Update 3
@@ -321,33 +273,27 @@ UI System.nsh Overwrite C:\Program Files (x86)\NSIS\Contrib\Modern UI\System.nsh
 location:
 C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that are required:</description>
     </item>
-    
     <item>
       <title>tabs 实现</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/css-bulma-tabs/</link>
       <pubDate>Wed, 27 Jul 2022 00:26:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/css-bulma-tabs/</guid>
       <description>html Note: The header and body are wrapped with div!
 &amp;lt;div id=&amp;#34;tabs-with-content&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; Header &amp;lt;div class=&amp;#34;tabs is-centered&amp;#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Tech Parameters&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; Body &amp;lt;div class=&amp;#34;tabs is-centered&amp;#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Tech Parameters&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;section class=&amp;#34;tab-content&amp;#34;&amp;gt; &amp;lt;table class=&amp;#34;table&amp;#34;&amp;gt; &amp;lt;tbody&amp;gt; &amp;lt;td&amp;gt; &amp;lt;%= image_tag &amp;#34;#{@image.name}&amp;#34; %&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;%= @product.description %&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;/tbody&amp;gt; &amp;lt;/table&amp;gt; &amp;lt;/section&amp;gt; &amp;lt;section class=&amp;#34;tab-content&amp;#34;&amp;gt; &amp;lt;%= @parameter.ipxx %&amp;gt; &amp;lt;/section&amp;gt; &amp;lt;/div&amp;gt; javascript let tabsWithContent = (function () { let tabs = document.</description>
     </item>
-    
     <item>
       <title>(dev mode) install CONSUL on ubuntu</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</link>
       <pubDate>Thu, 26 May 2022 23:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</guid>
       <description>install $sudo apt-get update $sudo apt-get install consul run $consul agent -dev -bind 192.168.3.128 http://localhost:8500/ui
 update down $wget https://releases.hashicorp.com/consul/1.12.1/consul_1.12.1_linux_amd64.zip unzip $sudo unzip consul_1.12.1_linux_amd64.zip -d /usr/local/bin Verifying the Installation:
 $consul -v Consul v1.12.1 Ref Install Consul Run the Consul Agent </description>
     </item>
-    
     <item>
       <title>Elasticsearch 2.4 安装</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/es24-install/</link>
       <pubDate>Wed, 25 May 2022 18:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/es24-install/</guid>
       <description>Ubuntu 20.04.1
 Part I. Elasticsearch 1. install JDK 1) down jdk8 wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz unzip:
@@ -357,23 +303,19 @@ $echo &amp;#39;export JAVA_HOME=/usr/java/jdk8u332-b09&amp;#39; &amp;gt;&amp;gt;
 tar -xvf elasticsearch-2.4.6.tar.gz 2) config ../config/elasticsearch.yml
 network network.</description>
     </item>
-    
     <item>
       <title>Distributed traceability with Spring Cloud: Sleuth and Zipkin</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/</link>
       <pubDate>Wed, 25 May 2022 08:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/trace-zipkin-config/</guid>
       <description>I. Sleuth 0. Concept Trace A set of spans that form a call tree structure, forms the trace of the request.
 Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests.
 Tag Key/value pair that identifies certain information in the span.</description>
     </item>
-    
     <item>
       <title>Install and Configure Apache Kafka</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/mq-kafka-config/</link>
       <pubDate>Mon, 16 May 2022 18:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/mq-kafka-config/</guid>
       <description>I. Installation The installation environment must have JDK, verify that you enter:
 java -version 1. down Install server-side versions based on the jar downloaded by maven, such as my &amp;ldquo;C:\Users\tdtc.m2\repository\org\apache\kafka\kafka-clients\3.0.1&amp;rdquo;
@@ -381,12 +323,10 @@ And choose Scala version based on pom, such as my &amp;ldquo;C:\Users\tdtc.m2\re
 wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $tar zxvf kafka_2.13-3.0.1.tgz II. Configuration server.properties
 1. Necessary settings 1) basic listener listeners=PLAINTEXT://your_IP:9092 logs $mkdir HOME/kafka_2.13-3.0.1/logs 2) cluster Sets the natural number of the broker ID to non-zero.</description>
     </item>
-    
     <item>
       <title>Install and Configure RabbitMQ</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</link>
       <pubDate>Sun, 15 May 2022 18:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</guid>
       <description>Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal Current Version(RabbitMQ):
 RabbitMQ 3.10.2 Erlang 24.3.3 Installation 需要设置固定IP
@@ -395,34 +335,28 @@ Note: When saving, the format is Unix(LF).
 focal_rq.sh:
 #!/bin/sh sudo apt-get install curl gnupg apt-transport-https -y ## Team RabbitMQ&amp;#39;s main signing key curl -1sLf &amp;#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&amp;#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &amp;gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &amp;#34;https://keyserver.</description>
     </item>
-    
     <item>
       <title>最小实现redux - 分解redux</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/</link>
       <pubDate>Sun, 10 Apr 2022 08:26:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/</guid>
       <description>project: https://gitee.com/xiaobin80/starter
 application app.js
 include createStore import { createStore } from &amp;#39;redux&amp;#39; Establish reducer const reducerName = (state, action) =&amp;gt; { state; } invoke createStore() const store = createStore(reducerName); html public/index.html
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;The Complete Redux Book - Example Application&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; Redux is running: &amp;lt;span id=&amp;#34;counter&amp;#34;&amp;gt;&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34; src=&amp;#34;../app.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; </description>
     </item>
-    
     <item>
       <title>使用strcat_s的注意事项</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/</link>
       <pubDate>Thu, 24 Mar 2022 03:18:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/</guid>
       <description>准备 strcat_s使用 准备 使用LLVM（clang-cl） char point char * const and const char *? Pointing to a constant value const char * p; // value cannot be changed Constant pointer to a value char * const p; // address cannot be changed Constant pointer to a constant value const char * const p; // both cannot be changed. C++11 The C++11 Standard (ISO/IEC 14882:2011) says in § C.1.1:
 char* p = &amp;#34;abc&amp;#34;; // valid in C, invalid in C++ For the C++ it&amp;rsquo;s OK as a pointer to a String Literal is harmful since any attempt to modify it leads to a crash.</description>
     </item>
-    
     <item>
       <title>使用qt5编写Serial Port</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</link>
       <pubDate>Sun, 28 Nov 2021 08:18:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</guid>
       <description>thread 线程相关
 asynchronously connect方法已实现异步。
@@ -436,23 +370,19 @@ while (m_serialPort-&amp;gt;waitForReadyRead(500)) responseData += m_serialPort-
 copy C:\Users\tdtc\Documents\Projects\serialCommQt\Release\serialCommQt.exe C:\Users\tdtc\Documents\serialCommQt_qmake\ exec windeployqt:
 for QML C:\Qt\Qt5.12.11\5.12.11\msvc2017\bin\windeployqt --qmldir C:\Users\tdtc\Documents\SerialCom\SerialCom\QtRaspberry C:\Users\tdtc\Documents\SerialCom_qml\serialCom.</description>
     </item>
-    
     <item>
       <title>docker(ce) on Ubuntu</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</link>
       <pubDate>Sat, 20 Nov 2021 10:48:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</guid>
       <description>Note:
 # - requires given linux commands to be executed with root privileges either directly as a root user or by use of sudo command $ - requires given linux commands to be executed as a regular non-privileged user Docker CE 1. install $sudo apt install docker.io 2. enable $ sudo systemctl start docker $ sudo systemctl enable docker test:
 $ docker --version Docker compose 1. down sudo curl -L &amp;#34;https://github.</description>
     </item>
-    
     <item>
       <title>SQLite在.net core的demo</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/sqlite.net.core/</link>
       <pubDate>Fri, 19 Nov 2021 19:18:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/sqlite.net.core/</guid>
       <description>IDE: VS2022 语言: C#
 简介： 本示例使用SQLite的密码、外键功能。
@@ -463,22 +393,18 @@ $ docker --version Docker compose 1. down sudo curl -L &amp;#34;https://github.<
 1. 连接 asyncConn = new SQLite.SQLiteAsyncConnection(options); 其中，options是SQLiteConnectionString实例化的字符串。
 var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, preKeyAction: db =&amp;gt; db.Execute(&amp;#34;PRAGMA cipher_default_use_hmac = OFF;&amp;#34;), postKeyAction: db =&amp;gt; db.Execute(&amp;#34;PRAGMA kdf_iter = 128000;&amp;#34;)); 2. 查询 异步查询 var factoryCars = asyncConn.</description>
     </item>
-    
     <item>
       <title>千位分隔符</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-thousand-separator/</link>
       <pubDate>Thu, 18 Nov 2021 02:18:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-thousand-separator/</guid>
       <description>1. 字符串替换 /** * 字符串替换函数 - js * expStr: 查找的字符串 * string: 整个字符串 * repStr: 替换的字符串 */ function replacStr(expStr, string, repStr) { let result = &amp;#34;&amp;#34;; let regex; if (parseInt(expStr) &amp;gt; 0) // 数字 regex = new RegExp(expStr, &amp;#34;g&amp;#34;); else	// 非数字 regex = new RegExp(&amp;#34;\\&amp;#34; + expStr, &amp;#34;g&amp;#34;); result = string.replace(regex, repStr); return result; } 2. 千分符 例如，货币7867321.55，怎样使用js来分割他呢？
 0. 分离小数和整数 let index = strCny.indexOf(&amp;#34;.&amp;#34;); if ( index != 0) { strNum = strCny.</description>
     </item>
-    
     <item>
       <title> 使用ts/js打印tree</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-print-tree/</link>
       <pubDate>Mon, 15 Nov 2021 14:15:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-print-tree/</guid>
       <description>一棵&amp;quot;树&amp;quot;就是由空格、星号和回车组成的。 我们用a，代表空格。
 注意：空格在HTML编码为：“ ”。
@@ -489,12 +415,10 @@ for (let j = 0; j &amp;lt; k; j++) { document.write(&amp;#34;b&amp;#34;); } 然�
 空格就是按照指定的半径数“占位”：
 for (let j = 0; j &amp;lt; treeRadius; j++) { document.write(&amp;#34; &amp;#34;); } 中线就是每次循环时打印一个*</description>
     </item>
-    
     <item>
       <title>Angular 的HttpClient应用</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-angular-app/</link>
       <pubDate>Sun, 14 Nov 2021 06:58:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-angular-app/</guid>
       <description>Prepare install Angular CLI:
 npm install -g @angular/cli create project:
@@ -505,12 +429,10 @@ import { HttpClientModule } from &amp;#34;@angular/common/http&amp;#34;; declare
 // import HttpClientModule after BrowserModule. HttpClientModule, user component See the next section(&amp;ldquo;Angular Component - add component&amp;rdquo;) for examples of user components. Angular Component app/component.ts
 The root component.</description>
     </item>
-    
     <item>
       <title>ASP.net Core 的RESTful应用</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-restful/</link>
       <pubDate>Thu, 11 Nov 2021 12:38:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-restful/</guid>
       <description>使用Scaffolder模板创建api。
 PowerShell v5.1 IDE: Visual Studio Code/Visual Studio 2022 NuGet ..\AppData\Roaming\NuGet\NuGet.Config
@@ -520,45 +442,37 @@ CLI&amp;gt; dotnet add package Pomelo.EntityFrameworkCore.MySql Test Browser
 Models 建立Entity类：Supplier、Product、Category
 DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbContext(DbContextOptions&amp;lt;StorageBuyDbContext&amp;gt; options) : base(options){} public DbSet&amp;lt;Category&amp;gt; Categories { get; set; } public DbSet&amp;lt;Supplier&amp;gt; Suppliers { get; set; } public DbSet&amp;lt;Product&amp;gt; Products { get; set; } } add service add connectiong string &amp;#34;Data&amp;#34;: { &amp;#34;StorageBuy&amp;#34;: { &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.</description>
     </item>
-    
     <item>
       <title>ASP.net Core 的gRPC Service应用</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-grpc/</link>
       <pubDate>Tue, 09 Nov 2021 20:38:18 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-grpc/</guid>
       <description>Server 在Ubuntu V20.04; Client 在Windows CMD运行。
 PowerShell Core v7.2 IDE: VS2022 Community(v17.0)/VS Code(docker extension) VM: VBox(v6.1) 接口文件说明 Protos/greet.proto
 定义service service Greeter { // Sends a greeting rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message request message HelloRequest { string name = 1; } response message HelloReply { string message = 1; } server Create VS2022 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file View -&amp;gt; Command Palette(Ctrl+Shift+P) Enter: Docker fi choice1: Add Docker Files to Workspace&amp;hellip; choice2: .</description>
     </item>
-    
     <item>
       <title>webpack的使用</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-webpack/</link>
       <pubDate>Mon, 08 Nov 2021 15:26:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-webpack/</guid>
       <description>安装webpack npm install -g webpack-dev-server npm install --save webpack-cli pack info package.json
 { &amp;#34;name&amp;#34;: &amp;#34;redux-book-started&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;1.0.0&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;Sample Redux Application&amp;#34;, &amp;#34;main&amp;#34;: &amp;#34;app.js&amp;#34;, &amp;#34;scripts&amp;#34;: { &amp;#34;start&amp;#34;: &amp;#34;webpack-dev-server --hot --progress --port 8181&amp;#34; }, &amp;#34;author&amp;#34;: &amp;#34;Boris Dinkevich &amp;amp; Ilya Gelman&amp;#34;, &amp;#34;license&amp;#34;: &amp;#34;MIT&amp;#34;, &amp;#34;dependencies&amp;#34;: { &amp;#34;jquery&amp;#34;: &amp;#34;3.6.0&amp;#34;, &amp;#34;redux&amp;#34;: &amp;#34;4.1.2&amp;#34; }, &amp;#34;devDependencies&amp;#34;: { &amp;#34;webpack&amp;#34;: &amp;#34;5.64.1&amp;#34;, &amp;#34;webpack-cli&amp;#34;: &amp;#34;^4.9.1&amp;#34;, &amp;#34;webpack-dev-server&amp;#34;: &amp;#34;4.5.0&amp;#34; } } config info webpack.config.js
 module.exports = { mode: &amp;#39;development&amp;#39;, entry: &amp;#39;./app.js&amp;#39;, output: { filename: &amp;#39;.</description>
     </item>
-    
     <item>
       <title>动态生成table</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-json-table/</link>
       <pubDate>Sat, 02 Oct 2021 14:26:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-json-table/</guid>
       <description>一、JSON数据源 JSON
 JSON是一种取代XML的数据结构,和xml相比,它更小巧但描述能力却不差,由于它的小巧所以网络传输数据将减少更多流量从而加快速度,那么,JSON到底是什么?JSON就是一串字符串 只不过元素会使用特定的符号标注。{} 双括号表示对象[] 中括号表示数组&amp;#34;&amp;#34; 双引号内是属性或值: 冒号表示后者是前者的值(这个值可以是字符串、数字、也可以是另一个数组或对象)所以 {&amp;#34;name&amp;#34;: &amp;#34;Michael&amp;#34;} 可以理解为是一个包含name为Michael的对象而[{&amp;#34;name&amp;#34;: &amp;#34;Michael&amp;#34;},{&amp;#34;name&amp;#34;: &amp;#34;Jerry&amp;#34;}]就表示包含两个对象的数组当然了,你也可以使用{&amp;#34;name&amp;#34;:[&amp;#34;Michael&amp;#34;,&amp;#34;Jerry&amp;#34;]}来简化上面一部,这是一个拥有一个name数组的对象 详细介绍请参见W3SCHOOL JSON规范
 1. students var students = [ {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1001&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1002&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;张X威&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1003&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;于X洋&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1004&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;张X扬&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1005&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;周X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1006&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;王X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1007&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X朋&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 1&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1008&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;邬X春&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 5&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1009&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;李X&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]}, {&amp;#34;cName&amp;#34;: &amp;#34;class 5&amp;#34;, &amp;#34;ID&amp;#34;: &amp;#34;1010&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;孙X丽&amp;#34;, &amp;#34;course&amp;#34;: [&amp;#34;英语&amp;#34;, &amp;#34;高数&amp;#34;], &amp;#34;elective&amp;#34;: [&amp;#34;政治经济学&amp;#34;, &amp;#34;哲学&amp;#34;]} ]; 二、函数设计 所谓的动态就是使用删表和写表的操作。</description>
     </item>
-    
     <item>
       <title> 使用Ts/Js计算天数</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-calday/</link>
       <pubDate>Fri, 01 Oct 2021 02:16:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-calday/</guid>
       <description>在JS练习题中，有这么一道：
 请计算某天是这一年的第几天。
@@ -567,12 +481,10 @@ var IsLeapYear = function (year) { var flag = false; if ( ((year % 4 == 0) &amp;
 for (var i = 0; i &amp;lt; month - 1; i++) { iDay += months[i]; } 其中months为数组
 var months = new Array(31, day2, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31); day2如果是闰年赋值29，否则28。</description>
     </item>
-    
     <item>
       <title>arduino 开发环境</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-blink/</link>
       <pubDate>Sat, 06 Mar 2021 05:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-blink/</guid>
       <description>使用跑马灯来验证.
 Pre IDE Arduino CC(.zip文件) Atmel Studio 7 编码 我们使用使用AS7是为了使用它的智能提示和方便查看函数原型.
@@ -580,34 +492,28 @@ Pre IDE Arduino CC(.zip文件) Atmel Studio 7 编码 我们使用使用AS7是为
 建立工程 - AS7 New-&amp;gt;Project &amp;ldquo;Create Project from Arduino Sketch&amp;rdquo; 设置Arduino sketch属性: Sketch File、Arduino IDE、Board、Device 烧写 把代码copy回arduino ide
 /* Blink Turns on an LED on for one second, then off for one second, repeatedly. Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO it is attached to digital pin 13, on MKR1000 on pin 6.</description>
     </item>
-    
     <item>
       <title>enc28j60 driver - sam4s</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/e-enc28j60-driver/</link>
       <pubDate>Sun, 28 Feb 2021 17:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-enc28j60-driver/</guid>
       <description>SPI 通过ASF示例(iar)改写为Keil(mdk v5.18a)
 Init 在初始化过程中需要mck(Master Clock Sources)。
 uint32_t sysclk_get_peripheral_hz() { /* CONFIG_SYSCLK_PRES is the register value for setting the expected */ /* prescaler, not an immediate value. */ return sysclk_get_main_hz() / ((CONFIG_SYSCLK_PRES == SYSCLK_PRES_3) ? 3 : (1 &amp;lt;&amp;lt; (CONFIG_SYSCLK_PRES &amp;gt;&amp;gt; PMC_MCKR_PRES_Pos))); } pio Pull-up Enable PIO Disable spi master init Enable peripheral clock Set spi master mode Disable Mode Fault Detection Disable loopback mode Set Peripheral Chip Select (PCS) value Set fixed peripheral select Disable Peripheral Select Decode Set delay between chip selects spi master setup device spi calc baudrate div Configure timing for SPI transfer Set number of bits per transfer Set Serial Clock Baud Rate divider value (SCBR) Configure CS behavior for SPI transfer (\ref spi_cs_behavior_t) Set clock default state Set Data Capture Phase spi calc baudrate div short spi_calc_baudrate_div(const uint32_t baudrate, uint32_t mck) { int baud_div = div_ceil(mck, baudrate); /* The value of baud_div is from 1 to 255 in the SCBR field.</description>
     </item>
-    
     <item>
       <title>ZooKeeper Installation(Dev)</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/dev-service_registry-zk/</link>
       <pubDate>Sat, 16 May 2020 18:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/dev-service_registry-zk/</guid>
       <description>Install ZooKeeper packages
 # sudo apt-get install openjdk-8-jre-headless # sudo apt-get install zookeeper zookeeperd If you need a cluster, configure the Conf file, otherwise ignore it.
 Configure ZooKeeper Common Configuration Edit the /etc/zookeeper/conf/zoo.cfg file to contain the following: server.1=nsdb1:2888:3888 server.2=nsdb2:2888:3888 server.3=nsdb3:2888:3888 autopurge.snapRetainCount=10 autopurge.purgeInterval =12 [Important] Important For production deployments it is recommended to configure the storage of snapshots in a different disk than the commit log, this is done by setting the parameters dataDir and dataLogDir in zoo.</description>
     </item>
-    
     <item>
       <title>cas client设置</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/cas-client-config/</link>
       <pubDate>Sat, 16 May 2020 12:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/cas-client-config/</guid>
       <description>The client and server are the same thekeystore
 cas client version: 3.5.1(cas-client-core-3.5.1)
@@ -619,12 +525,10 @@ D:\projects\cas-sample-java-webapp then thekeystore file:
 D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
 &amp;lt;webApp&amp;gt; &amp;lt;contextPath&amp;gt;/loginInfo&amp;lt;/contextPath&amp;gt; &amp;lt;overrideDescriptor&amp;gt;${basedir}/etc/jetty/web.xml&amp;lt;/overrideDescriptor&amp;gt; &amp;lt;/webApp&amp;gt; mvn clean package jetty:run-forked 1) Run directly mvn jetty:run-forked 4.</description>
     </item>
-    
     <item>
       <title>cas server设置</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/cas-server-config/</link>
       <pubDate>Sat, 16 May 2020 10:08:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/cas-server-config/</guid>
       <description>Tomcat: V8.5.x Java: 1.8 x64 MySQL: 5.5.x+ OS: Win10 x64 下载部署包 使用gradle 的repo最高只支持gradle V4.3！
 0. clone git clone https://github.com/apereo/cas-gradle-overlay-template.git 1. set gradle 1) extract gradle-4.10.3-bin.zip
@@ -633,12 +537,10 @@ D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
 cas.version=5.3.2 =&amp;gt; cas.version=5.3.15.1 gradle.version=4.8 =&amp;gt; gradle.version=4.10.3 springboot.version=1.5.14.RELEASE =&amp;gt; springboot.version=1.5.18.RELEASE 2) build cd cas-gradle-overlay-template $gradle build II. Run 0. key/certificate 1) genkey info: -dname &amp;ldquo;CN=localhost,OU=test.com,O=test,L=WH,ST=HB,C=CN&amp;rdquo;
 keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize 2048 -keystore e:/etc/cas/thekeystore 2) export keytool -export -alias thekeystore -file e:/etc/cas/cas5311.</description>
     </item>
-    
     <item>
       <title>cluster connector</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/java-connector-cluster_mysql/</link>
       <pubDate>Sat, 16 May 2020 05:58:08 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/java-connector-cluster_mysql/</guid>
       <description>Elementary 在没有出来NDB之前，都是使用这个组件。
 C-JDBC
@@ -651,43 +553,34 @@ File propsFile = new File(&amp;#34;clusterj.properties&amp;#34;); InputStream in
 com.mysql.clusterj.connectstring=localhost:1186 com.mysql.clusterj.database=mydb 操作数据 参考4.2.2.4 ClusterJ Basic Operations文档。
 Reference 4.2.2 Using ClusterJ </description>
     </item>
-    
     <item>
       <title>update redux</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-redux-update/</link>
       <pubDate>Fri, 10 Apr 2020 09:26:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-redux-update/</guid>
       <description>1. initial state db.json
 const initialState = { &amp;#34;recipes&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;Omelette&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Waffle&amp;#34; } ], &amp;#34;ingredients&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;Eggs&amp;#34;, &amp;#34;quantity&amp;#34;: 2, &amp;#34;measure&amp;#34;: &amp;#34;large&amp;#34;, &amp;#34;recipe&amp;#34;: &amp;#34;Omelette&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Eggs&amp;#34;, &amp;#34;quantity&amp;#34;: 1, &amp;#34;measure&amp;#34;: &amp;#34;large&amp;#34;, &amp;#34;recipe&amp;#34;: &amp;#34;Waffle&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Milk&amp;#34;, &amp;#34;quantity&amp;#34;: 1, &amp;#34;measure&amp;#34;: &amp;#34;cups&amp;#34;, &amp;#34;recipe&amp;#34;: &amp;#34;Waffle&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;Sugar&amp;#34;, &amp;#34;quantity&amp;#34;: 2, &amp;#34;measure&amp;#34;: &amp;#34;tbsp&amp;#34;, &amp;#34;recipe&amp;#34;: &amp;#34;Waffle&amp;#34; } ] } 2. reducer const reducer = (state, action) =&amp;gt; { switch (action.</description>
     </item>
-    
     <item>
       <title>ES6 展开运算符</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-es6-spreed-operator/</link>
       <pubDate>Fri, 10 Apr 2020 08:26:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-es6-spreed-operator/</guid>
       <description>Multiple return values const configStore = () =&amp;gt; { const sagaMiddleware = createSagaMiddleware() return { ...createStore(rootReducer, applyMiddleware(sagaMiddleware)), runSaga: sagaMiddleware.run, } } Reference Spread syntax </description>
     </item>
-    
     <item>
       <title>rootredux</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-redux-root/</link>
       <pubDate>Fri, 10 Apr 2020 08:26:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-redux-root/</guid>
       <description>1. split const reducer = (state, action) =&amp;gt; { switch (action.type) { case &amp;#39;ADD_RECIPE&amp;#39;: return Object.assign( {}, state, { recipes: state.recipes.concat({name : action.name}) }); case &amp;#39;ADD_INGREDIENT&amp;#39;: const myIngredients = { name : action.name, quantity: action.quantity, measure: action.measure, recipe: action.recipe }; return Object.assign( {}, state, { ingredients: state.ingredients.concat(myIngredients) }); } return state; } recipeReducer export const recipeReducer = (stat, action) =&amp;gt; { switch (action.type) { case &amp;#39;ADD_RECIPE&amp;#39;: return Object.assign( {}, state, { ingredients: state.</description>
     </item>
-    
     <item>
       <title>JS的lambda表达式</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/js-lambda/</link>
       <pubDate>Fri, 10 Apr 2020 02:14:39 +0800</pubDate>
-      
       <guid>https://tdtc-hrb.github.io/cnblogs/post/js-lambda/</guid>
       <description>Before rewriting function selectedReddit(state = &amp;#39;user/8&amp;#39;, action){ switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } After rewriting const selectedReddit = (state = &amp;#39;user/8&amp;#39;, action) =&amp;gt; { switch (action.type) { case SELECT_REDDIT: return action.reddit default: return state } } 参考 《Arrow functions》</description>
     </item>
-    
   </channel>
 </rss>
