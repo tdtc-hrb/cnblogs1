@@ -57,7 +57,7 @@
         <link href='/cnblogs/index.xml' rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80) &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.120.3">
+    <meta name="generator" content="Hugo 0.120.4">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/" />
 
@@ -193,6 +193,32 @@
 </nav>
 
     </div>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/mq-kafka-config/">Install and Configure Apache Kafka</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>I. Installation The installation environment must have JDK, verify that you enter:
+java -version 1. down Install server-side versions based on the jar downloaded by maven, such as my &ldquo;C:\Users\tdtc.m2\repository\org\apache\kafka\kafka-clients\3.0.1&rdquo;
+And choose Scala version based on pom, such as my &ldquo;C:\Users\tdtc.m2\repository\org\springframework\cloud\spring-cloud-stream-binder-kafka\3.2.4\spring-cloud-stream-binder-kafka-3.2.4.pom&rdquo;
+wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $tar zxvf kafka_2.13-3.0.1.tgz II. Configuration server.properties
+1. Necessary settings 1) basic listener listeners=PLAINTEXT://your_IP:9092 logs $mkdir HOME/kafka_2.13-3.0.1/logs 2) cluster Sets the natural number of the broker ID to non-zero. <a class="read-more" href="/cnblogs/post/mq-kafka-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-05-16T18:08:08&#43;08:00">
+            16 May 2022
+        </time>
+    </footer>
+</article>
 
     
         <article class="post post">
@@ -431,34 +457,6 @@ The root component. <a class="read-more" href="/cnblogs/post/js-angular-app/">&r
         
         <time class="post-date" datetime="2021-11-14T06:58:08&#43;08:00">
             14 Nov 2021
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-restful/">ASP.net Core 的RESTful应用</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>使用Scaffolder模板创建api。
-PowerShell v5.1 IDE: Visual Studio Code/Visual Studio 2022 NuGet ..\AppData\Roaming\NuGet\NuGet.Config
-&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;configuration&gt; &lt;packageSources&gt; &lt;add key=&#34;api.nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; /&gt; &lt;/packageSources&gt; &lt;/configuration&gt; Create Project vs code
-dotnet new webapi -o MyWebApp --package Swashbuckle.AspNetCore:PackageVersion=6.2.3 add NuGet package dotnet add package Microsoft.EntityFrameworkCore dotnet add package MySql.EntityFrameworkCore dotnet add package Microsoft.EntityFrameworkCore.Tools Option NuGet package Pomelo:
-CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql Test Browser
-Models 建立Entity类：Supplier、Product、Category
-DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbContext(DbContextOptions&lt;StorageBuyDbContext&gt; options) : base(options){} public DbSet&lt;Category&gt; Categories { get; set; } public DbSet&lt;Supplier&gt; Suppliers { get; set; } public DbSet&lt;Product&gt; Products { get; set; } } add service add connectiong string &#34;Data&#34;: { &#34;StorageBuy&#34;: { &#34;ConnectionString&#34;: &#34;server=127. <a class="read-more" href="/cnblogs/post/asp.net6-restful/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-11T12:38:08&#43;08:00">
-            11 Nov 2021
         </time>
     </footer>
 </article>

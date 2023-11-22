@@ -57,7 +57,7 @@
         <link href='/cnblogs/index.xml' rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80) &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.120.3">
+    <meta name="generator" content="Hugo 0.120.4">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/" />
 
@@ -191,6 +191,37 @@
 </nav>
 
     </div>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/java-connector-cluster_mysql/">cluster connector</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Elementary 在没有出来NDB之前，都是使用这个组件。
+C-JDBC
+c-jdbc文档 src-Sequoia 2.10.10
+NDB Cluster 关于：
+JPA、JDBC省略不表。 ClusterJ ClusterJ requires Java 1.7 or 1.8.
+首先使用SessionFactory建立一个会话实例， 然后用Session提供的方法操作数据。
+会话实例 读取配置文件，然后建立Session实例。
+File propsFile = new File(&#34;clusterj.properties&#34;); InputStream inStream = new FileInputStream(propsFile); Properties props = new Properties(); props.load(inStream); SessionFactory factory = ClusterJHelper.getSessionFactory(props); Session session = factory.getSession(); 配置信息 clusterj.properties
+com.mysql.clusterj.connectstring=localhost:1186 com.mysql.clusterj.database=mydb 操作数据 参考4.2.2.4 ClusterJ Basic Operations文档。
+Reference 4.2.2 Using ClusterJ  <a class="read-more" href="/cnblogs/post/java-connector-cluster_mysql/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-05-16T05:58:08&#43;08:00">
+            16 May 2020
+        </time>
+    </footer>
+</article>
 
     
         <article class="post post">

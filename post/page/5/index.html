@@ -57,7 +57,7 @@
         <link href='/cnblogs/post/index.xml' rel="alternate" type="application/rss+xml" title="Posts &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.120.3">
+    <meta name="generator" content="Hugo 0.120.4">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/" />
 
@@ -160,6 +160,34 @@
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-restful/">ASP.net Core 的RESTful应用</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>使用Scaffolder模板创建api。
+PowerShell v5.1 IDE: Visual Studio Code/Visual Studio 2022 NuGet ..\AppData\Roaming\NuGet\NuGet.Config
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;configuration&gt; &lt;packageSources&gt; &lt;add key=&#34;api.nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; /&gt; &lt;/packageSources&gt; &lt;/configuration&gt; Create Project vs code
+dotnet new webapi -o MyWebApp --package Swashbuckle.AspNetCore:PackageVersion=6.2.3 add NuGet package dotnet add package Microsoft.EntityFrameworkCore dotnet add package MySql.EntityFrameworkCore dotnet add package Microsoft.EntityFrameworkCore.Tools Option NuGet package Pomelo:
+CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql Test Browser
+Models 建立Entity类：Supplier、Product、Category
+DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbContext(DbContextOptions&lt;StorageBuyDbContext&gt; options) : base(options){} public DbSet&lt;Category&gt; Categories { get; set; } public DbSet&lt;Supplier&gt; Suppliers { get; set; } public DbSet&lt;Product&gt; Products { get; set; } } add service add connectiong string &#34;Data&#34;: { &#34;StorageBuy&#34;: { &#34;ConnectionString&#34;: &#34;server=127. <a class="read-more" href="/cnblogs/post/asp.net6-restful/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-11T12:38:08&#43;08:00">
+            11 Nov 2021
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -386,37 +414,6 @@ keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass chan
 
         
         <time class="post-date" datetime="2020-05-16T10:08:08&#43;08:00">
-            16 May 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/java-connector-cluster_mysql/">cluster connector</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Elementary 在没有出来NDB之前，都是使用这个组件。
-C-JDBC
-c-jdbc文档 src-Sequoia 2.10.10
-NDB Cluster 关于：
-JPA、JDBC省略不表。 ClusterJ ClusterJ requires Java 1.7 or 1.8.
-首先使用SessionFactory建立一个会话实例， 然后用Session提供的方法操作数据。
-会话实例 读取配置文件，然后建立Session实例。
-File propsFile = new File(&#34;clusterj.properties&#34;); InputStream inStream = new FileInputStream(propsFile); Properties props = new Properties(); props.load(inStream); SessionFactory factory = ClusterJHelper.getSessionFactory(props); Session session = factory.getSession(); 配置信息 clusterj.properties
-com.mysql.clusterj.connectstring=localhost:1186 com.mysql.clusterj.database=mydb 操作数据 参考4.2.2.4 ClusterJ Basic Operations文档。
-Reference 4.2.2 Using ClusterJ  <a class="read-more" href="/cnblogs/post/java-connector-cluster_mysql/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T05:58:08&#43;08:00">
             16 May 2020
         </time>
     </footer>

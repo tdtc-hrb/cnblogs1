@@ -57,7 +57,7 @@
         <link href='/cnblogs/index.xml' rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80) &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
       
     
-    <meta name="generator" content="Hugo 0.120.3">
+    <meta name="generator" content="Hugo 0.120.4">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/" />
 
@@ -193,6 +193,33 @@
 </nav>
 
     </div>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_nginx-v2/">前端（Web）负载均衡</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Nginx&rsquo;s load balancing
+一、安装 OS: RHEL Community Version(Rocky8/Alma8) minimal（安装时的选项）
+0. prepare #dnf -y install gcc gcc-c++ automake make pcre pcre-devel zlib zlib-devel openssl openssl-devel see update openssl
+Library devel $sudo dnf install gd-devel libxml2-devel libxslt-devel GeoIP Download latest atomic-release Install atomic-release rpm:
+$sudo rpm -Uvh http://www6.atomicorp.com/channels/atomic/centos/8/x86_64/RPMS/atomic-release-1.0-23.el8.art.noarch.rpm Install GeoIP-devel rpm package:
+$sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=public --add-port=80/tcp $sudo firewall-cmd --reload installation First, install Nginx of centos repo; Then, replace the nginx program file. <a class="read-more" href="/cnblogs/post/ops_nginx-v2/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-06T08:38:08&#43;08:00">
+            6 Oct 2022
+        </time>
+    </footer>
+</article>
 
     
         <article class="post post">
@@ -419,32 +446,6 @@ Tag Key/value pair that identifies certain information in the span. <a class="re
         
         <time class="post-date" datetime="2022-05-25T08:08:08&#43;08:00">
             25 May 2022
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/mq-kafka-config/">Install and Configure Apache Kafka</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>I. Installation The installation environment must have JDK, verify that you enter:
-java -version 1. down Install server-side versions based on the jar downloaded by maven, such as my &ldquo;C:\Users\tdtc.m2\repository\org\apache\kafka\kafka-clients\3.0.1&rdquo;
-And choose Scala version based on pom, such as my &ldquo;C:\Users\tdtc.m2\repository\org\springframework\cloud\spring-cloud-stream-binder-kafka\3.2.4\spring-cloud-stream-binder-kafka-3.2.4.pom&rdquo;
-wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $tar zxvf kafka_2.13-3.0.1.tgz II. Configuration server.properties
-1. Necessary settings 1) basic listener listeners=PLAINTEXT://your_IP:9092 logs $mkdir HOME/kafka_2.13-3.0.1/logs 2) cluster Sets the natural number of the broker ID to non-zero. <a class="read-more" href="/cnblogs/post/mq-kafka-config/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-05-16T18:08:08&#43;08:00">
-            16 May 2022
         </time>
     </footer>
 </article>
