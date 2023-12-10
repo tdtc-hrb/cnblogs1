@@ -92,8 +92,8 @@
     },
     "headline": "Enterprise Architect",
     "name": "Enterprise Architect",
-    "wordCount":  186 ,
-    "timeRequired": "PT1M",
+    "wordCount":  266 ,
+    "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
@@ -195,6 +195,9 @@
 <p>切换到 &ldquo;Develop&rdquo; 选项卡；
 在&quot;Source Code&quot; -&gt; Files:</p>
 <pre tabindex="0"><code>Import Source Directory
+</code></pre><h3 id="generic-type">Generic Type</h3>
+<p>需要手动放置<code>Associate</code> 并设置 &ldquo;Direction&rdquo;:</p>
+<pre tabindex="0"><code>Source -&gt; Destination
 </code></pre><h1 id="gof">GoF</h1>
 <blockquote>
 <p>Alt + 5</p>
@@ -239,7 +242,8 @@
 </blockquote>
 <ul>
 <li><a href="https://refactoring.guru/design-patterns/chain-of-responsibility">Chain of Responsibility</a></li>
-<li><a href="https://refactoring.guru/design-patterns/command">Command</a></li>
+<li><a href="https://refactoring.guru/design-patterns/command">Command</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-command.png" alt="dp command"></li>
 <li><a href="https://refactoring.guru/design-patterns/mediator">Mediator</a></li>
 <li><a href="https://refactoring.guru/design-patterns/observer">Observer</a></li>
 <li><a href="https://refactoring.guru/design-patterns/state">State</a>
@@ -259,7 +263,7 @@ Chain of Responsibility =&gt; Observer
 </code></pre><h3 id="strategy">Strategy</h3>
 <p>使用 <code>interface</code> 作为 参数 的 &ldquo;Template Method&rdquo;</p>
 <h3 id="state">State</h3>
-<p>耦合高的 strategy:</p>
+<p>耦合 高的 strategy:</p>
 <pre tabindex="0"><code>State can be considered as an extension of Strategy.
 </code></pre><p>Both patterns are based on composition:</p>
 <pre tabindex="0"><code>they change the behavior of the context by delegating some work to helper objects.
@@ -267,7 +271,21 @@ Chain of Responsibility =&gt; Observer
 <pre tabindex="0"><code>Strategy makes these objects completely independent and unaware of each other. 
 However, State doesn’t restrict dependencies between concrete states, 
 letting them alter the state of the context at will.
-</code></pre><h1 id="ref">Ref</h1>
+</code></pre><h3 id="command">Command</h3>
+<p>Command 是 分解 的 Strategy:</p>
+<ul>
+<li>
+<p>You can use Command to convert any operation into an object.<br>
+The operation’s parameters become fields of that object. <br>
+The conversion lets you defer execution of the operation,
+queue it, store the history of commands, send commands to remote services, etc.</p>
+</li>
+<li>
+<p>On the other hand, Strategy usually describes different ways of doing the same thing,
+letting you swap these algorithms within a single context class.</p>
+</li>
+</ul>
+<h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://sparxsystems.com/enterprise_architect_user_guide/14.0/modeling_tools/objecttoolbar.html">Diagram Toolbox</a></li>
 </ul>
