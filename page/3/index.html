@@ -197,6 +197,41 @@
     
         <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/redis-rhel/">Install Redis from Source</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>OS: RHEL Community Minimal
+AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 prepare User set Firewall dependencies:
+$sudo dnf group install &#39;Development Tools&#39; $sudo dnf install tcl wget v6+ Just to clarify: there is no way this issue will be fixed, Redis &gt;= 6 will require a C11 compiler.
+RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enable devtoolset-8 bash verification $gcc -v $make -v $echo &#39;puts [info patchlevel];exit 0&#39; | tclsh installation $wget https://download. <a class="read-more" href="/cnblogs/post/redis-rhel/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        on
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/redis/">#Redis</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/development-tools/">#Development Tools</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/wget/">#wget</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/rhel/">#RHEL</a>,
+            
+        
+        <time class="post-date" datetime="2022-10-07T04:58:39&#43;08:00">
+            7 Oct 2022
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/ops_nginx-v2/">前端（Web）负载均衡</a></h2>
     </header>
     <section class="post-excerpt">
@@ -421,30 +456,6 @@ network network. <a class="read-more" href="/cnblogs/post/es24-install/">&raquo;
 
         
         <time class="post-date" datetime="2022-05-25T18:08:08&#43;08:00">
-            25 May 2022
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/trace-zipkin-config/">Distributed traceability with Spring Cloud: Sleuth and Zipkin</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>I. Sleuth 0. Concept Trace A set of spans that form a call tree structure, forms the trace of the request.
-Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests.
-Tag Key/value pair that identifies certain information in the span. <a class="read-more" href="/cnblogs/post/trace-zipkin-config/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-05-25T08:08:08&#43;08:00">
             25 May 2022
         </time>
     </footer>

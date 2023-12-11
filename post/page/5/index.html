@@ -164,6 +164,35 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-angular-app/">Angular 的HttpClient应用</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Prepare install Angular CLI:
+npm install -g @angular/cli create project:
+npx @angular/cli new userDetails-client --style=css --routing=false --skip-tests Angular struct Angular module app/app.module.ts
+Add system modules and user components
+system module example for: httpclient module import pack:
+import { HttpClientModule } from &#34;@angular/common/http&#34;; declare Decorator:
+// import HttpClientModule after BrowserModule. HttpClientModule, user component See the next section(&ldquo;Angular Component - add component&rdquo;) for examples of user components. Angular Component app/component.ts
+The root component. <a class="read-more" href="/cnblogs/post/js-angular-app/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-14T06:58:08&#43;08:00">
+            14 Nov 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/asp.net6-restful/">ASP.net Core 的RESTful应用</a></h2>
     </header>
     <section class="post-excerpt">
@@ -387,33 +416,6 @@ D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
 
         
         <time class="post-date" datetime="2020-05-16T12:08:08&#43;08:00">
-            16 May 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/cas-server-config/">cas server设置</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Tomcat: V8.5.x Java: 1.8 x64 MySQL: 5.5.x+ OS: Win10 x64 下载部署包 使用gradle 的repo最高只支持gradle V4.3！
-0. clone git clone https://github.com/apereo/cas-gradle-overlay-template.git 1. set gradle 1) extract gradle-4.10.3-bin.zip
-2) set system variable $PATH=$PATH;%GRADLE_HOME%\bin 2. build war File location: cas\build\libs\cas.war
-1) config file gradle.properties
-cas.version=5.3.2 =&gt; cas.version=5.3.15.1 gradle.version=4.8 =&gt; gradle.version=4.10.3 springboot.version=1.5.14.RELEASE =&gt; springboot.version=1.5.18.RELEASE 2) build cd cas-gradle-overlay-template $gradle build II. Run 0. key/certificate 1) genkey info: -dname &ldquo;CN=localhost,OU=test.com,O=test,L=WH,ST=HB,C=CN&rdquo;
-keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize 2048 -keystore e:/etc/cas/thekeystore 2) export keytool -export -alias thekeystore -file e:/etc/cas/cas5311. <a class="read-more" href="/cnblogs/post/cas-server-config/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T10:08:08&#43;08:00">
             16 May 2020
         </time>
     </footer>
