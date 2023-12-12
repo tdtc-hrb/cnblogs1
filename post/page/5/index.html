@@ -164,6 +164,35 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-print-tree/"> 使用ts/js打印tree</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>一棵&quot;树&quot;就是由空格、星号和回车组成的。 我们用a，代表空格。
+注意：空格在HTML编码为：“ ”。
+aaaa* aaa*** aa***** a******* ********* aaaa* aaaa* aaaa* aaaa* aaaa* 首先“树头”部分由3部分组成：空格部分、左树头、右树头。 空格就是递减的过程：
+for (let i = treeRadius; i &gt; k; i--) { document.write(&#34; &#34;); } 左树头，包括中线
+for (let i = 0; i &lt; k + 1; i++) { document.write(&#34;*&#34;); } 右树头，递增过程：
+for (let j = 0; j &lt; k; j++) { document.write(&#34;b&#34;); } 然后，“树干”部分由2部分组成：空格部分和中线部分
+空格就是按照指定的半径数“占位”：
+for (let j = 0; j &lt; treeRadius; j++) { document.write(&#34; &#34;); } 中线就是每次循环时打印一个* <a class="read-more" href="/cnblogs/post/js-print-tree/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-15T14:15:39&#43;08:00">
+            15 Nov 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/js-angular-app/">Angular 的HttpClient应用</a></h2>
     </header>
     <section class="post-excerpt">
@@ -386,36 +415,6 @@ Configure ZooKeeper Common Configuration Edit the /etc/zookeeper/conf/zoo.cfg fi
 
         
         <time class="post-date" datetime="2020-05-16T18:08:08&#43;08:00">
-            16 May 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/cas-client-config/">cas client设置</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>The client and server are the same thekeystore
-cas client version: 3.5.1(cas-client-core-3.5.1)
-git clone https://gitee.com/xiaobin80/cas-sample-java-webapp 1. config web.xml(src\main\webapp\WEB-INF)
-1) CAS Single Sign Out Filter https://localhost:8443/cas 2) CAS Authentication Filter https://localhost:8443/cas/login 3) CAS Validation Filter https://localhost:8443/cas 4) server name localhost 2. keystore copy
-/etc/cas/jetty/thekeystore to
-The disk root directory of the application. For example: my application:
-D:\projects\cas-sample-java-webapp then thekeystore file:
-D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
-&lt;webApp&gt; &lt;contextPath&gt;/loginInfo&lt;/contextPath&gt; &lt;overrideDescriptor&gt;${basedir}/etc/jetty/web.xml&lt;/overrideDescriptor&gt; &lt;/webApp&gt; mvn clean package jetty:run-forked 1) Run directly mvn jetty:run-forked 4. <a class="read-more" href="/cnblogs/post/cas-client-config/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T12:08:08&#43;08:00">
             16 May 2020
         </time>
     </footer>
