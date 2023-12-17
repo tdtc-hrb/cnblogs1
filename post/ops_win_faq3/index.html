@@ -92,7 +92,7 @@
     },
     "headline": "Enterprise Architect",
     "name": "Enterprise Architect",
-    "wordCount":  269 ,
+    "wordCount":  332 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
@@ -179,7 +179,6 @@
     <section class="post-content">
       <p><a href="http://tool.uml.com.cn/ToolsEA/download.asp">china mirror - EA</a>:</p>
 <ul>
-<li><a href="http://tool.uml.com.cn/ToolsEA/easetup15.2.msi">v15.2</a></li>
 <li><a href="http://tool.uml.com.cn/ToolsEA/ea16.1/easetup_x86.msi">v16.1</a></li>
 </ul>
 <h2 id="class-view">class view</h2>
@@ -242,7 +241,8 @@
 <p>10 items</p>
 </blockquote>
 <ul>
-<li><a href="https://refactoring.guru/design-patterns/chain-of-responsibility">Chain of Responsibility</a></li>
+<li><a href="https://refactoring.guru/design-patterns/chain-of-responsibility">Chain of Responsibility</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-chain_of_respon.png" alt="dp chain-of-respon"></li>
 <li><a href="https://refactoring.guru/design-patterns/command">Command</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-command.png" alt="dp command"></li>
 <li><a href="https://refactoring.guru/design-patterns/mediator">Mediator</a></li>
@@ -286,7 +286,16 @@ queue it, store the history of commands, send commands to remote services, etc.<
 letting you swap these algorithms within a single context class.</p>
 </li>
 </ul>
-<h1 id="ref">Ref</h1>
+<h3 id="chain-of-responsibility">Chain of Responsibility</h3>
+<ul>
+<li>Handlers in Chain of Responsibility can be implemented as Commands.</li>
+</ul>
+<pre tabindex="0"><code>In this case, you can execute a lot of different operations over the same context object, represented by a request.
+</code></pre><ul>
+<li>However, there’s another approach, where the request itself is a Command object.</li>
+</ul>
+<pre tabindex="0"><code>In this case, you can execute the same operation in a series of different contexts linked into a chain.
+</code></pre><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://sparxsystems.com/enterprise_architect_user_guide/14.0/modeling_tools/objecttoolbar.html">Diagram Toolbox</a></li>
 </ul>

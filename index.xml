@@ -20,7 +20,7 @@
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq3/</link>
       <pubDate>Thu, 30 Nov 2023 08:08:08 +0800</pubDate>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq3/</guid>
-      <description>china mirror - EA:&#xA;v15.2 v16.1 class view &amp;ldquo;Model&amp;rdquo; 点击右键 &amp;ldquo;add view&amp;rdquo;:&#xA;Initial Content: Package Only name: import code 切换到 &amp;ldquo;Develop&amp;rdquo; 选项卡； 在&amp;quot;Source Code&amp;quot; -&amp;gt; Files:&#xA;Import Source Directory Package 所有的代码放入一个包内； 这样在导入代码的时候，会生成类图。 Generic Type 需要手动放置Associate 并设置 &amp;ldquo;Direction&amp;rdquo;:&#xA;Source -&amp;gt; Destination 折线 按住“CTRL” + 点击鼠标左键&#xA;GoF Alt + 5&#xA;enter: gof&#xA;Design &amp;gt; Diagram &amp;gt; Toolbox Creational Design Pattern 5 items&#xA;Abstract Factory Builder Factory Method Prototype Singleton Structural Patterns 7 items</description>
+      <description>china mirror - EA:&#xA;v16.1 class view &amp;ldquo;Model&amp;rdquo; 点击右键 &amp;ldquo;add view&amp;rdquo;:&#xA;Initial Content: Package Only name: import code 切换到 &amp;ldquo;Develop&amp;rdquo; 选项卡； 在&amp;quot;Source Code&amp;quot; -&amp;gt; Files:&#xA;Import Source Directory Package 所有的代码放入一个包内； 这样在导入代码的时候，会生成类图。 Generic Type 需要手动放置Associate 并设置 &amp;ldquo;Direction&amp;rdquo;:&#xA;Source -&amp;gt; Destination 折线 按住“CTRL” + 点击鼠标左键&#xA;GoF Alt + 5&#xA;enter: gof&#xA;Design &amp;gt; Diagram &amp;gt; Toolbox Creational Design Pattern 5 items&#xA;Abstract Factory Builder Factory Method Prototype Singleton Structural Patterns 7 items</description>
     </item>
     <item>
       <title>Windows的一些设置</title>
