@@ -6,8 +6,15 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 12 Dec 2023 08:08:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Dec 2023 08:08:08 +0800</lastBuildDate>
     <atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Visual Studio 的下载</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq6/</link>
+      <pubDate>Fri, 22 Dec 2023 08:08:08 +0800</pubDate>
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq6/</guid>
+      <description>exec name 在主要维护周期, 名字是: x_community 在次要维护周期, 名字是:&#xA;x_Professional target directory --layout TARGET(directory) components --add NAME(Component) language --lang en-US format Mainstream .\vs_community.exe --layout D:\win10soft\vs2019 ` --add Microsoft.VisualStudio.Component.CoreEditor ` ... --lang en-US Extended .\vs_Professional.exe --layout D:\win10soft\vs2017 ` --add Microsoft.VisualStudio.Component.CoreEditor ` ... --lang en-US 所有的行尾 + 空格 +&#xA;` 尾行除外。&#xA;lifecycle Visual Studio 2022 Mainstream End Date: Jan 12, 2027 Visual Studio 2019 Mainstream End Date: Apr 9, 2024 Visual Studio 2017 Mainstream End Date: Apr 12, 2022 components MFC/ATL MFC/ATL Visual Studio 2017 &amp;#34;Microsoft.</description>
+    </item>
     <item>
       <title>Linux environment in Windows</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq5/</link>
@@ -20,7 +27,7 @@
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq3/</link>
       <pubDate>Thu, 30 Nov 2023 08:08:08 +0800</pubDate>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq3/</guid>
-      <description>china mirror - EA:&#xA;v16.1 class view &amp;ldquo;Model&amp;rdquo; 点击右键 &amp;ldquo;add view&amp;rdquo;:&#xA;Initial Content: Package Only name: import code 切换到 &amp;ldquo;Develop&amp;rdquo; 选项卡； 在&amp;quot;Source Code&amp;quot; -&amp;gt; Files:&#xA;Import Source Directory Package 所有的代码放入一个包内； 这样在导入代码的时候，会生成类图。 Generic Type 需要手动放置Associate 并设置 &amp;ldquo;Direction&amp;rdquo;:&#xA;Source -&amp;gt; Destination 折线 按住“CTRL” + 点击鼠标左键&#xA;GoF Alt + 5&#xA;enter: gof&#xA;Design &amp;gt; Diagram &amp;gt; Toolbox Creational Design Pattern 5 items&#xA;Abstract Factory Builder Factory Method Prototype Singleton Structural Patterns 7 items</description>
+      <description>china mirror - EA:&#xA;v16.1 v15.2 class view &amp;ldquo;Model&amp;rdquo; 点击右键 &amp;ldquo;add view&amp;rdquo;:&#xA;Initial Content: Package Only name: import code 切换到 &amp;ldquo;Develop&amp;rdquo; 选项卡； 在&amp;quot;Source Code&amp;quot; -&amp;gt; Files:&#xA;Import Source Directory Package 所有的代码放入一个包内； 这样在导入代码的时候，会生成类图。 Generic Type 需要手动放置Associate 并设置 &amp;ldquo;Direction&amp;rdquo;:&#xA;Source -&amp;gt; Destination 折线 按住“CTRL” + 点击鼠标左键&#xA;issues sandboxie sandboxie v1.12.3 使用 v16.1时，无法关闭剩余进程&#xA;GoF Alt + 5&#xA;enter: gof&#xA;Design &amp;gt; Diagram &amp;gt; Toolbox Creational Design Pattern 5 items&#xA;Abstract Factory Builder Factory Method Prototype Singleton Structural Patterns 7 items</description>
     </item>
     <item>
       <title>Windows的一些设置</title>

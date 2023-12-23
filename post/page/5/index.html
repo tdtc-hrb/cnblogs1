@@ -164,6 +164,29 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-thousand-separator/">千位分隔符</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>1. 字符串替换 /** * 字符串替换函数 - js * expStr: 查找的字符串 * string: 整个字符串 * repStr: 替换的字符串 */ function replacStr(expStr, string, repStr) { let result = &#34;&#34;; let regex; if (parseInt(expStr) &gt; 0) // 数字 regex = new RegExp(expStr, &#34;g&#34;); else	// 非数字 regex = new RegExp(&#34;\\&#34; + expStr, &#34;g&#34;); result = string.replace(regex, repStr); return result; } 2. 千分符 例如，货币7867321.55，怎样使用js来分割他呢？
+0. 分离小数和整数 let index = strCny.indexOf(&#34;.&#34;); if ( index != 0) { strNum = strCny. <a class="read-more" href="/cnblogs/post/js-thousand-separator/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-11-18T02:18:39&#43;08:00">
+            18 Nov 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/js-print-tree/"> 使用ts/js打印tree</a></h2>
     </header>
     <section class="post-excerpt">
@@ -392,30 +415,6 @@ uint32_t sysclk_get_peripheral_hz() { /* CONFIG_SYSCLK_PRES is the register valu
         
         <time class="post-date" datetime="2021-02-28T17:08:08&#43;08:00">
             28 Feb 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/dev-service_registry-zk/">ZooKeeper Installation(Dev)</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Install ZooKeeper packages
-# sudo apt-get install openjdk-8-jre-headless # sudo apt-get install zookeeper zookeeperd If you need a cluster, configure the Conf file, otherwise ignore it.
-Configure ZooKeeper Common Configuration Edit the /etc/zookeeper/conf/zoo.cfg file to contain the following: server.1=nsdb1:2888:3888 server.2=nsdb2:2888:3888 server.3=nsdb3:2888:3888 autopurge.snapRetainCount=10 autopurge.purgeInterval =12 [Important] Important For production deployments it is recommended to configure the storage of snapshots in a different disk than the commit log, this is done by setting the parameters dataDir and dataLogDir in zoo. <a class="read-more" href="/cnblogs/post/dev-service_registry-zk/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T18:08:08&#43;08:00">
-            16 May 2020
         </time>
     </footer>
 </article>

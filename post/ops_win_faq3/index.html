@@ -92,7 +92,7 @@
     },
     "headline": "Enterprise Architect",
     "name": "Enterprise Architect",
-    "wordCount":  332 ,
+    "wordCount":  375 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
@@ -180,6 +180,7 @@
       <p><a href="http://tool.uml.com.cn/ToolsEA/download.asp">china mirror - EA</a>:</p>
 <ul>
 <li><a href="http://tool.uml.com.cn/ToolsEA/ea16.1/easetup_x86.msi">v16.1</a></li>
+<li><a href="http://tool.uml.com.cn/ToolsEA/easetup15.2.msi">v15.2</a></li>
 </ul>
 <h2 id="class-view">class view</h2>
 <p>&ldquo;Model&rdquo; 点击右键 &ldquo;add view&rdquo;:</p>
@@ -198,6 +199,15 @@
 <pre tabindex="0"><code>Source -&gt; Destination
 </code></pre><h3 id="折线">折线</h3>
 <p>按住“CTRL” + 点击鼠标左键</p>
+<h2 id="issues">issues</h2>
+<ul>
+<li>sandboxie</li>
+</ul>
+<h3 id="sandboxie">sandboxie</h3>
+<blockquote>
+<p>v1.12.3
+使用 v16.1时，无法关闭剩余进程</p>
+</blockquote>
 <h1 id="gof">GoF</h1>
 <blockquote>
 <p>Alt + 5</p>
@@ -245,7 +255,8 @@
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-chain_of_respon.png" alt="dp chain-of-respon"></li>
 <li><a href="https://refactoring.guru/design-patterns/command">Command</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-command.png" alt="dp command"></li>
-<li><a href="https://refactoring.guru/design-patterns/mediator">Mediator</a></li>
+<li><a href="https://sourcemaking.com/design_patterns/mediator">Mediator</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-intermediary.png" alt="dp intermediary"></li>
 <li><a href="https://refactoring.guru/design-patterns/observer">Observer</a></li>
 <li><a href="https://refactoring.guru/design-patterns/state">State</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-state.png" alt="dp state"></li>
@@ -287,6 +298,7 @@ letting you swap these algorithms within a single context class.</p>
 </li>
 </ul>
 <h3 id="chain-of-responsibility">Chain of Responsibility</h3>
+<p>自定义的 Command</p>
 <ul>
 <li>Handlers in Chain of Responsibility can be implemented as Commands.</li>
 </ul>
@@ -295,7 +307,14 @@ letting you swap these algorithms within a single context class.</p>
 <li>However, there’s another approach, where the request itself is a Command object.</li>
 </ul>
 <pre tabindex="0"><code>In this case, you can execute the same operation in a series of different contexts linked into a chain.
-</code></pre><h1 id="ref">Ref</h1>
+</code></pre><h3 id="mediator-design-pattern">Mediator design pattern</h3>
+<ul>
+<li>Create an &ldquo;intermediary&rdquo; that decouples &ldquo;senders&rdquo; from &ldquo;receivers&rdquo;</li>
+<li>Producers are coupled only to the Mediator</li>
+<li>Consumers are coupled only to the Mediator</li>
+<li>The Mediator arbitrates the storing and retrieving of messages</li>
+</ul>
+<h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://sparxsystems.com/enterprise_architect_user_guide/14.0/modeling_tools/objecttoolbar.html">Diagram Toolbox</a></li>
 </ul>
