@@ -92,8 +92,8 @@
     },
     "headline": "Behavioral Patterns",
     "name": "Behavioral Patterns",
-    "wordCount":  333 ,
-    "timeRequired": "PT2M",
+    "wordCount":  544 ,
+    "timeRequired": "PT3M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
@@ -177,8 +177,21 @@
     </header>
 
     <section class="post-content">
-      <p>10 items:</p>
-<ul>
+      <ul>
+<li>Usually <br>
+7 items</li>
+<li>Auxiliary <br>
+3 items</li>
+</ul>
+<h2 id="usually">Usually</h2>
+<p>one after another:</p>
+<pre tabindex="0"><code>Template Method =&gt; strategies
+strategies =&gt; State
+strategies =&gt; Command
+Command =&gt; Chain of Responsibility
+Chain of Responsibility =&gt; Mediator
+Chain of Responsibility =&gt; Observer
+</code></pre><ul>
 <li><a href="https://refactoring.guru/design-patterns/chain-of-responsibility">Chain of Responsibility</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-chain_of_respon.png" alt="dp chain-of-respon"></li>
 <li><a href="https://refactoring.guru/design-patterns/command">Command</a>
@@ -193,18 +206,8 @@
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/strategies.png" alt="strategies"></li>
 <li><a href="https://refactoring.guru/design-patterns/template-method">Template Method</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/template-method.png" alt="template method"></li>
-<li><a href="https://refactoring.guru/design-patterns/iterator">Iterator</a></li>
-<li><a href="https://refactoring.guru/design-patterns/memento">Memento</a></li>
-<li><a href="https://refactoring.guru/design-patterns/visitor">Visitor</a></li>
 </ul>
-<p>one after another:</p>
-<pre tabindex="0"><code>Template Method =&gt; strategies
-strategies =&gt; State
-strategies =&gt; Command
-Command =&gt; Chain of Responsibility
-Chain of Responsibility =&gt; Mediator
-Chain of Responsibility =&gt; Observer
-</code></pre><h3 id="strategy">Strategy</h3>
+<h3 id="strategy">Strategy</h3>
 <p>使用 <code>interface</code> 作为 参数 的 &ldquo;Template Method&rdquo;</p>
 <h3 id="state">State</h3>
 <p>The implementation of the State pattern builds on the Strategy pattern. <br>
@@ -252,6 +255,43 @@ letting you swap these algorithms within a single context class.</p>
 <li>Observers &ldquo;pull&rdquo; the information they need from the Subject</li>
 <li>Client configures the number and type of Observers</li>
 </ul>
+<h2 id="auxiliary">Auxiliary</h2>
+<ul>
+<li><a href="https://refactoring.guru/design-patterns/iterator">Iterator</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-iterator.png" alt="dp iterator"></li>
+<li><a href="https://refactoring.guru/design-patterns/memento">Memento</a></li>
+<li><a href="https://refactoring.guru/design-patterns/visitor">Visitor</a></li>
+</ul>
+<h3 id="iterator">Iterator</h3>
+<ol>
+<li>
+<p>Declare the iterator interface.
+At the very least, it must have a method for fetching the next element from a collection.
+But for the sake of convenience you can add a couple of other methods,
+such as fetching the previous element, tracking the current position,
+and checking the end of the iteration.</p>
+</li>
+<li>
+<p>Declare the collection interface and describe a method for fetching iterators.
+The return type should be equal to that of the iterator interface.
+You may declare similar methods if you plan to have several distinct groups of iterators.</p>
+</li>
+<li>
+<p>Implement concrete iterator classes for the collections that you want to be traversable with iterators.
+An iterator object must be linked with a single collection instance.
+Usually, this link is established via the iterator’s constructor.</p>
+</li>
+<li>
+<p>Implement the collection interface in your collection classes.
+The main idea is to provide the client with a shortcut for creating iterators,
+tailored for a particular collection class.
+The collection object must pass itself to the iterator’s constructor to establish a link between them.</p>
+</li>
+<li>
+<p>Go over the client code to replace all of the collection traversal code with the use of iterators.
+The client fetches a new iterator object each time it needs to iterate over the collection elements.</p>
+</li>
+</ol>
 
     </section>
 
