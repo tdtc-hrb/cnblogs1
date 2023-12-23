@@ -164,6 +164,29 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/css-bulma-tabs/">tabs 实现</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>html Note: The header and body are wrapped with div!
+&lt;div id=&#34;tabs-with-content&#34;&gt;&lt;/div&gt; Header &lt;div class=&#34;tabs is-centered&#34;&gt; &lt;ul&gt; &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; Body &lt;div class=&#34;tabs is-centered&#34;&gt; &lt;ul&gt; &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div&gt; &lt;section class=&#34;tab-content&#34;&gt; &lt;table class=&#34;table&#34;&gt; &lt;tbody&gt; &lt;td&gt; &lt;%= image_tag &#34;#{@image.name}&#34; %&gt; &lt;/td&gt; &lt;td&gt; &lt;%= @product.description %&gt; &lt;/td&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;/section&gt; &lt;section class=&#34;tab-content&#34;&gt; &lt;%= @parameter.ipxx %&gt; &lt;/section&gt; &lt;/div&gt; javascript let tabsWithContent = (function () { let tabs = document. <a class="read-more" href="/cnblogs/post/css-bulma-tabs/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-07-27T00:26:39&#43;08:00">
+            27 Jul 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/install-consul_ubuntu/">(dev mode) install CONSUL on ubuntu</a></h2>
     </header>
     <section class="post-excerpt">
@@ -390,35 +413,6 @@ $ docker --version Docker compose 1. down sudo curl -L &#34;https://github. <a c
         
         <time class="post-date" datetime="2021-11-20T10:48:08&#43;08:00">
             20 Nov 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/sqlite.net.core/">SQLite在.net core的demo</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>IDE: VS2022 语言: C#
-简介： 本示例使用SQLite的密码、外键功能。
-一、工程设置 1. NuGet Tools -&gt; NuGet Package Manager -&gt; Package Manager Console Install-Package sqlite-net-pcl -Version 1.8.116 Install-Package sqlite-net-sqlcipher -Version 1.8.116 完整的窗体： 2. 控件 拖拽4个TextBox、4个Button、1个DataGridView
-二、功能实现 使用Synchronous API来实现连接、factoryCar表的查询、插入等操作。
-0. Entity class 注意：主键和外键
-建立两个实体类：FactoryCar和MarqueCar
-1. 连接 asyncConn = new SQLite.SQLiteAsyncConnection(options); 其中，options是SQLiteConnectionString实例化的字符串。
-var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, preKeyAction: db =&gt; db.Execute(&#34;PRAGMA cipher_default_use_hmac = OFF;&#34;), postKeyAction: db =&gt; db.Execute(&#34;PRAGMA kdf_iter = 128000;&#34;)); 2. 查询 异步查询 var factoryCars = asyncConn. <a class="read-more" href="/cnblogs/post/sqlite.net.core/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-19T19:18:08&#43;08:00">
-            19 Nov 2021
         </time>
     </footer>
 </article>

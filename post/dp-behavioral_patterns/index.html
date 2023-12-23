@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="referrer" content="no-referrer"/>
+    
+
+
+
+<meta name="twitter:title" content="Behavioral Patterns"/>
+<meta name="twitter:description" content="design-patterns, gof"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="Behavioral Patterns &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/dp-behavioral_patterns/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="design-patterns, gof" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2023-12-23T08:08:08&#43;08:00" />
+
+    
+    
+
+    <title>Behavioral Patterns &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="design-patterns, gof" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.121.1">
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/dp-behavioral_patterns/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "Behavioral Patterns",
+    "name": "Behavioral Patterns",
+    "wordCount":  333 ,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/dp-behavioral_patterns/",
+    "datePublished": "2023-12-23T08:08Z",
+    "dateModified": "2023-12-23T08:08Z",
+    
+    
+    "description": "design-patterns, gof",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/dp-behavioral_patterns/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Behavioral Patterns</h1>
+        <small>design-patterns, gof</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2023-12-23T08:08:08&#43;08:00">
+            Dec 23, 2023
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>10 items:</p>
+<ul>
+<li><a href="https://refactoring.guru/design-patterns/chain-of-responsibility">Chain of Responsibility</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-chain_of_respon.png" alt="dp chain-of-respon"></li>
+<li><a href="https://refactoring.guru/design-patterns/command">Command</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-command.png" alt="dp command"></li>
+<li><a href="https://sourcemaking.com/design_patterns/mediator">Mediator</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-intermediary.png" alt="dp intermediary"></li>
+<li><a href="https://sourcemaking.com/design_patterns/observer">Observer</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-observer.png" alt="dp observer"></li>
+<li><a href="https://sourcemaking.com/design_patterns/state">State</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-state.png" alt="dp state"></li>
+<li><a href="https://refactoring.guru/design-patterns/strategy">Strategy</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/strategies.png" alt="strategies"></li>
+<li><a href="https://refactoring.guru/design-patterns/template-method">Template Method</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/template-method.png" alt="template method"></li>
+<li><a href="https://refactoring.guru/design-patterns/iterator">Iterator</a></li>
+<li><a href="https://refactoring.guru/design-patterns/memento">Memento</a></li>
+<li><a href="https://refactoring.guru/design-patterns/visitor">Visitor</a></li>
+</ul>
+<p>one after another:</p>
+<pre tabindex="0"><code>Template Method =&gt; strategies
+strategies =&gt; State
+strategies =&gt; Command
+Command =&gt; Chain of Responsibility
+Chain of Responsibility =&gt; Mediator
+Chain of Responsibility =&gt; Observer
+</code></pre><h3 id="strategy">Strategy</h3>
+<p>使用 <code>interface</code> 作为 参数 的 &ldquo;Template Method&rdquo;</p>
+<h3 id="state">State</h3>
+<p>The implementation of the State pattern builds on the Strategy pattern. <br>
+The difference between State and Strategy is in the intent. <br>
+With Strategy, the choice of algorithm is fairly stable. <br>
+With State, a change in the state of the &ldquo;context&rdquo; object causes it to select from its &ldquo;palette&rdquo; of Strategy objects.</p>
+<h3 id="command">Command</h3>
+<p>Command 是 分解 的 Strategy:</p>
+<ul>
+<li>
+<p>You can use Command to convert any operation into an object.<br>
+The operation’s parameters become fields of that object. <br>
+The conversion lets you defer execution of the operation,
+queue it, store the history of commands, send commands to remote services, etc.</p>
+</li>
+<li>
+<p>On the other hand, Strategy usually describes different ways of doing the same thing,
+letting you swap these algorithms within a single context class.</p>
+</li>
+</ul>
+<h3 id="chain-of-responsibility">Chain of Responsibility</h3>
+<p>自定义的 Command</p>
+<ul>
+<li>Handlers in Chain of Responsibility can be implemented as Commands.</li>
+</ul>
+<pre tabindex="0"><code>In this case, you can execute a lot of different operations over the same context object, represented by a request.
+</code></pre><ul>
+<li>However, there’s another approach, where the request itself is a Command object.</li>
+</ul>
+<pre tabindex="0"><code>In this case, you can execute the same operation in a series of different contexts linked into a chain.
+</code></pre><h3 id="mediator-design-pattern">Mediator design pattern</h3>
+<ul>
+<li>Create an &ldquo;intermediary&rdquo; that decouples &ldquo;senders&rdquo; from &ldquo;receivers&rdquo;</li>
+<li>Producers are coupled only to the Mediator</li>
+<li>Consumers are coupled only to the Mediator</li>
+<li>The Mediator arbitrates the storing and retrieving of messages</li>
+</ul>
+<h3 id="observer-design-pattern">Observer design pattern</h3>
+<ul>
+<li>Model the &ldquo;independent&rdquo; functionality with a &ldquo;subject&rdquo; abstraction</li>
+<li>Model the &ldquo;dependent&rdquo; functionality with &ldquo;observer&rdquo; hierarchy</li>
+<li>The Subject is coupled only to the Observer base class</li>
+<li>Observers register themselves with the Subject</li>
+<li>The Subject broadcasts events to all registered Observers</li>
+<li>Observers &ldquo;pull&rdquo; the information they need from the Subject</li>
+<li>Client configures the number and type of Observers</li>
+</ul>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Behavioral%20Patterns&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-behavioral_patterns%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-behavioral_patterns%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-behavioral_patterns%2f&amp;description=Behavioral%20Patterns"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-behavioral_patterns%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/ops_win_faq6/">
+          <section class="post">
+              <h2>Visual Studio 的下载</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+

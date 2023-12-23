@@ -6,8 +6,15 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 22 Dec 2023 08:08:08 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Dec 2023 08:08:08 +0800</lastBuildDate>
     <atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Behavioral Patterns</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/dp-behavioral_patterns/</link>
+      <pubDate>Sat, 23 Dec 2023 08:08:08 +0800</pubDate>
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/dp-behavioral_patterns/</guid>
+      <description>10 items:&#xA;Chain of Responsibility Command Mediator Observer State Strategy Template Method Iterator Memento Visitor one after another:&#xA;Template Method =&amp;gt; strategies&#xD;strategies =&amp;gt; State&#xD;strategies =&amp;gt; Command&#xD;Command =&amp;gt; Chain of Responsibility&#xD;Chain of Responsibility =&amp;gt; Mediator&#xD;Chain of Responsibility =&amp;gt; Observer Strategy 使用 interface 作为 参数 的 &amp;ldquo;Template Method&amp;rdquo;&#xA;State The implementation of the State pattern builds on the Strategy pattern. The difference between State and Strategy is in the intent.</description>
+    </item>
     <item>
       <title>Visual Studio 的下载</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq6/</link>
