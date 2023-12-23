@@ -92,7 +92,7 @@
     },
     "headline": "Enterprise Architect",
     "name": "Enterprise Architect",
-    "wordCount":  375 ,
+    "wordCount":  423 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
@@ -258,7 +258,7 @@
 <li><a href="https://sourcemaking.com/design_patterns/mediator">Mediator</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-intermediary.png" alt="dp intermediary"></li>
 <li><a href="https://refactoring.guru/design-patterns/observer">Observer</a></li>
-<li><a href="https://refactoring.guru/design-patterns/state">State</a>
+<li><a href="https://sourcemaking.com/design_patterns/state">State</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-state.png" alt="dp state"></li>
 <li><a href="https://refactoring.guru/design-patterns/strategy">Strategy</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/strategies.png" alt="strategies"></li>
@@ -275,15 +275,11 @@ Chain of Responsibility =&gt; Observer
 </code></pre><h3 id="strategy">Strategy</h3>
 <p>使用 <code>interface</code> 作为 参数 的 &ldquo;Template Method&rdquo;</p>
 <h3 id="state">State</h3>
-<p>耦合 高的 strategy:</p>
-<pre tabindex="0"><code>State can be considered as an extension of Strategy.
-</code></pre><p>Both patterns are based on composition:</p>
-<pre tabindex="0"><code>they change the behavior of the context by delegating some work to helper objects.
-</code></pre><p>differentiation:</p>
-<pre tabindex="0"><code>Strategy makes these objects completely independent and unaware of each other. 
-However, State doesn’t restrict dependencies between concrete states, 
-letting them alter the state of the context at will.
-</code></pre><h3 id="command">Command</h3>
+<p>The implementation of the State pattern builds on the Strategy pattern. <br>
+The difference between State and Strategy is in the intent. <br>
+With Strategy, the choice of algorithm is fairly stable. <br>
+With State, a change in the state of the &ldquo;context&rdquo; object causes it to select from its &ldquo;palette&rdquo; of Strategy objects.</p>
+<h3 id="command">Command</h3>
 <p>Command 是 分解 的 Strategy:</p>
 <ul>
 <li>
@@ -313,6 +309,16 @@ letting you swap these algorithms within a single context class.</p>
 <li>Producers are coupled only to the Mediator</li>
 <li>Consumers are coupled only to the Mediator</li>
 <li>The Mediator arbitrates the storing and retrieving of messages</li>
+</ul>
+<h3 id="observer-design-pattern">Observer design pattern</h3>
+<ul>
+<li>Model the &ldquo;independent&rdquo; functionality with a &ldquo;subject&rdquo; abstraction</li>
+<li>Model the &ldquo;dependent&rdquo; functionality with &ldquo;observer&rdquo; hierarchy</li>
+<li>The Subject is coupled only to the Observer base class</li>
+<li>Observers register themselves with the Subject</li>
+<li>The Subject broadcasts events to all registered Observers</li>
+<li>Observers &ldquo;pull&rdquo; the information they need from the Subject</li>
+<li>Client configures the number and type of Observers</li>
 </ul>
 <h1 id="ref">Ref</h1>
 <ul>
