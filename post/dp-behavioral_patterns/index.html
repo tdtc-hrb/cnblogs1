@@ -92,8 +92,8 @@
     },
     "headline": "Behavioral Patterns",
     "name": "Behavioral Patterns",
-    "wordCount":  544 ,
-    "timeRequired": "PT3M",
+    "wordCount":  748 ,
+    "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
@@ -259,7 +259,8 @@ letting you swap these algorithms within a single context class.</p>
 <ul>
 <li><a href="https://refactoring.guru/design-patterns/iterator">Iterator</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-iterator.png" alt="dp iterator"></li>
-<li><a href="https://refactoring.guru/design-patterns/memento">Memento</a></li>
+<li><a href="https://sourcemaking.com/design_patterns/memento">Memento</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-snapshot.png" alt="dp snapshot"></li>
 <li><a href="https://refactoring.guru/design-patterns/visitor">Visitor</a></li>
 </ul>
 <h3 id="iterator">Iterator</h3>
@@ -292,7 +293,81 @@ The collection object must pass itself to the iterator’s constructor to establ
 The client fetches a new iterator object each time it needs to iterate over the collection elements.</p>
 </li>
 </ol>
+<h3 id="memento">Memento</h3>
+<ul>
+<li>Without violating encapsulation,
+capture and externalize an object&rsquo;s internal state so that the object can be returned to this state later.</li>
+<li>A magic cookie that encapsulates a &ldquo;check point&rdquo; capability.</li>
+<li>Promote undo or rollback to full object status.</li>
+</ul>
+<h4 id="example">example</h4>
+<ul>
+<li>Memento.java</li>
+</ul>
+<pre tabindex="0"><code>public class Memento {
+    private String state;
 
+    public Memento(String state) {
+        this.state = state;
+    }
+
+    public String getState() {
+        return state;
+    }
+}
+</code></pre><ul>
+<li>Originator.java</li>
+</ul>
+<pre tabindex="0"><code>	private String state;
+	/* lots of memory consumptive private data that is not necessary to define the
+	 * state and should thus not be saved. Hence the small memento object. */
+	
+	public void setState(String state) {
+	    System.out.println(&#34;Originator: Setting state to &#34; + state);
+	    this.state = state;
+	}
+	
+	public Memento save() {
+	    System.out.println(&#34;Originator: Saving to Memento.&#34;);
+	    return new Memento(state);
+	}
+	
+	public void restore(Memento m) {
+	    state = m.getState();
+	    System.out.println(&#34;Originator: State after restoring from Memento: &#34; + state);
+	}
+</code></pre><ul>
+<li>Caretaker.java</li>
+</ul>
+<pre tabindex="0"><code>	private ArrayList&lt;Memento&gt; mementos = new ArrayList&lt;&gt;();
+
+    public void addMemento(Memento m) {
+        mementos.add(m);
+    }
+
+    public Memento getMemento() {
+        return mementos.get(1);
+    }
+</code></pre><ul>
+<li>MementoDemo.java</li>
+</ul>
+<pre tabindex="0"><code>public class MementoDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Caretaker caretaker = new Caretaker();
+        Originator originator = new Originator();
+        originator.setState(&#34;State1&#34;);
+        originator.setState(&#34;State2&#34;);
+        caretaker.addMemento( originator.save() );
+        originator.setState(&#34;State3&#34;);
+        caretaker.addMemento( originator.save() );
+        originator.setState(&#34;State4&#34;);
+        originator.restore( caretaker.getMemento() );
+	}
+
+}
+</code></pre>
     </section>
 
 
