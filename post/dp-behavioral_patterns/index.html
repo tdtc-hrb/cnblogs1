@@ -259,10 +259,10 @@ letting you swap these algorithms within a single context class.</p>
 <ul>
 <li><a href="https://refactoring.guru/design-patterns/iterator">Iterator</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-iterator.png" alt="dp iterator"></li>
-<li><a href="https://sourcemaking.com/design_patterns/memento">Memento</a>
-<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-snapshot.png" alt="dp snapshot"></li>
 <li><a href="https://refactoring.guru/design-patterns/visitor">Visitor</a>
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-visitor.png" alt="dp visitor"></li>
+<li><a href="https://sourcemaking.com/design_patterns/memento">Memento</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-snapshot.png" alt="dp snapshot"></li>
 </ul>
 <h3 id="iterator">Iterator</h3>
 <ol>
@@ -294,6 +294,9 @@ The collection object must pass itself to the iterator’s constructor to establ
 The client fetches a new iterator object each time it needs to iterate over the collection elements.</p>
 </li>
 </ol>
+<h3 id="visitor">Visitor</h3>
+<p>You can use Visitor along with Iterator to traverse a complex data structure
+and execute some operation over its elements, even if they all have different classes.</p>
 <h3 id="memento">Memento</h3>
 <ul>
 <li>Without violating encapsulation,
@@ -368,10 +371,7 @@ capture and externalize an object&rsquo;s internal state so that the object can 
 	}
 
 }
-</code></pre><h3 id="visitor">Visitor</h3>
-<p>You can use Visitor along with Iterator to traverse a complex data structure
-and execute some operation over its elements, even if they all have different classes.</p>
-
+</code></pre>
     </section>
 
 
