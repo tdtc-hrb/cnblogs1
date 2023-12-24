@@ -92,7 +92,7 @@
     },
     "headline": "Enterprise Architect",
     "name": "Enterprise Architect",
-    "wordCount":  87 ,
+    "wordCount":  164 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
@@ -217,28 +217,26 @@
 </blockquote>
 <pre tabindex="0"><code>Design &gt; Diagram &gt; Toolbox
 </code></pre><h2 id="creational-design-pattern">Creational Design Pattern</h2>
-<blockquote>
-<p>5 items</p>
-</blockquote>
 <ul>
-<li><a href="https://refactoring.guru/design-patterns/abstract-factory">Abstract Factory</a></li>
-<li><a href="https://refactoring.guru/design-patterns/builder">Builder</a></li>
-<li><a href="https://refactoring.guru/design-patterns/factory-method">Factory Method</a></li>
-<li><a href="https://refactoring.guru/design-patterns/prototype">Prototype</a></li>
-<li><a href="https://refactoring.guru/design-patterns/singleton">Singleton</a></li>
+<li><a href="https://sourcemaking.com/design_patterns/prototype">Prototype</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-prototype.png" alt="dp prototype"></li>
+<li><a href="https://sourcemaking.com/design_patterns/abstract_factory">Abstract Factory</a>
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-abstr_factory.png" alt="dp abstract factory"></li>
 </ul>
-<h2 id="structural-patterns">Structural Patterns</h2>
-<blockquote>
-<p>7 items</p>
-</blockquote>
+<h3 id="prototype">Prototype</h3>
 <ul>
-<li><a href="https://refactoring.guru/design-patterns/adapter">Adapter</a></li>
-<li><a href="https://refactoring.guru/design-patterns/bridge">Bridge</a></li>
-<li><a href="https://refactoring.guru/design-patterns/composite">Composite</a></li>
-<li><a href="https://refactoring.guru/design-patterns/decorator">Decorator</a></li>
-<li><a href="https://refactoring.guru/design-patterns/facade">Facade</a></li>
-<li><a href="https://refactoring.guru/design-patterns/flyweight">Flyweight</a></li>
-<li><a href="https://refactoring.guru/design-patterns/proxy">Proxy</a></li>
+<li>Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.</li>
+<li>Co-opt one instance of a class for use as a breeder of all future instances.</li>
+<li>The <code>new</code> operator considered harmful.</li>
+</ul>
+<h3 id="abstract-factory">Abstract Factory</h3>
+<p>Abstract Factory classes are often implemented with Factory Methods,
+but they can also be implemented using Prototype. <br>
+Abstract Factory might store a set of Prototypes from which to clone and return product objects.</p>
+<ul>
+<li>Factory Method: creation through inheritance.</li>
+<li>Prototype: creation through delegation.</li>
+<li>Virtual constructor: defer choice of object to create until run-time.</li>
 </ul>
 <h1 id="ref">Ref</h1>
 <ul>
