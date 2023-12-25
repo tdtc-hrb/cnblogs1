@@ -6,12 +6,12 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 25 Dec 2023 08:08:08 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Dec 2023 18:08:08 +0800</lastBuildDate>
     <atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Structural Patterns</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/dp-structural_patterns/</link>
-      <pubDate>Mon, 25 Dec 2023 08:08:08 +0800</pubDate>
+      <pubDate>Mon, 25 Dec 2023 18:08:08 +0800</pubDate>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/dp-structural_patterns/</guid>
       <description>Wrapper Sharing Wrapper one after another:&#xA;composite =&amp;gt; Decorator =&amp;gt; Adapter&#xD;Decorator =&amp;gt; Proxy&#xD;Proxy =&amp;gt; Facade Decorator Adapter Proxy Facade Decorator Create a &amp;ldquo;lowest common denominator&amp;rdquo; that makes classes interchangeable Create a second level base class for optional functionality &amp;ldquo;Core&amp;rdquo; class and &amp;ldquo;Decorator&amp;rdquo; class declare an &amp;ldquo;isa&amp;rdquo; relationship Decorator class &amp;ldquo;has a&amp;rdquo; instance of the &amp;ldquo;lowest common denominator&amp;rdquo; Decorator class delegates to the &amp;ldquo;has a&amp;rdquo; object Create a Decorator derived class for each optional embellishment Decorator derived classes delegate to base class AND add extra stuff Client has the responsibility to compose desired configurations Adapter Identify the desired interface.</description>
     </item>
