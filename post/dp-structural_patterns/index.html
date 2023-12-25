@@ -92,7 +92,7 @@
     },
     "headline": "Structural Patterns",
     "name": "Structural Patterns",
-    "wordCount":  811 ,
+    "wordCount":  817 ,
     "timeRequired": "PT4M",
     "inLanguage": {
       "@type": "Language",
@@ -246,14 +246,16 @@ Proxy =&gt; Facade
 <li>Create an implementation/body abstraction</li>
 <li>Derive the separate implementations from the common abstraction</li>
 <li>Create an interface/handle class that &ldquo;has a&rdquo; and delegates to the impl</li>
-<li>Embellish the interface class with derived classes if desired</li>
+<li>Embellish the interface class with derived classes if desired
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-bridge1.png" alt="dp bridge-handle"></li>
 </ol>
 <h4 id="wrapperhttpssourcemakingcomdesign_patternsbridgejava3"><a href="https://sourcemaking.com/design_patterns/bridge/java/3">wrapper</a></h4>
 <ol>
 <li>Create an implementation/body base class</li>
 <li>Derive the separate implementations from the common abstraction</li>
 <li>Create an interface/wrapper class that &ldquo;has a&rdquo; and delegates to the impl</li>
-<li>Embellish the interface class with derived classes if desired</li>
+<li>Embellish the interface class with derived classes if desired
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-bridge2.png" alt="dp bridge-wrapper"></li>
 </ol>
 <h3 id="flyweight">Flyweight</h3>
 <ul>
@@ -267,13 +269,15 @@ Facade shows how to make a single object represent an entire subsystem.</li>
 <p>Discussion. Trying to use objects at very low levels of granularity is nice, but the overhead may be prohibitive.
 Flyweight suggests removing the non-shareable state from the class, and having the client supply it when methods are called.
 This places more responsibility on the client, but, considerably fewer instances of the Flyweight class are now created.
-Sharing of these instances is facilitated by introducing a Factory class that maintains a &ldquo;cache&rdquo; of existing Flyweights.</p>
+Sharing of these instances is facilitated by introducing a Factory class that maintains a &ldquo;cache&rdquo; of existing Flyweights.
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight1.png" alt="dp flyweight-cache"></p>
 <h4 id="factoryhttpssourcemakingcomdesign_patternsflyweightjava2"><a href="https://sourcemaking.com/design_patterns/flyweight/java/2">Factory</a></h4>
 <ol>
 <li>Identify shareable state (intrinsic) and non-shareable state (extrinsic)</li>
 <li>Create a Factory that can return an existing object or a new object</li>
 <li>The client must use the Factory instead of &ldquo;new&rdquo; to request objects</li>
-<li>The client (or a third party) must provide/compute the extrinsic state</li>
+<li>The client (or a third party) must provide/compute the extrinsic state
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight2.png" alt="dp flyweight-factory"></li>
 </ol>
 <h4 id="wrapshttpssourcemakingcomdesign_patternsflyweightjava3"><a href="https://sourcemaking.com/design_patterns/flyweight/java/3">wraps</a></h4>
 <p>Discussion. Creating a thread for each ColorBox is a much more straight- forward approach,
@@ -292,14 +296,21 @@ and graciously returns to the &ldquo;asleep&rdquo; state.</p>
 <p>&ldquo;You can typically make your threaded applications run FASTER by inserting calls to sleep() (with reasonably long durations).&rdquo;
 This definitely contributes to the perception that Threads are a &ldquo;black art&rdquo;.
 Not enough calls: monopolization of the CPU. Not enough duration: time expiration interrupt events
-interrupt the running thread before it can finish useful work.</p>
+interrupt the running thread before it can finish useful work.
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight3.png" alt="dp flyweight-wraps"></p>
 <h4 id="shared-handlerthreads-in-a-threadpoolhttpssourcemakingcomdesign_patternsflyweightjava4"><a href="https://sourcemaking.com/design_patterns/flyweight/java/4">shared HandlerThreads in a ThreadPool</a></h4>
 <p>The ColorBox class has now become a Flyweight: the color changing and painting capability remains &ldquo;intrinsic&rdquo;,
 and the threaded behavior has been made &ldquo;extrinsic&rdquo;.</p>
 <p>The ThreadPool class plays the role of the Factory. As ColorBox objects are created,
 they register themselves with the ThreadPool object. The latter launches 8 &ldquo;handler&rdquo; threads.
 When each thread is swapped into the CPU, it selects a random Flyweight from the ThreadPool&rsquo;s cache,
-and asks the object to changeColor().</p>
+and asks the object to changeColor().
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight4.png" alt="dp flyweight-pool"></p>
+<h1 id="ref">Ref</h1>
+<ul>
+<li><a href="https://sourcemaking.com/design_patterns/structural_patterns">Structural patterns</a></li>
+<li><a href="https://refactoring.guru/design-patterns/structural-patterns">Structural Design Patterns</a></li>
+</ul>
 
     </section>
 
