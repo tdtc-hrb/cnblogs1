@@ -20,7 +20,7 @@
 
   	<meta property="og:title" content="Structural Patterns &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
   	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
-  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/dp-structural_patterns/" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/dp-structural-wrapper/" />
 
     
         
@@ -61,7 +61,7 @@
     
     <meta name="generator" content="Hugo 0.121.1">
 
-    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/dp-structural_patterns/" />
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/dp-structural-wrapper/" />
 
     
       
@@ -92,13 +92,13 @@
     },
     "headline": "Structural Patterns",
     "name": "Structural Patterns",
-    "wordCount":  817 ,
-    "timeRequired": "PT4M",
+    "wordCount":  222 ,
+    "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
-    "url": "https://tdtc-hrb.github.io/cnblogs/post/dp-structural_patterns/",
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/dp-structural-wrapper/",
     "datePublished": "2023-12-25T18:08Z",
     "dateModified": "2023-12-25T18:08Z",
     
@@ -106,7 +106,7 @@
     "description": "design-patterns, gof",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://tdtc-hrb.github.io/cnblogs/post/dp-structural_patterns/"
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/dp-structural-wrapper/"
     }
 }
     </script>
@@ -177,12 +177,7 @@
     </header>
 
     <section class="post-content">
-      <ul>
-<li>Wrapper</li>
-<li>Sharing</li>
-</ul>
-<h2 id="wrapper">Wrapper</h2>
-<p>one after another:</p>
+      <p>one after another:</p>
 <pre tabindex="0"><code>composite =&gt; Decorator =&gt; Adapter
 Decorator =&gt; Proxy
 Proxy =&gt; Facade
@@ -230,87 +225,6 @@ Proxy =&gt; Facade
 <li>The client uses (is coupled to) the Facade</li>
 <li>The facade/wrapper &ldquo;maps&rdquo; to the APIs of the subsystems</li>
 </ol>
-<h2 id="sharing">Sharing</h2>
-<ul>
-<li><a href="https://sourcemaking.com/design_patterns/bridge">Bridge</a></li>
-<li><a href="https://sourcemaking.com/design_patterns/flyweight">Flyweight</a></li>
-</ul>
-<h3 id="bridge">Bridge</h3>
-<ul>
-<li>Decouple an abstraction from its implementation so that the two can vary independently.</li>
-<li>Publish interface in an inheritance hierarchy, and bury implementation in its own inheritance hierarchy.</li>
-<li>Beyond encapsulation, to insulation</li>
-</ul>
-<h4 id="handlehttpssourcemakingcomdesign_patternsbridgejava2"><a href="https://sourcemaking.com/design_patterns/bridge/java/2">handle</a></h4>
-<ol>
-<li>Create an implementation/body abstraction</li>
-<li>Derive the separate implementations from the common abstraction</li>
-<li>Create an interface/handle class that &ldquo;has a&rdquo; and delegates to the impl</li>
-<li>Embellish the interface class with derived classes if desired
-<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-bridge1.png" alt="dp bridge-handle"></li>
-</ol>
-<h4 id="wrapperhttpssourcemakingcomdesign_patternsbridgejava3"><a href="https://sourcemaking.com/design_patterns/bridge/java/3">wrapper</a></h4>
-<ol>
-<li>Create an implementation/body base class</li>
-<li>Derive the separate implementations from the common abstraction</li>
-<li>Create an interface/wrapper class that &ldquo;has a&rdquo; and delegates to the impl</li>
-<li>Embellish the interface class with derived classes if desired
-<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-bridge2.png" alt="dp bridge-wrapper"></li>
-</ol>
-<h3 id="flyweight">Flyweight</h3>
-<ul>
-<li>Whereas Flyweight shows how to make lots of little objects,
-Facade shows how to make a single object represent an entire subsystem.</li>
-<li>Flyweight is often combined with Composite to implement shared leaf nodes.</li>
-<li>Terminal symbols within Interpreter&rsquo;s abstract syntax tree can be shared with Flyweight.</li>
-<li>Flyweight explains when and how State objects can be shared.</li>
-</ul>
-<h4 id="cachehttpssourcemakingcomdesign_patternsflyweightjava1"><a href="https://sourcemaking.com/design_patterns/flyweight/java/1">cache</a></h4>
-<p>Discussion. Trying to use objects at very low levels of granularity is nice, but the overhead may be prohibitive.
-Flyweight suggests removing the non-shareable state from the class, and having the client supply it when methods are called.
-This places more responsibility on the client, but, considerably fewer instances of the Flyweight class are now created.
-Sharing of these instances is facilitated by introducing a Factory class that maintains a &ldquo;cache&rdquo; of existing Flyweights.
-<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight1.png" alt="dp flyweight-cache"></p>
-<h4 id="factoryhttpssourcemakingcomdesign_patternsflyweightjava2"><a href="https://sourcemaking.com/design_patterns/flyweight/java/2">Factory</a></h4>
-<ol>
-<li>Identify shareable state (intrinsic) and non-shareable state (extrinsic)</li>
-<li>Create a Factory that can return an existing object or a new object</li>
-<li>The client must use the Factory instead of &ldquo;new&rdquo; to request objects</li>
-<li>The client (or a third party) must provide/compute the extrinsic state
-<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight2.png" alt="dp flyweight-factory"></li>
-</ol>
-<h4 id="wrapshttpssourcemakingcomdesign_patternsflyweightjava3"><a href="https://sourcemaking.com/design_patterns/flyweight/java/3">wraps</a></h4>
-<p>Discussion. Creating a thread for each ColorBox is a much more straight- forward approach,
-but it doesn&rsquo;t scale when dozens of ColorBoxes are created.
-Sharing a &ldquo;pool&rdquo; of threads across the collection of ColorBoxes requires more thought to set-up,
-but does not saturate &ldquo;system resources&rdquo; like the former approach does.</p>
-<p>In the implementation below, each ColorBox &ldquo;wraps&rdquo; itself with a Thread object.
-The Thread object provides all the &ldquo;threading functionality magic&rdquo;
-and simply calls ColorBox&rsquo;s run() method when it is promoted from the &ldquo;ready&rdquo; state to the &ldquo;running&rdquo; state.
-When each Thread/ColorBox is swapped into the CPU,
-it causes the ColorBox part of itself to change its color and then graciously gives up the CPU [by calling sleep()] so that other Threads may run.</p>
-<p>In the ThreadPool implementation, after the ColorBoxes are set-up,
-the ThreadPool creates and starts 8 HandlerThreads. When a HandlerThread is swapped into the CPU,
-it gets a random ColorBox object from ThreadPool&rsquo;s private Vector, tells the ColorBox to change its color,
-and graciously returns to the &ldquo;asleep&rdquo; state.</p>
-<p>&ldquo;You can typically make your threaded applications run FASTER by inserting calls to sleep() (with reasonably long durations).&rdquo;
-This definitely contributes to the perception that Threads are a &ldquo;black art&rdquo;.
-Not enough calls: monopolization of the CPU. Not enough duration: time expiration interrupt events
-interrupt the running thread before it can finish useful work.
-<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight3.png" alt="dp flyweight-wraps"></p>
-<h4 id="shared-handlerthreads-in-a-threadpoolhttpssourcemakingcomdesign_patternsflyweightjava4"><a href="https://sourcemaking.com/design_patterns/flyweight/java/4">shared HandlerThreads in a ThreadPool</a></h4>
-<p>The ColorBox class has now become a Flyweight: the color changing and painting capability remains &ldquo;intrinsic&rdquo;,
-and the threaded behavior has been made &ldquo;extrinsic&rdquo;.</p>
-<p>The ThreadPool class plays the role of the Factory. As ColorBox objects are created,
-they register themselves with the ThreadPool object. The latter launches 8 &ldquo;handler&rdquo; threads.
-When each thread is swapped into the CPU, it selects a random Flyweight from the ThreadPool&rsquo;s cache,
-and asks the object to changeColor().
-<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight4.png" alt="dp flyweight-pool"></p>
-<h1 id="ref">Ref</h1>
-<ul>
-<li><a href="https://sourcemaking.com/design_patterns/structural_patterns">Structural patterns</a></li>
-<li><a href="https://refactoring.guru/design-patterns/structural-patterns">Structural Design Patterns</a></li>
-</ul>
 
     </section>
 
@@ -326,19 +240,19 @@ and asks the object to changeColor().
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Structural%20Patterns&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural_patterns%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Structural%20Patterns&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural-wrapper%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural_patterns%2f"
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural-wrapper%2f"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural_patterns%2f&amp;description=Structural%20Patterns"
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural-wrapper%2f&amp;description=Structural%20Patterns"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural_patterns%2f"
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural-wrapper%2f"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
   </a>
