@@ -153,13 +153,40 @@
 	
 	    <a class="newer-posts" href="/cnblogs/post/page/3/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 4 of 6</span>
+	<span class="page-number">Page 4 of 7</span>
 	
 	    <a class="older-posts" href="/cnblogs/post/page/5/">Older Posts &rarr;</a>
 	
 </nav>
 
 	</div>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-windbg_driver/">windbg调试sandboxie driver</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp; windows sdk8.1.
+Prepare Host Env:
+OS Win1809(x64) VM VMware(v10.0.7) / Vbox(v6.1.38) WDK(include windbg) Windows Driver Kit Version 7.1.0 - win7 / Windows 10, version 2004 - win8.1 VM setting - serial port vmware or vbox
+\\.\pipe\com_1 vmware i/o mode:
+yield CPU on poll vbox Port 2: uncheck:
+Connect to existing pipe/socket windbg about version: The operating system needs to match the same or higher version of windbg. <a class="read-more" href="/cnblogs/post/vc-windbg_driver/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-09-06T06:08:08&#43;08:00">
+            6 Sep 2022
+        </time>
+    </footer>
+</article>
 
 	
 	   <article class="post post">
@@ -390,44 +417,12 @@ char* p = &#34;abc&#34;; // valid in C, invalid in C++ For the C++ it&rsquo;s OK
 </article>
 
 	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/qt-serialport/">使用qt5编写Serial Port</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>thread 线程相关
-asynchronously connect方法已实现异步。
-synchronously qmutexlocker
-创建信号锁 m_mutex.lock(); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。
-signals: void error(const QString &amp;s); void timeout(const QString &amp;s); Worker method Init Port 设置私有成员变量
-部分代码
-m_waitTimeout = waitTimeout; Receive data 打开串口
-if (!m_serialPort-&gt;open(QIODevice::ReadWrite)) { qDebug() &lt;&lt; tr(&#34;Can&#39;t open %1, error code %2&#34;) .arg(m_portName).arg(m_serialPort-&gt;error()); m_serialPort-&gt;close(); return false; } 接收数据
-while (m_serialPort-&gt;waitForReadyRead(500)) responseData += m_serialPort-&gt;read(1024); Deploy for windows copy exe to target directory.
-copy C:\Users\tdtc\Documents\Projects\serialCommQt\Release\serialCommQt.exe C:\Users\tdtc\Documents\serialCommQt_qmake\ exec windeployqt:
-for QML C:\Qt\Qt5.12.11\5.12.11\msvc2017\bin\windeployqt --qmldir C:\Users\tdtc\Documents\SerialCom\SerialCom\QtRaspberry C:\Users\tdtc\Documents\SerialCom_qml\serialCom. <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-28T08:18:08&#43;08:00">
-            28 Nov 2021
-        </time>
-    </footer>
-</article>
-
-	
 
 	<nav class="pagination" role="navigation">
 	
 	    <a class="newer-posts" href="/cnblogs/post/page/3/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 4 of 6</span>
+	<span class="page-number">Page 4 of 7</span>
 	
 	    <a class="older-posts" href="/cnblogs/post/page/5/">Older Posts &rarr;</a>
 	

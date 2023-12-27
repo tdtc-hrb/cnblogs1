@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="referrer" content="no-referrer"/>
+    
+
+
+
+<meta name="twitter:title" content="Structural Patterns"/>
+<meta name="twitter:description" content="design-patterns, gof"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="Structural Patterns &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/dp-structural-sharing/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="design-patterns, gof" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2023-12-27T08:08:08&#43;08:00" />
+
+    
+    
+
+    <title>Structural Patterns &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="design-patterns, gof" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.121.1">
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/dp-structural-sharing/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "Structural Patterns",
+    "name": "Structural Patterns",
+    "wordCount":  695 ,
+    "timeRequired": "PT4M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/dp-structural-sharing/",
+    "datePublished": "2023-12-27T08:08Z",
+    "dateModified": "2023-12-27T08:08Z",
+    
+    
+    "description": "design-patterns, gof",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/dp-structural-sharing/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Structural Patterns</h1>
+        <small>design-patterns, gof</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2023-12-27T08:08:08&#43;08:00">
+            Dec 27, 2023
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <ul>
+<li><a href="https://sourcemaking.com/design_patterns/bridge">Bridge</a></li>
+<li><a href="https://sourcemaking.com/design_patterns/flyweight">Flyweight</a></li>
+</ul>
+<h2 id="bridge">Bridge</h2>
+<ul>
+<li>Decouple an abstraction from its implementation so that the two can vary independently.</li>
+<li>Publish interface in an inheritance hierarchy, and bury implementation in its own inheritance hierarchy.</li>
+<li>Beyond encapsulation, to insulation</li>
+</ul>
+<h3 id="handlehttpssourcemakingcomdesign_patternsbridgejava2"><a href="https://sourcemaking.com/design_patterns/bridge/java/2">handle</a></h3>
+<ol>
+<li>Create an implementation/body abstraction</li>
+<li>Derive the separate implementations from the common abstraction</li>
+<li>Create an interface/handle class that &ldquo;has a&rdquo; and delegates to the impl</li>
+<li>Embellish the interface class with derived classes if desired
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-bridge1.png" alt="dp bridge-handle"></li>
+</ol>
+<h3 id="wrapperhttpssourcemakingcomdesign_patternsbridgejava3"><a href="https://sourcemaking.com/design_patterns/bridge/java/3">wrapper</a></h3>
+<ol>
+<li>Create an implementation/body base class</li>
+<li>Derive the separate implementations from the common abstraction</li>
+<li>Create an interface/wrapper class that &ldquo;has a&rdquo; and delegates to the impl</li>
+<li>Embellish the interface class with derived classes if desired
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-bridge2.png" alt="dp bridge-wrapper"></li>
+</ol>
+<h3 id="object-persistence-apihttpswwwoodesigncombridge-pattern-object-persistence-api-example-java-sourcecode"><a href="https://www.oodesign.com/bridge-pattern-object-persistence-api-example-java-sourcecode">Object Persistence API</a></h3>
+<p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-bridge3.png" alt="dp bridge-interface"></p>
+<h2 id="flyweight">Flyweight</h2>
+<ul>
+<li>Whereas Flyweight shows how to make lots of little objects,
+Facade shows how to make a single object represent an entire subsystem.</li>
+<li>Flyweight is often combined with Composite to implement shared leaf nodes.</li>
+<li>Terminal symbols within Interpreter&rsquo;s abstract syntax tree can be shared with Flyweight.</li>
+<li>Flyweight explains when and how State objects can be shared.</li>
+</ul>
+<h3 id="factoryhttpssourcemakingcomdesign_patternsflyweightjava1"><a href="https://sourcemaking.com/design_patterns/flyweight/java/1">Factory</a></h3>
+<p>Discussion. Trying to use objects at very low levels of granularity is nice, but the overhead may be prohibitive.
+Flyweight suggests removing the non-shareable state from the class, and having the client supply it when methods are called.
+This places more responsibility on the client, but, considerably fewer instances of the Flyweight class are now created.
+Sharing of these instances is facilitated by introducing a Factory class that maintains a &ldquo;cache&rdquo; of existing Flyweights.
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight10.png" alt="dp flyweight-before">
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight11.png" alt="dp flyweight-after"></p>
+<h3 id="singletonhttpswwwoodesigncomflyweight-pattern-wargame-example-java-sourcecode"><a href="https://www.oodesign.com/flyweight-pattern-wargame-example-java-sourcecode">singleton</a></h3>
+<ul>
+<li>Flyweights are usually created using a factory and the singleton is applied to that factory
+so that for each type or category of flyweights a single instance is returned.</li>
+<li>State and Strategy Patterns - State and Strategy objects are usually implemented as Flyweights.</li>
+</ul>
+<h3 id="maphttpsmediumcomrafacdelnerodesign-patterns-saga-18-real-world-situations-with-flyweight-8a6a2d94e32f"><a href="https://medium.com/@rafacdelnero/design-patterns-saga-18-real-world-situations-with-flyweight-8a6a2d94e32f">map</a></h3>
+<ol>
+<li>POJO: This is the object we will keep in the Cache.</li>
+</ol>
+<pre tabindex="0"><code>package sharing31;
+
+public class Product {
+	private final String name;
+	public Product(String name) {
+		this.name = name;
+	}
+	
+	public String toString() {
+		return name;
+	}
+}
+</code></pre><ol start="2">
+<li>Factory (Cache): Basically this class is responsible to create the caches.</li>
+</ol>
+<pre tabindex="0"><code>package sharing31;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Portfolio {
+	private Map&lt;String, Product&gt; products = new HashMap&lt;String, Product&gt;();
+	/**
+	 * Factory method Pattern
+	 */
+	public Product lookup(String productName) {
+		if (!products.containsKey(productName))
+			products.put(productName, new Product(productName));
+		return products.get(productName);
+	}
+	
+	public int totalProductsMade() {
+		return products.size();
+	}
+}
+</code></pre><ol start="3">
+<li>Object composer: It just composes the information from the product to execute the order.</li>
+</ol>
+<pre tabindex="0"><code>package sharing31;
+
+public class Order {
+	private final int orderNumber;
+	private final Product product;
+	Order(int orderNumber, Product product) {
+		this.orderNumber = orderNumber;
+		this.product = product;
+	}
+	void processOrder() {
+		System.out.println(&#34;Ordering &#34; + product +
+				&#34; for order number &#34; + orderNumber);
+	}
+}
+</code></pre><ol start="4">
+<li>Executor: Here is where the action happens.</li>
+</ol>
+<pre tabindex="0"><code>package sharing31;
+
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+public class InventorySystem {
+	private final Portfolio portfolio = new Portfolio();
+	private final List&lt;Order&gt; orders = new CopyOnWriteArrayList&lt;Order&gt;();
+	
+	public void executeOrder(String productName, int orderNumber) {
+		Product product = portfolio.lookup(productName);
+		Order order = new Order(orderNumber, product);
+		orders.add(order);
+	}
+	
+	public void process() {
+		for (Order order : orders) {
+			order.processOrder();
+			orders.remove(order);
+		}
+	}
+	
+	public int getTotalProducts() {
+		return portfolio.totalProductsMade();
+	}
+}
+</code></pre><p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight3.png" alt="dp flyweight-map"></p>
+<ul>
+<li>Test</li>
+</ul>
+<pre tabindex="0"><code>import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+
+import sharing31.InventorySystem;
+
+public class FlyweightTest {
+	@Test
+	public void flyweightTest() {
+		InventorySystem inventory = new InventorySystem();
+		inventory.executeOrder(&#34;AlienWare laptop&#34;, 2500);
+		inventory.executeOrder(&#34;SkullCandy HeadPhones&#34;, 150);
+		inventory.executeOrder(&#34;Playstation 5&#34;, 500);
+		inventory.executeOrder(&#34;SkullCandy HeadPhones&#34;, 130);
+		inventory.executeOrder(&#34;AlienWare laptop&#34;, 3000);
+		inventory.executeOrder(&#34;Playstation 5&#34;, 600);
+		inventory.process();
+		Assert.assertEquals(3, inventory.getTotalProducts());
+	}
+	@Test
+	public void flyweightJavaApiExampleTest() {
+		Integer firstInt = Integer.valueOf(5);
+		Integer secondInt = Integer.valueOf(5);
+		Integer thirdInt = Integer.valueOf(10);
+		Assert.assertTrue(firstInt == secondInt);
+		Assert.assertFalse(secondInt == thirdInt);
+	}
+}
+</code></pre><p>output:</p>
+<pre tabindex="0"><code>Ordering AlienWare laptop for order number 2500
+Ordering SkullCandy HeadPhones for order number 150
+Ordering Playstation 5 for order number 500
+Ordering SkullCandy HeadPhones for order number 130
+Ordering AlienWare laptop for order number 3000
+Ordering Playstation 5 for order number 600
+</code></pre><p><a href="https://github.com/rafadelnero/design-patterns-saga/tree/master/design-patterns-saga/src/main/java/com/designpatternsaga/flyweight">code</a></p>
+<h3 id="shared-handlerthreads-in-a-threadpoolhttpssourcemakingcomdesign_patternsflyweightjava4"><a href="https://sourcemaking.com/design_patterns/flyweight/java/4">shared HandlerThreads in a ThreadPool</a></h3>
+<p>The ColorBox class has now become a Flyweight: the color changing and painting capability remains &ldquo;intrinsic&rdquo;,
+and the threaded behavior has been made &ldquo;extrinsic&rdquo;.</p>
+<p>The ThreadPool class plays the role of the Factory. As ColorBox objects are created,
+they register themselves with the ThreadPool object. The latter launches 8 &ldquo;handler&rdquo; threads.
+When each thread is swapped into the CPU, it selects a random Flyweight from the ThreadPool&rsquo;s cache,
+and asks the object to changeColor().
+<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight4.png" alt="dp flyweight-pool"></p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Structural%20Patterns&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural-sharing%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural-sharing%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural-sharing%2f&amp;description=Structural%20Patterns"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fdp-structural-sharing%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/dp-structural-wrapper/">
+          <section class="post">
+              <h2>Structural Patterns</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+
