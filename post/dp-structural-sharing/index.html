@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="design-patterns, gof" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2023-12-27T08:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2023-12-28T08:08:08&#43;08:00" />
 
     
     
@@ -92,15 +92,15 @@
     },
     "headline": "Structural Patterns",
     "name": "Structural Patterns",
-    "wordCount":  695 ,
-    "timeRequired": "PT4M",
+    "wordCount":  943 ,
+    "timeRequired": "PT5M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/dp-structural-sharing/",
-    "datePublished": "2023-12-27T08:08Z",
-    "dateModified": "2023-12-27T08:08Z",
+    "datePublished": "2023-12-28T08:08Z",
+    "dateModified": "2023-12-28T08:08Z",
     
     
     "description": "design-patterns, gof",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2023-12-27T08:08:08&#43;08:00">
-            Dec 27, 2023
+          <time class="post-date" datetime="2023-12-28T08:08:08&#43;08:00">
+            Dec 28, 2023
           </time>
         
          
@@ -350,14 +350,130 @@ Ordering SkullCandy HeadPhones for order number 130
 Ordering AlienWare laptop for order number 3000
 Ordering Playstation 5 for order number 600
 </code></pre><p><a href="https://github.com/rafadelnero/design-patterns-saga/tree/master/design-patterns-saga/src/main/java/com/designpatternsaga/flyweight">code</a></p>
-<h3 id="shared-handlerthreads-in-a-threadpoolhttpssourcemakingcomdesign_patternsflyweightjava4"><a href="https://sourcemaking.com/design_patterns/flyweight/java/4">shared HandlerThreads in a ThreadPool</a></h3>
-<p>The ColorBox class has now become a Flyweight: the color changing and painting capability remains &ldquo;intrinsic&rdquo;,
-and the threaded behavior has been made &ldquo;extrinsic&rdquo;.</p>
-<p>The ThreadPool class plays the role of the Factory. As ColorBox objects are created,
-they register themselves with the ThreadPool object. The latter launches 8 &ldquo;handler&rdquo; threads.
-When each thread is swapped into the CPU, it selects a random Flyweight from the ThreadPool&rsquo;s cache,
-and asks the object to changeColor().
-<img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight4.png" alt="dp flyweight-pool"></p>
+<h3 id="flyweight-design-pattern-explained-with-simple-examplehttpssimpletechtalkscomflyweight-design-pattern"><a href="https://simpletechtalks.com/flyweight-design-pattern/">Flyweight Design Pattern Explained With Simple Example</a></h3>
+<p><img src="https://simpletechtalks.com/wp-content/uploads/2015/09/flyweight_design_pattern.png" alt="flyweight design pattern"></p>
+<ul>
+<li>flyweight</li>
+</ul>
+<pre tabindex="0"><code>public abstract class Model {
+	protected String m_name;
+	protected int m_capacity;
+	protected int m_speed;
+
+	public Model(String name, int capacity, int speed) {
+		this.m_name = name;
+		this.m_capacity = capacity;
+		this.m_speed = speed;
+	}
+	
+	public void showDetails() {
+		// TODO Auto-generated method stub
+		System.out.println(&#34;Name: &#34; + this.m_name + &#34;, Capactiy: &#34; 
+		+ this.m_capacity + &#34;, Speed: &#34; + this.m_speed + &#34; knots&#34;);
+	}
+}
+</code></pre><ul>
+<li>Concrete flyweight 1</li>
+</ul>
+<pre tabindex="0"><code>public class Airbus380 extends Model {
+	
+	public Airbus380(String name, int capacity, int speed) {
+		// TODO Auto-generated constructor stub
+		super(name, capacity, speed);
+	}
+
+}
+</code></pre><ul>
+<li>Concrete flyweight 2</li>
+</ul>
+<pre tabindex="0"><code>public class Boeing787 extends Model {
+
+	public Boeing787(String name, int capacity, int speed) {
+		super(name, capacity, speed);
+	}
+
+}
+</code></pre><ul>
+<li>Concrete flyweight 3</li>
+</ul>
+<pre tabindex="0"><code>public class Boeing797 extends Model {
+	
+	public Boeing797(String name, int capacity, int speed) {
+		// TODO Auto-generated constructor stub
+		super(name, capacity, speed);
+	}
+
+}
+</code></pre><ul>
+<li>Flyweight factory</li>
+</ul>
+<pre tabindex="0"><code>public class FlyweightFactory {
+
+	private Model model;
+	
+	public Model getModel(int type) {
+		switch (type) {
+		case 380:
+			model = new Airbus380(&#34;Airbus380&#34;, 200, 800);
+			break;
+
+		case 787:
+			model = new Boeing787(&#34;Boeing787&#34;, 600, 1000);
+			break;
+			
+		case 797:
+			model = new Boeing797(&#34;Boeing797&#34;, 1200, 1500);
+			break;
+		default:
+			System.out.println(&#34;Unknown aeroplane type&#34;);
+			model = null;
+			break;
+		}
+		return model;
+	}
+}
+</code></pre><ul>
+<li>Product</li>
+</ul>
+<pre tabindex="0"><code>public class Aeroplane {
+	private Model m_model;
+	private String m_mfgDate;
+	private int m_id;
+	
+	public Aeroplane(Model model, String date, int id) {
+		// TODO Auto-generated constructor stub
+		this.m_model = model;
+		this.m_mfgDate = date;
+		this.m_id = id;
+	}
+	
+	public void showAeroplane() {
+		// TODO Auto-generated method stub
+		m_model.showDetails();
+		System.out.println(&#34;MfgDate : &#34; + m_mfgDate + &#34;, Serial No: &#34;  + m_id);
+	}
+}
+</code></pre><ul>
+<li>Test</li>
+</ul>
+<pre tabindex="0"><code>public class FlyweightDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FlyweightFactory ff = new FlyweightFactory();
+		Aeroplane first = new Aeroplane(ff.getModel(787), &#34;10th Feb 1987&#34;, 100213);
+		Aeroplane second = new Aeroplane(ff.getModel(797), &#34;1th Feb 1987&#34;, 100214);
+		Aeroplane third = new Aeroplane(ff.getModel(787), &#34;20th Jan 1987&#34;, 100215);
+		Aeroplane forth = new Aeroplane(ff.getModel(380), &#34;10th mar 1987&#34;, 200216);
+		
+		first.showAeroplane();
+		second.showAeroplane();
+		third.showAeroplane();
+		forth.showAeroplane();
+	}
+
+}
+</code></pre><p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight4.png" alt="dp flyweight-simpletechtalks"></p>
 
     </section>
 

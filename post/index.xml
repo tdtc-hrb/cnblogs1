@@ -6,12 +6,12 @@
     <description>Recent content in Posts on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 27 Dec 2023 08:08:08 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 28 Dec 2023 08:08:08 +0800</lastBuildDate>
     <atom:link href="https://tdtc-hrb.github.io/cnblogs/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Structural Patterns</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/dp-structural-sharing/</link>
-      <pubDate>Wed, 27 Dec 2023 08:08:08 +0800</pubDate>
+      <pubDate>Thu, 28 Dec 2023 08:08:08 +0800</pubDate>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/dp-structural-sharing/</guid>
       <description>Bridge Flyweight Bridge Decouple an abstraction from its implementation so that the two can vary independently. Publish interface in an inheritance hierarchy, and bury implementation in its own inheritance hierarchy. Beyond encapsulation, to insulation handle Create an implementation/body abstraction Derive the separate implementations from the common abstraction Create an interface/handle class that &amp;ldquo;has a&amp;rdquo; and delegates to the impl Embellish the interface class with derived classes if desired wrapper Create an implementation/body base class Derive the separate implementations from the common abstraction Create an interface/wrapper class that &amp;ldquo;has a&amp;rdquo; and delegates to the impl Embellish the interface class with derived classes if desired Object Persistence API Flyweight Whereas Flyweight shows how to make lots of little objects, Facade shows how to make a single object represent an entire subsystem.</description>
     </item>
