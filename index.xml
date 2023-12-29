@@ -6,8 +6,22 @@
     <description>Recent content on 迁移自(cnblogs.com/xiaobin-hlj80)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 28 Dec 2023 08:08:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Dec 2023 08:08:08 +0800</lastBuildDate>
     <atom:link href="https://tdtc-hrb.github.io/cnblogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Structural Patterns</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/dp-sharing1/</link>
+      <pubDate>Fri, 29 Dec 2023 08:08:08 +0800</pubDate>
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/dp-sharing1/</guid>
+      <description>Bridge Flyweight map POJO: This is the object we will keep in the Cache. package sharing31;&#xD;public class Product {&#xD;private final String name;&#xD;public Product(String name) {&#xD;this.name = name;&#xD;}&#xD;public String toString() {&#xD;return name;&#xD;}&#xD;} Factory (Cache): Basically this class is responsible to create the caches. package sharing31;&#xD;import java.util.HashMap;&#xD;import java.util.Map;&#xD;public class Portfolio {&#xD;private Map&amp;lt;String, Product&amp;gt; products = new HashMap&amp;lt;String, Product&amp;gt;();&#xD;/**&#xD;* Factory method Pattern&#xD;*/&#xD;public Product lookup(String productName) {&#xD;if (!</description>
+    </item>
+    <item>
+      <title>Structural Patterns</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/dp-sharing2/</link>
+      <pubDate>Fri, 29 Dec 2023 08:08:08 +0800</pubDate>
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/dp-sharing2/</guid>
+      <description>Bridge Flyweight Flyweight Design Pattern Explained With Simple Example flyweight public abstract class Model {&#xD;protected String m_name;&#xD;protected int m_capacity;&#xD;protected int m_speed;&#xD;public Model(String name, int capacity, int speed) {&#xD;this.m_name = name;&#xD;this.m_capacity = capacity;&#xD;this.m_speed = speed;&#xD;}&#xD;public void showDetails() {&#xD;// TODO Auto-generated method stub&#xD;System.out.println(&amp;#34;Name: &amp;#34; + this.m_name + &amp;#34;, Capactiy: &amp;#34; + this.m_capacity + &amp;#34;, Speed: &amp;#34; + this.m_speed + &amp;#34; knots&amp;#34;);&#xD;}&#xD;} Concrete flyweight 1 public class Airbus380 extends Model {&#xD;public Airbus380(String name, int capacity, int speed) {&#xD;// TODO Auto-generated constructor stub&#xD;super(name, capacity, speed);&#xD;}&#xD;} Concrete flyweight 2 public class Boeing787 extends Model {&#xD;public Boeing787(String name, int capacity, int speed) {&#xD;super(name, capacity, speed);&#xD;}&#xD;} Concrete flyweight 3 public class Boeing797 extends Model {&#xD;public Boeing797(String name, int capacity, int speed) {&#xD;// TODO Auto-generated constructor stub&#xD;super(name, capacity, speed);&#xD;}&#xD;} Flyweight factory public class FlyweightFactory {&#xD;private Model model;&#xD;public Model getModel(int type) {&#xD;switch (type) {&#xD;case 380:&#xD;model = new Airbus380(&amp;#34;Airbus380&amp;#34;, 200, 800);&#xD;break;&#xD;case 787:&#xD;model = new Boeing787(&amp;#34;Boeing787&amp;#34;, 600, 1000);&#xD;break;&#xD;case 797:&#xD;model = new Boeing797(&amp;#34;Boeing797&amp;#34;, 1200, 1500);&#xD;break;&#xD;default:&#xD;System.</description>
+    </item>
     <item>
       <title>Structural Patterns</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/dp-structural-sharing/</link>

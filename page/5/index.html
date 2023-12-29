@@ -197,6 +197,54 @@
     
         <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/js-redux-mini/">最小实现redux - 分解redux</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>project: https://gitee.com/xiaobin80/starter
+application app.js
+include createStore import { createStore } from &#39;redux&#39; Establish reducer const reducerName = (state, action) =&gt; { state; } invoke createStore() const store = createStore(reducerName); html public/index.html
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;The Complete Redux Book - Example Application&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;app&#34;&gt; Redux is running: &lt;span id=&#34;counter&#34;&gt;&lt;/span&gt; &lt;/div&gt; &lt;script type=&#34;text/javascript&#34; src=&#34;../app.js&#34;&gt;&lt;/script&gt; &lt;/body&gt; &lt;/html&gt;  <a class="read-more" href="/cnblogs/post/js-redux-mini/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-04-10T08:26:39&#43;08:00">
+            10 Apr 2022
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-strcat/">使用strcat_s的注意事项</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>准备 strcat_s使用 准备 使用LLVM（clang-cl） char point char * const and const char *? Pointing to a constant value const char * p; // value cannot be changed Constant pointer to a value char * const p; // address cannot be changed Constant pointer to a constant value const char * const p; // both cannot be changed. C++11 The C++11 Standard (ISO/IEC 14882:2011) says in § C.1.1:
+char* p = &#34;abc&#34;; // valid in C, invalid in C++ For the C++ it&rsquo;s OK as a pointer to a String Literal is harmful since any attempt to modify it leads to a crash. <a class="read-more" href="/cnblogs/post/vc-strcat/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-03-24T03:18:08&#43;08:00">
+            24 Mar 2022
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/qt-serialport/">使用qt5编写Serial Port</a></h2>
     </header>
     <section class="post-excerpt">
@@ -408,54 +456,6 @@ PowerShell Core v7.2 IDE: VS2022 Community(v17.0)/VS Code(docker extension) VM: 
         
         <time class="post-date" datetime="2021-11-09T20:38:18&#43;08:00">
             9 Nov 2021
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-webpack/">webpack的使用</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>安装webpack npm install -g webpack-dev-server npm install --save webpack-cli pack info package.json
-{ &#34;name&#34;: &#34;redux-book-started&#34;, &#34;version&#34;: &#34;1.0.0&#34;, &#34;description&#34;: &#34;Sample Redux Application&#34;, &#34;main&#34;: &#34;app.js&#34;, &#34;scripts&#34;: { &#34;start&#34;: &#34;webpack-dev-server --hot --progress --port 8181&#34; }, &#34;author&#34;: &#34;Boris Dinkevich &amp; Ilya Gelman&#34;, &#34;license&#34;: &#34;MIT&#34;, &#34;dependencies&#34;: { &#34;jquery&#34;: &#34;3.6.0&#34;, &#34;redux&#34;: &#34;4.1.2&#34; }, &#34;devDependencies&#34;: { &#34;webpack&#34;: &#34;5.64.1&#34;, &#34;webpack-cli&#34;: &#34;^4.9.1&#34;, &#34;webpack-dev-server&#34;: &#34;4.5.0&#34; } } config info webpack.config.js
-module.exports = { mode: &#39;development&#39;, entry: &#39;./app.js&#39;, output: { filename: &#39;. <a class="read-more" href="/cnblogs/post/js-webpack/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-08T15:26:39&#43;08:00">
-            8 Nov 2021
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-json-table/">动态生成table</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>一、JSON数据源 JSON
-JSON是一种取代XML的数据结构,和xml相比,它更小巧但描述能力却不差,由于它的小巧所以网络传输数据将减少更多流量从而加快速度,那么,JSON到底是什么?JSON就是一串字符串 只不过元素会使用特定的符号标注。{} 双括号表示对象[] 中括号表示数组&#34;&#34; 双引号内是属性或值: 冒号表示后者是前者的值(这个值可以是字符串、数字、也可以是另一个数组或对象)所以 {&#34;name&#34;: &#34;Michael&#34;} 可以理解为是一个包含name为Michael的对象而[{&#34;name&#34;: &#34;Michael&#34;},{&#34;name&#34;: &#34;Jerry&#34;}]就表示包含两个对象的数组当然了,你也可以使用{&#34;name&#34;:[&#34;Michael&#34;,&#34;Jerry&#34;]}来简化上面一部,这是一个拥有一个name数组的对象 详细介绍请参见W3SCHOOL JSON规范
-1. students var students = [ {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1001&#34;, &#34;name&#34;: &#34;李X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1002&#34;, &#34;name&#34;: &#34;张X威&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1003&#34;, &#34;name&#34;: &#34;于X洋&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1004&#34;, &#34;name&#34;: &#34;张X扬&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1005&#34;, &#34;name&#34;: &#34;周X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1006&#34;, &#34;name&#34;: &#34;王X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1007&#34;, &#34;name&#34;: &#34;李X朋&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 1&#34;, &#34;ID&#34;: &#34;1008&#34;, &#34;name&#34;: &#34;邬X春&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 5&#34;, &#34;ID&#34;: &#34;1009&#34;, &#34;name&#34;: &#34;李X&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]}, {&#34;cName&#34;: &#34;class 5&#34;, &#34;ID&#34;: &#34;1010&#34;, &#34;name&#34;: &#34;孙X丽&#34;, &#34;course&#34;: [&#34;英语&#34;, &#34;高数&#34;], &#34;elective&#34;: [&#34;政治经济学&#34;, &#34;哲学&#34;]} ]; 二、函数设计 所谓的动态就是使用删表和写表的操作。 <a class="read-more" href="/cnblogs/post/js-json-table/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-10-02T14:26:39&#43;08:00">
-            2 Oct 2021
         </time>
     </footer>
 </article>

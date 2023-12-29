@@ -92,8 +92,8 @@
     },
     "headline": "Structural Patterns",
     "name": "Structural Patterns",
-    "wordCount":  943 ,
-    "timeRequired": "PT5M",
+    "wordCount":  282 ,
+    "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
       "alternateName": "en"
@@ -227,254 +227,7 @@ so that for each type or category of flyweights a single instance is returned.</
 <li>State and Strategy Patterns - State and Strategy objects are usually implemented as Flyweights.
 <img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight2.png" alt="dp flyweight-singleton"></li>
 </ul>
-<h3 id="maphttpsmediumcomrafacdelnerodesign-patterns-saga-18-real-world-situations-with-flyweight-8a6a2d94e32f"><a href="https://medium.com/@rafacdelnero/design-patterns-saga-18-real-world-situations-with-flyweight-8a6a2d94e32f">map</a></h3>
-<ol>
-<li>POJO: This is the object we will keep in the Cache.</li>
-</ol>
-<pre tabindex="0"><code>package sharing31;
-
-public class Product {
-	private final String name;
-	public Product(String name) {
-		this.name = name;
-	}
-	
-	public String toString() {
-		return name;
-	}
-}
-</code></pre><ol start="2">
-<li>Factory (Cache): Basically this class is responsible to create the caches.</li>
-</ol>
-<pre tabindex="0"><code>package sharing31;
-
-import java.util.HashMap;
-import java.util.Map;
-
-public class Portfolio {
-	private Map&lt;String, Product&gt; products = new HashMap&lt;String, Product&gt;();
-	/**
-	 * Factory method Pattern
-	 */
-	public Product lookup(String productName) {
-		if (!products.containsKey(productName))
-			products.put(productName, new Product(productName));
-		return products.get(productName);
-	}
-	
-	public int totalProductsMade() {
-		return products.size();
-	}
-}
-</code></pre><ol start="3">
-<li>Object composer: It just composes the information from the product to execute the order.</li>
-</ol>
-<pre tabindex="0"><code>package sharing31;
-
-public class Order {
-	private final int orderNumber;
-	private final Product product;
-	Order(int orderNumber, Product product) {
-		this.orderNumber = orderNumber;
-		this.product = product;
-	}
-	void processOrder() {
-		System.out.println(&#34;Ordering &#34; + product +
-				&#34; for order number &#34; + orderNumber);
-	}
-}
-</code></pre><ol start="4">
-<li>Executor: Here is where the action happens.</li>
-</ol>
-<pre tabindex="0"><code>package sharing31;
-
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-
-public class InventorySystem {
-	private final Portfolio portfolio = new Portfolio();
-	private final List&lt;Order&gt; orders = new CopyOnWriteArrayList&lt;Order&gt;();
-	
-	public void executeOrder(String productName, int orderNumber) {
-		Product product = portfolio.lookup(productName);
-		Order order = new Order(orderNumber, product);
-		orders.add(order);
-	}
-	
-	public void process() {
-		for (Order order : orders) {
-			order.processOrder();
-			orders.remove(order);
-		}
-	}
-	
-	public int getTotalProducts() {
-		return portfolio.totalProductsMade();
-	}
-}
-</code></pre><p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight3.png" alt="dp flyweight-map"></p>
-<ul>
-<li>Test</li>
-</ul>
-<pre tabindex="0"><code>import org.junit.Assert;
-import org.junit.jupiter.api.Test;
-
-import sharing31.InventorySystem;
-
-public class FlyweightTest {
-	@Test
-	public void flyweightTest() {
-		InventorySystem inventory = new InventorySystem();
-		inventory.executeOrder(&#34;AlienWare laptop&#34;, 2500);
-		inventory.executeOrder(&#34;SkullCandy HeadPhones&#34;, 150);
-		inventory.executeOrder(&#34;Playstation 5&#34;, 500);
-		inventory.executeOrder(&#34;SkullCandy HeadPhones&#34;, 130);
-		inventory.executeOrder(&#34;AlienWare laptop&#34;, 3000);
-		inventory.executeOrder(&#34;Playstation 5&#34;, 600);
-		inventory.process();
-		Assert.assertEquals(3, inventory.getTotalProducts());
-	}
-	@Test
-	public void flyweightJavaApiExampleTest() {
-		Integer firstInt = Integer.valueOf(5);
-		Integer secondInt = Integer.valueOf(5);
-		Integer thirdInt = Integer.valueOf(10);
-		Assert.assertTrue(firstInt == secondInt);
-		Assert.assertFalse(secondInt == thirdInt);
-	}
-}
-</code></pre><p>output:</p>
-<pre tabindex="0"><code>Ordering AlienWare laptop for order number 2500
-Ordering SkullCandy HeadPhones for order number 150
-Ordering Playstation 5 for order number 500
-Ordering SkullCandy HeadPhones for order number 130
-Ordering AlienWare laptop for order number 3000
-Ordering Playstation 5 for order number 600
-</code></pre><p><a href="https://github.com/rafadelnero/design-patterns-saga/tree/master/design-patterns-saga/src/main/java/com/designpatternsaga/flyweight">code</a></p>
-<h3 id="flyweight-design-pattern-explained-with-simple-examplehttpssimpletechtalkscomflyweight-design-pattern"><a href="https://simpletechtalks.com/flyweight-design-pattern/">Flyweight Design Pattern Explained With Simple Example</a></h3>
-<p><img src="https://simpletechtalks.com/wp-content/uploads/2015/09/flyweight_design_pattern.png" alt="flyweight design pattern"></p>
-<ul>
-<li>flyweight</li>
-</ul>
-<pre tabindex="0"><code>public abstract class Model {
-	protected String m_name;
-	protected int m_capacity;
-	protected int m_speed;
-
-	public Model(String name, int capacity, int speed) {
-		this.m_name = name;
-		this.m_capacity = capacity;
-		this.m_speed = speed;
-	}
-	
-	public void showDetails() {
-		// TODO Auto-generated method stub
-		System.out.println(&#34;Name: &#34; + this.m_name + &#34;, Capactiy: &#34; 
-		+ this.m_capacity + &#34;, Speed: &#34; + this.m_speed + &#34; knots&#34;);
-	}
-}
-</code></pre><ul>
-<li>Concrete flyweight 1</li>
-</ul>
-<pre tabindex="0"><code>public class Airbus380 extends Model {
-	
-	public Airbus380(String name, int capacity, int speed) {
-		// TODO Auto-generated constructor stub
-		super(name, capacity, speed);
-	}
-
-}
-</code></pre><ul>
-<li>Concrete flyweight 2</li>
-</ul>
-<pre tabindex="0"><code>public class Boeing787 extends Model {
-
-	public Boeing787(String name, int capacity, int speed) {
-		super(name, capacity, speed);
-	}
-
-}
-</code></pre><ul>
-<li>Concrete flyweight 3</li>
-</ul>
-<pre tabindex="0"><code>public class Boeing797 extends Model {
-	
-	public Boeing797(String name, int capacity, int speed) {
-		// TODO Auto-generated constructor stub
-		super(name, capacity, speed);
-	}
-
-}
-</code></pre><ul>
-<li>Flyweight factory</li>
-</ul>
-<pre tabindex="0"><code>public class FlyweightFactory {
-
-	private Model model;
-	
-	public Model getModel(int type) {
-		switch (type) {
-		case 380:
-			model = new Airbus380(&#34;Airbus380&#34;, 200, 800);
-			break;
-
-		case 787:
-			model = new Boeing787(&#34;Boeing787&#34;, 600, 1000);
-			break;
-			
-		case 797:
-			model = new Boeing797(&#34;Boeing797&#34;, 1200, 1500);
-			break;
-		default:
-			System.out.println(&#34;Unknown aeroplane type&#34;);
-			model = null;
-			break;
-		}
-		return model;
-	}
-}
-</code></pre><ul>
-<li>Product</li>
-</ul>
-<pre tabindex="0"><code>public class Aeroplane {
-	private Model m_model;
-	private String m_mfgDate;
-	private int m_id;
-	
-	public Aeroplane(Model model, String date, int id) {
-		// TODO Auto-generated constructor stub
-		this.m_model = model;
-		this.m_mfgDate = date;
-		this.m_id = id;
-	}
-	
-	public void showAeroplane() {
-		// TODO Auto-generated method stub
-		m_model.showDetails();
-		System.out.println(&#34;MfgDate : &#34; + m_mfgDate + &#34;, Serial No: &#34;  + m_id);
-	}
-}
-</code></pre><ul>
-<li>Test</li>
-</ul>
-<pre tabindex="0"><code>public class FlyweightDemo {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		FlyweightFactory ff = new FlyweightFactory();
-		Aeroplane first = new Aeroplane(ff.getModel(787), &#34;10th Feb 1987&#34;, 100213);
-		Aeroplane second = new Aeroplane(ff.getModel(797), &#34;1th Feb 1987&#34;, 100214);
-		Aeroplane third = new Aeroplane(ff.getModel(787), &#34;20th Jan 1987&#34;, 100215);
-		Aeroplane forth = new Aeroplane(ff.getModel(380), &#34;10th mar 1987&#34;, 200216);
-		
-		first.showAeroplane();
-		second.showAeroplane();
-		third.showAeroplane();
-		forth.showAeroplane();
-	}
-
-}
-</code></pre><p><img src="https://github.com/tdtc-hrb/cnblogs/raw/master/images/dp-flyweight4.png" alt="dp flyweight-simpletechtalks"></p>
+<p><a href="https://tdtc-hrb.github.io/cnblogs/post/dp-sharing1">Next</a></p>
 
     </section>
 
@@ -525,6 +278,13 @@ Ordering Playstation 5 for order number 600
 
 
   <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/dp-sharing2/">
+          <section class="post">
+              <h2>Structural Patterns</h2>
+              
+          </section>
+      </a>
   
   
       <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/dp-structural-wrapper/">

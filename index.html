@@ -199,6 +199,50 @@
     
         <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/dp-sharing1/">Structural Patterns</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Bridge Flyweight map POJO: This is the object we will keep in the Cache. package sharing31;public class Product {private final String name;public Product(String name) {this.name = name;}public String toString() {return name;}} Factory (Cache): Basically this class is responsible to create the caches. package sharing31;import java.util.HashMap;import java.util.Map;public class Portfolio {private Map&lt;String, Product&gt; products = new HashMap&lt;String, Product&gt;();/*** Factory method Pattern*/public Product lookup(String productName) {if (! <a class="read-more" href="/cnblogs/post/dp-sharing1/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-12-29T08:08:08&#43;08:00">
+            29 Dec 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/dp-sharing2/">Structural Patterns</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Bridge Flyweight Flyweight Design Pattern Explained With Simple Example flyweight public abstract class Model {protected String m_name;protected int m_capacity;protected int m_speed;public Model(String name, int capacity, int speed) {this.m_name = name;this.m_capacity = capacity;this.m_speed = speed;}public void showDetails() {// TODO Auto-generated method stubSystem.out.println(&#34;Name: &#34; + this.m_name + &#34;, Capactiy: &#34; + this.m_capacity + &#34;, Speed: &#34; + this.m_speed + &#34; knots&#34;);}} Concrete flyweight 1 public class Airbus380 extends Model {public Airbus380(String name, int capacity, int speed) {// TODO Auto-generated constructor stubsuper(name, capacity, speed);}} Concrete flyweight 2 public class Boeing787 extends Model {public Boeing787(String name, int capacity, int speed) {super(name, capacity, speed);}} Concrete flyweight 3 public class Boeing797 extends Model {public Boeing797(String name, int capacity, int speed) {// TODO Auto-generated constructor stubsuper(name, capacity, speed);}} Flyweight factory public class FlyweightFactory {private Model model;public Model getModel(int type) {switch (type) {case 380:model = new Airbus380(&#34;Airbus380&#34;, 200, 800);break;case 787:model = new Boeing787(&#34;Boeing787&#34;, 600, 1000);break;case 797:model = new Boeing797(&#34;Boeing797&#34;, 1200, 1500);break;default:System. <a class="read-more" href="/cnblogs/post/dp-sharing2/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-12-29T08:08:08&#43;08:00">
+            29 Dec 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/dp-structural-sharing/">Structural Patterns</a></h2>
     </header>
     <section class="post-excerpt">
@@ -389,55 +433,6 @@ dism /online /enable-feature /featurename:NetFx3 /All /Source:D:\sources\sxs /Li
         
         <time class="post-date" datetime="2023-11-07T08:08:08&#43;08:00">
             7 Nov 2023
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/vc-asm/">Setting Up Visual Studio 14&#43; for xASM Programming</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>MASM32 NASM64 MASM32 After downloading v11r, install it using administrator.
-Create an empty console application (VC++) and set it up.
-project Set set masm Project -&gt; Build Customizations checked: masm(.targets, .props) set entry point Linker -&gt; Advanced Entry Point: main set path Linker -&gt; General -&gt; Additional Library Directories C:\masm32\lib; program new file &ldquo;test1.asm&rdquo; right click &ldquo;properties&rdquo; choice &ldquo;Microsoft Macro Assembler&rdquo;
-Project -&gt; Add New Item Microsoft Macro Assembler -&gt; General -&gt; Include Paths <a class="read-more" href="/cnblogs/post/vc-asm/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-10-22T08:08:08&#43;08:00">
-            22 Oct 2023
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/qt-webview/">QQ mini browser</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Qt Design Studio: v4.3.1 Qt Creator: v11.0.3 QT: V6.2.4 online installer version Creator and Design Studio 始终更新 Commercial LTS phase 新 Normal 发布后, lts 转为 commercial LTS 镜像 list Note: 下载那个镜像点的&quot;qt-unified-windows-x64-online.exe&quot;, 就使用it&rsquo;s Network.
-tuna ustc sjtu nanyang Qt Qucik version:
-Qt Version QtQml QtQml.Models QtQuick QtQuick.Particles QtQuick.Controls QtQuick.Layouts QtQuick.Dialogs QtQuick.WebEngine Qt 5.11 2.11 2.11 2.11 2.11 2.4 1.11 1.11 1.7 Qt 5.12 - - 2.12 - 2.12 - - Qt 5. <a class="read-more" href="/cnblogs/post/qt-webview/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-10-18T23:38:08&#43;08:00">
-            18 Oct 2023
         </time>
     </footer>
 </article>
