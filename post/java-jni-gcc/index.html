@@ -92,7 +92,7 @@
     },
     "headline": "jni - gcc",
     "name": "jni - gcc",
-    "wordCount":  245 ,
+    "wordCount":  263 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
@@ -197,11 +197,13 @@ public class ReadXbf {
                                    // This library contains a native method called sayHello()
     }
     // Declare an instance native method sayHello() which receives no parameter and returns void
-    private native void sayHello();
+    private native String sayHello(int num, String text);
 
     // Test Driver
     public static void main(String[] args) {
-      new ReadXbf().sayHello(); // Create an instance and invoke the native method
+      ReadXbf rf = new ReadXbf();
+      String text = rf.sayHello(1, &#34;world&#34;); // Create an instance and invoke the native method
+      System.out.println(text);
     }
 }
 </code></pre><ul>
@@ -209,43 +211,33 @@ public class ReadXbf {
 </ul>
 <pre tabindex="0"><code>javac -h . com/cartionsoft/xbf/ReadXbf.java
 </code></pre><h2 id="jni-with-c">JNI with C++</h2>
-<ul>
-<li>C++ Header</li>
-<li>C++ Implementation</li>
-</ul>
-<h3 id="header">header</h3>
-<p>Umethod.h:</p>
-<pre tabindex="0"><code>#ifndef _UMETHODE_H
-#define _UMETHODE_H
-
-#ifdef __cplusplus
-        extern &#34;C&#34; {
-#endif
-        void sayHello ();
-#ifdef __cplusplus
-        }
-#endif
-
-#endif
-</code></pre><h3 id="implementation">Implementation</h3>
 <p>XbfLibR1.cpp:</p>
-<pre tabindex="0"><code>#include &#34;Umethod.h&#34;
-
-#include &lt;iostream&gt;                      // C++ standard IO header
+<pre tabindex="0"><code>#include &lt;string.h&gt;
 
 #include &#34;com_cartionsoft_xbf_ReadXbf.h&#34; // Generated
 
-using namespace std;
-
-JNIEXPORT void 
+JNIEXPORT jstring 
 JNICALL 
 Java_com_cartionsoft_xbf_ReadXbf_sayHello(
-        JNIEnv *,
-        jobject) {
-    cout &lt;&lt; &#34;Hello World from C++!&#34; &lt;&lt; endl;
-    return;
+        JNIEnv *env, jobject obj, 
+        jint num,
+        jstring string) {
+    jstring result;
+    char msg[60];
+
+    const char *name = env-&gt;GetStringUTFChars(string, NULL);//Java String to C Style string
+
+    if (num &lt; 5)
+        strcpy(msg, &#34;Hello &#34;);
+    else
+        strcpy(msg, &#34;NiHao &#34;);
+    strcat(msg, name);
+
+    env-&gt;ReleaseStringUTFChars(string, name);
+    result = env-&gt;NewStringUTF(msg); // C style string to Java String
+    return result;
 }
-</code></pre><h2 id="test">test</h2>
+</code></pre><h2 id="launch">launch</h2>
 <ul>
 <li>see library</li>
 </ul>
@@ -271,7 +263,7 @@ that requires a <a href="https://stackoverflow.com/questions/3950635/how-to-comp
 <pre tabindex="0"><code>vi ~/.bashrc
 </code></pre><p>add lib path:</p>
 <pre tabindex="0"><code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/xb
-</code></pre><h3 id="launch">launch</h3>
+</code></pre><h3 id="execute">execute</h3>
 <ul>
 <li>exec</li>
 </ul>
@@ -283,6 +275,7 @@ that requires a <a href="https://stackoverflow.com/questions/3950635/how-to-comp
 </code></pre><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html">Java Native Interface</a></li>
+<li><a href="https://stackoverflow.com/questions/13796786/jstring-return-in-jni-program">example - c/c++</a></li>
 </ul>
 
     </section>
