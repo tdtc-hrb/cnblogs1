@@ -92,7 +92,7 @@
     },
     "headline": "jni - gcc",
     "name": "jni - gcc",
-    "wordCount":  263 ,
+    "wordCount":  269 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
@@ -237,6 +237,15 @@ Java_com_cartionsoft_xbf_ReadXbf_sayHello(
     result = env-&gt;NewStringUTF(msg); // C style string to Java String
     return result;
 }
+</code></pre><h3 id="generate-so">Generate .so</h3>
+<ul>
+<li>linux</li>
+</ul>
+<pre tabindex="0"><code>g++ -shared -fPIC -I&#34;$JAVA_HOME/include&#34; -I&#34;$JAVA_HOME/include/linux&#34; XbfLibR1.cpp -o libXbfR.so
+</code></pre><p>!!!Note!!!:
+<code>System.loadLibrary()</code> is the file name
+that requires a <a href="https://stackoverflow.com/questions/3950635/how-to-compile-dynamic-library-for-a-jni-application-on-linux/3987567#3987567">fixed format</a></p>
+<pre tabindex="0"><code>By example, libXXXX.so for linux family, your XbfLibR1.so should rename to libXbfR.so
 </code></pre><h2 id="launch">launch</h2>
 <ul>
 <li>see library</li>
@@ -250,15 +259,6 @@ Java_com_cartionsoft_xbf_ReadXbf_sayHello(
         /usr/lib/jni
         /lib
         /usr/lib
-</code></pre><h3 id="generate-so">Generate .so</h3>
-<ul>
-<li>linux</li>
-</ul>
-<pre tabindex="0"><code>g++ -shared -fPIC -I&#34;$JAVA_HOME/include&#34; -I&#34;$JAVA_HOME/include/linux&#34; XbfLibR1.cpp -o libXbfR.so
-</code></pre><p>!!!Note!!!:
-<code>System.loadLibrary()</code> is the file name
-that requires a <a href="https://stackoverflow.com/questions/3950635/how-to-compile-dynamic-library-for-a-jni-application-on-linux/3987567#3987567">fixed format</a></p>
-<pre tabindex="0"><code>By example, libXXXX.so for linux family, your XbfLibR1.so should rename to libXbfR.so
 </code></pre><h3 id="java-libraryhttpsstackoverflowcoma38546706"><a href="https://stackoverflow.com/a/38546706">java library</a></h3>
 <pre tabindex="0"><code>vi ~/.bashrc
 </code></pre><p>add lib path:</p>
@@ -276,6 +276,7 @@ that requires a <a href="https://stackoverflow.com/questions/3950635/how-to-comp
 <ul>
 <li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html">Java Native Interface</a></li>
 <li><a href="https://stackoverflow.com/questions/13796786/jstring-return-in-jni-program">example - c/c++</a></li>
+<li><a href="https://www.geeksforgeeks.org/converting-number-to-string-in-cpp/">Converting Number to String in C++</a></li>
 </ul>
 
     </section>
