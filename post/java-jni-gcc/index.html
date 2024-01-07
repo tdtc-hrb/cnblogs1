@@ -29,7 +29,7 @@
     
     <meta property="og:description" content="使用GCC构建so; loadLibrary()" />
   	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2024-01-02T08:08:08&#43;08:00" />
+    <meta property="article:published_time" content="2024-01-05T08:08:08&#43;08:00" />
 
     
     
@@ -59,7 +59,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.121.1">
+    <meta name="generator" content="Hugo 0.121.2">
 
     <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/java-jni-gcc/" />
 
@@ -99,8 +99,8 @@
       "alternateName": "en"
     },
     "url": "https://tdtc-hrb.github.io/cnblogs/post/java-jni-gcc/",
-    "datePublished": "2024-01-02T08:08Z",
-    "dateModified": "2024-01-02T08:08Z",
+    "datePublished": "2024-01-05T08:08Z",
+    "dateModified": "2024-01-05T08:08Z",
     
     
     "description": "使用GCC构建so; loadLibrary()",
@@ -168,8 +168,8 @@
 
         <section class="post-meta">
         
-          <time class="post-date" datetime="2024-01-02T08:08:08&#43;08:00">
-            Jan 2, 2024
+          <time class="post-date" datetime="2024-01-05T08:08:08&#43;08:00">
+            Jan 5, 2024
           </time>
         
          
@@ -192,7 +192,7 @@ invalid ELF header (Possible cause: endianness mismatch)
 
 public class ReadXbf {
     static {
-      System.loadLibrary(&#34;XbfR&#34;);  // Load native library XbfR.dll (Windows) or libXbfR.so (Unixes)
+      System.loadLibrary(&#34;XbfLibR1&#34;);  // Load native library XbfLibR1.dll (Windows) or libXbfLibR1.so (Unixes)
                                    //  at runtime
                                    // This library contains a native method called sayHello()
     }
@@ -209,7 +209,7 @@ public class ReadXbf {
 </code></pre><ul>
 <li>Generate the JNI Header File</li>
 </ul>
-<pre tabindex="0"><code>javac -h . com/cartionsoft/xbf/ReadXbf.java
+<pre tabindex="0"><code>javac -h . ReadXbf.java
 </code></pre><h2 id="jni-with-c">JNI with C++</h2>
 <p>XbfLibR1.cpp:</p>
 <pre tabindex="0"><code>#include &lt;string.h&gt;
@@ -241,11 +241,11 @@ Java_com_cartionsoft_xbf_ReadXbf_sayHello(
 <ul>
 <li>linux</li>
 </ul>
-<pre tabindex="0"><code>g++ -shared -fPIC -I&#34;$JAVA_HOME/include&#34; -I&#34;$JAVA_HOME/include/linux&#34; XbfLibR1.cpp -o libXbfR.so
+<pre tabindex="0"><code>g++ -shared -fPIC -I&#34;$JAVA_HOME/include&#34; -I&#34;$JAVA_HOME/include/linux&#34; XbfLibR1.cpp -o XbfLibR1.so
 </code></pre><p>!!!Note!!!:
 <code>System.loadLibrary()</code> is the file name
 that requires a <a href="https://stackoverflow.com/questions/3950635/how-to-compile-dynamic-library-for-a-jni-application-on-linux/3987567#3987567">fixed format</a></p>
-<pre tabindex="0"><code>By example, libXXXX.so for linux family, your XbfLibR1.so should rename to libXbfR.so
+<pre tabindex="0"><code>By example, libXXXX.so for linux family, your XbfLibR1.so should rename to libXbfLibR1.so
 </code></pre><h2 id="launch">launch</h2>
 <ul>
 <li>see library</li>
