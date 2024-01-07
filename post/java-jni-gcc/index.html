@@ -92,7 +92,7 @@
     },
     "headline": "jni - gcc",
     "name": "jni - gcc",
-    "wordCount":  276 ,
+    "wordCount":  280 ,
     "timeRequired": "PT2M",
     "inLanguage": {
       "@type": "Language",
@@ -248,23 +248,6 @@ that requires a <a href="https://stackoverflow.com/questions/3950635/how-to-comp
 <pre tabindex="0"><code>By example, libXXXX.so for linux family, your XbfLibR1.so should rename to libXbfLibR1.so
 </code></pre><h2 id="launch">launch</h2>
 <ul>
-<li>see library</li>
-</ul>
-<pre tabindex="0"><code>java -XshowSettings:properties
-</code></pre><p>info:</p>
-<pre tabindex="0"><code>    java.library.path = /usr/java/packages/lib/amd64
-        /usr/lib/x86_64-linux-gnu/jni
-        /lib/x86_64-linux-gnu
-        /usr/lib/x86_64-linux-gnu
-        /usr/lib/jni
-        /lib
-        /usr/lib
-</code></pre><h3 id="java-libraryhttpsstackoverflowcoma38546706"><a href="https://stackoverflow.com/a/38546706">java library</a></h3>
-<pre tabindex="0"><code>vi ~/.bashrc
-</code></pre><p>add lib path:</p>
-<pre tabindex="0"><code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/xb
-</code></pre><h3 id="execute">execute</h3>
-<ul>
 <li>exec</li>
 </ul>
 <pre tabindex="0"><code>java com.cartionsoft.xbf.ReadXbf
@@ -272,6 +255,26 @@ that requires a <a href="https://stackoverflow.com/questions/3950635/how-to-comp
 <li>temporary exec</li>
 </ul>
 <pre tabindex="0"><code>java -Djava.library.path=. com.cartionsoft.xbf.ReadXbf
+</code></pre><h3 id="java-libraryhttpsstackoverflowcoma38546706"><a href="https://stackoverflow.com/a/38546706">java library</a></h3>
+<pre tabindex="0"><code>vi ~/.bashrc
+</code></pre><p>add lib path:</p>
+<pre tabindex="0"><code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/xb
+</code></pre><p>Effective immediately:</p>
+<pre tabindex="0"><code>source ~/.bashrc
+</code></pre><ul>
+<li>see library</li>
+</ul>
+<pre tabindex="0"><code>java -XshowSettings:properties
+</code></pre><p>info:</p>
+<pre tabindex="0"><code> java.library.path =
+        /home/xb
+        /usr/java/packages/lib/amd64
+        /usr/lib/x86_64-linux-gnu/jni
+        /lib/x86_64-linux-gnu
+        /usr/lib/x86_64-linux-gnu
+        /usr/lib/jni
+        /lib
+        /usr/lib
 </code></pre><h1 id="ref">Ref</h1>
 <ul>
 <li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html">Java Native Interface</a></li>
