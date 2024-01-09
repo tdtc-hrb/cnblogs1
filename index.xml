@@ -83,7 +83,7 @@
       <link>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq4/</link>
       <pubDate>Sat, 18 Nov 2023 08:08:08 +0800</pubDate>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq4/</guid>
-      <description>monitor Task Manager Task manager doesn&amp;rsquo;t update resources on real time&#xA;At the top, click View. Navigate to Update speed. If it&amp;rsquo;s paused, then click Normal. </description>
+      <description>monitor Task Manager Task manager doesn&amp;rsquo;t update resources on real time&#xA;At the top, click View. Navigate to Update speed. If it&amp;rsquo;s paused, then click Normal. MS-Edge close sidebar Regardless of Microsoft&amp;rsquo;s reasoning, you now know how to toggle the sidebar on or off in Edge 119. Just head to Settings &amp;gt; Sidebar &amp;gt; Copilot &amp;gt; Always Show Sidebar. Alternatively, you can use the Ctrl + Shift + / shortcut.</description>
     </item>
     <item>
       <title>Setting Up Visual Studio 14&#43; for xASM Programming</title>
@@ -178,9 +178,9 @@
     </item>
     <item>
       <title>jmx - first demo</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/</link>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-ch2/</link>
       <pubDate>Wed, 08 Feb 2023 08:08:08 +0800</pubDate>
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-jdk7/</guid>
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-ch2/</guid>
       <description>Starting with the J2SE platform 5.0, JMX technology is included in the Java SE platform.&#xA;jmxtools Download the jar and pom files, Then copy it to the M2 directory. M2: C:\Users\tdtc\.m2\repository\com\sun\jdmk\jmxtools\1.2.1 Source project . |____src | |____main | | |____java | | | |____jmxbook.ch2 |____pom.xml&#xA;Gen jar:&#xA;mvn package pom.xml &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;groupId&amp;gt;jmxbook&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jmxInAction&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;build/&amp;gt; &amp;lt;repositories&amp;gt; &amp;lt;repository&amp;gt; &amp;lt;id&amp;gt;datanucleus.org/downloads/maven2&amp;lt;/id&amp;gt; &amp;lt;name&amp;gt;datanucleus.org Maven Repository&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://www.datanucleus.org/downloads/maven2/&amp;lt;/url&amp;gt; &amp;lt;/repository&amp;gt; &amp;lt;/repositories&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!</description>
     </item>
     <item>
@@ -242,7 +242,7 @@
     <item>
       <title>windbg调试sandboxie driver</title>
       <link>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</link>
-      <pubDate>Tue, 06 Sep 2022 06:08:08 +0800</pubDate>
+      <pubDate>Tue, 06 Sep 2022 04:08:08 +0800</pubDate>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</guid>
       <description>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp;amp; windows sdk8.1.&#xA;Prepare Host Env:&#xA;OS Win1809(x64) VM VMware(v10.0.7) / Vbox(v6.1.38) WDK(include windbg) Windows Driver Kit Version 7.1.0 - win7 / Windows 10, version 2004 - win8.1 VM setting - serial port vmware or vbox&#xA;\\.\pipe\com_1 vmware i/o mode:&#xA;yield CPU on poll vbox Port 2: uncheck:&#xA;Connect to existing pipe/socket windbg about version: The operating system needs to match the same or higher version of windbg.</description>
     </item>
@@ -259,6 +259,13 @@
       <pubDate>Wed, 27 Jul 2022 00:26:39 +0800</pubDate>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/css-bulma-tabs/</guid>
       <description>html Note: The header and body are wrapped with div!&#xA;&amp;lt;div id=&amp;#34;tabs-with-content&amp;#34;&amp;gt;&#xD;&amp;lt;/div&amp;gt; Header &amp;lt;div class=&amp;#34;tabs is-centered&amp;#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Tech Parameters&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; Body &amp;lt;div class=&amp;#34;tabs is-centered&amp;#34;&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a&amp;gt;Tech Parameters&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;section class=&amp;#34;tab-content&amp;#34;&amp;gt; &amp;lt;table class=&amp;#34;table&amp;#34;&amp;gt; &amp;lt;tbody&amp;gt; &amp;lt;td&amp;gt; &amp;lt;%= image_tag &amp;#34;#{@image.name}&amp;#34; %&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;td&amp;gt; &amp;lt;%= @product.description %&amp;gt; &amp;lt;/td&amp;gt; &amp;lt;/tbody&amp;gt; &amp;lt;/table&amp;gt; &amp;lt;/section&amp;gt; &amp;lt;section class=&amp;#34;tab-content&amp;#34;&amp;gt; &amp;lt;%= @parameter.ipxx %&amp;gt; &amp;lt;/section&amp;gt; &amp;lt;/div&amp;gt; javascript let tabsWithContent = (function () { let tabs = document.</description>
+    </item>
+    <item>
+      <title>RHEL更换CentOS Yum</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/ops_rhel_repo/</link>
+      <pubDate>Sun, 12 Jun 2022 12:58:39 +0800</pubDate>
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/ops_rhel_repo/</guid>
+      <description>v7.x Red Hat Enterprise Linux7.x&#xA;Yum Repo rpm -aq|grep yum|xargs rpm -e --nodeps&#xD;rpm -ivh http://mirrors.ustc.edu.cn/centos/7.9.2009/os/x86_64/Packages/wget-1.14-18.el7_6.1.x86_64.rpm down:&#xA;wget http://mirrors.ustc.edu.cn/centos/7.9.2009/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpm&#xD;wget http://mirrors.ustc.edu.cn/centos/7.9.2009/os/x86_64/Packages/yum-3.4.3-168.el7.centos.noarch.rpm&#xD;wget http://mirrors.ustc.edu.cn/centos/7.9.2009/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm install:&#xA;rpm -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpm&#xD;rpm -ivh yum-3.4.3-168.el7.centos.noarch.rpm yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm repo file /etc/yum.repos.d/CentOS-Base.repo CentOS-Base.repo - cento7&#xA;# CentOS-Base.repo&#xD;#&#xD;# The mirror system uses the connecting IP address of the client and the&#xD;# update status of each mirror to pick mirrors that are updated to and&#xD;# geographically close to the client.</description>
     </item>
     <item>
       <title>(dev mode) install CONSUL on ubuntu</title>
@@ -315,13 +322,6 @@
       <pubDate>Sun, 28 Nov 2021 08:18:08 +0800</pubDate>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</guid>
       <description>thread 线程相关&#xA;asynchronously connect方法已实现异步。&#xA;synchronously qmutexlocker&#xA;创建信号锁 m_mutex.lock(); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。&#xA;signals: void error(const QString &amp;amp;s); void timeout(const QString &amp;amp;s); Worker method Init Port 设置私有成员变量&#xA;部分代码&#xA;m_waitTimeout = waitTimeout; Receive data 打开串口&#xA;if (!m_serialPort-&amp;gt;open(QIODevice::ReadWrite)) { qDebug() &amp;lt;&amp;lt; tr(&amp;#34;Can&amp;#39;t open %1, error code %2&amp;#34;) .arg(m_portName).arg(m_serialPort-&amp;gt;error()); m_serialPort-&amp;gt;close(); return false; } 接收数据&#xA;while (m_serialPort-&amp;gt;waitForReadyRead(500)) responseData += m_serialPort-&amp;gt;read(1024); Deploy for windows copy exe to target directory.&#xA;copy C:\Users\tdtc\Documents\Projects\serialCommQt\Release\serialCommQt.exe C:\Users\tdtc\Documents\serialCommQt_qmake\ exec windeployqt:&#xA;for QML C:\Qt\Qt5.12.11\5.12.11\msvc2017\bin\windeployqt --qmldir C:\Users\tdtc\Documents\SerialCom\SerialCom\QtRaspberry C:\Users\tdtc\Documents\SerialCom_qml\serialCom.</description>
-    </item>
-    <item>
-      <title>docker(ce) on Ubuntu</title>
-      <link>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</link>
-      <pubDate>Sat, 20 Nov 2021 10:48:08 +0800</pubDate>
-      <guid>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</guid>
-      <description>Note:&#xA;# - requires given linux commands to be executed with root privileges either directly as a root user or by use of sudo command $ - requires given linux commands to be executed as a regular non-privileged user Docker CE 1. install $sudo apt install docker.io 2. enable $ sudo systemctl start docker $ sudo systemctl enable docker test:&#xA;$ docker --version Docker compose 1. down sudo curl -L &amp;#34;https://github.</description>
     </item>
     <item>
       <title>SQLite在.net core的demo</title>
@@ -399,6 +399,13 @@
       <pubDate>Sun, 28 Feb 2021 17:08:08 +0800</pubDate>
       <guid>https://tdtc-hrb.github.io/cnblogs/post/e-enc28j60-driver/</guid>
       <description>SPI 通过ASF示例(iar)改写为Keil(mdk v5.18a)&#xA;Init 在初始化过程中需要mck(Master Clock Sources)。&#xA;uint32_t sysclk_get_peripheral_hz() { /* CONFIG_SYSCLK_PRES is the register value for setting the expected */ /* prescaler, not an immediate value. */ return sysclk_get_main_hz() / ((CONFIG_SYSCLK_PRES == SYSCLK_PRES_3) ? 3 : (1 &amp;lt;&amp;lt; (CONFIG_SYSCLK_PRES &amp;gt;&amp;gt; PMC_MCKR_PRES_Pos))); } pio Pull-up Enable PIO Disable spi master init Enable peripheral clock Set spi master mode Disable Mode Fault Detection Disable loopback mode Set Peripheral Chip Select (PCS) value Set fixed peripheral select Disable Peripheral Select Decode Set delay between chip selects spi master setup device spi calc baudrate div Configure timing for SPI transfer Set number of bits per transfer Set Serial Clock Baud Rate divider value (SCBR) Configure CS behavior for SPI transfer (\ref spi_cs_behavior_t) Set clock default state Set Data Capture Phase spi calc baudrate div short spi_calc_baudrate_div(const uint32_t baudrate, uint32_t mck) { int baud_div = div_ceil(mck, baudrate); /* The value of baud_div is from 1 to 255 in the SCBR field.</description>
+    </item>
+    <item>
+      <title>docker(ce) on Ubuntu</title>
+      <link>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</link>
+      <pubDate>Tue, 13 Oct 2020 08:08:08 +0800</pubDate>
+      <guid>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</guid>
+      <description>Note:&#xA;# - requires given linux commands to be executed with root privileges either directly as a root user or by use of sudo command $ - requires given linux commands to be executed as a regular non-privileged user Docker CE 1. install $sudo apt install docker.io 2. enable $ sudo systemctl start docker $ sudo systemctl enable docker test:&#xA;$ docker --version Docker compose 1. down sudo curl -L &amp;#34;https://github.</description>
     </item>
     <item>
       <title>ZooKeeper Installation(Dev)</title>
