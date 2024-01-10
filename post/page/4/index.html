@@ -153,7 +153,7 @@
 	
 	    <a class="newer-posts" href="/cnblogs/post/page/3/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 4 of 7</span>
+	<span class="page-number">Page 4 of 6</span>
 	
 	    <a class="older-posts" href="/cnblogs/post/page/5/">Older Posts &rarr;</a>
 	
@@ -164,15 +164,18 @@
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_keepalived-v2/">安装配置Keepalived - v2</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/sqlite.net.core/">SQLite在.net core的demo</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>OS: AlmaLinux/RockyLinux minimal(VBox v6.1.38)
-Virtual Box Network configure:
-Attached to Bridged Adapter Advanced promiscuous mode: Allow All 一、安装 prepare tool:
-RHEL7 #yum install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel \ glib2-devel pcre2-devel libnftnl-devel libmnl-devel systemd-devel kmod-devel RHEL8 powertools: #dnf --enablerepo=powertools install ipset-devel libnfnetlink-devel file-devel libnftnl-devel kmod-devel pcre2-devel none:
-#dnf install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel net-snmp-devel \ glib2-devel libmnl-devel systemd-devel git LVS manager: <a class="read-more" href="/cnblogs/post/ops_keepalived-v2/">&raquo;</a></p>
+            <p>IDE: VS2022 语言: C#
+简介： 本示例使用SQLite的密码、外键功能。
+一、工程设置 1. NuGet Tools -&gt; NuGet Package Manager -&gt; Package Manager Console Install-Package sqlite-net-pcl -Version 1.8.116 Install-Package sqlite-net-sqlcipher -Version 1.8.116 完整的窗体： 2. 控件 拖拽4个TextBox、4个Button、1个DataGridView
+二、功能实现 使用Synchronous API来实现连接、factoryCar表的查询、插入等操作。
+0. Entity class 注意：主键和外键
+建立两个实体类：FactoryCar和MarqueCar
+1. 连接 asyncConn = new SQLite.SQLiteAsyncConnection(options); 其中，options是SQLiteConnectionString实例化的字符串。
+var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, preKeyAction: db =&gt; db.Execute(&#34;PRAGMA cipher_default_use_hmac = OFF;&#34;), postKeyAction: db =&gt; db.Execute(&#34;PRAGMA kdf_iter = 128000;&#34;)); 2. 查询 异步查询 var factoryCars = asyncConn. <a class="read-more" href="/cnblogs/post/sqlite.net.core/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -181,8 +184,8 @@ RHEL7 #yum install gcc make autoconf automake openssl-devel libnl3-devel \ iptab
         
 
         
-        <time class="post-date" datetime="2022-10-06T08:38:08&#43;08:00">
-            6 Oct 2022
+        <time class="post-date" datetime="2021-11-19T19:18:08&#43;08:00">
+            19 Nov 2021
         </time>
     </footer>
 </article>
@@ -190,14 +193,17 @@ RHEL7 #yum install gcc make autoconf automake openssl-devel libnl3-devel \ iptab
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_openssl/">How To Install OpenSSL in RHEL</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-restful/">ASP.net Core 的RESTful应用</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>RHEL Community Version Alma Linux / Rocky Linux Prepare Install development tool:
-# dnf group install &#39;Development Tools&#39; Install dependencies:
-# dnf install perl-core zlib-devel -y down latest OpenSSL $mkdir openssl-1.1.1 $curl --progress https://www.openssl.org/source/openssl-1.1.1q.tar.gz | tar xz -C ./openssl-1.1.1 --strip-components 1 setup $cd openssl-1.1.1 RHEL8 ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl shared zlib RHEL7 ./config --prefix=/usr --shared make &amp;&amp; install $make Root permission Required:
-$sudo make install RHEL8 # mv /bin/openssl /bin/openssl.backup# cp /usr/local/ssl/bin/openssl /bin/openssl test: <a class="read-more" href="/cnblogs/post/ops_openssl/">&raquo;</a></p>
+            <p>使用Scaffolder模板创建api。
+PowerShell v5.1 IDE: Visual Studio Code/Visual Studio 2022 NuGet ..\AppData\Roaming\NuGet\NuGet.Config
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;configuration&gt; &lt;packageSources&gt; &lt;add key=&#34;api.nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; /&gt; &lt;/packageSources&gt; &lt;/configuration&gt; Create Project vs code
+dotnet new webapi -o MyWebApp --package Swashbuckle.AspNetCore:PackageVersion=6.2.3 add NuGet package dotnet add package Microsoft.EntityFrameworkCore dotnet add package MySql.EntityFrameworkCore dotnet add package Microsoft.EntityFrameworkCore.Tools Option NuGet package Pomelo:
+CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql Test Browser
+Models 建立Entity类：Supplier、Product、Category
+DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbContext(DbContextOptions&lt;StorageBuyDbContext&gt; options) : base(options){} public DbSet&lt;Category&gt; Categories { get; set; } public DbSet&lt;Supplier&gt; Suppliers { get; set; } public DbSet&lt;Product&gt; Products { get; set; } } add service add connectiong string &#34;Data&#34;: { &#34;StorageBuy&#34;: { &#34;ConnectionString&#34;: &#34;server=127. <a class="read-more" href="/cnblogs/post/asp.net6-restful/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -206,8 +212,8 @@ $sudo make install RHEL8 # mv /bin/openssl /bin/openssl.backup# cp /usr/local/s
         
 
         
-        <time class="post-date" datetime="2022-10-05T08:38:08&#43;08:00">
-            5 Oct 2022
+        <time class="post-date" datetime="2021-11-11T12:38:08&#43;08:00">
+            11 Nov 2021
         </time>
     </footer>
 </article>
@@ -215,13 +221,13 @@ $sudo make install RHEL8 # mv /bin/openssl /bin/openssl.backup# cp /usr/local/s
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_openjdk_rhel/">设置OpenJDK</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-grpc/">ASP.net Core 的gRPC Service应用</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p> RHEL Community Version Alma Linux / Rocky Linux 1. install jre:
-$sudo dnf install java -y jdk $sudo dnf install java-1.8.0-openjdk-devel 2. set path $sudo vi /etc/profile export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el8_6.x86_64 export CLASSPATH=.:$JAVA_HOME/jre/lib/:. export PATH=$PATH:$JAVA_HOME/bin $su - root #source /etc/profile About path 3.3. INSTALL OPENJDK ON RED HAT ENTERPRISE LINUX - 2.Optional: Set the JAVA_HOME environment variable
-Reference How to install Java on CentOS 7 OpenJDK Version Info - Releases  <a class="read-more" href="/cnblogs/post/ops_openjdk_rhel/">&raquo;</a></p>
+            <p>Server 在Ubuntu V20.04; Client 在Windows CMD运行。
+PowerShell Core v7.2 IDE: VS2022 Community(v17.0)/VS Code(docker extension) VM: VBox(v6.1) 接口文件说明 Protos/greet.proto
+定义service service Greeter { // Sends a greeting rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message request message HelloRequest { string name = 1; } response message HelloReply { string message = 1; } server Create VS2022 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file View -&gt; Command Palette(Ctrl+Shift+P) Enter: Docker fi choice1: Add Docker Files to Workspace&hellip; choice2: . <a class="read-more" href="/cnblogs/post/asp.net6-grpc/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -230,8 +236,8 @@ Reference How to install Java on CentOS 7 OpenJDK Version Info - Releases  <a cl
         
 
         
-        <time class="post-date" datetime="2022-10-04T08:08:08-08:00">
-            4 Oct 2022
+        <time class="post-date" datetime="2021-11-09T20:38:18&#43;08:00">
+            9 Nov 2021
         </time>
     </footer>
 </article>
@@ -239,16 +245,14 @@ Reference How to install Java on CentOS 7 OpenJDK Version Info - Releases  <a cl
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/vc-windbg_driver/">windbg调试sandboxie driver</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/asp.net5-restful/">ASP.net Core 的RESTful应用</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp; windows sdk8.1.
-Prepare Host Env:
-OS Win1809(x64) VM VMware(v10.0.7) / Vbox(v6.1.38) WDK(include windbg) Windows Driver Kit Version 7.1.0 - win7 / Windows 10, version 2004 - win8.1 VM setting - serial port vmware or vbox
-\\.\pipe\com_1 vmware i/o mode:
-yield CPU on poll vbox Port 2: uncheck:
-Connect to existing pipe/socket windbg about version: The operating system needs to match the same or higher version of windbg. <a class="read-more" href="/cnblogs/post/vc-windbg_driver/">&raquo;</a></p>
+            <p>在发布具有历史意义的.net 5.0的2H前，写下此博文。 PowerShell v5.1 IDE: VS Code/VS 2019 NuGet ..\AppData\Roaming\NuGet\NuGet.Config
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;configuration&gt; &lt;packageSources&gt; &lt;add key=&#34;api.nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; /&gt; &lt;/packageSources&gt; &lt;/configuration&gt; Create Project Choice vs2019 or vs code.
+VS Code VS 2019 VS2019 add NuGet packages Install-Package Microsoft.EntityFrameworkCore Install-Package MySql.Data.EntityFrameworkCore Install-Package Microsoft.EntityFrameworkCore.Tools vs code dotnet new webapi -o MyWebApp --package Swashbuckle.AspNetCore:PackageVersion=6.2.3 add NuGet package dotnet add package Microsoft.EntityFrameworkCore dotnet add package MySql.EntityFrameworkCore dotnet add package Microsoft.EntityFrameworkCore.Tools Test Browser
+Models 建立Entity类：Supplier、Product、Category <a class="read-more" href="/cnblogs/post/asp.net5-restful/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -257,8 +261,8 @@ Connect to existing pipe/socket windbg about version: The operating system needs
         
 
         
-        <time class="post-date" datetime="2022-09-06T04:08:08&#43;08:00">
-            6 Sep 2022
+        <time class="post-date" datetime="2021-10-23T12:08:08&#43;08:00">
+            23 Oct 2021
         </time>
     </footer>
 </article>
@@ -266,17 +270,16 @@ Connect to existing pipe/socket windbg about version: The operating system needs
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_install-distribution_nsis/">使用 NSIS (Nullsoft Scriptable Install System)</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/qt-sqlite3/">在qt6使用sqlite3</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>编译xp目标，vs2015 for xp 需要如下组件:
-Microsoft.VisualStudio.Component.VC.140Microsoft.VisualStudio.Component.WinXP 在目标机xp 安装Microsoft Visual C++ 2015 Redistributable Update 3
-OS Win1809(x64) VS2017(v15.9) Installation down v2.51
-InetC From Inetc.zip, copy \Plugins\x86-ansi\InetC.dll to your NSIS plugins folder (e.g. C:\Program Files (x86)\NSIS\Plugins)
-UI System.nsh Overwrite C:\Program Files (x86)\NSIS\Contrib\Modern UI\System.nsh with install\nsis_updates.zip\nsis\Contrib\Modern UI\System.nsh Languages Copy language files from install\nsis_updates.zip\nsis\Contrib\Modern UI\Language files to C:\Program Files (x86)\NSIS\Contrib\Modern UI\Language files Iconv down libiconv-1.9.2-1-bin.zip and libiconv-1.9.2-1-dep.zip
-location:
-C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that are required: <a class="read-more" href="/cnblogs/post/ops_install-distribution_nsis/">&raquo;</a></p>
+            <p>lib 导入静态库
+#pragma comment(lib, &#34;Qt6Sql.lib&#34;) query data #include &lt;QtSql/QSqlDatabase&gt; #include &lt;QtSql/QSqlQueryModel&gt; 首先，设置数据库类型；然后，打开数据库；最后，关联TableView。
+QSqlDatabase db = QSqlDatabase::addDatabase(&#34;QSQLITE&#34;); open db 先设置数据库名，再打开db。
+db.setDatabaseName(&#34;SerialComm.db&#34;); db.open(); model-view 先建立Query对象，再设置Sql语句。
+QSqlQueryModel *model = new QSqlQueryModel; model-&gt;setQuery(&#34;SELECT * FROM com1&#34;); 最后，设置关联。
+ui.tableView-&gt;setModel(model); src QtSqlite3Demo.ui &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;ui version=&#34;4.0&#34;&gt; &lt;class&gt;QtSqlite3DemoClass&lt;/class&gt; &lt;widget class=&#34;QMainWindow&#34; name=&#34;QtSqlite3DemoClass&#34;&gt; &lt;property name=&#34;geometry&#34;&gt; &lt;rect&gt; &lt;x&gt;0&lt;/x&gt; &lt;y&gt;0&lt;/y&gt; &lt;width&gt;600&lt;/width&gt; &lt;height&gt;400&lt;/height&gt; &lt;/rect&gt; &lt;/property&gt; &lt;property name=&#34;windowTitle&#34;&gt; &lt;string&gt;QtSqlite3Demo&lt;/string&gt; &lt;/property&gt; &lt;widget class=&#34;QWidget&#34; name=&#34;centralWidget&#34;&gt; &lt;widget class=&#34;QPushButton&#34; name=&#34;btnSearch&#34;&gt; &lt;property name=&#34;geometry&#34;&gt; &lt;rect&gt; &lt;x&gt;290&lt;/x&gt; &lt;y&gt;30&lt;/y&gt; &lt;width&gt;75&lt;/width&gt; &lt;height&gt;24&lt;/height&gt; &lt;/rect&gt; &lt;/property&gt; &lt;property name=&#34;text&#34;&gt; &lt;string&gt;Search&lt;/string&gt; &lt;/property&gt; &lt;/widget&gt; &lt;widget class=&#34;QLineEdit&#34; name=&#34;lineEdit&#34;&gt; &lt;property name=&#34;geometry&#34;&gt; &lt;rect&gt; &lt;x&gt;20&lt;/x&gt; &lt;y&gt;30&lt;/y&gt; &lt;width&gt;251&lt;/width&gt; &lt;height&gt;22&lt;/height&gt; &lt;/rect&gt; &lt;/property&gt; &lt;/widget&gt; &lt;widget class=&#34;QTableView&#34; name=&#34;tableView&#34;&gt; &lt;property name=&#34;geometry&#34;&gt; &lt;rect&gt; &lt;x&gt;20&lt;/x&gt; &lt;y&gt;81&lt;/y&gt; &lt;width&gt;561&lt;/width&gt; &lt;height&gt;241&lt;/height&gt; &lt;/rect&gt; &lt;/property&gt; &lt;/widget&gt; &lt;/widget&gt; &lt;widget class=&#34;QMenuBar&#34; name=&#34;menuBar&#34;&gt; &lt;property name=&#34;geometry&#34;&gt; &lt;rect&gt; &lt;x&gt;0&lt;/x&gt; &lt;y&gt;0&lt;/y&gt; &lt;width&gt;600&lt;/width&gt; &lt;height&gt;22&lt;/height&gt; &lt;/rect&gt; &lt;/property&gt; &lt;/widget&gt; &lt;widget class=&#34;QToolBar&#34; name=&#34;mainToolBar&#34;&gt; &lt;attribute name=&#34;toolBarArea&#34;&gt; &lt;enum&gt;TopToolBarArea&lt;/enum&gt; &lt;/attribute&gt; &lt;attribute name=&#34;toolBarBreak&#34;&gt; &lt;bool&gt;false&lt;/bool&gt; &lt;/attribute&gt; &lt;/widget&gt; &lt;widget class=&#34;QStatusBar&#34; name=&#34;statusBar&#34;/&gt; &lt;/widget&gt; &lt;layoutdefault spacing=&#34;6&#34; margin=&#34;11&#34;/&gt; &lt;resources&gt; &lt;include location=&#34;QtSqlite3Demo. <a class="read-more" href="/cnblogs/post/qt-sqlite3/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -285,8 +288,8 @@ C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that 
         
 
         
-        <time class="post-date" datetime="2022-09-03T00:08:08&#43;08:00">
-            3 Sep 2022
+        <time class="post-date" datetime="2021-06-18T00:08:08&#43;08:00">
+            18 Jun 2021
         </time>
     </footer>
 </article>
@@ -294,12 +297,14 @@ C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that 
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/css-bulma-tabs/">tabs 实现</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/php-mysqli-tutorial/">使用mysqli和mysql查询数据库</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>html Note: The header and body are wrapped with div!
-&lt;div id=&#34;tabs-with-content&#34;&gt;&lt;/div&gt; Header &lt;div class=&#34;tabs is-centered&#34;&gt; &lt;ul&gt; &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; Body &lt;div class=&#34;tabs is-centered&#34;&gt; &lt;ul&gt; &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div&gt; &lt;section class=&#34;tab-content&#34;&gt; &lt;table class=&#34;table&#34;&gt; &lt;tbody&gt; &lt;td&gt; &lt;%= image_tag &#34;#{@image.name}&#34; %&gt; &lt;/td&gt; &lt;td&gt; &lt;%= @product.description %&gt; &lt;/td&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;/section&gt; &lt;section class=&#34;tab-content&#34;&gt; &lt;%= @parameter.ipxx %&gt; &lt;/section&gt; &lt;/div&gt; javascript let tabsWithContent = (function () { let tabs = document. <a class="read-more" href="/cnblogs/post/css-bulma-tabs/">&raquo;</a></p>
+            <p>导入数据 导入MySQL示例数据库employees
+C:\Users\tdtc\Downloads\test_db&gt;%MYSQL57_HOME%\bin\mysql &lt; employees.sql -u DBAdmin -p Enter password: ******* INFO CREATING DATABASE STRUCTURE INFO storage engine: InnoDB INFO LOADING departments INFO LOADING employees INFO LOADING dept_emp INFO LOADING dept_manager INFO LOADING titles INFO LOADING salaries C:\Users\tdtc\Downloads\test_db&gt; 查询数据 查询固定员工ID的姓名，所属部门，职务
+以下为创建SQL的过程。
+1. 查询姓名 SELECT concat(first_name, &#39; &#39; , last_name) as name FROM `employees` WHERE emp_no = 10001 2. 查询部门ID SELECT dept_no FROM `dept_emp` WHERE emp_no = 10001 3. 查询所在部门名称 SELECT dept_name FROM `departments` WHERE dept_no = (SELECT dept_no FROM `dept_emp` WHERE emp_no = 10001) 4. <a class="read-more" href="/cnblogs/post/php-mysqli-tutorial/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -308,8 +313,8 @@ C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that 
         
 
         
-        <time class="post-date" datetime="2022-07-27T00:26:39&#43;08:00">
-            27 Jul 2022
+        <time class="post-date" datetime="2021-04-20T20:26:39&#43;08:00">
+            20 Apr 2021
         </time>
     </footer>
 </article>
@@ -317,15 +322,14 @@ C:\Users\tdtc\Documents\sandboxie\tools\iconv These contain the 3 binaries that 
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_rhel_repo/">RHEL更换CentOS Yum</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/asp.net5-grpc/">ASP.net Core 的gRPC Service应用</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>v7.x Red Hat Enterprise Linux7.x
-Yum Repo rpm -aq|grep yum|xargs rpm -e --nodepsrpm -ivh http://mirrors.ustc.edu.cn/centos/7.9.2009/os/x86_64/Packages/wget-1.14-18.el7_6.1.x86_64.rpm down:
-wget http://mirrors.ustc.edu.cn/centos/7.9.2009/os/x86_64/Packages/yum-metadata-parser-1.1.4-10.el7.x86_64.rpmwget http://mirrors.ustc.edu.cn/centos/7.9.2009/os/x86_64/Packages/yum-3.4.3-168.el7.centos.noarch.rpmwget http://mirrors.ustc.edu.cn/centos/7.9.2009/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm install:
-rpm -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpmrpm -ivh yum-3.4.3-168.el7.centos.noarch.rpm yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch.rpm repo file /etc/yum.repos.d/CentOS-Base.repo CentOS-Base.repo - cento7
-# CentOS-Base.repo## The mirror system uses the connecting IP address of the client and the# update status of each mirror to pick mirrors that are updated to and# geographically close to the client. <a class="read-more" href="/cnblogs/post/ops_rhel_repo/">&raquo;</a></p>
+            <p>Server 在Ubuntu V20.04; Client 在Windows CMD运行。
+PowerShell v5.1 IDE: VS2019 Community(v16.9)/VS Code(docker extension) VM: VBox(v6.1) 接口文件说明 Protos/greet.proto
+现版本(v16.9)已可以自动生成
+定义service service Greeter { // Sends a greeting rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message request message HelloRequest { string name = 1; } response message HelloReply { string message = 1; } server Create VS2019 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file View -&gt; Command Palette(Ctrl+Shift+P) Enter: Docker fi choice1: Add Docker Files to Workspace&hellip; choice2: . <a class="read-more" href="/cnblogs/post/asp.net5-grpc/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -333,19 +337,9 @@ rpm -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpmrpm -ivh yum-3.4.3-168.el7.
 
         
 
-        on
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/yum/">#yum</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/centos7/">#CentOS7</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/epel-release/">#epel-release</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/7.9.2009/">#7.9.2009</a>,
-            
         
-        <time class="post-date" datetime="2022-06-12T12:58:39&#43;08:00">
-            12 Jun 2022
+        <time class="post-date" datetime="2021-03-16T08:08:08&#43;08:00">
+            16 Mar 2021
         </time>
     </footer>
 </article>
@@ -353,13 +347,15 @@ rpm -ivh yum-metadata-parser-1.1.4-10.el7.x86_64.rpmrpm -ivh yum-3.4.3-168.el7.
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/install-consul_ubuntu/">(dev mode) install CONSUL on ubuntu</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/e-avr8-blink/">arduino 开发环境</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>install $sudo apt-get update $sudo apt-get install consul run $consul agent -dev -bind 192.168.3.128 http://localhost:8500/ui
-update down $wget https://releases.hashicorp.com/consul/1.12.1/consul_1.12.1_linux_amd64.zip unzip $sudo unzip consul_1.12.1_linux_amd64.zip -d /usr/local/bin Verifying the Installation:
-$consul -v Consul v1.12.1 Ref Install Consul Run the Consul Agent  <a class="read-more" href="/cnblogs/post/install-consul_ubuntu/">&raquo;</a></p>
+            <p>使用跑马灯来验证.
+Pre IDE Arduino CC(.zip文件) Atmel Studio 7 编码 我们使用使用AS7是为了使用它的智能提示和方便查看函数原型.
+建立工程 - Arduino 文件-&gt;示例-&gt;01.Basics-&gt;Blink
+建立工程 - AS7 New-&gt;Project &ldquo;Create Project from Arduino Sketch&rdquo; 设置Arduino sketch属性: Sketch File、Arduino IDE、Board、Device 烧写 把代码copy回arduino ide
+/* Blink Turns on an LED on for one second, then off for one second, repeatedly. Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO it is attached to digital pin 13, on MKR1000 on pin 6. <a class="read-more" href="/cnblogs/post/e-avr8-blink/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -368,8 +364,8 @@ $consul -v Consul v1.12.1 Ref Install Consul Run the Consul Agent  <a class="rea
         
 
         
-        <time class="post-date" datetime="2022-05-26T23:08:08&#43;08:00">
-            26 May 2022
+        <time class="post-date" datetime="2021-03-06T05:08:08&#43;08:00">
+            6 Mar 2021
         </time>
     </footer>
 </article>
@@ -377,17 +373,13 @@ $consul -v Consul v1.12.1 Ref Install Consul Run the Consul Agent  <a class="rea
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/es24-install/">Elasticsearch 2.4 安装</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/docker_ce-ubuntu-config/">docker(ce) on Ubuntu</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>Ubuntu 20.04.1
-Part I. Elasticsearch 1. install JDK 1) down jdk8 wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz unzip:
-$sudo mkdir /usr/java $sudo tar zxvf OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz -C /usr/java 2) setup root:
-$sudo -sH
-$echo &#39;export JAVA_HOME=/usr/java/jdk8u332-b09&#39; &gt;&gt; /etc/bash.bashrc $echo &#39;export CLASSPATH=$JAVA_HOME/lib/:.&#39; &gt;&gt; /etc/bash.bashrc $echo &#39;export PATH=$PATH:$JAVA_HOME/bin&#39; &gt;&gt; /etc/bash.bashrc $source /etc/bash.bashrc 3) test java -version echo $JAVA_HOME 2. Elasticsearch exec pack 1) down curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.6/elasticsearch-2.4.6.tar.gz unzip:
-tar -xvf elasticsearch-2.4.6.tar.gz 2) config ../config/elasticsearch.yml
-network network. <a class="read-more" href="/cnblogs/post/es24-install/">&raquo;</a></p>
+            <p>Note:
+# - requires given linux commands to be executed with root privileges either directly as a root user or by use of sudo command $ - requires given linux commands to be executed as a regular non-privileged user Docker CE 1. install $sudo apt install docker.io 2. enable $ sudo systemctl start docker $ sudo systemctl enable docker test:
+$ docker --version Docker compose 1. down sudo curl -L &#34;https://github. <a class="read-more" href="/cnblogs/post/docker_ce-ubuntu-config/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -396,8 +388,8 @@ network network. <a class="read-more" href="/cnblogs/post/es24-install/">&raquo;
         
 
         
-        <time class="post-date" datetime="2022-05-25T18:08:08&#43;08:00">
-            25 May 2022
+        <time class="post-date" datetime="2020-10-13T08:08:08&#43;08:00">
+            13 Oct 2020
         </time>
     </footer>
 </article>
@@ -405,13 +397,16 @@ network network. <a class="read-more" href="/cnblogs/post/es24-install/">&raquo;
 	
 	   <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/trace-zipkin-config/">Distributed traceability with Spring Cloud: Sleuth and Zipkin</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/e-lwip-ethernet/">lwIP移植笔记 - ethernet篇</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>I. Sleuth 0. Concept Trace A set of spans that form a call tree structure, forms the trace of the request.
-Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests.
-Tag Key/value pair that identifies certain information in the span. <a class="read-more" href="/cnblogs/post/trace-zipkin-config/">&raquo;</a></p>
+            <p>ethernet的移植工作，主要是“填空”ethernetif.c的过程！ （PS. 再一次感谢Adam Dunkels大侠的无私工作！以及对他的敬意！）
+头文件 ethernetif.h
+#ifndef ETHERNETIF_H_INCLUDED #define ETHERNETIF_H_INCLUDED #include &#34;lwip/netif.h&#34; #include &#34;lwip/ip_addr.h&#34; #include &#34;lwip/err.h&#34; #include &#34;netif/etharp.h&#34; err_t ethernetif_init(struct netif* netif); void ethernetif_input(struct netif* netif); #endif /* ETHERNETIF_H_INCLUDED */ ethernet interface ethernetif.c位置: ../src/netif
+初始化（低级） static void low_level_init(struct netif* netif) 发送（低级） static err_t low_level_output(struct netif* netif, struct pbuf* p) 接收（低级） static struct pbuf* low_level_input(struct netif* netif) 0. define hardware 根据硬件的不同！
+#include &#34;enc28j60.h&#34; ##　1. 初始化（低级）
+（1） 初始化MAC地址 netif-&gt;hwaddr[0] = 0x00; netif-&gt;hwaddr[1] = 0x04; netif-&gt;hwaddr[2] = 0x25; netif-&gt;hwaddr[3] = 0x1C; netif-&gt;hwaddr[4] = 0xA0; netif-&gt;hwaddr[5] = 0x02; （2） 初始化网卡 enc28j60Init(netif-&gt;hwaddr); （3）中断使能 如果使用RTOS，则设置MCU的SPI中断使能； 例如在CM0/3/4中： <a class="read-more" href="/cnblogs/post/e-lwip-ethernet/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -420,8 +415,8 @@ Tag Key/value pair that identifies certain information in the span. <a class="re
         
 
         
-        <time class="post-date" datetime="2022-05-25T08:08:08&#43;08:00">
-            25 May 2022
+        <time class="post-date" datetime="2020-07-25T10:08:08&#43;08:00">
+            25 Jul 2020
         </time>
     </footer>
 </article>
@@ -432,7 +427,7 @@ Tag Key/value pair that identifies certain information in the span. <a class="re
 	
 	    <a class="newer-posts" href="/cnblogs/post/page/3/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 4 of 7</span>
+	<span class="page-number">Page 4 of 6</span>
 	
 	    <a class="older-posts" href="/cnblogs/post/page/5/">Older Posts &rarr;</a>
 	

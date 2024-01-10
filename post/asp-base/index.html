@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        <meta name="referrer" content="no-referrer"/>
+    
+
+
+
+<meta name="twitter:title" content="3小时搞定asp.net 5.0"/>
+<meta name="twitter:description" content="MVC基础篇"/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="3小时搞定asp.net 5.0 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:site_name" content="迁移自(cnblogs.com/xiaobin-hlj80)" />
+  	<meta property="og:url" content="https://tdtc-hrb.github.io/cnblogs/post/asp-base/" />
+
+    
+        
+    
+
+    
+    <meta property="og:description" content="MVC基础篇" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-07-17T10:08:08&#43;08:00" />
+
+    
+    
+
+    <title>3小时搞定asp.net 5.0 &middot; 迁移自(cnblogs.com/xiaobin-hlj80)</title>
+
+    
+    <meta name="description" content="MVC基础篇" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/cnblogs/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/cnblogs/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/cnblogs/css/nav.css" />
+
+    
+
+    
+
+    
+      
+          <link href="/cnblogs/index.xml" rel="alternate" type="application/rss+xml" title="迁移自(cnblogs.com/xiaobin-hlj80)" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.121.2">
+
+    <link rel="canonical" href="https://tdtc-hrb.github.io/cnblogs/post/asp-base/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null 
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ]
+    },
+    "headline": "3小时搞定asp.net 5.0",
+    "name": "3小时搞定asp.net 5.0",
+    "wordCount":  274 ,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://tdtc-hrb.github.io/cnblogs/post/asp-base/",
+    "datePublished": "2020-07-17T10:08Z",
+    "dateModified": "2020-07-17T10:08Z",
+    
+    
+    "description": "MVC基础篇",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tdtc-hrb.github.io/cnblogs/post/asp-base/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/cnblogs/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+  
+      <a class="menu-button icon-feed" href="/cnblogs/index.xml" >&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">3小时搞定asp.net 5.0</h1>
+        <small>MVC基础篇</small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2020-07-17T10:08:08&#43;08:00">
+            Jul 17, 2020
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <ul>
+<li>IDE: Visual Studio 2019(community)</li>
+<li>DB：MySQL5.6+</li>
+</ul>
+<h1 id="安装net-5-sdk">安装.net 5 SDK</h1>
+<p>从<a href="https://dotnet.microsoft.com/download/dotnet-core">官网</a>下载<a href="https://dotnet.microsoft.com/download/dotnet/5.0">V5.0</a>: 32位（<a href="https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-preview.6-windows-x86-installer">x86</a>）/64位（<a href="https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-preview.6-windows-x64-installer">x64</a>）.</p>
+<h2 id="使用preview版的sdk">使用preview版的SDK</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Tools-&gt;Options
+</span></span><span style="display:flex;"><span>	Preview Features -&gt; Use preview of the .net core sdk
+</span></span></code></pre></div><h1 id="建立工程">建立工程</h1>
+<blockquote>
+<p>File-》New-》Project</p>
+<blockquote>
+<p>ASP.NET Core Web Application</p>
+</blockquote>
+</blockquote>
+<p><img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200717212145.png" alt="vs2019 p1"></p>
+<h2 id="简单修改主页">简单修改主页</h2>
+<blockquote>
+<p>Solution Explorer</p>
+<blockquote>
+<p>Views-》Index.cshtml</p>
+</blockquote>
+</blockquote>
+<p>增加如下代码：</p>
+<pre tabindex="0"><code class="language-asp.net" data-lang="asp.net">&lt;p&gt;这是我的第一个ASP.NET程序！&lt;/p&gt;
+</code></pre><p>点击“IIS Express”运行（如果弹出证书安装选“是”即可）。
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200717214241.png" alt="vs2019 p2"></p>
+<h1 id="增加数据库">增加数据库</h1>
+<h2 id="ef-core">EF Core</h2>
+<blockquote>
+<p>Project-》Manager NuGet Packages
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200717222234.png" alt="vs2019 p3"></p>
+</blockquote>
+<h2 id="entity-class">entity class</h2>
+<p>我们建立一个与数据表相对应的Entity类</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.ComponentModel.DataAnnotations;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> veic_web.Models
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">        [Key]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> param_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> statu_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> lang_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> img_id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> name { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> description { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="db-class">DB Class</h2>
+<blockquote>
+<p>Solution Explorer</p>
+<blockquote>
+<p>Model右键点击Add-》New Item选择Class
+Name: ApplicationDbContext.cs</p>
+</blockquote>
+</blockquote>
+<p>添加引用：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Microsoft.EntityFrameworkCore;
+</span></span></code></pre></div><p>添加继承：DbContext</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApplicationDbContext</span> : DbContext
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options) : <span style="color:#66d9ef">base</span>(options)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>代码模板在DbContext.cs
+添加Entity类支持</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> DbSet&lt;Product&gt; Products
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="repository操作类">Repository操作类</h3>
+<blockquote>
+<p>注意：使用VS2019生成的代码模板没有“public”，默认包权限！</p>
+</blockquote>
+<p>接口：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IProductRepository</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    IQueryable&lt;Product&gt; Products { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>实现：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EFProductRepository</span> : IProductRepository
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> ApplicationDbContext context;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> EFProductRepository(ApplicationDbContext ctx)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.context = ctx;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> IQueryable&lt;Product&gt; Products =&gt; context.Products;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="connector">connector</h3>
+<h4 id="添加mysqlconnector">添加MySQLConnector</h4>
+<blockquote>
+<p>Project-》Manager NuGet Packages
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200718015739.png" alt="vs2019 p4"></p>
+</blockquote>
+<h4 id="connection-string">connection string</h4>
+<blockquote>
+<p>appsettings.json</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>&#34;Data&#34;: {
+</span></span><span style="display:flex;"><span> &#34;VeicProducts&#34;: {
+</span></span><span style="display:flex;"><span> &#34;ConnectionString&#34;: &#34;server=127.0.0.1; user id=dba; password=qaz1xsw2; database=carnumber; pooling=false; Convert Zero Datetime=True&#34;
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><p>前后代码比较：
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200718183251.png" alt="TortoiseGit p1"></p>
+<h1 id="配置didependency-injection">配置DI（dependency injection）</h1>
+<blockquote>
+<p>Startup.cs</p>
+<blockquote>
+<p>主要是在ConfigureServices()添加代码！</p>
+</blockquote>
+</blockquote>
+<p>添加数据库context</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+</span></span><span style="display:flex;"><span>    options.UseMySQL(Configuration[<span style="color:#e6db74">&#34;Data:VeicProduct:ConnectionString&#34;</span>]));
+</span></span></code></pre></div><p>添加Repository</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>services.AddTransient&lt;IProductRepository, EFProductRepository&gt;();
+</span></span></code></pre></div><p>前后代码比较：
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200718182707.png" alt="TortoiseGit p2"></p>
+<h1 id="添加view">添加View</h1>
+<blockquote>
+<p>Index.cshtml</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>@model IEnumerable&lt;Product&gt;
+</span></span><span style="display:flex;"><span>@foreach (<span style="color:#66d9ef">var</span> p <span style="color:#66d9ef">in</span> Model)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    &lt;div&gt;
+</span></span><span style="display:flex;"><span>        &lt;h3&gt;@p.name&lt;/h3&gt;
+</span></span><span style="display:flex;"><span>        @p.description
+</span></span><span style="display:flex;"><span>    &lt;/div&gt;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>前后代码比较：
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200718182300.png" alt="TortoiseGit p3"></p>
+<h1 id="添加controller">添加Controller</h1>
+<blockquote>
+<p>HomeController.cs</p>
+</blockquote>
+<p>引用实例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> IProductRepository repository;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> HomeController(ILogger&lt;HomeController&gt; logger, IProductRepository repo)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>   _logger = logger;
+</span></span><span style="display:flex;"><span>   repository = repo;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>调用他：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> IActionResult Index()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> View(repository.Products);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>前后代码比较：
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200718181959.png" alt="TortoiseGit p4"></p>
+<p>运行效果：
+<img src="https://gitee.com/xiaobin80/cnblogs/raw/master/images/20200718034532.png" alt="vs2019 p5"></p>
+<p><a href="https://gitee.com/xiaobin80/veic_web/commits/master">演示code</a></p>
+<h1 id="reference">Reference</h1>
+<ul>
+<li><a href="http://www.allitebooks.org/pro-asp-net-core-mvc-2-7th-edition/">pro-asp-net-core-mvc-2-7th-edition</a></li>
+<li><a href="http://file.allitebooks.com/20171025/Pro%20ASP.NET%20Core%20MVC%202,%207th%20Edition.pdf">pro-asp-net-core-mvc-2-7th-edition pdf</a></li>
+<li><a href="https://stackoverflow.com/questions/48225989/the-entity-type-requires-a-primary-key-to-be-defined">The entity type requires a primary key to be defined</a></li>
+</ul>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=3%e5%b0%8f%e6%97%b6%e6%90%9e%e5%ae%9aasp.net%205.0&nbsp;-&nbsp;%e8%bf%81%e7%a7%bb%e8%87%aa%28cnblogs.com%2fxiaobin-hlj80%29&amp;url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fasp-base%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fasp-base%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fasp-base%2f&amp;description=3%e5%b0%8f%e6%97%b6%e6%90%9e%e5%ae%9aasp.net%205.0"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2ftdtc-hrb.github.io%2fcnblogs%2fpost%2fasp-base%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="/cnblogs/post/e-lwip-ethernet/">
+          <section class="post">
+              <h2>lwIP移植笔记 - ethernet篇</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="/cnblogs/post/e-freertos-port_sam4s/">
+          <section class="post">
+              <h2>freeRTOS移植-sam</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">迁移自(cnblogs.com/xiaobin-hlj80)</a> </section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/cnblogs/js/jquery.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/cnblogs/js/index.js"></script>
+    
+</body>
+</html>
+

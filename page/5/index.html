@@ -186,7 +186,7 @@
 	
 	    <a class="newer-posts" href="/cnblogs/page/4/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 5 of 7</span>
+	<span class="page-number">Page 5 of 6</span>
 	
 	    <a class="older-posts" href="/cnblogs/page/6/">Older Posts &rarr;</a>
 	
@@ -197,15 +197,18 @@
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/mq-kafka-config/">Install and Configure Apache Kafka</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/asp-base/">3小时搞定asp.net 5.0</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>I. Installation The installation environment must have JDK, verify that you enter:
-java -version 1. down Install server-side versions based on the jar downloaded by maven, such as my &ldquo;C:\Users\tdtc.m2\repository\org\apache\kafka\kafka-clients\3.0.1&rdquo;
-And choose Scala version based on pom, such as my &ldquo;C:\Users\tdtc.m2\repository\org\springframework\cloud\spring-cloud-stream-binder-kafka\3.2.4\spring-cloud-stream-binder-kafka-3.2.4.pom&rdquo;
-wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $tar zxvf kafka_2.13-3.0.1.tgz II. Configuration server.properties
-1. Necessary settings 1) basic listener listeners=PLAINTEXT://your_IP:9092 logs $mkdir HOME/kafka_2.13-3.0.1/logs 2) cluster Sets the natural number of the broker ID to non-zero. <a class="read-more" href="/cnblogs/post/mq-kafka-config/">&raquo;</a></p>
+            <p>IDE: Visual Studio 2019(community) DB：MySQL5.6+ 安装.net 5 SDK 从官网下载V5.0: 32位（x86）/64位（x64）.
+使用preview版的SDK Tools-&gt;Options Preview Features -&gt; Use preview of the .net core sdk 建立工程 File-》New-》Project
+ASP.NET Core Web Application
+简单修改主页 Solution Explorer
+Views-》Index.cshtml
+增加如下代码：
+&lt;p&gt;这是我的第一个ASP.NET程序！&lt;/p&gt; 点击“IIS Express”运行（如果弹出证书安装选“是”即可）。 增加数据库 EF Core Project-》Manager NuGet Packages entity class 我们建立一个与数据表相对应的Entity类
+using System.ComponentModel.DataAnnotations; namespace veic_web.Models { public class Product { [Key] public int id { get; set; } public int param_id { get; set; } public int statu_id { get; set; } public int lang_id { get; set; } public int img_id { get; set; } public string name { get; set; } public string description { get; set; } } } DB Class Solution Explorer <a class="read-more" href="/cnblogs/post/asp-base/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -214,8 +217,8 @@ wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $
         
 
         
-        <time class="post-date" datetime="2022-05-16T18:08:08&#43;08:00">
-            16 May 2022
+        <time class="post-date" datetime="2020-07-17T10:08:08&#43;08:00">
+            17 Jul 2020
         </time>
     </footer>
 </article>
@@ -223,16 +226,15 @@ wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/mq-rabbitmq-config/">Install and Configure RabbitMQ</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/e-freertos-port_sam4s/">freeRTOS移植-sam</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal Current Version(RabbitMQ):
-RabbitMQ 3.10.2 Erlang 24.3.3 Installation 需要设置固定IP
-Replace the &ldquo;bionic&rdquo; in the official website shell with the ubuntu codename.
-Note: When saving, the format is Unix(LF).
-focal_rq.sh:
-#!/bin/sh sudo apt-get install curl gnupg apt-transport-https -y ## Team RabbitMQ&#39;s main signing key curl -1sLf &#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &#34;https://keyserver. <a class="read-more" href="/cnblogs/post/mq-rabbitmq-config/">&raquo;</a></p>
+            <p>freeRTOS v7.0.0
+移植编译器（IAR）,以及头文件和hook。
+头文件 asf.h
+// From module: FreeRTOS mini Real-Time Kernel #include &lt;FreeRTOS.h&gt; #include &lt;task.h&gt; freeRTOS config FreeRTOSConfig.h
+#ifndef FREERTOS_CONFIG_H #define FREERTOS_CONFIG_H //#define configUSE_PREEMPTION 1 #define configUSE_PREEMPTION 0 #define configUSE_IDLE_HOOK 1 #define configUSE_TICK_HOOK 1 #define configCPU_CLOCK_HZ (sysclk_get_cpu_hz()) #define configTICK_RATE_HZ ((portTickType) 1000) #define configMINIMAL_STACK_SIZE ((unsigned short) 70) //#define configTOTAL_HEAP_SIZE ((size_t) ( 0x2C00-600 )) #define configMAX_TASK_NAME_LEN ( 16 ) #define configUSE_TRACE_FACILITY 1 #define configUSE_16_BIT_TICKS 0 #define configIDLE_SHOULD_YIELD 0 #define configUSE_CO_ROUTINES 0 #define configUSE_MUTEXES 1 #define configUSE_RECURSIVE_MUTEXES 0 #define configCHECK_FOR_STACK_OVERFLOW 2 #define configGENERATE_RUN_TIME_STATS 0 #define configENABLE_BACKWARD_COMPATIBILITY 1 #define configMAX_PRIORITIES ((unsigned portBASE_TYPE) 5) #define configMAX_CO_ROUTINE_PRIORITIES (2) #define configQUEUE_REGISTRY_SIZE 10 #define INCLUDE_vTaskPrioritySet 1 #define INCLUDE_uxTaskPriorityGet 0 #define INCLUDE_vTaskDelete 0 #define INCLUDE_vTaskCleanUpResources 0 #define INCLUDE_vTaskSuspend 1 #define INCLUDE_vTaskDelayUntil 0 #define INCLUDE_vTaskDelay 1 #define INCLUDE_uxTaskGetStackHighWaterMark 1 #define configKERNEL_INTERRUPT_PRIORITY (0x0f &lt;&lt; 4) #define configMAX_SYSCALL_INTERRUPT_PRIORITY (0x05 &lt;&lt; 4) #endif hook 必须实现3个callback函数 <a class="read-more" href="/cnblogs/post/e-freertos-port_sam4s/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -241,8 +243,8 @@ focal_rq.sh:
         
 
         
-        <time class="post-date" datetime="2022-05-15T18:08:08&#43;08:00">
-            15 May 2022
+        <time class="post-date" datetime="2020-07-08T08:08:08&#43;08:00">
+            8 Jul 2020
         </time>
     </footer>
 </article>
@@ -250,14 +252,18 @@ focal_rq.sh:
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-redux-mini/">最小实现redux - 分解redux</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/e-freertos-port_win32/">freeRTOS移植</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>project: https://gitee.com/xiaobin80/starter
-application app.js
-include createStore import { createStore } from &#39;redux&#39; Establish reducer const reducerName = (state, action) =&gt; { state; } invoke createStore() const store = createStore(reducerName); html public/index.html
-&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;The Complete Redux Book - Example Application&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div id=&#34;app&#34;&gt; Redux is running: &lt;span id=&#34;counter&#34;&gt;&lt;/span&gt; &lt;/div&gt; &lt;script type=&#34;text/javascript&#34; src=&#34;../app.js&#34;&gt;&lt;/script&gt; &lt;/body&gt; &lt;/html&gt;  <a class="read-more" href="/cnblogs/post/js-redux-mini/">&raquo;</a></p>
+            <p>freeRTOS v6.1.1
+portable.h memory TCB Ln167~Ln187(port.c)
+pxPortInitialiseStack memory management 在heap_n.c中实现
+void *pvPortMalloc( size_t xSize ) PRIVILEGED_FUNCTION; void vPortFree( void *pv ) PRIVILEGED_FUNCTION; 如果MPU可用，则使用Ln105~106(mpu_wrappers.h)
+void vPortInitialiseBlocks( void ) PRIVILEGED_FUNCTION; size_t xPortGetFreeHeapSize( void ) PRIVILEGED_FUNCTION; task 此实现在Ln189~Ln262、Ln401~Ln406(port.c)
+portBASE_TYPE xPortStartScheduler( void ) PRIVILEGED_FUNCTION; void vPortEndScheduler( void ) PRIVILEGED_FUNCTION; 注意：在windows系统下end是调用了TerminateProcess（WinBase.h Ln3398）
+portmacro.h Critical 此实现在Ln452~Ln513(port.c)
+void vPortEnterCritical( void ); void vPortExitCritical( void ); #define portENTER_CRITICAL()	vPortEnterCritical() #define portEXIT_CRITICAL()	vPortExitCritical() Interrupt #define portDISABLE_INTERRUPTS() #define portENABLE_INTERRUPTS() 此实现在Ln408~Ln450(port. <a class="read-more" href="/cnblogs/post/e-freertos-port_win32/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -266,8 +272,8 @@ include createStore import { createStore } from &#39;redux&#39; Establish reduce
         
 
         
-        <time class="post-date" datetime="2022-04-10T08:26:39&#43;08:00">
-            10 Apr 2022
+        <time class="post-date" datetime="2020-07-06T08:08:08&#43;08:00">
+            6 Jul 2020
         </time>
     </footer>
 </article>
@@ -275,12 +281,18 @@ include createStore import { createStore } from &#39;redux&#39; Establish reduce
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/vc-strcat/">使用strcat_s的注意事项</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/e-freertos-base/">freeRTOS基础</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>准备 strcat_s使用 准备 使用LLVM（clang-cl） char point char * const and const char *? Pointing to a constant value const char * p; // value cannot be changed Constant pointer to a value char * const p; // address cannot be changed Constant pointer to a constant value const char * const p; // both cannot be changed. C++11 The C++11 Standard (ISO/IEC 14882:2011) says in § C.1.1:
-char* p = &#34;abc&#34;; // valid in C, invalid in C++ For the C++ it&rsquo;s OK as a pointer to a String Literal is harmful since any attempt to modify it leads to a crash. <a class="read-more" href="/cnblogs/post/vc-strcat/">&raquo;</a></p>
+            <p>freeRTOS v6.1.1
+约定 变量名 u: unsigned c: char s: int16_t(short) l: int32_t(long)
+x: BaseType_t 和其他所有
+函数名 前面的小写字母表示返回值； 紧随其后的是文件名。
+p: pointer v: void x: xQueueReceive() returns a variable of type BaseType_t and is defined within queue.c.
+必须使用 task.c list.c queue.c task-to-task, task-to-interrupt, interrupt-to-task. 移植必须 实现 portable.h
+heap_1.c or heap_2.c or heap_3.c port.c header portmacro.h 最小化系统 main.c
+#include &lt;FreeRTOS.h&gt; int main(void) { vTaskStartScheduler(); return 0; } header vc Configuration Properties -&gt; c/c++ -&gt; Additional include Directories <a class="read-more" href="/cnblogs/post/e-freertos-base/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -289,8 +301,8 @@ char* p = &#34;abc&#34;; // valid in C, invalid in C++ For the C++ it&rsquo;s OK
         
 
         
-        <time class="post-date" datetime="2022-03-24T03:18:08&#43;08:00">
-            24 Mar 2022
+        <time class="post-date" datetime="2020-07-04T08:08:08&#43;08:00">
+            4 Jul 2020
         </time>
     </footer>
 </article>
@@ -298,21 +310,31 @@ char* p = &#34;abc&#34;; // valid in C, invalid in C++ For the C++ it&rsquo;s OK
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/qt-serialport/">使用qt5编写Serial Port</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/e-iar-project-setup/">iar 工程基本设置</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>thread 线程相关
-asynchronously connect方法已实现异步。
-synchronously qmutexlocker
-创建信号锁 m_mutex.lock(); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。
-signals: void error(const QString &amp;s); void timeout(const QString &amp;s); Worker method Init Port 设置私有成员变量
-部分代码
-m_waitTimeout = waitTimeout; Receive data 打开串口
-if (!m_serialPort-&gt;open(QIODevice::ReadWrite)) { qDebug() &lt;&lt; tr(&#34;Can&#39;t open %1, error code %2&#34;) .arg(m_portName).arg(m_serialPort-&gt;error()); m_serialPort-&gt;close(); return false; } 接收数据
-while (m_serialPort-&gt;waitForReadyRead(500)) responseData += m_serialPort-&gt;read(1024); Deploy for windows copy exe to target directory.
-copy C:\Users\tdtc\Documents\Projects\serialCommQt\Release\serialCommQt.exe C:\Users\tdtc\Documents\serialCommQt_qmake\ exec windeployqt:
-for QML C:\Qt\Qt5.12.11\5.12.11\msvc2017\bin\windeployqt --qmldir C:\Users\tdtc\Documents\SerialCom\SerialCom\QtRaspberry C:\Users\tdtc\Documents\SerialCom_qml\serialCom. <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
+            <p>IAR7.50
+J-Link 5.10m
+建立一个c工程： project -&gt; Create new project “Project Templates”选择empty project 选择工程目录下的prj（可自定义，主要是放IAR生成的相关文件）
+注意：没有更改的项，使用缺省设置！
+General Options 主要设置：目标芯片, CMSIS库, 打印和输入函数
+设备 Target
+Device
+Atmel SAM4SD32C CMSIS Library Configuration
+✔ Verify DownloadUse CMSIS ✔ DSP library
+不使用低级库 Library Configuration
+Library low-level interface implementation
+None 打印和输入 Library Options
+Printf formatter
+Large Scanf formatter
+small Runtime Checking Note：一定要设置Preprocessor（C/C++和Assembler）！！！
+在C/C++ Complie和Linker中开启诊断程序：
+Diagnostics ✔ Enable remarks
+C/C++ Complie 设置方言和程序的大小
+C方言设置 Language1
+C dialect
+Require prototype 生成最小的程序 Optimizations <a class="read-more" href="/cnblogs/post/e-iar-project-setup/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -321,8 +343,8 @@ for QML C:\Qt\Qt5.12.11\5.12.11\msvc2017\bin\windeployqt --qmldir C:\Users\tdtc\
         
 
         
-        <time class="post-date" datetime="2021-11-28T08:18:08&#43;08:00">
-            28 Nov 2021
+        <time class="post-date" datetime="2020-07-02T08:08:08&#43;08:00">
+            2 Jul 2020
         </time>
     </footer>
 </article>
@@ -330,18 +352,17 @@ for QML C:\Qt\Qt5.12.11\5.12.11\msvc2017\bin\windeployqt --qmldir C:\Users\tdtc\
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/sqlite.net.core/">SQLite在.net core的demo</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/mysql.net/">MySQL Connector/Net 的简单使用</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>IDE: VS2022 语言: C#
-简介： 本示例使用SQLite的密码、外键功能。
-一、工程设置 1. NuGet Tools -&gt; NuGet Package Manager -&gt; Package Manager Console Install-Package sqlite-net-pcl -Version 1.8.116 Install-Package sqlite-net-sqlcipher -Version 1.8.116 完整的窗体： 2. 控件 拖拽4个TextBox、4个Button、1个DataGridView
-二、功能实现 使用Synchronous API来实现连接、factoryCar表的查询、插入等操作。
-0. Entity class 注意：主键和外键
-建立两个实体类：FactoryCar和MarqueCar
-1. 连接 asyncConn = new SQLite.SQLiteAsyncConnection(options); 其中，options是SQLiteConnectionString实例化的字符串。
-var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, preKeyAction: db =&gt; db.Execute(&#34;PRAGMA cipher_default_use_hmac = OFF;&#34;), postKeyAction: db =&gt; db.Execute(&#34;PRAGMA kdf_iter = 128000;&#34;)); 2. 查询 异步查询 var factoryCars = asyncConn. <a class="read-more" href="/cnblogs/post/sqlite.net.core/">&raquo;</a></p>
+            <p>连接器(For .net)：V6.1.6
+首先，新建工程(Windows Application) 然后，增加引用(MySql.Data) 之后，放置控件 3个TextBox，2个ComboBox(cBoxDBs和cBoxTables)， 1个DataGridView等等 密码框设置
+下拉框设置（cBoxDBs：数据库，cBoxTables：数据表）
+数据格设置
+连接按钮代码：
+string connStr = string.Format(&#34;server={0};user id={1}; password={2}; database=mysql; pooling=false&#34;, edtSrv.Text, edtUser.Text, edtPwd.Text); try { conn = new MySqlConnection(connStr); conn.Open(); // 获得数据库列表 List&lt;string&gt; cmd = new List&lt;string&gt;(); cmd.Add(&#34;SHOW DATABASES&#34;); List&lt;string&gt; list = getDataList(cmd); // 清空下拉框 cBoxDBs.Items.Clear(); // 增加下拉框列表 foreach (string str in list) cBoxDBs.Items.Add(str); } catch(MySqlException ex) { MessageBox.Show(&#34;没有找到数据库: &#34; + ex.Message); } 下拉框（数据库列表）
+// 获得数据库列表 List&lt;string&gt; cmdList = new List&lt;string&gt;(); cmdList. <a class="read-more" href="/cnblogs/post/mysql.net/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -350,8 +371,8 @@ var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, pre
         
 
         
-        <time class="post-date" datetime="2021-11-19T19:18:08&#43;08:00">
-            19 Nov 2021
+        <time class="post-date" datetime="2020-05-29T00:08:08&#43;08:00">
+            29 May 2020
         </time>
     </footer>
 </article>
@@ -359,12 +380,14 @@ var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, pre
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-thousand-separator/">千位分隔符</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/golang-ubuntu-config/">install go on ubuntu</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>1. 字符串替换 /** * 字符串替换函数 - js * expStr: 查找的字符串 * string: 整个字符串 * repStr: 替换的字符串 */ function replacStr(expStr, string, repStr) { let result = &#34;&#34;; let regex; if (parseInt(expStr) &gt; 0) // 数字 regex = new RegExp(expStr, &#34;g&#34;); else	// 非数字 regex = new RegExp(&#34;\\&#34; + expStr, &#34;g&#34;); result = string.replace(regex, repStr); return result; } 2. 千分符 例如，货币7867321.55，怎样使用js来分割他呢？
-0. 分离小数和整数 let index = strCny.indexOf(&#34;.&#34;); if ( index != 0) { strNum = strCny. <a class="read-more" href="/cnblogs/post/js-thousand-separator/">&raquo;</a></p>
+            <p> WSL: Ubuntu 18.04
+1. install go go1.13.10
+1) unzip rename:
+cd /usr/local/go sudo mv go 1.13 2) set path vi ~/.bashrc export GOROOT=/usr/local/go/1.13 export GOPATH=/home/tdtc/go PATH=$PATH:$GOROOT/bin:$GOPATH/bin source ~/.bashrc test go version Reference How To Install Go 1.12 on Ubuntu 18.04 &amp; 16.04 LTS  <a class="read-more" href="/cnblogs/post/golang-ubuntu-config/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -373,8 +396,8 @@ var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, pre
         
 
         
-        <time class="post-date" datetime="2021-11-18T02:18:39&#43;08:00">
-            18 Nov 2021
+        <time class="post-date" datetime="2020-05-17T00:08:08&#43;08:00">
+            17 May 2020
         </time>
     </footer>
 </article>
@@ -382,18 +405,13 @@ var options = new SQLiteConnectionString(edtDB.Text, true, key: edtPwd.Text, pre
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-print-tree/"> 使用ts/js打印tree</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/dev-service_registry-zk/">ZooKeeper Installation(Dev)</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>一棵&quot;树&quot;就是由空格、星号和回车组成的。 我们用a，代表空格。
-注意：空格在HTML编码为：“ ”。
-aaaa* aaa*** aa***** a******* ********* aaaa* aaaa* aaaa* aaaa* aaaa* 首先“树头”部分由3部分组成：空格部分、左树头、右树头。 空格就是递减的过程：
-for (let i = treeRadius; i &gt; k; i--) { document.write(&#34; &#34;); } 左树头，包括中线
-for (let i = 0; i &lt; k + 1; i++) { document.write(&#34;*&#34;); } 右树头，递增过程：
-for (let j = 0; j &lt; k; j++) { document.write(&#34;b&#34;); } 然后，“树干”部分由2部分组成：空格部分和中线部分
-空格就是按照指定的半径数“占位”：
-for (let j = 0; j &lt; treeRadius; j++) { document.write(&#34; &#34;); } 中线就是每次循环时打印一个* <a class="read-more" href="/cnblogs/post/js-print-tree/">&raquo;</a></p>
+            <p>Install ZooKeeper packages
+# sudo apt-get install openjdk-8-jre-headless # sudo apt-get install zookeeper zookeeperd If you need a cluster, configure the Conf file, otherwise ignore it.
+Configure ZooKeeper Common Configuration Edit the /etc/zookeeper/conf/zoo.cfg file to contain the following: server.1=nsdb1:2888:3888 server.2=nsdb2:2888:3888 server.3=nsdb3:2888:3888 autopurge.snapRetainCount=10 autopurge.purgeInterval =12 [Important] Important For production deployments it is recommended to configure the storage of snapshots in a different disk than the commit log, this is done by setting the parameters dataDir and dataLogDir in zoo. <a class="read-more" href="/cnblogs/post/dev-service_registry-zk/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -402,8 +420,8 @@ for (let j = 0; j &lt; treeRadius; j++) { document.write(&#34; &#34;); } 中线
         
 
         
-        <time class="post-date" datetime="2021-11-15T14:15:39&#43;08:00">
-            15 Nov 2021
+        <time class="post-date" datetime="2020-05-16T18:08:08&#43;08:00">
+            16 May 2020
         </time>
     </footer>
 </article>
@@ -411,18 +429,19 @@ for (let j = 0; j &lt; treeRadius; j++) { document.write(&#34; &#34;); } 中线
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/js-angular-app/">Angular 的HttpClient应用</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/cas-client-config/">cas client设置</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>Prepare install Angular CLI:
-npm install -g @angular/cli create project:
-npx @angular/cli new userDetails-client --style=css --routing=false --skip-tests Angular struct Angular module app/app.module.ts
-Add system modules and user components
-system module example for: httpclient module import pack:
-import { HttpClientModule } from &#34;@angular/common/http&#34;; declare Decorator:
-// import HttpClientModule after BrowserModule. HttpClientModule, user component See the next section(&ldquo;Angular Component - add component&rdquo;) for examples of user components. Angular Component app/component.ts
-The root component. <a class="read-more" href="/cnblogs/post/js-angular-app/">&raquo;</a></p>
+            <p>The client and server are the same thekeystore
+cas client version: 3.5.1(cas-client-core-3.5.1)
+git clone https://gitee.com/xiaobin80/cas-sample-java-webapp 1. config web.xml(src\main\webapp\WEB-INF)
+1) CAS Single Sign Out Filter https://localhost:8443/cas 2) CAS Authentication Filter https://localhost:8443/cas/login 3) CAS Validation Filter https://localhost:8443/cas 4) server name localhost 2. keystore copy
+/etc/cas/jetty/thekeystore to
+The disk root directory of the application. For example: my application:
+D:\projects\cas-sample-java-webapp then thekeystore file:
+D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
+&lt;webApp&gt; &lt;contextPath&gt;/loginInfo&lt;/contextPath&gt; &lt;overrideDescriptor&gt;${basedir}/etc/jetty/web.xml&lt;/overrideDescriptor&gt; &lt;/webApp&gt; mvn clean package jetty:run-forked 1) Run directly mvn jetty:run-forked 4. <a class="read-more" href="/cnblogs/post/cas-client-config/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -431,8 +450,8 @@ The root component. <a class="read-more" href="/cnblogs/post/js-angular-app/">&r
         
 
         
-        <time class="post-date" datetime="2021-11-14T06:58:08&#43;08:00">
-            14 Nov 2021
+        <time class="post-date" datetime="2020-05-16T12:08:08&#43;08:00">
+            16 May 2020
         </time>
     </footer>
 </article>
@@ -440,17 +459,16 @@ The root component. <a class="read-more" href="/cnblogs/post/js-angular-app/">&r
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-restful/">ASP.net Core 的RESTful应用</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/cas-server-config/">cas server设置</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>使用Scaffolder模板创建api。
-PowerShell v5.1 IDE: Visual Studio Code/Visual Studio 2022 NuGet ..\AppData\Roaming\NuGet\NuGet.Config
-&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt; &lt;configuration&gt; &lt;packageSources&gt; &lt;add key=&#34;api.nuget.org&#34; value=&#34;https://api.nuget.org/v3/index.json&#34; /&gt; &lt;/packageSources&gt; &lt;/configuration&gt; Create Project vs code
-dotnet new webapi -o MyWebApp --package Swashbuckle.AspNetCore:PackageVersion=6.2.3 add NuGet package dotnet add package Microsoft.EntityFrameworkCore dotnet add package MySql.EntityFrameworkCore dotnet add package Microsoft.EntityFrameworkCore.Tools Option NuGet package Pomelo:
-CLI&gt; dotnet add package Pomelo.EntityFrameworkCore.MySql Test Browser
-Models 建立Entity类：Supplier、Product、Category
-DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbContext(DbContextOptions&lt;StorageBuyDbContext&gt; options) : base(options){} public DbSet&lt;Category&gt; Categories { get; set; } public DbSet&lt;Supplier&gt; Suppliers { get; set; } public DbSet&lt;Product&gt; Products { get; set; } } add service add connectiong string &#34;Data&#34;: { &#34;StorageBuy&#34;: { &#34;ConnectionString&#34;: &#34;server=127. <a class="read-more" href="/cnblogs/post/asp.net6-restful/">&raquo;</a></p>
+            <p>Tomcat: V8.5.x Java: 1.8 x64 MySQL: 5.5.x+ OS: Win10 x64 下载部署包 使用gradle 的repo最高只支持gradle V4.3！
+0. clone git clone https://github.com/apereo/cas-gradle-overlay-template.git 1. set gradle 1) extract gradle-4.10.3-bin.zip
+2) set system variable $PATH=$PATH;%GRADLE_HOME%\bin 2. build war File location: cas\build\libs\cas.war
+1) config file gradle.properties
+cas.version=5.3.2 =&gt; cas.version=5.3.15.1 gradle.version=4.8 =&gt; gradle.version=4.10.3 springboot.version=1.5.14.RELEASE =&gt; springboot.version=1.5.18.RELEASE 2) build cd cas-gradle-overlay-template $gradle build II. Run 0. key/certificate 1) genkey info: -dname &ldquo;CN=localhost,OU=test.com,O=test,L=WH,ST=HB,C=CN&rdquo;
+keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize 2048 -keystore e:/etc/cas/thekeystore 2) export keytool -export -alias thekeystore -file e:/etc/cas/cas5311. <a class="read-more" href="/cnblogs/post/cas-server-config/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -459,8 +477,8 @@ DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbCont
         
 
         
-        <time class="post-date" datetime="2021-11-11T12:38:08&#43;08:00">
-            11 Nov 2021
+        <time class="post-date" datetime="2020-05-16T10:08:08&#43;08:00">
+            16 May 2020
         </time>
     </footer>
 </article>
@@ -471,7 +489,7 @@ DbContext public class StorageBuyDbContext : DbContext { public StorageBuyDbCont
 	
 	    <a class="newer-posts" href="/cnblogs/page/4/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 5 of 7</span>
+	<span class="page-number">Page 5 of 6</span>
 	
 	    <a class="older-posts" href="/cnblogs/page/6/">Older Posts &rarr;</a>
 	

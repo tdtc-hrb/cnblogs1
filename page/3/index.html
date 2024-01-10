@@ -186,7 +186,7 @@
 	
 	    <a class="newer-posts" href="/cnblogs/page/2/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 3 of 7</span>
+	<span class="page-number">Page 3 of 6</span>
 	
 	    <a class="older-posts" href="/cnblogs/page/4/">Older Posts &rarr;</a>
 	
@@ -197,19 +197,13 @@
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/e-avr8-web-server/">web server</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/ops_openjdk_rhel/">设置OpenJDK</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>created date： 2021-03-10 modified date：
-2023-03-25 IDE Arduino V1.8.19 Library UIP Ethernet v2.x 接线 Arduino Uno Enc28j60 Pin 10 CS Pin 11 SI Pin 12 SO Pin 13 SCK Reset RST* +3v3 Vcc GND* GND Enc28j60 INTN: 置空（不接）
-*Rst接线: 注意 Nano V3 Ethernet Shield 接7号线柱，如下图所示： Arduino Uno *GND接线: 5V旁边的GND.
-供电: 必须使用USB接口.(使用电源口无法工作)
-网络及PC驱动 两种方式：
-平行线 接路由器Lan口。
-交叉线 接PC的Lan口。
-Network 设置同一网段的IP地址。
-PC Control Panel -&gt; Network and Internet -&gt; Network Connections Ethernet -&gt; Properties: Internet Protocol Version 4(TCP/IPv4) Enc28J60 IP and MAC 在源代码中更改. <a class="read-more" href="/cnblogs/post/e-avr8-web-server/">&raquo;</a></p>
+            <p> RHEL Community Version Alma Linux / Rocky Linux 1. install jre:
+$sudo dnf install java -y jdk $sudo dnf install java-1.8.0-openjdk-devel 2. set path $sudo vi /etc/profile export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el8_6.x86_64 export CLASSPATH=.:$JAVA_HOME/jre/lib/:. export PATH=$PATH:$JAVA_HOME/bin $su - root #source /etc/profile About path 3.3. INSTALL OPENJDK ON RED HAT ENTERPRISE LINUX - 2.Optional: Set the JAVA_HOME environment variable
+Reference How to install Java on CentOS 7 OpenJDK Version Info - Releases  <a class="read-more" href="/cnblogs/post/ops_openjdk_rhel/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -218,8 +212,8 @@ PC Control Panel -&gt; Network and Internet -&gt; Network Connections Ethernet -
         
 
         
-        <time class="post-date" datetime="2023-03-28T01:08:08&#43;08:00">
-            28 Mar 2023
+        <time class="post-date" datetime="2022-10-04T08:08:08-08:00">
+            4 Oct 2022
         </time>
     </footer>
 </article>
@@ -227,15 +221,16 @@ PC Control Panel -&gt; Network and Internet -&gt; Network Connections Ethernet -
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ror_getstarted/">开始Ruby On Rails</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/vc-windbg_driver/">windbg调试sandboxie driver</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>Prepare mysql-dev sudo apt install mysql-client libmysqlclient-devgem install mysql2 nodejs curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -sudo apt install nodejs foreman gem install foreman Yarn upload yarn_1.22.19_all.deb to ubuntu:
-scp d:\yarn_1.22.19_all.deb tdtc@192.168.3.99:/home/tdtc/ install:
-sudo chmod +x yarn_1.22.19_all.deb sudo dpkg -i yarn_1.22.19_all.deb Creating a New Rails Project new:
-rails new veic_web-r2 -j esbuild --css bulma -d mysql upload images windows 10:
-tar zcvf img.tar.gz ./img/ --transform s/img/images/ scp d:\projects\img. <a class="read-more" href="/cnblogs/post/ror_getstarted/">&raquo;</a></p>
+            <p>Sandboxie builds under MS Visual Studio 2015. 可以升级到vs2017 &amp; windows sdk8.1.
+Prepare Host Env:
+OS Win1809(x64) VM VMware(v10.0.7) / Vbox(v6.1.38) WDK(include windbg) Windows Driver Kit Version 7.1.0 - win7 / Windows 10, version 2004 - win8.1 VM setting - serial port vmware or vbox
+\\.\pipe\com_1 vmware i/o mode:
+yield CPU on poll vbox Port 2: uncheck:
+Connect to existing pipe/socket windbg about version: The operating system needs to match the same or higher version of windbg. <a class="read-more" href="/cnblogs/post/vc-windbg_driver/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -244,8 +239,8 @@ tar zcvf img.tar.gz ./img/ --transform s/img/images/ scp d:\projects\img. <a cla
         
 
         
-        <time class="post-date" datetime="2023-03-18T18:08:08&#43;08:00">
-            18 Mar 2023
+        <time class="post-date" datetime="2022-09-06T04:08:08&#43;08:00">
+            6 Sep 2022
         </time>
     </footer>
 </article>
@@ -253,14 +248,12 @@ tar zcvf img.tar.gz ./img/ --transform s/img/images/ scp d:\projects\img. <a cla
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/asp.net6-mvc/">3小时搞定ASP.NET Core 6.0</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/css-bulma-tabs/">tabs 实现</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>OS Windows 10 LTSB 2016+ IDE Visual Studio Code - v1.76.1 SDK .Net 6.0 终端(Terminal) PowerShell Core 数据库(Database) MySQL / Microsoft SQL Server 2012 Express LocalDB (vs2013 inside) 一、Create Project(VS Code) Init project Terminal -&gt; New Terminal
-cd .\Documents\ dotnet new mvc -o veic_web --framework net6.0 Set workspace dir File -&gt; Add Folder to Workspace
-设置缺省首页(Home Set Default) Program.cs app.UseStaticFiles(); 变更为:
-app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See附录1. Run Run -&gt; Start Debugging 运行效果: 二、Data namespace: <a class="read-more" href="/cnblogs/post/asp.net6-mvc/">&raquo;</a></p>
+            <p>html Note: The header and body are wrapped with div!
+&lt;div id=&#34;tabs-with-content&#34;&gt;&lt;/div&gt; Header &lt;div class=&#34;tabs is-centered&#34;&gt; &lt;ul&gt; &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; Body &lt;div class=&#34;tabs is-centered&#34;&gt; &lt;ul&gt; &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a&gt;Tech Parameters&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;div&gt; &lt;section class=&#34;tab-content&#34;&gt; &lt;table class=&#34;table&#34;&gt; &lt;tbody&gt; &lt;td&gt; &lt;%= image_tag &#34;#{@image.name}&#34; %&gt; &lt;/td&gt; &lt;td&gt; &lt;%= @product.description %&gt; &lt;/td&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;/section&gt; &lt;section class=&#34;tab-content&#34;&gt; &lt;%= @parameter.ipxx %&gt; &lt;/section&gt; &lt;/div&gt; javascript let tabsWithContent = (function () { let tabs = document. <a class="read-more" href="/cnblogs/post/css-bulma-tabs/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -269,8 +262,8 @@ app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See
         
 
         
-        <time class="post-date" datetime="2023-03-14T08:18:02&#43;08:00">
-            14 Mar 2023
+        <time class="post-date" datetime="2022-07-27T00:26:39&#43;08:00">
+            27 Jul 2022
         </time>
     </footer>
 </article>
@@ -278,16 +271,17 @@ app.UseDefaultFiles(); app.UseStaticFiles(); Html 新建wwwroot/index.html，See
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/es6p-install/">Elasticsearch 6 plus(6, 7) 安装</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/es24-install/">Elasticsearch 2.4 安装</a></h2>
     </header>
     <section class="post-excerpt">
         
             <p>Ubuntu 20.04.1
-参考&ldquo;Elasticsearch 2.4 安装&rdquo;
-down 查看版本列表 手动输入版本号 curl -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.9-linux-x86_64.tar.gz config bootstrap bootstrap.system_call_filter: false 其中
-bootstrap.seccomp: false 在高版本已不可用。
-discovery single-node:
-discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-head.git install nodejs cd elasticsearch-headyarnyarn run start open http://localhost:9100/ <a class="read-more" href="/cnblogs/post/es6p-install/">&raquo;</a></p>
+Part I. Elasticsearch 1. install JDK 1) down jdk8 wget https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz unzip:
+$sudo mkdir /usr/java $sudo tar zxvf OpenJDK8U-jdk_x64_linux_hotspot_8u332b09.tar.gz -C /usr/java 2) setup root:
+$sudo -sH
+$echo &#39;export JAVA_HOME=/usr/java/jdk8u332-b09&#39; &gt;&gt; /etc/bash.bashrc $echo &#39;export CLASSPATH=$JAVA_HOME/lib/:.&#39; &gt;&gt; /etc/bash.bashrc $echo &#39;export PATH=$PATH:$JAVA_HOME/bin&#39; &gt;&gt; /etc/bash.bashrc $source /etc/bash.bashrc 3) test java -version echo $JAVA_HOME 2. Elasticsearch exec pack 1) down curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.6/elasticsearch-2.4.6.tar.gz unzip:
+tar -xvf elasticsearch-2.4.6.tar.gz 2) config ../config/elasticsearch.yml
+network network. <a class="read-more" href="/cnblogs/post/es24-install/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -296,8 +290,8 @@ discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-h
         
 
         
-        <time class="post-date" datetime="2023-02-19T10:08:08&#43;08:00">
-            19 Feb 2023
+        <time class="post-date" datetime="2022-05-25T18:08:08&#43;08:00">
+            25 May 2022
         </time>
     </footer>
 </article>
@@ -305,14 +299,13 @@ discovery.type: single-node Ui git clone https://github.com/mobz/elasticsearch-h
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/java-jmx-ch2/">jmx - first demo</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/trace-zipkin-config/">Distributed traceability with Spring Cloud: Sleuth and Zipkin</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>Starting with the J2SE platform 5.0, JMX technology is included in the Java SE platform.
-jmxtools Download the jar and pom files, Then copy it to the M2 directory. M2: C:\Users\tdtc\.m2\repository\com\sun\jdmk\jmxtools\1.2.1 Source project . |____src | |____main | | |____java | | | |____jmxbook.ch2 |____pom.xml
-Gen jar:
-mvn package pom.xml &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;groupId&gt;jmxbook&lt;/groupId&gt; &lt;artifactId&gt;jmxInAction&lt;/artifactId&gt; &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt; &lt;build/&gt; &lt;repositories&gt; &lt;repository&gt; &lt;id&gt;datanucleus.org/downloads/maven2&lt;/id&gt; &lt;name&gt;datanucleus.org Maven Repository&lt;/name&gt; &lt;url&gt;http://www.datanucleus.org/downloads/maven2/&lt;/url&gt; &lt;/repository&gt; &lt;/repositories&gt; &lt;dependencies&gt; &lt;! <a class="read-more" href="/cnblogs/post/java-jmx-ch2/">&raquo;</a></p>
+            <p>I. Sleuth 0. Concept Trace A set of spans that form a call tree structure, forms the trace of the request.
+Span It is the basic unit of work, for example a call to a service. They are identified with a span ID and a trace ID to which span is owned. They have start and end, and with it you get track the response time between requests.
+Tag Key/value pair that identifies certain information in the span. <a class="read-more" href="/cnblogs/post/trace-zipkin-config/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -321,8 +314,8 @@ mvn package pom.xml &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34
         
 
         
-        <time class="post-date" datetime="2023-02-08T08:08:08&#43;08:00">
-            8 Feb 2023
+        <time class="post-date" datetime="2022-05-25T08:08:08&#43;08:00">
+            25 May 2022
         </time>
     </footer>
 </article>
@@ -330,18 +323,15 @@ mvn package pom.xml &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/jekyll_usage/">使用jekyll编写Blog</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/mq-kafka-config/">Install and Configure Apache Kafka</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>install jekyll ruby windows rubyinstaller-devkit-3.1.3-1-x64.exe check in:
-ridk install choose(3):
-MSYS2 and MINGW development tool chain gem setup set proxy and gem install:
-set http_proxy=http://127.0.0.1:8580gem install jekyll bundler test:
-jekyll -v usage Rename the repo containing the theme to &ldquo;cnblogs_a&rdquo;
-theme clone:
-git clone https://github.com/the-mvm/the-mvm.github.io.git cd cnblogs_abundle install rb 3.x bundle add webrick launch bundle exec jekyll buildbundle exec jekyll serve publish Submit the &ldquo;_site&rdquo; folder.
-Ref Jekyll serve fails on Ruby 3. <a class="read-more" href="/cnblogs/post/jekyll_usage/">&raquo;</a></p>
+            <p>I. Installation The installation environment must have JDK, verify that you enter:
+java -version 1. down Install server-side versions based on the jar downloaded by maven, such as my &ldquo;C:\Users\tdtc.m2\repository\org\apache\kafka\kafka-clients\3.0.1&rdquo;
+And choose Scala version based on pom, such as my &ldquo;C:\Users\tdtc.m2\repository\org\springframework\cloud\spring-cloud-stream-binder-kafka\3.2.4\spring-cloud-stream-binder-kafka-3.2.4.pom&rdquo;
+wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $tar zxvf kafka_2.13-3.0.1.tgz II. Configuration server.properties
+1. Necessary settings 1) basic listener listeners=PLAINTEXT://your_IP:9092 logs $mkdir HOME/kafka_2.13-3.0.1/logs 2) cluster Sets the natural number of the broker ID to non-zero. <a class="read-more" href="/cnblogs/post/mq-kafka-config/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -350,8 +340,8 @@ Ref Jekyll serve fails on Ruby 3. <a class="read-more" href="/cnblogs/post/jekyl
         
 
         
-        <time class="post-date" datetime="2023-01-06T14:08:08&#43;08:00">
-            6 Jan 2023
+        <time class="post-date" datetime="2022-05-16T18:08:08&#43;08:00">
+            16 May 2022
         </time>
     </footer>
 </article>
@@ -359,13 +349,16 @@ Ref Jekyll serve fails on Ruby 3. <a class="read-more" href="/cnblogs/post/jekyl
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_spark_rhel/">spark安装</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/mq-rabbitmq-config/">Install and Configure RabbitMQ</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>Spark v3.1 OS RHEL8(Alma / Rocky Linux) 一、基础软件 1. R-lang $ sudo dnf -y install epel-release $ sudo dnf --enablerepo=powertools install R 注意：如果Java没有安装，会附带着安装OpenJDK。
-2. Scala $ wget https://downloads.lightbend.com/scala/2.12.17/scala-2.12.17.tgz $ tar xvf scala-2.12.17.tgz $ sudo mv scala-2.12.17 /usr/lib $ sudo ln -s /usr/lib/scala-2.12.17 /usr/lib/scala 1) add path $vi ~/.bashrc PATH=$PATH:/usr/lib/scala/bin 二、Spark 1. down &amp; unzip v3.1.3
-$ mkdir -p ~/app/spark $ tar zxvf spark-3.1.3-bin-hadoop2.7.tgz -C ~/app/spark $ mv ~/app/spark/spark-3.1.3-bin-hadoop2.7 ~/app/spark/3.1.3 2. <a class="read-more" href="/cnblogs/post/ops_spark_rhel/">&raquo;</a></p>
+            <p>Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal Current Version(RabbitMQ):
+RabbitMQ 3.10.2 Erlang 24.3.3 Installation 需要设置固定IP
+Replace the &ldquo;bionic&rdquo; in the official website shell with the ubuntu codename.
+Note: When saving, the format is Unix(LF).
+focal_rq.sh:
+#!/bin/sh sudo apt-get install curl gnupg apt-transport-https -y ## Team RabbitMQ&#39;s main signing key curl -1sLf &#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &#34;https://keyserver. <a class="read-more" href="/cnblogs/post/mq-rabbitmq-config/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -374,8 +367,8 @@ $ mkdir -p ~/app/spark $ tar zxvf spark-3.1.3-bin-hadoop2.7.tgz -C ~/app/spark $
         
 
         
-        <time class="post-date" datetime="2022-10-10T00:08:08&#43;08:00">
-            10 Oct 2022
+        <time class="post-date" datetime="2022-05-15T18:08:08&#43;08:00">
+            15 May 2022
         </time>
     </footer>
 </article>
@@ -383,15 +376,21 @@ $ mkdir -p ~/app/spark $ tar zxvf spark-3.1.3-bin-hadoop2.7.tgz -C ~/app/spark $
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/redis-rhel-setup/">Redis Server installation FAQs</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/qt-serialport/">使用qt5编写Serial Port</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>OS: RHEL Community Minimal
-AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 Root Permission:
-$su - root 0) open files Q: Increased maximum number of open files to 10032 (it was originally set to 1024). A:
-#ulimit -a #vi /etc/systemd/system/redis.service In the &ldquo;[Service]&rdquo; unit, add the following:
-LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128. A: <a class="read-more" href="/cnblogs/post/redis-rhel-setup/">&raquo;</a></p>
+            <p>thread 线程相关
+asynchronously connect方法已实现异步。
+synchronously qmutexlocker
+创建信号锁 m_mutex.lock(); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。
+signals: void error(const QString &amp;s); void timeout(const QString &amp;s); Worker method Init Port 设置私有成员变量
+部分代码
+m_waitTimeout = waitTimeout; Receive data 打开串口
+if (!m_serialPort-&gt;open(QIODevice::ReadWrite)) { qDebug() &lt;&lt; tr(&#34;Can&#39;t open %1, error code %2&#34;) .arg(m_portName).arg(m_serialPort-&gt;error()); m_serialPort-&gt;close(); return false; } 接收数据
+while (m_serialPort-&gt;waitForReadyRead(500)) responseData += m_serialPort-&gt;read(1024); Deploy for windows copy exe to target directory.
+copy C:\Users\tdtc\Documents\Projects\serialCommQt\Release\serialCommQt.exe C:\Users\tdtc\Documents\serialCommQt_qmake\ exec windeployqt:
+for QML C:\Qt\Qt5.12.11\5.12.11\msvc2017\bin\windeployqt --qmldir C:\Users\tdtc\Documents\SerialCom\SerialCom\QtRaspberry C:\Users\tdtc\Documents\SerialCom_qml\serialCom. <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -400,8 +399,8 @@ LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot
         
 
         
-        <time class="post-date" datetime="2022-10-08T08:08:08&#43;08:00">
-            8 Oct 2022
+        <time class="post-date" datetime="2021-11-28T08:18:08&#43;08:00">
+            28 Nov 2021
         </time>
     </footer>
 </article>
@@ -409,14 +408,18 @@ LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/redis-rhel/">Install Redis from Source</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/qt-thread/">QT5简单thread</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>OS: RHEL Community Minimal
-AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 prepare User set Firewall dependencies:
-$sudo dnf group install &#39;Development Tools&#39; $sudo dnf install tcl wget v6+ Just to clarify: there is no way this issue will be fixed, Redis &gt;= 6 will require a C11 compiler.
-RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enable devtoolset-8 bash verification $gcc -v $make -v $echo &#39;puts [info patchlevel];exit 0&#39; | tclsh installation $wget https://download. <a class="read-more" href="/cnblogs/post/redis-rhel/">&raquo;</a></p>
+            <p>IDE: VS2019 V16.11 QT: V6.2 Project 使用Qt Visual Studio Tools创建, 以下简称qt tools。
+install qt tools Tools -&gt; Extensions and Updates 选择Online, 输入&quot;Qt Visual Studio Tools&quot;
+Create Qt Project File -&gt; New -&gt; Project Qt Console Application
+Add class 点击“工程名”右键, Add -&gt; Class Class name: Controller Base Class: QObject
+初始状态的Controller类: Controller.h
+#pragma once #include &lt;qobject.h&gt; class Controller : public QObject { }; Controller.cpp
+#include &#34;Controller.h&#34; Worker 此Worker使用的“easy worker”的案例.
+Header #include &lt;QObject&gt; class Worker : public QObject { Q_OBJECT public: Worker(); ~Worker(); public slots: void process(); signals: void finished(); void error(QString err); private: // add your variables here }; Class #include &#34;Worker. <a class="read-more" href="/cnblogs/post/qt-thread/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -424,19 +427,9 @@ RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enab
 
         
 
-        on
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/redis/">#Redis</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/development-tools/">#Development Tools</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/wget/">#wget</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/rhel/">#RHEL</a>,
-            
         
-        <time class="post-date" datetime="2022-10-07T04:58:39&#43;08:00">
-            7 Oct 2022
+        <time class="post-date" datetime="2021-11-25T22:08:08&#43;08:00">
+            25 Nov 2021
         </time>
     </footer>
 </article>
@@ -444,16 +437,24 @@ RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enab
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_nginx-v2/">前端（Web）负载均衡</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/qt-hello/">QT6简单demo</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>Nginx&rsquo;s load balancing
-一、安装 OS: RHEL Community Version(Rocky8/Alma8) minimal（安装时的选项）
-0. prepare #dnf -y install gcc gcc-c++ automake make pcre pcre-devel zlib zlib-devel openssl openssl-devel see update openssl
-Library devel $sudo dnf install gd-devel libxml2-devel libxslt-devel GeoIP Download latest atomic-release Install atomic-release rpm:
-$sudo rpm -Uvh http://www6.atomicorp.com/channels/atomic/centos/8/x86_64/RPMS/atomic-release-1.0-23.el8.art.noarch.rpm Install GeoIP-devel rpm package:
-$sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=public --add-port=80/tcp $sudo firewall-cmd --reload installation First, install Nginx of centos repo; Then, replace the nginx program file. <a class="read-more" href="/cnblogs/post/ops_nginx-v2/">&raquo;</a></p>
+            <p>使用VS2019创建
+LTS: v6.2
+QT VS Tools的设置 设置qmake的位置 qt_x64 = C:\Qt\6.2.1\msvc2019_64 第一个为32位；第二个为64位
+创建Widget工程 设置工程 support c++17 Configuration Properties &gt; C/C++ &gt; Language
+c++ language standard: c++17
+support cplusplus Configuration Properties &gt; C/C++ &gt; Command Line property page.
+Add /Zc:__cplusplus to the Additional options: pane.
+添加QT对象 使用UI设计器 UI 设计器 拖拽“Push Button”，并修改他们（窗体和按钮）的属性：
+QMainWindow
+QObject:ObjectName= QtHelloClass QWidget
+QPushButton
+btnHello:ObjectName= btnHello QAbstractButton:Text= Click Me 设置qt对象响应事件 首先，声明方法；然后，编写方法；最后，关联qt对象。
+声明 注意： 声明是在slots下！
+private slots: void helloQT(); 方法 引用QMessageBox <a class="read-more" href="/cnblogs/post/qt-hello/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -462,8 +463,8 @@ $sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=pub
         
 
         
-        <time class="post-date" datetime="2022-10-06T08:38:08&#43;08:00">
-            6 Oct 2022
+        <time class="post-date" datetime="2021-11-20T06:08:08&#43;08:00">
+            20 Nov 2021
         </time>
     </footer>
 </article>
@@ -474,7 +475,7 @@ $sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=pub
 	
 	    <a class="newer-posts" href="/cnblogs/page/2/">&larr; Newer Posts</a>
 	
-	<span class="page-number">Page 3 of 7</span>
+	<span class="page-number">Page 3 of 6</span>
 	
 	    <a class="older-posts" href="/cnblogs/page/4/">Older Posts &rarr;</a>
 	

@@ -11,38 +11,8 @@
     <loc>https://tdtc-hrb.github.io/cnblogs/</loc>
     <lastmod>2024-01-09T08:08:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq2/</loc>
-    <lastmod>2024-01-07T08:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/dp-sharing1/</loc>
-    <lastmod>2023-12-29T08:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/dp-sharing2/</loc>
-    <lastmod>2023-12-29T08:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/dp-structural-sharing/</loc>
-    <lastmod>2023-12-28T08:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/dp-structural-wrapper/</loc>
-    <lastmod>2023-12-25T18:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/dp-behavioral_patterns/</loc>
-    <lastmod>2023-12-23T08:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq6/</loc>
-    <lastmod>2023-12-22T08:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq5/</loc>
-    <lastmod>2023-12-12T08:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq3/</loc>
-    <lastmod>2023-11-30T08:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/ops_win_faq4/</loc>
-    <lastmod>2023-11-18T08:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/vc-asm/</loc>
-    <lastmod>2023-10-22T08:08:08+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/php-devenv-win/</loc>
+    <lastmod>2023-11-30T18:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/qt-webview/</loc>
     <lastmod>2023-10-18T23:38:08+08:00</lastmod>
@@ -53,8 +23,8 @@
     <loc>https://tdtc-hrb.github.io/cnblogs/post/java-servlet_versions/</loc>
     <lastmod>2023-09-18T08:08:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/ops_department_github_man/</loc>
-    <lastmod>2023-08-22T08:08:08+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/php-build-win/</loc>
+    <lastmod>2023-08-20T10:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/vc-sqlite3lib/</loc>
     <lastmod>2023-06-13T21:08:08+08:00</lastmod>
@@ -77,14 +47,8 @@
     <loc>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-mvc/</loc>
     <lastmod>2023-03-14T08:18:02+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/es6p-install/</loc>
-    <lastmod>2023-02-19T10:08:08+08:00</lastmod>
-  </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/java-jmx-ch2/</loc>
     <lastmod>2023-02-08T08:08:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/jekyll_usage/</loc>
-    <lastmod>2023-01-06T14:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/ops_spark_rhel/</loc>
     <lastmod>2022-10-10T00:08:08+08:00</lastmod>
@@ -125,29 +89,8 @@
     <loc>https://tdtc-hrb.github.io/cnblogs/post/vc-windbg_driver/</loc>
     <lastmod>2022-09-06T04:08:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/ops_install-distribution_nsis/</loc>
-    <lastmod>2022-09-03T00:08:08+08:00</lastmod>
-  </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/css-bulma-tabs/</loc>
     <lastmod>2022-07-27T00:26:39+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/tags/7.9.2009/</loc>
-    <lastmod>2022-06-12T12:58:39+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/tags/centos7/</loc>
-    <lastmod>2022-06-12T12:58:39+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/tags/epel-release/</loc>
-    <lastmod>2022-06-12T12:58:39+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/ops_rhel_repo/</loc>
-    <lastmod>2022-06-12T12:58:39+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/tags/yum/</loc>
-    <lastmod>2022-06-12T12:58:39+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/install-consul_ubuntu/</loc>
-    <lastmod>2022-05-26T23:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/es24-install/</loc>
     <lastmod>2022-05-25T18:08:08+08:00</lastmod>
@@ -161,26 +104,17 @@
     <loc>https://tdtc-hrb.github.io/cnblogs/post/mq-rabbitmq-config/</loc>
     <lastmod>2022-05-15T18:08:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-redux-mini/</loc>
-    <lastmod>2022-04-10T08:26:39+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/vc-strcat/</loc>
-    <lastmod>2022-03-24T03:18:08+08:00</lastmod>
-  </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/qt-serialport/</loc>
     <lastmod>2021-11-28T08:18:08+08:00</lastmod>
   </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/qt-thread/</loc>
+    <lastmod>2021-11-25T22:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/qt-hello/</loc>
+    <lastmod>2021-11-20T06:08:08+08:00</lastmod>
+  </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/sqlite.net.core/</loc>
     <lastmod>2021-11-19T19:18:08+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-thousand-separator/</loc>
-    <lastmod>2021-11-18T02:18:39+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-print-tree/</loc>
-    <lastmod>2021-11-15T14:15:39+08:00</lastmod>
-  </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-angular-app/</loc>
-    <lastmod>2021-11-14T06:58:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-restful/</loc>
     <lastmod>2021-11-11T12:38:08+08:00</lastmod>
@@ -188,20 +122,47 @@
     <loc>https://tdtc-hrb.github.io/cnblogs/post/asp.net6-grpc/</loc>
     <lastmod>2021-11-09T20:38:18+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-webpack/</loc>
-    <lastmod>2021-11-08T15:26:39+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/asp.net5-restful/</loc>
+    <lastmod>2021-10-23T12:08:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-json-table/</loc>
-    <lastmod>2021-10-02T14:26:39+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/qt-sqlite3/</loc>
+    <lastmod>2021-06-18T00:08:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-calday/</loc>
-    <lastmod>2021-10-01T02:16:39+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/php-mysqli-tutorial/</loc>
+    <lastmod>2021-04-20T20:26:39+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/asp.net5-grpc/</loc>
+    <lastmod>2021-03-16T08:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/e-avr8-blink/</loc>
     <lastmod>2021-03-06T05:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/docker_ce-ubuntu-config/</loc>
     <lastmod>2020-10-13T08:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/e-lwip-ethernet/</loc>
+    <lastmod>2020-07-25T10:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/asp-base/</loc>
+    <lastmod>2020-07-17T10:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/e-freertos-port_sam4s/</loc>
+    <lastmod>2020-07-08T08:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/e-freertos-port_win32/</loc>
+    <lastmod>2020-07-06T08:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/e-freertos-base/</loc>
+    <lastmod>2020-07-04T08:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/e-iar-project-setup/</loc>
+    <lastmod>2020-07-02T08:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/mysql.net/</loc>
+    <lastmod>2020-05-29T00:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/golang-ubuntu-config/</loc>
+    <lastmod>2020-05-17T00:08:08+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/dev-service_registry-zk/</loc>
     <lastmod>2020-05-16T18:08:08+08:00</lastmod>
@@ -212,20 +173,23 @@
     <loc>https://tdtc-hrb.github.io/cnblogs/post/cas-server-config/</loc>
     <lastmod>2020-05-16T10:08:08+08:00</lastmod>
   </url><url>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/redis-centos7-setup/</loc>
+    <lastmod>2020-05-16T08:08:08+08:00</lastmod>
+  </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/post/java-connector-cluster_mysql/</loc>
     <lastmod>2020-05-16T05:58:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-redux-update/</loc>
-    <lastmod>2020-04-10T09:26:39+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/java-apache_cli/</loc>
+    <lastmod>2020-05-16T02:58:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-es6-spreed-operator/</loc>
-    <lastmod>2020-04-10T08:26:39+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/php-lamp2/</loc>
+    <lastmod>2020-04-13T03:38:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-redux-root/</loc>
-    <lastmod>2020-04-10T08:26:39+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/php-lamp/</loc>
+    <lastmod>2020-04-13T03:28:08+08:00</lastmod>
   </url><url>
-    <loc>https://tdtc-hrb.github.io/cnblogs/post/js-lambda/</loc>
-    <lastmod>2020-04-10T02:14:39+08:00</lastmod>
+    <loc>https://tdtc-hrb.github.io/cnblogs/post/php-faqs/</loc>
+    <lastmod>2020-04-11T21:08:39+08:00</lastmod>
   </url><url>
     <loc>https://tdtc-hrb.github.io/cnblogs/categories/</loc>
   </url>

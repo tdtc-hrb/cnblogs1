@@ -188,7 +188,7 @@
     <div class="extra-pagination inner">
         <nav class="pagination" role="navigation">
 	
-	<span class="page-number">Page 1 of 7</span>
+	<span class="page-number">Page 1 of 6</span>
 	
 	    <a class="older-posts" href="/cnblogs/page/2/">Older Posts &rarr;</a>
 	
@@ -222,15 +222,17 @@ java.lang.UnsatisfiedLinkError: /tmp/xbfLibR1872218867548961332.dll: /tmp/xbfLib
     
         <article class="post post">
     <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_win_faq2/">Windows的一些安装</a></h2>
+        <h2 class="post-title"><a href="/cnblogs/post/php-devenv-win/">Windows搭建PHP环境</a></h2>
     </header>
     <section class="post-excerpt">
         
-            <p>Dotnet Framework Offline install How to Install Microsoft .NET Framework 3.5 Offline in Windows 8 and Later without Internet Connection?
-first, mount windows installation DVD(ISO)
-DVD D: Then, execute
-PowerShell as Administrator
-dism /online /enable-feature /featurename:NetFx3 /All /Source:D:\sources\sxs /LimitAccess Nodejs 2/4. On Windows, running Node.js in Windows terminal emulators like mintty requires the usage of winpty for the tty channels to work (e.g. winpty node.exe script.js). In &ldquo;Git bash&rdquo; if you call the node shell alias (node without the . <a class="read-more" href="/cnblogs/post/ops_win_faq2/">&raquo;</a></p>
+            <p>关于Php:
+Non Thread Safe 和 Thread Safe： 使用Apache时，用“TS”，否则没有“php(7/8)apache2_4.dll”
+VC Redist VS16 / VC15 / VC14
+About Apache v2.4.56+:
+OpenSSL When using vs17 redistribution, Only PHP 8.2 and 8.1 are supported.
+Apache配置 路径 php-apache 重写 路径 网站根目录 替换“D:/progFiles/Apache24/htdocs”为自己使用的路径 程序 替换“D:/progFiles/Apache24/”为自己Apache2.4的路径； php-apache 在配置文件(conf/httpd.conf)最后增加
+PHPv8.0 PHPIniDir &#34;D:/progFiles/php8.0&#34; LoadModule php_module &#34;D:/progFiles/php-8.0/php8apache2_4.dll&#34; PHPV7.1 PHPIniDir &#34;D:/progFiles/php7.1&#34; LoadModule php7_module &#34;D:/progFiles/php7.1/php7apache2_4.dll&#34; 重写 a.打开模块 LoadModule rewrite_module modules/mod_rewrite.so b.允许重写 AllowOverride All 配置PHP(php.ini) CodeIgniter When less than Php v8.1, use the CodeIgniter Symfony When greater than Php v8. <a class="read-more" href="/cnblogs/post/php-devenv-win/">&raquo;</a></p>
         
     </section>
     <footer class="post-meta">
@@ -239,201 +241,200 @@ dism /online /enable-feature /featurename:NetFx3 /All /Source:D:\sources\sxs /Li
         
 
         
-        <time class="post-date" datetime="2024-01-07T08:08:08&#43;08:00">
-            7 Jan 2024
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/dp-sharing1/">Structural Patterns</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Bridge Flyweight map POJO: This is the object we will keep in the Cache. package sharing31;public class Product {private final String name;public Product(String name) {this.name = name;}public String toString() {return name;}} Factory (Cache): Basically this class is responsible to create the caches. package sharing31;import java.util.HashMap;import java.util.Map;public class Portfolio {private Map&lt;String, Product&gt; products = new HashMap&lt;String, Product&gt;();/*** Factory method Pattern*/public Product lookup(String productName) {if (! <a class="read-more" href="/cnblogs/post/dp-sharing1/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-12-29T08:08:08&#43;08:00">
-            29 Dec 2023
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/dp-sharing2/">Structural Patterns</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Bridge Flyweight Flyweight Design Pattern Explained With Simple Example flyweight public abstract class Model {protected String m_name;protected int m_capacity;protected int m_speed;public Model(String name, int capacity, int speed) {this.m_name = name;this.m_capacity = capacity;this.m_speed = speed;}public void showDetails() {// TODO Auto-generated method stubSystem.out.println(&#34;Name: &#34; + this.m_name + &#34;, Capactiy: &#34; + this.m_capacity + &#34;, Speed: &#34; + this.m_speed + &#34; knots&#34;);}} Concrete flyweight 1 public class Airbus380 extends Model {public Airbus380(String name, int capacity, int speed) {// TODO Auto-generated constructor stubsuper(name, capacity, speed);}} Concrete flyweight 2 public class Boeing787 extends Model {public Boeing787(String name, int capacity, int speed) {super(name, capacity, speed);}} Concrete flyweight 3 public class Boeing797 extends Model {public Boeing797(String name, int capacity, int speed) {// TODO Auto-generated constructor stubsuper(name, capacity, speed);}} Flyweight factory public class FlyweightFactory {private Model model;public Model getModel(int type) {switch (type) {case 380:model = new Airbus380(&#34;Airbus380&#34;, 200, 800);break;case 787:model = new Boeing787(&#34;Boeing787&#34;, 600, 1000);break;case 797:model = new Boeing797(&#34;Boeing797&#34;, 1200, 1500);break;default:System. <a class="read-more" href="/cnblogs/post/dp-sharing2/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-12-29T08:08:08&#43;08:00">
-            29 Dec 2023
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/dp-structural-sharing/">Structural Patterns</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Bridge Flyweight Bridge Decouple an abstraction from its implementation so that the two can vary independently. Publish interface in an inheritance hierarchy, and bury implementation in its own inheritance hierarchy. Beyond encapsulation, to insulation handle Create an implementation/body abstraction Derive the separate implementations from the common abstraction Create an interface/handle class that &ldquo;has a&rdquo; and delegates to the impl Embellish the interface class with derived classes if desired wrapper Create an implementation/body base class Derive the separate implementations from the common abstraction Create an interface/wrapper class that &ldquo;has a&rdquo; and delegates to the impl Embellish the interface class with derived classes if desired Object Persistence API Flyweight Whereas Flyweight shows how to make lots of little objects, Facade shows how to make a single object represent an entire subsystem. <a class="read-more" href="/cnblogs/post/dp-structural-sharing/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-12-28T08:08:08&#43;08:00">
-            28 Dec 2023
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/dp-structural-wrapper/">Structural Patterns</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>one after another:
-composite =&gt; Decorator =&gt; AdapterDecorator =&gt; ProxyProxy =&gt; Facade Decorator Adapter Proxy Facade Decorator Create a &ldquo;lowest common denominator&rdquo; that makes classes interchangeable Create a second level base class for optional functionality &ldquo;Core&rdquo; class and &ldquo;Decorator&rdquo; class declare an &ldquo;isa&rdquo; relationship Decorator class &ldquo;has a&rdquo; instance of the &ldquo;lowest common denominator&rdquo; Decorator class delegates to the &ldquo;has a&rdquo; object Create a Decorator derived class for each optional embellishment Decorator derived classes delegate to base class AND add extra stuff Client has the responsibility to compose desired configurations Adapter Identify the desired interface. <a class="read-more" href="/cnblogs/post/dp-structural-wrapper/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-12-25T18:08:08&#43;08:00">
-            25 Dec 2023
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/dp-behavioral_patterns/">Behavioral Patterns</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Usually 7 items Auxiliary 3 items Usually one after another:
-Template Method =&gt; strategiesstrategies =&gt; Statestrategies =&gt; CommandCommand =&gt; Chain of ResponsibilityChain of Responsibility =&gt; MediatorChain of Responsibility =&gt; Observer Chain of Responsibility Command Mediator Observer State Strategy Template Method Strategy 使用 interface 作为 参数 的 &ldquo;Template Method&rdquo;
-State The implementation of the State pattern builds on the Strategy pattern. The difference between State and Strategy is in the intent. <a class="read-more" href="/cnblogs/post/dp-behavioral_patterns/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-12-23T08:08:08&#43;08:00">
-            23 Dec 2023
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_win_faq6/">Visual Studio 的下载</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>exec name 在主要维护周期, 名字是: x_community 在次要维护周期, 名字是:
-x_Professional target directory --layout TARGET(directory) components --add NAME(Component) language --lang en-US format Mainstream .\vs_community.exe --layout D:\win10soft\vs2019 ` --add Microsoft.VisualStudio.Component.CoreEditor ` ... --lang en-US Extended .\vs_Professional.exe --layout D:\win10soft\vs2017 ` --add Microsoft.VisualStudio.Component.CoreEditor ` ... --lang en-US 所有的行尾 + 空格 +
-` 尾行除外。
-lifecycle Visual Studio 2022 Mainstream End Date: Jan 12, 2027 Visual Studio 2019 Mainstream End Date: Apr 9, 2024 Visual Studio 2017 Mainstream End Date: Apr 12, 2022 components MFC/ATL MFC/ATL Visual Studio 2017 &#34;Microsoft. <a class="read-more" href="/cnblogs/post/ops_win_faq6/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-12-22T08:08:08&#43;08:00">
-            22 Dec 2023
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_win_faq5/">Linux environment in Windows</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>cygwin Current: v3.4.9
-x64 x86 32-bit Q: How can I install the last Cygwin version for an old, unsupported Windows?A: Run setup with the options --allow-unsupported-windows --site circa_URL: tsinghua mirror:
-$ setup-x86.exe --allow-unsupported-windows --site https://mirrors4.tuna.tsinghua.edu.cn/sourceware/cygwin-archive/20221123 msys2 x86 x64 Run mingw32.exe or mingw64.exe from the MSYS2 installation directory (e.g. C:\msys64), depending on whether you want 32-bit or 64-bit Program.
-Update package mirrors (may be needed if you have a fresh install of MSYS2) <a class="read-more" href="/cnblogs/post/ops_win_faq5/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-12-12T08:08:08&#43;08:00">
-            12 Dec 2023
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_win_faq3/">Enterprise Architect</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>china mirror - EA:
-v16.1 class view &ldquo;Model&rdquo; 点击右键 &ldquo;add view&rdquo;:
-Initial Content: Package Only name: import code 切换到 &ldquo;Develop&rdquo; 选项卡； 在&quot;Source Code&quot; -&gt; Files:
-Import Source Directory Package 所有的代码放入一个包内； 这样在导入代码的时候，会生成类图。 Generic Type 需要手动放置Associate 并设置 &ldquo;Direction&rdquo;:
-Source -&gt; Destination 折线 按住“CTRL” + 点击鼠标左键
-issues sandboxie sandboxie v1.12.3 使用 v16.1时，无法关闭剩余进程
-GoF Alt + 5
-enter: gof
-Design &gt; Diagram &gt; Toolbox Creational Design Pattern Prototype Abstract Factory Prototype Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype. <a class="read-more" href="/cnblogs/post/ops_win_faq3/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2023-11-30T08:08:08&#43;08:00">
+        <time class="post-date" datetime="2023-11-30T18:08:08&#43;08:00">
             30 Nov 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/qt-webview/">QQ mini browser</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Qt Design Studio: v4.3.1 Qt Creator: v11.0.3 QT: V6.2.4 online installer version Creator and Design Studio 始终更新 Commercial LTS phase 新 Normal 发布后, lts 转为 commercial LTS 镜像 list Note: 下载那个镜像点的&quot;qt-unified-windows-x64-online.exe&quot;, 就使用it&rsquo;s Network.
+tuna ustc sjtu nanyang Qt Qucik version:
+Qt Version QtQml QtQml.Models QtQuick QtQuick.Particles QtQuick.Controls QtQuick.Layouts QtQuick.Dialogs QtQuick.WebEngine Qt 5.11 2.11 2.11 2.11 2.11 2.4 1.11 1.11 1.7 Qt 5.12 - - 2.12 - 2.12 - - Qt 5. <a class="read-more" href="/cnblogs/post/qt-webview/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-10-18T23:38:08&#43;08:00">
+            18 Oct 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ror_installation/">安装Ruby On Rails</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Ruby &amp; Rails Compatibility Table Rails Version Required Ruby Version Recommended Ruby Version Required Rubygems Version Status 7.1.Z &gt;= 2.7.0 3.2.Z &gt;= 1.8.11 Maintained 7.0.Z &gt;= 2.7.0 3.1.Z &gt;= 1.8.11 Maintained RbEnv Install ruby using rbenv.
+Dependencies Ubuntu Ubuntu 20.04 default Ruby version is v2.7 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential \libyaml-dev libncurses5-dev libffi-dev libgdbm-dev RHEL RHEL8(Alma / Rocky) default Ruby version is v2. <a class="read-more" href="/cnblogs/post/ror_installation/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-10-17T08:08:08&#43;08:00">
+            17 Oct 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/java-servlet_versions/">servlet version choose</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Servlet API history Servlet API version Released Specification Platform Important Changes Jakarta Servlet 6.0 May 31, 2022 6.0 Jakarta EE 10 remove deprecated features and implement requested enhancements Jakarta Servlet 5.0 Oct 9, 2020 5.0 Jakarta EE 9 API moved from package javax.servlet to jakarta.servlet Jakarta Servlet 4.0.3 Sep 10, 2019 4.0 Jakarta EE 8 Renamed from &ldquo;Java&rdquo; trademark Java Servlet 4.0 Sep 2017 JSR 369 Java EE 8 HTTP/2 Java Servlet 3. <a class="read-more" href="/cnblogs/post/java-servlet_versions/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-09-18T08:08:08&#43;08:00">
+            18 Sep 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/php-build-win/">Build your own PHP on Windows</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p> Visual C++ 14.0 (Visual Studio 2015) for PHP 7.0 or PHP 7.1. Visual C++ 15.0 (Visual Studio 2017) for PHP 7.2, PHP 7.3 or PHP 7.4. Visual C++ 16.0 (Visual Studio 2019) for master. Enter build git clone https://github.com/Microsoft/php-sdk-binary-tools cd php-sdk-binary-tools phpsdk-vs16-x64.bat Gen deps directory phpsdk_buildtree phpdev git php src cd d:\progFiles\phpdev\vs16\x64git clone -b PHP-8.0.* https://github.com/php/php-src.git *: version number
+deps updates phpsdk_deps --update build buildconf &amp;&amp; configure &amp;&amp; nmake Build your own PHP on Windows  <a class="read-more" href="/cnblogs/post/php-build-win/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-08-20T10:08:08&#43;08:00">
+            20 Aug 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-sqlite3lib/">生成SQLite静态库</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>SQLite3 X:
+3400200 X: 当前版本号
+Debug版 Source Code -&gt; sqlite-amalgamation-X.zip
+新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）
+添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。
+编译工程 Project ==&gt; Properties ==&gt; General
+Configureation Type : Static library(.lib) 编译即可
+Build -&gt; Rebuild sqlite3 预编译头文件 Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header
+Not Using Precompiled Headers vs2019 sqlite3.c : fatal error C1853: &#39;Debug\sqlite3.pch&#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) vs2022 sqlite3. <a class="read-more" href="/cnblogs/post/vc-sqlite3lib/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-06-13T21:08:08&#43;08:00">
+            13 Jun 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-pic16f_blink7/">PIC blinked</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>With a few changes, code for 877A can be easily transferred to 887 (as for any PIC, datasheet reading is necessary). 887 has internal oscillator, it is cheaper than 877A, &hellip;
+MPASM MPLAB X v5.30(x86) - 2019.10.29 Proteus v8.15 Blinking LED First, use the compiler to generate hex; Then, use protelus to draw &ldquo;Schematic Capture&rdquo;; Finally, import the hex file into the MCU component.
+16F887 We are using Proteus simulator for simulating our code but if you are testing the code in real world test bench all you need is, <a class="read-more" href="/cnblogs/post/e-pic16f_blink7/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-05-18T08:08:08&#43;08:00">
+            18 May 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-pic16f_instruction-set/">8位单片机PIC汇编语言</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>TABLE 1-1: OPCODE FIELD DESCRIPTIONS
+Field Description f Register file address (0x00 to 0x7F) W Working register (accumulator) d Destination select; b Bit address within an 8-bit file register k Literal field, constant data or label d value where the results are placed d = 0 W(orking) register d = 1 file register; Default is d = 1. TABLE 1-2: ABBREVIATION DESCRIPTIONS
+|Field| Description| | PC | Program Counter| | TO | Time-Out bit| | C | Carry bit| | DC | Digit Carry bit| | Z | Zero bit| | PD | Power-Down bit| <a class="read-more" href="/cnblogs/post/e-pic16f_instruction-set/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-05-17T10:08:08&#43;08:00">
+            17 May 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-proteus_component-designing/">Component Designing in Proteus ISIS</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Create First of all select the 2D Graphics Box Mode as shown in the below figure. Now click on the workspace and drag the cursor to create a box, as shown in the below figure. We have created the body of our component, now there&rsquo;s a need to add pins in it. For this, click on the Device Pins Mode as shown in the below figure and click on the workspace. <a class="read-more" href="/cnblogs/post/e-proteus_component-designing/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-05-16T10:08:08&#43;08:00">
+            16 May 2023
         </time>
     </footer>
 </article>
@@ -442,7 +443,7 @@ Design &gt; Diagram &gt; Toolbox Creational Design Pattern Prototype Abstract Fa
 
     <nav class="pagination" role="navigation">
 	
-	<span class="page-number">Page 1 of 7</span>
+	<span class="page-number">Page 1 of 6</span>
 	
 	    <a class="older-posts" href="/cnblogs/page/2/">Older Posts &rarr;</a>
 	
