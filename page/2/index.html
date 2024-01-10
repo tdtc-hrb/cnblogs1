@@ -197,6 +197,106 @@
     
         <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/vc-sqlite3lib/">生成SQLite静态库</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>SQLite3 X:
+3400200 X: 当前版本号
+Debug版 Source Code -&gt; sqlite-amalgamation-X.zip
+新建DLL工程 project name: sqlite3（使用这个名字主要是在生成lib的时候不用更改输出名了）
+添加SQLite源文件 ， 把sqlite3.h、sqlite3ext.h和sqlite3.c拷贝到工程根目录。
+编译工程 Project ==&gt; Properties ==&gt; General
+Configureation Type : Static library(.lib) 编译即可
+Build -&gt; Rebuild sqlite3 预编译头文件 Project ==&gt; Properties ==&gt; C/C++ ==&gt; Precompiled Header
+Not Using Precompiled Headers vs2019 sqlite3.c : fatal error C1853: &#39;Debug\sqlite3.pch&#39; precompiled header file is from a previous version of the compiler,or the precompiled header is C++ and you are using it from C (or vice versa) vs2022 sqlite3. <a class="read-more" href="/cnblogs/post/vc-sqlite3lib/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-06-13T21:08:08&#43;08:00">
+            13 Jun 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-pic16f_blink7/">PIC blinked</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>With a few changes, code for 877A can be easily transferred to 887 (as for any PIC, datasheet reading is necessary). 887 has internal oscillator, it is cheaper than 877A, &hellip;
+MPASM MPLAB X v5.30(x86) - 2019.10.29 Proteus v8.15 Blinking LED First, use the compiler to generate hex; Then, use protelus to draw &ldquo;Schematic Capture&rdquo;; Finally, import the hex file into the MCU component.
+16F887 We are using Proteus simulator for simulating our code but if you are testing the code in real world test bench all you need is, <a class="read-more" href="/cnblogs/post/e-pic16f_blink7/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-05-18T08:08:08&#43;08:00">
+            18 May 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-pic16f_instruction-set/">8位单片机PIC汇编语言</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>TABLE 1-1: OPCODE FIELD DESCRIPTIONS
+Field Description f Register file address (0x00 to 0x7F) W Working register (accumulator) d Destination select; b Bit address within an 8-bit file register k Literal field, constant data or label d value where the results are placed d = 0 W(orking) register d = 1 file register; Default is d = 1. TABLE 1-2: ABBREVIATION DESCRIPTIONS
+|Field| Description| | PC | Program Counter| | TO | Time-Out bit| | C | Carry bit| | DC | Digit Carry bit| | Z | Zero bit| | PD | Power-Down bit| <a class="read-more" href="/cnblogs/post/e-pic16f_instruction-set/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-05-17T10:08:08&#43;08:00">
+            17 May 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-proteus_component-designing/">Component Designing in Proteus ISIS</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Create First of all select the 2D Graphics Box Mode as shown in the below figure. Now click on the workspace and drag the cursor to create a box, as shown in the below figure. We have created the body of our component, now there&rsquo;s a need to add pins in it. For this, click on the Device Pins Mode as shown in the below figure and click on the workspace. <a class="read-more" href="/cnblogs/post/e-proteus_component-designing/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2023-05-16T10:08:08&#43;08:00">
+            16 May 2023
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/e-avr8-web-server/">web server</a></h2>
     </header>
     <section class="post-excerpt">
@@ -346,119 +446,6 @@ LimitNOFILE=10032 1) somaxconn Q: WARNING: The TCP backlog setting of 511 cannot
         
         <time class="post-date" datetime="2022-10-08T08:08:08&#43;08:00">
             8 Oct 2022
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/redis-rhel/">Install Redis from Source</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>OS: RHEL Community Minimal
-AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 prepare User set Firewall dependencies:
-$sudo dnf group install &#39;Development Tools&#39; $sudo dnf install tcl wget v6+ Just to clarify: there is no way this issue will be fixed, Redis &gt;= 6 will require a C11 compiler.
-RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enable devtoolset-8 bash verification $gcc -v $make -v $echo &#39;puts [info patchlevel];exit 0&#39; | tclsh installation $wget https://download. <a class="read-more" href="/cnblogs/post/redis-rhel/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        on
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/redis/">#Redis</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/development-tools/">#Development Tools</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/wget/">#wget</a>,
-            
-                <a href="https://tdtc-hrb.github.io/cnblogs//tags/rhel/">#RHEL</a>,
-            
-        
-        <time class="post-date" datetime="2022-10-07T04:58:39&#43;08:00">
-            7 Oct 2022
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_nginx-v2/">前端（Web）负载均衡</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Nginx&rsquo;s load balancing
-一、安装 OS: RHEL Community Version(Rocky8/Alma8) minimal（安装时的选项）
-0. prepare #dnf -y install gcc gcc-c++ automake make pcre pcre-devel zlib zlib-devel openssl openssl-devel see update openssl
-Library devel $sudo dnf install gd-devel libxml2-devel libxslt-devel GeoIP Download latest atomic-release Install atomic-release rpm:
-$sudo rpm -Uvh http://www6.atomicorp.com/channels/atomic/centos/8/x86_64/RPMS/atomic-release-1.0-23.el8.art.noarch.rpm Install GeoIP-devel rpm package:
-$sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=public --add-port=80/tcp $sudo firewall-cmd --reload installation First, install Nginx of centos repo; Then, replace the nginx program file. <a class="read-more" href="/cnblogs/post/ops_nginx-v2/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-10-06T08:38:08&#43;08:00">
-            6 Oct 2022
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_keepalived-v2/">安装配置Keepalived - v2</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>OS: AlmaLinux/RockyLinux minimal(VBox v6.1.38)
-Virtual Box Network configure:
-Attached to Bridged Adapter Advanced promiscuous mode: Allow All 一、安装 prepare tool:
-RHEL7 #yum install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel \ glib2-devel pcre2-devel libnftnl-devel libmnl-devel systemd-devel kmod-devel RHEL8 powertools: #dnf --enablerepo=powertools install ipset-devel libnfnetlink-devel file-devel libnftnl-devel kmod-devel pcre2-devel none:
-#dnf install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel net-snmp-devel \ glib2-devel libmnl-devel systemd-devel git LVS manager: <a class="read-more" href="/cnblogs/post/ops_keepalived-v2/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-10-06T08:38:08&#43;08:00">
-            6 Oct 2022
-        </time>
-    </footer>
-</article>
-
-    
-        <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/ops_openssl/">How To Install OpenSSL in RHEL</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>RHEL Community Version Alma Linux / Rocky Linux Prepare Install development tool:
-# dnf group install &#39;Development Tools&#39; Install dependencies:
-# dnf install perl-core zlib-devel -y down latest OpenSSL $mkdir openssl-1.1.1 $curl --progress https://www.openssl.org/source/openssl-1.1.1q.tar.gz | tar xz -C ./openssl-1.1.1 --strip-components 1 setup $cd openssl-1.1.1 RHEL8 ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl shared zlib RHEL7 ./config --prefix=/usr --shared make &amp;&amp; install $make Root permission Required:
-$sudo make install RHEL8 # mv /bin/openssl /bin/openssl.backup# cp /usr/local/ssl/bin/openssl /bin/openssl test: <a class="read-more" href="/cnblogs/post/ops_openssl/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-10-05T08:38:08&#43;08:00">
-            5 Oct 2022
         </time>
     </footer>
 </article>

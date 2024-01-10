@@ -195,6 +195,112 @@
     
         <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/golang-ubuntu-config/">install go on ubuntu</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p> WSL: Ubuntu 18.04
+1. install go go1.13.10
+1) unzip rename:
+cd /usr/local/go sudo mv go 1.13 2) set path vi ~/.bashrc export GOROOT=/usr/local/go/1.13 export GOPATH=/home/tdtc/go PATH=$PATH:$GOROOT/bin:$GOPATH/bin source ~/.bashrc test go version Reference How To Install Go 1.12 on Ubuntu 18.04 &amp; 16.04 LTS  <a class="read-more" href="/cnblogs/post/golang-ubuntu-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-05-17T00:08:08&#43;08:00">
+            17 May 2020
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/dev-service_registry-zk/">ZooKeeper Installation(Dev)</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Install ZooKeeper packages
+# sudo apt-get install openjdk-8-jre-headless # sudo apt-get install zookeeper zookeeperd If you need a cluster, configure the Conf file, otherwise ignore it.
+Configure ZooKeeper Common Configuration Edit the /etc/zookeeper/conf/zoo.cfg file to contain the following: server.1=nsdb1:2888:3888 server.2=nsdb2:2888:3888 server.3=nsdb3:2888:3888 autopurge.snapRetainCount=10 autopurge.purgeInterval =12 [Important] Important For production deployments it is recommended to configure the storage of snapshots in a different disk than the commit log, this is done by setting the parameters dataDir and dataLogDir in zoo. <a class="read-more" href="/cnblogs/post/dev-service_registry-zk/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-05-16T18:08:08&#43;08:00">
+            16 May 2020
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/cas-client-config/">cas client设置</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>The client and server are the same thekeystore
+cas client version: 3.5.1(cas-client-core-3.5.1)
+git clone https://gitee.com/xiaobin80/cas-sample-java-webapp 1. config web.xml(src\main\webapp\WEB-INF)
+1) CAS Single Sign Out Filter https://localhost:8443/cas 2) CAS Authentication Filter https://localhost:8443/cas/login 3) CAS Validation Filter https://localhost:8443/cas 4) server name localhost 2. keystore copy
+/etc/cas/jetty/thekeystore to
+The disk root directory of the application. For example: my application:
+D:\projects\cas-sample-java-webapp then thekeystore file:
+D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
+&lt;webApp&gt; &lt;contextPath&gt;/loginInfo&lt;/contextPath&gt; &lt;overrideDescriptor&gt;${basedir}/etc/jetty/web.xml&lt;/overrideDescriptor&gt; &lt;/webApp&gt; mvn clean package jetty:run-forked 1) Run directly mvn jetty:run-forked 4. <a class="read-more" href="/cnblogs/post/cas-client-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-05-16T12:08:08&#43;08:00">
+            16 May 2020
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/cas-server-config/">cas server设置</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Tomcat: V8.5.x Java: 1.8 x64 MySQL: 5.5.x+ OS: Win10 x64 下载部署包 使用gradle 的repo最高只支持gradle V4.3！
+0. clone git clone https://github.com/apereo/cas-gradle-overlay-template.git 1. set gradle 1) extract gradle-4.10.3-bin.zip
+2) set system variable $PATH=$PATH;%GRADLE_HOME%\bin 2. build war File location: cas\build\libs\cas.war
+1) config file gradle.properties
+cas.version=5.3.2 =&gt; cas.version=5.3.15.1 gradle.version=4.8 =&gt; gradle.version=4.10.3 springboot.version=1.5.14.RELEASE =&gt; springboot.version=1.5.18.RELEASE 2) build cd cas-gradle-overlay-template $gradle build II. Run 0. key/certificate 1) genkey info: -dname &ldquo;CN=localhost,OU=test.com,O=test,L=WH,ST=HB,C=CN&rdquo;
+keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize 2048 -keystore e:/etc/cas/thekeystore 2) export keytool -export -alias thekeystore -file e:/etc/cas/cas5311. <a class="read-more" href="/cnblogs/post/cas-server-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-05-16T10:08:08&#43;08:00">
+            16 May 2020
+        </time>
+    </footer>
+</article>
+
+    
+        <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/redis-centos7-setup/">Redis Server installation FAQs</a></h2>
     </header>
     <section class="post-excerpt">

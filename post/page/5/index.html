@@ -164,6 +164,108 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/asp.net5-grpc/">ASP.net Core 的gRPC Service应用</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Server 在Ubuntu V20.04; Client 在Windows CMD运行。
+PowerShell v5.1 IDE: VS2019 Community(v16.9)/VS Code(docker extension) VM: VBox(v6.1) 接口文件说明 Protos/greet.proto
+现版本(v16.9)已可以自动生成
+定义service service Greeter { // Sends a greeting rpc SayHello (HelloRequest) returns (HelloReply) {} } 定义message request message HelloRequest { string name = 1; } response message HelloReply { string message = 1; } server Create VS2019 注意：服务器需要docker支持！ VS code dotnet new grpc -o GreeterServer add docke file View -&gt; Command Palette(Ctrl+Shift+P) Enter: Docker fi choice1: Add Docker Files to Workspace&hellip; choice2: . <a class="read-more" href="/cnblogs/post/asp.net5-grpc/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-03-16T08:08:08&#43;08:00">
+            16 Mar 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-avr8-blink/">arduino 开发环境</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>使用跑马灯来验证.
+Pre IDE Arduino CC(.zip文件) Atmel Studio 7 编码 我们使用使用AS7是为了使用它的智能提示和方便查看函数原型.
+建立工程 - Arduino 文件-&gt;示例-&gt;01.Basics-&gt;Blink
+建立工程 - AS7 New-&gt;Project &ldquo;Create Project from Arduino Sketch&rdquo; 设置Arduino sketch属性: Sketch File、Arduino IDE、Board、Device 烧写 把代码copy回arduino ide
+/* Blink Turns on an LED on for one second, then off for one second, repeatedly. Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO it is attached to digital pin 13, on MKR1000 on pin 6. <a class="read-more" href="/cnblogs/post/e-avr8-blink/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2021-03-06T05:08:08&#43;08:00">
+            6 Mar 2021
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/docker_ce-ubuntu-config/">docker(ce) on Ubuntu</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Note:
+# - requires given linux commands to be executed with root privileges either directly as a root user or by use of sudo command $ - requires given linux commands to be executed as a regular non-privileged user Docker CE 1. install $sudo apt install docker.io 2. enable $ sudo systemctl start docker $ sudo systemctl enable docker test:
+$ docker --version Docker compose 1. down sudo curl -L &#34;https://github. <a class="read-more" href="/cnblogs/post/docker_ce-ubuntu-config/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-10-13T08:08:08&#43;08:00">
+            13 Oct 2020
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/e-lwip-ethernet/">lwIP移植笔记 - ethernet篇</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>ethernet的移植工作，主要是“填空”ethernetif.c的过程！ （PS. 再一次感谢Adam Dunkels大侠的无私工作！以及对他的敬意！）
+头文件 ethernetif.h
+#ifndef ETHERNETIF_H_INCLUDED #define ETHERNETIF_H_INCLUDED #include &#34;lwip/netif.h&#34; #include &#34;lwip/ip_addr.h&#34; #include &#34;lwip/err.h&#34; #include &#34;netif/etharp.h&#34; err_t ethernetif_init(struct netif* netif); void ethernetif_input(struct netif* netif); #endif /* ETHERNETIF_H_INCLUDED */ ethernet interface ethernetif.c位置: ../src/netif
+初始化（低级） static void low_level_init(struct netif* netif) 发送（低级） static err_t low_level_output(struct netif* netif, struct pbuf* p) 接收（低级） static struct pbuf* low_level_input(struct netif* netif) 0. define hardware 根据硬件的不同！
+#include &#34;enc28j60.h&#34; ##　1. 初始化（低级）
+（1） 初始化MAC地址 netif-&gt;hwaddr[0] = 0x00; netif-&gt;hwaddr[1] = 0x04; netif-&gt;hwaddr[2] = 0x25; netif-&gt;hwaddr[3] = 0x1C; netif-&gt;hwaddr[4] = 0xA0; netif-&gt;hwaddr[5] = 0x02; （2） 初始化网卡 enc28j60Init(netif-&gt;hwaddr); （3）中断使能 如果使用RTOS，则设置MCU的SPI中断使能； 例如在CM0/3/4中： <a class="read-more" href="/cnblogs/post/e-lwip-ethernet/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2020-07-25T10:08:08&#43;08:00">
+            25 Jul 2020
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/asp-base/">3小时搞定asp.net 5.0</a></h2>
     </header>
     <section class="post-excerpt">
@@ -340,112 +442,6 @@ string connStr = string.Format(&#34;server={0};user id={1}; password={2}; databa
         
         <time class="post-date" datetime="2020-05-29T00:08:08&#43;08:00">
             29 May 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/golang-ubuntu-config/">install go on ubuntu</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p> WSL: Ubuntu 18.04
-1. install go go1.13.10
-1) unzip rename:
-cd /usr/local/go sudo mv go 1.13 2) set path vi ~/.bashrc export GOROOT=/usr/local/go/1.13 export GOPATH=/home/tdtc/go PATH=$PATH:$GOROOT/bin:$GOPATH/bin source ~/.bashrc test go version Reference How To Install Go 1.12 on Ubuntu 18.04 &amp; 16.04 LTS  <a class="read-more" href="/cnblogs/post/golang-ubuntu-config/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-17T00:08:08&#43;08:00">
-            17 May 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/dev-service_registry-zk/">ZooKeeper Installation(Dev)</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Install ZooKeeper packages
-# sudo apt-get install openjdk-8-jre-headless # sudo apt-get install zookeeper zookeeperd If you need a cluster, configure the Conf file, otherwise ignore it.
-Configure ZooKeeper Common Configuration Edit the /etc/zookeeper/conf/zoo.cfg file to contain the following: server.1=nsdb1:2888:3888 server.2=nsdb2:2888:3888 server.3=nsdb3:2888:3888 autopurge.snapRetainCount=10 autopurge.purgeInterval =12 [Important] Important For production deployments it is recommended to configure the storage of snapshots in a different disk than the commit log, this is done by setting the parameters dataDir and dataLogDir in zoo. <a class="read-more" href="/cnblogs/post/dev-service_registry-zk/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T18:08:08&#43;08:00">
-            16 May 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/cas-client-config/">cas client设置</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>The client and server are the same thekeystore
-cas client version: 3.5.1(cas-client-core-3.5.1)
-git clone https://gitee.com/xiaobin80/cas-sample-java-webapp 1. config web.xml(src\main\webapp\WEB-INF)
-1) CAS Single Sign Out Filter https://localhost:8443/cas 2) CAS Authentication Filter https://localhost:8443/cas/login 3) CAS Validation Filter https://localhost:8443/cas 4) server name localhost 2. keystore copy
-/etc/cas/jetty/thekeystore to
-The disk root directory of the application. For example: my application:
-D:\projects\cas-sample-java-webapp then thekeystore file:
-D:\etc\cas\jetty\thekeystore 3. build alter context path(pom.xml):
-&lt;webApp&gt; &lt;contextPath&gt;/loginInfo&lt;/contextPath&gt; &lt;overrideDescriptor&gt;${basedir}/etc/jetty/web.xml&lt;/overrideDescriptor&gt; &lt;/webApp&gt; mvn clean package jetty:run-forked 1) Run directly mvn jetty:run-forked 4. <a class="read-more" href="/cnblogs/post/cas-client-config/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T12:08:08&#43;08:00">
-            16 May 2020
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/cas-server-config/">cas server设置</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Tomcat: V8.5.x Java: 1.8 x64 MySQL: 5.5.x+ OS: Win10 x64 下载部署包 使用gradle 的repo最高只支持gradle V4.3！
-0. clone git clone https://github.com/apereo/cas-gradle-overlay-template.git 1. set gradle 1) extract gradle-4.10.3-bin.zip
-2) set system variable $PATH=$PATH;%GRADLE_HOME%\bin 2. build war File location: cas\build\libs\cas.war
-1) config file gradle.properties
-cas.version=5.3.2 =&gt; cas.version=5.3.15.1 gradle.version=4.8 =&gt; gradle.version=4.10.3 springboot.version=1.5.14.RELEASE =&gt; springboot.version=1.5.18.RELEASE 2) build cd cas-gradle-overlay-template $gradle build II. Run 0. key/certificate 1) genkey info: -dname &ldquo;CN=localhost,OU=test.com,O=test,L=WH,ST=HB,C=CN&rdquo;
-keytool -genkey -keyalg RSA -alias thekeystore -keypass changeit -storepass changeit -keysize 2048 -keystore e:/etc/cas/thekeystore 2) export keytool -export -alias thekeystore -file e:/etc/cas/cas5311. <a class="read-more" href="/cnblogs/post/cas-server-config/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2020-05-16T10:08:08&#43;08:00">
-            16 May 2020
         </time>
     </footer>
 </article>

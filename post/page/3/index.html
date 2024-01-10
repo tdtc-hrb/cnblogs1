@@ -164,6 +164,119 @@
 	
 	   <article class="post post">
     <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/redis-rhel/">Install Redis from Source</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>OS: RHEL Community Minimal
+AlmaLinux 8.x RockyLinux 8.x CentOS 7.9 prepare User set Firewall dependencies:
+$sudo dnf group install &#39;Development Tools&#39; $sudo dnf install tcl wget v6+ Just to clarify: there is no way this issue will be fixed, Redis &gt;= 6 will require a C11 compiler.
+RHEL7 sudo dnf install centos-release-scl sudo dnf install devtoolset-8 scl enable devtoolset-8 bash verification $gcc -v $make -v $echo &#39;puts [info patchlevel];exit 0&#39; | tclsh installation $wget https://download. <a class="read-more" href="/cnblogs/post/redis-rhel/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        on
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/redis/">#Redis</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/development-tools/">#Development Tools</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/wget/">#wget</a>,
+            
+                <a href="https://tdtc-hrb.github.io/cnblogs//tags/rhel/">#RHEL</a>,
+            
+        
+        <time class="post-date" datetime="2022-10-07T04:58:39&#43;08:00">
+            7 Oct 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_nginx-v2/">前端（Web）负载均衡</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>Nginx&rsquo;s load balancing
+一、安装 OS: RHEL Community Version(Rocky8/Alma8) minimal（安装时的选项）
+0. prepare #dnf -y install gcc gcc-c++ automake make pcre pcre-devel zlib zlib-devel openssl openssl-devel see update openssl
+Library devel $sudo dnf install gd-devel libxml2-devel libxslt-devel GeoIP Download latest atomic-release Install atomic-release rpm:
+$sudo rpm -Uvh http://www6.atomicorp.com/channels/atomic/centos/8/x86_64/RPMS/atomic-release-1.0-23.el8.art.noarch.rpm Install GeoIP-devel rpm package:
+$sudo dnf install GeoIP-devel allow fw $sudo firewall-cmd --permanent --zone=public --add-port=80/tcp $sudo firewall-cmd --reload installation First, install Nginx of centos repo; Then, replace the nginx program file. <a class="read-more" href="/cnblogs/post/ops_nginx-v2/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-06T08:38:08&#43;08:00">
+            6 Oct 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_keepalived-v2/">安装配置Keepalived - v2</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>OS: AlmaLinux/RockyLinux minimal(VBox v6.1.38)
+Virtual Box Network configure:
+Attached to Bridged Adapter Advanced promiscuous mode: Allow All 一、安装 prepare tool:
+RHEL7 #yum install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel ipset-devel net-snmp-devel libnfnetlink-devel file-devel \ glib2-devel pcre2-devel libnftnl-devel libmnl-devel systemd-devel kmod-devel RHEL8 powertools: #dnf --enablerepo=powertools install ipset-devel libnfnetlink-devel file-devel libnftnl-devel kmod-devel pcre2-devel none:
+#dnf install gcc make autoconf automake openssl-devel libnl3-devel \ iptables-devel net-snmp-devel \ glib2-devel libmnl-devel systemd-devel git LVS manager: <a class="read-more" href="/cnblogs/post/ops_keepalived-v2/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-06T08:38:08&#43;08:00">
+            6 Oct 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/cnblogs/post/ops_openssl/">How To Install OpenSSL in RHEL</a></h2>
+    </header>
+    <section class="post-excerpt">
+        
+            <p>RHEL Community Version Alma Linux / Rocky Linux Prepare Install development tool:
+# dnf group install &#39;Development Tools&#39; Install dependencies:
+# dnf install perl-core zlib-devel -y down latest OpenSSL $mkdir openssl-1.1.1 $curl --progress https://www.openssl.org/source/openssl-1.1.1q.tar.gz | tar xz -C ./openssl-1.1.1 --strip-components 1 setup $cd openssl-1.1.1 RHEL8 ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl shared zlib RHEL7 ./config --prefix=/usr --shared make &amp;&amp; install $make Root permission Required:
+$sudo make install RHEL8 # mv /bin/openssl /bin/openssl.backup# cp /usr/local/ssl/bin/openssl /bin/openssl test: <a class="read-more" href="/cnblogs/post/ops_openssl/">&raquo;</a></p>
+        
+    </section>
+    <footer class="post-meta">
+        
+
+        
+
+        
+        <time class="post-date" datetime="2022-10-05T08:38:08&#43;08:00">
+            5 Oct 2022
+        </time>
+    </footer>
+</article>
+
+	
+	   <article class="post post">
+    <header class="post-header">
         <h2 class="post-title"><a href="/cnblogs/post/ops_openjdk_rhel/">设置OpenJDK</a></h2>
     </header>
     <section class="post-excerpt">
@@ -309,129 +422,6 @@ wget https://archive.apache.org/dist/kafka/3.0.1/kafka_2.13-3.0.1.tgz 2. unzip $
         
         <time class="post-date" datetime="2022-05-16T18:08:08&#43;08:00">
             16 May 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/mq-rabbitmq-config/">Install and Configure RabbitMQ</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>Ubuntu 18.04 codename: bionic Ubuntu 20.04 codename: focal Current Version(RabbitMQ):
-RabbitMQ 3.10.2 Erlang 24.3.3 Installation 需要设置固定IP
-Replace the &ldquo;bionic&rdquo; in the official website shell with the ubuntu codename.
-Note: When saving, the format is Unix(LF).
-focal_rq.sh:
-#!/bin/sh sudo apt-get install curl gnupg apt-transport-https -y ## Team RabbitMQ&#39;s main signing key curl -1sLf &#34;https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA&#34; | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg &gt; /dev/null ## Launchpad PPA that provides modern Erlang releases curl -1sLf &#34;https://keyserver. <a class="read-more" href="/cnblogs/post/mq-rabbitmq-config/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2022-05-15T18:08:08&#43;08:00">
-            15 May 2022
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/qt-serialport/">使用qt5编写Serial Port</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>thread 线程相关
-asynchronously connect方法已实现异步。
-synchronously qmutexlocker
-创建信号锁 m_mutex.lock(); 信号 为便于调用者获得线程的内部信息，我们需要提供信号。
-signals: void error(const QString &amp;s); void timeout(const QString &amp;s); Worker method Init Port 设置私有成员变量
-部分代码
-m_waitTimeout = waitTimeout; Receive data 打开串口
-if (!m_serialPort-&gt;open(QIODevice::ReadWrite)) { qDebug() &lt;&lt; tr(&#34;Can&#39;t open %1, error code %2&#34;) .arg(m_portName).arg(m_serialPort-&gt;error()); m_serialPort-&gt;close(); return false; } 接收数据
-while (m_serialPort-&gt;waitForReadyRead(500)) responseData += m_serialPort-&gt;read(1024); Deploy for windows copy exe to target directory.
-copy C:\Users\tdtc\Documents\Projects\serialCommQt\Release\serialCommQt.exe C:\Users\tdtc\Documents\serialCommQt_qmake\ exec windeployqt:
-for QML C:\Qt\Qt5.12.11\5.12.11\msvc2017\bin\windeployqt --qmldir C:\Users\tdtc\Documents\SerialCom\SerialCom\QtRaspberry C:\Users\tdtc\Documents\SerialCom_qml\serialCom. <a class="read-more" href="/cnblogs/post/qt-serialport/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-28T08:18:08&#43;08:00">
-            28 Nov 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/qt-thread/">QT5简单thread</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>IDE: VS2019 V16.11 QT: V6.2 Project 使用Qt Visual Studio Tools创建, 以下简称qt tools。
-install qt tools Tools -&gt; Extensions and Updates 选择Online, 输入&quot;Qt Visual Studio Tools&quot;
-Create Qt Project File -&gt; New -&gt; Project Qt Console Application
-Add class 点击“工程名”右键, Add -&gt; Class Class name: Controller Base Class: QObject
-初始状态的Controller类: Controller.h
-#pragma once #include &lt;qobject.h&gt; class Controller : public QObject { }; Controller.cpp
-#include &#34;Controller.h&#34; Worker 此Worker使用的“easy worker”的案例.
-Header #include &lt;QObject&gt; class Worker : public QObject { Q_OBJECT public: Worker(); ~Worker(); public slots: void process(); signals: void finished(); void error(QString err); private: // add your variables here }; Class #include &#34;Worker. <a class="read-more" href="/cnblogs/post/qt-thread/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-25T22:08:08&#43;08:00">
-            25 Nov 2021
-        </time>
-    </footer>
-</article>
-
-	
-	   <article class="post post">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/cnblogs/post/qt-hello/">QT6简单demo</a></h2>
-    </header>
-    <section class="post-excerpt">
-        
-            <p>使用VS2019创建
-LTS: v6.2
-QT VS Tools的设置 设置qmake的位置 qt_x64 = C:\Qt\6.2.1\msvc2019_64 第一个为32位；第二个为64位
-创建Widget工程 设置工程 support c++17 Configuration Properties &gt; C/C++ &gt; Language
-c++ language standard: c++17
-support cplusplus Configuration Properties &gt; C/C++ &gt; Command Line property page.
-Add /Zc:__cplusplus to the Additional options: pane.
-添加QT对象 使用UI设计器 UI 设计器 拖拽“Push Button”，并修改他们（窗体和按钮）的属性：
-QMainWindow
-QObject:ObjectName= QtHelloClass QWidget
-QPushButton
-btnHello:ObjectName= btnHello QAbstractButton:Text= Click Me 设置qt对象响应事件 首先，声明方法；然后，编写方法；最后，关联qt对象。
-声明 注意： 声明是在slots下！
-private slots: void helloQT(); 方法 引用QMessageBox <a class="read-more" href="/cnblogs/post/qt-hello/">&raquo;</a></p>
-        
-    </section>
-    <footer class="post-meta">
-        
-
-        
-
-        
-        <time class="post-date" datetime="2021-11-20T06:08:08&#43;08:00">
-            20 Nov 2021
         </time>
     </footer>
 </article>
