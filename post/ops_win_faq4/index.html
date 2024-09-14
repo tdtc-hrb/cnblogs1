@@ -225,7 +225,14 @@ echo y|reg delete &#34;HKEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windo
 rem 重启Windows外壳程序explorer
 
 start explorer
-</code></pre><h2 id="powershell">PowerShell</h2>
+</code></pre>
+<h2 id="chkdsk"><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer">chkdsk</a></h2>
+<h3 id=""><a href="https://answers.microsoft.com/en-us/windows/forum/all/the-file-or-directory-is-corrupted-and-unreadable/743df45a-cef4-41f1-92ec-8db945645609">The file or directory is corrupted and unreadable</a></h3>
+<pre tabindex="0"><code>
+chkdsk f: /r
+</code></pre>
+<p>f: 代表要修复的逻辑磁盘</p>
+<h2 id="powershell">PowerShell</h2>
 <h3 id="openssh-for-windowshttpslearnmicrosoftcomzh-cnwindows-serveradministrationopensshopenssh_install_firstusetabsgui"><a href="https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui">Openssh for windows</a></h3>
 <pre tabindex="0"><code>(New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 </code></pre><h3 id="install-openssh-for-windowshttpslearnmicrosoftcomzh-cnwindows-serveradministrationopensshopenssh_install_firstusetabspowershellinstall-openssh-for-windows"><a href="https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell#install-openssh-for-windows">install-openssh-for-windows</a></h3>
